@@ -1,0 +1,2211 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L3 · Lycurgus and the Great Rhetra</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: what the Great Rhetra set up, the issue of Lycurgus and why the legend mattered, with guided notes and annotated HSC answers.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 3" data-title="Lycurgus and the Great Rhetra" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 3</p>
+      <h1>Lycurgus and the Great Rhetra</h1>
+      <p class="lead">What did Sparta’s founding law set up — and can we trust the story the Spartans told about the man who gave it to them?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/bradley-3-25-delphi.jpg" alt="The remains of the Temple of Apollo at Delphi"><figcaption>The remains of the Temple of Apollo at Delphi — <span class="cr">Bradley, Fig 3.25</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 3" data-title="Spaced review" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Spaced review · 4 minutes · from memory, no notes</p>
+  <h2>Five questions</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">Name the mountain range west of Sparta.</span><span class="d">Lesson 2</span></li>
+      <li><span class="num">2</span><span class="t">What was Gytheion?</span><span class="d">Lesson 2</span></li>
+      <li><span class="num">3</span><span class="t">Give the dates of Thucydides.</span><span class="d">Lesson 1</span></li>
+      <li><span class="num">4</span><span class="t">Name the three groups of people who lived in Laconia.</span><span class="d">Lessons 1–2</span></li>
+      <li><span class="num">5</span><span class="t">Predict: <i>geron</i> means “old man”. What might the <b>gerousia</b> be?</span><span class="d">Today’s first new term</span></li>
+    </ol>
+    <div class="card quiet" data-veil="Show the answers">
+      <div class="k">Answers</div>
+      <ol class="body">
+        <li class="reveal">Taygetus</li>
+        <li class="reveal">Sparta’s port and naval base on the Laconian Gulf — a perioikic town</li>
+        <li class="reveal">c. 460 – c. 400 BC</li>
+        <li class="reveal">Spartiates, perioikoi and helots</li>
+        <li class="reveal">A council of elders — today you will meet it in Sparta’s founding law</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 3" data-title="Your Source Booklet" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Booklet launch · 6–8 minutes · the Task 1 rules</p>
+  <h2>Your Source Booklet starts today</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <ul class="checks">
+      <li class="reveal"><label><input type="checkbox"> The booklet is the <b>only material</b> you may take into Task 1.</label></li>
+      <li class="reveal"><label><input type="checkbox"> Every annotation is <b>your own handwriting, in your own words, made in class</b>.</label></li>
+      <li class="reveal"><label><input type="checkbox"> No printed, pasted, stuck-in or AI-generated notes — <b>AI classification: RED</b>.</label></li>
+      <li class="reveal"><label><input type="checkbox"> Your teacher sights your booklet in <b>Lessons 9, 17 and 22</b>.</label></li>
+      <li class="reveal"><label><input type="checkbox"> You hand it in with your answers on the day of the task.</label></li>
+    </ul>
+    <div class="card accent">
+      <div class="k">Today in your booklet</div>
+      <p class="body">Source 1 (Herodotus) and Source 2 (the Great Rhetra and Tyrtaeus) each get an O, V, P, R and L note before the bell.</p>
+      <p class="small">Write your name on the cover now.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 3" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>explain what the Great Rhetra was, what it set up and why it mattered</li>
+        <li>explain what Lycurgus was believed to have done, and evaluate the evidence that he was a real lawgiver</li>
+        <li>annotate a source using OVPRL in our own words</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>state in two or three sentences what the Great Rhetra was and what the tradition says Lycurgus did</li>
+        <li>explain what each clause of the Great Rhetra, including the rider, set up</li>
+        <li>compare what Herodotus, Plutarch, Tyrtaeus and Thucydides say about who created Sparta’s constitution</li>
+        <li>explain why the Great Rhetra and the Lycurgus legend mattered to Sparta</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body">A <b>rhetra</b> is a spoken pronouncement or law. <b>Apella</b> is the Rhetra’s word for the citizens’ meeting; strictly it was Apollo’s festival on assembly day. Call the assembly itself the <b>ekklesia</b>.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 3" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>Your notes replace the textbook chapter</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L3 · Lycurgus and the Great Rhetra</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (L. = Lycurgus)</span></div></div>
+      <div class="row"><div class="cq">What was the Great Rhetra?</div><div class="nts">short, oracle-style law …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: the basics · Herodotus’ story · the Great Rhetra · the issue of Lycurgus · why it mattered.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 3" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The law</th><th>Meaning</th></tr>
+      <tr><td>constitution</td><td>the basic rules for how a state is governed: who holds power and how decisions are made</td></tr>
+      <tr><td>Great Rhetra</td><td>the short, oracle-style text, preserved by Plutarch, that set out Sparta’s constitution</td></tr>
+      <tr><td>archagetai</td><td>“founder-leaders”: Plutarch says this was the old name for the two kings</td></tr>
+      <tr><td>gerousia</td><td>the council of elders: 28 men over sixty plus the two kings</td></tr>
+      <tr><td>Apella · ekklesia</td><td>the Rhetra’s word for the citizens’ meeting · the usual name for the assembly</td></tr>
+      <tr><td>damos</td><td>the people: the full citizens who attended the assembly</td></tr>
+      <tr><td>rider</td><td>an extra clause added to a law after it was first made</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The legend</th><th>Meaning</th></tr>
+      <tr><td>lawgiver</td><td>a person believed to have created a city’s laws</td></tr>
+      <tr><td>eunomia</td><td>good order or good government; its opposite is <i>anomia</i></td></tr>
+      <tr><td>oracle · Pythia</td><td>a god’s message, or the shrine that gave it · Apollo’s priestess at Delphi</td></tr>
+      <tr><td>hero cult</td><td>worship of a remarkable dead person, usually at a tomb or shrine</td></tr>
+      <tr><td>argument from silence</td><td>a conclusion drawn from what a source does <i>not</i> say</td></tr>
+      <tr><td>Spartan mirage</td><td>the idealised, partly invented picture of Sparta (Lesson 1)</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Tyrtaios, Phoibos, Theopompos). In your own writing use Lycurgus, Tyrtaeus, Phoebus, Theopompus.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The basics" data-title="Three questions to answer first" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · The basics · I do — the big picture before the sources</p>
+  <h2>Three things to be able to say plainly</h2>
+  <div class="cols c3">
+    <div class="card accent">
+      <div class="k">What was the Great Rhetra?</div>
+      <p class="body reveal">A short pronouncement, framed as an oracle from Delphi, that set out how Sparta was governed: the kings and elders proposed, a citizen assembly decided. Our text comes from Plutarch (c. AD 100), but it was probably in place by about 700 BC.</p>
+    </div>
+    <div class="card accent">
+      <div class="k">What was Lycurgus’ role?</div>
+      <p class="body reveal">Spartans and later Greeks believed he was the lawgiver who designed Sparta’s whole way of life, with Apollo’s approval. Plutarch says he obtained the Rhetra as an oracle — yet the Rhetra itself never names him.</p>
+    </div>
+    <div class="card accent">
+      <div class="k">What is “the issue of Lycurgus”?</div>
+      <p class="body reveal">The Rhetra is probably a genuine early document. Whether Lycurgus created it — or even existed — is much less certain.</p>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">Why it matters</div><p class="body">The Rhetra decided who held power in Sparta. The legend gave those laws a god’s approval and made them seem ancient and unchangeable.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The basics" data-title="Tradition and evidence" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · The basics · today’s inquiry</p>
+  <h2>What the tradition says — and what the evidence suggests</h2>
+  <div class="tbl-scroll"><table class="tbl">
+    <tr><th>What the tradition says</th><th>What the evidence suggests</th></tr>
+    <tr class="reveal"><td>Lycurgus got Sparta’s laws from Delphi (or brought them from Crete).</td><td>Tyrtaeus, our oldest witness, credits Apollo and the kings, and never names Lycurgus.</td></tr>
+    <tr class="reveal"><td>He created the whole system at once, including the gerousia and the ephorate.</td><td>The Rhetra never mentions ephors; Plutarch dates the first ephors about 130 years after Lycurgus.</td></tr>
+    <tr class="reveal"><td>He was regent for King Leobotas, perhaps c. 870–840 BC.</td><td>Ancient dates for him range over centuries; the Rhetra was probably in place by about 700 BC.</td></tr>
+  </table></div>
+  <p class="cue reveal">Each row is tested by a source today. By the end, decide: legend, real man — or something in between?</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The basics" data-title="Notes 1 — The basics" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>The basics</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L3 · Lycurgus and the Great Rhetra</b></span><span>1 · The basics</span></div>
+    <div class="row"><div class="cq">What was the Great Rhetra?</div>
+      <div class="nts reveal">Short, <b>oracle-style</b> pronouncement <span class="sep">·</span> set out Sparta’s <b>constitution</b>: kings + elders propose → citizen assembly decides <span class="sep">·</span> text via <b>Plutarch</b> (c. AD 100); prob. in place by <b>c. 700 BC</b></div></div>
+    <div class="row"><div class="cq">Who was Lycurgus?</div>
+      <div class="nts reveal">The <b>lawgiver</b> Spartans believed designed their whole way of life <span class="sep">·</span> with Apollo’s approval (Delphi) <span class="sep">·</span> Plutarch: L. got the Rhetra as an oracle</div></div>
+    <div class="row"><div class="cq">The issue?</div>
+      <div class="nts reveal">Rhetra prob. <b>genuine</b> <span class="sep">·</span> whether L. made it — or existed — <b>uncertain</b></div></div>
+    <div class="row"><div class="cq">Why it matters</div>
+      <div class="nts reveal">Rhetra → <b>who held power</b> <span class="sep">·</span> legend → laws seem god-given, ancient, unchangeable</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Herodotus’ story" data-title="Booklet Source 1 — Herodotus" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The story the Spartans told · Booklet Source 1 · We do — read together</p>
+  <h2>Herodotus: how Sparta got good government</h2>
+  <div class="split" style="--cols:1.9fr 1fr">
+    <div class="src">
+      <div class="k">Source 1 · Herodotus</div>
+      <p class="quote sm">[65.2] In still earlier times they had probably been the worst governed of almost all the Greek states … But they now enjoyed excellent government and I shall explain how this came about. A very distinguished Spartiate called Lykourgos went to Delphi to consult the oracle. … [65.4] <span class="code" data-code="counter" data-letter="C">Some sources state, in addition, that the Pythia outlined for him the current system of government for the Spartiates; but the Lakedaimonians themselves say that Lykourgos brought these ideas back from Crete</span> when he became the guardian of his nephew Leobotas, who was king of the Spartiates. [65.5] In fact, as soon as he became his guardian and regent, he changed the whole constitution and firmly enforced the new laws. <span class="code" data-code="evidence" data-letter="E">He then reorganised the army, establishing the system of sworn comrades, operating in thirty-man units, and eating together in their own messes. Lykourgos was also responsible for the institution of the ephorate and the gerousia.</span> [66.1] These changes were responsible for the excellent system of government, and <span class="code" data-code="judgement" data-letter="J">when Lykourgos died they put up a temple to him and greatly honoured his memory.</span></p>
+      <p class="prov">Herodotus, <i>Histories</i> 1.65.2–66.1 (part) · written c. 430s–420s BC · trans. B. Wilson · Cooley F3</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="counter">Where did the laws come from?</p>
+      <p class="body reveal">Two versions: the Pythia at Delphi — or Crete, the version the Spartans themselves told. The story was already contested in the 5th century BC.</p>
+      <p class="qprompt reveal" data-paint="evidence">What does he credit to Lycurgus?</p>
+      <p class="body reveal">Almost everything: the army’s units and messes, the gerousia — even the ephorate.</p>
+      <p class="qprompt reveal" data-paint="judgement">How does the story end?</p>
+      <p class="body reveal">In worship: a temple. The oracle he quotes was unsure whether to call Lycurgus “hero or god”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Herodotus’ story" data-title="Annotating Source 1" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The story the Spartans told · I do — modelling an annotation</p>
+  <h2>Annotating Source 1: short, specific, your own words</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="tbl-scroll"><table class="tbl">
+      <tr><th>Code</th><th>Model margin note</th></tr>
+      <tr class="reveal"><td><b>O</b></td><td>Hdt, 430s–420s BC; not a Spartan; c. 400 yrs after L.’s supposed date</td></tr>
+      <tr class="reveal"><td><b>V</b></td><td>earliest full account; credits L. with army units, messes, ephors, gerousia</td></tr>
+      <tr class="reveal"><td><b>P</b></td><td>explains how Sparta got <i>eunomia</i> (good government)</td></tr>
+      <tr class="reveal"><td><b>R</b></td><td>gives 2 versions (Delphi / Crete) and says so</td></tr>
+      <tr class="reveal"><td><b>L</b></td><td>oral tradition; no contemporary witness; no date of his own</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="card accent"><div class="k">What makes these good</div>
+        <ul class="body">
+          <li>Abbreviations: Hdt, L., yrs</li>
+          <li>One idea per code</li>
+          <li>Specific to <i>this</i> source — nothing that fits every source</li>
+        </ul></div>
+      <div class="note" data-code="counter"><div class="k">Task 1 rule</div><p class="body">Watch the model, then write <b>your own</b> version in the booklet margin. Copying this table word for word is not your own words.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Herodotus’ story" data-title="Notes 2 — Herodotus’ story" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The story the Spartans told</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L3 · Lycurgus and the Great Rhetra</b></span><span>2 · Herodotus’ story</span></div>
+    <div class="row"><div class="cq">Who and when?</div>
+      <div class="nts reveal"><b>Herodotus</b>, 430s–420s BC, not a Spartan <span class="sep">·</span> makes L. regent for King Leobotas (c. 870–840 BC, Cooley) → c. 400 yrs earlier</div></div>
+    <div class="row"><div class="cq">Where did the laws come from?</div>
+      <div class="nts reveal"><b>2 versions</b>: the Pythia at Delphi <b>or</b> Crete (the Spartans’ own version) → contested already</div></div>
+    <div class="row"><div class="cq">What did L. do?</div>
+      <div class="nts reveal">“changed the whole constitution” <span class="sep">·</span> army: sworn comrades, thirty-man units, <b>messes</b> <span class="sep">·</span> <b>ephorate</b> + <b>gerousia</b> (Hdt 1.65–66, Cooley F3)</div></div>
+    <div class="row"><div class="cq">How does it end?</div>
+      <div class="nts reveal">Temple + honours after his death <span class="sep">·</span> oracle unsure: hero or god? → <b>worship</b></div></div>
+    <div class="row"><div class="cq">How reliable?</div>
+      <div class="nts reveal">Admits 2 versions <span class="sep">·</span> oral tradition, no contemporary witness <span class="sep">·</span> credits L. with almost everything</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="Booklet Source 2A — the Great Rhetra" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · The Great Rhetra · Booklet Source 2, Extract A · We do — clause by clause</p>
+  <h2>The Great Rhetra</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="src">
+      <div class="k">Source 2A · Plutarch, quoting the Rhetra</div>
+      <p class="quote sm"><span class="code" data-code="judgement" data-letter="J">[6.1] Lykourgos was so enthusiastic about his new ruling council that he even got an oracle about it from Delphi. It is known as a rhetra,</span> and it goes as follows:</p>
+      <p class="quote">Set up a temple to Zeus Sullanios and Athena Sullania;<br>Tribe the tribes and obe the obes;<br>Set up a gerousia of thirty, with the founder-leaders (archagetai);<br>From time to time, have an Apella between &lt;the streams of&gt; Babyka and Knakion;<br>Thus to propose and rescind;<br>For the people, decision and power.</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 6.1 · written c. AD 100 · trans. B. Wilson · Cooley D48</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="judgement">Who does Plutarch say obtained it — and from where?</p>
+      <div class="note reveal" data-code="judgement"><p class="body">Lycurgus, from Delphi. This is the link between the man and the law — but it is Plutarch’s claim. The six clauses themselves never name Lycurgus.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Why call it a rhetra?</div><p class="body">Plutarch: “Lykourgos called these ordinances rhetrai to give the impression that they were oracles and came from the god.” (<i>Lykourgos</i> 13, Cooley D49)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="What did each clause set up?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · The Great Rhetra · We do — think, pair, share</p>
+  <h2>What did each clause set up?</h2>
+  <div class="tbl-scroll"><table class="tbl">
+    <tr><th>Clause</th><th>What it set up</th></tr>
+    <tr><td>“Set up a temple to Zeus Sullanios and Athena Sullania”</td><td class="reveal">A religious foundation: the constitution begins with the gods (the titles’ meaning is uncertain).</td></tr>
+    <tr><td>“Tribe the tribes and obe the obes”</td><td class="reveal">Citizens organised into tribes (<i>phylai</i>) and smaller groups (<i>obai</i>). How obes worked is uncertain.</td></tr>
+    <tr><td>“Set up a gerousia of thirty, with the founder-leaders (archagetai)”</td><td class="reveal">A council of thirty: <b>28 elders + the 2 kings</b>.</td></tr>
+    <tr><td>“From time to time, have an Apella”</td><td class="reveal">Regular meetings of the citizens at a fixed place — the assembly (<i>ekklesia</i>).</td></tr>
+    <tr><td>“Thus to propose and rescind”</td><td class="reveal">The kings and elders bring proposals — and can withdraw them.</td></tr>
+    <tr><td>“For the people, decision and power”</td><td class="reveal">The citizens have the final say on what is put to them.</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="How the Rhetra worked (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · The Great Rhetra · I do — the whole system</p>
+  <h2>How the Rhetra worked</h2>
+  <div class="split" style="--cols:2fr 1fr">
+    <figure class="diagram"><svg class="fd" viewBox="0 0 1200 520" role="img" aria-label="Diagram of the Great Rhetra: kings and elders in a gerousia of thirty propose; the assembly of citizens accepts or rejects; the rider lets kings and elders dissolve the assembly">
+<defs><marker id="fd-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker><marker id="fd-r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path class="ah-r" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="linked" id="fd-ger"><rect class="ger" x="330" y="20" width="840" height="212" rx="18"/><text class="ttl" x="750" y="60">Gerousia — a council of thirty</text><rect class="bx" x="370" y="82" width="360" height="128" rx="12"/><text class="big" x="550" y="128">2 kings</text><text class="sm" x="550" y="161">the ‘founder-leaders’</text><text class="sm it" x="550" y="190">archagetai</text><rect class="bx" x="770" y="82" width="360" height="128" rx="12"/><text class="big" x="950" y="128">28 elders</text><text class="sm" x="950" y="161">men over sixty</text></g>
+<g class="linked" id="fd-prop"><line class="arr" x1="750" y1="234" x2="750" y2="340" marker-end="url(#fd-a)"/><text class="step" x="772" y="282">1 · propose</text><text class="sm left" x="772" y="312">and withdraw proposals</text></g>
+<g class="linked" id="fd-ass"><rect class="ass" x="430" y="348" width="640" height="146" rx="16"/><text class="big" x="750" y="392">Assembly of citizens</text><text class="sm" x="750" y="426">the Rhetra’s Apella — later called the ekklesia</text><text class="step ok" x="750" y="466">2 · accept or reject — but not amend</text></g>
+<g class="linked" id="fd-rider"><path class="rider" d="M430,440 C305,440 286,150 326,128" marker-end="url(#fd-r)"/><text class="step bad left" x="8" y="236">3 · the rider</text><text class="sm left" x="8" y="272">if the assembly</text><text class="sm left" x="8" y="301">adopts a ‘crooked’</text><text class="sm left" x="8" y="330">proposal, kings and</text><text class="sm left" x="8" y="359">elders can dissolve it</text></g>
+</svg>
+      <figcaption>Drawn for this lesson. The ephors are not in it — the Rhetra never mentions them. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <ol class="keylist">
+      <li class="reveal" data-also="#fd-ger"><span class="num">1</span><span class="t">A gerousia of thirty</span><span class="d">28 elders and the 2 kings — the “founder-leaders”.</span></li>
+      <li class="reveal" data-also="#fd-prop"><span class="num">2</span><span class="t">They propose</span><span class="d">“Thus to propose and rescind.”</span></li>
+      <li class="reveal" data-also="#fd-ass"><span class="num">3</span><span class="t">The assembly decides</span><span class="d">“For the people, decision and power” — but only yes or no. Plutarch: “no one was allowed to table a proposal”.</span></li>
+      <li class="reveal" data-also="#fd-rider"><span class="num">4</span><span class="t">The rider</span><span class="d">A “crooked” decision could be undone — next slide.</span></li>
+    </ol>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>In short:</b> a three-part constitution of kings, elders and people. The kings and elders controlled what was proposed; the people had the final say, but only on what was put to them.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="The rider" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · The Great Rhetra · We do — the rider</p>
+  <h2>The rider: who gained power?</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="src">
+      <div class="k">Source 2A, continued · Plutarch</div>
+      <p class="quote sm">[4] But in time the people managed to distort and mangle his intentions by passing amendments or deletions. So Polydoros and Theopompos, the kings, added the following rider to the rhetra.</p>
+      <p class="quote">But if the people shall adopt a crooked proposal, the elders and founder-leaders shall have the power of dissolution.</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 6.4 · trans. B. Wilson · Cooley D48</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt">Who gained power? Who lost it?</p>
+      <div class="note reveal" data-code="evidence"><div class="k">Gained</div><p class="body">The kings and elders. <i>They</i> decided what counted as “crooked”, and could dissolve the assembly.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Lost</div><p class="body">The people. They could still say yes or no, but could no longer rewrite what they were given.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">A later fix — or there from the start?</div><p class="body">Plutarch presents the rider as a later correction, but Cooley notes that “it’s now generally agreed that the ‘rider’ is part of the original document.” If so, the people’s power was limited from the beginning.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="Which office is missing?">
+<div class="wrap">
+  <p class="eyebrow">3 · The Great Rhetra · Check for understanding <span class="optional">If time</span></p>
+  <h2>Which office is missing from the Rhetra?</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <figure class="figure contain"><img src="images/clarke-2-4-structures-of-government.jpg" alt="The structures of Spartan government in the Classical period, including the ephors"><figcaption>The structures of Spartan government in the Classical period, including the ephors — <span class="cr">Clarke & Garner, Fig 2.4</span></figcaption></figure>
+    <div class="stack">
+      <p class="qprompt">This diagram shows Sparta’s government in the Classical period. Which part does the Rhetra never mention?</p>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>The five ephors</b> — the powerful annual officials of classical Sparta (Lesson 5).</p></div>
+      <div class="note reveal" data-code="counter"><p class="body">Herodotus credits Lycurgus with the ephorate, yet Plutarch dates the first ephors “Roughly some 130 years after Lykourgos”, in the reign of King Theopompus (<i>Lykourgos</i> 7, Cooley D17).</p></div>
+      <div class="note reveal" data-code="analysis"><p class="body">The sources cannot all be right. Lycurgus seems to have been credited with institutions that appeared at different times.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="Dating the Rhetra" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · The Great Rhetra · I do — reasoning from the evidence</p>
+  <h2>When was the Rhetra made?</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">The rider names two kings</span><span class="d">Polydorus (Agiad house) and Theopompus (Eurypontid house) — one from each royal family (Pausanias’ king lists, Cooley E3–E4).</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Tyrtaeus dates Theopompus</span><span class="d">He is the king “Through whom we captured spacious Messene” (fr. 5, Cooley A5).</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Messenia was conquered c. 735–715 BC</span><span class="d">Cooley’s date for the conquest.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">So the Rhetra was in place by about 700 BC</span><span class="d">If the rider was original, the whole Rhetra may belong to these kings’ reigns.</span></li>
+    </ol>
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">And Lycurgus?</div><p class="body">That leaves little room for a Lycurgus living centuries earlier — a reasoned possibility, not a proven fact. This is the kind of argument that earns marks.</p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">Is the text genuine?</div><p class="body">Cooley: “The language of the rhetra is obscure and archaic, resulting in further corruption of the text.” Puzzling old wording is hard to invent, so most scholars accept it as a real early document.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The Great Rhetra" data-title="Notes 3 — The Great Rhetra" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>The Great Rhetra</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L3 · Lycurgus and the Great Rhetra</b></span><span>3 · The Great Rhetra</span></div>
+    <div class="row"><div class="cq">What did it set up?</div>
+      <div class="nts reveal">Temple (Zeus + Athena) <span class="sep">·</span> tribes + obes <span class="sep">·</span> <b>gerousia of 30</b> = 28 elders + 2 kings <span class="sep">·</span> regular <b>assembly</b> (Apella → ekklesia) <span class="sep">·</span> kings + elders <b>propose</b> <span class="sep">·</span> people <b>decide</b></div></div>
+    <div class="row"><div class="cq">How did it work?</div>
+      <div class="nts reveal"><b>3-part constitution</b> <span class="sep">·</span> people: accept or reject only — no amendments (Plut. <i>Lyc.</i> 6, Cooley D48)</div></div>
+    <div class="row"><div class="cq">The rider?</div>
+      <div class="nts reveal">Polydorus + Theopompus <span class="sep">·</span> “crooked proposal” → kings + elders <b>dissolve</b> the assembly → power to the gerousia <span class="sep">·</span> Cooley: prob. part of the <b>original</b></div></div>
+    <div class="row"><div class="cq">When?</div>
+      <div class="nts reveal">Theopompus took Messenia (Tyrtaeus fr. 5) c. 735–715 BC → Rhetra by <b>c. 700 BC</b></div></div>
+    <div class="row"><div class="cq">Genuine? What’s missing?</div>
+      <div class="nts reveal">Archaic, puzzling wording → hard to invent <span class="sep">·</span> <b>no ephors</b> (Plut.: first ephors c. 130 yrs after L.) → Hdt’s credit to L. can’t be right</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="Booklet Source 2B — Tyrtaeus matches the Rhetra" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · Booklet Source 2, Extract B · We do — match the two sources</p>
+  <h2>Tyrtaeus: the oldest witness</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source 2B · Tyrtaeus, mid-7th century BC</div>
+      <p class="quote sm"><span class="match" data-step="m5">Having listened to Phoibos, they brought home from Delphi<br>God’s oracles</span> with their verses of certainty;<br>The leaders in counsel are <span class="match" data-step="m1">the kings, honoured of the gods</span>,<br>For they look after the lovely city of Sparta,<br>Together with <span class="match" data-step="m2">the eldest-born</span>; and after them <span class="match" data-step="m3">the men of the People</span>,<br>Responding in their turn with straight ordinances<br>Are to say the right things and do everything justly<br>And not give the city <span class="match" data-step="m4">any crooked counsel</span>,<br>And so <span class="match" data-step="m3">victory and power go with the mass of the People</span>.<br>This was the revelation of Phoibos to the city on these matters.</p>
+      <p class="prov">Tyrtaios, fragment 4 (quoted by Plutarch and Diodoros) · trans. K. Hughes · Cooley A4</p>
+    </div>
+    <div class="src">
+      <div class="k">Source 2A · the Rhetra and rider, c. 700 BC (in Plutarch)</div>
+      <p class="quote sm">Lykourgos … <span class="match" data-step="m5">even got an oracle about it from Delphi</span>. …</p>
+      <p class="quote sm">Set up a temple to Zeus Sullanios and Athena Sullania;<br>Tribe the tribes and obe the obes;<br>Set up <span class="match" data-step="m2">a gerousia of thirty</span>, with <span class="match" data-step="m1">the founder-leaders (archagetai)</span>;<br>From time to time, have an Apella between &lt;the streams of&gt; Babyka and Knakion;<br>Thus to propose and rescind;<br><span class="match" data-step="m3">For the people, decision and power</span>.</p>
+      <p class="quote sm">… But if the people shall adopt <span class="match" data-step="m4">a crooked proposal</span>, the elders and founder-leaders shall have the power of dissolution.</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 6 · Cooley D48</p>
+    </div>
+  </div>
+  <ol class="pairs">
+    <li class="reveal" data-c="m1" data-hl="[data-step=m1]"><span class="sw"></span>the kings</li>
+    <li class="reveal" data-c="m2" data-hl="[data-step=m2]"><span class="sw"></span>the elders</li>
+    <li class="reveal" data-c="m3" data-hl="[data-step=m3]"><span class="sw"></span>the people decide</li>
+    <li class="reveal" data-c="m4" data-hl="[data-step=m4]"><span class="sw"></span>“crooked”</li>
+    <li class="reveal" data-c="m5" data-hl="[data-step=m5]"><span class="sw"></span>from Delphi</li>
+  </ol>
+  <div class="note reveal" data-code="evidence"><p class="body">Two writers some 750 years apart preserve the same three-part constitution — strong evidence that the Rhetra is genuinely early.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="Who does Tyrtaeus credit?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · We do — the argument from silence</p>
+  <h2>Who does Tyrtaeus credit — and who is missing?</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card accent"><div class="k">Credited</div><p class="body">Apollo (Phoebus) at Delphi, and the kings.</p></div>
+      <div class="card accent reveal"><div class="k">Missing</div><p class="lead"><b>Lycurgus.</b> Cooley: “Tyrtaios, at any rate, does not mention Lykourgos at all.”</p></div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">Careful: an argument from silence</div><p class="body">We have only a few fragments of Tyrtaeus, so his silence could be chance.</p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">… but it still matters</div><p class="body">This fragment is precisely about the early laws, and later writers who valued Tyrtaeus probably quoted his most informative passages.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Cooley’s reading</div><p class="body">“Even this early version looks like an attempt to legitimise the outcomes of a political process by presenting the constitution as divinely inspired.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="Thucydides and Plutarch">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · two more witnesses</p>
+  <h2>A careful historian, and an honest biographer</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Thucydides</div>
+        <p class="quote sm">Lakedaimon itself, after being founded by the Dorians who now live there, had suffered internal strife for the greatest period we know about, but nevertheless had also had a system of law and order since very ancient times and had never been ruled by tyrants. For four hundred years and more, until the end of the Peloponnesian War, the Lakedaimonians have had the same constitution, through which they have been able to bring about change in other states.</p>
+        <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 1.18.1 (part) · an Athenian, writing after 404 BC · trans. B. Wilson · Cooley F4</p>
+      </div>
+      <div class="note reveal" data-code="counter"><p class="body">Counting back from 404 BC points to about 800 BC or earlier — yet Thucydides <b>never names Lycurgus</b>. Cooley suggests he counted generations of kings.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch</div>
+        <p class="quote sm">[1] There is a general lack of agreement about the life of Lykourgos, the lawgiver, both in its broad perspective and its particulars, since accounts vary about his origins, travels, and death. … Timaios suggests that there were two Lykourgoses in Sparta at very different periods, and that their joint achievements were credited to one of them because of his legendary status; …</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 1.1–2 (part) · written c. AD 100 · trans. B. Wilson · Cooley F2</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><p class="body">Even Lycurgus’ own biographer opens by admitting the problem. Timaeus’ two Lycurguses is itself a guess to explain the confusion.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="Who names Lycurgus? (timeline)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · I do — the evidence in time</p>
+  <h2>Who names Lycurgus — and when?</h2>
+  <figure class="diagram"><svg class="tl" viewBox="0 0 1600 640" role="img" aria-label="To-scale timeline from 900 BC to AD 150 showing which ancient writers name Lycurgus">
+<line class="axis" x1="50" y1="330" x2="1550" y2="330"/>
+<line class="tick" x1="50.0" y1="320" x2="50.0" y2="340"/><text class="tick-lbl" x="50.0" y="368">900 BC</text>
+<line class="tick" x1="192.9" y1="320" x2="192.9" y2="340"/><text class="tick-lbl" x="192.9" y="368">800</text>
+<line class="tick" x1="335.7" y1="320" x2="335.7" y2="340"/><text class="tick-lbl" x="335.7" y="368">700</text>
+<line class="tick" x1="478.6" y1="320" x2="478.6" y2="340"/><text class="tick-lbl" x="478.6" y="368">600</text>
+<line class="tick" x1="621.4" y1="320" x2="621.4" y2="340"/><text class="tick-lbl" x="621.4" y="368">500</text>
+<line class="tick" x1="764.3" y1="320" x2="764.3" y2="340"/><text class="tick-lbl" x="764.3" y="368">400</text>
+<line class="tick" x1="907.1" y1="320" x2="907.1" y2="340"/><text class="tick-lbl" x="907.1" y="368">300</text>
+<line class="tick" x1="1050.0" y1="320" x2="1050.0" y2="340"/><text class="tick-lbl" x="1050.0" y="368">200</text>
+<line class="tick" x1="1192.9" y1="320" x2="1192.9" y2="340"/><text class="tick-lbl" x="1192.9" y="368">100 BC</text>
+<line class="tick" x1="1335.7" y1="320" x2="1335.7" y2="340"/><text class="tick-lbl" x="1335.7" y="368">BC | AD</text>
+<line class="tick" x1="1478.6" y1="320" x2="1478.6" y2="340"/><text class="tick-lbl" x="1478.6" y="368">AD 100</text>
+<g class="linked wc no" id="tl-tyr"><line class="lead" x1="181.0" y1="172" x2="407.1" y2="321"/><circle class="dot" cx="407.1" cy="330" r="10"/><rect x="64" y="22" width="234" height="150" rx="12"/><text class="nm" x="80" y="62">Tyrtaeus</text><text class="dt" x="80" y="93">mid-7th c. BC</text><text class="vd" x="80" y="127">✗ never names him</text><text class="dl" x="80" y="156">credits Apollo + kings</text></g>
+<g class="linked wc yes" id="tl-her"><line class="lead" x1="430.0" y1="172" x2="721.4" y2="321"/><circle class="dot" cx="721.4" cy="330" r="10"/><rect x="313" y="22" width="234" height="150" rx="12"/><text class="nm" x="329" y="62">Herodotus</text><text class="dt" x="329" y="93">430s–420s BC</text><text class="vd" x="329" y="127">✓ names him</text><text class="dl" x="329" y="156">first full account</text></g>
+<g class="linked wc no" id="tl-thu"><line class="lead" x1="679.0" y1="172" x2="764.3" y2="321"/><circle class="dot" cx="764.3" cy="330" r="10"/><rect x="562" y="22" width="234" height="150" rx="12"/><text class="nm" x="578" y="62">Thucydides</text><text class="dt" x="578" y="93">after 404 BC</text><text class="vd" x="578" y="127">✗ never names him</text><text class="dl" x="578" y="156">same laws ‘400 years’</text></g>
+<g class="linked wc yes" id="tl-xen"><line class="lead" x1="928.0" y1="172" x2="785.7" y2="321"/><circle class="dot" cx="785.7" cy="330" r="10"/><rect x="811" y="22" width="234" height="150" rx="12"/><text class="nm" x="827" y="62">Xenophon</text><text class="dt" x="827" y="93">390s–380s BC</text><text class="vd" x="827" y="127">✓ names him</text><text class="dl" x="827" y="156">laws backed by Delphi</text></g>
+<g class="linked wc yes" id="tl-ari"><line class="lead" x1="1177.0" y1="172" x2="864.3" y2="321"/><circle class="dot" cx="864.3" cy="330" r="10"/><rect x="1060" y="22" width="234" height="150" rx="12"/><text class="nm" x="1076" y="62">Aristotle</text><text class="dt" x="1076" y="93">330s–320s BC</text><text class="vd" x="1076" y="127">✓ names him</text><text class="dl" x="1076" y="156">dates him by a discus</text></g>
+<g class="linked wc yes" id="tl-plu"><line class="lead" x1="1426.0" y1="172" x2="1478.6" y2="321"/><circle class="dot" cx="1478.6" cy="330" r="10"/><rect x="1309" y="22" width="234" height="150" rx="12"/><text class="nm" x="1325" y="62">Plutarch</text><text class="dt" x="1325" y="93">c. AD 100</text><text class="vd" x="1325" y="127">✓ names him</text><text class="dl" x="1325" y="156">but admits the doubts</text></g>
+<g class="linked" id="tl-lyc"><rect class="lyc" x="92.9" y="316" width="42.9" height="28" rx="4"/><line class="lead" x1="114.3" y1="344" x2="185" y2="420"/><rect class="evc" x="40" y="420" width="300" height="118" rx="12"/><text class="nm lycn" x="58" y="458">Lycurgus?</text><text class="dt" x="58" y="489">c. 870–840 BC</text><text class="dl" x="58" y="518">the date Herodotus implies</text></g>
+<g class="linked" id="tl-rh"><rect class="mes" x="285.7" y="321" width="28.6" height="18" rx="3"/><path class="rh" d="M335.7,315 l15,15 l-15,15 l-15,-15 z"/><line class="lead" x1="335.7" y1="346" x2="530" y2="420"/><rect class="evc" x="370" y="420" width="330" height="118" rx="12"/><text class="nm" x="388" y="458">The Great Rhetra</text><text class="dt" x="388" y="489">in place by c. 700 BC</text><text class="dl" x="388" y="518">after Messenia, c. 735–715 BC</text></g>
+<g class="linked gap" id="tl-gap"><line x1="114.3" y1="578" x2="721.4" y2="578"/><line x1="114.3" y1="562" x2="114.3" y2="594"/><line x1="721.4" y1="562" x2="721.4" y2="594"/><text x="417.9" y="626">≈ 400 years between the date he implies and Herodotus himself</text></g>
+</svg>
+    <figcaption>Drawn to scale for this lesson. Dates of writing are approximate. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#tl-lyc" hidden></i>
+  <i class="reveal" data-also="#tl-rh" hidden></i>
+  <i class="reveal" data-also="#tl-tyr" hidden></i>
+  <i class="reveal" data-also="#tl-her" hidden></i>
+  <i class="reveal" data-also="#tl-thu" hidden></i>
+  <i class="reveal" data-also="#tl-xen" hidden></i>
+  <i class="reveal" data-also="#tl-ari" hidden></i>
+  <i class="reveal" data-also="#tl-plu" hidden></i>
+  <i class="reveal" data-also="#tl-gap" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="The ancient dates clash">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · the dates <span class="optional">If time</span></p>
+  <h2>The ancient writers cannot agree when he lived</h2>
+  <div class="tbl-scroll"><table class="tbl">
+    <tr><th>Writer</th><th>When did Lycurgus live?</th></tr>
+    <tr class="reveal"><td>Herodotus</td><td>Guardian of King Leobotas (Cooley: c. 870–840 BC, tentatively)</td></tr>
+    <tr class="reveal"><td>Thucydides</td><td>Not named; the constitution unchanged for over 400 years before 404 BC</td></tr>
+    <tr class="reveal"><td>Xenophon</td><td>“in the days of the Heraklids, the sons of Herakles” (Cooley F1)</td></tr>
+    <tr class="reveal"><td>Aristotle (in Plutarch)</td><td>At the time of Iphitos, with whom he set up the Olympic truce — evidence: an inscribed discus at Olympia</td></tr>
+    <tr class="reveal"><td>Eratosthenes and Apollodorus (in Plutarch)</td><td>Well before the first Olympiad of 776 BC</td></tr>
+    <tr class="reveal"><td>Timaeus (in Plutarch)</td><td>Two men called Lycurgus, at different times</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="Did Lycurgus exist?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · weighing the case</p>
+  <h2>Did Lycurgus exist?</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">The case for a real Lycurgus</div>
+      <ul class="body">
+        <li class="reveal">Herodotus, Xenophon, Aristotle and Plutarch all believed in him, and Sparta worshipped him at a temple.</li>
+        <li class="reveal">The Rhetra is a genuine early document, so <i>someone</i> framed it.</li>
+      </ul>
+    </div>
+    <div class="card quiet">
+      <div class="k">The case that he is a legend</div>
+      <ul class="body">
+        <li class="reveal">The two earliest witnesses to the constitution, Tyrtaeus and Thucydides, do not name him.</li>
+        <li class="reveal">Ancient dates for him range over centuries.</li>
+        <li class="reveal">He is credited with institutions that appeared at different times, such as the ephorate.</li>
+        <li class="reveal">His name: Cooley translates it “Wolf-worker”; Cartledge notes it “comes close to some epithets of Apollo” — the god at the heart of the story.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">The editor of our sourcebook</div><p class="body">Cooley concludes that “it is best to consider him a mythical figure”: even if a real man had some part in the early laws, “we have no means of disentangling the legends that grew around him to get an idea of one man’s achievements.”</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="4 · The issue of Lycurgus" data-title="Vote: was Lycurgus real?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote</p>
+  <h2>“Lycurgus was a real person.”</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
+    <div class="card"><div class="k">Sideways</div><p class="lead">Unsure</p></div>
+    <div class="card"><div class="k">Thumbs down</div><p class="lead">Disagree</p></div>
+  </div>
+  <p class="cue">Be ready to justify your vote with a named source: Herodotus, Plutarch, Tyrtaeus or Thucydides.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="You do — annotate and judge">
+<div class="wrap">
+  <p class="eyebrow">4 · The issue of Lycurgus · You do · 16 minutes · press K for the timer</p>
+  <h2>Your turn: annotate, then judge</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">1 · Annotate Source 2B (Tyrtaeus) in your booklet</div>
+      <ul class="body">
+        <li><b>O</b> — why is a poet living in 7th-century Sparta such rare evidence?</li>
+        <li><b>V</b> — which lines refer to the kings, the elders and the assembly?</li>
+        <li><b>P</b> — why present the constitution as Apollo’s revelation?</li>
+        <li><b>R</b> — the text is stitched from two later writers: what might be lost?</li>
+        <li><b>L</b> — who does Tyrtaeus credit, and who is missing?</li>
+      </ul>
+      <p class="small">Your handwriting, your words. Sources 1 and 2 each need an O, V, P, R and L note before the bell.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">2 · Write one judgement</div>
+        <p class="frame"><b>Lycurgus may not have existed, because</b> <span class="blank"></span>, <b>but</b> <span class="blank"></span>, <b>so</b> <span class="blank"></span>.</p>
+      </div>
+      <div class="src reveal" data-veil="Show a model judgement">
+        <div class="k">A model judgement</div>
+        <p class="quote sm">Lycurgus may not have existed, because Tyrtaeus, our only witness from archaic Sparta, credits Apollo and the kings and never names him, but most later writers believed in him and Sparta worshipped him, so it is safest to treat him as a legendary founder whose story explains Sparta’s laws rather than as a proven historical person.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The issue of Lycurgus" data-title="Notes 4 — The issue of Lycurgus" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The issue of Lycurgus</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L3 · Lycurgus and the Great Rhetra</b></span><span>4 · The issue</span></div>
+    <div class="row"><div class="cq">Tyrtaeus?</div>
+      <div class="nts reveal">fr. 4 (Cooley A4), mid-7th c. BC, only witness from archaic Sparta <span class="sep">·</span> same 3 parts as the Rhetra → Rhetra genuinely early <span class="sep">·</span> credits Apollo + kings, <b>never names L.</b></div></div>
+    <div class="row"><div class="cq">Thucydides? Plutarch?</div>
+      <div class="nts reveal">Thuc. 1.18.1 (F4): same constitution “four hundred years and more” — no name <span class="sep">·</span> Plut. <i>Lyc.</i> 1 (F2): “general lack of agreement”; Timaeus: two Lycurguses</div></div>
+    <div class="row"><div class="cq">The timeline</div>
+      <div class="nts reveal">Hdt’s date for L. c. 870–840 BC → first full account 430s BC ≈ <b>400 yrs</b> later <span class="sep">·</span> ancient dates range over centuries</div></div>
+    <div class="row"><div class="cq">For / against</div>
+      <div class="nts reveal"><b>For</b>: later writers believed; temple; Rhetra real <span class="sep">·</span> <b>Against</b>: earliest witnesses silent; dates clash; ephorate came later; name close to Apollo’s titles</div></div>
+    <div class="row"><div class="cq">Verdict</div>
+      <div class="nts reveal">Cooley: “it is best to consider him a mythical figure” <span class="sep">·</span> the constitution grew over “a lengthy process”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Why it mattered" data-title="Lycurgus the hero" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Why it mattered · myths and legends: the hero cult</p>
+  <h2>Real or not, Lycurgus was worshipped</h2>
+  <div class="split" style="--cols:1fr 1.25fr">
+    <figure class="figure contain"><img src="images/hurley-51-chrysapha-hero-relief.jpg" alt="A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta"><figcaption>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — <span class="cr">Hurley et al., Source 51</span></figcaption></figure>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch</div>
+        <p class="quote sm">In fact he has a temple there, and annual sacrifices to him as if he was a god. … There is a legend, too, that when they brought his remains back home, his tomb was struck by lightning.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 31 · trans. B. Wilson · Cooley F7</p>
+      </div>
+      <div class="note reveal" data-code="keyterm"><div class="k">What is a hero?</div><p class="body">Cooley, drawing on Burkert: a “deceased person who exerts from his grave a power for good or evil and who demands appropriate honour”.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Reading the relief</div><p class="body">Large enthroned figures, small worshippers bringing gifts, and a snake — which Cooley notes “suggests a heroized person”. It does not show Lycurgus, but it shows how Laconians pictured the honoured dead.</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> Making Lycurgus a hero placed the founder of the laws among the city’s protectors.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Why it mattered" data-title="Why the Rhetra and the legend mattered" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Why it mattered · I do — keep the law and the legend apart</p>
+  <h2>Why the Rhetra and the legend mattered</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">The Great Rhetra mattered because it …</div>
+      <ul class="body">
+        <li class="reveal"><b>set up Sparta’s government</b> — the kings, gerousia and assembly of Lessons 4 and 5</li>
+        <li class="reveal"><b>limited the people’s power</b> — a vote, but only on proposals put to them; the rider let kings and elders dissolve the assembly</li>
+        <li class="reveal"><b>was linked to good order and stability</b> — Herodotus: from badly governed to “excellent government”; Thucydides: the same constitution “four hundred years and more”</li>
+        <li class="reveal"><b>was admired as balanced</b> — Plutarch praises “such a mixed and balanced form of government”</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">The Lycurgus legend mattered because it …</div>
+      <ul class="body">
+        <li class="reveal"><b>gave the laws divine authority</b> — Xenophon: disobeying laws “sanctioned by the Pythian oracle” was blasphemous as well as illegal</li>
+        <li class="reveal"><b>made a hero to honour</b> — a temple and annual sacrifices</li>
+        <li class="reveal"><b>made the system seem unchangeable</b> — Cooley: it let Spartans “think of their own way of life as constant and ancestral, while discouraging any calls for radical reform or change”</li>
+        <li class="reveal"><b>kept growing</b> — later Spartans called new customs “Lycurgan”</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>Linking the two:</b> the Rhetra gave Sparta its political structure; the legend gave that structure a single, sacred and unchanging origin.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Why it mattered" data-title="The legend lives on">
+<div class="wrap">
+  <p class="eyebrow">5 · Why it mattered · the legend lives on</p>
+  <h2>Evidence of the mirage — not of the man</h2>
+  <div class="split" style="--cols:.8fr .9fr 1.1fr">
+    <figure class="figure contain"><img src="images/clarke-7-9-lycurgus-us-supreme-court.jpg" alt="Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court"><figcaption>Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court — <span class="cr">Clarke & Garner, Fig 7.9</span></figcaption></figure>
+    <figure class="figure contain"><img src="images/clarke-2-3-delacroix-lycurgus.jpg" alt="Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting"><figcaption>Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting — <span class="cr">Clarke & Garner, Fig 2.3</span></figcaption></figure>
+    <div class="stack">
+      <p class="qprompt">Why are these images evidence for the Spartan mirage rather than for Lycurgus?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">They are modern: a 20th-century lawcourt and a 19th-century painter still used Lycurgus as the model lawgiver. In Cooley’s words, “Lykourgos came to be a symbol for all things Spartan, both in Sparta and abroad.”</p></div>
+      <div class="note reveal" data-code="counter"><p class="body">Not just “spin”: Cooley warns that “Such a process of myth-making should not be dismissed as cynical ‘spin’”. The legend was “a dynamic set of stories that developed and grew in the telling”.</p></div>
+      <div class="note reveal" data-code="evidence"><p class="body">Pausanias even credits Lycurgus with the Roman-era whipping at the altar of Artemis Orthia — which Cooley calls “an entirely specious justification” (Lesson 9).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Why it mattered" data-title="Notes 5 — Why it mattered" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Why the Rhetra and the legend mattered</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L3 · Lycurgus and the Great Rhetra</b></span><span>5 · Why it mattered</span></div>
+    <div class="row"><div class="cq">The Rhetra?</div>
+      <div class="nts reveal">Set up kings, gerousia, assembly <span class="sep">·</span> power kept with kings + elders (rider) <span class="sep">·</span> <i>eunomia</i> + stability (Hdt; Thuc. “four hundred years and more”) <span class="sep">·</span> admired as a <b>mixed constitution</b> (Plut. <i>Lyc.</i> 7, D17)</div></div>
+    <div class="row"><div class="cq">The legend?</div>
+      <div class="nts reveal"><b>Divine authority</b>: disobeying = “blasphemous” (Xen. <i>LP</i> 8.5, D19) <span class="sep">·</span> <b>hero cult</b>: temple + annual sacrifices (Plut. <i>Lyc.</i> 31, F7) <span class="sep">·</span> “constant and ancestral” → <b>discouraged reform</b> (Cooley)</div></div>
+    <div class="row"><div class="cq">Later?</div>
+      <div class="nts reveal">New customs labelled Lycurgan (Orthia whipping) <span class="sep">·</span> modern art + law courts → the <b>mirage</b></div></div>
+    <div class="row"><div class="cq">Link</div>
+      <div class="nts reveal">Rhetra = the <b>structure</b> <span class="sep">·</span> legend = its <b>sacred, unchanging origin</b></div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Why it mattered" data-title="Summary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What was the Great Rhetra, and what did it set up?</li>
+          <li>What did Spartans believe Lycurgus did — and what is the issue?</li>
+          <li>Why did the Rhetra and the legend matter?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm">The Great Rhetra was an early, oracle-style statement of Sparta’s constitution, preserved by Plutarch, which made the two kings and the elders of the gerousia responsible for proposals and gave a citizen assembly the final say, limited by the rider. Spartans believed Lycurgus had created this and their whole way of life with Apollo’s approval, but the earliest evidence never names him and ancient dates for him clash, so many historians treat him as a legend. Either way, the Rhetra decided who held power, and the legend gave Sparta’s laws a sacred, unchanging authority that discouraged reform.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · The basics: Rhetra, Lycurgus, the issue</label></li>
+        <li><label><input type="checkbox"> 2 · Herodotus’ story: two versions, what he credits</label></li>
+        <li><label><input type="checkbox"> 3 · The Rhetra: clauses, how it worked, the rider, its date</label></li>
+        <li><label><input type="checkbox"> 4 · The issue: Tyrtaeus, Thucydides, Plutarch, dates, verdict</label></li>
+        <li><label><input type="checkbox"> 5 · Why the Rhetra and the legend mattered</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (c)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>This lesson has been examined twice</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 6 marks ≈ 11 minutes; 7 marks ≈ 12–13 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">Importance</div><p class="body">Not what something <i>was</i>, but what it <i>did</i> — its effects on Spartan society in this period.</p></div>
+  </div>
+  <p class="lead">Question 1 (2024): we take NESA’s own sample answer apart. Question 2 (2021): we plan together, you write, then compare with an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2024 Q11(c)" data-title="HSC 2024 Q11(c) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 · Section II · Question 11 (c) · 6 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> the <span class="code" data-code="keyterm" data-letter="K">importance</span> of <span class="code" data-code="keyterm" data-letter="K">myths and legends</span> for <span class="code" data-code="scope" data-letter="S">Spartan society during this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Question 1 · I do — watch how the question is taken apart, then how NESA’s full-mark sample is built.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(c)" data-title="HSC 2024 Q11(c) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(c) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">Cause and effect: each myth → what it did for Spartan society. A retelling of the story earns little.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Importance · myths and legends — plural</div><p class="body">More than one: Lycurgus, the Dioscuri (the twin heroes linked to the two kings), the Trojan War heroes Menelaus and Helen.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">Spartan society during this period</div><p class="body">Effects on Spartans — identity, government, values — from the Archaic period to 371 BC.</p></div>
+    <div class="card accent reveal"><div class="k">6 marks</div><p class="body">About 11 minutes · three myths or legends, each tied to an effect · about 130–200 words · no long introduction.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(c)" data-title="HSC 2024 Q11(c) — what the markers rewarded" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(c) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.05fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria</th></tr>
+      <tr><td class="m">6</td><td>Provides a detailed and informed explanation of features relevant to the question · Communicates effectively using appropriate terms and concepts</td></tr>
+      <tr><td class="m">4–5</td><td>Provides an informed explanation of features relevant to the question · Communicates using appropriate terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Provides some information about features relevant to the question · May use some appropriate terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">focus on the importance of myths and legends rather than describing them (c)</span><span class="q">use appropriate historical terms and concepts (b,c,d)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">providing an explanation of the importance of more than one myth or legend to society (c)</span><span class="q">focusing on the specific wording of the question(s) to explain rather than describe (b,c)</span></p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2024 HSC Ancient History Marking Guidelines (Section II, part (c)) and the 2024 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(c)" data-title="HSC 2024 Q11(c) — NESA’s sample, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(c) · I do — NESA’s sample answer, annotated</p>
+  <h2>A 6-mark explanation in 133 words</h2>
+  <div class="annot">
+    <div class="ans long">
+      <span class="code" data-code="judgement" id="c24-1">Myths and legends in Sparta were important as they created collective identity and justified the system of government.</span><span class="mk">1</span>
+      <span class="code" data-code="analysis" id="c24-2">Lycurgus was a foundational myth, providing an origin story for the Great Rhetra which established social organisation and militaristic culture.</span><span class="mk">2</span>
+      <span class="code" data-code="evidence" id="c24-3">Plutarch relates that Lycurgus brought the Spartan constitution as an oration from the Oracle at Delphi.</span><span class="mk">3</span>
+      He <span class="code" data-code="counter" id="c24-4">allegedly</span><span class="mk">4</span> implemented new laws to focus Sparta’s efforts on militaristic control, communal living, and the production of strong warriors.
+      <span class="code" data-code="analysis" id="c24-5">His actions thus established the foundation of Sparta’s social, political and economic organisation.</span><span class="mk">5</span>
+      <span class="code" data-code="evidence" id="c24-6">The Dioscuri were important for the existence of the dual monarchy, with symbols of the twins evident in archaeology.</span><span class="mk">6</span>
+      <span class="code" data-code="keyterm" id="c24-7">There are many references to the myth of the Trojan War at Sparta, such as the Menelaion, which reinforced societal expectations of militant men and beautiful women.</span><span class="mk">7</span>
+      <p class="meta">Sample answer from the NESA 2024 HSC Ancient History Marking Guidelines · 133 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#c24-1"><span class="mk">1</span><b>Answer first</b><span class="tx">Two effects in one sentence — identity and justifying the government. Everything after proves them.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#c24-2"><span class="mk">2</span><b>Myth → what it did</b><span class="tx">Not “Lycurgus was a lawgiver” but the job the myth did: an origin story for the Rhetra.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#c24-3"><span class="mk">3</span><b>A named writer</b><span class="tx">Plutarch, not “the Greek writers” — the marking feedback asks for specific writers.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#c24-4"><span class="mk">4</span><b>One word carries the debate</b><span class="tx">“Allegedly” shows the writer knows Lycurgus may be legendary, without derailing the answer.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#c24-5"><span class="mk">5</span><b>The explain move</b><span class="tx">“Thus” links cause to effect: the laws → the foundation of Spartan society.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#c24-6"><span class="mk">6</span><b>A second legend</b><span class="tx">More than one myth, as the markers asked: twin heroes ↔ two kings, backed by archaeology.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#c24-7"><span class="mk">7</span><b>A third, tied to the site</b><span class="tx">The Trojan War myth, anchored at the Menelaion (Lesson 2), linked to what Sparta expected of men and women.</span></div>
+      <div class="verdict reveal"><b>NESA’s sample.</b> Three myths, each tied to its importance for society, with named evidence.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> Plutarch says Lycurgus obtained the Rhetra as an <i>oracle</i> from Delphi (the sample says “oration”), and naming the evidence for the Dioscuri — Herodotus and a dedicated relief — would make sentence 6 “detailed”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(c)" data-title="The evidence behind the other legends" data-kind="hsc notes">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(c) · the evidence behind sentences 6 and 7</p>
+  <h2>The Dioscuri and the two kings</h2>
+  <div class="split" style="--cols:.7fr 1.5fr">
+    <figure class="figure contain"><img src="images/clarke-7-11-dioscuri-relief.jpg" alt="A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC"><figcaption>A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC — <span class="cr">Clarke & Garner, Fig 7.11</span></figcaption></figure>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Herodotus, on the kings at war</div>
+        <p class="quote sm">… a law was made at Sparta that both kings were not allowed to follow an army when it went abroad: previously they had both done so. One of them would be released from the army, and one of the Tyndaridai would also be left behind: previously (images of) both of these special helpers would follow the army.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 5.75.2 · trans. B. Wilson · Cooley D6</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · an inscribed relief from Sellasia, north of Sparta, c. 525 BC</div>
+        <p class="quote sm">Plestiadas d[edicated] me to the Dioskouroi, a statue of the twin sons of Tyndareos, dreading their wrath.</p>
+        <p class="prov">Relief stele to the Tyndaridai · trans. in Cooley C28</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><div class="k">Why they mattered</div><p class="body">The Dioscuri (Castor and Pollux) were twin heroes whose mortal father, Tyndareus, was a king of Sparta. Twin heroes went to war with the two kings: a divine model for Sparta’s unusual dual kingship. (Sentence 7’s Menelaion: Lesson 2.)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(c)" data-title="HSC 2024 Q11(c) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(c) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · tells the story</span>
+      <p class="resp">Lycurgus went to Delphi, where the priestess said he might be a god. He brought back the Great Rhetra, which set up the gerousia and the assembly. When he died the Spartans built him a temple.</p>
+      <p class="why">Accurate, but it describes one myth and never says what it did for Spartan society — the markers wanted importance “rather than describing them”.</p></div>
+    <div class="rung reveal"><span class="mark">4–5 marks · one myth only</span>
+      <p class="resp">The Lycurgus legend was important because presenting the laws as an oracle from Apollo made them sacred, so Spartans obeyed them and resisted change for centuries …</p>
+      <p class="why">A real explanation — but of one legend. The markers asked for “more than one myth or legend”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · the wrong kind of thing</span>
+      <p class="resp">Myths were very important to Sparta, such as the Karneia, the Hyakinthia and the Gymnopaidiai, where Spartans honoured Apollo with songs and dances.</p>
+      <p class="why">These are festivals, not myths or legends — a different dot point. Read the key term exactly.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 · Section II · Question 11 (c) · 7 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> the <span class="code" data-code="keyterm" data-letter="K">importance</span> of <span class="code" data-code="keyterm" data-letter="K">Lycurgus and the Great Rhetra</span> <span class="code" data-code="scope" data-letter="S">in this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Question 2 · We do, then you do — plan it together, write it yourself, then compare with an annotated model.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — take it apart together" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · We do — deconstruct together</p>
+  <h2>What does this question want?</h2>
+  <div class="cols c3">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">Why and how they mattered — causes and effects, not a retelling.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Lycurgus <i>and</i> the Great Rhetra</div><p class="body">Both: the law (what it set up and did) and the man (what he was credited with — and whether he existed).</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">Their effects on Sparta down to 371 BC: government, stability, obedience, the hero cult.</p></div>
+  </div>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="tbl-scroll reveal"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2021)</th></tr>
+      <tr><td class="m">6–7</td><td>Presents a well-developed and detailed explanation relevant to the question · Communicates ideas and information coherently, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–5</td><td>Presents clear explanation relevant to the question · Communicates ideas and information clearly, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Presents some information relevant to the question · Communicates ideas using some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="note reveal" data-code="judgement"><div class="k">The 2021 markers’ feedback</div>
+      <p class="fb">Better responses could <span class="q">highlight the importance of Lycurgus in relation to his role as a lawgiver and reformer and the debate about his existence (c)</span><span class="q">use specific examples of reforms attributed to Lycurgus and the Great Rhetra (c)</span>Students needed to improve by <span class="q">sustaining a coherent line of explanation (c)</span></p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — what the markers listed" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · NESA’s “answers could include”</p>
+  <h2>What the marking guidelines listed</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="note" data-code="evidence"><div class="k">Answers could include (NESA 2021, Option G)</div>
+      <p class="fb"><span class="q">Lycurgus viewed as national hero and founding figure of Spartan culture and society.</span><span class="q">He is accredited with setting up the constitution (Rhetra), social structure, educational system and militaristic structures (Plutarch).</span><span class="q">The Rhetra defined what it was to be Spartan – the social structure, syssitia and agoge all defined Spartiate vs non-Spartiate, creating an exclusive society.</span><span class="q">Lycurgus allegedly created a ‘mixed constitution’ with a unique political structure in contrast to the rest of Greece – elements of monarchy, oligarchy, democracy (Aristotle).</span><span class="q">Herodotus claims that before the Rhetra Sparta was the worst governed city – and thus Lycurgus’ Rhetra was viewed as significant in organising an effective city-state.</span></p></div>
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">Careful</div><p class="body">The guidelines blur two things. The Rhetra’s clauses are about government; the messes (<i>syssitia</i>) and the education system (<i>agoge</i>) are <b>other reforms credited to Lycurgus</b>. Keep them apart in your answer — that precision is what “specific examples” means.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Notice</div><p class="body">“Allegedly” and “accredited with”: even NESA’s list signals that these are claims about Lycurgus, not proven facts.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2021 HSC Ancient History Marking Guidelines, Section II part (c), Option G. The fourth point continues: the syssitia was said to be Lycurgus’ creation and built a cohesive, austere and militaristic culture (Xenophon).</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — plan it together" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · We do — a plan in four moves</p>
+  <h2>One line of explanation, four moves</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Move</th><th>Point</th><th>Evidence</th><th>→ Why it mattered</th></tr>
+    <tr class="reveal"><td><b>1 · Judgement</b></td><td colspan="3">Together they gave Sparta its political system <b>and</b> the story that made it seem sacred and unchangeable.</td></tr>
+    <tr class="reveal"><td><b>2 · The Rhetra</b></td><td>three-part constitution; the rider</td><td>Plutarch, <i>Lyc.</i> 6 (D48) · Tyrtaeus fr. 4 · Plutarch, <i>Lyc.</i> 7</td><td>power with kings + elders; stability and <i>eunomia</i> (Herodotus, Thucydides); a “mixed” constitution</td></tr>
+    <tr class="reveal"><td><b>3 · Lycurgus</b></td><td>credited with the system</td><td>Herodotus 1.65 · Xenophon, <i>LP</i> 2, 8.5 · Plutarch</td><td>divine authority → obedience; hero cult; symbol → resisted reform</td></tr>
+    <tr class="reveal"><td><b>4 · The debate</b></td><td>did he exist?</td><td>Tyrtaeus’ silence · clashing dates · Cooley</td><td>his importance lies in the legend, not in proven deeds</td></tr>
+  </table></div>
+  <p class="cue reveal">Close by returning to the judgement: the Rhetra = the structure; the legend = its sacred authority.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · You do · 12 minutes · press K for the timer</p>
+  <h2>Explain the importance of Lycurgus and the Great Rhetra in this period. <span class="small">(7 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence</li>
+        <li>the Rhetra <i>and</i> Lycurgus, each with why it mattered</li>
+        <li>specific reforms and at least three named writers</li>
+        <li>the debate about his existence</li>
+        <li>about 250–330 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body">Start: “Lycurgus and the Great Rhetra were important because together they gave Sparta …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — model, paragraph 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · annotated model · paragraph 1 of 2</p>
+  <h2>Answer first, then explain the Rhetra</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m7-1">Lycurgus and the Great Rhetra were important because together they gave Sparta both its political system and the story that made that system seem sacred and unchangeable.</span><span class="mk">1</span>
+      <span class="code" data-code="keyterm" id="m7-2">The Great Rhetra, preserved by Plutarch but probably in place by about 700 BC, set up a three-part constitution: the two kings and a gerousia of 28 elders proposed laws, and a regular assembly of citizens accepted or rejected them.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m7-3">The rider, which let the kings and elders dissolve an assembly that adopted a ‘crooked proposal’, kept real control with the gerousia: the citizens could approve or reject, but never rewrite, what they were given.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m7-4">Ancient writers admired this balance; Plutarch praised Lycurgus for devising ‘such a mixed and balanced form of government’.</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="m7-5">Because the system lasted, Thucydides could claim that Sparta had kept the same constitution for ‘four hundred years and more’ without tyrants, and Herodotus could contrast its early misgovernment with its later ‘excellent government’.</span><span class="mk">5</span>
+      <p class="meta">Model written for this lesson · paragraph 1 of 2</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m7-1"><span class="mk">1</span><b>Answer first</b><span class="tx">Both halves of the question in one sentence. “Because” sets up the line of explanation the markers want sustained.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m7-2"><span class="mk">2</span><b>Specific and dated</b><span class="tx">What it set up, who preserved it, roughly when — with the right terms: gerousia, assembly.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m7-3"><span class="mk">3</span><b>Explain, don’t describe</b><span class="tx">Rider → who gained power → what the assembly could not do. Cause and effect.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-4"><span class="mk">4</span><b>An ancient judgement as evidence</b><span class="tx">NESA’s “mixed constitution” point, in a named writer’s words.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m7-5"><span class="mk">5</span><b>Importance over time</b><span class="tx">Stability and good order across centuries — why it mattered “in this period”.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — model, paragraph 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · annotated model · paragraph 2 of 2</p>
+  <h2>Then Lycurgus — and the debate</h2>
+  <div class="annot wide" data-veil="Show the second paragraph">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m7-6">Lycurgus mattered less for what he did than for what Spartans believed he did.</span><span class="mk">6</span>
+      <span class="code" data-code="evidence" id="m7-7">Herodotus credits him with the messes, the army’s thirty-man units, the gerousia and even the ephorate; Xenophon credits him with the boys’ education; and Plutarch says he received the Rhetra as an oracle from Delphi.</span><span class="mk">7</span>
+      <span class="code" data-code="analysis" id="m7-8">Presenting the laws as Apollo’s command gave them divine authority: Xenophon says it became blasphemous as well as illegal to disobey laws ‘sanctioned by the Pythian oracle’.</span><span class="mk">8</span>
+      <span class="code" data-code="counter" id="m7-9">Yet Tyrtaeus, the only witness from archaic Sparta, credits Apollo and the kings and never names Lycurgus, and ancient dates for him clash, so Cooley concludes ‘it is best to consider him a mythical figure’.</span><span class="mk">9</span>
+      <span class="code" data-code="judgement" id="m7-10">Even so, the legend was powerful: Sparta honoured him with a temple and annual sacrifices, and he became a symbol of an ancestral way of life that discouraged reform. The Rhetra therefore gave Sparta its structure of government, and the legend of Lycurgus gave that structure its sacred and unchanging authority.</span><span class="mk">10</span>
+      <p class="meta">Model written for this lesson · both paragraphs ≈ 330 words, about 12 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m7-6"><span class="mk">6</span><b>Signpost</b><span class="tx">A new paragraph, a new idea — and it already hints at the debate.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-7"><span class="mk">7</span><b>Specific reforms</b><span class="tx">Three writers and named reforms “attributed to Lycurgus” — what the 2021 markers rewarded.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m7-8"><span class="mk">8</span><b>Why it mattered</b><span class="tx">Divine authority → obedience. A short quotation built into the sentence.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m7-9"><span class="mk">9</span><b>The debate</b><span class="tx">“Yet” brings in his existence, with evidence and a historian — the feedback named “the debate about his existence”.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m7-10"><span class="mk">10</span><b>Close the loop</b><span class="tx">“Even so” turns the debate into importance; “therefore” returns to the opening judgement.</span></div>
+      <div class="verdict reveal"><b>Written to the 6–7 criteria:</b> a well-developed, detailed explanation that sustains one line of argument.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · retells the story</span>
+      <p class="resp">Lycurgus was a Spartan lawgiver who went to Delphi. He brought back the Great Rhetra, which had six clauses: a temple, tribes and obes, a gerousia of thirty and an assembly. After he died the Spartans built him a temple.</p>
+      <p class="why">Accurate information, but no explanation of why any of it mattered — “some information”, not an explanation.</p></div>
+    <div class="rung reveal"><span class="mark">4–5 marks · half the question</span>
+      <p class="resp">The Rhetra was important because it created Sparta’s government: the kings and gerousia proposed laws and the assembly voted on them, which kept Sparta stable for centuries …</p>
+      <p class="why">A clear explanation of the Rhetra, but Lycurgus is just its author: no reforms credited to him, no legend, no debate about his existence.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · errors that sink it</span>
+      <p class="resp">Lycurgus wrote the Great Rhetra in 776 BC. It created the five ephors and allowed the people in the assembly to propose their own laws.</p>
+      <p class="why">The Rhetra never mentions ephors; the people could only accept or reject; and a contested date is stated as fact.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(c)" data-title="HSC 2021 Q11(c) — mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(c) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement covering both Lycurgus and the Rhetra</label></li>
+        <li><label><input type="checkbox"> explained what the Rhetra set up <i>and</i> why it mattered (power, stability)</label></li>
+        <li><label><input type="checkbox"> named at least two reforms credited to Lycurgus</label></li>
+        <li><label><input type="checkbox"> explained why the legend mattered (divine authority, hero cult, no reform)</label></li>
+        <li><label><input type="checkbox"> included the debate about his existence, with evidence</label></li>
+        <li><label><input type="checkbox"> named at least three writers — not “the Greek writers”</label></li>
+        <li><label><input type="checkbox"> no ephors in the Rhetra; the people did not propose laws</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Could someone read only your first and last sentences and know your argument? That is “a coherent line of explanation”.</p></div>
+      <div class="card accent"><div class="k">More practice · written for this lesson</div>
+        <p class="body"><b>Outline the features of the Great Rhetra.</b> (4 marks)</p>
+        <p class="body"><b>To what extent was Lycurgus responsible for the Spartan constitution?</b> (10 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">Your because / but / so sentence about Lycurgus.</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One reason the Great Rhetra mattered to Sparta.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> the two kings — the “founder-leaders” of the Rhetra — and the twin heroes who went to war with them.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Herodotus 1.65.2–66.1 and 5.75.2 (F3, D6, trans. B. Wilson); Plutarch, <i>Lykourgos</i> 1.1–2, 6, 7, 13 and 31 (F2, D48, D17, D49, F7, trans. B. Wilson); Tyrtaeus frs 4 and 5 (A4, A5, trans. K. Hughes); Thucydides 1.18.1 (F4, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 2 (paraphrased), 8.5 and 10.8 (D74, D19, F1, trans. B. Wilson); relief stele to the Tyndaridai (C28). Cooley’s introductions and notes, including W. Burkert, <i>Greek Religion</i> (1985), and P. Cartledge, <i>The Spartans: An Epic History</i> (2003), as cited there.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC questions, marking criteria, sample answer, “answers could include” and marking feedback: NSW Education Standards Authority, 2021 and 2024 HSC Ancient History examinations, marking guidelines and feedback. © NESA. NESA glossary of key words for “explain”.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images</div>
+      <ul class="small"><li>The remains of the Temple of Apollo at Delphi — Bradley, Fig 3.25</li><li>The structures of Spartan government in the Classical period, including the ephors — Clarke & Garner, Fig 2.4</li><li>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — Hurley et al., Source 51</li><li>Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court — Clarke & Garner, Fig 7.9</li><li>Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting — Clarke & Garner, Fig 2.3</li><li>A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC — Clarke & Garner, Fig 7.11</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The timeline and the Rhetra diagram were drawn for this lesson.</p></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
