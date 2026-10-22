@@ -1,0 +1,2067 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L2 · The Land and Site</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the geographical setting, natural features, resources and site of Sparta, with guided notes and annotated HSC answers.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 2" data-title="The land and the site of Sparta" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 2</p>
+      <h1>The land and the site of Sparta</h1>
+      <p class="lead">How did the land shape Spartan society — and what can its ruins tell us?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-1-3-sparta-below-taygetus.jpg" alt="Modern Sparta at the foot of Mt Taygetus"><figcaption>Modern Sparta at the foot of Mt Taygetus — <span class="cr">Clarke & Garner, Fig 1.3</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 2" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From words to the land</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Last lesson</div>
+      <p class="body">Almost everything we know about Sparta comes from outsiders writing at a distance. Even Thucydides admitted that Spartan secrecy hid the size of their army.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">The land itself is evidence. Mountains, rivers and ruins cannot exaggerate or flatter — but they still have to be interpreted.</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 1, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 2" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>explain how Sparta’s setting and resources shaped its society</li>
+        <li>analyse what the physical site of Sparta can and cannot tell us</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>describe three natural features or resources and link each to an aspect of Spartan society</li>
+        <li>name and locate the main parts of the site: the villages, acropolis, agora, Sanctuary of Artemis Orthia, Menelaion and Amyklaion</li>
+        <li>explain why Thucydides thought Sparta’s ruins would mislead later generations</li>
+        <li>write a 3-mark outline answer that matches the marks</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two terms to get right</div>
+    <p class="body"><b>Natural features</b> are the land itself: mountains, rivers, plains, coast, climate. <b>Resources</b> are what the land provides. Neither means buildings or events.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 2" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>Your notes replace the textbook chapter</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (c. = about)</span></div></div>
+      <div class="row"><div class="cq">Where was Sparta?</div><div class="nts">Laconia, SE Peloponnese …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Use arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: setting · natural features · resources · the site · what the site can tell us.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 2" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The land</th><th>Meaning</th></tr>
+      <tr><td>Peloponnese</td><td>the large peninsula of southern Greece, joined to the mainland at the Isthmus of Corinth</td></tr>
+      <tr><td>Laconia</td><td>the south-eastern Peloponnese, Sparta’s home region; the state was called Lakedaimon</td></tr>
+      <tr><td>Messenia</td><td>the fertile region west of Mt Taygetus, conquered by Sparta and farmed by helots</td></tr>
+      <tr><td>Eurotas</td><td>the river flowing south past Sparta through a fertile valley to the Laconian Gulf</td></tr>
+      <tr><td>Taygetus · Parnon</td><td>the mountain ranges west and east of the Eurotas valley</td></tr>
+      <tr><td>Gytheion</td><td>Sparta’s chief port and naval base, a perioikic town</td></tr>
+      <tr><td>murex</td><td>a sea snail that produced a prized red-purple dye</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>People and the site</th><th>Meaning</th></tr>
+      <tr><td>perioikoi</td><td>free “dwellers around” in the towns of Laconia; served in the army but had no political rights at Sparta</td></tr>
+      <tr><td>helots</td><td>the unfree population of Laconia and Messenia who farmed the land for the Spartiates</td></tr>
+      <tr><td>acropolis</td><td>the highest hill of a Greek city, usually holding its most important temple</td></tr>
+      <tr><td>agora</td><td>the religious, commercial and political centre of a Greek city</td></tr>
+      <tr><td>sanctuary</td><td>a sacred area for a god, with an altar and often a temple</td></tr>
+      <tr><td>hero-shrine</td><td>a place where a famous dead person, such as Menelaus or Helen, was worshipped</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Taygetos, Lakonia, Lakedaimonians, Amyklai). In your own writing, Taygetus, Laconia and Lacedaemonians are also correct — just be consistent. The syllabus spells <i>periokoi</i>; most books use <i>perioikoi</i>.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Where was Sparta?" data-title="Sparta’s world (map)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Where was Sparta? · I do — map think-aloud</p>
+  <h2>Sparta’s world</h2>
+  <div class="split" style="--cols:auto 1fr">
+    <figure class="mapbox"><svg class="map" viewBox="0 0 1000 1028" role="img" aria-label="Simplified map of the Peloponnese showing Laconia and Messenia, the Eurotas River between Mount Taygetus and Mount Parnon, Sparta, Gytheion on the Laconian Gulf, and the island of Kythera">
+<defs><clipPath id="landclip"><path d="M1019.2,-24.1 1019.2,1052.6 1019.2,-24.1 1019.2,155.8 1018.1,149.9 1011.6,146.9 991.6,153.2 991.6,149.9 996.5,146.9 996.8,143.6 991.0,146.1 984.8,139.0 979.9,136.7 969.6,135.8 965.7,133.8 962.7,130.2 976.5,117.7 980.0,110.5 977.1,102.0 973.6,98.4 971.0,98.1 965.3,100.2 950.7,100.2 946.7,101.2 940.2,106.8 931.1,107.3 923.1,110.4 908.4,123.4 902.0,126.5 915.2,130.2 907.3,133.1 876.9,130.2 837.2,133.5 822.8,140.6 804.7,154.5 786.2,163.7 770.0,156.8 766.4,158.4 755.8,156.8 754.4,159.4 753.9,170.5 750.6,173.0 748.1,177.6 749.8,187.0 754.8,194.3 762.4,192.8 769.1,196.2 778.3,197.4 787.4,196.2 793.9,192.8 806.3,204.8 813.0,209.9 820.1,212.9 817.9,222.1 820.1,229.6 814.9,230.6 807.8,235.0 799.3,236.4 796.5,245.8 806.1,253.1 811.3,255.5 817.5,256.0 813.0,274.5 817.5,292.3 812.3,292.3 814.9,307.0 823.1,310.3 838.6,322.3 841.4,318.7 855.6,332.6 862.4,335.2 874.2,344.1 879.5,345.0 888.6,339.1 888.1,326.3 881.0,313.7 870.1,308.8 870.1,305.5 876.6,300.2 883.8,297.2 903.3,295.6 907.3,301.3 905.5,314.2 900.3,327.7 894.0,335.2 901.9,342.2 912.3,345.0 912.3,348.6 902.0,351.6 902.0,354.9 917.8,358.2 926.5,364.0 934.3,366.7 952.2,381.6 949.6,384.8 952.2,388.2 952.2,391.5 944.4,395.7 921.7,403.4 874.3,405.7 867.7,404.7 870.1,411.3 856.2,409.3 851.0,409.9 851.7,414.9 838.6,417.9 838.5,422.5 841.2,424.8 849.1,424.5 846.7,428.1 846.7,431.0 856.9,434.7 850.9,437.5 829.5,437.6 821.6,439.1 821.3,443.2 828.3,457.4 814.9,459.0 804.4,454.1 804.4,450.8 812.3,450.8 812.3,447.5 807.8,446.3 797.5,446.8 793.9,441.3 801.8,444.6 797.1,436.7 788.7,431.0 785.7,434.2 781.8,434.3 778.1,432.1 777.0,415.8 777.9,409.9 786.5,415.5 790.5,411.9 793.3,405.2 793.9,398.1 804.4,404.7 800.8,387.0 787.4,380.4 773.9,383.9 767.7,381.6 772.9,378.3 767.7,368.4 754.3,377.1 751.9,381.6 746.5,364.2 742.6,357.9 736.1,351.6 728.0,351.6 725.4,345.0 719.8,342.7 712.3,342.0 717.0,343.4 720.1,348.6 712.4,345.3 705.8,346.1 693.9,354.9 680.5,345.0 683.1,338.5 673.9,332.8 671.5,328.8 672.6,325.3 664.7,315.4 649.4,323.1 644.8,330.1 643.5,342.0 648.7,353.3 646.3,364.8 648.0,370.2 654.0,378.3 654.0,389.9 659.5,395.1 659.3,400.0 656.7,406.4 656.9,411.3 677.1,435.4 680.5,437.6 677.9,444.6 683.1,444.6 683.1,447.5 680.5,447.5 680.5,450.8 684.6,454.7 693.8,471.3 696.5,480.1 714.1,509.9 716.0,515.0 711.7,520.1 709.6,538.9 712.8,545.0 720.0,546.6 733.2,543.7 736.1,550.3 733.4,552.0 736.1,553.6 733.2,557.3 739.8,559.7 743.0,563.6 742.0,566.0 736.1,563.5 739.6,572.1 749.9,587.5 749.3,593.2 754.5,610.0 746.4,610.0 751.9,619.6 754.5,616.6 756.3,625.2 754.5,633.1 768.8,663.0 767.7,666.8 772.8,675.3 783.4,686.1 785.9,691.3 786.8,696.8 785.3,701.0 781.0,702.6 781.0,705.6 788.0,706.5 793.9,709.2 792.3,712.9 786.3,719.1 786.3,727.3 784.1,732.6 779.2,732.1 770.0,725.7 761.9,736.1 759.9,740.9 765.0,745.4 762.4,752.0 772.9,752.0 763.2,760.6 763.7,773.0 781.0,806.7 801.8,818.3 805.9,824.8 809.6,825.2 804.4,828.5 804.4,831.5 807.0,836.7 801.8,841.4 808.4,851.1 819.9,858.4 828.3,866.2 825.4,877.6 812.3,871.0 808.4,876.1 803.6,876.8 786.4,872.4 780.1,861.8 775.5,857.8 777.7,848.3 775.0,840.6 769.6,834.2 763.7,831.5 747.2,835.2 739.4,835.3 722.8,798.5 701.8,782.0 707.3,776.2 705.5,770.5 687.4,755.0 680.5,765.2 678.8,762.7 678.4,758.4 680.5,747.1 679.7,739.8 676.1,729.3 673.4,711.8 668.0,703.3 659.7,698.1 648.7,696.0 629.1,695.6 604.8,698.5 587.5,708.3 588.1,728.9 575.4,738.1 570.6,745.0 567.3,755.6 573.2,755.6 576.9,758.9 578.4,764.8 577.9,772.1 575.3,772.1 573.1,765.2 570.7,762.7 567.3,762.2 564.1,764.8 561.5,773.5 569.6,780.9 567.7,790.8 562.6,795.4 559.5,785.0 553.8,788.5 551.6,793.5 552.5,832.9 562.1,861.1 560.5,863.8 562.1,868.0 557.0,871.4 555.3,876.5 559.5,891.1 555.9,890.7 554.2,897.7 549.9,892.3 546.1,868.0 540.5,863.3 527.1,857.8 522.5,851.2 519.9,851.2 515.9,855.4 512.1,854.4 505.4,846.5 501.7,839.3 502.0,833.9 506.7,821.9 512.9,823.7 514.7,817.9 513.1,810.0 509.1,805.1 514.6,795.5 506.7,795.5 508.2,776.1 514.6,775.4 514.6,772.1 507.1,769.5 507.9,761.2 514.6,745.4 503.3,747.4 495.9,735.7 489.9,720.5 482.9,712.2 483.5,702.8 477.6,690.4 450.6,653.1 442.4,648.8 432.7,656.1 418.4,643.6 416.7,636.4 419.5,633.9 422.2,624.8 424.5,609.9 424.3,593.3 398.3,587.5 383.9,586.6 376.9,588.6 362.4,597.7 347.9,601.8 343.5,606.8 341.3,613.3 337.4,659.4 335.3,669.6 340.3,683.6 337.9,689.4 348.5,698.5 353.9,699.3 353.9,702.6 344.3,705.0 341.9,708.3 343.2,712.2 340.7,716.6 320.2,735.6 316.9,735.5 297.2,696.0 284.5,697.9 274.7,702.6 270.1,697.7 261.1,694.0 258.7,689.4 252.8,691.5 245.6,676.2 247.1,671.6 245.6,656.1 253.6,639.3 253.8,631.3 251.0,624.2 245.4,620.7 237.7,623.2 241.3,621.3 242.9,616.6 237.6,617.6 235.3,623.2 232.6,606.1 211.3,581.5 203.3,566.5 199.9,547.5 199.1,528.1 201.7,510.7 208.5,497.3 232.7,477.7 243.2,466.5 248.4,450.8 246.7,431.4 240.3,412.4 214.3,362.4 199.6,340.2 192.3,332.5 159.1,308.9 151.2,304.9 135.5,287.1 112.8,280.4 105.3,282.5 103.3,295.6 100.9,295.6 99.3,281.9 95.6,278.8 100.4,268.9 101.8,261.0 100.7,252.9 94.3,231.0 90.4,224.5 68.2,211.5 27.7,199.2 24.2,196.4 22.2,190.5 23.7,183.3 21.6,179.6 32.1,146.6 34.8,146.6 44.0,154.7 60.7,146.8 77.6,132.2 87.5,120.3 92.9,122.1 106.1,110.4 106.1,106.8 103.3,103.8 95.8,107.9 90.1,113.3 121.9,62.3 124.5,51.0 124.7,14.2 134.0,27.6 137.9,30.9 136.6,20.5 135.0,17.0 137.0,20.1 142.6,23.0 157.6,24.1 163.1,26.1 182.3,40.6 212.7,47.4 220.1,46.0 227.8,42.4 240.3,34.0 250.5,21.6 266.0,-9.5 274.7,-22.1 277.9,-24.1 376.2,-24.1 379.9,-15.5 384.2,-12.0 399.8,-5.6 409.1,-8.6 415.0,-3.0 418.2,-2.0 420.5,0.4 427.5,17.8 444.6,24.1 449.4,29.9 464.5,30.9 481.1,35.0 485.7,37.5 492.8,34.3 505.2,44.3 517.0,49.0 524.9,54.1 531.8,51.5 562.1,58.3 604.1,80.4 627.1,88.6 664.7,120.3 671.7,131.9 681.3,135.6 698.9,149.9 704.9,150.9 720.1,146.6 729.3,146.7 731.9,145.1 740.5,130.9 731.1,119.5 720.7,115.0 711.2,107.3 704.2,106.8 706.7,104.5 693.9,103.8 702.1,96.9 716.0,91.7 728.0,80.4 738.4,81.1 757.3,89.2 765.0,87.0 776.4,92.3 788.8,90.6 816.5,82.3 823.0,75.1 829.5,73.5 833.3,70.8 830.9,65.0 824.7,59.4 817.5,57.3 817.5,50.7 835.9,47.4 835.9,43.8 805.4,39.9 799.4,37.5 807.3,30.9 797.2,20.2 792.2,19.3 779.8,31.0 775.6,32.3 762.4,30.9 762.4,27.6 770.0,27.6 764.9,20.1 759.6,16.1 731.5,11.9 724.5,13.5 720.1,20.8 725.3,19.0 731.0,19.4 735.8,22.2 738.3,27.6 720.2,25.4 714.9,27.6 709.6,4.3 707.0,4.3 704.2,11.1 701.8,4.3 694.8,6.6 680.8,8.2 675.3,11.1 659.5,1.0 662.8,-4.0 669.7,-9.9 672.6,-15.5 648.9,-24.1 595.0,-24.1 591.8,-20.8 587.1,-19.4 577.1,-24.1 183.3,-24.1 182.3,-22.1 179.9,-22.1 177.6,-24.1Z M975.8,424.5 969.7,430.5 960.7,434.7 951.3,436.2 944.3,434.7 945.7,444.3 941.1,449.1 924.5,450.8 902.5,457.2 894.0,457.4 894.0,454.1 928.3,431.0 937.6,428.1 954.8,427.9 962.7,424.5 975.8,424.5Z M960.1,229.6 966.6,232.6 959.6,243.8 960.1,249.4 954.6,253.3 953.9,264.2 952.2,269.2 936.2,275.8 931.3,271.3 925.9,269.2 925.9,265.9 930.4,263.1 930.1,258.6 926.7,254.3 917.1,249.4 914.3,242.5 913.7,232.6 960.1,229.6Z M754.5,937.6 779.6,955.7 786.3,963.6 789.9,971.9 787.6,973.9 781.9,974.2 775.5,977.1 772.5,981.9 770.9,988.3 770.0,1016.5 762.4,1016.7 755.5,1014.8 750.9,1015.6 746.4,1020.3 745.2,1013.3 741.2,1010.2 730.6,1006.8 730.8,1001.3 722.8,1000.5 714.9,987.0 718.2,959.9 717.8,948.8 711.4,928.0 712.2,923.1 724.1,902.4 728.7,898.4 733.2,901.3 748.6,929.9 754.5,937.6Z M274.7,722.4 280.8,725.5 279.9,748.7 276.2,744.5 274.7,738.8 269.4,742.5 272.9,723.4 274.7,722.4Z M248.4,728.9 248.8,711.8 250.3,704.5 253.6,699.3 258.8,702.7 261.3,702.6 261.3,705.6 256.3,709.2 256.4,714.2 248.4,728.9Z M799.4,464.3 808.1,469.9 812.5,475.9 812.4,485.7 808.5,487.7 800.4,485.9 786.3,470.9 792.1,465.8 799.4,464.3Z M933.6,335.2 935.3,334.9 939.2,343.3 942.6,346.4 952.2,348.6 952.2,351.6 944.8,355.9 935.1,357.5 925.3,356.1 917.8,351.6 917.8,348.6 928.7,345.8 932.9,342.4 933.6,335.2Z M926.8,641.5 929.7,648.8 928.4,649.9 926.1,648.8 924.0,643.9 923.0,637.8 925.4,638.4 926.8,641.5Z M907.1,169.7 904.7,166.1 904.7,163.1 912.6,153.1 919.0,149.9 930.2,153.5 935.3,148.9 941.4,136.7 936.8,137.0 927.1,143.6 916.6,140.0 912.3,140.0 925.9,133.5 915.2,126.5 923.7,126.4 931.0,130.2 932.6,125.8 931.0,123.6 933.9,121.3 940.5,119.8 949.3,121.2 954.0,123.3 956.5,126.5 954.6,130.2 954.9,132.7 955.7,136.1 960.4,140.6 960.1,143.6 970.6,143.6 957.4,149.9 959.0,155.1 950.7,162.3 949.3,169.7 946.9,169.7 942.8,166.1 935.2,174.0 929.6,176.6 912.1,172.4 907.1,169.7Z M743.7,854.4 745.9,859.3 744.6,865.2 740.1,861.5 738.5,857.3 736.9,856.6 731.4,857.0 727.2,861.4 723.7,862.0 721.2,860.0 722.8,852.7 727.5,849.4 731.8,842.4 735.5,840.2 738.4,839.6 741.1,841.4 743.1,845.3 743.7,854.4Z M193.4,572.5 195.6,577.6 194.5,583.0 191.0,588.0 191.9,581.7 187.4,575.8 193.4,572.5Z"/></clipPath></defs>
+<rect class="sea" width="1000" height="1028"/>
+<path class="land" d="M1019.2,-24.1 1019.2,1052.6 1019.2,-24.1 1019.2,155.8 1018.1,149.9 1011.6,146.9 991.6,153.2 991.6,149.9 996.5,146.9 996.8,143.6 991.0,146.1 984.8,139.0 979.9,136.7 969.6,135.8 965.7,133.8 962.7,130.2 976.5,117.7 980.0,110.5 977.1,102.0 973.6,98.4 971.0,98.1 965.3,100.2 950.7,100.2 946.7,101.2 940.2,106.8 931.1,107.3 923.1,110.4 908.4,123.4 902.0,126.5 915.2,130.2 907.3,133.1 876.9,130.2 837.2,133.5 822.8,140.6 804.7,154.5 786.2,163.7 770.0,156.8 766.4,158.4 755.8,156.8 754.4,159.4 753.9,170.5 750.6,173.0 748.1,177.6 749.8,187.0 754.8,194.3 762.4,192.8 769.1,196.2 778.3,197.4 787.4,196.2 793.9,192.8 806.3,204.8 813.0,209.9 820.1,212.9 817.9,222.1 820.1,229.6 814.9,230.6 807.8,235.0 799.3,236.4 796.5,245.8 806.1,253.1 811.3,255.5 817.5,256.0 813.0,274.5 817.5,292.3 812.3,292.3 814.9,307.0 823.1,310.3 838.6,322.3 841.4,318.7 855.6,332.6 862.4,335.2 874.2,344.1 879.5,345.0 888.6,339.1 888.1,326.3 881.0,313.7 870.1,308.8 870.1,305.5 876.6,300.2 883.8,297.2 903.3,295.6 907.3,301.3 905.5,314.2 900.3,327.7 894.0,335.2 901.9,342.2 912.3,345.0 912.3,348.6 902.0,351.6 902.0,354.9 917.8,358.2 926.5,364.0 934.3,366.7 952.2,381.6 949.6,384.8 952.2,388.2 952.2,391.5 944.4,395.7 921.7,403.4 874.3,405.7 867.7,404.7 870.1,411.3 856.2,409.3 851.0,409.9 851.7,414.9 838.6,417.9 838.5,422.5 841.2,424.8 849.1,424.5 846.7,428.1 846.7,431.0 856.9,434.7 850.9,437.5 829.5,437.6 821.6,439.1 821.3,443.2 828.3,457.4 814.9,459.0 804.4,454.1 804.4,450.8 812.3,450.8 812.3,447.5 807.8,446.3 797.5,446.8 793.9,441.3 801.8,444.6 797.1,436.7 788.7,431.0 785.7,434.2 781.8,434.3 778.1,432.1 777.0,415.8 777.9,409.9 786.5,415.5 790.5,411.9 793.3,405.2 793.9,398.1 804.4,404.7 800.8,387.0 787.4,380.4 773.9,383.9 767.7,381.6 772.9,378.3 767.7,368.4 754.3,377.1 751.9,381.6 746.5,364.2 742.6,357.9 736.1,351.6 728.0,351.6 725.4,345.0 719.8,342.7 712.3,342.0 717.0,343.4 720.1,348.6 712.4,345.3 705.8,346.1 693.9,354.9 680.5,345.0 683.1,338.5 673.9,332.8 671.5,328.8 672.6,325.3 664.7,315.4 649.4,323.1 644.8,330.1 643.5,342.0 648.7,353.3 646.3,364.8 648.0,370.2 654.0,378.3 654.0,389.9 659.5,395.1 659.3,400.0 656.7,406.4 656.9,411.3 677.1,435.4 680.5,437.6 677.9,444.6 683.1,444.6 683.1,447.5 680.5,447.5 680.5,450.8 684.6,454.7 693.8,471.3 696.5,480.1 714.1,509.9 716.0,515.0 711.7,520.1 709.6,538.9 712.8,545.0 720.0,546.6 733.2,543.7 736.1,550.3 733.4,552.0 736.1,553.6 733.2,557.3 739.8,559.7 743.0,563.6 742.0,566.0 736.1,563.5 739.6,572.1 749.9,587.5 749.3,593.2 754.5,610.0 746.4,610.0 751.9,619.6 754.5,616.6 756.3,625.2 754.5,633.1 768.8,663.0 767.7,666.8 772.8,675.3 783.4,686.1 785.9,691.3 786.8,696.8 785.3,701.0 781.0,702.6 781.0,705.6 788.0,706.5 793.9,709.2 792.3,712.9 786.3,719.1 786.3,727.3 784.1,732.6 779.2,732.1 770.0,725.7 761.9,736.1 759.9,740.9 765.0,745.4 762.4,752.0 772.9,752.0 763.2,760.6 763.7,773.0 781.0,806.7 801.8,818.3 805.9,824.8 809.6,825.2 804.4,828.5 804.4,831.5 807.0,836.7 801.8,841.4 808.4,851.1 819.9,858.4 828.3,866.2 825.4,877.6 812.3,871.0 808.4,876.1 803.6,876.8 786.4,872.4 780.1,861.8 775.5,857.8 777.7,848.3 775.0,840.6 769.6,834.2 763.7,831.5 747.2,835.2 739.4,835.3 722.8,798.5 701.8,782.0 707.3,776.2 705.5,770.5 687.4,755.0 680.5,765.2 678.8,762.7 678.4,758.4 680.5,747.1 679.7,739.8 676.1,729.3 673.4,711.8 668.0,703.3 659.7,698.1 648.7,696.0 629.1,695.6 604.8,698.5 587.5,708.3 588.1,728.9 575.4,738.1 570.6,745.0 567.3,755.6 573.2,755.6 576.9,758.9 578.4,764.8 577.9,772.1 575.3,772.1 573.1,765.2 570.7,762.7 567.3,762.2 564.1,764.8 561.5,773.5 569.6,780.9 567.7,790.8 562.6,795.4 559.5,785.0 553.8,788.5 551.6,793.5 552.5,832.9 562.1,861.1 560.5,863.8 562.1,868.0 557.0,871.4 555.3,876.5 559.5,891.1 555.9,890.7 554.2,897.7 549.9,892.3 546.1,868.0 540.5,863.3 527.1,857.8 522.5,851.2 519.9,851.2 515.9,855.4 512.1,854.4 505.4,846.5 501.7,839.3 502.0,833.9 506.7,821.9 512.9,823.7 514.7,817.9 513.1,810.0 509.1,805.1 514.6,795.5 506.7,795.5 508.2,776.1 514.6,775.4 514.6,772.1 507.1,769.5 507.9,761.2 514.6,745.4 503.3,747.4 495.9,735.7 489.9,720.5 482.9,712.2 483.5,702.8 477.6,690.4 450.6,653.1 442.4,648.8 432.7,656.1 418.4,643.6 416.7,636.4 419.5,633.9 422.2,624.8 424.5,609.9 424.3,593.3 398.3,587.5 383.9,586.6 376.9,588.6 362.4,597.7 347.9,601.8 343.5,606.8 341.3,613.3 337.4,659.4 335.3,669.6 340.3,683.6 337.9,689.4 348.5,698.5 353.9,699.3 353.9,702.6 344.3,705.0 341.9,708.3 343.2,712.2 340.7,716.6 320.2,735.6 316.9,735.5 297.2,696.0 284.5,697.9 274.7,702.6 270.1,697.7 261.1,694.0 258.7,689.4 252.8,691.5 245.6,676.2 247.1,671.6 245.6,656.1 253.6,639.3 253.8,631.3 251.0,624.2 245.4,620.7 237.7,623.2 241.3,621.3 242.9,616.6 237.6,617.6 235.3,623.2 232.6,606.1 211.3,581.5 203.3,566.5 199.9,547.5 199.1,528.1 201.7,510.7 208.5,497.3 232.7,477.7 243.2,466.5 248.4,450.8 246.7,431.4 240.3,412.4 214.3,362.4 199.6,340.2 192.3,332.5 159.1,308.9 151.2,304.9 135.5,287.1 112.8,280.4 105.3,282.5 103.3,295.6 100.9,295.6 99.3,281.9 95.6,278.8 100.4,268.9 101.8,261.0 100.7,252.9 94.3,231.0 90.4,224.5 68.2,211.5 27.7,199.2 24.2,196.4 22.2,190.5 23.7,183.3 21.6,179.6 32.1,146.6 34.8,146.6 44.0,154.7 60.7,146.8 77.6,132.2 87.5,120.3 92.9,122.1 106.1,110.4 106.1,106.8 103.3,103.8 95.8,107.9 90.1,113.3 121.9,62.3 124.5,51.0 124.7,14.2 134.0,27.6 137.9,30.9 136.6,20.5 135.0,17.0 137.0,20.1 142.6,23.0 157.6,24.1 163.1,26.1 182.3,40.6 212.7,47.4 220.1,46.0 227.8,42.4 240.3,34.0 250.5,21.6 266.0,-9.5 274.7,-22.1 277.9,-24.1 376.2,-24.1 379.9,-15.5 384.2,-12.0 399.8,-5.6 409.1,-8.6 415.0,-3.0 418.2,-2.0 420.5,0.4 427.5,17.8 444.6,24.1 449.4,29.9 464.5,30.9 481.1,35.0 485.7,37.5 492.8,34.3 505.2,44.3 517.0,49.0 524.9,54.1 531.8,51.5 562.1,58.3 604.1,80.4 627.1,88.6 664.7,120.3 671.7,131.9 681.3,135.6 698.9,149.9 704.9,150.9 720.1,146.6 729.3,146.7 731.9,145.1 740.5,130.9 731.1,119.5 720.7,115.0 711.2,107.3 704.2,106.8 706.7,104.5 693.9,103.8 702.1,96.9 716.0,91.7 728.0,80.4 738.4,81.1 757.3,89.2 765.0,87.0 776.4,92.3 788.8,90.6 816.5,82.3 823.0,75.1 829.5,73.5 833.3,70.8 830.9,65.0 824.7,59.4 817.5,57.3 817.5,50.7 835.9,47.4 835.9,43.8 805.4,39.9 799.4,37.5 807.3,30.9 797.2,20.2 792.2,19.3 779.8,31.0 775.6,32.3 762.4,30.9 762.4,27.6 770.0,27.6 764.9,20.1 759.6,16.1 731.5,11.9 724.5,13.5 720.1,20.8 725.3,19.0 731.0,19.4 735.8,22.2 738.3,27.6 720.2,25.4 714.9,27.6 709.6,4.3 707.0,4.3 704.2,11.1 701.8,4.3 694.8,6.6 680.8,8.2 675.3,11.1 659.5,1.0 662.8,-4.0 669.7,-9.9 672.6,-15.5 648.9,-24.1 595.0,-24.1 591.8,-20.8 587.1,-19.4 577.1,-24.1 183.3,-24.1 182.3,-22.1 179.9,-22.1 177.6,-24.1Z M975.8,424.5 969.7,430.5 960.7,434.7 951.3,436.2 944.3,434.7 945.7,444.3 941.1,449.1 924.5,450.8 902.5,457.2 894.0,457.4 894.0,454.1 928.3,431.0 937.6,428.1 954.8,427.9 962.7,424.5 975.8,424.5Z M960.1,229.6 966.6,232.6 959.6,243.8 960.1,249.4 954.6,253.3 953.9,264.2 952.2,269.2 936.2,275.8 931.3,271.3 925.9,269.2 925.9,265.9 930.4,263.1 930.1,258.6 926.7,254.3 917.1,249.4 914.3,242.5 913.7,232.6 960.1,229.6Z M754.5,937.6 779.6,955.7 786.3,963.6 789.9,971.9 787.6,973.9 781.9,974.2 775.5,977.1 772.5,981.9 770.9,988.3 770.0,1016.5 762.4,1016.7 755.5,1014.8 750.9,1015.6 746.4,1020.3 745.2,1013.3 741.2,1010.2 730.6,1006.8 730.8,1001.3 722.8,1000.5 714.9,987.0 718.2,959.9 717.8,948.8 711.4,928.0 712.2,923.1 724.1,902.4 728.7,898.4 733.2,901.3 748.6,929.9 754.5,937.6Z M274.7,722.4 280.8,725.5 279.9,748.7 276.2,744.5 274.7,738.8 269.4,742.5 272.9,723.4 274.7,722.4Z M248.4,728.9 248.8,711.8 250.3,704.5 253.6,699.3 258.8,702.7 261.3,702.6 261.3,705.6 256.3,709.2 256.4,714.2 248.4,728.9Z M799.4,464.3 808.1,469.9 812.5,475.9 812.4,485.7 808.5,487.7 800.4,485.9 786.3,470.9 792.1,465.8 799.4,464.3Z M933.6,335.2 935.3,334.9 939.2,343.3 942.6,346.4 952.2,348.6 952.2,351.6 944.8,355.9 935.1,357.5 925.3,356.1 917.8,351.6 917.8,348.6 928.7,345.8 932.9,342.4 933.6,335.2Z M926.8,641.5 929.7,648.8 928.4,649.9 926.1,648.8 924.0,643.9 923.0,637.8 925.4,638.4 926.8,641.5Z M907.1,169.7 904.7,166.1 904.7,163.1 912.6,153.1 919.0,149.9 930.2,153.5 935.3,148.9 941.4,136.7 936.8,137.0 927.1,143.6 916.6,140.0 912.3,140.0 925.9,133.5 915.2,126.5 923.7,126.4 931.0,130.2 932.6,125.8 931.0,123.6 933.9,121.3 940.5,119.8 949.3,121.2 954.0,123.3 956.5,126.5 954.6,130.2 954.9,132.7 955.7,136.1 960.4,140.6 960.1,143.6 970.6,143.6 957.4,149.9 959.0,155.1 950.7,162.3 949.3,169.7 946.9,169.7 942.8,166.1 935.2,174.0 929.6,176.6 912.1,172.4 907.1,169.7Z M743.7,854.4 745.9,859.3 744.6,865.2 740.1,861.5 738.5,857.3 736.9,856.6 731.4,857.0 727.2,861.4 723.7,862.0 721.2,860.0 722.8,852.7 727.5,849.4 731.8,842.4 735.5,840.2 738.4,839.6 741.1,841.4 743.1,845.3 743.7,854.4Z M193.4,572.5 195.6,577.6 194.5,583.0 191.0,588.0 191.9,581.7 187.4,575.8 193.4,572.5Z"/>
+<text class="sea-lbl" x="115.4" y="820.9" text-anchor="middle">IONIAN SEA</text>
+<text class="sea-lbl" x="911.5" y="709.8" text-anchor="middle">AEGEAN SEA</text>
+<text class="region-lbl" x="450.0" y="304.2" text-anchor="middle">ARCADIA</text>
+<text class="small-lbl" x="744.8" y="160.5" text-anchor="start">Isthmus of Corinth</text>
+<text class="sea-lbl" x="526.9" y="43.5" text-anchor="middle">Gulf of Corinth</text>
+<g class="scale"><line x1="40" y1="988" x2="257.5" y2="988"/><text x="40" y="974">50 km</text></g>
+<text class="north" x="954" y="64" text-anchor="middle">N</text><path class="north" d="M954,74 l-12,30 l12,-8 l12,8z"/>
+<g class="linked" data-step="laconia"><path class="laconia" clip-path="url(#landclip)" d="M403.8,429.7 L438.5,444.2 L469.2,507.0 L488.5,565.0 L501.9,618.1 L411.5,627.7 L384.6,893.3 L384.6,1086.4 L980.8,1086.4 L980.8,796.7 L826.9,651.9 L738.5,507.0 L673.1,386.3 L565.4,376.6 L480.8,400.8Z"/></g>
+<g class="linked" data-step="messenia"><path class="messenia" clip-path="url(#landclip)" d="M134.6,410.4 L346.2,410.4 L403.8,429.7 L438.5,444.2 L469.2,507.0 L488.5,565.0 L501.9,618.1 L411.5,627.7 L384.6,893.3 L134.6,893.3Z"/></g>
+<g class="linked" data-step="eurotas"><path class="river" d="M457.7,453.9 C462.2,460.3 476.3,479.6 484.6,492.5 C492.9,505.4 499.0,519.1 507.7,531.2 C516.3,543.2 529.8,553.7 536.5,565.0 C543.3,576.2 543.3,587.5 548.1,598.8 C552.9,610.0 558.0,621.3 565.4,632.6 C572.8,643.8 583.0,655.1 592.3,666.4 C601.6,677.6 616.3,694.5 621.2,700.2"/></g>
+<g class="linked" data-step="taygetus"><path class="mtn-band" d="M438.5,444.2 C443.6,454.7 460.9,486.9 469.2,507.0 C477.6,527.1 482.7,544.8 488.5,565.0 C494.2,585.1 499.4,606.8 503.8,627.7 C508.3,648.6 511.5,667.2 515.4,690.5 C519.2,713.8 523.1,743.6 526.9,767.8 C530.8,791.9 534.6,816.0 538.5,835.4 C542.3,854.7 548.1,875.6 550.0,883.6"/><path class="mtn-crest" d="M438.5,444.2 C443.6,454.7 460.9,486.9 469.2,507.0 C477.6,527.1 482.7,544.8 488.5,565.0 C494.2,585.1 499.4,606.8 503.8,627.7 C508.3,648.6 511.5,667.2 515.4,690.5 C519.2,713.8 523.1,743.6 526.9,767.8 C530.8,791.9 534.6,816.0 538.5,835.4 C542.3,854.7 548.1,875.6 550.0,883.6"/></g>
+<g class="linked" data-step="parnon"><path class="mtn-band" d="M565.4,376.6 C569.2,385.5 580.8,413.7 588.5,429.7 C596.2,445.8 603.2,455.5 611.5,473.2 C619.9,490.9 630.1,515.1 638.5,536.0 C646.8,556.9 652.6,577.8 661.5,598.8 C670.5,619.7 681.4,639.8 692.3,661.5 C703.2,683.3 714.7,706.6 726.9,729.1 C739.1,751.7 759.0,785.5 765.4,796.7"/><path class="mtn-crest" d="M565.4,376.6 C569.2,385.5 580.8,413.7 588.5,429.7 C596.2,445.8 603.2,455.5 611.5,473.2 C619.9,490.9 630.1,515.1 638.5,536.0 C646.8,556.9 652.6,577.8 661.5,598.8 C670.5,619.7 681.4,639.8 692.3,661.5 C703.2,683.3 714.7,706.6 726.9,729.1 C739.1,751.7 759.0,785.5 765.4,796.7"/></g>
+<g class="linked" data-step="laconia"><text class="region-lbl strong" x="688.5" y="637.4" text-anchor="middle">LACONIA</text><text class="small-lbl" x="688.5" y="663.9" text-anchor="middle">(Lakedaimon)</text><g class="badge"><circle cx="816.5" cy="625.4" r="21"/><text x="816.5" y="633.9">1</text></g><circle class="sparta" cx="530.8" cy="567.4" r="9"/><text class="town-lbl" x="512.8" y="577.4" text-anchor="end">Sparta</text></g>
+<g class="linked" data-step="eurotas"><text class="river-lbl" x="519.7" y="511.8" text-anchor="start">Eurotas</text><g class="badge"><circle cx="493.7" cy="501.8" r="21"/><text x="493.7" y="510.3">2</text></g></g>
+<g class="linked" data-step="taygetus"><text class="mtn-lbl" x="504.8" y="782.2" text-anchor="end">Mt Taygetus</text><text class="small-lbl" x="504.8" y="804.0" text-anchor="end">2,404 m</text><g class="badge"><circle cx="278.8" cy="772.2" r="21"/><text x="278.8" y="780.7">3</text></g></g>
+<g class="linked" data-step="parnon"><text class="mtn-lbl" x="641.5" y="473.2" text-anchor="start">Mt Parnon</text><text class="small-lbl" x="641.5" y="494.9" text-anchor="start">1,935 m</text><g class="badge"><circle cx="837.5" cy="463.2" r="21"/><text x="837.5" y="471.7">4</text></g></g>
+<g class="linked" data-step="messenia"><text class="region-lbl strong" x="288.5" y="589.1" text-anchor="middle">MESSENIA</text><g class="badge"><circle cx="146.5" cy="577.1" r="21"/><text x="146.5" y="585.6">5</text></g><circle class="town" cx="334.6" cy="517.1" r="9"/><text class="small-lbl" x="350.6" y="525.1" text-anchor="start">Mt Ithome</text></g>
+<g class="linked" data-step="gytheion"><circle class="town" cx="583.1" cy="720.9" r="9"/><text class="town-lbl" x="599.1" y="754.9" text-anchor="start">Gytheion</text><g class="badge"><circle cx="779.1" cy="744.9" r="21"/><text x="779.1" y="753.4">6</text></g><text class="sea-lbl" x="634.6" y="835.4" text-anchor="middle">Laconian Gulf</text></g>
+<g class="linked" data-step="kythera"><text class="town-lbl" x="689.8" y="970.9" text-anchor="end">Kythera</text><g class="badge"><circle cx="810.9" cy="960.9" r="21"/><text x="810.9" y="969.4">7</text></g></g>
+</svg>
+      <figcaption>Simplified map. Coastline: Natural Earth (public domain); mountains drawn as crest lines.</figcaption></figure>
+    <ol class="keylist">
+      <li class="reveal" data-also="[data-step=laconia]"><span class="num">1</span><span class="t">Laconia</span><span class="d">Sparta’s home region in the south-eastern Peloponnese. The Greeks called the state Lakedaimon.</span></li>
+      <li class="reveal" data-also="[data-step=eurotas]"><span class="num">2</span><span class="t">Eurotas River</span><span class="d">Flows south past Sparta through a fertile, well-watered valley.</span></li>
+      <li class="reveal" data-also="[data-step=taygetus]"><span class="num">3</span><span class="t">Mt Taygetus</span><span class="d">The western wall of the valley — over 2,400 m.</span></li>
+      <li class="reveal" data-also="[data-step=parnon]"><span class="num">4</span><span class="t">Mt Parnon</span><span class="d">The lower eastern wall. Hills close the valley to the north.</span></li>
+      <li class="reveal" data-also="[data-step=messenia]"><span class="num">5</span><span class="t">Messenia</span><span class="d">Across Taygetus: rich plains, conquered by Sparta.</span></li>
+      <li class="reveal" data-also="[data-step=gytheion]"><span class="num">6</span><span class="t">Gytheion</span><span class="d">Sparta’s port on the Laconian Gulf — a perioikic town.</span></li>
+      <li class="reveal" data-also="[data-step=kythera]"><span class="num">7</span><span class="t">Kythera</span><span class="d">The island off the coast, famous for murex purple dye.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Where was Sparta?" data-title="Tyrtaeus on Messenia">
+<div class="wrap">
+  <p class="eyebrow">1 · Where was Sparta? · We do — reading a source</p>
+  <h2>Why Messenia mattered</h2>
+  <div class="split" style="--cols:1.05fr 1fr">
+    <div class="src">
+      <div class="k">Source · Tyrtaeus</div>
+      <p class="quote sm">[...] to our king, dear to the gods, Theopompos,<br>Through whom we captured spacious Messene,<br>Messene good to plough and good to plant.<br>For it they fought ceaselessly for nineteen years<br>With their spears, our fathersʼ fathers<br>With ever long-suffering hearts;<br>And in the twentieth they abandoned their rich tilled fields<br>And fled the great ranges of Ithome.</p>
+      <p class="prov">Tyrtaeus, fragment 5 · mid-7th century BC · a Spartan war poet, writing two generations after the conquest · trans. K. Hughes · Cooley A5</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt">What made Messenia worth twenty years of war?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">“Good to plough and good to plant” — rich farmland. Paul Cartledge thinks the most likely motive was land hunger.</p></div>
+      <p class="qprompt reveal">Why does it matter that Tyrtaeus was a Spartan?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">He is our earliest witness and an insider — but a war poet stirring Spartans with their grandfathers’ victory.</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">Conquering Messenia (c. 735–715 BC) roughly doubled Sparta’s land, but created a second, larger helot population across a mountain range. When Thebes freed Messenia in 370/69 BC, the Spartan system broke.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Where was Sparta?" data-title="Notes 1 — Setting" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Setting: where was Sparta?</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>1 · Setting</span></div>
+    <div class="row"><div class="cq">Where was Sparta?</div>
+      <div class="nts reveal">In <b>Laconia</b>, the SE <b>Peloponnese</b> <span class="sep">·</span> the state = <b>Lakedaimon</b> → writers say “Lakedaimonians”</div></div>
+    <div class="row"><div class="cq">Who lived there?</div>
+      <div class="nts reveal"><b>Spartiates</b> (citizens) in Sparta <span class="sep">·</span> <b>perioikoi</b> in hill and coastal towns <span class="sep">·</span> <b>helots</b> worked the land</div></div>
+    <div class="row"><div class="cq">What was Messenia?</div>
+      <div class="nts reveal">Region W of Taygetus <span class="sep">·</span> some of the best farmland in Greece <span class="sep">·</span> conquered c. 735–715 BC → its people made <b>helots</b></div></div>
+    <div class="row"><div class="cq">Why did it matter?</div>
+      <div class="nts reveal">≈ doubled Sparta’s land <b>but</b> → a 2nd, larger helot population across the mountains <span class="sep">·</span> freed by Thebes 370/69 BC → system broke</div></div>
+    <div class="row"><div class="cq">Evidence</div>
+      <div class="nts reveal">Tyrtaeus fr. 5 (Cooley A5): Messene “good to plough and good to plant” <span class="sep">·</span> Thucydides 1.10.2 (Cooley G2): Sparta occupies “two fifths of the Peloponnese”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Natural features" data-title="A valley walled by mountains">
+<div class="wrap">
+  <p class="eyebrow">2 · Natural features · I do</p>
+  <h2>A valley walled by mountains</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <figure class="figure"><img src="images/clarke-1-3-sparta-below-taygetus.jpg" alt="Modern Sparta at the foot of Mt Taygetus"><figcaption>Modern Sparta at the foot of Mt Taygetus — <span class="cr">Clarke & Garner, Fig 1.3</span></figcaption></figure>
+    <div class="stack">
+      <p class="lead">A fertile, well-watered plain along the Eurotas, walled by Taygetus to the west and Parnon to the east, closed by hills to the north. Only a few routes lead in.</p>
+      <div class="card reveal"><div class="k">Defence</div><p class="body">Hard to invade. Athenian raids in the Peloponnesian War struck only coastal towns; no foreign army reached the city until the Thebans in 370/69 BC.</p></div>
+      <div class="card reveal"><div class="k">Separation</div><p class="body">Taygetus divided Laconia from Messenia, so controlling the Messenian helots meant marching an army over the mountains.</p></div>
+      <div class="card reveal"><div class="k">Access to the sea</div><p class="body">The valley was the natural route south to the coast, where Gytheion was Sparta’s port.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Natural features" data-title="Feature → consequence">
+<div class="wrap">
+  <p class="eyebrow">2 · Natural features · I do — the writing move</p>
+  <h2>Feature → what it allowed → what it caused</h2>
+  <div class="src">
+    <div class="k">Model sentence</div>
+    <p class="quote"><span class="code" data-code="evidence" data-letter="E">The Taygetus range separates Laconia from Messenia,</span> <span class="code" data-code="analysis" data-letter="A">so conquering Messenia doubled Sparta’s farmland</span> <span class="code" data-code="counter" data-letter="C">but created a second helot population across the mountains.</span></p>
+  </div>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <i class="reveal" data-paint="analysis" hidden></i>
+  <i class="reveal" data-paint="counter" hidden></i>
+  <div class="pattern reveal">
+    <span class="p e">a named feature</span><span class="arr">→</span>
+    <span class="p a">what it allowed</span><span class="arr">→</span>
+    <span class="p c">what it caused</span>
+  </div>
+  <p class="cue reveal">Your turn, aloud to a partner: “The Eurotas valley ran south to the sea, so …”</p>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Natural features" data-title="A changing, shaking landscape">
+<div class="wrap">
+  <p class="eyebrow">2 · Natural features · two more features <span class="optional">If time</span></p>
+  <h2>A changing — and shaking — landscape</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Strabo</div>
+        <p class="quote sm">Inland from Taygetos and below it lies Sparta and Amyklai, where there is the temple to Apollo, and Pharis … The polis is sited in something of a hollow, though mountains are included within its limits. No part of it is now marshy, though in ancient times the area in front of the city was marshy and was called Limnai (‘Marshes’), and the temple of Dionysos in Limnai stood on wet ground.</p>
+        <p class="prov">Strabo, <i>Geography</i> 8.5.1 · a geographer of the Roman period, writing in the late 1st century BC or early 1st century AD · trans. in Cooley K4</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><p class="body">“In ancient times”: the landscape itself changed. Limnai — one of Sparta’s villages — was marshy ground beside the Eurotas, where the Sanctuary of Artemis Orthia stood.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch</div>
+        <p class="quote sm">“Mount Taygetos was shaken so that many peaks broke away, and the entire city was devastated, except for five houses”</p>
+        <p class="prov">Plutarch, <i>Life of Kimon</i> 16.4, describing the great earthquake of c. 464 BC · written c. AD 100 · trans. in Cooley E64</p>
+      </div>
+      <div class="note reveal" data-code="counter"><p class="body">Laconia is earthquake country — a danger as well as a defence. The helots seized the moment to revolt: geography and the helot system were tied together.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Natural features" data-title="Check: what counts as a natural feature?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Which of these is <u>not</u> a natural feature of Sparta?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>The Taygetus range</span></li>
+    <li><span class="n">2</span><span>The Eurotas River</span></li>
+    <li id="hq3"><span class="n">3</span><span>The Temple of Athena Chalkioikos</span></li>
+    <li><span class="n">4</span><span>The Laconian Gulf</span></li>
+  </ol>
+  <i class="reveal" data-mark="#hq3" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body">A temple is man-made. The 2024 HSC markers listed “understanding what constitutes a natural feature” as an area for students to improve.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Natural features" data-title="Notes 2 — Natural features" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Natural features — and what they did</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>2 · Natural features</span></div>
+    <div class="row"><div class="cq">Which natural features?</div>
+      <div class="nts reveal"><b>Eurotas</b> valley: fertile, well-watered plain <span class="sep">·</span> <b>Taygetus</b> (W, 2,400 m+) <span class="sep">·</span> <b>Parnon</b> (E) <span class="sep">·</span> hills (N) <span class="sep">·</span> coast + Laconian Gulf <span class="sep">·</span> earthquakes</div></div>
+    <div class="row"><div class="cq">What did the mountains do?</div>
+      <div class="nts reveal"><b>Defence</b>: few routes in → no foreign army reached Sparta until 370/69 BC <span class="sep">·</span> <b>Separation</b>: Taygetus split Laconia from Messenia → army had to cross it to control the helots</div></div>
+    <div class="row"><div class="cq">What did the river and coast do?</div>
+      <div class="nts reveal">Eurotas → fertile soil + route S to the sea → <b>Gytheion</b> = port and naval base (a perioikic town)</div></div>
+    <div class="row"><div class="cq">Did the land change?</div>
+      <div class="nts reveal">Strabo (Cooley K4): Limnai “in ancient times … marshy” → Orthia’s sanctuary stood there</div></div>
+    <div class="row"><div class="cq">A danger too?</div>
+      <div class="nts reveal">Earthquake c. 464 BC: Taygetus “shaken”, city “devastated” (Plutarch, <i>Kimon</i> 16.4, Cooley E64) → helot revolt</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Resources" data-title="Herodotus and Aristotle on the land">
+<div class="wrap">
+  <p class="eyebrow">3 · Resources · We do — two writers, a century apart</p>
+  <h2>Two writers on the wealth of the land</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote">Being blessed with fertile land and a large population, the country rapidly grew prosperous and strong.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 1.66.1, on Sparta after the reforms credited to Lycurgus · written c. 430s–420s BC · trans. B. Wilson · Cooley H9</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · Aristotle</div>
+      <p class="quote">As a result, although the land could support one thousand five hundred cavalry and thirty thousand hoplites, the total number was not even one thousand.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1270a29 · written 330s–320s BC · trans. in Cooley D28</p>
+    </div>
+  </div>
+  <div class="note reveal" data-code="analysis"><p class="body">Both agree the land was rich. Herodotus uses it to explain Sparta’s <b>rise</b>; Aristotle, about a century later, to explain its <b>decline</b> — rich land, yet fewer than a thousand citizen soldiers.</p></div>
+  <div class="note reveal" data-code="counter"><p class="body">Neither says who actually farmed it. Who did?</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Resources" data-title="Resources — and who worked them">
+<div class="wrap">
+  <p class="eyebrow">3 · Resources · what the land provided</p>
+  <h2>Resources — and who worked them</h2>
+  <div class="res">
+    <div class="card reveal"><div class="k">Fertile farmland</div><p>The Eurotas plain and, above all, Messenia: grain, olives, vines. Cavanagh lists corn, oil and wine, “in particular of Messenia”.</p><p class="who">Worked by helots</p></div>
+    <div class="card reveal"><div class="k">Iron and other metals</div><p>“Traces of iron workings are common” at Boia in south-eastern Laconia, with lead and copper nearby. Iron → tools, weapons, Sparta’s iron money. Tin for bronze was imported.</p><p class="who">Worked by perioikoi</p></div>
+    <div class="card reveal"><div class="k">Stone and marble</div><p>“High quality building stone”, though the local marble “was hard to work”. A quarry rule at Gytheion: “Let no one dig anything out.”</p><p class="who">Worked by perioikoi</p></div>
+    <div class="card reveal"><div class="k">Murex purple</div><p>The area around Kythera “was famous for producing the prized purple dye” — a luxury. Alcman’s chorus sings of “an abundance of purple”.</p><p class="who">Coastal communities</p></div>
+    <div class="card reveal"><div class="k">Timber</div><p>From the mountains: it “may well have been another significant economic resource”.</p></div>
+    <div class="card reveal"><div class="k">The sea</div><p>Gytheion “served as chief naval base”; perioikoi of the harbour towns “were involved in overseas trade and fishery”.</p><p class="who">Perioikoi</p></div>
+  </div>
+  <p class="small">Quotations from the introductions and sources in Cooley’s <i>Sparta</i> (W. G. Cavanagh on archaeology, S. Hodkinson on inscriptions); the quarry inscription is Cooley K6.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Resources" data-title="Because, but, so">
+<div class="wrap">
+  <p class="eyebrow">3 · Resources · We do — because, but, so</p>
+  <h2>Link a resource to Spartan society</h2>
+  <div class="split" style="--cols:1.5fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Finish the sentence three ways</div>
+        <p class="frame"><b>The Eurotas plain and Messenia were fertile …</b></p>
+        <div class="bbs">
+          <span class="c">because</span><span class="m reveal">… the river watered a broad valley floor, and Messenia was “good to plough and good to plant”.</span>
+          <span class="c">but</span><span class="m reveal">… Spartiates did not farm it themselves — the helots did.</span>
+          <span class="c">so</span><span class="m reveal">… helot labour could feed the citizens’ common messes and free Spartiates to train full time.</span>
+        </div>
+      </div>
+      <div class="card quiet reveal">
+        <div class="k">Say it aloud</div>
+        <p class="body">“Laconia had iron and building stone, <b>but</b> citizens were not meant to work as craftsmen, <b>so</b> …”</p>
+        <p class="body m reveal">… mining, metalwork and quarrying fell to the perioikoi, who Cooley says “presumably exploited” the region’s resources.</p>
+      </div>
+    </div>
+    <figure class="figure contain"><img src="images/bradley-3-6-murex.jpg" alt="Murex shells — the sea snail that produced a prized red-purple dye"><figcaption>Murex shells — the sea snail that produced a prized red-purple dye — <span class="cr">Bradley, Fig 3.6</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Resources" data-title="Notes 3 — Resources" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Resources — who worked them, and so what?</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>3 · Resources</span></div>
+    <div class="row"><div class="cq">Which resources?</div>
+      <div class="nts reveal"><b>Farmland</b> (Eurotas + Messenia): grain, olives, vines <span class="sep">·</span> <b>iron</b> (Boia), lead, copper <span class="sep">·</span> <b>stone and marble</b> <span class="sep">·</span> <b>murex</b> purple (Kythera) <span class="sep">·</span> timber <span class="sep">·</span> the sea</div></div>
+    <div class="row"><div class="cq">Who worked them?</div>
+      <div class="nts reveal"><b>Helots</b> → the farmland <span class="sep">·</span> <b>perioikoi</b> → mines, metalwork, quarries, trade, fishing (“presumably exploited”, Cooley) <span class="sep">·</span> citizens = full-time soldiers, not craftsmen</div></div>
+    <div class="row"><div class="cq">So what?</div>
+      <div class="nts reveal">Fertile land + helot labour → fed the common messes → Spartiates free to train <span class="sep">·</span> iron → weapons, tools, iron money <span class="sep">·</span> Gytheion = “chief naval base”</div></div>
+    <div class="row"><div class="cq">Evidence</div>
+      <div class="nts reveal">Herodotus 1.66.1 (Cooley H9): “fertile land … rapidly grew prosperous and strong” <span class="sep">·</span> Aristotle, <i>Politics</i> 2.9 (Cooley D28): land for 30,000 hoplites, “not even one thousand” <span class="sep">·</span> Gytheion quarry inscription (Cooley K6)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="A city of villages" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The site of Sparta · I do — the plan</p>
+  <h2>A city of villages</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <figure class="plan"><div class="pf"><img src="images/clarke-plan-of-sparta.jpg" alt="Plan of the site of Sparta, showing the tribal areas (villages), acropolis, agora and sanctuaries">
+      <span class="pin linked" data-pin="v1" style="--x:19.6%;--y:34%">1</span>
+      <span class="pin linked" data-pin="v2" style="--x:36.8%;--y:67.1%">2</span>
+      <span class="pin linked" data-pin="v3" style="--x:58.6%;--y:31.7%">3</span>
+      <span class="pin linked" data-pin="v4" style="--x:55.4%;--y:79.6%">4</span>
+      <span class="pin linked" data-pin="v5" style="--x:50.8%;--y:90.8%">5</span></div>
+      <figcaption>Plan of the site of Sparta, showing the tribal areas (villages), acropolis, agora and sanctuaries — <span class="cr">Clarke & Garner, inside cover</span>. The plan spells Pitana “Pitane”.</figcaption></figure>
+    <div class="stack">
+      <ol class="keylist">
+        <li class="reveal" data-also="[data-pin=v1]"><span class="num">1</span><span class="t">Pitana</span><span class="d">Herodotus met a Spartan “in Pitana (that was his village)”.</span></li>
+        <li class="reveal" data-also="[data-pin=v2]"><span class="num">2</span><span class="t">Mesoa</span><span class="d">The Suda calls the poet Alcman “a Lakonian from Messoa”.</span></li>
+        <li class="reveal" data-also="[data-pin=v3]"><span class="num">3</span><span class="t">Limnai</span><span class="d">“Marshes” — low ground beside the Eurotas (Strabo).</span></li>
+        <li class="reveal" data-also="[data-pin=v4]"><span class="num">4</span><span class="t">Kynosoura</span><span class="d">The fourth village, to the south.</span></li>
+        <li class="reveal" data-also="[data-pin=v5]"><span class="num">5</span><span class="t">Amyklai</span><span class="d">About 6 km south, along the road to Gytheion.</span></li>
+      </ol>
+      <div class="note reveal" data-code="evidence"><p class="body">Graves around Sparta from about 900 BC are an early sign of these scattered villages.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="A city without walls">
+<div class="wrap">
+  <p class="eyebrow">4 · The site of Sparta · We do</p>
+  <h2>A city without walls</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon</div>
+        <p class="quote">The Spartiates, since their city had no walls, were stationed here and there to guard it – there seemed few of them and there were few.</p>
+        <p class="prov">Xenophon, <i>Hellenika</i> 6.5.27–28, on the Theban invasion of 370/69 BC · an Athenian with close ties to Sparta, writing in the 360s–350s BC · trans. in Cooley K5</p>
+      </div>
+      <div class="note" data-code="evidence"><p class="body">Cooley: “The town of Sparta remained open until the Hellenistic period.”</p></div>
+    </div>
+    <div class="card accent">
+      <div class="k">Because, but, so</div>
+      <p class="frame"><b>Sparta had no city walls …</b></p>
+      <div class="bbs">
+        <span class="c">because</span><span class="m reveal">… it relied on its army — and on its mountains.</span>
+        <span class="c">but</span><span class="m reveal">… when the Thebans invaded in 370/69 BC, the few Spartiates had to be “stationed here and there to guard it”.</span>
+        <span class="c">so</span><span class="m reveal">… a visitor looking for a fortified classical city finds none.</span>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="The heart of the town" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The site of Sparta · I do — the centre</p>
+  <h2>The heart of the town</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <figure class="plan"><div class="pf"><img src="images/clarke-plan-of-sparta.jpg" alt="Plan of the site of Sparta, showing the tribal areas (villages), acropolis, agora and sanctuaries">
+      <span class="pin linked" data-pin="t1" style="--x:37.3%;--y:31.4%">1</span>
+      <span class="pin linked" data-pin="t2" style="--x:37.4%;--y:23.5%">2</span>
+      <span class="pin linked" data-pin="t3" style="--x:54.4%;--y:28.5%">3</span>
+      <span class="pin linked" data-pin="t4" style="--x:72.2%;--y:37.5%">4</span></div>
+      <figcaption>Plan of the site of Sparta, showing the tribal areas (villages), acropolis, agora and sanctuaries — <span class="cr">Clarke & Garner, inside cover</span></figcaption></figure>
+    <ol class="keylist">
+      <li class="reveal" data-also="[data-pin=t1]"><span class="num">1</span><span class="t">Acropolis</span><span class="d">Only a low hill, not fortified. On it, the Temple of Athena Chalkioikos — “of the Bronze House”.</span></li>
+      <li class="reveal" data-also="[data-pin=t2]"><span class="num">2</span><span class="t">Agora</span><span class="d">The centre of public life — though “the agora’s exact location is disputed”. Nearby, the Skias, “built to shelter the assembly”.</span></li>
+      <li class="reveal" data-also="[data-pin=t3]"><span class="num">3</span><span class="t">Persian Stoa and Choros</span><span class="d">A stoa built from Persian War spoils, and the Choros (“Dancing”), where young men danced at the Gymnopaidiai.</span></li>
+      <li class="reveal" data-also="[data-pin=t4]"><span class="num">4</span><span class="t">Sanctuary of Artemis Orthia</span><span class="d">By the Eurotas, in Limnai: rich finds, a modest temple.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="Pausanias walks through Sparta">
+<div class="wrap">
+  <p class="eyebrow">4 · The site of Sparta · a source <span class="optional">If time</span></p>
+  <h2>Pausanias walks through Sparta</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Pausanias</div>
+        <p class="quote sm">The Lakedaimonians do not have an akropolis rising up to a prominent height, like the Kadmeia at Thebes or the Larisa at Argos. But there are hills in the city, and they call the tallest of these the akropolis. [2] The temple of Athena, known both as Poliouchos (‘Holding the City’) and Chalkioikos (‘Of the Bronze House’) has been built there. … many years later the Lakedaimonians made Athena’s temple and her statue both in bronze. Gitiadas a local architect oversaw the work.</p>
+        <p class="quote sm">The most impressive thing in the agora is what they call the Persian Stoa since it was made of spoils from the Persian Wars: over time they have altered it to its current size and splendour.</p>
+        <p class="prov">Pausanias, <i>Description of Greece</i> 3.17.1–2 and 3.11.3 · a Greek traveller writing for educated readers under Roman rule, c. AD 160s–170s · trans. in Cooley K3, K2</p>
+      </div>
+      <p class="qprompt reveal">Pausanias wrote over 600 years after the Persian Wars. Why does “over time they have altered it” matter?</p>
+      <div class="note reveal" data-code="counter"><p class="body">He describes the town of his own day. Buildings had been rebuilt and enlarged, so what he saw is not necessarily what 5th-century Spartans saw.</p></div>
+    </div>
+    <figure class="figure"><img src="images/clarke-7-2-athena-chalkioikos.jpg" alt="Remains of the Temple of Athena Chalkioikos on the acropolis"><figcaption>Remains of the Temple of Athena Chalkioikos on the acropolis — <span class="cr">Clarke & Garner, Fig 7.2</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="The Sanctuary of Artemis Orthia">
+<div class="wrap">
+  <p class="eyebrow">4 · The site of Sparta</p>
+  <h2>The Sanctuary of Artemis Orthia</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <figure class="figure"><img src="images/clarke-8-8-artemis-orthia.jpg" alt="Remains of the Sanctuary of Artemis Orthia beside the Eurotas"><figcaption>Remains of the Sanctuary of Artemis Orthia beside the Eurotas — <span class="cr">Clarke & Garner, Fig 8.8</span></figcaption></figure>
+    <div class="stack">
+      <div class="card reveal"><div class="k">Where</div><p class="body">By the Eurotas, in the marshy village of Limnai.</p></div>
+      <div class="card reveal"><div class="k">What was found</div><p class="body">Ivories and lead figurines — one of the richest sites in Sparta for archaeologists.</p></div>
+      <div class="card reveal"><div class="k">The temple</div><p class="body">Modest: about 16 × 7 m, roughly one-eighth the size of the temple of Hera at Olympia (Cavanagh, in Cooley).</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body">How much is certain? Cooley: “only two classical sites, the sanctuary of Artemis Orthia and the temple of Athena on the acropolis have been identified for certain.” Even the kings’ tombs “have not, alas, yet been located”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="Beyond the town">
+<div class="wrap">
+  <p class="eyebrow">4 · The site of Sparta · two great sanctuaries outside the town</p>
+  <h2>Beyond the town: the Menelaion and the Amyklaion</h2>
+  <div class="split" style="--cols:.8fr 1fr 1fr">
+    <figure class="figure contain"><img src="images/bradley-3-7-sparta-and-shrines.jpg" alt="Sparta and the shrines along the Eurotas valley"><figcaption>Sparta and the shrines along the Eurotas valley — <span class="cr">Bradley, Fig 3.7</span></figcaption></figure>
+    <div class="stack">
+      <figure class="figure short"><img src="images/clarke-8-7-menelaion.jpg" alt="The Menelaion at Therapne, with Mt Taygetus behind"><figcaption>The Menelaion at Therapne, with Mt Taygetus behind — <span class="cr">Clarke & Garner, Fig 8.7</span></figcaption></figure>
+      <div class="card sm reveal"><div class="k">The Menelaion</div><p class="body">At Therapne, on high ground east of the Eurotas, south-east of the town. A shrine of c. 700 BC to Menelaus and Helen, beside Mycenaean remains. A bronze flask: “Deinis dedicated these to [Helen, wife of] Menelaos.” (Cooley C29)</p></div>
+    </div>
+    <div class="stack">
+      <figure class="figure short"><img src="images/clarke-7-7-amyklaion.jpg" alt="The site of the sanctuary of Apollo at Amyklai"><figcaption>The site of the sanctuary of Apollo at Amyklai — <span class="cr">Clarke & Garner, Fig 7.7</span></figcaption></figure>
+      <div class="card sm reveal"><div class="k">The Amyklaion</div><p class="body">Apollo and Hyakinthos, about 6 km south: home of the Hyakinthia. “The people of Amyklai always return for the Hyakinthia for the hymn to Apollo” (Xenophon, Cooley C70). The 421 BC treaty with Athens stood “next to the statue of Apollo at Amyklai” (Thucydides 5.23).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The site of Sparta" data-title="Notes 4 — The site" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The site of Sparta</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>4 · The site</span></div>
+    <div class="row"><div class="cq">How was it laid out?</div>
+      <div class="nts reveal">4 villages: <b>Pitana, Mesoa, Limnai, Kynosoura</b> + <b>Amyklai</b> (c. 6 km S) <span class="sep">·</span> on low hills W of the Eurotas <span class="sep">·</span> graves from c. 900 BC</div></div>
+    <div class="row"><div class="cq">Walls?</div>
+      <div class="nts reveal">None until the Hellenistic period (Cooley) <span class="sep">·</span> 370/69 BC: Spartiates “stationed here and there to guard it” (Xenophon, <i>Hell.</i> 6.5.27–28, Cooley K5)</div></div>
+    <div class="row"><div class="cq">The centre?</div>
+      <div class="nts reveal"><b>Acropolis</b>: low, unfortified; Temple of <b>Athena Chalkioikos</b> (“Bronze House”) <span class="sep">·</span> <b>agora</b>: public centre, location disputed; <b>Persian Stoa</b>; <b>Choros</b> (dancing)</div></div>
+    <div class="row"><div class="cq">Sanctuaries?</div>
+      <div class="nts reveal"><b>Artemis Orthia</b>: Limnai, by the river; rich votives, modest temple (c. 16 × 7 m) <span class="sep">·</span> <b>Menelaion</b>: Therapne, SE, across the river; Menelaus + Helen <span class="sep">·</span> <b>Amyklaion</b>: Apollo + Hyakinthos; the Hyakinthia</div></div>
+    <div class="row"><div class="cq">How sure are we?</div>
+      <div class="nts reveal">Only Orthia + Athena’s temple “identified for certain” (Cooley) <span class="sep">·</span> royal tombs not found</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What can the site tell us?" data-title="Thucydides imagines the ruins">
+<div class="wrap">
+  <p class="eyebrow">5 · What can the site tell us? · We do — reading a source</p>
+  <h2>Thucydides imagines the ruins of Sparta</h2>
+  <div class="src">
+    <div class="k">Source · Thucydides</div>
+    <p class="quote sm">[10.2] For example, if the city of the Lakedaimonians were to be destroyed and abandoned, and all that was left were its temples and the foundations of its buildings, I suspect that <span class="code" data-code="judgement" data-letter="J">future generations would find it impossible to believe historians’ accounts of its present power</span>. Yet today they occupy two fifths of the Peloponnese, control the whole of it, and are the leaders of an extensive alliance outside its boundaries as well. Yet to the uninformed observer its physical remains would seem to fall far short of the reality, because <span class="code" data-code="evidence" data-letter="E">it lacks the conventional layout of a modern city, has no temples or extravagant public buildings, and is simply a collection of villages typical of ancient Greek society</span>. But <span class="code" data-code="counter" data-letter="C">if Athens, by contrast, were to suffer the same fate, the same observer would overestimate its power twice over</span> on the basis of the visible remains of that city.</p>
+    <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 1.10.2 · an Athenian, writing in the late 5th century BC · trans. B. Wilson · Cooley G2</p>
+  </div>
+  <div class="cols c3">
+    <p class="qprompt reveal" data-paint="judgement">What does he predict?</p>
+    <p class="qprompt reveal" data-paint="evidence">What is his reason?</p>
+    <p class="qprompt reveal" data-paint="counter">Why compare Athens?</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What can the site tell us?" data-title="Was Thucydides right?">
+<div class="wrap">
+  <p class="eyebrow">5 · What can the site tell us? · Vote first, then the evidence</p>
+  <h2>Was Thucydides right?</h2>
+  <div class="split" style="--cols:.9fr 1.1fr">
+    <div class="stack">
+      <div class="card tinted"><div class="k">Gesture vote</div><p class="body">Thumbs up = yes · sideways = partly · thumbs down = no. Be ready to give one reason.</p></div>
+      <figure class="figure"><img src="images/clarke-1-5-tomb-of-leonidas.jpg" alt="The so-called ‘Tomb of Leonidas’, surrounded by the modern town"><figcaption>The so-called ‘Tomb of Leonidas’, surrounded by the modern town — <span class="cr">Clarke & Garner, Fig 1.5</span></figcaption></figure>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">He was right that the ruins disappoint</div><p class="body">No walls, no grand public buildings, a temple at Orthia of about 16 × 7 m. Few visitors today would guess Sparta’s power.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">… but he overstated it</div><p class="body">Cavanagh: “The picture of Sparta as no more than a collection of villages is an overstatement by Thucydides”, because “like many classical cities it had much open space given over not only to public buildings, but to squares, hippodromes and palaistrai.”</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Why so little survives</div><p class="body">The Archaic and Classical levels are “masked or destroyed by Roman building”; modern Sparta sits on top; the site “served as a quarry for lime burners”; inscriptions on bronze were “later melted down for their metal content” (Hodkinson).</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>Absence of evidence is not always evidence of absence.</b></p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What can the site tell us?" data-title="What the site can and cannot tell us">
+<div class="wrap">
+  <p class="eyebrow">5 · What can the site tell us? · the inquiry question</p>
+  <h2>What the site can — and cannot — tell us</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">It can show us</div>
+      <ul class="body">
+        <li>a state confident in its army and its mountains — no walls until the Hellenistic period</li>
+        <li>little interest in the showy public building of Athens</li>
+        <li>where the wealth went: rich offerings at Orthia, the Menelaion and the Amyklaion — sanctuaries and festivals</li>
+        <li>a link to the heroic age: Menelaus and Helen honoured at a Mycenaean site</li>
+      </ul></div>
+    <div class="card quiet reveal"><div class="k">It cannot show us</div>
+      <ul class="body">
+        <li>how powerful Sparta really was — Thucydides’ point</li>
+        <li>much of the classical town, buried under Roman and modern building</li>
+        <li>where the agora was exactly, or where the kings were buried</li>
+        <li>how buildings were used in the 5th century — Pausanias saw a Roman-era town</li>
+      </ul></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What can the site tell us?" data-title="Notes 5 — What the site can tell us" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>What the site can and cannot tell us</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>5 · Can / cannot tell us</span></div>
+    <div class="row"><div class="cq">Thucydides’ claim?</div>
+      <div class="nts reveal">Ruins → later people would <b>underestimate</b> Sparta: “a collection of villages”, no “extravagant public buildings” <span class="sep">·</span> Athens would be <b>overestimated</b> (Thuc. 1.10.2, Cooley G2)</div></div>
+    <div class="row"><div class="cq">Was he right?</div>
+      <div class="nts reveal">Partly: modest remains, no walls <span class="sep">·</span> but Cavanagh: “an overstatement” — open spaces, public buildings, squares, hippodromes, palaistrai</div></div>
+    <div class="row"><div class="cq">Why so little survives?</div>
+      <div class="nts reveal">Roman building on top <span class="sep">·</span> modern town <span class="sep">·</span> lime burners quarried the site <span class="sep">·</span> bronze inscriptions melted down → absence of evidence ≠ evidence of absence</div></div>
+    <div class="row"><div class="cq">What it does show</div>
+      <div class="nts reveal">Confidence in army + mountains <span class="sep">·</span> wealth spent on <b>sanctuaries and festivals</b>, not showy civic buildings</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What can the site tell us?" data-title="Summary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>How did the land shape Spartan society?</li>
+          <li>What was the site of Sparta like?</li>
+          <li>What can its ruins tell us — and not tell us?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm">Sparta’s fertile Eurotas valley and conquered Messenia, walled by Taygetus and Parnon, gave it rich farmland worked by helots and natural defences, but also a large helot population to control across the mountains. The town itself was an open cluster of villages around a low acropolis and agora, with major sanctuaries at Orthia, the Menelaion and the Amyklaion. Its modest ruins would mislead a visitor about its power, as Thucydides predicted, but they also show where Spartans chose to spend their wealth — on gods and festivals rather than walls and showy buildings.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Setting: Laconia, Messenia, who lived where</label></li>
+        <li><label><input type="checkbox"> 2 · Natural features and what they did</label></li>
+        <li><label><input type="checkbox"> 3 · Resources and who worked them</label></li>
+        <li><label><input type="checkbox"> 4 · The site: villages, no walls, acropolis, agora, sanctuaries</label></li>
+        <li><label><input type="checkbox"> 5 · What the site can and cannot tell us</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (a)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>Two 3-mark questions from recent HSC papers</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes. Three or four parts, from short answers to one worth 10–15 marks.</p></div>
+    <div class="card"><div class="k">3 marks</div><p class="body">About 4–5 minutes. Three accurate, specific points. NESA’s own sample answers are about 40 words.</p></div>
+    <div class="card accent"><div class="k">Outline</div><p class="body">NESA: “Sketch in general terms; indicate the main features of”.</p></div>
+  </div>
+  <p class="lead">Question 1: we take NESA’s sample answer apart. Question 2: you write, then mark your own.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2024 Q11(a)" data-title="HSC 2024 Q11(a) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 · Section II · Question 11 (a) · 3 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Outline</span> the <span class="code" data-code="keyterm" data-letter="K">natural features</span> of <span class="code" data-code="scope" data-letter="S">Sparta during this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Question 1 · I do — watch how the question is taken apart, then how a full-mark answer is built.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(a)" data-title="HSC 2024 Q11(a) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(a) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Outline</div><p class="body">Name each feature and say briefly what it was or did. The markers wanted “an outline rather than just identify or list natural features”.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Natural features</div><p class="body">The land itself: mountains, river, plain, coast, soil, earthquakes. Not the acropolis, not the agora, not the Battle of Leuctra.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">Sparta during this period</div><p class="body">Laconia and the Eurotas valley — Messenia can come in as Spartan territory — from the Archaic period to 371 BC.</p></div>
+    <div class="card accent reveal"><div class="k">3 marks</div><p class="body">About 4–5 minutes · three named features, each with a brief “what it did” · about 40–80 words · no introduction, no conclusion.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(a)" data-title="HSC 2024 Q11(a) — what the markers rewarded" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(a) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit">
+      <tr><th>Marks</th><th>Criteria</th></tr>
+      <tr><td class="m">3</td><td>Provides accurate information relevant to the question</td></tr>
+      <tr><td class="m">2</td><td>Provides some information relevant to the question</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">provide an outline rather than just identify or list natural features (a)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">providing appropriate depth in responses, guided by the mark value of each part of the question</span><span class="q">understanding what constitutes a natural feature (a)</span></p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2024 HSC Ancient History Marking Guidelines (Section II, part (a)) and the 2024 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(a)" data-title="HSC 2024 Q11(a) — NESA’s sample, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(a) · I do — NESA’s sample answer, annotated</p>
+  <h2>What a 3-mark answer looks like</h2>
+  <div class="annot">
+    <div class="ans">
+      <span class="code" data-code="scope" id="a24-1">Sparta, located in Lakonia in the Peloponnese Peninsula,</span><span class="mk">1</span>
+      was surrounded by <span class="code" data-code="evidence" id="a24-2">mountain ranges, including the Taygetus and Parnon mountains,</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="a24-3">which acted as defensive features.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="a24-4">The Eurotas River flowed through Sparta,</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="a24-5">providing fertile soil and connecting the site to the port at Gytheion.</span><span class="mk">5</span>
+      <p class="meta">Sample answer from the NESA 2024 HSC Ancient History Marking Guidelines · 42 words</p>
+    </div>
+    <div class="margin">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="scope" data-hl="#a24-1"><span class="mk">1</span><b>Frame first</b><span class="tx">One clause places Sparta. Location alone earns little — the marks come from the features that follow.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#a24-2"><span class="mk">2</span><b>Named, not general</b><span class="tx">“Taygetus and Parnon”, not just “mountains”. Names are what make information “accurate”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#a24-3"><span class="mk">3</span><b>The outline move</b><span class="tx">A few words on what the feature did. This is what turns a list into an outline.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#a24-4"><span class="mk">4</span><b>A second feature</b><span class="tx">The river, named and placed.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#a24-5"><span class="mk">5</span><b>Two effects, then stop</b><span class="tx">Fertile soil (farming) and a route to the sea (Gytheion). Then it ends — this is worth 3 marks, not 10.</span></div>
+      <div class="verdict reveal"><b>3 / 3.</b> Accurate, relevant and specific; every feature is natural; 42 words.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> strictly, the Eurotas flows past the town on its east side, and its valley leads down to the Laconian Gulf, where Gytheion was the port. The markers accepted the compressed version — yours can be exact.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(a)" data-title="HSC 2024 Q11(a) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(a) · I do — three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">1 mark · a general statement</span>
+      <p class="resp">Sparta had lots of mountains and a river, which protected it and gave it good farmland.</p>
+      <p class="why">True, but nothing is named. It could describe almost anywhere in Greece.</p></div>
+    <div class="rung reveal"><span class="mark">2 marks · a list</span>
+      <p class="resp">The natural features of Sparta were Mt Taygetus, Mt Parnon, the Eurotas River and the Laconian Gulf.</p>
+      <p class="why">Accurate names, but nothing on what they were like or did. The markers wanted “an outline rather than just identify or list”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · the wrong features</span>
+      <p class="resp">Sparta’s main features were its acropolis with the Temple of Athena Chalkioikos, the agora, and rich volcanic soil.</p>
+      <p class="why">Buildings are not natural features, and “volcanic soil” belongs to the Cities of Vesuvius — the confusion the 2021 markers warned about.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(a)" data-title="The 3-mark outline formula" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(a) · the formula <span class="optional">If time</span></p>
+  <h2>The 3-mark outline formula</h2>
+  <div class="pattern">
+    <span class="p e">named feature</span><span class="arr">+</span>
+    <span class="p">where</span><span class="arr">+</span>
+    <span class="p a">what it did</span><span class="arr">×3</span>
+    <span class="p c">then stop</span>
+  </div>
+  <div class="card accent">
+    <div class="k">Sentence frames (Foundation)</div>
+    <p class="frame">Sparta lay in <span class="blank"></span>, in the <span class="blank"></span> Peloponnese, on the <span class="blank"></span> plain of the <span class="blank"></span> River.<br>
+    The valley was enclosed by <span class="blank"></span> to the west and <span class="blank"></span> to the east, which <span class="blank"></span>.<br>
+    To the south the valley opened onto <span class="blank"></span>, where <span class="blank"></span> served as Sparta’s port.</p>
+  </div>
+  <div class="src reveal" data-veil="Show the completed model">
+    <div class="k">Completed — another full-mark version</div>
+    <p class="quote sm">Sparta lay in Laconia, in the south-eastern Peloponnese, on the fertile plain of the Eurotas River. The valley was enclosed by the Taygetus range to the west and the Parnon range to the east, which made it difficult to invade. Across Taygetus lay the even richer plain of Messenia, and to the south the valley opened onto the Laconian Gulf, where Gytheion served as Sparta’s port.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2021 Q11(a)" data-title="HSC 2021 Q11(a) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 · Section II · Question 11 (a) · 3 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Outline</span> the <span class="code" data-code="keyterm" data-letter="K">key features</span> of <span class="code" data-code="scope" data-letter="S">the site of Sparta</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Question 2 · We do, then you do — take it apart together, then write it yourself.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(a)" data-title="HSC 2021 Q11(a) — take it apart together" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(a) · We do — deconstruct together</p>
+  <h2>What does this question want?</h2>
+  <div class="cols c3">
+    <div class="note reveal" data-code="directive"><div class="k">Outline</div><p class="body">Same as before: name the main features and sketch them briefly.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Key features of the site</div><p class="body">The layout and the main places — villages, acropolis, agora, sanctuaries — as well as the setting.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">The site of Sparta</div><p class="body">The town and its sanctuaries — not all of Laconia, and never Pompeii.</p></div>
+  </div>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="tbl-scroll reveal"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2021)</th></tr>
+      <tr><td class="m">3</td><td>Provides a sound outline relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">2</td><td>Provides an outline relevant to the question · May use historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="note reveal" data-code="judgement"><div class="k">The 2021 markers’ feedback</div>
+      <p class="fb">Better responses could <span class="q">identify specific historical terms and/or concepts in outlining the site of Sparta (a)</span>Students needed to improve by <span class="q">considering the man-made, physical and architectural features of the site of Sparta as well as the natural or geographical key features (a)</span><span class="q">avoiding confusion with the Core Topic – Cities of Vesuvius: Pompeii and Herculaneum – concerning the natural features and geography of Sparta (a)</span></p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2021 Q11(a)" data-title="HSC 2021 Q11(a) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(a) · You do · 5 minutes · press K for the timer</p>
+  <h2>Outline the key features of the site of Sparta. <span class="small">(3 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>three or more specific features</li>
+        <li>man-made features, not just the setting</li>
+        <li>terms: acropolis, agora, sanctuary</li>
+        <li>about 40–80 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body">Start with the layout: “The site of Sparta was not a single walled city but …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(a)" data-title="HSC 2021 Q11(a) — NESA’s sample, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(a) · Check your answer — NESA’s sample answer, annotated</p>
+  <h2>A sound outline, in 38 words</h2>
+  <div class="annot" data-veil="Write your own answer first — then show the annotated sample">
+    <div class="ans">
+      The site of Sparta originally included <span class="code" data-code="evidence" id="a21-1">five villages</span><span class="mk">1</span>
+      <span class="code" data-code="analysis" id="a21-2">surrounding the public space</span><span class="mk">2</span>
+      which featured <span class="code" data-code="keyterm" id="a21-3">an acropolis and agora.</span><span class="mk">3</span>
+      The site also featured <span class="code" data-code="analysis" id="a21-4">several religious buildings</span><span class="mk">4</span>
+      including <span class="code" data-code="evidence" id="a21-5">a Temple to Athena Chalkioikos, sanctuary of Artemis Orthia, and the Menelaion.</span><span class="mk">5</span>
+      <p class="meta">Sample answer from the NESA 2021 HSC Ancient History Marking Guidelines · 38 words</p>
+    </div>
+    <div class="margin">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="evidence" data-hl="#a21-1"><span class="mk">1</span><b>The defining feature first</b><span class="tx">Pitana, Mesoa, Limnai, Kynosoura and Amyklai: the villages are what made Sparta’s site unusual — Thucydides’ “collection of villages”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#a21-2"><span class="mk">2</span><b>Shows the layout</b><span class="tx">“Surrounding the public space” says how the parts fit together — the sketch that “outline” asks for.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#a21-3"><span class="mk">3</span><b>Historical terms</b><span class="tx">Acropolis and agora: the “appropriate historical terms” in the 3-mark criterion.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#a21-4"><span class="mk">4</span><b>Grouped by type</b><span class="tx">“Religious buildings” organises what follows, so it reads as a sketch, not a shopping list.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#a21-5"><span class="mk">5</span><b>Specific to Sparta</b><span class="tx">Three named sanctuaries. Nothing here could describe Pompeii or Herculaneum.</span></div>
+      <div class="verdict reveal"><b>3 / 3.</b> A sound outline with the right terms, in 38 words.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> one clause on the setting (low hills west of the Eurotas) and “no city walls” would answer the markers’ call for natural <i>and</i> man-made features.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2021 Q11(a)" data-title="HSC 2021 Q11(a) — mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2021 Q11(a) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> named at least three specific features of the site</label></li>
+        <li><label><input type="checkbox"> included man-made, architectural features — not just the setting</label></li>
+        <li><label><input type="checkbox"> showed how the parts fitted together (villages around a public centre)</label></li>
+        <li><label><input type="checkbox"> used historical terms: acropolis, agora, sanctuary</label></li>
+        <li><label><input type="checkbox"> nothing from Pompeii or Herculaneum (no forum, no volcano)</label></li>
+        <li><label><input type="checkbox"> about 40–80 words, in about 5 minutes</label></li>
+      </ul>
+      <p class="small">Fewer than four ticks? Add the missing piece in a second colour.</p>
+    </div>
+    <div class="src reveal" data-veil="Show a fuller version">
+      <div class="k">A fuller version · written for this lesson</div>
+      <p class="quote sm">Sparta was not a single walled city but four villages — Pitana, Mesoa, Limnai and Kynosoura — on low hills west of the Eurotas, with Amyklai about 6 km south. At the centre were a low, unfortified acropolis with the bronze-clad Temple of Athena Chalkioikos, and the agora with its Persian Stoa. Major sanctuaries lay at the edges: Artemis Orthia by the river in Limnai, and the Menelaion and Amyklaion outside the town.</p>
+      <p class="prov">Three moves: the layout → the civic centre → the sanctuaries. 70 words.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · Stretch: 6 marks" data-title="Stretch — a 6-mark explain question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">Stretch · HSC-style practice · 6 marks · written for this lesson, in the format of 2024 Q11(c)</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> how the <span class="code" data-code="keyterm" data-letter="K">natural features and resources</span> of <span class="code" data-code="scope" data-letter="S">Laconia and Messenia</span> <span class="code" data-code="keyterm" data-letter="K">shaped Spartan society</span> <span class="code" data-code="scope" data-letter="S">during this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Not from a past paper. In class if time allows — otherwise for homework in Read mode.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Stretch: 6 marks" data-title="Stretch — plan the explanation" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">Stretch · deconstruct and plan</p>
+  <h2>From features to effects</h2>
+  <div class="split" style="--cols:1fr 1.5fr">
+    <div class="stack">
+      <div class="note" data-code="directive"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.” Every feature must lead to an effect on society.</p></div>
+      <div class="tbl-scroll"><table class="tbl crit compact">
+        <tr><th>Marks</th><th>6-mark criteria (2024 Q11(c))</th></tr>
+        <tr><td class="m">6</td><td>Provides a detailed and informed explanation of features relevant to the question · Communicates effectively using appropriate terms and concepts</td></tr>
+        <tr><td class="m">4–5</td><td>Provides an informed explanation of features relevant to the question · Communicates using appropriate terms and concepts</td></tr>
+      </table></div>
+    </div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Feature or resource</th><th>→ Effect on society</th><th>Evidence</th></tr>
+      <tr class="reveal"><td>Fertile Eurotas plain + Messenia</td><td>helots farm it → Spartiates train full time; messes fed</td><td>Tyrtaeus fr. 5 · Herodotus 1.66.1</td></tr>
+      <tr class="reveal"><td>Taygetus and Parnon</td><td>defence → no walls, reliance on the army · <b>but</b> Messenian helots across the range</td><td>Xenophon, <i>Hell.</i> 6.5.27–28 · Plutarch, <i>Kimon</i> 16.4</td></tr>
+      <tr class="reveal"><td>Iron, stone, harbours</td><td>worked by perioikoi → citizens stay soldiers</td><td>Cavanagh (Boia) · Gytheion quarry (Cooley K6)</td></tr>
+      <tr class="reveal"><td colspan="3"><b>Judgement:</b> geography made the Spartan system possible — and vulnerable (Messenia lost 370/69 BC).</td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Stretch: 6 marks" data-title="Stretch — model, paragraph 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">Stretch · annotated model · paragraph 1 of 2</p>
+  <h2>Answer first, then explain the chain</h2>
+  <div class="annot" data-veil="Plan your own answer first — then show the annotated model">
+    <div class="ans long">
+      <span class="code" data-code="judgement" id="m6-1">Sparta’s natural setting and resources shaped its society by giving it rich farmland and natural defences, but also a large unfree population that the whole system was built to control.</span><span class="mk">1</span>
+      The fertile Eurotas valley and, above all, Messenia, <span class="code" data-code="evidence" id="m6-2">which the Spartan poet Tyrtaeus called ‘good to plough and good to plant’,</span><span class="mk">2</span> produced grain, olives and vines.
+      <span class="code" data-code="analysis" id="m6-3">Because helots farmed this land, Spartiates were freed from agricultural work to train full time as hoplites, and the produce fed the citizens’ common messes.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m6-4">Herodotus links Sparta’s rise directly to its ‘fertile land’.</span><span class="mk">4</span>
+      <p class="meta">Model written for this lesson · paragraph 1 of 2</p>
+    </div>
+    <div class="margin">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m6-1"><span class="mk">1</span><b>Answer first</b><span class="tx">The opening sentence takes a two-sided position. Everything after it develops this judgement.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m6-2"><span class="mk">2</span><b>Short, exact evidence</b><span class="tx">A named source (a Spartan poet) and a few words of quotation, built into your own sentence.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m6-3"><span class="mk">3</span><b>The “explain” move</b><span class="tx">Because → so: resource → helot labour → full-time soldiers and fed messes. NESA’s “relate cause and effect”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m6-4"><span class="mk">4</span><b>A second witness</b><span class="tx">A writer from a different place and century confirms the link between land and power.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Stretch: 6 marks" data-title="Stretch — model, paragraph 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">Stretch · annotated model · paragraph 2 of 2</p>
+  <h2>Weigh both sides, then close the loop</h2>
+  <div class="annot" data-veil="Show the second paragraph">
+    <div class="ans long">
+      <span class="code" data-code="judgement" id="m6-5">The mountains had the same double effect.</span><span class="mk">5</span>
+      Mt Taygetus and Mt Parnon made Laconia hard to invade, <span class="code" data-code="analysis" id="m6-6">so Sparta remained an open town without walls until the Hellenistic period, relying on its army rather than fortifications.</span><span class="mk">6</span>
+      <span class="code" data-code="counter" id="m6-7">Yet Taygetus also cut Sparta off from the Messenian helots, who had to be controlled across a mountain range, and when an earthquake devastated Sparta in c. 464 BC the helots revolted.</span><span class="mk">7</span>
+      Laconia’s iron, building stone and harbours were <span class="code" data-code="keyterm" id="m6-8">exploited by the perioikoi rather than the citizens</span><span class="mk">8</span>, so Spartiates could stay soldiers while the free communities around them mined, made and traded.
+      <span class="code" data-code="judgement" id="m6-9">Geography therefore made the Spartan way of life possible, but it also made it vulnerable: once the Thebans freed Messenia in 370/69 BC, the system could not survive.</span><span class="mk">9</span>
+      <p class="meta">Model written for this lesson · both paragraphs ≈ 220 words, about 8–9 minutes</p>
+    </div>
+    <div class="margin">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m6-5"><span class="mk">5</span><b>Signpost</b><span class="tx">“The same double effect” ties the new paragraph back to the opening judgement.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m6-6"><span class="mk">6</span><b>Feature → consequence</b><span class="tx">Mountains → defence → no walls → reliance on the army.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m6-7"><span class="mk">7</span><b>The other side</b><span class="tx">“Yet” turns the same feature into a problem, with a dated example. Weighing both sides makes an explanation “informed”.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m6-8"><span class="mk">8</span><b>Precise terms</b><span class="tx">Spartiates, helots, perioikoi, hoplites: the “appropriate terms and concepts” of the top band.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m6-9"><span class="mk">9</span><b>Close the loop</b><span class="tx">“Therefore” returns to the judgement and ends on a consequence.</span></div>
+      <div class="verdict reveal"><b>Written to the 6-mark criteria:</b> a detailed, informed explanation with cause and effect, evidence and precise terms.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Stretch: 6 marks" data-title="Your turn — two practice questions" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">Your turn · HSC-style practice · written for this lesson, not from past papers</p>
+  <h2>Two more to try</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">Practice A · 3 marks · 5 minutes</div>
+      <p class="body"><b>Outline the resources available to the Spartans in this period.</b></p>
+      <ul class="checks">
+        <li><label><input type="checkbox"> three named resources</label></li>
+        <li><label><input type="checkbox"> where each came from</label></li>
+        <li><label><input type="checkbox"> what each was used for, or who worked it</label></li>
+        <li><label><input type="checkbox"> about 40–80 words</label></li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">Practice B · 5 marks · 8 minutes</div>
+      <p class="body"><b>What does the site of Sparta reveal about Spartan society in this period?</b></p>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opens with a judgement</label></li>
+        <li><label><input type="checkbox"> two or three features of the site: villages, no walls, modest temples, rich sanctuaries</label></li>
+        <li><label><input type="checkbox"> each linked to what it reveals: confidence, priorities, religion</label></li>
+        <li><label><input type="checkbox"> one limitation: what survives, and Thucydides’ warning</label></li>
+        <li><label><input type="checkbox"> evidence: Thucydides 1.10.2, Cavanagh, Pausanias</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One natural feature of Sparta is … and it affected Spartan society by …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">Was Thucydides right about Sparta’s ruins? One reason.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Lycurgus and the Great Rhetra — the law that fixed where the assembly met, between two streams, the Babyka and the Knakion. Find the Knakion on the plan.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Tyrtaeus fr. 5 (A5, trans. K. Hughes); Alcman fr. 1 (A14); Herodotus 1.66.1 (H9, trans. B. Wilson); Thucydides 1.10.2 and 5.23 (G2, B18, trans. B. Wilson); Xenophon, <i>Hellenika</i> 4.5.11 and 6.5.27–28 (C70, K5); Aristotle, <i>Politics</i> 2.9 (D28); Strabo 8.5.1 (K4); Plutarch, <i>Kimon</i> 16.4 (E64); Pausanias 3.11.3, 3.17.1–2 (K2, K3); inscriptions K6 (Gytheion quarry) and C29 (Menelaion). Introductions by W. G. Cavanagh (archaeology) and S. Hodkinson (inscriptions).</p>
+        <p class="small">Modern: P. Cartledge, <i>Sparta and Lakonia: A Regional History 1300–362 BC</i>, 2nd edn (Routledge, 2002).</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC questions, marking criteria, sample answers and marking feedback: NSW Education Standards Authority, 2021 and 2024 HSC Ancient History examinations, marking guidelines and feedback. © NESA. NESA glossary of key words for “outline” and “explain”.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images</div>
+      <ul class="small"><li>Modern Sparta at the foot of Mt Taygetus — Clarke & Garner, Fig 1.3</li><li>Murex shells — the sea snail that produced a prized red-purple dye — Bradley, Fig 3.6</li><li>Plan of the site of Sparta, showing the tribal areas (villages), acropolis, agora and sanctuaries — Clarke & Garner, inside cover</li><li>Remains of the Temple of Athena Chalkioikos on the acropolis — Clarke & Garner, Fig 7.2</li><li>Remains of the Sanctuary of Artemis Orthia beside the Eurotas — Clarke & Garner, Fig 8.8</li><li>Sparta and the shrines along the Eurotas valley — Bradley, Fig 3.7</li><li>The Menelaion at Therapne, with Mt Taygetus behind — Clarke & Garner, Fig 8.7</li><li>The site of the sanctuary of Apollo at Amyklai — Clarke & Garner, Fig 7.7</li><li>The so-called ‘Tomb of Leonidas’, surrounded by the modern town — Clarke & Garner, Fig 1.5</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Map: coastline from Natural Earth (public domain); features drawn for this lesson.</p></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
