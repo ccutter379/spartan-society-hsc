@@ -1,0 +1,2363 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L26 · Cultural Life III: Poets and Leisure</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: Tyrtaeus and Alcman, and Spartan leisure — athletics, horses, hunting, festivals and the messes — with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 26 (Cultural and everyday life III: Tyrtaeus, Alcman and leisure). Every class starts l26-. */
+
+/* the leisure tree (svg_l26tree.svg, make_l26_diagrams.py): a rebuild of Hurley Source 60 */
+.l26-tree text{font-family:var(--ui); fill:var(--ink);}
+.l26-tree .l26t-bg{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.l26-tree .l26t-root rect{fill:var(--statement); stroke:var(--statement);}
+.l26-tree .l26t-root text{fill:#FBF4F0; font-size:36px; font-weight:700; text-anchor:middle;}
+.l26-tree .l26t-ln{stroke:var(--slate); stroke-width:4; fill:none;}
+.l26-tree .l26t-ah{fill:var(--slate);}
+.l26-tree .l26t-box{fill:var(--surface); stroke-width:3.5;}
+.l26-tree .l26t-ok .l26t-box{stroke:var(--c-evidence);}
+.l26-tree .l26t-mix .l26t-box{stroke:var(--c-keyterm);}
+.l26-tree .l26t-fix .l26t-box{stroke:var(--c-analysis);}
+.l26-tree .l26t-add .l26t-box{stroke:var(--c-scope);}
+.l26-tree .l26t-late .l26t-box{stroke:var(--c-judgement); stroke-dasharray:14 9; fill:var(--surface-2);}
+.l26-tree .l26t-ttl{font-size:29px; font-weight:700;}
+.l26-tree .l26t-ev{font-size:22px;}
+.l26-tree .l26t-ev.late{fill:var(--c-judgement);}
+.l26-tree .l26t-ev.note{fill:var(--slate); font-style:italic;}
+.l26-tree .l26t-badge{stroke:none;}
+.l26-tree .l26t-bt{font-size:18px; font-weight:700; text-anchor:middle; letter-spacing:.03em;}
+.l26-tree .l26t-ok .l26t-badge{fill:var(--w-evidence);} .l26-tree .l26t-ok .l26t-bt{fill:var(--c-evidence);}
+.l26-tree .l26t-mix .l26t-badge{fill:var(--w-keyterm);} .l26-tree .l26t-mix .l26t-bt{fill:var(--c-keyterm);}
+.l26-tree .l26t-fix .l26t-badge{fill:var(--w-analysis);} .l26-tree .l26t-fix .l26t-bt{fill:var(--c-analysis);}
+.l26-tree .l26t-add .l26t-badge{fill:var(--w-scope);} .l26-tree .l26t-add .l26t-bt{fill:var(--c-scope);}
+.l26-tree .l26t-late .l26t-badge{fill:var(--w-judgement);} .l26-tree .l26t-late .l26t-bt{fill:var(--c-judgement);}
+.l26-tree .l26t-key text{fill:var(--slate); font-size:21px;}
+.l26-tree .l26t-sw{stroke-width:3; fill:var(--surface);}
+.l26-tree .l26t-sw.ok{stroke:var(--c-evidence);}
+.l26-tree .l26t-sw.late{stroke:var(--c-judgement); stroke-dasharray:6 4; fill:var(--surface-2);}
+.l26-tree .l26t-key .l26t-late-key{fill:var(--c-judgement);}
+.l26-tree .l26t-note{text-anchor:end; font-style:italic;}
+/* the tree may use more of the screen than other diagrams */
+html:not(.read) .diagram svg.l26-tree{max-height:calc(100vh - 235px);}
+@media (max-width:700px){
+  html.read .diagram svg.l26-tree{min-width:1100px; max-height:none;}
+}
+
+/* the two poets side by side (an HTML table, so it reflows on phones) */
+.l26-cmp th:first-child{width:9.5em;}
+.l26-cmp td:first-child{font-weight:700; color:var(--deep);}
+.l26-cmp td{vertical-align:top; line-height:1.34;}
+.l26-cmp .l26-c{display:block; color:var(--slate); font-size:.88em;}
+@media (max-width:700px){ .l26-cmp th:first-child{width:auto;} }
+
+/* the HSC plan grid */
+.l26-plan td{vertical-align:top; line-height:1.34;}
+.l26-plan td:first-child{font-weight:700; color:var(--deep);}
+.l26-plan .l26-when{display:block; font-weight:400; color:var(--slate); font-size:.88em;}
+
+/* bulleted NESA list inside an annotated block */
+.l26-pt{display:block; margin:.15em 0 .35em;}
+
+/* small figure beside a source */
+.l26-fig .figure img{max-height:34vh; object-fit:contain; background:var(--surface);}
+html.read .l26-fig .figure img{max-height:46vh;}
+
+/* two-column practice lists on wide screens */
+.l26-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l26-two{gap:.4em .7em;}
+@media (max-width:900px){ .l26-two{grid-template-columns:1fr;} }
+
+/* verse: keep line breaks readable */
+.l26-verse{line-height:1.42;}
+
+/* dense slides on short projectors (1366 x 768) */
+@media (max-height:820px){
+  html:not(.read) .l26-dense .src .quote.sm{font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+  html:not(.read) .l26-dense .src .quote:not(.sm){font-size:var(--fs-body); line-height:1.42;}
+  html:not(.read) .l26-dense .src{padding:10px 16px;}
+  html:not(.read) .l26-dense .src .prov{font-size:calc(var(--fs-chrome)*.9); margin-top:.4em;}
+  html:not(.read) .l26-dense .note{padding:.4em .85em;}
+  html:not(.read) .l26-dense .note .body, html:not(.read) .l26-dense .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l26-dense .card{padding-top:10px; padding-bottom:10px;}
+  html:not(.read) .l26-dense .qprompt{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l26-dense .stack.tight > p.body{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+  html:not(.read) .l26-dense .tbl.compact{font-size:calc(var(--fs-body)*.7);}
+  html:not(.read) .l26-dense .tbl.compact td{padding:.26em .55em;}
+  html:not(.read) .l26-dense .tbl.compact th{padding-top:.28em; padding-bottom:.28em;}
+  html:not(.read) .l26-dense .rq{font-size:calc(var(--fs-body)*.72); row-gap:.28em;}
+  html:not(.read) .l26-dense .tf li{font-size:calc(var(--fs-body)*.72); padding:.26em .7em;}
+  html:not(.read) .l26-dense .seq li{font-size:calc(var(--fs-body)*.76); padding:.26em .7em;}
+  html:not(.read) .l26-dense .cloze{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l26-dense .fb{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l26-dense .cornell .nts, html:not(.read) .l26-dense .cornell .cq{font-size:calc(var(--fs-body)*.78); padding-top:.32em; padding-bottom:.32em;}
+  html:not(.read) .l26-dense .moves{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l26-dense .src .quote.sm.model{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l26-dense .card ol.body, html:not(.read) .l26-dense .card ul.body{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+  html:not(.read) .l26-dense .keylist li{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l26-dense .keylist .d{font-size:calc(var(--fs-body)*.74); line-height:1.28;}
+  html:not(.read) .l26-dense .crit td.m{font-size:calc(var(--fs-big)*.8);}
+  html:not(.read) .l26-dense .tbl.crit.compact{font-size:calc(var(--fs-body)*.68);}
+  html:not(.read) .l26-dense .checks label{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l26-dense .rung .resp{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l26-dense .rung .why{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .annot .verdict{font-size:calc(var(--fs-body)*.72); padding:.32em .7em; line-height:1.3;}
+  html:not(.read) .l26-dense .card.quiet .small, html:not(.read) .l26-dense .card.quiet ul.small{font-size:calc(var(--fs-chrome)*.84); line-height:1.3;}
+  html:not(.read) .l26-fig .figure img{max-height:26vh;}
+  html:not(.read) .l26-dense h2{font-size:calc(var(--fs-h2)*.86);}
+}
+
+/* phones and narrow windows: annotated answers stack */
+@media (max-width:900px){ .annot.wide{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 26" data-title="Tyrtaeus, Alcman and leisure" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1.05fr 1fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 26</p>
+      <h1>Cultural and everyday life III: Tyrtaeus, Alcman and leisure</h1>
+      <p class="lead">What do Sparta’s own poets — and Spartans at leisure — reveal about Spartan cultural life?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-8-9-rider-cup-l26.jpg" alt="Inside a black-figure cup of c. 550–530 BC: a rider on horseback, with winged figures and birds around him. Clarke &amp; Garner call him a Spartan; the winged figures suggest more than an everyday ride"><figcaption>Inside a black-figure cup of c. 550–530 BC: a rider on horseback, with winged figures and birds around him. Clarke & Garner call him a Spartan; the winged figures suggest more than an everyday ride — <span class="cr">Clarke & Garner, Fig 8.9</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 26" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From what Spartans built to what they sang and played</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <div class="card quiet">
+        <div class="k">Last lesson</div>
+        <p class="body">Sparta’s finest buildings were its sanctuaries — the Amyklaion, the Menelaion and Artemis Orthia: modest temples, rich offerings, and claims to the heroic past.</p>
+      </div>
+      <div class="card tinted reveal">
+        <div class="k">Today</div>
+        <p class="body">What Spartans sang and how they spent their free time: two poets, and the evidence for athletics, horses, hunting, festivals and the messes.</p>
+      </div>
+    </div>
+    <div class="card accent reveal">
+      <div class="k">You have met both poets before</div>
+      <ul class="body">
+        <li>Lesson 1: the only early literary voices from inside Sparta</li>
+        <li>Lesson 3: Tyrtaeus on the constitution from Delphi</li>
+        <li>Lesson 11: Tyrtaeus on the man who falls in the front line</li>
+        <li>Lesson 13: Alcman’s Maiden-song for a chorus of girls</li>
+        <li>Lesson 19: what the Greek writers made of Sparta</li>
+      </ul>
+      <p class="body"><b>New today:</b> other lines from the poems, and a new question — what do they reveal about <i>cultural</i> life?</p>
+    </div>
+  </div>
+  <p class="cue">The key idea of Lesson 25, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 26" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse what Spartan poetry reveals about Spartan values</li>
+        <li>explain how Spartans spent their leisure and what that shows</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>compare the purposes and audiences of Tyrtaeus and Alcman</li>
+        <li>explain three leisure activities with evidence</li>
+        <li>write an 8-mark HSC answer that uses a source</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body"><b>Cultural life</b>: NESA’s 2020 marking guidelines say to “Interpret the term ‘culture’ broadly to include practices, beliefs, customs etc.” — poetry, music, festivals, sport, meals. <b>Leisure</b>: time free from work. Spartiates did no farming, crafts or trade; helots and perioikoi did that work (Lessons 8 and 17).</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 26" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L26 · Tyrtaeus, Alcman and leisure</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (T. = Tyrtaeus, A. = Alcman)</span></div></div>
+      <div class="row"><div class="cq">Who were the two poets?</div><div class="nts">T. mid-7th c. BC, elegy …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: two Spartan voices · Tyrtaeus · Alcman · athletes and horses · hunting, festivals and the messes.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 26" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Poetry</th><th>Meaning</th></tr>
+      <tr><td>elegy</td><td>poetry in couplets, recited to the pipes; Tyrtaeus’ form</td></tr>
+      <tr><td>lyric</td><td>poetry sung to the lyre, often by a chorus; Alcman’s form</td></tr>
+      <tr><td>partheneion</td><td>a maiden-song for a chorus of girls to perform at a festival (plural <i>partheneia</i>)</td></tr>
+      <tr><td>chorus</td><td>a group who sang and danced together, usually at a festival</td></tr>
+      <tr><td>dialect</td><td>a regional form of Greek: Tyrtaeus wrote in Ionic, the dialect of Homer; Alcman in Doric, Sparta’s own</td></tr>
+      <tr><td>fragment</td><td>a surviving piece of a lost work: quoted by a later writer, or found on papyrus</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Leisure</th><th>Meaning</th></tr>
+      <tr><td>stade race</td><td>a sprint of one stade (about 190 metres at Olympia)</td></tr>
+      <tr><td>kalpe</td><td>a horse race in which the rider ran beside a cantering horse, then mounted it</td></tr>
+      <tr><td>chariot race</td><td>at Olympia, a four-horse race in which the owner, not the driver, was crowned</td></tr>
+      <tr><td>stele</td><td>an inscribed stone slab, such as a list of an athlete’s victories</td></tr>
+      <tr><td>syssitia</td><td>the messes: compulsory common meals of the citizens (Lesson 12)</td></tr>
+      <tr><td>symposium</td><td>a drinking party, typical of elite life elsewhere in Greece; Archaic Laconian pottery “includes vessels for symposia” (Cavanagh)</td></tr>
+      <tr><td>mirage</td><td>the idealised, distorted image of Sparta created by writers</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Tyrtaios, Alkman, Lykourgos, Kyniska, Herakles). In your own writing use Tyrtaeus, Alcman, Lycurgus, Cynisca, Heracles.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Two Spartan voices" data-title="Two poets, two kinds of song" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">1 · Two Spartan voices · I do — who they were, and the problem with poets</p>
+  <h2>Two poets, two kinds of song</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">The editor of our sourcebook</div>
+        <p class="quote sm">But both pose a variety of problems for the historians. Firstly, of course, they were writing poetry not history, whatever the original intentions or the purposes to which they were later put.</p>
+        <p class="prov">M. G. L. Cooley, <i>Sparta</i>, introduction to section A, “the evidence of poetry”</p>
+      </div>
+      <div class="note reveal" data-code="counter"><div class="k">Not the only Spartan voices</div><p class="body">They are the only early Spartan <i>literary</i> voices, and both are only “probably Spartan” (Cooley). Inscriptions speak too: Damonon’s victory list and Cynisca’s epigram (section 4). Hodkinson: inscriptions give “the voices of a few, largely wealthy, women speaking in their own words”.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card accent reveal"><div class="k">Tyrtaeus · mid-7th century BC</div><p class="body">Elegy, “in traditional Ionic dialect (as used by Homer)”, performed for men. The Suda calls him “Lakonian or Milesian”; an Athenian orator claimed him for Athens.</p></div>
+      <div class="card accent reveal"><div class="k">Alcman · late 7th century BC</div><p class="body">Lyric, in Sparta’s own Doric dialect; his two longest surviving fragments were for girls’ choruses. He “lived perhaps one generation later than Tyrtaios, but wrote poetry different in all respects.” The Suda: “a Lakonian from Messoa”.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Why historians still value them</div><p class="body">Both composed in the 7th century BC, before the outsiders who built the Spartan mirage, and their words were performed by Spartans.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Two Spartan voices" data-title="Poetry in performance" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">1 · Two Spartan voices · We do — how Spartans used Tyrtaeus</p>
+  <h2>Poetry in performance: a contest after dinner</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Athenaeus, quoting Philochorus</div>
+        <p class="quote sm">The Lakonians themselves, too, in their wars march rhythmically while reciting the poems of Tyrtaios from memory. Philochoros says that after the Lakedaimonians had defeated the Messenians through the generalship of Tyrtaios they established the custom on their campaigns that, when they had finished their dinner and sung the Song of Thanksgiving, one by one they should sing the songs of Tyrtaios; and the Commanding Officer should be the judge and give a prize of meat to the winner.</p>
+        <p class="prov">Athenaeus, <i>Scholars at Dinner</i> 14.29 (Athenaeus flourished c. AD 200), citing Philochorus, an Athenian historian (c. 340–260 BC) · trans. in Cooley A2</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What does this reveal about poetry in Spartan life?</p>
+      <p class="body reveal">Poems were memorised and performed: a singing contest after dinner, with a judge and a prize. Song, competition and campaigning went together.</p>
+      <p class="qprompt reveal">How far can we trust it?</p>
+      <p class="body reveal">It reaches us through an Athenian historian, quoted some 850 years after Tyrtaeus by a writer who “does not offer historical criticism himself” (Cooley).</p>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> For Spartans, Tyrtaeus was not a book but a performance — part of their leisure and their training at once.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Two Spartan voices" data-title="Notes 1 — Two Spartan voices" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Two Spartan voices</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L26 · Tyrtaeus, Alcman and leisure</b></span><span>1 · Two Spartan voices</span></div>
+    <div class="row"><div class="cq">Who were the two poets?</div>
+      <div class="nts reveal"><b>Tyrtaeus</b>: mid-7th c. BC, <b>elegy</b> in <b>Ionic</b> (Homer’s dialect), for men <span class="sep">·</span> <b>Alcman</b>: late 7th c. BC, <b>lyric</b> in <b>Doric</b> (Sparta’s); two longest fragments for girls’ choruses <span class="sep">·</span> both “probably Spartan” (Cooley)</div></div>
+    <div class="row"><div class="cq">Why are they possibly our only reliable literary evidence?</div>
+      <div class="nts reveal">Only surviving early <b>literary</b> sources from inside Sparta <span class="sep">·</span> 7th c. BC, before the outsiders’ mirage <span class="sep">·</span> classical writers all outsiders; later Laconian writers (Molpis, Sosibius) are Hellenistic</div></div>
+    <div class="row"><div class="cq">How were Tyrtaeus’ poems used?</div>
+      <div class="nts reveal">Recited on the march <span class="sep">·</span> sung one by one after dinner on campaign → commander judged, “a prize of meat” (Philochorus in Athenaeus, Cooley A2)</div></div>
+    <div class="row"><div class="cq">Limits?</div>
+      <div class="nts reveal">“writing poetry not history” (Cooley) <span class="sep">·</span> fragments only <span class="sep">·</span> lives uncertain <span class="sep">·</span> inscriptions are Spartan voices too</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Tyrtaeus" data-title="Source 13.4 — what makes a man worth remembering" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">2 · Tyrtaeus · We do — Source 13.4</p>
+  <h2>Tyrtaeus on what makes a man worth remembering</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="src">
+      <div class="k">Source 13.4 · Tyrtaeus</div>
+      <p class="quote sm l26-verse">I would neither mention nor have any regard for a man<br><span class="code" data-code="evidence" data-letter="E">For his prowess in running or wrestling,</span><br>Not even if he had the size and power of the Cyclopes,<br>And defeated Thrace’s North Wind in running;<br><span class="code" data-code="keyterm" data-letter="K">Not if he were more handsome in stature than Tithonos,<br>And richer than Midas and Kinyras;<br>Not even if he were more kingly than Pelops, son of Tantalos,<br>And had the soft-tongued voice of Adrastos;</span><br>Nor even if he was renowned for everything <span class="code" data-code="judgement" data-letter="J">except impetuous courage;<br>For a man is not good in war,<br>If he could not bear to see bloody slaughter<br>And lunge at his enemies close at hand.</span></p>
+      <p class="prov">Tyrtaeus, fragment 12, lines 1–12, quoted in Stobaeus, <i>Anthology</i> 4.10 (an anthology probably of the early 5th century AD) · composed mid-7th century BC by a poet who was probably Spartan · trans. K. Hughes · Cooley A9</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">Which qualities does he refuse to praise? Which are leisure activities?</p>
+      <p class="body reveal">Running and wrestling — athletics — first of all; then size, speed, good looks, wealth, royal rank and a persuasive voice.</p>
+      <p class="qprompt reveal" data-paint="keyterm">Why list them only to reject them?</p>
+      <p class="body reveal">Each one is a famous rival claim to honour, named with a figure from myth. Rejecting them all lifts courage above every one.</p>
+      <p class="qprompt reveal" data-paint="judgement">What does he value instead?</p>
+      <p class="body reveal">“impetuous courage”: facing the slaughter and fighting the enemy “close at hand”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Tyrtaeus" data-title="What a refusal reveals" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">2 · Tyrtaeus · I do — reading a poem as evidence for cultural life</p>
+  <h2>What a refusal reveals</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="stack">
+      <div class="card accent"><div class="k">The think-aloud</div><p class="body">Nobody argues against something no one values. If Tyrtaeus had to rank courage above running, wrestling, looks and wealth, his listeners probably prized them all.</p></div>
+      <div class="card quiet reveal"><div class="k">Other evidence agrees</div>
+        <ul class="body">
+          <li>Wrestling: Hipposthenes and his son won eleven Olympic victories at wrestling between them, from 632 BC (Eusebius and Pausanias, late sources, Cooley C44, C47).</li>
+          <li>Running: “According to Eusebius’ list, Messenia and Sparta dominated the early stade races” (Cooley C39, a late chronicle).</li>
+        </ul></div>
+    </div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th></th><th>Ask</th><th>Model answer</th></tr>
+      <tr><td><b>P</b></td><td>Why list athletic victory, beauty and wealth only to reject them?</td><td class="reveal">To persuade: courage must outrank every other claim to fame. The poem is an argument, not a description.</td></tr>
+      <tr><td><b>R</b></td><td>Does the poem describe Spartan values, or argue for changing them?</td><td class="reveal">It argues for an order of values — which suggests that athletic fame, looks and wealth already counted for a great deal.</td></tr>
+      <tr><td><b>L</b></td><td>Did the poem’s meaning change for later audiences?</td><td class="reveal">Yes: Spartans later sang Tyrtaeus on campaign (A2); an Athenian orator quoted another of his poems (fr. 10) against a political opponent (A7); Stobaeus filed fr. 12 “on war” in an anthology to educate his son.</td></tr>
+    </table></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> The poem is evidence for a culture that loved athletic fame — which Tyrtaeus wanted to put second to courage. His reward for courage is fame of another kind: “Never does his good fame perish nor his name” (line 31; Lesson 11).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Tyrtaeus" data-title="Honour on the benches">
+<div class="wrap l26-dense">
+  <p class="eyebrow">2 · Tyrtaeus · We do — two writers, one idea <span class="optional">If time</span></p>
+  <h2>Honour in everyday life: the benches and the ball games</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Tyrtaeus, the same poem, on the brave man who survives</div>
+      <p class="quote sm l26-verse">Everyone honours him, young and old alike:<br>He goes down to Hades only after many delights;<br>As he grows old he is pre-eminent among his citizens, and no one<br>Wants to cheat him of his respect or his rights,<br>But both the young and his peers and the elders,<br><span class="code" data-code="evidence" data-letter="E">All alike give up their place for him on the benches.</span></p>
+      <p class="prov">Tyrtaeus, fragment 12, lines 37–42 · mid-7th century BC · trans. K. Hughes · Cooley A9</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · Xenophon, on the coward</div>
+      <p class="quote sm">[4] … But in Lakedaimon, everyone would be ashamed to share a meal with a coward in the same mess, or to wrestle with him at the gymnasium. [5] Often when sides are being picked for ball games, it is the coward who gets left out; in the choral competitions, he is pushed off to the most ignominious position in the line; in the street he must stand aside for others; <span class="code" data-code="evidence" data-letter="E">when seated he must stand up even for his juniors</span>; …</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 9.4–5 · probably late 390s or 380s BC · an Athenian who knew Sparta well · trans. B. Wilson · Cooley D96</p>
+    </div>
+  </div>
+  <p class="qprompt reveal" data-paint="evidence">Where did Spartans make a man’s courage — or cowardice — visible?</p>
+  <div class="cols c2">
+    <div class="note reveal" data-code="analysis"><p class="body">In ordinary social life and leisure: seats on the benches, the mess, the gymnasium, ball games, the choruses, the street. Leisure was where honour was shown, won and lost.</p></div>
+    <div class="note reveal" data-code="counter"><p class="body">Both writers present an ideal: a poet urging men to fight, and an admirer whose account Cooley says “probably depicts a somewhat idealised Sparta”. Whether every coward was treated like this, we cannot tell.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Tyrtaeus" data-title="Notes 2 — Tyrtaeus" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Tyrtaeus as evidence for cultural life</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L26 · Tyrtaeus, Alcman and leisure</b></span><span>2 · Tyrtaeus</span></div>
+    <div class="row"><div class="cq">Which activities does Tyrtaeus refuse to praise, and what does he value instead?</div>
+      <div class="nts reveal">Refuses: <b>running, wrestling</b>, size, speed, <b>looks</b>, <b>wealth</b>, royal rank, a persuasive voice <span class="sep">·</span> values: “impetuous courage” in close fighting (fr. 12.1–12, Cooley A9)</div></div>
+    <div class="row"><div class="cq">What does the refusal suggest?</div>
+      <div class="nts reveal">Listeners prob. <b>prized</b> athletic fame, looks, wealth → T. argues courage must come first <span class="sep">·</span> Spartan wrestlers and runners in the Olympic lists (late sources)</div></div>
+    <div class="row"><div class="cq">The survivor’s reward?</div>
+      <div class="nts reveal">Honour from “young and old alike”; others “give up their place for him on the benches” (lines 37–42) <span class="sep">·</span> Xenophon: coward left out of ball games, worst place in the chorus (D96)</div></div>
+    <div class="row"><div class="cq">Reliable for what?</div>
+      <div class="nts reveal">Spartan <b>ideals</b>, from inside, 7th c. BC <span class="sep">·</span> persuasion, not a record <span class="sep">·</span> meaning reused by later audiences (campaign songs, an Athenian speech, an anthology)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman" data-title="Source 13.5 — a dance for the Muse and a prayer for marriage" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">3 · Alcman · We do — Source 13.5 · pairs</p>
+  <h2>Alcman: a dance for the Muse and a prayer for marriage</h2>
+  <div class="split" style="--cols:1.05fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source 13.5 · Extract A · Alcman</div>
+        <p class="quote sm l26-verse">Come, Muse, Kalliope, daughter of Zeus,<br>Begin the lovely words; set desire on the song,<br><span class="code" data-code="evidence" data-letter="E">And make the dance graceful.</span></p>
+        <p class="prov">Alcman, fragment 7, quoted in Hephaestion, <i>Handbook on Metres</i> 7.4 · late 7th century BC · trans. K. Hughes · Cooley A18</p>
+      </div>
+      <div class="src">
+        <div class="k">Source 13.5 · Extract B · Alcman</div>
+        <p class="quote sm l26-verse">… I went up from Trygeai<br>To the lovely precinct of the White Goddesses<br><span class="code" data-code="keyterm" data-letter="K">With two sweet pomegranates.</span><br>The girls, when they had prayed<br><span class="code" data-code="keyterm" data-letter="K">To the fair-flowing river to ensure<br>Lovely marriage</span>, and to experience<br>What is dearest to men and women,<br>A lawful marriage-bed.</p>
+        <p class="prov">Alcman, fragment 4A (Oxyrhynchus papyri 2443 and 3213, from Egypt) · late 7th century BC · trans. K. Hughes · Cooley A17</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Origin: one extract survives in a later handbook on metres, the other on papyrus. What does that suggest?</p>
+      <p class="body reveal">Only scraps survive, by chance: a later handbook on metres quoted three lines as an example. Most of Alcman’s “six books” are lost.</p>
+      <p class="qprompt reveal" data-paint="evidence">Purpose: who heard songs like these?</p>
+      <p class="body reveal">Probably festival crowds: a chorus sang and danced in public at religious ceremonies, calling on the Muse for song and dance together.</p>
+      <p class="qprompt reveal" data-paint="keyterm">Value: what did the girls hope for, and how did they seek it?</p>
+      <p class="body reveal">“Lovely marriage”: they prayed to a river, and the singer brought offerings to a sacred precinct.</p>
+      <p class="qprompt reveal">Reliability: who were the “White Goddesses”?</p>
+      <p class="body reveal">We do not know, and Cooley adds no note. Say what the words show; admit what they cannot.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman" data-title="Songs, horses and festivals">
+<div class="wrap l26-dense">
+  <p class="eyebrow">3 · Alcman · I do — more lines from Alcman <span class="optional">If time</span></p>
+  <h2>Songs for the gods — and a racehorse</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Alcman, the Maiden-song (fr. 1), on the chorus-leader</div>
+        <p class="quote sm l26-verse"><span class="code" data-code="evidence" data-letter="E">A strong prize-winner with thundering hooves</span><br>That one dreams about from the shade of a cave.<br>Why, don’t you see? The racehorse is<br>Venetian; …<br>And the next in beauty after Agido<br>Will be a Scythian horse up against an Ibenian;</p>
+        <p class="prov">Alcman, fragment 1, lines 48–51 and 58–59 (Louvre Papyrus E3320) · trans. K. Hughes · Cooley A14</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · two short fragments of Alcman</div>
+        <p class="quote sm l26-verse">Kastor – skilled horsemen, tamers of<br>Swift horses – and glorious Polydeukes.</p>
+        <p class="quote sm">May our chorus please Zeus’ house and you too, Lord (Apollo).</p>
+        <p class="prov">Alcman, fragment 2, from a papyrus (Cooley A15), and fragment 45 (Cooley A19) · late 7th century BC · trans. K. Hughes</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">What does the racehorse comparison suggest about the audience?</p>
+      <p class="body reveal">The image works for listeners who admired fine, prize-winning horses — perhaps an early sign of the horse-racing Sparta later excelled at (section 4).</p>
+      <div class="note reveal" data-code="analysis"><p class="body">The songs honour the gods and Sparta’s own heroes, the Dioscuri. Cooley: praise for them “would be a natural subject for a choir at a Spartan religious festival”.</p></div>
+      <div class="note reveal" data-code="evidence"><p class="body">Cooley: the two longest fragments were for girls’ choruses, but “Other fragments suggest a considerable range to his poetry.”</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body">Cooley: “Music, poetry and dance were important aspects of Spartan cultural life, especially as part of festivals.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman" data-title="Two Spartan voices, side by side" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">3 · Alcman · I do — comparing the poets</p>
+  <h2>Two Spartan voices, side by side</h2>
+  <div class="tbl-scroll"><table class="tbl compact l26-cmp">
+    <tr><th></th><th>Tyrtaeus</th><th>Alcman</th></tr>
+    <tr class="reveal"><td>When</td><td>mid-7th century BC</td><td>late 7th century BC, “perhaps one generation later than Tyrtaios”</td></tr>
+    <tr class="reveal"><td>Spartan?</td><td>“probably Spartan”; the Suda: “Lakonian or Milesian”; an Athenian orator claimed him for Athens</td><td>“probably Spartan”; the Suda: “a Lakonian from Messoa”; Crates said Sardis</td></tr>
+    <tr class="reveal"><td>Form and dialect</td><td>elegy, recited to the pipes; Ionic, the dialect of Homer</td><td>lyric, sung to the lyre, often by a chorus; Doric, Sparta’s own</td></tr>
+    <tr class="reveal"><td>Performers and audience</td><td>men: soldiers after dinner on campaign and in the king’s tent; boys learnt marching songs (‘Songs-in-Arms’) by heart <span class="l26-c">Cooley A2, A7</span></td><td>choruses, especially of girls, at festivals <span class="l26-c">Cooley A14, A17, A18</span></td></tr>
+    <tr class="reveal"><td>Values</td><td>courage, standing firm, fame; honour for the brave</td><td>beauty, rivalry, piety, marriage, luxury</td></tr>
+    <tr class="reveal"><td>How it survives</td><td>quotations by later writers (e.g. Stobaeus, Plutarch, Strabo, Pausanias); a few papyri</td><td>papyri from Egypt; quotations (e.g. a handbook on metres)</td></tr>
+    <tr class="reveal"><td>Best evidence for</td><td>the ideals Spartans were taught to admire</td><td>festivals, choruses and the training and display of girls</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>Together</b> they show a Sparta of song, dance, ritual and display as well as war. Cooley sets “the war poems of Tyrtaios which seem such a perfect fit for the Spartan stereotype” beside Alcman, who “invented the genre of choral songs for performances of girls or young women”.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman" data-title="Hinge: which is not a difference?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Which of these is <u>not</u> a difference between Tyrtaeus and Alcman?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>The dialect they composed in</span></li>
+    <li><span class="n">2</span><span>Who performed their songs</span></li>
+    <li id="l26-hq3"><span class="n">3</span><span>Which of the two was certainly a Spartan</span></li>
+    <li><span class="n">4</span><span>The kind of poetry: elegy or lyric</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l26-hq3" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body">Neither was <i>certainly</i> Spartan: Cooley calls both “probably Spartan”. The other three are real differences.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman" data-title="Notes 3 — Alcman" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Alcman, and the two poets compared</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L26 · Tyrtaeus, Alcman and leisure</b></span><span>3 · Alcman</span></div>
+    <div class="row"><div class="cq">What do the two extracts show?</div>
+      <div class="nts reveal">fr. 7 (A18): the Muse asked to “make the dance graceful” → song + dance together <span class="sep">·</span> fr. 4A (A17): offerings (two pomegranates), girls pray to a river for “Lovely marriage” → religion + marriage</div></div>
+    <div class="row"><div class="cq">Give two differences between Tyrtaeus and Alcman.</div>
+      <div class="nts reveal">Elegy (Ionic) v. lyric (<b>Doric</b>) <span class="sep">·</span> men on campaign v. girls’ choruses at festivals <span class="sep">·</span> courage and fame v. beauty, piety, marriage, luxury</div></div>
+    <div class="row"><div class="cq">Same?</div>
+      <div class="nts reveal">Both 7th c. BC, both “<b>probably</b> Spartan” <span class="sep">·</span> both performed in public <span class="sep">·</span> both “writing poetry not history”</div></div>
+    <div class="row"><div class="cq">Limits?</div>
+      <div class="nts reveal">Scraps only (a handbook on metres; papyri) <span class="sep">·</span> “White Goddesses” unknown <span class="sep">·</span> no war, no helots → useful for culture, not for war</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Athletes and horses" data-title="Citizens with time to spare" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">4 · Athletes and horses · I do — a life of leisure</p>
+  <h2>Citizens with time to spare</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">The editor of our sourcebook, on the Spartiates</div>
+        <p class="quote sm">The Spartan way of life offered all crucial aspects of a Greek élite lifestyle: landed property, leisure (no need to work for a living); a life dedicated to leisure pursuits, namely socializing, politics, exercise and hunting; and active contribution to the city’s defence.</p>
+        <p class="prov">M. G. L. Cooley, <i>Sparta</i>, introduction to wealth and property (D52–D59)</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><p class="body">Cooley’s verdict: “we should regard the Spartan lifestyle as comfortable prosperity masked by a display of austerity.”</p></div>
+    </div>
+    <div class="stack">
+      <div class="card sm reveal"><div class="k">Exercise in public</div><p class="body">Thucydides: “The Lakedaimonians were the first to strip naked, to take off their clothes in public and rub themselves with oil after exercising.” (1.6.5, Cooley C42)</p></div>
+      <div class="card sm reveal"><div class="k">Victories set in stone</div><p class="body">Hodkinson: in Spartan territory, “these sporting dedications are far more numerous than the small number of inscribed dedications with military associations” — such as jumping weights and a discus inscribed by athletes (C80–C82).</p></div>
+      <div class="card sm reveal"><div class="k">Local games</div><p class="body">Festivals across Laconia and Messenia held races on foot and on horseback. One rich man recorded every win he could — next slide.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Athletes and horses" data-title="Source 13.6 — the Damonon stele" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">4 · Athletes and horses · We do — Source 13.6</p>
+  <h2>The Damonon stele: a rich man’s victory list</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source 13.6 · the Damonon stele</div>
+        <p class="quote sm">[1] Damonon put this up for Athena, guardian of the city, having won the following competitions, which none of the current generation has done. …</p>
+        <p class="quote sm">[18] And at the Poseidon’s Games at Thouria, Damonon won eight times, holding the reins himself, in the kalpe, <span class="code" data-code="evidence" data-letter="E">with horses bred from his own mares and his own stallion</span> …</p>
+        <p class="quote sm">[66] <span class="code" data-code="counter" data-letter="C">When Echemenes was ephor</span>, Damonon won the following victories: at Athena’s Games, in the kalpe, holding the reins himself, and in the horse-race, together on the same day, <span class="code" data-code="keyterm" data-letter="K">and his son also won the stade race</span>.</p>
+        <p class="prov">Inscribed stele, 0.94 m high, with a relief of a four-horse chariot, set up on the Spartan acropolis · c. 400 BC (approximate; Cooley dates it “400 BC?”) · IG V 1, 213 · trans. in Cooley C83</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">Origin and purpose: Damonon paid for this. Who could compete — and why stress his own mares and stallion?</p>
+      <p class="body reveal">Only the rich: it shows off “the resources and considerable land-holding necessary for breeding, training and maintaining racing horses” (Cooley).</p>
+      <p class="qprompt reveal" data-paint="keyterm">Value: what kinds of contest and festival does it record?</p>
+      <p class="body reveal">Chariot, kalpe and horse races, and foot races won by Damonon as a boy and by his son, at games across Laconia and Messenia: “a flourishing local circuit of minor games”.</p>
+      <p class="qprompt reveal" data-paint="counter">Reliability: why is it hard to date?</p>
+      <p class="body reveal">Its ephors are not in Xenophon’s list for the Peloponnesian War years, so it is from before 431 or after 404 BC — Cooley cannot be certain which, though about 400 BC “would perfectly fit”.</p>
+      <p class="qprompt reveal">Limitations: does one rich family show how ordinary Spartiates spent their leisure?</p>
+      <p class="body reveal">No: it shows what the wealthy could do — and wanted seen.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Athletes and horses" data-title="Horses and chariots" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">4 · Athletes and horses · I do — Sparta’s best event</p>
+  <h2>Horses and chariots: wealth on show</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">The editor of our sourcebook</div>
+        <p class="quote sm">after early dominance in the stade race, Sparta’s best event, especially in the fifth century, is the one for which, in any age, great wealth is a prerequisite – horse-racing – or in an Olympic context, the four-horse chariot race, for which the owner, not the charioteer, was crowned.</p>
+        <p class="prov">M. G. L. Cooley, <i>Sparta</i>, introduction to the Olympic Games (C39–C60)</p>
+      </div>
+      <div class="card sm reveal"><div class="k">Spartans dominated</div><p class="body">Of 18 monuments known at Olympia for four-horse chariot victories between 560 and 364 BC, 11 were for Spartans (Cooley C54, after Hodkinson).</p></div>
+    </div>
+    <div class="stack">
+      <div class="src reveal">
+        <div class="k">Source · Cynisca’s monument at Olympia</div>
+        <p class="quote sm">I say that I am the only woman<br>Out of all Greece to win the crown.</p>
+        <p class="prov">Epigram on the base of Cynisca’s statue, 396 or 392 BC · IG 5.1.1564a · trans. in Cooley C55</p>
+      </div>
+      <div class="src reveal">
+        <div class="k">Source · Xenophon, on Cynisca’s victory</div>
+        <p class="quote sm">… but persuaded his sister Kyniska to breed chariot horses, and showed by her victory that such a stud is a mark not of manliness but of wealth.</p>
+        <p class="prov">Xenophon, <i>Agesilaos</i> 9.6 · Xenophon (c. 430–c. 350 BC), who fought under King Agesilaus · trans. in Cooley C57</p>
+      </div>
+      <p class="qprompt reveal">Why was chariot-racing a sign of wealth rather than military skill?</p>
+      <p class="body reveal">The owner was crowned, not the driver; breeding, training and statues cost a fortune — and a woman could win. Xenophon himself says so.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Athletes and horses" data-title="Notes 4 — Athletes and horses" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Athletes, horses and the Damonon stele</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L26 · Tyrtaeus, Alcman and leisure</b></span><span>4 · Athletes and horses</span></div>
+    <div class="row"><div class="cq">Why did Spartiates have leisure?</div>
+      <div class="nts reveal">No farming, crafts or trade → “a life dedicated to leisure pursuits, namely socializing, politics, exercise and hunting” (Cooley) <span class="sep">·</span> “comfortable prosperity masked by a display of austerity”</div></div>
+    <div class="row"><div class="cq">What does the Damonon stele reveal about local games?</div>
+      <div class="nts reveal">c. 400 BC? (C83): chariot, <b>kalpe</b>, horse-race + foot races (Damonon as a boy, his son) <span class="sep">·</span> “a flourishing local circuit of minor games” <span class="sep">·</span> own mares and stallion → <b>wealth, land</b> <span class="sep">·</span> one rich family</div></div>
+    <div class="row"><div class="cq">Why was chariot-racing a sign of wealth rather than military skill?</div>
+      <div class="nts reveal">Owner crowned, not driver <span class="sep">·</span> costly horses + statues <span class="sep">·</span> 11 of 18 Olympic chariot monuments Spartan (C54) <span class="sep">·</span> Cynisca won (396 or 392 BC) → Xenophon: “a mark not of manliness but of wealth” (C57)</div></div>
+    <div class="row"><div class="cq">Athletics?</div>
+      <div class="nts reveal">Exercised naked and oiled (Thucydides, C42) <span class="sep">·</span> sporting dedications far outnumber military ones (Hodkinson)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hunting, festivals and the messes" data-title="Hunting" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">5 · Hunting, festivals and the messes · We do — two sources on hunting</p>
+  <h2>Hunting: the most honourable activity?</h2>
+  <div class="split" style="--cols:1.25fr .75fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon, on men past their youth</div>
+        <p class="quote sm">But for such as these <span class="code" data-code="evidence" data-letter="E">Lykourgos established hunting as the most honourable activity</span>, unless prevented by official obligations. <span class="code" data-code="analysis" data-letter="A">His purpose was to ensure that they could still endure the demands of military service</span> just as well as the young men (hebontes).</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 4.7 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D79</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Molpis, on the messes</div>
+        <p class="quote sm">And the cooks always announce who has provided something, <span class="code" data-code="counter" data-letter="C">so that everyone might know his love of hunting and his eagerness on their behalf</span>.</p>
+        <p class="prov">Molpis, a Laconian writer “probably of the Hellenistic period”, quoted in Athenaeus, <i>Scholars at Dinner</i> 4.19 · trans. in Cooley E77</p>
+      </div>
+      <p class="qprompt reveal" data-paint="analysis">What two reasons for hunting do these give?</p>
+      <p class="body reveal">Fitness for war (Xenophon) — and honour: game shared at the mess, with the hunter named in front of everyone (Molpis).</p>
+    </div>
+    <div class="stack">
+      <div class="l26-fig"><figure class="figure contain"><img src="images/bradley-3-31-hunting-cup-l26.jpg" alt="Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may show a hunt from myth"><figcaption>Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may show a hunt from myth — <span class="cr">Bradley, Fig 3.31</span></figcaption></figure></div>
+      <div class="note reveal" data-code="counter"><p class="body">Cooley on Molpis and the other mess writers: “Since none of these accounts is from the classical period, we cannot be sure whether they describe practices continued from classical times or later changes”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hunting, festivals and the messes" data-title="Festivals and the messes" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow">5 · Hunting, festivals and the messes · We do — leisure in public, and leisure under control</p>
+  <h2>Festivals and the messes: pleasure — and control</h2>
+  <div class="split" style="--cols:1.75fr .6fr">
+    <div class="stack">
+      <div class="cols c2">
+        <div class="card accent"><div class="k">Festivals · Lesson 21</div>
+          <ul class="body">
+            <li>At the Hyakinthia, boys played the lyre, young men’s choruses sang, and “The whole city is at a pitch of excitement and pleasure at the spectacle” (Polycrates, date unknown, in Athenaeus, Cooley C69).</li>
+            <li>At the Gymnopaedia, choruses of boys and men danced, “singing songs by Thaletas and Alkman” (Sosibius, a later Laconian writer, in Athenaeus, Cooley C75): Alcman lived on in performance.</li>
+          </ul></div>
+        <div class="card accent"><div class="k">The messes · Lesson 12</div>
+          <ul class="body">
+            <li>Xenophon: Lycurgus “put a stop to the custom of compulsory drinking”; each man drank when he was thirsty (<i>Constitution</i> 5.4, Cooley D61).</li>
+            <li>The talk turned to “the great achievements of the state’s heroes” (5.6).</li>
+          </ul></div>
+      </div>
+      <p class="qprompt reveal">Which sounds like leisure for its own sake — and which like leisure kept in order?</p>
+      <div class="note reveal" data-code="analysis"><p class="body"><b>Festivals:</b> public celebration and worship, where poetry was performed. <b>The messes:</b> sociable but controlled. Cooley: they “formed an alternative to the symposion (‘drinking-together’) culture found elsewhere in Greece”.</p></div>
+    </div>
+    <div class="stack">
+      <div class="l26-fig"><figure class="figure contain"><img src="images/bradley-3-32-bronze-banqueter-l26.jpg" alt="Bronze reclining banqueter from the support of a bronze bowl, probably made in Laconia, c. 530–500 BC, thought to have been found at Dodona (BM 1954,1018.1; Cooley E71)"><figcaption>Bronze reclining banqueter from the support of a bronze bowl, probably made in Laconia, c. 530–500 BC, thought to have been found at Dodona (BM 1954,1018.1; Cooley E71) — <span class="cr">Bradley, Fig 3.32</span></figcaption></figure></div>
+      <div class="note reveal" data-code="counter"><p class="body">Cooley: it “need not, of course, show any individual diner, let alone a Spartiate one, since it could equally well have been made for external consumption.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hunting, festivals and the messes" data-title="Spartan leisure: the evidence tree (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Hunting, festivals and the messes · I do — a textbook diagram, checked against the evidence</p>
+  <h2>Spartan leisure: what the evidence supports</h2>
+  <figure class="diagram"><svg class="l26-tree" viewBox="0 0 1800 800" role="img" aria-label="Spartan leisure, as the evidence supports it: a rebuild of Hurley et al., Source 60. Horse-racing: Damonon’s stele, c. 400 BC, records wins in the kalpe and the horse-race (Cooley C83); Alcman’s chorus likens its leader to a prize-winning racehorse (A14). Chariot-racing: Evagoras (Herodotus, C50), Lichas in 420 BC (Thucydides, C53), Cynisca’s own epigram (C55), and 11 of 18 Olympic chariot monuments were Spartan (C54); Pausanias on the statues (C52) is a late source. Running and wrestling: Damonon’s foot races (C83); the Olympic stade lists (C39), a late source; Tyrtaeus will not praise wrestling (A9); Hipposthenes’ wrestling wins (C47 and C48), late sources. Jumping and discus: athletes’ jumping weights (C80, C81), which are not in Hurley’s diagram, and a bronze discus (C82); the javelin in Hurley’s diagram has no separate Spartan evidence and appears only as a pentathlon event, which Spartans won (C44, C49). Festivals and choruses: Xenophon says the men of Amyklai come home for the Hyakinthia and a king sang in the chorus (C70, C71); the Gymnopaedia (C73 to C77, with Pausanias, C73, a late source); Polycrates’ account of the Hyakinthia (C69), date unknown. The messes, relabelled from Hurley’s feasting and drinking: Xenophon says there was no compulsory drinking and the talk was of the heroes’ achievements (D61); the hunters’ extras (E77) come from a late source. Hunting: Xenophon calls it the most honourable activity for older men (D79); Agesilaus kept hounds and horses (C57); game for the mess (E77), late. Added: ball games, where Xenophon says the coward is left out (D96). Added: boxing and pankration, which Philostratus, in the 3rd century AD, says the Spartans gave up (C60), a late source only; Cooley knows of no Spartan wins in them at the great games.">
+<rect class="l26t-bg" x="2" y="2" width="1796" height="796" rx="14"/>
+<g class="l26t-root"><rect x="610" y="16" width="580" height="66" rx="12"/><text class="l26t-rt" x="900" y="60">Spartan leisure</text></g>
+<line class="l26t-ln" x1="900" y1="82" x2="900" y2="100"/>
+<line class="l26t-ln" x1="32" y1="100" x2="1188" y2="100"/>
+<line class="l26t-ln" x1="32" y1="100" x2="32" y2="642"/>
+<line class="l26t-ln" x1="610" y1="100" x2="610" y2="642"/>
+<line class="l26t-ln" x1="1188" y1="100" x2="1188" y2="642"/>
+<defs><marker id="l26t-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="l26t-ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="linked l26t-ok" id="l26t-1"><line class="l26t-ln" x1="32" y1="214" x2="58" y2="214" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="62" y="112" width="530" height="204" rx="12"/><text class="l26t-ttl" x="82" y="154">Horse-racing</text><rect class="l26t-badge" x="422" y="126" width="156" height="32" rx="16"/><text class="l26t-bt" x="500" y="149">contemporary</text><text class="l26t-ev" x="82" y="188">Damonon’s stele, c. 400 BC? (C83):</text><text class="l26t-ev" x="82" y="216">wins in the kalpe and the horse-race</text><text class="l26t-ev" x="82" y="244">Alcman’s chorus likens its leader to a</text><text class="l26t-ev" x="82" y="272">prize-winning racehorse (A14)</text></g>
+<g class="linked l26t-mix" id="l26t-2"><line class="l26t-ln" x1="32" y1="428" x2="58" y2="428" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="62" y="326" width="530" height="204" rx="12"/><text class="l26t-ttl" x="82" y="368">Chariot-racing</text><rect class="l26t-badge" x="455" y="340" width="123" height="32" rx="16"/><text class="l26t-bt" x="517" y="363">some late</text><text class="l26t-ev" x="82" y="402">Evagoras (Herodotus, C50); Lichas,</text><text class="l26t-ev" x="82" y="430">420 BC (Thucydides, C53); Cynisca’s</text><text class="l26t-ev" x="82" y="458">own epigram (C55); 11 of 18 Olympic</text><text class="l26t-ev" x="82" y="486">chariot monuments were Spartan (C54)</text><text class="l26t-ev late" x="82" y="514">Pausanias on the statues (C52) — late</text></g>
+<g class="linked l26t-mix" id="l26t-3"><line class="l26t-ln" x1="32" y1="642" x2="58" y2="642" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="62" y="540" width="530" height="204" rx="12"/><text class="l26t-ttl" x="82" y="582">Running and wrestling</text><rect class="l26t-badge" x="455" y="554" width="123" height="32" rx="16"/><text class="l26t-bt" x="517" y="577">some late</text><text class="l26t-ev" x="82" y="616">Running: Damonon’s foot races (C83);</text><text class="l26t-ev late" x="82" y="644">Olympic stade lists (C39) — late</text><text class="l26t-ev" x="82" y="672">Wrestling: Tyrtaeus won’t praise it (A9);</text><text class="l26t-ev late" x="82" y="700">Hipposthenes’ wins (C47–C48) — late</text></g>
+<g class="linked l26t-ok" id="l26t-4"><line class="l26t-ln" x1="610" y1="214" x2="636" y2="214" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="640" y="112" width="530" height="204" rx="12"/><text class="l26t-ttl" x="660" y="154">Jumping and discus</text><rect class="l26t-badge" x="1000" y="126" width="156" height="32" rx="16"/><text class="l26t-bt" x="1078" y="149">contemporary</text><text class="l26t-ev" x="660" y="188">Athletes’ jumping weights (C80, C81) —</text><text class="l26t-ev" x="660" y="216">not in Hurley’s diagram — and a discus (C82)</text><text class="l26t-ev" x="660" y="244">Javelin (Hurley): no separate Spartan</text><text class="l26t-ev" x="660" y="272">evidence — only as a pentathlon event,</text><text class="l26t-ev" x="660" y="300">which Spartans won (C44, C49)</text></g>
+<g class="linked l26t-mix" id="l26t-5"><line class="l26t-ln" x1="610" y1="428" x2="636" y2="428" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="640" y="326" width="530" height="204" rx="12"/><text class="l26t-ttl" x="660" y="368">Festivals and choruses</text><rect class="l26t-badge" x="1033" y="340" width="123" height="32" rx="16"/><text class="l26t-bt" x="1095" y="363">some late</text><text class="l26t-ev" x="660" y="402">Xenophon: the men of Amyklai come home</text><text class="l26t-ev" x="660" y="430">for the Hyakinthia; a king sings in the</text><text class="l26t-ev" x="660" y="458">chorus (C70, C71) · Gymnopaedia (C73–C77;</text><text class="l26t-ev late" x="660" y="486">Pausanias, C73 — late)</text><text class="l26t-ev" x="660" y="514">Polycrates’ account (C69): date unknown</text></g>
+<g class="linked l26t-fix" id="l26t-6"><line class="l26t-ln" x1="610" y1="642" x2="636" y2="642" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="640" y="540" width="530" height="204" rx="12"/><text class="l26t-ttl" x="660" y="582">The messes</text><rect class="l26t-badge" x="1022" y="554" width="134" height="32" rx="16"/><text class="l26t-bt" x="1089" y="577">relabelled</text><text class="l26t-ev" x="660" y="616">Hurley: “feasting and drinking”. But</text><text class="l26t-ev" x="660" y="644">Xenophon: no compulsory drinking; talk</text><text class="l26t-ev" x="660" y="672">of the heroes’ achievements (D61)</text><text class="l26t-ev late" x="660" y="700">Hunters’ ‘extras’ (E77) — late</text></g>
+<g class="linked l26t-mix" id="l26t-7"><line class="l26t-ln" x1="1188" y1="214" x2="1214" y2="214" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="1218" y="112" width="530" height="204" rx="12"/><text class="l26t-ttl" x="1238" y="154">Hunting</text><rect class="l26t-badge" x="1611" y="126" width="123" height="32" rx="16"/><text class="l26t-bt" x="1673" y="149">some late</text><text class="l26t-ev" x="1238" y="188">Xenophon: for older men “the most</text><text class="l26t-ev" x="1238" y="216">honourable activity” (D79); Agesilaus</text><text class="l26t-ev" x="1238" y="244">keeps “hounds and horses” (C57)</text><text class="l26t-ev late" x="1238" y="272">Game for the mess (E77) — late</text></g>
+<g class="linked l26t-add" id="l26t-8"><line class="l26t-ln" x1="1188" y1="428" x2="1214" y2="428" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="1218" y="326" width="530" height="204" rx="12"/><text class="l26t-ttl" x="1238" y="368">Ball games</text><rect class="l26t-badge" x="1656" y="340" width="78" height="32" rx="16"/><text class="l26t-bt" x="1695" y="363">added</text><text class="l26t-ev note" x="1238" y="402">Not in Hurley’s diagram</text><text class="l26t-ev" x="1238" y="430">Xenophon: when sides are picked for</text><text class="l26t-ev" x="1238" y="458">ball games, the coward is left out (D96)</text></g>
+<g class="linked l26t-late" id="l26t-9"><line class="l26t-ln" x1="1188" y1="642" x2="1214" y2="642" marker-end="url(#l26t-a)"/><rect class="l26t-box" x="1218" y="540" width="530" height="204" rx="12"/><text class="l26t-ttl" x="1238" y="582">Boxing and pankration?</text><rect class="l26t-badge" x="1611" y="554" width="123" height="32" rx="16"/><text class="l26t-bt" x="1673" y="577">late only</text><text class="l26t-ev note" x="1238" y="616">Not in Hurley’s diagram</text><text class="l26t-ev" x="1238" y="644">Philostratus (3rd century AD): Spartans</text><text class="l26t-ev late" x="1238" y="672">gave them up (C60) — late</text><text class="l26t-ev" x="1238" y="700">Cooley: no known wins at the great games</text></g>
+<g class="l26t-key"><rect class="l26t-sw ok" x="40" y="756" width="26" height="18" rx="4"/><text x="76" y="771">evidence from the period itself</text><rect class="l26t-sw late" x="430" y="756" width="26" height="18" rx="4"/><text x="466" y="771">rests on a late source only</text><text class="l26t-late-key" x="790" y="771">— late = written long after 371 BC</text><text class="l26t-note" x="1760" y="771">Codes = Cooley, Sparta (2023)</text></g>
+</svg>
+    <figcaption>Drawn for this lesson from Hurley et al., <i>Antiquity 2</i>, Source 60, with the evidence for each branch from Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l26t-1" hidden></i>
+  <i class="reveal" data-also="#l26t-2" hidden></i>
+  <i class="reveal" data-also="#l26t-3" hidden></i>
+  <i class="reveal" data-also="#l26t-4" hidden></i>
+  <i class="reveal" data-also="#l26t-5" hidden></i>
+  <i class="reveal" data-also="#l26t-6" hidden></i>
+  <i class="reveal" data-also="#l26t-7" hidden></i>
+  <i class="reveal" data-also="#l26t-8" hidden></i>
+  <i class="reveal" data-also="#l26t-9" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hunting, festivals and the messes" data-title="Leisure or training for war?">
+<div class="wrap l26-dense">
+  <p class="eyebrow">5 · Hunting, festivals and the messes · Check for understanding · gesture vote, then the evidence</p>
+  <h2 class="nq">“Spartan leisure was training for war.” Agree?</h2>
+  <div class="card tinted"><div class="k">Vote first</div><p class="body">Thumbs up = agree · sideways = partly · thumbs down = disagree. Be ready to name one source.</p></div>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">Evidence that it was</div>
+      <ul class="body">
+        <li>Xenophon: hunting kept older men able to “endure the demands of military service” (D79).</li>
+        <li>The kalpe: a skill “very relevant to Greek cavalry fighting” (Cooley, following Christesen, C83).</li>
+        <li>Cooley: “their preferred leisure activities (exercise, hunting) could be considered as further preparation for war.”</li>
+      </ul></div>
+    <div class="card quiet reveal"><div class="k">Evidence that it was not only that</div>
+      <ul class="body">
+        <li>Chariot-racing trained no hoplite: “a mark not of manliness but of wealth” (Xenophon, C57).</li>
+        <li>Hodkinson: sporting dedications “far more numerous” than military ones.</li>
+        <li>Festivals: a city “at a pitch of excitement and pleasure” (C69); Alcman’s choruses sang of beauty and marriage.</li>
+      </ul></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>A balanced judgement:</b> some leisure prepared men for war; much of it was enjoyment, worship and competition for status.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hunting, festivals and the messes" data-title="Notes 5 — Hunting, festivals and the messes" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Hunting, festivals and the messes</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L26 · Tyrtaeus, Alcman and leisure</b></span><span>5 · Hunting, festivals, messes</span></div>
+    <div class="row"><div class="cq">Hunting?</div>
+      <div class="nts reveal">Xenophon: for older men “the most honourable activity” → fit for war (D79) <span class="sep">·</span> game for the mess, hunter named (Molpis, Hellenistic: late, E77)</div></div>
+    <div class="row"><div class="cq">Festivals and messes?</div>
+      <div class="nts reveal">Hyakinthia: lyres, choruses, horses, a banquet; city “at a pitch of excitement and pleasure” (Polycrates, date unknown, C69) <span class="sep">·</span> messes: no compulsory drinking, talk of heroes (Xenophon, D61)</div></div>
+    <div class="row"><div class="cq">Why must the bronze banqueter be used with caution?</div>
+      <div class="nts reveal">Prob. made in Laconia, c. 530–500 BC, but thought to have been found at Dodona <span class="sep">·</span> Cooley: need not show “a Spartiate one” — perhaps made for export</div></div>
+    <div class="row"><div class="cq">One piece of evidence that leisure prepared Spartans for war, and one that it did not</div>
+      <div class="nts reveal"><b>For</b>: hunting to stay fit (D79); kalpe and cavalry (C83) <span class="sep">·</span> <b>Against</b>: chariot-racing = wealth (C57); sporting dedications outnumber military (Hodkinson)</div></div>
+    <div class="row"><div class="cq">The textbook tree?</div>
+      <div class="nts reveal">Javelin: no separate Spartan evidence (only within the pentathlon) <span class="sep">·</span> “feasting and drinking” → the messes <span class="sep">·</span> add ball games (D96); boxing and pankration given up (late source, C60)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hunting, festivals and the messes" data-title="Summary" data-kind="notes">
+<div class="wrap l26-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What do Tyrtaeus and Alcman reveal about Spartan values?</li>
+          <li>How did Spartiates spend their leisure, and what evidence shows it?</li>
+          <li>Was leisure at Sparta training for war?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">Tyrtaeus and Alcman, probably Spartan poets of the 7th century BC, show a culture that probably prized athletic fame, beauty and wealth: Tyrtaeus urged men to put courage first, while Alcman’s songs for girls’ choruses joined music, dance, religion and marriage. Free from farming and trade, Spartiates spent their leisure on exercise, horse- and chariot-racing, hunting, festivals and the messes, as Damonon’s victory list, the Olympic monuments and Xenophon show. Some of it, such as hunting, kept men fit for war, but much was celebration and competition for status — which the image of a purely military Sparta leaves out.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Two Spartan voices: dates, forms, dialects, limits</label></li>
+        <li><label><input type="checkbox"> 2 · Tyrtaeus: what he refuses to praise, and why</label></li>
+        <li><label><input type="checkbox"> 3 · Alcman: the Muse, the prayer, the comparison</label></li>
+        <li><label><input type="checkbox"> 4 · The Damonon stele, horses and chariots</label></li>
+        <li><label><input type="checkbox"> 5 · Hunting, festivals, the messes — and the tree</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (b) with a source" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>An 8-mark question with a source: HSC 2020</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 8 marks ≈ 14 minutes, about 250–350 words.</p></div>
+    <div class="card"><div class="k">“With reference to Source L”</div><p class="body">The source is printed on the paper. The top band “Makes detailed reference to evidence from the source provided”.</p></div>
+    <div class="card accent"><div class="k">“Greek writers”</div><p class="body">Tyrtaeus and Alcman count too: Sparta’s own poets, both probably Spartan.</p></div>
+  </div>
+  <p class="lead">We take the question and Source L apart together, you write for 14 minutes, then mark your own against the criteria and an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 · Section II · Question 11 (b) · 8 marks</p>
+  <p class="qtext"><span class="code" data-code="evidence" data-letter="E">With reference to Source L</span>, <span class="code" data-code="directive" data-letter="D">what do</span> <span class="code" data-code="keyterm" data-letter="K">Greek writers</span> <span class="code" data-code="directive" data-letter="D">reveal</span> about <span class="code" data-code="keyterm" data-letter="K">Spartan cultural life</span> <span class="code" data-code="scope" data-letter="S">in this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">We do — read Source L, take the question apart, then write it yourself.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — Source L" data-kind="hsc">
+<div class="wrap l26-dense">
+  <p class="eyebrow">HSC 2020 Q11(b) · Source L, beside Cooley’s translation of how the passage ends and continues</p>
+  <h2>Source L is Pausanias — a writer of the Roman period</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source L, as printed on the 2020 paper</div>
+      <p class="quote sm">And there is a place called Platanistas . . . where it is customary for the youths to fight, [and it] is surrounded by a moat . . . you enter it by bridges. On each of the two bridges stand images; on one side an image of Heracles, on the other a likeness of Lycurgus. Among the laws Lycurgus laid down for the constitution are those regulating the fighting of the youths.</p>
+      <p class="prov">Source L : Extract from Pausanias 3.14.8 · trans. W. H. S. Jones and H. A. Ormerod (Loeb Classical Library, 1926), as printed on the 2020 HSC paper · © NESA</p>
+    </div>
+    <div class="src">
+      <div class="k">Cooley’s translation of the end of this passage, and what follows</div>
+      <p class="quote sm">Lykourgos set in place laws regarding the constitution but also for the fighting of the ephebes … on the following day, a little before midday, they enter the aforementioned place by bridges. Lots drawn during the night predetermine the route by which each side enters. They fight with fists, kick with their feet, bite, and gouge opponents’ eyes. I have just described the way they fight man to man: but they also charge at each other violently in a group and push each other into the water.</p>
+      <p class="prov">Pausanias, <i>Description of Greece</i> 3.14.9–10 · written in the 2nd century AD · trans. in Cooley D81</p>
+    </div>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="counter"><p class="body"><b>When?</b> Pausanias wrote in the 2nd century AD. Cooley: “little of the information provided can be firmly linked to the classical period, offering instead a detailed insight into perceptions of Sparta in the Roman period.”</p></div>
+    <div class="note reveal" data-code="analysis"><p class="body"><b>What it reveals:</b> contests of the young as an established public custom, credited to Lycurgus and set between images of Heracles and the lawgiver. Cooley warns that Spartan education “underwent extensive ‘reconstruction’ work in the Hellenistic and Roman periods”.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — take it apart" data-kind="hsc">
+<div class="wrap l26-dense">
+  <p class="eyebrow">HSC 2020 Q11(b) · We do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">What do … reveal</div><p class="body">Not a NESA key word, so read the criteria: the top band “Presents a well-developed explanation”. Say what each writer shows <i>and</i> how far to trust him.</p></div>
+    <div class="note reveal" data-code="evidence"><div class="k">With reference to Source L</div><p class="body">Use it in detail — the Platanistas, the youths’ fights, Heracles and Lycurgus — and weigh it: a 2nd-century AD writer.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Greek writers · Spartan cultural life</div><p class="body">Name writers of different periods. “Culture” broadly — poetry, music, festivals, contests, leisure, marriage, religion — but cultural life: the army only as values and customs (as NESA’s list does), not campaigns or government.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">Down to 371 BC. Later writers (Pausanias, Plutarch) can be used, but say when they wrote.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">8 marks</div><p class="body">About 14 minutes · Source L plus three or four other named writers · each linked to something it reveals · one judgement on reliability · no introduction that lists what you will do.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — criteria and feedback" data-kind="hsc">
+<div class="wrap l26-dense">
+  <p class="eyebrow">HSC 2020 Q11(b) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria</th></tr>
+      <tr><td class="m">7–8</td><td>Presents a well-developed explanation, demonstrating accurate and detailed knowledge and understanding relevant to the question · Makes detailed reference to evidence from the source provided · Communicates ideas and information coherently, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5–6</td><td>Presents a sound explanation including accurate knowledge and understanding relevant to the question · Uses evidence from the source provided · Communicates ideas and information clearly, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">3–4</td><td>Presents limited explanation relevant to the question · May refer to evidence from the source provided · Communicates ideas using some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1–2</td><td>Makes general statement/s relevant to the question · May refer to the source provided</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">refer in detail to specific features of cultural life such as, art, architecture, writing, leisure, marriage, as well as other activities relevant to culture such as religion, rather than society more generally (b)</span><span class="q">draw out different revelations about culture from a range of relevant Greek writers of different periods (b)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">making a clear link between the Greek writers and their evidence about cultural life (b)</span><span class="q">integrating sources as evidence rather than relying solely on unsupported knowledge and understanding (b, c)</span></p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2020 HSC Ancient History Marking Guidelines (Section II, part (b)) and the 2020 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — what the markers listed" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(b) · NESA’s “answers could include”, checked against Cooley</p>
+  <h2>What the marking guidelines listed — and what Cooley says</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l26-pt">• <span class="code" data-code="keyterm" id="n20-1">Interpret the term ‘culture’ broadly to include practices, beliefs, customs etc.</span><span class="mk">1</span></span>
+      <span class="l26-pt">• <span class="code" data-code="counter" id="n20-2">Greek writers reveal the features of the Spartan educational system (agoge), military training of the youths (Pausanius – see Source L – Xenophon, Plutarch).</span><span class="mk">2</span></span>
+      <span class="l26-pt">• <span class="code" data-code="counter" id="n20-3">Marriage customs, such as bride-kidnapping (Plutarch) and wife-sharing for reproduction (Xenophon).</span><span class="mk">3</span></span>
+      <span class="l26-pt">• <span class="code" data-code="counter" id="n20-4">Value of equality amongst Spartiates (Herodotus, Plutarch).</span><span class="mk">4</span></span>
+      <span class="l26-pt">• <span class="code" data-code="evidence" id="n20-5">Importance, role and values of the Spartan army (Tyrtaeus, Herodotus, Thucydides, Xenophon).</span><span class="mk">5</span></span>
+      <span class="l26-pt">• <span class="code" data-code="analysis" id="n20-6">Relative freedom and social participation of women (Aristotle, Aristophanes, Plato, Plutarch).</span><span class="mk">6</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2020 HSC Ancient History Marking Guidelines, Section II part (b) · all six points, with NESA’s spelling “Pausanius” · NESA published no sample answer for this part</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Cooley says</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n20-1"><span class="mk">1</span><b>Broad — but cultural</b><span class="tx">The feedback still wanted cultural life “rather than society more generally”. Cooley: the Greek <i>politeia</i> “stands for all aspects of life typical for a particular polis”.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-2"><span class="mk">2</span><b>Date the writers</b><span class="tx">Pausanias (2nd century AD) and Plutarch (c. AD 100) are late. Cooley: the word <i>agōgē</i> “is never applied by any classical-period source specifically to Sparta’s public education”; Xenophon is the classical witness.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-3"><span class="mk">3</span><b>Plutarch is late here too</b><span class="tx">The “kidnapping” custom is described only by Plutarch (Herodotus has one seizure of a bride, E20); Cooley warns that “much of his material also dates from after Sparta’s decline”. Xenophon is the earlier witness (Lesson 27).</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-4"><span class="mk">4</span><b>An ideal, not a fact</b><span class="tx">Cooley: “Equality among Spartiates was, however, never more than an ideal.” Damonon’s horses and the Olympic chariot monuments show the gaps.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#n20-5"><span class="mk">5</span><b>Supported — tie it to culture</b><span class="tx">Tyrtaeus fr. 12 (A9) is the classic evidence. Make it cultural: his songs were sung after dinner on campaign, with a prize (A2).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#n20-6"><span class="mk">6</span><b>Supported, with care</b><span class="tx">Cooley: it “seems likely” Spartan women were “less shy” in public. But Aristophanes wrote comedy “to entertain an Athenian audience”, and Aristotle was a critic.</span></div>
+      <div class="verdict reveal"><b>NESA’s list.</b> Acceptable content, not a sample answer — and it never names Alcman.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> the feedback names “writing” and “leisure”: Alcman’s choruses, Tyrtaeus’ songs, the Damonon stele and the Olympic victors are all cultural evidence.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — a plan" data-kind="hsc">
+<div class="wrap l26-dense">
+  <p class="eyebrow">HSC 2020 Q11(b) · We do — a plan: writer, what it reveals, how far to trust it</p>
+  <h2>Four writers, three periods, one line of explanation</h2>
+  <div class="tbl-scroll"><table class="tbl compact l26-plan">
+    <tr><th>Writer</th><th>What it reveals about cultural life</th><th>How far to trust it</th></tr>
+    <tr class="reveal"><td>Pausanias (Source L)<span class="l26-when">2nd century AD</span></td><td>contests of the young at the Platanistas, credited to Lycurgus, between images of Heracles and the lawgiver</td><td>detailed, but Roman-period: “perceptions of Sparta in the Roman period”</td></tr>
+    <tr class="reveal"><td>Xenophon<span class="l26-when">probably late 390s or 380s BC</span></td><td>rivalry as Lycurgus’ method: the competition that makes “the best choruses” and “the most spectacular athletic contests” turned to courage among the young men; hunting; the messes</td><td>knew Sparta well, but “a somewhat idealised Sparta” (Cooley)</td></tr>
+    <tr class="reveal"><td>Tyrtaeus<span class="l26-when">mid-7th century BC</span></td><td>athletic fame prized, but courage put first; songs sung for a prize after dinner</td><td>probably from inside Sparta, early, but poetry meant to persuade</td></tr>
+    <tr class="reveal"><td>Alcman<span class="l26-when">late 7th century BC</span></td><td>girls’ choruses at festivals: song, dance, offerings, prayers for marriage</td><td>probably from inside Sparta, early, but fragments</td></tr>
+    <tr class="reveal"><td colspan="3"><b>Judgement:</b> a culture of public contest and performance serving the city’s ideals — and the later the writer, the more it appears as Lycurgus’ design.</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(b) · You do · 14 minutes · press K for the timer</p>
+  <h2>With reference to Source L, what do Greek writers reveal about Spartan cultural life in this period? <span class="small">(8 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence — no list of what you will do</li>
+        <li>Source L used in detail, and dated</li>
+        <li>three or four other named writers, from different periods</li>
+        <li>cultural life: poetry, festivals, contests, leisure, marriage</li>
+        <li>one sentence weighing how far to trust the writers</li>
+        <li>about 250–350 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Greek writers reveal that Spartan cultural life centred on public contests and performances, but …”</p>
+      <p class="body">Foundation: use the plan table and the comparison table. Extension: add a second judgement on the mirage.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — model, paragraph 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(b) · annotated model · paragraph 1 of 2</p>
+  <h2>Answer first, then Source L in detail</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m20-1">Greek writers reveal that Spartan cultural life centred on public contests and performances — games, choral songs and festivals — which served the city’s ideals, although the writers who describe it most fully lived centuries later.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m20-2">Source L, from Pausanias, describes the Platanistas, a moated ground entered by bridges where ‘it is customary for the youths to fight’, with an image of Heracles on one bridge and of Lycurgus on the other.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m20-3">Setting the contest between a hero of strength and the lawgiver presents it as an ancestral, almost sacred custom, and Pausanias says the fights followed ‘the laws Lycurgus laid down for the constitution’.</span><span class="mk">3</span>
+      <span class="code" data-code="counter" id="m20-4">Yet Pausanias wrote in the 2nd century AD, and Cooley warns that little of his information ‘can be firmly linked to the classical period’: the source shows how Roman-era Spartans presented their customs.</span><span class="mk">4</span>
+      <span class="code" data-code="evidence" id="m20-5">Xenophon, who knew 4th-century Sparta, says Lycurgus, seeing that rivalry produces ‘the best choruses to listen to and the most spectacular athletic contests to watch’, set the young men competing in courage, and calls hunting ‘the most honourable activity’ for older men.</span><span class="mk">5</span>
+      <p class="meta">Model written for this lesson · paragraph 1 of 2</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m20-1"><span class="mk">1</span><b>Answer first</b><span class="tx">A judgement about culture, with its limit built in. No list of what the answer will do.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m20-2"><span class="mk">2</span><b>Detailed reference to Source L</b><span class="tx">The place, the youths’ fights, the two images: the 7–8 criterion’s “detailed reference”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m20-3"><span class="mk">3</span><b>What it reveals</b><span class="tx">Not a paraphrase: the images turn a fight into an ancestral, almost sacred custom.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m20-4"><span class="mk">4</span><b>Date and weigh it</b><span class="tx">“In this period” means to 371 BC: Cooley’s warning about Pausanias, in his words.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m20-5"><span class="mk">5</span><b>A classical witness</b><span class="tx">A second writer, from another period: rivalry, choruses and contests, and hunting as honourable leisure — culture, not just the army.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — model, paragraph 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(b) · annotated model · paragraph 2 of 2</p>
+  <h2>Then Sparta’s own poets — and a judgement</h2>
+  <div class="annot wide" data-veil="Show the second paragraph">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m20-6">Sparta’s own poets show that this culture was older than the Roman picture, and wider than training.</span><span class="mk">6</span>
+      <span class="code" data-code="evidence" id="m20-7">Tyrtaeus, probably a Spartan of the mid-7th century BC, refuses to honour a man ‘For his prowess in running or wrestling’, or for beauty and wealth, which suggests that athletic fame was already prized; later writers say Spartans sang his songs for a prize after dinner on campaign.</span><span class="mk">7</span>
+      <span class="code" data-code="evidence" id="m20-8">Alcman, writing in Sparta’s Doric dialect for choruses of girls, calls on the Muse to ‘make the dance graceful’ and describes girls praying ‘To the fair-flowing river to ensure / Lovely marriage’, so their songs probably joined music, religion and marriage.</span><span class="mk">8</span>
+      <span class="code" data-code="counter" id="m20-9">Both poets were ‘writing poetry not history’, as Cooley says, and survive only in fragments, but they probably come from inside Sparta, long before the mirage.</span><span class="mk">9</span>
+      <span class="code" data-code="judgement" id="m20-10">Together, Greek writers from the 7th century BC to the 2nd century AD reveal a culture of contest, song and display that served the city’s values; the later the writer, the more these customs appear as Lycurgus’ design rather than a living tradition.</span><span class="mk">10</span>
+      <p class="meta">Model written for this lesson · both paragraphs ≈ 350 words, about 14 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m20-6"><span class="mk">6</span><b>Signpost</b><span class="tx">A new paragraph and a new period, tied back to the judgement.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m20-7"><span class="mk">7</span><b>A writer and his evidence, linked</b><span class="tx">Tyrtaeus, hedged (“probably”), a few exact words, and what they reveal — the feedback’s “clear link”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m20-8"><span class="mk">8</span><b>Specific features of culture</b><span class="tx">Writing, religion and marriage — features the 2020 feedback named — plus festivals.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m20-9"><span class="mk">9</span><b>Weigh the poets too</b><span class="tx">Poetry, not history — but early and from inside. A balanced limit, briefly.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m20-10"><span class="mk">10</span><b>Close the loop</b><span class="tx">Writers “of different periods”, and a refined judgement on how the periods differ.</span></div>
+      <div class="verdict reveal"><b>Written to the 7–8 criteria</b> (a well-developed explanation; detailed reference to Source L) and to the 2020 feedback (Greek writers of different periods).</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — why answers drop marks" data-kind="hsc">
+<div class="wrap l26-dense">
+  <p class="eyebrow">HSC 2020 Q11(b) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">3–4 marks · retells the source</span>
+      <p class="resp">Source L says there was a place called the Platanistas where youths fought. It had a moat and two bridges with images of Heracles and Lycurgus, and Lycurgus made laws about the fighting.</p>
+      <p class="why">A paraphrase of the source, with no other writers and no explanation of what it reveals — “limited explanation”.</p></div>
+    <div class="rung reveal"><span class="mark">5–6 marks · society, not culture</span>
+      <p class="resp">Greek writers reveal that Sparta was a military society. Source L shows youths fighting under Lycurgus’ laws; Xenophon describes the call-up of the army, Thucydides the battle of Mantinea, and Plutarch the krypteia …</p>
+      <p class="why">Sound, evidenced and uses Source L, but about the army and society in general. Better responses, the 2020 feedback says, referred in detail to “specific features of cultural life”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · trusting the late source</span>
+      <p class="resp">Source L proves that in the 5th century BC Spartan youths fought at the Platanistas under Lycurgus’ laws.</p>
+      <p class="why">Pausanias describes his own day, in the 2nd century AD, and Lycurgus may never have existed (Lesson 3).</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers. The bands are our estimate, not NESA’s.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(b)" data-title="HSC 2020 Q11(b) — mark your own" data-kind="hsc">
+<div class="wrap l26-dense">
+  <p class="eyebrow">HSC 2020 Q11(b) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement about cultural life — no roadmap</label></li>
+        <li><label><input type="checkbox"> used Source L in detail: the place, the fights, the two images</label></li>
+        <li><label><input type="checkbox"> dated Pausanias and weighed what he can show for this period</label></li>
+        <li><label><input type="checkbox"> named at least three other writers, from different periods</label></li>
+        <li><label><input type="checkbox"> linked each writer to a specific feature of culture</label></li>
+        <li><label><input type="checkbox"> used at least one Spartan voice: Tyrtaeus or Alcman (“probably” Spartan)</label></li>
+        <li><label><input type="checkbox"> closed with a refined judgement</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The criteria test</div>
+        <p class="body">7–8 marks needs “detailed reference to evidence from the source provided”. Underline every detail you took from Source L. As a rule of thumb (ours, not NESA’s), one or two details is closer to “uses evidence” (5–6) than to “detailed reference” (7–8).</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>With reference to Alcman, fragment 7 (Cooley A18), what does Spartan poetry reveal about cultural life in this period?</b> (6 marks)</p>
+        <p class="body"><b>Explain the importance of leisure activities for Spartan society in this period.</b> (6 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l26-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing</p>
+  <h2>Put these in order, earliest first, with a date for each</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Pausanias describes the youths fighting at the Platanistas</span></li>
+    <li><span class="k">B</span><span>Tyrtaeus composes a poem refusing to honour men for running or wrestling</span></li>
+    <li><span class="k">C</span><span>Cynisca wins the four-horse chariot race at Olympia</span></li>
+    <li><span class="k">D</span><span>Alcman composes songs for girls’ choruses</span></li>
+    <li><span class="k">E</span><span>Lichas is whipped at Olympia for crowning his charioteer</span></li>
+    <li><span class="k">F</span><span>Evagoras’ mares win three Olympic chariot races</span></li>
+    <li><span class="k">G</span><span>Plutarch writes his <i>Life of Lycurgus</i></span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq">
+      <li class="sol reveal"><b>B Tyrtaeus</b> — mid-7th century BC (fr. 12, Cooley A9)</li>
+      <li class="sol reveal"><b>D Alcman</b> — late 7th century BC, “perhaps one generation later”</li>
+      <li class="sol reveal"><b>F Evagoras</b> — “probably in the mid-sixth century” (Cooley, note on C50)</li>
+      <li class="sol reveal"><b>E Lichas</b> — 420 BC (Thucydides 5.50.4, Cooley C53)</li>
+      <li class="sol reveal"><b>C Cynisca</b> — 396 or 392 BC (Cooley C55)</li>
+      <li class="sol reveal"><b>G Plutarch</b> — c. AD 100</li>
+      <li class="sol reveal"><b>A Pausanias</b> — 2nd century AD (Cooley D81)</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l26-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify · Activity B items 4 and 5, and six more</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l26-two" data-answers>
+    <li><span class="n">1</span><span>Tyrtaeus says a winner at running or wrestling deserves to be remembered.</span>
+      <span class="sol no reveal">False <span class="why">— “I would neither mention nor have any regard for a man / For his prowess in running or wrestling” (fr. 12, Cooley A9).</span></span></li>
+    <li><span class="n">2</span><span>The Damonon stele records victories in both horse races and foot races.</span>
+      <span class="sol reveal">True <span class="why">— the kalpe, the horse-race and chariot wins, and the stade and two-stade races won by Damonon as a boy and by his son (Cooley C83).</span></span></li>
+    <li><span class="n">3</span><span>Tyrtaeus and Alcman both composed in Sparta’s Doric dialect.</span>
+      <span class="sol no reveal">False <span class="why">— Tyrtaeus wrote “in traditional Ionic dialect (as used by Homer)”; Alcman in Doric (Cooley, section A introduction).</span></span></li>
+    <li><span class="n">4</span><span>Xenophon says Lycurgus made hunting the most honourable activity for men past their youth.</span>
+      <span class="sol reveal">True <span class="why">— “Lykourgos established hunting as the most honourable activity” (<i>Constitution</i> 4.7, Cooley D79).</span></span></li>
+    <li><span class="n">5</span><span>In the Olympic four-horse chariot race the driver, not the owner, was crowned.</span>
+      <span class="sol no reveal">False <span class="why">— Cooley: “the owner, not the charioteer, was crowned”, which is how Cynisca could win.</span></span></li>
+    <li><span class="n">6</span><span>Cynisca’s epigram claims she was the only woman in Greece to win the crown.</span>
+      <span class="sol reveal">True <span class="why">— “I say that I am the only woman / Out of all Greece to win the crown.” (Cooley C55)</span></span></li>
+    <li><span class="n">7</span><span>Hodkinson says inscribed dedications with military associations outnumber sporting ones.</span>
+      <span class="sol no reveal">False <span class="why">— “these sporting dedications are far more numerous than the small number of inscribed dedications with military associations”.</span></span></li>
+    <li><span class="n">8</span><span>Xenophon says compulsory drinking was the custom at the Spartan messes.</span>
+      <span class="sol no reveal">False <span class="why">— “He put a stop to the custom of compulsory drinking” (<i>Constitution</i> 5.4, Cooley D61).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac l26-dense">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze · Activity C items 5–7, and five more</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Athena</span><span>chariot</span><span>Doric</span><span>hunting</span><span>Ionic</span><span>kalpe</span><span>partheneion</span><span>stade</span></div>
+  <ol class="cloze" data-answers>
+    <li>Alcman wrote in Sparta’s own dialect, called <span class="gap"><span class="sol reveal">Doric</span></span>.</li>
+    <li>The race in which the rider ran beside a cantering horse, then mounted it, was the <span class="gap"><span class="sol reveal">kalpe</span></span>.</li>
+    <li>Xenophon says that for older men the most honourable activity was <span class="gap"><span class="sol reveal">hunting</span></span>.</li>
+    <li>Tyrtaeus composed his elegies in the <span class="gap"><span class="sol reveal">Ionic</span></span> dialect used by Homer.</li>
+    <li>A maiden-song for a chorus of girls is called a <span class="gap"><span class="sol reveal">partheneion</span></span>.</li>
+    <li>Damonon set up his stele for the goddess <span class="gap"><span class="sol reveal">Athena</span></span>, “guardian of the city”.</li>
+    <li>A sprint of about 190 metres at Olympia was the <span class="gap"><span class="sol reveal">stade</span></span> race.</li>
+    <li>At Olympia, Cynisca was the first woman to win the four-horse <span class="gap"><span class="sol reveal">chariot</span></span> race.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l26-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph · question written for this lesson</p>
+  <h2>How useful are Tyrtaeus and Alcman as evidence for Spartan cultural life?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what, and how far?</span>
+    <span class="l">Evidence</span><span>Quote a few exact words from each poet, with the fragment and Cooley code.</span>
+    <span class="l">Analyse</span><span>Explain what each reveals about cultural life — values, festivals, music, marriage.</span>
+    <span class="l">Evaluate</span><span>Weigh their date, purpose, form and survival: poetry, fragments, “probably” Spartan.</span>
+    <span class="l">Resolve</span><span>Close with a refined judgement: what they can and cannot show, and what to set beside them.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Tyrtaeus and Alcman are highly useful for Spartan cultural life, though more for its values and performances than for its daily routine. As probably Spartan poets of the 7th century BC, they are the only surviving literary voices from inside Sparta before the Hellenistic period, composed long before outsiders built the mirage. Tyrtaeus will not honour a man ‘For his prowess in running or wrestling’, while Alcman asks the Muse to ‘make the dance graceful’ and records girls praying ‘To the fair-flowing river’ for marriage. Together they show a culture in which athletic fame, choral song and religious ritual mattered enough to be argued about and performed in public. Their limits are as clear: they were ‘writing poetry not history’, as Cooley says, for particular occasions, and they survive only as fragments, so they cannot show how often festivals were held or who could afford to compete. They are therefore best read beside inscriptions from Sparta itself, such as Damonon’s victory list of about 400 BC, as Sparta’s own picture of what it admired.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac l26-dense">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2 class="nq">“Leisure at Sparta was training for war.” To what extent do the sources support this view? <span class="small">(12 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — for example, only partly: some leisure kept men fit for war, but much of it was worship, celebration and competition for status.</li>
+    <li><b>The case for:</b> Xenophon on hunting (D79) and on the coward shut out of games and choruses (D96); the kalpe and cavalry (C83); Tyrtaeus putting courage above athletics (A9); Cooley’s view that exercise and hunting “could be considered as further preparation for war”.</li>
+    <li><b>The case against:</b> chariot-racing as “a mark not of manliness but of wealth” (C57) and Sparta’s Olympic monuments (C54); Hodkinson on sporting dedications; the Hyakinthia (C69); Alcman’s choruses (A17, A18).</li>
+    <li><b>Weigh the sources:</b> Xenophon’s idealised Sparta; late writers such as Molpis (E77) and Pausanias; the poets’ purposes; one rich family on the Damonon stele.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Quick Check review" data-kind="practice notes">
+<div class="wrap prac l26-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · the Quick Checks for sections 4 and 5, with answers written for this lesson</p>
+  <h2>Quick Check review</h2>
+  <ol class="rq l26-two" data-answers>
+    <li>Why are Tyrtaeus and Alcman possibly our only reliable literary evidence for Sparta?
+      <span class="sol reveal">They are the only surviving literary sources from inside Sparta before the Hellenistic period (both probably Spartan), from the 7th century BC; the classical writers were outsiders, and later Laconian writers such as Molpis wrote centuries later.</span></li>
+    <li>Which activities does Tyrtaeus refuse to praise, and what does he value instead?
+      <span class="sol reveal">Running and wrestling, size and speed, beauty, wealth, kingly rank and a persuasive voice; he values “impetuous courage” in close fighting (fr. 12, A9).</span></li>
+    <li>Give two differences between Tyrtaeus and Alcman.
+      <span class="sol reveal">Elegy in Ionic v. lyric in Doric; men on campaign v. girls’ choruses at festivals; courage and fame v. beauty, piety and marriage.</span></li>
+    <li>What does the Damonon stele reveal about local games?
+      <span class="sol reveal">“a flourishing local circuit of minor games” across Laconia and Messenia, with chariot, kalpe, horse and foot races — and the wealth needed to breed racehorses (C83).</span></li>
+    <li>Why was chariot-racing a sign of wealth rather than military skill?
+      <span class="sol reveal">The owner, not the driver, was crowned; the horses and statues were costly; Xenophon calls Cynisca’s win proof that a stud is “a mark not of manliness but of wealth” (C57).</span></li>
+    <li>Why must the bronze banqueter be used with caution?
+      <span class="sol reveal">It was probably made in Laconia but thought to have been found at Dodona, and Cooley says it “need not … show any individual diner, let alone a Spartiate one” (E71).</span></li>
+    <li>Give one piece of evidence that leisure prepared Spartans for war, and one that it did not.
+      <span class="sol reveal">For: Xenophon says hunting kept older men fit for service (D79). Against: chariot-racing showed wealth, not manliness (C57); sporting dedications far outnumber military ones (Hodkinson).</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two values, one judgement</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One value in Tyrtaeus, and one value in Alcman — with a word or two from each.</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">Was hunting at Sparta leisure, or training for war? One sentence, with a source.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Cultural and everyday life IV — marriage customs and the mirage.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l26-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources and objects</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Tyrtaeus, fr. 12 (A9, trans. K. Hughes); Alcman, frs 1, 2, 4A, 7 and 45 (A14, A15, A17, A18, A19, trans. K. Hughes); Philochorus in Athenaeus, <i>Scholars at Dinner</i> 14.29 (A2); Lycurgus of Athens, <i>Against Leokrates</i> 106–7 (A7); the Suda on Tyrtaeus and Alcman (A1, A13); Xenophon, <i>Constitution of the Lakedaimonians</i> 4.2, 4.7, 5.3–6 and 9.4–5 (D79, D61, D96, trans. B. Wilson), <i>Agesilaos</i> 2.17 and 9.6 (C71, C57) and <i>Hellenika</i> 4.5.11 (C70); Strabo, <i>Geography</i> 8.4.10 (A12); Philostratus, <i>On Athletic Training</i> 9–10 (C60); Thucydides 1.6.5 and 5.50.4 (C42, C53, trans. B. Wilson); Herodotus 6.103.3–4 (C50); Pausanias, <i>Description of Greece</i> 3.13.9, 3.14.9–10 and 3.15.1 (C47, D81, C56); Polycrates in Athenaeus 4.17 (C69); Molpis in Athenaeus 4.19 (E77); Sosibius in Athenaeus 15.22 (C75); Plutarch, <i>Lykourgos</i> 21.2 (D97); Eusebius’ Olympic victor lists (C39, C44); the Damonon stele, IG V 1, 213 (C83); Cynisca’s epigram (C55); jumping weights and a discus (C80–C82); bronze banqueter, BM 1954,1018.1 (E71). Cooley’s introductions to the literary sources, to section A and to Alcman (A13–A20), to the Olympic Games and the festivals, to wealth and property, to the common meals, to education and to the army, to women and girls (D64–D72), and his notes on A7, A8, A15, C39, C49, C50, C52, C54, C60, C69, C75, C83, E71 and E77; S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, and W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, both in Cooley.</p></div>
+
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images</div>
+        <ul class="small"><li>Inside a black-figure cup of c. 550–530 BC: a rider on horseback, with winged figures and birds around him. Clarke & Garner call him a Spartan; the winged figures suggest more than an everyday ride — Clarke & Garner, Fig 8.9</li><li>Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may show a hunt from myth — Bradley, Fig 3.31</li><li>Bronze reclining banqueter from the support of a bronze bowl, probably made in Laconia, c. 530–500 BC, thought to have been found at Dodona (BM 1954,1018.1; Cooley E71) — Bradley, Fig 3.32</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The leisure tree was drawn for this lesson from Hurley et al., <i>Antiquity 2</i> (4th edn, Oxford University Press, 2019), Source 60, with the evidence from Cooley; the comparison table was drawn for it from Cooley.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC 2020 Question 11 (b) and Source L (Pausanias 3.14.8, trans. W. H. S. Jones and H. A. Ormerod, Loeb Classical Library, 1926), the 2020 part (b) marking criteria, “answers could include” and marking feedback: NSW Education Standards Authority, 2020 HSC Ancient History examination, marking guidelines and feedback. © NESA. NESA glossary of key words. The HSC-style questions were written for this lesson.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

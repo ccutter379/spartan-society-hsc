@@ -1,0 +1,2215 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L25 · Cultural Life II: Architecture</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: architecture at three sanctuaries — the Amyklaion, the Menelaion and Artemis Orthia — with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 25 (cultural and everyday life II: architecture). Every class starts l25-. */
+/* Two SVGs from make_l25_diagrams.py: svg_l25map.svg (uses Lesson 2's built-in .map classes for the
+   river, badges and north arrow, plus the l25- classes below) and svg_l25men.svg (the Menelaion
+   timeline). The three-site grid (typeable and model) is a plain HTML table, so it reflows on phones. */
+
+/* ---- the map of Sparta and its three sanctuaries */
+.map.l25-map .l25-land{fill:var(--map-land);}
+.map.l25-map .l25-edge{fill:none; stroke:var(--map-coast); stroke-width:2;}
+.map.l25-map .l25-hill{fill:var(--map-mtn); opacity:.22;}
+.map.l25-map .l25-town{fill:var(--tint); opacity:.95;}
+.map.l25-map .l25-river{stroke-width:7;}
+.map.l25-map .l25-road{fill:none; stroke:var(--deep); stroke-width:4; stroke-dasharray:10 8; opacity:.85;}
+.map.l25-map .l25-shrine path, .map.l25-map .l25-shrine rect{fill:var(--deep); stroke:var(--map-halo); stroke-width:2;}
+.map.l25-map .l25-unsure{fill:var(--map-halo); stroke:var(--deep); stroke-width:3; stroke-dasharray:6 5;}
+.map.l25-map .l25-q{fill:var(--deep); font-size:21px; font-weight:700;}
+.map.l25-map .l25-lbl{fill:var(--ink); font-size:27px; font-weight:700;}
+.map.l25-map .l25-sub{fill:var(--slate); font-size:22px;}
+.map.l25-map .l25-it{font-style:italic;}
+.map.l25-map .l25-mtn{fill:var(--map-mtn-ink); font-size:24px; font-weight:700; font-style:italic;}
+.map.l25-map .l25-rlbl{font-size:27px;}
+.map.l25-map .l25-town-lbl{fill:var(--deep); font-size:31px; font-weight:700; letter-spacing:.14em;}
+.map.l25-map .l25-note{fill:var(--slate); font-size:19px; font-style:italic;}
+.map.l25-map .badge text{font-size:24px;}
+.l25-mapfig svg{max-height:calc(100vh - 270px); border-radius:10px; box-shadow:var(--shadow);}
+.l25-mapsplit .keylist{gap:clamp(4px,.8vh,10px);}
+.l25-mapsplit .keylist li{font-size:calc(var(--fs-body)*.9);}
+.l25-mapsplit .keylist .d{font-size:calc(var(--fs-body)*.8);}
+@media (max-width:700px){ html.read .diagram svg.l25-map{min-width:600px; max-height:none;} }
+
+/* ---- the Menelaion through time (svg_l25men.svg) */
+.l25-tl text{font-family:var(--ui); fill:var(--ink);}
+.l25-tl .l25-axis{stroke:var(--ink); stroke-width:4;}
+.l25-tl .l25-gap{fill:var(--ground);}
+.l25-tl .l25-brk{stroke:var(--ink); stroke-width:3;}
+.l25-tl .l25-lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.l25-tl .l25-dot{fill:var(--deep);}
+.l25-tl .l25-ph rect{fill:var(--surface); stroke:var(--deep); stroke-width:2.5;}
+.l25-tl .l25-legend rect{fill:var(--w-counter); stroke:var(--c-counter); stroke-dasharray:9 6;}
+.l25-tl .l25-legend .l25-dot{fill:var(--c-counter);}
+.l25-tl .l25-now rect{fill:var(--w-evidence); stroke:var(--c-evidence);}
+.l25-tl .l25-now .l25-dot{fill:var(--c-evidence);}
+.l25-tl .l25-dt{font-size:24px; font-weight:700; fill:var(--deep);}
+.l25-tl .l25-nm{font-size:28px; font-weight:700;}
+.l25-tl .l25-dl{font-size:22px;}
+.l25-tl .l25-src{font-size:19px; font-style:italic; fill:var(--slate);}
+.l25-tl .l25-num{font-size:15px; font-weight:700; fill:#fff;}
+.l25-tl .l25-tnote{font-size:19px; font-style:italic; fill:var(--slate);}
+html:not(.read) .l25-tlfig svg{max-height:calc(100vh - 250px);}
+@media (max-width:700px){ html.read .diagram svg.l25-tl{min-width:1000px; max-height:none;} }
+
+/* ---- the three-site grid: row labels, the model, and the empty typeable version */
+.l25-grid th{vertical-align:top;}
+.l25-grid tr > th:first-child{white-space:normal; width:9em;}
+.l25-grid td{vertical-align:top; width:30%;}
+.l25-task{margin:0;}
+.l25-fill td{padding:.25em .35em;}
+.l25-in{display:block; width:100%; box-sizing:border-box; resize:vertical; min-height:2.1em;
+  font:inherit; font-size:calc(var(--fs-body)*.84); line-height:1.3; color:var(--ink); background:var(--surface-2);
+  border:1px solid var(--rule); border-radius:6px; padding:.3em .45em;}
+.l25-in:focus{outline:2px solid var(--bright); outline-offset:1px; background:var(--surface);}
+.l25-in::placeholder{color:var(--slate); opacity:.75; font-style:italic;}
+@media (max-width:700px){ .l25-grid{min-width:620px;} .l25-grid tr > th:first-child{white-space:normal; width:6em;} }
+
+.l25-per{font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--slate); margin:.55em 0 .1em;}
+.src .l25-per:first-of-type{margin-top:0;}
+
+/* ---- figures beside text */
+.l25-fig .figure img{max-height:calc(100vh - 360px); object-fit:contain; background:var(--surface);}
+.l25-fig.l25-cover .figure img{max-height:62vh;}
+.l25-fig.l25-short .figure img{max-height:calc(100vh - 560px); min-height:200px;}
+html.read .l25-fig .figure img{max-height:50vh;}
+
+/* ---- NESA's architecture point, set out phrase by phrase */
+.l25-pt{display:block; margin:.25em 0;}
+.l25-quiet{color:var(--slate);}
+.l25-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+
+/* ---- the plan for the whole answer */
+.l25-plan td{vertical-align:top; line-height:1.34;}
+.l25-plan td:first-child{font-weight:700; white-space:nowrap; color:var(--deep);}
+.l25-plan .l25-from{display:block; font-size:.86em; color:var(--slate); font-weight:400;}
+@media (max-width:700px){ html.read .l25-plan{min-width:600px;} }
+
+/* ---- two-column practice lists on wide screens */
+.l25-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 2.2em; align-items:start;}
+@media (max-width:900px){ .l25-two{grid-template-columns:1fr;} }
+
+/* ---- dense slides on short projectors (1366 × 768) */
+@media (max-height:820px){
+  html:not(.read) .l25-dense h2{font-size:calc(var(--fs-h2)*.86);}
+  html:not(.read) .l25-dense .src .quote.sm{font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+  html:not(.read) .l25-dense .src .quote{font-size:calc(var(--fs-body)*.9); line-height:1.4;}
+  html:not(.read) .l25-dense .src .prov{font-size:calc(var(--fs-chrome)*.9);}
+  html:not(.read) .l25-dense .note .body, html:not(.read) .l25-dense .card .body,
+  html:not(.read) .l25-dense .body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l25-dense .qprompt{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l25-dense .tbl.compact{font-size:calc(var(--fs-body)*.7);}
+  html:not(.read) .l25-dense .tbl.compact td, html:not(.read) .l25-dense .tbl.compact th{padding:.26em .5em;}
+  html:not(.read) .l25-dense .l25-in{font-size:calc(var(--fs-body)*.72); min-height:1.7em;}
+  html:not(.read) .l25-dense .rq{font-size:calc(var(--fs-body)*.74); gap:.28em;}
+  html:not(.read) .l25-dense .tf li{font-size:calc(var(--fs-body)*.72); padding:.28em .7em;}
+  html:not(.read) .l25-dense .seq li{font-size:calc(var(--fs-body)*.76); padding:.28em .7em;}
+  html:not(.read) .l25-dense .moves{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l25-dense .quote.sm.model{font-size:calc(var(--fs-body)*.76); line-height:1.38;}
+  html:not(.read) .l25-dense .cornell .nts, html:not(.read) .l25-dense .cornell .cq{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l25-dense .fb{font-size:calc(var(--fs-body)*.72); line-height:1.3;}
+  html:not(.read) .l25-dense .keylist li{font-size:calc(var(--fs-body)*.8); line-height:1.25;}
+  html:not(.read) .l25-dense .keylist .d{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l25-dense .figure figcaption{font-size:calc(var(--fs-chrome)*.88); line-height:1.28;}
+  html:not(.read) .l25-dense .l25-fig .figure img{max-height:calc(100vh - 380px);}
+  html:not(.read) .l25-dense .checks label{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l25-dense .stack{gap:8px;}
+}
+
+/* credits: the image list in two columns, so the slide fits one screen */
+.l25-credits ul.small{columns:2; column-gap:2em; margin:.2em 0 .4em; padding-left:1.1em;}
+.l25-credits ul.small li{break-inside:avoid; margin:0 0 .3em;}
+.l25-credits .small{font-size:calc(var(--fs-chrome)*.86); line-height:1.34;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 25" data-title="Cultural and everyday life II: architecture" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 25</p>
+      <h1>Cultural and everyday life II: architecture</h1>
+      <p class="lead">Three sanctuaries — the Menelaion, Artemis Orthia and the Amyklaion. What did Spartans build for their gods and heroes, and what does it reveal about their cultural and religious life?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <div class="l25-fig l25-cover"><figure class="figure"><img src="images/clarke-5-7-menelaion-l25.jpg" alt="The Menelaion at Therapne: the remains of the stepped stone platform on its ridge above the Eurotas, with the snow-capped Taygetus range across the valley"><figcaption>The Menelaion at Therapne: the remains of the stepped stone platform on its ridge above the Eurotas, with the snow-capped Taygetus range across the valley — <span class="cr">Clarke & Garner, Fig 5.7</span></figcaption></figure></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 25" data-title="Spaced review" data-kind="intro">
+<div class="wrap l25-dense">
+  <p class="eyebrow">Spaced review · 6 minutes · from memory, no notes</p>
+  <h2>Five questions</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">Where did the ivory found at the Sanctuary of Artemis Orthia come from?</span><span class="d">Lesson 24</span></li>
+      <li><span class="num">2</span><span class="t">What is Laconian black-figure pottery?</span><span class="d">Lesson 24</span></li>
+      <li><span class="num">3</span><span class="t">What did Thucydides predict about the ruins of Sparta?</span><span class="d">Lesson 2</span></li>
+      <li><span class="num">4</span><span class="t">When did Pausanias write, and how did he gather his information?</span><span class="d">A writer</span></li>
+      <li><span class="num">5</span><span class="t">What is a sanctuary (<i>temenos</i>)?</span><span class="d">Today’s first term</span></li>
+    </ol>
+    <div class="card quiet" data-veil="Show the answers">
+      <div class="k">Answers</div>
+      <ol class="body">
+        <li class="reveal">Imported from the east — there were no elephants in Greece. The ivories were <i>found</i> at Orthia; where each was carved is not certain.</li>
+        <li class="reveal">Pottery painted in Laconia with black figures on a pale (cream) slip, details scratched in — for example, the Arkesilas cup.</li>
+        <li class="reveal">That if Sparta were abandoned, “future generations would find it impossible to believe historians’ accounts of its present power” (Cooley G2).</li>
+        <li class="reveal">2nd century AD; his <i>Description of Greece</i> was “based on his own visits” (Cooley) — he saw the buildings, but in Roman times.</li>
+        <li class="reveal">A sacred area set aside for a god or hero, with an altar and often a temple.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 25" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate what Spartan architecture reveals about cultural and religious life</li>
+        <li>draw conclusions from evidence instead of narrating it</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>describe the location, deity, date and key features of the Menelaion, Artemis Orthia and the Amyklaion</li>
+        <li>explain the difference between what Pausanias describes and what excavation has found</li>
+        <li>write a 7-mark answer on art and architecture in about 12 minutes</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body">A <b>sanctuary</b> is the whole sacred area — altar, offerings and sometimes a temple; the <b>temple</b> is only the god’s house. And <b>austere</b> means plain and severe: today you will test whether “small” and “austere” mean the same thing.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 25" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L25 · Architecture: three sanctuaries</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Men. = Menelaion)</span></div></div>
+      <div class="row"><div class="cq">Where was the Menelaion?</div><div class="nts">Therapne, SE, across the Eurotas …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: Sparta’s sacred buildings · the Menelaion · Artemis Orthia · the Amyklaion · what the buildings reveal.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 25" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The buildings</th><th>Meaning</th></tr>
+      <tr><td>sanctuary · <i>temenos</i></td><td>a sacred area for a god or hero, with an altar and often a temple</td></tr>
+      <tr><td>hero shrine</td><td>a sanctuary for a hero, often at a place linked to the hero’s life or tomb</td></tr>
+      <tr><td>akroterion (pl. akroteria)</td><td>an ornament on the peak or corners of a temple roof</td></tr>
+      <tr><td>Doric order</td><td>the plain style of temple building used across the Peloponnese</td></tr>
+      <tr><td>capital · abacus</td><td>the top of a column · the flat slab on top of the capital</td></tr>
+      <tr><td>triglyph</td><td>a block with three upright grooves in a Doric frieze</td></tr>
+      <tr><td>monumental</td><td>built on a grand scale to impress</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The evidence</th><th>Meaning</th></tr>
+      <tr><td>excavation</td><td>the systematic digging and recording of a site</td></tr>
+      <tr><td>autopsy</td><td>seeing something with your own eyes — Pausanias’ method</td></tr>
+      <tr><td>votive</td><td>an offering given to a god or hero and left at a sanctuary</td></tr>
+      <tr><td>dedication</td><td>an object set up for a god or hero, often inscribed with the giver’s name</td></tr>
+      <tr><td>Mycenaean</td><td>the Late Bronze Age Greek world, roughly 1700–1100 BC</td></tr>
+      <tr><td>austere · exuberant</td><td>plain and severe · lively and richly decorated (NESA uses both words)</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Menelaos, Hyakinthos, Ortheia, Lakedaimonians). In your own writing use Menelaus, Hyacinthus, Orthia and Lacedaemonians. NESA’s marking guidelines spell the sanctuary of Apollo “Amyclaeon”; Cooley writes Amyklaion or Amyklai.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Sparta’s sacred buildings" data-title="Sparta and its three sanctuaries (map)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Sparta’s sacred buildings · I do — map think-aloud</p>
+  <h2>Sparta and its three great sanctuaries</h2>
+  <div class="split l25-mapsplit" style="--cols:1.5fr 1fr">
+    <figure class="diagram l25-mapfig"><svg class="map l25-map" viewBox="0 0 1000 714" role="img" aria-label="Schematic map, not to scale, of Sparta and its three great sanctuaries in the Eurotas valley, between the foothills of Mount Taygetus to the west and hills east of the river. Sparta, an open town without walls, lies west of the Eurotas, with its acropolis and the temple of Athena Chalkioikos, of the Bronze House. The sanctuary of Artemis Orthia stands beside the river at Limnai, just outside the town. The Menelaion, the shrine of Menelaus and Helen, stands at Therapne on high ground across the river, south-east of the town. The Amyklaion, the sanctuary of Apollo and Hyacinthus at Amyklai, lies about 5 to 6 kilometres south, at the end of the processional road. Thornax, whose exact site is not known, lies on the road into Sparta from the north.">
+<defs><clipPath id="l25-frame"><rect width="1000" height="714"/></clipPath></defs>
+<rect class="l25-land" width="1000" height="714"/>
+<g clip-path="url(#l25-frame)">
+<path class="l25-hill" d="M-10.0,-12.5 L310.0,-12.5 L330.0,87.7 L350.0,188.0 L370.0,275.7 L375.0,388.5 L400.0,501.3 L420.0,614.1 L440.0,726.9 L-10.0,726.9Z"/>
+<path class="l25-hill" d="M1010.0,-12.5 L730.0,-12.5 L700.0,87.7 L670.0,200.5 L655.0,288.3 L612.5,363.5 L627.5,438.7 L680.0,526.4 L715.0,626.6 L740.0,726.9 L1010.0,726.9Z"/>
+<path class="l25-town" d="M432.5,260.1 C442.9,259.0 477.5,250.1 495.0,253.8 C512.5,257.4 528.5,268.4 537.5,282.0 C546.5,295.6 551.1,318.0 549.0,335.3 C546.9,352.5 539.4,374.9 525.0,385.4 C510.6,395.8 479.2,402.1 462.5,397.9 C445.8,393.7 432.9,376.0 425.0,360.3 C417.1,344.7 413.8,320.6 415.0,303.9 C416.3,287.2 429.6,267.4 432.5,260.1Z"/>
+<path class="river l25-river" d="M440.0,-12.5 C445.8,-2.1 463.3,27.2 475.0,50.1 C486.7,73.1 500.0,100.3 510.0,125.3 C520.0,150.4 527.9,175.5 535.0,200.5 C542.1,225.6 546.7,250.7 552.5,275.7 C558.3,300.8 564.6,325.9 570.0,350.9 C575.4,376.0 580.0,401.1 585.0,426.1 C590.0,451.2 595.0,476.3 600.0,501.3 C605.0,526.4 610.0,551.4 615.0,576.5 C620.0,601.6 625.0,626.6 630.0,651.7 C635.0,676.8 642.5,714.4 645.0,726.9"/>
+</g>
+<rect class="l25-edge" width="1000" height="714"/>
+<text class="l25-mtn" x="30.0" y="520.0" text-anchor="start">Foothills of</text><text class="l25-mtn" x="30.0" y="550.0" text-anchor="start">Mt Taygetus</text>
+<text class="l25-mtn" x="972.0" y="190.0" text-anchor="end">Hills east of</text><text class="l25-mtn" x="972.0" y="220.0" text-anchor="end">the Eurotas</text>
+<text class="river-lbl l25-rlbl" x="530.5" y="143.9" text-anchor="start">Eurotas</text>
+<text class="l25-town-lbl" x="396.0" y="246.6" text-anchor="middle">SPARTA</text>
+<text class="l25-sub l25-it" x="426.0" y="372.6" text-anchor="end">an open town:</text>
+<text class="l25-sub l25-it" x="426.0" y="396.6" text-anchor="end">no walls</text>
+<text class="north" x="958" y="292" text-anchor="middle">N</text><path class="north" d="M958,302 l-12,30 l12,-8 l12,8z"/>
+<text class="l25-note" x="24.0" y="696.0" text-anchor="start">Schematic map: not to scale; positions approximate</text>
+<g class="linked" data-step="l25s1"><g class="l25-shrine"><path d="M449.0,300.1 L465.0,288.1 L481.0,300.1 Z"/><rect x="453.0" y="302.1" width="6" height="15"/><rect x="462.0" y="302.1" width="6" height="15"/><rect x="471.0" y="302.1" width="6" height="15"/><rect x="448.0" y="317.1" width="34" height="5"/></g><text class="l25-lbl" x="439.0" y="301.1" text-anchor="end">Acropolis: Athena</text><text class="l25-sub" x="439.0" y="327.1" text-anchor="end">of the Bronze House</text><g class="badge"><circle cx="144.8" cy="293.1" r="19"/><text x="144.8" y="301.1">1</text></g></g>
+<g class="linked" data-step="l25s2"><g class="l25-shrine"><path d="M521.5,322.0 L537.5,310.0 L553.5,322.0 Z"/><rect x="525.5" y="324.0" width="6" height="15"/><rect x="534.5" y="324.0" width="6" height="15"/><rect x="543.5" y="324.0" width="6" height="15"/><rect x="520.5" y="339.0" width="34" height="5"/></g><text class="l25-lbl" x="563.5" y="299.0" text-anchor="start">Artemis Orthia</text><text class="l25-sub" x="563.5" y="323.0" text-anchor="start">by the river, at Limnai</text><g class="badge"><circle cx="810.7" cy="291.0" r="19"/><text x="810.7" y="299.0">2</text></g></g>
+<g class="linked" data-step="l25s3"><g class="l25-shrine"><path d="M614.0,389.0 L630.0,377.0 L646.0,389.0 Z"/><rect x="618.0" y="391.0" width="6" height="15"/><rect x="627.0" y="391.0" width="6" height="15"/><rect x="636.0" y="391.0" width="6" height="15"/><rect x="613.0" y="406.0" width="34" height="5"/></g><text class="l25-lbl" x="656.0" y="394.0" text-anchor="start">Menelaion</text><text class="l25-sub" x="656.0" y="420.0" text-anchor="start">at Therapne:</text><text class="l25-sub" x="656.0" y="444.0" text-anchor="start">Menelaus and Helen</text><g class="badge"><circle cx="824.9" cy="386.0" r="19"/><text x="824.9" y="394.0">3</text></g></g>
+<g class="linked" data-step="l25s4"><path class="l25-road" d="M497.5,388.5 C500.8,401.1 510.4,437.6 517.5,463.7 C524.6,489.8 532.9,519.6 540.0,545.2 C547.1,570.8 556.7,605.2 560.0,617.2"/><text class="l25-sub l25-it" x="504.5" y="464.3" text-anchor="end">Aphetaïs:</text><text class="l25-sub l25-it" x="504.5" y="488.3" text-anchor="end">processional road</text><g class="l25-shrine"><path d="M549.0,625.9 L565.0,613.9 L581.0,625.9 Z"/><rect x="553.0" y="627.9" width="6" height="15"/><rect x="562.0" y="627.9" width="6" height="15"/><rect x="571.0" y="627.9" width="6" height="15"/><rect x="548.0" y="642.9" width="34" height="5"/></g><text class="l25-lbl" x="591.0" y="628.9" text-anchor="start">Amyklaion, at Amyklai</text><text class="l25-sub" x="591.0" y="654.9" text-anchor="start">Apollo and Hyacinthus</text><g class="badge"><circle cx="947.9" cy="620.9" r="19"/><text x="947.9" y="628.9">4</text></g></g>
+<g class="linked" data-step="l25s5"><path class="l25-road" d="M534.0,269.5 C535.4,258.0 539.8,224.5 542.5,200.5 C545.2,176.5 546.3,150.4 550.0,125.3 C553.8,100.3 560.4,72.6 565.0,50.1 C569.6,27.7 575.4,0.5 577.5,-9.4"/><text class="l25-sub l25-it" x="584.0" y="22.8" text-anchor="start">road north, to Sellasia</text><circle class="l25-unsure" cx="550.0" cy="78.3" r="15"/><text class="l25-q" x="550.0" y="85.3" text-anchor="middle">?</text><text class="l25-lbl" x="526.0" y="76.3" text-anchor="end">Thornax</text><text class="l25-sub" x="526.0" y="102.3" text-anchor="end">(exact site not known)</text><g class="badge"><circle cx="217.3" cy="92.3" r="19"/><text x="217.3" y="100.3">5</text></g></g>
+</svg>
+      <figcaption>Drawn for this lesson after Bradley, Fig 3.7, with every label checked against Cooley. Schematic: not to scale. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <ol class="keylist">
+      <li class="reveal" data-also="[data-step=l25s1]"><span class="num">1</span><span class="t">An open town</span><span class="d">No walls until the Hellenistic period. On the low acropolis, the temple of Athena “Of the Bronze House” (Pausanias, Cooley K3).</span></li>
+      <li class="reveal" data-also="[data-step=l25s2]"><span class="num">2</span><span class="t">Artemis Orthia</span><span class="d">Beside the Eurotas at Limnai, “just outside the town of Sparta” (Cooley).</span></li>
+      <li class="reveal" data-also="[data-step=l25s3]"><span class="num">3</span><span class="t">The Menelaion</span><span class="d">At Therapne, on high ground south-east of the town, across the river.</span></li>
+      <li class="reveal" data-also="[data-step=l25s4]"><span class="num">4</span><span class="t">The Amyklaion</span><span class="d">Apollo and Hyacinthus at Amyklai, about 5–6 km south, at the end of the processional road (the Aphetaïs).</span></li>
+      <li class="reveal" data-also="[data-step=l25s5]"><span class="num">5</span><span class="t">Thornax</span><span class="d">Pausanias reaches the city “As one moves away from Thornax” (Cooley K1). Its exact site is not known.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Sparta’s sacred buildings" data-title="Modest buildings, skilled work" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">1 · Sparta’s sacred buildings · We do — an archaeologist on Spartan building</p>
+  <h2>Modest buildings — but skilled work</h2>
+  <div class="split" style="--cols:1.9fr 1fr">
+    <div class="src">
+      <div class="k">Source · an archaeologist on three periods</div>
+      <p class="l25-per">8th–7th centuries BC</p>
+      <p class="quote sm">by the mid-7th century distinctive terracotta roof-decorations (disc akroteria [finials], antefixes, simas [gutters]) characterised Spartan temples. … the style was imitated widely in the Peloponnese. Even for their time, these are modest buildings – the temple of Orthia measured about 16 x 7 m … Already the Spartans avoid excessive monumentality at home, but the skill and grace of these artefacts serve to undermine the notion of a grim austerity.</p>
+      <p class="l25-per">6th–early 5th centuries BC</p>
+      <p class="quote sm">The Spartans were au fait with the latest developments in architecture, as witnessed by a few Doric capitals … a triglyph from the Menelaion, and the famous ‘Throne of Apollo’ at Amyklai; but evidence for large temples is hard to identify. The Spartans seem to have had a taste for unusual monuments, often finely worked in valuable materials, such as the ‘Bronze House’ of Athena Chalkioikos.</p>
+      <p class="l25-per">5th–4th centuries BC</p>
+      <p class="quote sm">All the same, monumentality was generally muted; though they were kept in repair and re-roofed every so often, evidence for large-scale stone reconstruction of temples is hard to identify.</p>
+      <p class="prov">W. G. Cavanagh (Professor Emeritus of Aegean Archaeology, Nottingham), ‘Introduction to Lakonian Archaeology’, in M. G. L. Cooley (ed.), <i>Sparta</i> (2023) · a modern summary of the excavated evidence</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What was modest about Spartan temples?</p>
+      <p class="body reveal">Their size: the temple of Orthia was about 16 × 7 m, roughly one-eighth of Hera’s temple at Olympia, and large temples are “hard to identify”.</p>
+      <p class="qprompt reveal">What was skilled or up to date?</p>
+      <p class="body reveal">The terracotta roof-decorations, copied across the Peloponnese; Doric capitals and a triglyph; the throne of Apollo at Amyklai; and unusual monuments such as Athena’s Bronze House.</p>
+      <div class="note reveal" data-code="judgement"><div class="k">So: austere?</div><p class="body">Small, yes — but in the same passage Cavanagh says that the “skill and grace of these artefacts serve to undermine the notion of a grim austerity”. Keep <b>small</b> and <b>austere</b> apart.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Sparta’s sacred buildings" data-title="Notes 1 — Sparta’s sacred buildings" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Sparta’s sacred buildings</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L25 · Architecture: three sanctuaries</b></span><span>1 · Sacred buildings</span></div>
+    <div class="row"><div class="cq">Where were the three sanctuaries?</div>
+      <div class="nts reveal"><b>Orthia</b>: by the Eurotas at Limnai, just outside the town <span class="sep">·</span> <b>Menelaion</b>: Therapne, SE, across the river <span class="sep">·</span> <b>Amyklaion</b>: Amyklai, c. 5–6 km S, along the processional road</div></div>
+    <div class="row"><div class="cq">What were Spartan temples like?</div>
+      <div class="nts reveal"><b>Small</b>: Orthia c. 16 × 7 m ≈ ⅛ of Hera’s at Olympia <span class="sep">·</span> “evidence for large temples is hard to identify” <span class="sep">·</span> Classical: “monumentality was generally muted” (Cavanagh)</div></div>
+    <div class="row"><div class="cq">What was skilled?</div>
+      <div class="nts reveal">Terracotta <b>roof-decorations</b> (akroteria, antefixes, gutters) → “imitated widely in the Peloponnese” <span class="sep">·</span> Doric capitals, a <b>triglyph</b> (Menelaion), the <b>throne of Apollo</b> (Amyklai) → “au fait” <span class="sep">·</span> Athena’s <b>Bronze House</b> → “a taste for unusual monuments”</div></div>
+    <div class="row"><div class="cq">So?</div>
+      <div class="nts reveal">Small ≠ austere: “skill and grace” undermine “a grim austerity” (Cavanagh) <span class="sep">·</span> most of Sparta’s surviving notable architecture is <b>religious</b></div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The Menelaion" data-title="Reading a site — the Menelaion" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">2 · The Menelaion · I do — reading a site</p>
+  <h2>Reading a site: the Menelaion at Therapne</h2>
+  <div class="split" style="--cols:.85fr 1.5fr">
+    <div class="l25-fig l25-short"><figure class="figure contain"><img src="images/clarke-8-7-menelaion.jpg" alt="The Menelaion at Therapne, with Mt Taygetus behind"><figcaption>The Menelaion at Therapne, with Mt Taygetus behind — <span class="cr">Clarke & Garner, Fig 8.7</span></figcaption></figure></div>
+    <div class="src">
+      <div class="k">Source · the editor of our sourcebook</div>
+      <p class="quote sm">… south-east of Sparta, above the River Eurotas is the Menelaion or shrine of Menelaus, husband of Helen. Mycenean remains of 15th–13th centuries have been found here alongside a shrine from c. 700 BC, and the obvious guess is that the shrine was established at the site where Menelaus and Helen were thought to have lived at the time of the Trojan War …</p>
+      <p class="prov">M. G. L. Cooley (ed.), <i>Sparta</i> (2023), introduction to C29–C31</p>
+    </div>
+  </div>
+  <div class="cols c4">
+    <div class="card sm reveal"><div class="k">Where?</div><p class="body">Therapne, on high ground across the Eurotas, south-east of the town.</p></div>
+    <div class="card sm reveal"><div class="k">When?</div><p class="body">Two phases: Mycenaean remains (15th–13th centuries BC), then a shrine from c. 700 BC.</p></div>
+    <div class="card sm reveal"><div class="k">Who?</div><p class="body">Menelaus, king of Sparta in the Trojan War legend, and Helen: a <b>hero shrine</b>.</p></div>
+    <div class="card sm reveal"><div class="k">What do the remains show?</div><p class="body">A stepped stone platform probably carried the shrine (the unit textbook); Catling’s excavations (1973–76) found inscriptions naming the couple (Cooley).</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The Menelaion" data-title="The Menelaion through time (timeline)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The Menelaion · I do — the site in phases</p>
+  <h2>The Menelaion through time</h2>
+  <figure class="diagram l25-tlfig"><svg class="l25-tl" viewBox="0 0 1600 640" role="img" aria-label="The Menelaion through time, a timeline not drawn to scale, in eight phases: Mycenaean remains of the 15th to 13th centuries BC; a shrine founded about 700 BC, probably where Menelaus and Helen were thought to have lived; offerings to Helen from the mid- to late 7th century to about 570 BC; terracotta roof-decorations in a 7th-century style and a Doric triglyph of the 6th to early 5th centuries BC; Euthykrenes&#8217; stele to Menelaus in the early 5th century BC; Cynisca&#8217;s inscribed Doric capital to Helen, probably after her Olympic victory of 396 or 392 BC; Pausanias&#8217; visit in the 2nd century AD; and H. W. Catling&#8217;s excavations of 1973 to 1976, which found inscriptions naming the couple.">
+<line class="l25-axis" x1="30" y1="312" x2="1570" y2="312"/>
+<rect class="l25-gap" x="192.0" y="296" width="18" height="32"/><line class="l25-brk" x1="188.0" y1="326" x2="198.0" y2="298"/><line class="l25-brk" x1="204.0" y1="326" x2="214.0" y2="298"/>
+<rect class="l25-gap" x="1182.0" y="296" width="18" height="32"/><line class="l25-brk" x1="1178.0" y1="326" x2="1188.0" y2="298"/><line class="l25-brk" x1="1194.0" y1="326" x2="1204.0" y2="298"/>
+<rect class="l25-gap" x="1380.0" y="296" width="18" height="32"/><line class="l25-brk" x1="1376.0" y1="326" x2="1386.0" y2="298"/><line class="l25-brk" x1="1392.0" y1="326" x2="1402.0" y2="298"/>
+<text class="l25-tnote" x="1570.0" y="628.0" text-anchor="end">not to scale: each break in the line hides centuries</text>
+<g class="linked l25-ph" id="l25m1"><line class="l25-lead" x1="201.0" y1="196" x2="151" y2="300"/><circle class="l25-dot" cx="151" cy="312" r="12"/><text class="l25-num" x="151" y="318" text-anchor="middle">1</text><rect x="16.0" y="14" width="370" height="182" rx="12"/><text class="l25-dt" x="32.0" y="47.0" text-anchor="start">1 · 15th–13th c. BC</text><text class="l25-nm" x="32.0" y="82.0" text-anchor="start">Mycenaean remains</text><text class="l25-dl" x="32.0" y="115.0" text-anchor="start">the Late Bronze Age, when</text><text class="l25-dl" x="32.0" y="143.0" text-anchor="start">legend set the Trojan War</text><text class="l25-src" x="32.0" y="176.0" text-anchor="start">Cooley, intro to C29–C31</text></g>
+<g class="linked l25-ph" id="l25m2"><line class="l25-lead" x1="201.0" y1="386" x2="251" y2="324"/><circle class="l25-dot" cx="251" cy="312" r="12"/><text class="l25-num" x="251" y="318" text-anchor="middle">2</text><rect x="16.0" y="386" width="370" height="182" rx="12"/><text class="l25-dt" x="32.0" y="419.0" text-anchor="start">2 · c. 700 BC</text><text class="l25-nm" x="32.0" y="454.0" text-anchor="start">A shrine is founded</text><text class="l25-dl" x="32.0" y="487.0" text-anchor="start">probably where Menelaus and</text><text class="l25-dl" x="32.0" y="515.0" text-anchor="start">Helen were thought to have lived</text><text class="l25-src" x="32.0" y="548.0" text-anchor="start">Cooley: “the obvious guess”</text></g>
+<g class="linked l25-ph" id="l25m3"><line class="l25-lead" x1="597.0" y1="196" x2="547" y2="300"/><circle class="l25-dot" cx="547" cy="312" r="12"/><text class="l25-num" x="547" y="318" text-anchor="middle">3</text><rect x="412.0" y="14" width="370" height="182" rx="12"/><text class="l25-dt" x="428.0" y="47.0" text-anchor="start">3 · mid/late 7th c. – c. 570 BC</text><text class="l25-nm" x="428.0" y="82.0" text-anchor="start">Offerings to Helen</text><text class="l25-dl" x="428.0" y="115.0" text-anchor="start">a bronze flask (name restored);</text><text class="l25-dl" x="428.0" y="143.0" text-anchor="start">a bronze claw: “To Helen”</text><text class="l25-src" x="428.0" y="176.0" text-anchor="start">Cooley C29, C30</text></g>
+<g class="linked l25-ph" id="l25m4"><line class="l25-lead" x1="597.0" y1="386" x2="647" y2="324"/><circle class="l25-dot" cx="647" cy="312" r="12"/><text class="l25-num" x="647" y="318" text-anchor="middle">4</text><rect x="412.0" y="386" width="370" height="182" rx="12"/><text class="l25-dt" x="428.0" y="419.0" text-anchor="start">4 · 7th – early 5th c. BC</text><text class="l25-nm" x="428.0" y="454.0" text-anchor="start">Up-to-date building</text><text class="l25-dl" x="428.0" y="487.0" text-anchor="start">roof-decorations (7th c. style);</text><text class="l25-dl" x="428.0" y="515.0" text-anchor="start">a triglyph (6th–early 5th c.)</text><text class="l25-src" x="428.0" y="548.0" text-anchor="start">Cavanagh, in Cooley</text></g>
+<g class="linked l25-ph" id="l25m5"><line class="l25-lead" x1="993.0" y1="196" x2="943" y2="300"/><circle class="l25-dot" cx="943" cy="312" r="12"/><text class="l25-num" x="943" y="318" text-anchor="middle">5</text><rect x="808.0" y="14" width="370" height="182" rx="12"/><text class="l25-dt" x="824.0" y="47.0" text-anchor="start">5 · early 5th c. BC</text><text class="l25-nm" x="824.0" y="82.0" text-anchor="start">A stele for Menelaus</text><text class="l25-dl" x="824.0" y="115.0" text-anchor="start">“Euthykrenes dedicated this”:</text><text class="l25-dl" x="824.0" y="143.0" text-anchor="start">probably a large bronze statuette</text><text class="l25-src" x="824.0" y="176.0" text-anchor="start">Cooley C31</text></g>
+<g class="linked l25-ph" id="l25m6"><line class="l25-lead" x1="993.0" y1="386" x2="1043" y2="324"/><circle class="l25-dot" cx="1043" cy="312" r="12"/><text class="l25-num" x="1043" y="318" text-anchor="middle">6</text><rect x="808.0" y="386" width="370" height="182" rx="12"/><text class="l25-dt" x="824.0" y="419.0" text-anchor="start">6 · after 396 or 392 BC?</text><text class="l25-nm" x="824.0" y="454.0" text-anchor="start">A royal woman’s gift</text><text class="l25-dl" x="824.0" y="487.0" text-anchor="start">Cynisca: an inscribed Doric</text><text class="l25-dl" x="824.0" y="515.0" text-anchor="start">capital and abacus to Helen</text><text class="l25-src" x="824.0" y="548.0" text-anchor="start">Hodkinson, in Cooley</text></g>
+<g class="linked l25-ph l25-legend" id="l25m7"><line class="l25-lead" x1="1389.0" y1="196" x2="1339" y2="300"/><circle class="l25-dot" cx="1339" cy="312" r="12"/><text class="l25-num" x="1339" y="318" text-anchor="middle">7</text><rect x="1204.0" y="14" width="370" height="182" rx="12"/><text class="l25-dt" x="1220.0" y="47.0" text-anchor="start">7 · 2nd c. AD</text><text class="l25-nm" x="1220.0" y="82.0" text-anchor="start">Pausanias visits</text><text class="l25-dl" x="1220.0" y="115.0" text-anchor="start">a temple; the couple were said</text><text class="l25-dl" x="1220.0" y="143.0" text-anchor="start">to be buried here</text><text class="l25-src" x="1220.0" y="176.0" text-anchor="start">Pausanias 3.19.9 (not in Cooley)</text></g>
+<g class="linked l25-ph l25-now" id="l25m8"><line class="l25-lead" x1="1389.0" y1="386" x2="1439" y2="324"/><circle class="l25-dot" cx="1439" cy="312" r="12"/><text class="l25-num" x="1439" y="318" text-anchor="middle">8</text><rect x="1204.0" y="386" width="370" height="182" rx="12"/><text class="l25-dt" x="1220.0" y="419.0" text-anchor="start">8 · 1973–76</text><text class="l25-nm" x="1220.0" y="454.0" text-anchor="start">Catling excavates</text><text class="l25-dl" x="1220.0" y="487.0" text-anchor="start">found inscriptions naming the</text><text class="l25-dl" x="1220.0" y="515.0" text-anchor="start">couple; a stepped stone platform</text><text class="l25-src" x="1220.0" y="548.0" text-anchor="start">Cooley; platform: unit textbook</text></g>
+</svg>
+    <figcaption>Drawn for this lesson from Cooley’s introduction to C29–C31, the inscriptions C29–C31, Cavanagh and Hodkinson (in Cooley), and the unit textbook. Not to scale. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l25m1" hidden></i>
+  <i class="reveal" data-also="#l25m2" hidden></i>
+  <i class="reveal" data-also="#l25m3" hidden></i>
+  <i class="reveal" data-also="#l25m4" hidden></i>
+  <i class="reveal" data-also="#l25m5" hidden></i>
+  <i class="reveal" data-also="#l25m6" hidden></i>
+  <i class="reveal" data-also="#l25m7" hidden></i>
+  <i class="reveal" data-also="#l25m8" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The Menelaion" data-title="What the finds confirm" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">2 · The Menelaion · We do — what the inscriptions confirm</p>
+  <h2>Who was worshipped here — and how do we know?</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source · three offerings from the Menelaion</div>
+        <p class="quote sm">Deinis dedicated these to [Helen, wife of] Menelaos.</p>
+        <p class="prov">Inscribed bronze aryballos (small flask), mid- to late 7th century BC · Cooley C29</p>
+        <p class="quote sm">To Helen</p>
+        <p class="prov">Bronze harpax (claw-like object), c. 570 BC · Cooley C30</p>
+        <p class="quote sm">Euthykrenes dedicated this to Menelaos.</p>
+        <p class="prov">Small limestone stele, early 5th century BC; it probably held a large bronze statuette, now lost · Cooley C31</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · a historian of Sparta on a royal woman’s gift</div>
+        <p class="quote sm">a small inscribed Doric capital and abacus that she dedicated to Helen at the sanctuary of the Menelaion</p>
+        <p class="prov">S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, in Cooley (ed.), <i>Sparta</i> (2023), on Cynisca, the king’s daughter who won at Olympia in 396 or 392 BC</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What evidence confirms who was worshipped here?</p>
+      <p class="body reveal">Inscriptions naming both: “To Helen” on the harpax, Menelaus on Euthykrenes’ stele, and Cynisca’s capital to Helen. On the flask, Helen’s name is in square brackets: restored by modern editors, so it is not proof on its own.</p>
+      <p class="qprompt reveal">What does Pausanias add?</p>
+      <p class="body reveal">Very little: in the 2nd century AD he mentions only a temple at Therapne where Menelaus and Helen were said to be buried (3.19.9, paraphrased in the unit textbook). Excavation found the offerings.</p>
+      <div class="src reveal">
+        <div class="k">A conclusion, not a narrative · model, written for this lesson</div>
+        <p class="quote sm model">The Menelaion reveals a city that tied its identity to the heroic past: from about 700 BC Spartans honoured Menelaus and Helen, probably where they believed the couple had lived, and inscribed offerings to each of them show the cult still alive in the classical period.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The Menelaion" data-title="Notes 2 — The Menelaion" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The Menelaion</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L25 · Architecture: three sanctuaries</b></span><span>2 · The Menelaion</span></div>
+    <div class="row"><div class="cq">Location, deity, key feature?</div>
+      <div class="nts reveal"><b>Therapne</b>, high ground SE of Sparta, across the Eurotas <span class="sep">·</span> hero shrine of <b>Menelaus and Helen</b> <span class="sep">·</span> stepped stone platform, prob. carried the shrine (textbook) <span class="sep">·</span> Catling 1973–76: inscriptions</div></div>
+    <div class="row"><div class="cq">Dates?</div>
+      <div class="nts reveal">Mycenaean remains <b>15th–13th c. BC</b> → shrine <b>c. 700 BC</b> → offerings mid/late 7th c. to early 5th c. BC and later (Cynisca, after 396 or 392 BC?)</div></div>
+    <div class="row"><div class="cq">What evidence confirms who was worshipped?</div>
+      <div class="nts reveal">“To Helen” (C30) <span class="sep">·</span> Euthykrenes’ stele to Menelaus (C31) <span class="sep">·</span> Cynisca’s Doric capital to Helen (Hodkinson) <span class="sep">·</span> C29: Helen’s name <b>restored</b></div></div>
+    <div class="row"><div class="cq">Pausanias v. excavation?</div>
+      <div class="nts reveal">Paus. (2nd c. AD): only a temple, where the couple were said to be buried (3.19.9) <span class="sep">·</span> excavation: phases, offerings, platform, a triglyph</div></div>
+    <div class="row"><div class="cq">What does it reveal?</div>
+      <div class="nts reveal">Identity tied to the <b>heroic past</b>: prob. where the couple “were thought to have lived” (Cooley) <span class="sep">·</span> cult lasting centuries</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Artemis Orthia" data-title="Orthia: a small temple, a rich sanctuary" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">3 · Artemis Orthia · We do — from the finds to the building</p>
+  <h2>Orthia: a small temple, a rich sanctuary</h2>
+  <div class="split" style="--cols:.9fr 1.8fr">
+    <div class="stack tight">
+      <div class="l25-fig"><figure class="figure contain"><img src="images/clarke-8-8-artemis-orthia.jpg" alt="Remains of the Sanctuary of Artemis Orthia beside the Eurotas"><figcaption>Remains of the Sanctuary of Artemis Orthia beside the Eurotas — <span class="cr">Clarke & Garner, Fig 8.8</span></figcaption></figure></div>
+      <div class="card quiet sm"><div class="k">Recall · Lesson 10</div><p class="body">Thousands of lead figurines, carved ivories, and boys’ contests: Arexippos’ prize sickles (4th century BC) and, much later, the Roman whipping.</p></div>
+    </div>
+    <div class="stack tight">
+      <div class="cols c2">
+      <div class="card sm reveal"><div class="k">The site</div><p class="body">By the Eurotas at Limnai, “just outside the town of Sparta” (Cooley); pottery from c. 900 BC. Excavated early in the 20th century (published by Dawkins, 1929): an altar, and a temple rebuilt more than once.</p></div>
+      <div class="card sm reveal"><div class="k">The temple</div><p class="body">About 16 × 7 m, roughly one-eighth of Hera’s at Olympia — but roofed with terracotta decorations in a style “imitated widely in the Peloponnese” (Cavanagh).</p></div>
+      <div class="card sm reveal"><div class="k">Performance</div><p class="body">Clay masks were dedicated here “by players of a series of stock characters” (Cavanagh).</p></div>
+      <div class="card sm reveal"><div class="k">Later building</div><p class="body">Semicircular seating of a Roman theatre, 3rd century AD: the whipping described by Cicero (C92) and Pausanias (C93) seems to have drawn enough spectators to need it (Cooley).</p></div>
+      </div>
+      <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">A modest building at the centre of a crowded religious life — contests, performances, thousands of offerings. Spartans invested in worship, not in the size of the house.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Artemis Orthia" data-title="Notes 3 — Artemis Orthia" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Artemis Orthia</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L25 · Architecture: three sanctuaries</b></span><span>3 · Artemis Orthia</span></div>
+    <div class="row"><div class="cq">Location, deity, key feature?</div>
+      <div class="nts reveal">By the <b>Eurotas</b> at Limnai, just outside the town <span class="sep">·</span> <b>Artemis Orthia</b> <span class="sep">·</span> altar + small temple, <b>c. 16 × 7 m</b> (≈ ⅛ of Hera’s at Olympia)</div></div>
+    <div class="row"><div class="cq">Skilled or plain?</div>
+      <div class="nts reveal">Terracotta roof-decorations → style “imitated widely in the Peloponnese” (Cavanagh) <span class="sep">·</span> masks of stock characters → performances</div></div>
+    <div class="row"><div class="cq">Dates and excavation?</div>
+      <div class="nts reveal">Pottery from c. 900 BC <span class="sep">·</span> British School at Athens, early 20th c.; Dawkins 1929 <span class="sep">·</span> Roman theatre seating, <b>3rd c. AD</b> (prob. for watching the whipping)</div></div>
+    <div class="row"><div class="cq">What does it reveal?</div>
+      <div class="nts reveal">Small building, <b>rich sanctuary</b>: worship, contests, performance, many worshippers → wealth into offerings and festivals, not size</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Amyklaion" data-title="Source 13.3 — the Amyklaion: a site" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">4 · The Amyklaion · Source 13.3, part 1 — the site</p>
+  <h2>The Amyklaion: Apollo’s great sanctuary</h2>
+  <div class="split" style="--cols:1fr 1.5fr">
+    <div class="stack tight">
+      <div class="l25-fig"><figure class="figure contain"><img src="images/clarke-7-7-amyklaion.jpg" alt="The site of the sanctuary of Apollo at Amyklai"><figcaption>The site of the sanctuary of Apollo at Amyklai — <span class="cr">Clarke & Garner, Fig 7.7</span></figcaption></figure></div>
+      <p class="small"><b>Provenance:</b> sanctuary of Apollo and Hyacinthus, Amyklai, about 5–6 km south of Sparta · pottery from about 900 BC · throne built in the late 6th century BC · known from scattered blocks and offerings found in excavations (the unit textbook), and from Pausanias, <i>Description of Greece</i> 3.18.9–3.19.5 (2nd century AD).</p>
+    </div>
+    <div class="cols c2">
+      <div class="card sm reveal"><div class="k">An old sanctuary</div><p class="body">Pottery of about 900 BC “has been found at sanctuaries which were to be the focus of Sparta’s calendar of festivals: of Apollo and Hyakinthos at Amyklai” (Cavanagh). A bronze handle of the late 7th–early 6th century reads: “Dorkonidas/Dorkoilidas dedicated (this) to Apelo.” (Cooley C1)</p></div>
+      <div class="card sm reveal"><div class="k">Home of the Hyakinthia</div><p class="body">“The people of Amyklai always return for the Hyakinthia for the hymn to Apollo” (Xenophon, <i>Hellenika</i> 4.5.11, Cooley C70).</p></div>
+      <div class="card sm reveal"><div class="k">A place for treaties</div><p class="body">In 421 BC Sparta and Athens agreed to set up a stele, “the one at Lakedaimon next to the statue of Apollo at Amyklai” (Thucydides 5.23, Cooley B18).</p></div>
+      <div class="card sm reveal"><div class="k">The throne of Apollo</div><p class="body">Excavation has recovered only scattered blocks (the unit textbook), with “masons’ names scratched on architectural blocks from the late-sixth-century throne of Apollo” (Hodkinson).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Amyklaion" data-title="Source 13.3 — Pausanias describes the throne" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">4 · The Amyklaion · Source 13.3, part 2 — a description · We do — OVPRL</p>
+  <h2>Pausanias describes the throne of Apollo</h2>
+  <div class="split" style="--cols:1fr 1.3fr">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source · Pausanias, paraphrased</div>
+        <p class="body">The throne was made by <b>Bathycles of Magnesia</b>, a Greek artist probably from Asia Minor, and carved with scenes from myth. In the middle stood an ancient bronze <b>Apollo</b>, about 30 cubits (roughly 13 metres) tall by his guess, which apart from its face, hands and feet looked like a bronze pillar. It stood on what was said to be the <b>tomb of Hyacinthus</b>.</p>
+        <p class="prov">Pausanias, <i>Description of Greece</i> 3.18.9–3.19.5 · 2nd century AD · paraphrased in the unit textbook, as it is not in Cooley</p>
+      </div>
+      <div class="note" data-code="evidence"><p class="body">Cooley on Pausanias: his work was “based on his own visits”, and he “was particularly interested in ancient monuments, cults and traditions, and offers many useful details on these, often confirmed by archaeology”.</p></div>
+    </div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>OVPRL</th><th>Question</th><th>Model note</th></tr>
+      <tr><td><b>O</b></td><td>Pausanias saw the throne some 650–700 years after it was built. What might have changed?</td><td class="reveal">Repairs, losses, rebuilding: in the agora he admits the Persian Stoa had been “altered” (Cooley K2)</td></tr>
+      <tr><td><b>V</b></td><td>What does he reveal that the stones could not?</td><td class="reveal">The maker, the carved myths, the colossal Apollo, the tomb of Hyacinthus</td></tr>
+      <tr><td><b>P</b></td><td>Why would a travel guide describe the decoration in detail?</td><td class="reveal">Pausanias himself was ‘particularly interested in ancient monuments, cults and traditions’ (Cooley), and he wrote a guide based on his own visits</td></tr>
+      <tr><td><b>R</b></td><td>How do the masons’ names support him, and where do we rely on him alone?</td><td class="reveal">They confirm a late-6th-century throne really stood here; its look, maker and size rest on him (the height is a guess)</td></tr>
+      <tr><td><b>L</b></td><td>How did 5th-century Spartans use the sanctuary? Can either source tell us?</td><td class="reveal">Not directly. For use, turn to the Hyakinthia (Xenophon, C70) and the treaty stele (B18)</td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Amyklaion" data-title="Hinge: who made the throne?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>Who made the throne of Apollo at Amyklai, according to Pausanias?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Gitiadas, a local Spartan architect</span></li>
+    <li id="l25hq2"><span class="n">2</span><span>Bathycles of Magnesia, an artist from outside Laconia</span></li>
+    <li><span class="n">3</span><span>Lycurgus, the lawgiver</span></li>
+    <li><span class="n">4</span><span>H. W. Catling, the excavator of the Menelaion</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l25hq2" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>2 — Bathycles.</b> Why it matters: Sparta’s most famous monument was made by an outsider, probably from Asia Minor — which suggests a city open to foreign skill. Gitiadas, “a local architect”, oversaw Athena’s Bronze House (Pausanias, Cooley K3): Sparta had its own masters too.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Amyklaion" data-title="Notes 4 — The Amyklaion" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The Amyklaion</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L25 · Architecture: three sanctuaries</b></span><span>4 · The Amyklaion</span></div>
+    <div class="row"><div class="cq">Location, deity, key feature?</div>
+      <div class="nts reveal"><b>Amyklai</b>, c. 5–6 km S, at the end of the processional road <span class="sep">·</span> <b>Apollo and Hyacinthus</b>; the <b>Hyakinthia</b> <span class="sep">·</span> the <b>throne of Apollo</b>, late 6th c. BC</div></div>
+    <div class="row"><div class="cq">Who made the throne, according to Pausanias, and why is that significant?</div>
+      <div class="nts reveal"><b>Bathycles of Magnesia</b> (prob. Asia Minor) → foreign master at Sparta’s showpiece → open to outside skill <span class="sep">·</span> cf. Gitiadas, local architect of the Bronze House (K3)</div></div>
+    <div class="row"><div class="cq">What do we owe Pausanias, and what excavation?</div>
+      <div class="nts reveal">Paus. (2nd c. AD): maker, carved myths, colossal bronze Apollo on Hyacinthus’ “tomb” <span class="sep">·</span> excavation: pottery from c. 900 BC, bronze handle (C1), scattered blocks with <b>masons’ names</b> (Hodkinson)</div></div>
+    <div class="row"><div class="cq">Why important?</div>
+      <div class="nts reveal">Amyklaians came home for the Hyakinthia (C70) <span class="sep">·</span> 421 BC treaty stele by Apollo’s statue (Thuc. 5.23, B18)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What the buildings reveal" data-title="We do — the three-site grid" data-kind="practice">
+<div class="wrap l25-dense">
+  <p class="eyebrow">5 · What the buildings reveal · We do · 10 minutes · fill in the grid</p>
+  <h2>The three-site grid</h2>
+  <p class="task l25-task">Type in the boxes (on a laptop or phone), or copy the grid into your notes. Every row needs evidence.</p>
+  <div class="tbl-scroll"><table class="tbl compact l25-grid l25-fill">
+    <tr><th></th><th>Artemis Orthia</th><th>Menelaion</th><th>Amyklaion</th></tr>
+    <tr><th>Location</th><td><textarea class="l25-in" data-k="l1" rows="1" aria-label="Orthia: location" placeholder="by the Eurotas …"></textarea></td><td><textarea class="l25-in" data-k="l2" rows="1" aria-label="Menelaion: location"></textarea></td><td><textarea class="l25-in" data-k="l3" rows="1" aria-label="Amyklaion: location"></textarea></td></tr>
+    <tr><th>Deity or hero</th><td><textarea class="l25-in" data-k="d1" rows="1" aria-label="Orthia: deity or hero"></textarea></td><td><textarea class="l25-in" data-k="d2" rows="1" aria-label="Menelaion: deity or hero"></textarea></td><td><textarea class="l25-in" data-k="d3" rows="1" aria-label="Amyklaion: deity or hero"></textarea></td></tr>
+    <tr><th>Date</th><td><textarea class="l25-in" data-k="t1" rows="1" aria-label="Orthia: date"></textarea></td><td><textarea class="l25-in" data-k="t2" rows="1" aria-label="Menelaion: date" placeholder="Mycenaean remains …"></textarea></td><td><textarea class="l25-in" data-k="t3" rows="1" aria-label="Amyklaion: date"></textarea></td></tr>
+    <tr><th>Key features</th><td><textarea class="l25-in" data-k="f1" rows="2" aria-label="Orthia: key features"></textarea></td><td><textarea class="l25-in" data-k="f2" rows="2" aria-label="Menelaion: key features"></textarea></td><td><textarea class="l25-in" data-k="f3" rows="2" aria-label="Amyklaion: key features"></textarea></td></tr>
+    <tr><th>Evidence: excavation or Pausanias?</th><td><textarea class="l25-in" data-k="e1" rows="2" aria-label="Orthia: evidence"></textarea></td><td><textarea class="l25-in" data-k="e2" rows="2" aria-label="Menelaion: evidence"></textarea></td><td><textarea class="l25-in" data-k="e3" rows="2" aria-label="Amyklaion: evidence"></textarea></td></tr>
+    <tr><th>What it reveals</th><td><textarea class="l25-in" data-k="r1" rows="2" aria-label="Orthia: what it reveals" placeholder="This reveals …"></textarea></td><td><textarea class="l25-in" data-k="r2" rows="2" aria-label="Menelaion: what it reveals" placeholder="This reveals …"></textarea></td><td><textarea class="l25-in" data-k="r3" rows="2" aria-label="Amyklaion: what it reveals" placeholder="This reveals …"></textarea></td></tr>
+  </table></div>
+  <p class="small">Your typing stays in this browser on this device. <button class="btn l25-clear" type="button">Clear my grid</button></p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What the buildings reveal" data-title="The three-site grid — model" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">5 · What the buildings reveal · check — the completed grid</p>
+  <h2>The three-site grid, completed</h2>
+  <div class="tbl-scroll"><table class="tbl compact l25-grid">
+    <tr><th></th><th>Artemis Orthia</th><th>Menelaion</th><th>Amyklaion</th></tr>
+    <tr class="reveal"><th>Location</th><td>Beside the Eurotas at Limnai, just outside the town</td><td>Therapne, on high ground across the Eurotas, south-east of the town</td><td>Amyklai, about 5–6 km south, at the end of the processional road</td></tr>
+    <tr class="reveal"><th>Deity or hero</th><td>Artemis Orthia</td><td>Menelaus and Helen (hero cult)</td><td>Apollo and Hyacinthus</td></tr>
+    <tr class="reveal"><th>Date</th><td>Pottery from c. 900 BC; Archaic temple; Roman seating, 3rd c. AD</td><td>Mycenaean remains, 15th–13th c. BC; shrine c. 700 BC</td><td>Pottery from c. 900 BC; throne, late 6th c. BC</td></tr>
+    <tr class="reveal"><th>Key features</th><td>Altar; small temple (c. 16 × 7 m) with terracotta roof-decorations; masks, figurines, ivories</td><td>Stepped stone platform that probably carried the shrine (the unit textbook); a triglyph; inscribed offerings</td><td>The throne of Apollo, carved with myths; a colossal bronze Apollo on Hyacinthus’ supposed tomb</td></tr>
+    <tr class="reveal"><th>Evidence: excavation or Pausanias?</th><td>Mainly excavation (British School at Athens; Dawkins 1929); Pausanias describes Roman-era ritual, the whipping</td><td>Excavation (Catling, 1973–76): offerings name the couple; Pausanias mentions only a temple</td><td>Both: blocks with masons’ names, offerings (C1); the throne’s look from Pausanias alone</td></tr>
+    <tr class="reveal"><th>What it reveals</th><td>A modest building in a busy sanctuary: worship, contests and performance; wealth spent on offerings, not size</td><td>Identity tied to the heroic past; a cult kept up for centuries</td><td>Sparta’s showpiece: up-to-date building by an outside master, according to Pausanias, for Apollo, god of the Hyakinthia</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What the buildings reveal" data-title="Pausanias v. excavation" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · What the buildings reveal · I do — two kinds of evidence <span class="optional">If time</span></p>
+  <h2>Pausanias v. excavation</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Site</th><th>Pausanias (2nd century AD) tells us …</th><th>Excavation tells us …</th></tr>
+    <tr class="reveal"><td><b>Orthia</b></td><td>the Roman-era whipping at the altar (3.16.10–11, Cooley C93)</td><td>the Archaic sanctuary (a small temple, thousands of offerings) and later victors’ inscriptions, most of them Hellenistic or Roman</td></tr>
+    <tr class="reveal"><td><b>Menelaion</b></td><td>only a temple where Menelaus and Helen were said to be buried (3.19.9)</td><td>Mycenaean remains, the shrine of c. 700 BC, offerings naming the couple</td></tr>
+    <tr class="reveal"><td><b>Amyklaion</b></td><td>the throne’s maker, its carved myths and its colossal bronze Apollo (3.18.9–3.19.5)</td><td>scattered blocks with masons’ names; early offerings such as a bronze handle (C1)</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="judgement"><div class="k">The rule of thumb</div><p class="body">Pausanias tells us what stood in his own time; excavation gives dates, materials and offerings. Cooley: Book III offers “a detailed insight into perceptions of Sparta in the Roman period”. But excavated dates are rough too: they “can seldom be refined even as closely as to a generation or two” (Cavanagh).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What the buildings reveal" data-title="Thucydides 1.10 revisited" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow">5 · What the buildings reveal · Revisit Thucydides · 8 minutes · in pairs</p>
+  <h2>Was Thucydides right — or right about the wrong kind of power?</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="stack tight">
+    <div class="src">
+      <div class="k">Source · Thucydides, on Sparta’s future ruins</div>
+      <p class="quote sm">[10.2] For example, if the city of the Lakedaimonians were to be destroyed and abandoned, and <span class="code" data-code="evidence" data-letter="E">all that was left were its temples and the foundations of its buildings</span>, I suspect that future generations would find it impossible to believe historians’ accounts of its present power. … Yet to the uninformed observer its physical remains would seem to fall far short of the reality, because it lacks the conventional layout of a modern city, <span class="code" data-code="counter" data-letter="C">has no temples or extravagant public buildings</span>, and is simply a collection of villages typical of ancient Greek society.</p>
+      <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 1.10.2 · an Athenian, writing in the late 5th century BC · trans. B. Wilson · Cooley G2</p>
+    </div>
+      <div class="src reveal" data-veil="Show a model verdict">
+        <div class="k">A two-sentence verdict · model, written for this lesson</div>
+        <p class="quote sm model">Thucydides was right about scale: Sparta had no walls and only small temples. But he was right about the wrong kind of power, because the sanctuaries show a city that spent its wealth on gods, festivals and offerings and tied itself to the heroic past.</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="counter">Did Sparta really have “no temples”?</p>
+      <p class="body reveal" data-paint="evidence">No: two sentences earlier he imagines “its temples” surviving. Read it as no <i>extravagant</i> temples or public buildings — and the 16 × 7 m temple of Orthia fits.</p>
+      <div class="note reveal" data-code="analysis"><div class="k">Right about scale</div><p class="body">No walls until the Hellenistic period; small temples; large temples “hard to identify” (Cavanagh).</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">… but not about power</div><p class="body">The sanctuaries show wealth spent on gods, festivals and offerings, up-to-date building at Amyklai, and claims to the heroic past at the Menelaion. Cavanagh: Thucydides’ “collection of villages” is “an overstatement”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What the buildings reveal" data-title="Notes 5 — What the buildings reveal" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>What the buildings reveal</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L25 · Architecture: three sanctuaries</b></span><span>5 · What they reveal</span></div>
+    <div class="row"><div class="cq">Pausanias v. excavation?</div>
+      <div class="nts reveal">Paus. = what stood in <b>his</b> time (Roman) <span class="sep">·</span> excavation = dates, materials, offerings (but dates rough) <span class="sep">·</span> Amyklaion’s look → Paus. alone</div></div>
+    <div class="row"><div class="cq">Was Thucydides right about Spartan architecture? One for, one against.</div>
+      <div class="nts reveal"><b>For</b>: no walls, small temples (Orthia c. 16 × 7 m), no “extravagant” buildings <span class="sep">·</span> <b>Against</b>: he imagines “its temples” surviving; roof-decorations copied widely; the throne at Amyklai; “an overstatement” (Cavanagh)</div></div>
+    <div class="row"><div class="cq">What do the sanctuaries reveal?</div>
+      <div class="nts reveal">Wealth spent on <b>gods, festivals, offerings</b> <span class="sep">·</span> <b>heroic past</b> (Menelaion) <span class="sep">·</span> outside skill + up-to-date style (Amyklaion) <span class="sep">·</span> small ≠ austere</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What the buildings reveal" data-title="Summary" data-kind="notes">
+<div class="wrap l25-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>Where were the three sanctuaries, and whom did each honour?</li>
+          <li>What was Spartan religious building like?</li>
+          <li>What does it reveal — and how do we know?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">Sparta’s three great sanctuaries were Artemis Orthia beside the Eurotas at Limnai, the Menelaion at Therapne across the river, where Menelaus and Helen were honoured as heroes, and the Amyklaion of Apollo and Hyacinthus about 5–6 km south. Their temples were small even for their time, but finely made and up to date, from terracotta roof-decorations copied across the Peloponnese to the late-6th-century throne of Apollo, which Pausanias credits to Bathycles of Magnesia. Excavation and Pausanias together show a city that spent its wealth on gods, festivals and the heroic past rather than on grand buildings, although Pausanias saw these sites only in Roman times.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Sacred buildings: small, but skilled</label></li>
+        <li><label><input type="checkbox"> 2 · The Menelaion: phases and offerings</label></li>
+        <li><label><input type="checkbox"> 3 · Orthia: small temple, rich sanctuary</label></li>
+        <li><label><input type="checkbox"> 4 · The Amyklaion: the throne and Pausanias</label></li>
+        <li><label><input type="checkbox"> 5 · What the buildings reveal; Thucydides</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 · Section II · Question 11 (c) · 7 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">What do</span> <span class="code" data-code="keyterm" data-letter="K">art and architecture</span> <span class="code" data-code="directive" data-letter="D">reveal about</span> <span class="code" data-code="keyterm" data-letter="K">cultural and everyday life</span> <span class="code" data-code="scope" data-letter="S">in Sparta in this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Lesson 24 took this question apart and wrote the art half. Today: the architecture half — then the whole answer.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — recap" data-kind="hsc">
+<div class="wrap l25-dense">
+  <p class="eyebrow">HSC 2022 Q11(c) · recap from Lesson 24 · the criteria and the feedback</p>
+  <h2>What the question asks — and what the markers rewarded</h2>
+  <div class="cols c3">
+    <div class="note" data-code="directive"><div class="k">What do … reveal</div><p class="body">Not a glossary key word. The criteria reward an “explanation”: name the building, then say what it shows and why.</p></div>
+    <div class="note" data-code="keyterm"><div class="k">Art and architecture</div><p class="body">Both halves. Architecture: the Amyklaion, the Menelaion and the Sanctuary of Artemis Orthia — the syllabus list.</p></div>
+    <div class="note" data-code="scope"><div class="k">7 marks</div><p class="body">About 12–13 minutes · a judgement first · each object or building followed by what it reveals.</p></div>
+  </div>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll reveal"><table class="tbl crit compact l25-marks">
+      <tr><th>Marks</th><th>Criteria (2022, part (c)) — top two bands</th></tr>
+      <tr><td class="m">6–7</td><td>Presents a well-developed and detailed explanation relevant to the question · Communicates ideas and information coherently, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–5</td><td>Presents an explanation relevant to the question · Communicates ideas and information clearly, using appropriate historical terms and concepts</td></tr>
+    </table></div>
+    <div class="note reveal" data-code="judgement"><div class="k">The 2022 markers’ feedback</div>
+      <p class="fb">In better responses, students were able to <span class="q">use examples of specific art and architecture to draw revelations about cultural and everyday life (c)</span>Areas for students to improve include <span class="q">avoiding a narrative response on cultural and everyday life, instead focusing on what art and architecture reveal about it (c)</span></p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — NESA’s architecture point, checked against Cooley" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · We do — NESA’s “answers could include”, the architecture point</p>
+  <h2>NESA’s architecture point — checked against Cooley</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l25-pt l25-quiet">– Statuette of girl doing exercise, revealing the Spartan desire for fit and healthy women <span class="small">(Lesson 24)</span></span>
+      <span class="l25-pt">– <span class="code" data-code="keyterm" id="n25-1">Architecture of Sparta reveals the austere nature of buildings</span><span class="mk">1</span> <span class="code" data-code="evidence" id="n25-2">although some religious sanctuaries</span><span class="mk">2</span> <span class="code" data-code="scope" id="n25-3">like the Amyclaeon</span><span class="mk">3</span> <span class="code" data-code="counter" id="n25-4">are considered more exuberant</span><span class="mk">4</span></span>
+      <span class="l25-pt l25-quiet">– Lakonian painted vases depict hunting scenes, warfare and drinking parties, as well as mythological beings. <span class="small">(Lesson 24)</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2022 HSC Ancient History Marking Guidelines, Section II part (c) · NESA’s spelling “Amyclaeon”</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Cooley says</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n25-1"><span class="mk">1</span><b>Small, yes — “austere”, only partly</b><span class="tx">Cavanagh: “Even for their time, these are modest buildings”, and in the Classical period “monumentality was generally muted”. But in the same passage, on the temples’ roof-decorations and other Early Archaic finds, he says their “skill and grace” undermine “the notion of a grim austerity”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#n25-2"><span class="mk">2</span><b>Mostly religious</b><span class="tx">Most of Sparta’s surviving notable architecture is religious: a triglyph at the Menelaion, the throne at Amyklai, and Athena’s Bronze House — Cavanagh’s example of “a taste for unusual monuments” — though Pausanias calls the Persian Stoa “The most impressive thing in the agora” (K2).</span></div>
+      <div class="anote reveal" data-code="scope" data-hl="#n25-3"><span class="mk">3</span><b>The Amyklaion: what is certain</b><span class="tx">Hodkinson: masons’ names on blocks “from the late-sixth-century throne of Apollo”. Cavanagh: the throne shows Spartans “au fait with the latest developments in architecture”.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n25-4"><span class="mk">4</span><b>“Considered” — on what evidence?</b><span class="tx">NESA names no one. The exuberance — carved myths, a colossal bronze Apollo — comes from Pausanias, who saw it some 650–700 years later. Use it with his date.</span></div>
+      <div class="verdict reveal"><b>NESA’s point holds, with two qualifications:</b> small in scale but skilled, and the throne’s splendour rests on Pausanias.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> NESA names only the Amyklaion. Add the Menelaion (the heroic past) and Orthia (a small temple in a rich sanctuary).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — a plan for the whole answer" data-kind="hsc">
+<div class="wrap l25-dense">
+  <p class="eyebrow">HSC 2022 Q11(c) · We do — one answer, two paragraphs</p>
+  <h2>A plan for the whole answer</h2>
+  <div class="tbl-scroll"><table class="tbl compact l25-plan">
+    <tr><th>Move</th><th>What to write</th><th>Evidence</th><th>→ What it reveals</th></tr>
+    <tr class="reveal"><td>1 · Judgement<span class="l25-from">Lesson 24, sentence 1</span></td><td colspan="3">Art and architecture reveal a Sparta more skilled, outward-looking and devoted to the gods than the austere stereotype suggests — but its display went mostly into sanctuaries, not grand public buildings.</td></tr>
+    <tr class="reveal"><td>2 · Art<span class="l25-from">Lesson 24’s paragraph</span></td><td>Orthia ivories · the bronze girl · black-figure vases · lead figurines · the later Archaic “apparent decline”</td><td>Cooley Fig. 1 · D64 · the Arkesilas cup · Cavanagh</td><td>costly piety, contacts abroad, active girls, festival-goers — then change</td></tr>
+    <tr class="reveal"><td>3 · Architecture<span class="l25-from">today’s paragraph</span></td><td>small temples, fine roof-decorations · the throne at Amyklai · the Menelaion</td><td>Cavanagh · Pausanias (with his date) · Cooley on the Menelaion</td><td>display in sanctuaries; up-to-date, outside skill; identity rooted in the heroic past</td></tr>
+    <tr class="reveal"><td>4 · Close</td><td colspan="3">“Overall …” — return to the judgement and refine it: small in scale, not in skill.</td></tr>
+  </table></div>
+  <div class="cols c3">
+    <div class="card sm reveal"><div class="k">Time</div><p class="body">About 12–13 minutes: 1 judgement · 5 art · 5 architecture · 1 close.</p></div>
+    <div class="card sm reveal"><div class="k">Length</div><p class="body">About 300–400 words (our estimate). Short of time? Four art objects and two sanctuaries are enough.</p></div>
+    <div class="card sm reveal"><div class="k">The thread</div><p class="body">Every object and building gets a “reveals …” or “suggests …” clause.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · You do · 12 minutes · press K for the timer</p>
+  <h2>What do art and architecture reveal about cultural and everyday life in Sparta in this period? <span class="small">(7 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">The whole answer, this time</div>
+      <ul class="body">
+        <li>a judgement in your first sentence, covering art <i>and</i> architecture</li>
+        <li>your art paragraph from Lesson 24, tightened</li>
+        <li>an architecture paragraph: at least two of the three sanctuaries, named and dated</li>
+        <li>after each building, what it reveals</li>
+        <li>one limit of the evidence: Pausanias’ date, or the scattered blocks</li>
+        <li>close with “Overall …”</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start the architecture paragraph: “Architecture shows where that display mostly went: …”</p>
+      <p class="body nq">Then: “The temple of Artemis Orthia measured only …, yet …”</p>
+      <p class="body nq">Then: “At Amyklai, the late-6th-century throne of Apollo …, which reveals …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — model, the architecture paragraph" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · annotated model, written for this lesson · paragraph 2 of 2: architecture</p>
+  <h2>Architecture: building → what it reveals → close the loop</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m25-1">Architecture shows where that display mostly went: into sanctuaries rather than civic grandeur.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m25-2">Temples were small even for their time, as the Archaic temple of Artemis Orthia measured only ‘about 16 x 7 m’,</span><span class="mk">2</span>
+      <span class="code" data-code="counter" id="m25-3">yet their terracotta roof-decorations set a style ‘imitated widely in the Peloponnese’.</span><span class="mk">3</span>
+      <span class="code" data-code="analysis" id="m25-4">At Amyklai the late-6th-century throne of Apollo, made according to Pausanias by Bathycles of Magnesia, reveals Spartans turning to outside skill to honour Apollo, the god of their most important festivals,</span><span class="mk">4</span>
+      <span class="code" data-code="counter" id="m25-5">although its splendour is known only from Pausanias, writing centuries later, and excavation has recovered only scattered blocks.</span><span class="mk">5</span>
+      <span class="code" data-code="analysis" id="m25-6">The Menelaion, a shrine of c. 700 BC beside Mycenaean remains, probably stood where Menelaus and Helen were thought to have lived, revealing a city that rooted its identity in the heroic past.</span><span class="mk">6</span>
+      <span class="code" data-code="judgement" id="m25-7">Overall, art and architecture reveal a society that spent its wealth on gods, festivals and finely made objects rather than on grand public buildings: modest in scale, but not in skill.</span><span class="mk">7</span>
+      <p class="meta">Model written for this lesson · ≈ 160 words · follows Lesson 24’s art paragraph: the whole answer ≈ 390 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m25-1"><span class="mk">1</span><b>Link, then judge</b><span class="tx">“That display” ties the paragraph to the opening judgement; the rest of the sentence is the paragraph’s claim.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m25-2"><span class="mk">2</span><b>Precise evidence</b><span class="tx">A measurement in Cavanagh’s words: NESA’s “austere nature of buildings”, made specific.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m25-3"><span class="mk">3</span><b>Qualify it</b><span class="tx">“Yet” turns small into skilled — the qualification Cavanagh makes.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m25-4"><span class="mk">4</span><b>Building → what it reveals</b><span class="tx">Named, dated, made by — then “reveals”. NESA’s “more exuberant” Amyklaion, with the claim pinned to Pausanias.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m25-5"><span class="mk">5</span><b>One clause of evaluation</b><span class="tx">The source’s date and the thin remains (“scattered blocks”: the unit textbook), in one clause: enough for 7 marks.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m25-6"><span class="mk">6</span><b>Keeps the hedge</b><span class="tx">“Probably … thought to have lived”: Cooley’s “obvious guess”, kept. The revelation is cultural: identity and the heroic past.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m25-7"><span class="mk">7</span><b>Close the loop</b><span class="tx">“Overall” returns to the opening judgement and refines it: small in scale, not in skill.</span></div>
+      <div class="verdict reveal"><b>Written to the 6–7 criteria for the architecture half:</b> named, dated buildings, each followed by what it reveals, with one limit of the evidence.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — mark your own" data-kind="hsc">
+<div class="wrap l25-dense">
+  <p class="eyebrow">HSC 2022 Q11(c) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> <span>opened with a judgement covering art <i>and</i> architecture</span></label></li>
+        <li><label><input type="checkbox"> used at least three named art objects, each with a date or find-spot</label></li>
+        <li><label><input type="checkbox"> used at least two sanctuaries, each named and dated</label></li>
+        <li><label><input type="checkbox"> followed every object and building with what it reveals</label></li>
+        <li><label><input type="checkbox"> qualified “austere”: small in scale, but skilled</label></li>
+        <li><label><input type="checkbox"> gave one limit of the evidence (Pausanias’ date; scattered blocks)</label></li>
+        <li><label><input type="checkbox"> kept the hedges: “probably”, “according to Pausanias”</label></li>
+        <li><label><input type="checkbox"> closed with “Overall …”, refining the judgement</label></li>
+      </ul>
+      <p class="small">Fewer than six ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The “reveals” test</div>
+        <p class="body">Highlight every “reveals” or “suggests” clause. Any building without one has been described, not explained — the “narrative response” the markers asked students to avoid.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the key features of ONE Spartan sanctuary.</b> (4 marks)</p>
+        <p class="body"><b>What does the Menelaion reveal about Spartan religious life in this period?</b> (5 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l25-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · written for this lesson</p>
+  <h2>Put these in order, earliest first</h2>
+  <p class="task">Write the letters in order and a date beside each.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Pausanias describes the throne of Apollo at Amyklai</span></li>
+    <li><span class="k">B</span><span>The throne of Apollo is built at Amyklai</span></li>
+    <li><span class="k">C</span><span>A shrine is set up at the Menelaion, beside Mycenaean remains</span></li>
+    <li><span class="k">D</span><span>The earliest pottery found at the sanctuaries of Apollo at Amyklai and of Orthia</span></li>
+    <li><span class="k">E</span><span>Sparta and Athens agree to set up a treaty stele next to Apollo’s statue at Amyklai</span></li>
+    <li><span class="k">F</span><span>Euthykrenes dedicates a stele to Menelaus</span></li>
+    <li><span class="k">G</span><span>Semicircular theatre seating is built at Orthia, probably for spectators of the whipping</span></li>
+    <li><span class="k">H</span><span>Arexippos sets up his prize sickles at Orthia</span></li>
+  </ul>
+  <div data-answers>
+    <p class="sol reveal">D (c. 900 BC) → C (c. 700 BC) → B (late 6th century BC) → F (early 5th century BC) → E (421 BC) → H (4th century BC) → A (2nd century AD) → G (3rd century AD)</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l25-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify</p>
+  <h2>True or false? Justify with evidence</h2>
+  <ol class="tf l25-two" data-answers>
+    <li><span class="n">1</span><span>The Menelaion stands at Therapne, south-east of Sparta, on high ground east of the Eurotas.</span>
+      <span class="sol reveal">True <span class="why">— Cooley: “south-east of Sparta, above the River Eurotas”; Therapne lies across the river, on its east bank.</span></span></li>
+    <li><span class="n">2</span><span>Pausanias says a Spartan craftsman made the throne of Apollo.</span>
+      <span class="sol no reveal">False <span class="why">— he names Bathycles of Magnesia, an outsider. Gitiadas, “a local architect”, oversaw Athena’s Bronze House (K3).</span></span></li>
+    <li><span class="n">3</span><span>The temple of Artemis Orthia was one of the largest temples in the Peloponnese.</span>
+      <span class="sol no reveal">False <span class="why">— about 16 × 7 m, roughly one-eighth of Hera’s temple at Olympia (Cavanagh).</span></span></li>
+    <li><span class="n">4</span><span>Inscribed offerings from the Menelaion name both Helen and Menelaus.</span>
+      <span class="sol reveal">True <span class="why">— “To Helen” (C30); Euthykrenes’ stele “to Menelaos” (C31). On C29, Helen’s name is restored.</span></span></li>
+    <li><span class="n">5</span><span>The theatre seating at Orthia was built in the classical period.</span>
+      <span class="sol no reveal">False <span class="why">— it belongs to the 3rd-century AD Roman theatre (Cooley).</span></span></li>
+    <li><span class="n">6</span><span>Excavation has recovered the throne of Apollo almost complete.</span>
+      <span class="sol no reveal">False <span class="why">— only scattered blocks (the unit textbook), some with masons’ names; its appearance comes from Pausanias.</span></span></li>
+    <li><span class="n">7</span><span>The style of Spartan temples’ terracotta roof-decorations was copied elsewhere in the Peloponnese.</span>
+      <span class="sol reveal">True <span class="why">— “the style was imitated widely in the Peloponnese” (Cavanagh).</span></span></li>
+    <li><span class="n">8</span><span>Pausanias’ book on Sparta mainly describes the city of the classical period.</span>
+      <span class="sol no reveal">False <span class="why">— Cooley: it offers “a detailed insight into perceptions of Sparta in the Roman period”.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>akroteria</span><span>Bathycles</span><span>Eurotas</span><span>foundations</span><span>Helen</span><span>Hyakinthia</span><span>Mycenaean</span><span>throne</span></div>
+  <ol class="cloze" data-answers>
+    <li>The temple of Artemis Orthia stood beside the River <span class="gap"><span class="sol reveal">Eurotas</span></span>.</li>
+    <li>At the Menelaion the Spartans honoured Menelaus and his wife <span class="gap"><span class="sol reveal">Helen</span></span>.</li>
+    <li>Pausanias says the throne of Apollo was made by an artist called <span class="gap"><span class="sol reveal">Bathycles</span></span>.</li>
+    <li>The Amyklaion was the home of a three-day festival called the <span class="gap"><span class="sol reveal">Hyakinthia</span></span>.</li>
+    <li>The shrine at the Menelaion was set up beside <span class="gap"><span class="sol reveal">Mycenaean</span></span> remains of the 15th–13th centuries BC.</li>
+    <li>Spartan temples were decorated with terracotta roof ornaments, including disc <span class="gap"><span class="sol reveal">akroteria</span></span>.</li>
+    <li>Masons scratched their names on the blocks of the late-6th-century <span class="gap"><span class="sol reveal">throne</span></span> of Apollo.</li>
+    <li>Thucydides imagined that only Sparta’s temples and the <span class="gap"><span class="sol reveal">foundations</span></span> of its buildings would be left.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l25-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph</p>
+  <h2>How useful is Pausanias as evidence for the throne of Apollo at Amyklai?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what, and less useful for what?</span>
+    <span class="l">Evidence</span><span>Use his description precisely, with its provenance (date, method), and the excavated evidence.</span>
+    <span class="l">Analyse</span><span>Explain what he gives us that the stones cannot.</span>
+    <span class="l">Evaluate</span><span>Weigh his date and purpose, and what Cooley says about his Book III.</span>
+    <span class="l">Resolve</span><span>Close with a refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Pausanias is very useful for what the throne of Apollo looked like, but much less useful for what it meant to classical Spartans. Writing in the 2nd century AD from his own visits, he names its maker, Bathycles of Magnesia, and describes the myths carved on it and the ancient bronze Apollo, about 30 cubits high by his guess, that stood on the supposed tomb of Hyacinthus. The scattered blocks recovered by excavation could never tell us this, so without him we would hardly know the throne’s appearance. Yet he saw it some 650–700 years after it was built, and Cooley warns that little of his account of Sparta ‘can be firmly linked to the classical period’; the excavated blocks, some with masons’ names, confirm that a throne was built in the late 6th century. Pausanias therefore shows us the monument as it stood in Roman times, which we can use for the classical city only where excavation agrees with him.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent does the architecture of Sparta’s sanctuaries support the image of an austere society? <span class="small">(15 marks)</span></h2>
+  <p class="task">Support your response with evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — for example, austere in scale, but not in skill or devotion.</li>
+    <li><b>For the image:</b> no walls until the Hellenistic period; small temples (Orthia about 16 × 7 m); large temples “hard to identify”; Thucydides 1.10.2 (Cooley G2).</li>
+    <li><b>Against it:</b> roof-decorations copied across the Peloponnese; the triglyph and Cynisca’s Doric dedication at the Menelaion; the throne at Amyklai; the Bronze House; the rich offerings; Cavanagh’s “overstatement”.</li>
+    <li><b>The evidence itself:</b> Pausanias saw Roman-era Sparta; excavated dates are rough; much of the town lies under Roman and modern building. Then your refined judgement.</li>
+  </ol>
+  <p class="small">Lesson 24’s art and today’s architecture together make this question’s evidence; the 7-mark model in section 6 is its core.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (1)" data-kind="practice notes">
+<div class="wrap prac l25-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · chapter review (1) · the Quick Check</p>
+  <h2>Review: architecture at three sanctuaries</h2>
+  <ol class="rq" data-answers>
+    <li>Give the location, deity and one key feature of each sanctuary.
+      <span class="sol reveal">Orthia: by the Eurotas at Limnai; Artemis Orthia; a small temple (c. 16 × 7 m). The Menelaion: Therapne, south-east of Sparta across the Eurotas; Menelaus and Helen; a stepped stone platform that probably carried the shrine (the unit textbook). The Amyklaion: Amyklai, about 5–6 km south; Apollo and Hyacinthus; the late-6th-century throne of Apollo.</span></li>
+    <li>What evidence confirms who was worshipped at the Menelaion?
+      <span class="sol reveal">Inscribed offerings: a bronze harpax “To Helen” (C30), Euthykrenes’ stele to Menelaus (C31) and Cynisca’s Doric capital to Helen. On the bronze flask (C29) Helen’s name is restored by editors.</span></li>
+    <li>Who made the throne of Apollo, according to Pausanias, and why is that significant?
+      <span class="sol reveal">Bathycles of Magnesia, probably from Asia Minor: Sparta’s most famous monument was the work of an outsider, which suggests a city open to foreign skill and up to date in architecture.</span></li>
+    <li>Was Thucydides right about Spartan architecture? Give one point for and one against.
+      <span class="sol reveal">For: there were no walls and only small temples, so the remains would understate Sparta’s power. Against: he imagines “its temples” surviving, the temples were finely decorated, and Cavanagh calls his “collection of villages” an overstatement.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (2)" data-kind="practice notes">
+<div class="wrap prac l25-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · chapter review (2) · written for this lesson</p>
+  <h2>Review: architecture at three sanctuaries</h2>
+  <ol class="rq" start="5" data-answers>
+    <li>Why does Cavanagh think Spartan temple building undermines the idea of a grim austerity?
+      <span class="sol reveal">Small temples, finely made: the roof-decorations were “imitated widely in the Peloponnese”, and the “skill and grace of these artefacts serve to undermine the notion of a grim austerity”.</span></li>
+    <li>Compare what Pausanias and excavation each tell us about the three sanctuaries.
+      <span class="sol reveal">Pausanias describes what stood in the 2nd century AD: the Roman whipping at Orthia, a temple at Therapne, the throne’s maker and decoration. Excavation gives dates, materials and offerings, such as the Menelaion inscriptions and the masons’ names at Amyklai.</span></li>
+    <li>What do the three sanctuaries reveal about Spartan cultural and religious life?
+      <span class="sol reveal">Wealth went into gods, festivals and offerings, not large buildings; identity was tied to the heroic past; and the best building was up to date — at Amyklai, according to Pausanias, by an outside master.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One conclusion about Spartan society that architecture supports is … because …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One limit of the evidence for it.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Sparta’s own voices — Tyrtaeus and Alcman — and how Spartans spent their leisure.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l25-credits">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Thucydides 1.10.2 and 5.23 (G2, B18, trans. B. Wilson); Xenophon, <i>Hellenika</i> 4.5.11 (C70); Pausanias 3.11.1, 3.11.3 and 3.17.1–3 (K1, K2, K3), and 3.16.10–11 (C93, referred to); Cicero, <i>Tusculan Disputations</i> 2.34 (C92, referred to); inscriptions C1, C29, C30 and C31. Pausanias 3.18.9–3.19.5 and 3.19.9 are not in Cooley: paraphrased from the unit textbook. Cooley’s introductions (literary sources; the Menelaion; Artemis; Artemis Orthia; section K), W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’ (on the masons’ names and Cynisca’s dedication, IG 5.1.235), in Cooley (ed.).</p>
+        <p class="small">Modern: R. M. Dawkins, <i>The Sanctuary of Artemis Orthia at Sparta</i> (London, 1929); H. W. Catling, ‘Excavations at the Menelaion, Sparta, 1973–1976’, <i>Archaeological Reports</i> 23 (1976–1977), 24–42.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC question, marking criteria, “answers could include” and marking feedback: NSW Education Standards Authority, 2022 HSC Ancient History examination, marking guidelines and feedback. © NESA.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images</div>
+      <ul class="small"><li>The Menelaion at Therapne: the remains of the stepped stone platform on its ridge above the Eurotas, with the snow-capped Taygetus range across the valley — Clarke & Garner, Fig 5.7</li><li>The Menelaion at Therapne, with Mt Taygetus behind — Clarke & Garner, Fig 8.7</li><li>Remains of the Sanctuary of Artemis Orthia beside the Eurotas — Clarke & Garner, Fig 8.8</li><li>The site of the sanctuary of Apollo at Amyklai — Clarke & Garner, Fig 7.7</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The map of Sparta and its sanctuaries (after Bradley, Fig 3.7) and the Menelaion timeline were drawn for this lesson.</p></div>
+  </div>
+</div>
+</section>
+
+<script>
+/* Lesson 25: the three-site grid. Typing in a box must not move the slides, so key and click
+   events from the boxes stop here; the grid is saved in this browser only. */
+(function(){
+  var KEY = "sparta-l25-grid";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".l25-in"));
+  function inBox(e){ return e.target && e.target.classList && e.target.classList.contains("l25-in"); }
+  ["keydown", "keyup", "keypress", "click"].forEach(function(type){
+    window.addEventListener(type, function(e){ if (inBox(e)) e.stopPropagation(); }, true);
+  });
+  var saved = {};
+  try{ saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; }catch(err){ saved = {}; }
+  boxes.forEach(function(b){
+    if (saved[b.dataset.k]) b.value = saved[b.dataset.k];
+    b.addEventListener("input", function(){
+      saved[b.dataset.k] = b.value;
+      try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(err){}
+    });
+  });
+  Array.prototype.slice.call(document.querySelectorAll(".l25-clear")).forEach(function(btn){
+    btn.addEventListener("click", function(){
+      boxes.forEach(function(b){ b.value = ""; });
+      saved = {};
+      try{ localStorage.removeItem(KEY); }catch(err){}
+    });
+  });
+})();
+</script>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

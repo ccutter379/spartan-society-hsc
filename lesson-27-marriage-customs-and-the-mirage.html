@@ -1,0 +1,2340 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L27 · Cultural Life IV: Marriage and the Mirage</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: Spartan marriage customs and how they fed the Spartan mirage, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 27 (Cultural and everyday life IV: marriage customs and the mirage). Every class starts l27-. */
+
+/* who says what — and when (svg_l27tl.svg) */
+.l27-tl text{font-family:var(--ui); fill:var(--ink);}
+.l27-tl .axis{stroke:var(--ink); stroke-width:4;}
+.l27-tl .tick{stroke:var(--ink); stroke-width:3;}
+.l27-tl .tick.bcad{stroke:var(--slate); stroke-dasharray:4 4;}
+.l27-tl .tk{font-size:21px; fill:var(--slate); text-anchor:middle;}
+.l27-tl .tk.sm{font-size:18px;}
+.l27-tl .band{fill:var(--tint); stroke:var(--deep); stroke-width:2;}
+.l27-tl .bandl{font-size:22px; font-weight:700; fill:var(--deep); text-anchor:middle;}
+.l27-tl .leu{stroke:var(--deep); stroke-width:3; stroke-dasharray:8 6;}
+.l27-tl .leul{font-size:20px; font-weight:700; fill:var(--deep);}
+.l27-tl .bx{fill:var(--surface); stroke-width:3;}
+.l27-tl .ld{fill:none; stroke:var(--slate); stroke-width:2.5; stroke-dasharray:4 5;}
+.l27-tl .nm{font-size:27px; font-weight:700; text-anchor:middle;}
+.l27-tl .dt{font-size:20px; fill:var(--slate); text-anchor:middle;}
+.l27-tl .cu{font-size:22px;}
+.l27-tl .pre .bx{stroke:var(--c-evidence);} .l27-tl .pre .rng, .l27-tl .pre .dot{fill:var(--c-evidence);}
+.l27-tl .pre .nm{fill:var(--c-evidence);}
+.l27-tl .post .bx{stroke:var(--c-counter);} .l27-tl .post .rng, .l27-tl .post .dot{fill:var(--c-counter);}
+.l27-tl .post .nm{fill:var(--c-counter);}
+.l27-tl .rom .bx{stroke:var(--c-judgement); stroke-width:4;} .l27-tl .rom .rng, .l27-tl .rom .dot{fill:var(--c-judgement);}
+.l27-tl .rom .nm{fill:var(--c-judgement);}
+.l27-tl .gap line{stroke:var(--c-judgement); stroke-width:3;}
+.l27-tl .gap text{fill:var(--c-judgement); font-size:24px; font-weight:700; text-anchor:middle;}
+.l27-key{display:inline-block; width:.8em; height:.8em; border-radius:2px; margin:0 .25em 0 .5em; vertical-align:-.05em;}
+.l27-key.pre{background:var(--c-evidence);} .l27-key.post{background:var(--c-counter);} .l27-key.rom{background:var(--c-judgement);}
+
+/* the timeline slide has only a heading above it, so the diagram may be taller */
+html:not(.read) .diagram.l27-tlfig svg{max-height:calc(100vh - 240px);}
+
+/* question-and-answer column beside a long source */
+.l27-qa{gap:clamp(6px,1.1vh,14px);}
+.l27-qa .note{padding-top:.5em; padding-bottom:.5em;}
+.l27-qa .note .body{font-size:calc(var(--fs-body)*.9); line-height:1.4;}
+
+/* phones: the timeline scrolls sideways at a readable size */
+@media (max-width:700px){ html.read .diagram svg.l27-tl{min-width:960px; max-height:none;} }
+
+/* custom → purpose: the fill-in table and the completed model */
+.l27-grid th, .l27-grid td{vertical-align:top;}
+.l27-grid tr > th:first-child, .l27-grid tr > td:first-child{width:17%;}
+.l27-grid td:first-child{font-weight:700; color:var(--deep);}
+.l27-grid td:nth-child(3){width:24%;}
+.l27-grid .l27-src{color:var(--slate);}
+.l27-blank td{padding:.22em .35em;}
+.l27-in{display:block; width:100%; box-sizing:border-box; resize:vertical; min-height:1.9em;
+  font:inherit; font-size:calc(var(--fs-body)*.8); line-height:1.28; color:var(--ink); background:var(--surface-2);
+  border:1px solid var(--rule); border-radius:6px; padding:.25em .45em;}
+.l27-in:focus{outline:2px solid var(--bright); outline-offset:1px; background:var(--surface);}
+.l27-in::placeholder{color:var(--slate); opacity:.75; font-style:italic;}
+.l27-task{margin:0;}
+@media (max-width:700px){ .l27-grid{min-width:660px;} }
+
+/* what Xenophon does and does not confirm */
+.l27-yn{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.32em;}
+.l27-yn li{display:grid; grid-template-columns:1.5em 1fr; gap:.4em; font-size:calc(var(--fs-body)*.9); line-height:1.36;}
+.l27-yn .yesno{font-size:1.05em;}
+
+/* small figures beside a source */
+.l27-fig .figure img{max-height:44vh; width:auto; max-width:100%; object-fit:contain; background:var(--surface);}
+html.read .l27-fig .figure img{max-height:50vh;}
+
+/* best attested · least secure */
+.l27-rank{display:grid; grid-template-columns:1fr 1fr; gap:clamp(10px,1.4vw,22px);}
+.l27-rank .card .body{font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.l27-rank ol{margin:.25em 0 0; padding-left:1.3em;} .l27-rank li{margin:.3em 0;}
+.l27-rank .l27-why{display:block; color:var(--slate); font-size:.9em;}
+@media (max-width:900px){ .l27-rank{grid-template-columns:1fr;} }
+
+/* purpose shapes each account: four writers */
+.l27-four{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(8px,1vw,16px);}
+.l27-four .card{padding:clamp(10px,1.5vh,18px) clamp(12px,1vw,18px);}
+.l27-four .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+.l27-four .l27-src{display:block; margin-top:.4em; font-size:var(--fs-chrome); color:var(--slate);}
+@media (max-width:1100px){ .l27-four{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:700px){ .l27-four{grid-template-columns:1fr;} }
+
+/* recall cards */
+.l27-recall{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(8px,1.2vw,18px);}
+.l27-recall .card .body{font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+@media (max-width:900px){ .l27-recall{grid-template-columns:1fr;} }
+
+/* two-column practice lists on wide screens */
+.l27-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l27-two{gap:.4em .7em;}
+@media (max-width:900px){ .l27-two{grid-template-columns:1fr;} }
+
+/* dense slides on short projectors (1366 x 768) */
+@media (max-height:820px){
+  html:not(.read) .l27-dense .src .quote.sm{font-size:calc(var(--fs-body)*.84); line-height:1.4;}
+  html:not(.read) .l27-dense .src .quote:not(.sm){font-size:var(--fs-body); line-height:1.45;}
+  html:not(.read) .l27-dense .src{padding:10px 16px;}
+  html:not(.read) .l27-dense .src .prov{margin-top:.4em;}
+  html:not(.read) .l27-dense .note .body, html:not(.read) .l27-dense .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.34;}
+  html:not(.read) .l27-dense .note, html:not(.read) .l27-dense .card{padding-top:8px; padding-bottom:8px;}
+  html:not(.read) .l27-dense .qprompt{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l27-dense .stack{gap:8px;}
+  html:not(.read) .l27-dense .tbl{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l27-dense .tbl.compact{font-size:calc(var(--fs-body)*.68);}
+  html:not(.read) .l27-dense .tbl td, html:not(.read) .l27-dense .tbl th{padding:.28em .5em;}
+  html:not(.read) .l27-dense .l27-in{font-size:calc(var(--fs-body)*.7); min-height:1.6em; padding:.15em .4em;}
+  html:not(.read) .l27-dense .rq{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l27-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.3em .7em;}
+  html:not(.read) .l27-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+  html:not(.read) .l27-dense .cloze{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l27-dense .fb{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l27-dense .cornell .nts, html:not(.read) .l27-dense .cornell .cq{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l27-dense .moves{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l27-dense .src .quote.sm.model{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l27-dense .keylist li{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l27-dense .l27-yn li{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l27-dense .l27-rank .card .body{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l27-dense .l27-four .card .body{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l27-dense .l27-recall .card .body{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l27-dense .tbl.crit.compact{font-size:calc(var(--fs-body)*.66);}
+  html:not(.read) .l27-dense .crit td.m{font-size:calc(var(--fs-big)*.8);}
+  html:not(.read) .l27-dense .opts li{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l27-dense .checks{gap:.3em;}
+  html:not(.read) .l27-dense .checks label{font-size:calc(var(--fs-body)*.78); line-height:1.3;}
+  html:not(.read) .l27-fig .figure img{max-height:32vh;}
+  html:not(.read) .annot .verdict{font-size:calc(var(--fs-body)*.74); padding:.35em .7em; line-height:1.32;}
+  html:not(.read) .annot .sharper{font-size:calc(var(--fs-body)*.68); line-height:1.3;}
+  html:not(.read) .l27-dense .ladder .rung .resp{font-size:calc(var(--fs-body)*.82);}
+  html:not(.read) .l27-dense .ladder .rung .why{font-size:calc(var(--fs-body)*.74);}
+}
+
+/* phones and narrow windows: annotated answers stack */
+@media (max-width:900px){ .annot.wide{grid-template-columns:1fr;} }
+
+/* phones: a stack holding a wide diagram or table must not widen its grid column */
+.split > .stack{min-width:0;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 27" data-title="Cultural and everyday life IV: marriage customs and the mirage" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr .95fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 27</p>
+      <h1>Cultural and everyday life IV: marriage customs and the mirage</h1>
+      <p class="lead">How did marriage serve the Spartan state — and how much of what we are told about it is the Spartan mirage?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall contain"><img src="images/clarke-5-3-le-barbier-spartan-mother-l13.jpg" alt="A modern painting: Le Barbier’s early 19th-century picture of a Spartan woman handing her son his shield — the ‘with it or on it’ story, not ancient evidence"><figcaption>A modern painting: Le Barbier’s early 19th-century picture of a Spartan woman handing her son his shield — the ‘with it or on it’ story, not ancient evidence — <span class="cr">Clarke & Garner, Fig 5.3</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 27" data-title="Spaced review" data-kind="intro">
+<div class="wrap l27-dense">
+  <p class="eyebrow">Spaced review · 6 minutes · from memory, no notes</p>
+  <h2>Five questions</h2>
+  <div class="split" style="--cols:1.05fr 1fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">What did the Damonon stele record?</span><span class="d">Lesson 26</span></li>
+      <li><span class="num">2</span><span class="t">What does Tyrtaeus say happens to the man who dies standing firm?</span><span class="d">Lesson 26</span></li>
+      <li><span class="num">3</span><span class="t">Who decided whom an heiress married if her father had not betrothed her?</span><span class="d">Lesson 14</span></li>
+      <li><span class="num">4</span><span class="t">Why, according to Xenophon, did Lycurgus make girls exercise?</span><span class="d">A writer: Xenophon on marriage and children</span></li>
+      <li><span class="num">5</span><span class="t">What is a dowry?</span><span class="d">A term</span></li>
+    </ol>
+    <div class="card quiet" data-veil="Show the answers">
+      <div class="k">Answers</div>
+      <ol class="body">
+        <li class="reveal">Victories of Damonon (four-horse chariot and kalpe; foot-races as a boy) and of his son (foot-races and the horse-race) at local games in Laconia and Messenia, c. 400 BC — a date Cooley gives with a question mark (C83)</li>
+        <li class="reveal">His fame lives on: “Never does his good fame perish nor his name, / But though he is beneath the earth, he is immortal” (fr. 12, Cooley A9)</li>
+        <li class="reveal">Herodotus: “the kings decide who is entitled to marry her” (6.57, Cooley D8). Aristotle, a century later: “whoever he leaves as heir” (Cooley D54)</li>
+        <li class="reveal">For strong children, “in the belief that the offspring of two strong parents would be all the more robust” (<i>Constitution</i> 1.4, Cooley D68)</li>
+        <li class="reveal">Property given with a daughter when she married</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 27" data-title="Today’s goals" data-kind="intro">
+<div class="wrap l27-dense">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate the reliability of the sources for Spartan marriage customs</li>
+        <li>explain how marriage served the Spartan state</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>describe the main marriage customs, with the source and date for each</li>
+        <li>explain why Plutarch and Xenophon present marriage as they do</li>
+        <li>judge which customs are best attested and which belong to the mirage</li>
+        <li>write an evaluative paragraph on the sources for marriage</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words for today</div>
+    <p class="body">A source is <b>reliable for</b> a particular question, not reliable in general. Two sources <b>corroborate</b> each other when one confirms the other — and that counts for most when the two writers are independent and wrote for different purposes.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 27" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L27 · Marriage customs and the mirage</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Plut. = Plutarch, Xen. = Xenophon)</span></div></div>
+      <div class="row"><div class="cq">What happened at a Spartan wedding?</div><div class="nts">Plut. only: “a kind of kidnapping” …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Put the writer and his date beside every custom.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: Plutarch’s wedding · what Xenophon and Aristotle confirm · a king without an heir · what marriage was for · marriage and the mirage.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 27" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Marriage and the state</th><th>Meaning</th></tr>
+      <tr><td>bachelor</td><td>an unmarried man</td></tr>
+      <tr><td>procreation</td><td>producing children — the subject Xenophon says these laws were about</td></tr>
+      <tr><td>eugenics</td><td>improving a population by controlling who has children (Lesson 13)</td></tr>
+      <tr><td>dowry</td><td>property given with a daughter when she married (Lesson 14)</td></tr>
+      <tr><td>succession</td><td>who inherits the throne next</td></tr>
+      <tr><td>lineage</td><td>a family line, such as one of the two royal houses</td></tr>
+      <tr><td>Gymnopaedia</td><td>the summer festival of Apollo in the agora (Lesson 21)</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Judging the sources</th><th>Meaning</th></tr>
+      <tr><td>reliability</td><td>how far a source can be trusted for a particular question</td></tr>
+      <tr><td>corroborate</td><td>to confirm what another source says</td></tr>
+      <tr><td>modality</td><td>words that show how certain a claim is: clearly · probably · may · suggests</td></tr>
+      <tr><td>mirage</td><td>the idealised, distorted image of Sparta created by writers (Lesson 1)</td></tr>
+      <tr><td>moral biography</td><td>a ‘Life’ written to teach good and bad character — Plutarch’s kind of writing</td></tr>
+      <tr><td>‘Lycurgan’</td><td>credited to Lycurgus — often a label given to a custom much later (Lesson 3)</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Gymnopaidiai, Kleomenes, Demaratos, Lakedaimonians). In your own writing use Lycurgus, Gymnopaedia, Cleomenes, Demaratus and Lacedaemonians.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Plutarch’s Spartan wedding" data-title="Where we left off: Lessons 1 and 14" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">1 · Plutarch’s Spartan wedding · where we left off</p>
+  <h2>Two things you already know</h2>
+  <div class="l27-recall">
+    <div class="card quiet"><div class="k">Lesson 1 · the mirage</div>
+      <p class="body">Cooley: the Spartan mirage is “a sum of stereotypes that came to dominate the Spartan image”, built up by outsiders <i>and</i> by Spartans themselves from the 5th century BC onwards.</p></div>
+    <div class="card quiet"><div class="k">Lesson 14 · what marriage was for</div>
+      <p class="body">Strong children for the state. Xenophon: men married “at the height of their physical powers”, and a husband could let another man father children. Plutarch: children were “the common property of the state”.</p></div>
+    <div class="card accent reveal"><div class="k">Today</div>
+      <p class="body">The customs themselves — the wedding, bachelors, fathers, a king’s second wife — and how far each one is evidence, and how far mirage.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Plutarch’s Spartan wedding" data-title="Plutarch on the wedding" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">1 · Plutarch’s Spartan wedding · I do — Source 13.7, Extract A, continued to 15.5</p>
+  <h2>“A kind of kidnapping”</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="src">
+      <div class="k">Source · Plutarch</div>
+      <p class="quote sm">[3] <span class="code" data-code="evidence" data-letter="E">Their marriages take the form of a kind of kidnapping.</span> They carry off their wives, not when they are small and as yet unready for marriage, but when they are in the full flower of sexual maturity. Her so-called “bridesmaid” then takes charge of the “captive”, <span class="code" data-code="keyterm" data-letter="K">shaves her head close to the skin, dresses her in a man’s cloak and sandals, lays her on a bed of straw alone in the dark, without a light.</span> Her bridegroom … having had dinner as usual at the mess, sneaks into her room … [4] He will not spend much time with her, but will then depart discreetly to his normal sleeping quarters to spend the night as usual among the other young men. This remains the normal practice subsequently: he spends his days and nights among his contemporaries, but visits his bride secretly and with the utmost care … [5] This normally went on for quite a long time, to the extent that some fathered children before they had even seen their wives in daylight. <span class="code" data-code="analysis" data-letter="A">Such limitations to their sexual intercourse acted as a training in self control and moderation</span> …</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 15.3–5 (part) · written c. AD 100 · a Greek biographer of the Roman period · trans. B. Wilson · Cooley D71</p>
+    </div>
+    <div class="stack l27-qa">
+      <p class="qprompt reveal" data-paint="evidence">What happened at a Spartan wedding?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">The groom “carried off” a grown woman; afterwards he went back to sleep among the young men and visited her in secret.</p></div>
+      <p class="qprompt reveal" data-paint="keyterm">What was done to the bride — and does Plutarch say why?</p>
+      <div class="note reveal" data-code="keyterm"><p class="body">Head shaved, a man’s cloak and sandals, alone on straw in the dark. He gives <b>no reason</b> for any of this.</p></div>
+      <p class="qprompt reveal" data-paint="analysis">Which custom does he explain?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">Only the secret visits: “a training in self control and moderation”, and vigorous children.</p></div>
+      <p class="qprompt reveal">Whose view is missing?</p>
+      <div class="note reveal" data-code="counter"><p class="body">The bride’s. Every account of Spartan marriage was written by a man, and none by a Spartan woman.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Plutarch’s Spartan wedding" data-title="Weighing Plutarch" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">1 · Plutarch’s Spartan wedding · I do — modelling evaluation</p>
+  <h2>Weighing Plutarch</h2>
+  <div class="split l27-fig" style="--cols:.55fr 1.45fr">
+    <figure class="figure contain"><img src="images/clarke-1-10-bust-believed-plutarch.jpg" alt="A stone bust commonly believed to represent Plutarch"><figcaption>A stone bust commonly believed to represent Plutarch — <span class="cr">Clarke & Garner, Fig 1.10</span></figcaption></figure>
+    <div class="stack">
+      <div class="cols c2">
+        <div class="card reveal"><div class="k">Distance</div><p class="body">He wrote about AD 100: about 470 years after Leuctra, and nearly five centuries after Xenophon. Cooley: “much of his material also dates from after Sparta’s decline in the fourth century”.</p></div>
+        <div class="card reveal"><div class="k">Purpose</div><p class="body">Moral biography. Cooley: “his main aim was to draw characters which could be instructive as moral examples”, not historical analysis. So every custom becomes part of Lycurgus’ wise design.</p></div>
+        <div class="card reveal"><div class="k">His Sparta</div><p class="body">By his day, Cooley says, “the Spartans tried to restore (or re-invent) their ancestral constitution”, and “many new ideas were presented as ancient”.</p></div>
+        <div class="card reveal"><div class="k">Agreement</div><p class="body">“Plutarch cites dozens of earlier works.” Where he agrees with Xenophon he may simply be following him — agreement is not always independent confirmation.</p></div>
+      </div>
+      <div class="note reveal" data-code="judgement"><div class="k">So what can he tell us?</div><p class="body">Plutarch preserves older material, but on his own he cannot show that a custom existed in classical Sparta. Cooley: anything “not explicitly identified as taken from a genuinely archaic or classical source should be considered as secondary material.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Plutarch’s Spartan wedding" data-title="Notes 1 — Plutarch’s wedding" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Plutarch’s Spartan wedding</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L27 · Marriage customs and the mirage</b></span><span>1 · Plutarch’s wedding</span></div>
+    <div class="row"><div class="cq">What happened at a Spartan wedding, according to Plutarch?</div>
+      <div class="nts reveal">“a kind of kidnapping” of a grown woman <span class="sep">·</span> “bridesmaid” shaves her head, man’s cloak + sandals, straw bed in the dark <span class="sep">·</span> groom comes from the mess, then back to sleep with the young men (<i>Lyk.</i> 15.3–4, D71)</div></div>
+    <div class="row"><div class="cq">How did married life go on?</div>
+      <div class="nts reveal"><b>secret visits</b> “for quite a long time” <span class="sep">·</span> some fathered children before seeing their wives “in daylight” (15.5) <span class="sep">·</span> brides may have stayed in their parents’ house (Cooley: “may”)</div></div>
+    <div class="row"><div class="cq">What reasons does Plutarch give?</div>
+      <div class="nts reveal">secret visits = “a training in self control and moderation” + vigorous children <span class="sep">·</span> <b>no reason</b> for the shaved head or cloak</div></div>
+    <div class="row"><div class="cq">Why use him with care?</div>
+      <div class="nts reveal">c. <b>AD 100</b>, ≈ 470 yrs after Leuctra <span class="sep">·</span> moral biographer → every custom = Lycurgus’ wise plan <span class="sep">·</span> much material from “after Sparta’s decline” (Cooley) <span class="sep">·</span> may repeat earlier writers</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · What earlier writers confirm" data-title="What does Xenophon corroborate?" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">2 · What earlier writers confirm · I do — corroboration</p>
+  <h2>What does Xenophon corroborate?</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon</div>
+        <p class="quote sm">[5] … He ordained that it was a disgrace for a man to be seen going into or leaving his wife’s room. With such constraints imposed upon their association, it was inevitable that the husband’s sexual desire would be all the greater, and any consequent children would be more vigorous than if their parents had had too much of one another. [6] As well as this, he also put an end to the practice of men marrying whenever they chose, and instead ordained that they should marry when at the height of their physical powers, on the assumption that this too was eugenically advantageous.</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 1.5–6 · probably written in the late 390s or 380s BC · an Athenian admirer of Sparta with first-hand information · trans. B. Wilson · Cooley D68</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Xenophon, on the coward</div>
+        <p class="quote sm">… he must put up with a hearth and home without a wife beside him, and yet at the same time accept the standard fines for remaining a bachelor …</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 9.5 · trans. B. Wilson · Cooley D96</p>
+      </div>
+    </div>
+    <div class="stack">
+      <ul class="l27-yn">
+        <li class="reveal"><span class="yesno y">✓</span><span>men marry “at the height of their physical powers”</span></li>
+        <li class="reveal"><span class="yesno y">✓</span><span>secret visits: a disgrace to be seen at the wife’s room</span></li>
+        <li class="reveal"><span class="yesno y">✓</span><span>arrangements for another man to father children (1.7–9, Lesson 14)</span></li>
+        <li class="reveal"><span class="yesno y">✓</span><span>bachelors fined — mentioned in passing</span></li>
+        <li class="reveal"><span class="yesno n">✗</span><span>no ‘kidnapping’, no shaved head, cloak or straw bed</span></li>
+        <li class="reveal"><span class="yesno n">✗</span><span>no naked march for bachelors</span></li>
+      </ul>
+      <div class="note reveal" data-code="counter"><div class="k">Closer — but an admirer</div><p class="body">Cooley calls the <i>Constitution</i> “a kind of political pamphlet, defending Sparta against its critics” that “probably depicts a somewhat idealised Sparta”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · What earlier writers confirm" data-title="Bachelors and fathers" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">2 · What earlier writers confirm · marriage and the state</p>
+  <h2>Bachelors and fathers</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Plutarch on bachelors</div>
+      <p class="quote sm">[15.1] … Lykourgos also ensured a degree of disgrace for those who did not marry. They were banned from being spectators at the Gymnopaidiai. In winter the magistrates would force them to march naked around the agora, [2] and as they marched they had to sing a song specifically written against themselves, to the effect that they were getting what they deserved for disobeying the laws.</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 15.1–2 (part) · written c. AD 100 · trans. B. Wilson · Cooley D71 (Source 13.7, Extract A)</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · Aristotle on fathers</div>
+      <p class="quote sm">For the lawgiver, wishing there to be as many Spartiates as possible, gives incentives for citizens to have as many children as possible: they have a law that a man who has had three sons should be exempt from military duty, and the father of four exempt from all taxation. However it is clear that if many sons are born, and the land divided accordingly, there will inevitably be many poor men.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1270b · written 330s–320s BC · a critic of Sparta · trans. in Cooley D28</p>
+    </div>
+  </div>
+  <p class="qprompt">What did the state want from marriage — and which is the stronger evidence?</p>
+  <div class="cols c3">
+    <div class="note reveal" data-code="evidence"><div class="k">What the state wanted</div><p class="body">Children — above all sons, future citizens and soldiers. Bachelors were pushed to marry; fathers of several sons were rewarded.</p></div>
+    <div class="note reveal" data-code="analysis"><div class="k">The stronger evidence</div><p class="body">Aristotle: he cites the law in order to attack it (“many poor men”), so he is unlikely to have invented it. The naked march is in Plutarch alone; Xenophon’s fines confirm only that bachelors were penalised somehow.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">Cooley: “Spartan family law seems especially concerned with maintaining citizen numbers, which would suggest that manpower was already an issue in the Archaic period.”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · What earlier writers confirm" data-title="Notes 2 — Xenophon and Aristotle" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>What Xenophon and Aristotle confirm</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L27 · Marriage customs and the mirage</b></span><span>2 · Xenophon and Aristotle</span></div>
+    <div class="row"><div class="cq">What does Xenophon confirm?</div>
+      <div class="nts reveal">men marry “at the height of their physical powers” (<i>LP</i> 1.6) <span class="sep">·</span> disgrace to be seen at the wife’s room (1.5) <span class="sep">·</span> another man may father children (1.7–9) <span class="sep">·</span> “the standard fines” for bachelors (9.5) (D68, D96)</div></div>
+    <div class="row"><div class="cq">What does he not mention?</div>
+      <div class="nts reveal">no kidnapping, shaved head, cloak <span class="sep">·</span> no naked march → these rest on <b>Plutarch alone</b></div></div>
+    <div class="row"><div class="cq">How did the state reward fathers and punish bachelors?</div>
+      <div class="nts reveal">3 sons → no military duty; 4 → no taxes (Aristotle, <i>Pol.</i> 1270b, D28) <span class="sep">·</span> bachelors: fines (Xen.); barred from the Gymnopaedia, naked winter march, a song against themselves (Plut. 15.1–2)</div></div>
+    <div class="row"><div class="cq">How far can we trust them?</div>
+      <div class="nts reveal">Xen.: early 4th c. BC, first-hand, but an admirer (“political pamphlet”) <span class="sep">·</span> Arist.: a critic citing the law to attack it → prob. not invented; no date for the law</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · A king without an heir" data-title="Herodotus: King Anaxandridas" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">3 · A king without an heir · We do — Source 13.7, Extract B</p>
+  <h2>A king without an heir</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">[39.2] … <span class="code" data-code="evidence" data-letter="E">the ephors summoned him to appear before them</span> and made the following declaration: “Even if you are indifferent to your own interests,” they said, “as far as we are concerned it is unacceptable that the lineage of Eurysthenes should die out. You may have a wife; but she has produced no children. Marry someone else. If you do, you will delight the Spartiates.” Anaxandridas replied that he would do no such thing; … [40.1] At that <span class="code" data-code="keyterm" data-letter="K">the ephors and members of the gerousia talked the matter over</span> and brought Anaxandridas a new proposal. … [40.2] … you must marry a second woman as well, <span class="code" data-code="analysis" data-letter="A">to produce children and guarantee the succession.</span> Anaxandridas agreed to this suggestion and thereafter kept two wives and two separate households – <span class="code" data-code="counter" data-letter="C">a thoroughly un-Spartiate procedure.</span></p>
+      <p class="prov">Herodotus, <i>Histories</i> 5.39.2–40.2 (part) · events of about 550 BC · written c. 450s–420s BC · trans. B. Wilson · Cooley E8</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">Who acted first, and what did they demand?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">The ephors: put away a childless wife and marry again. The king refused.</p></div>
+      <p class="qprompt reveal" data-paint="keyterm">Who made the second proposal?</p>
+      <div class="note reveal" data-code="keyterm"><p class="body">The ephors <i>and</i> members of the gerousia: keep her, but take a second wife too — and do as we say “so as to avoid some more serious action against you by the Spartiates”. He agreed.</p></div>
+      <p class="qprompt reveal" data-paint="analysis">Why did the state care?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">The royal line: the Agiad house of Eurysthenes must not die out.</p></div>
+      <p class="qprompt reveal" data-paint="counter">What does “un-Spartiate” suggest?</p>
+      <div class="note reveal" data-code="counter"><p class="body">That normal Spartan marriage was to one wife: this was an exception, made for a king’s heir.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · A king without an heir" data-title="Hinge: what does Herodotus show?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Which statement does Herodotus’ story support?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>The ephors and the gerousia decided whom every Spartan king married.</span></li>
+    <li id="l27h2"><span class="n">2</span><span>In one case, the ephors and the gerousia pressed a childless king to take a second wife.</span></li>
+    <li><span class="n">3</span><span>Spartan kings normally kept two wives in two households.</span></li>
+    <li><span class="n">4</span><span>The oracle at Delphi ordered Anaxandridas to marry again.</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l27h2" hidden></i>
+  <div class="note reveal" data-code="judgement"><p class="body">One case is not a rule (1); Herodotus calls two wives “a thoroughly un-Spartiate procedure” (3); no oracle is involved (4).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · A king without an heir" data-title="More royal marriages" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">3 · A king without an heir · more royal marriages <span class="optional">If time</span></p>
+  <h2>Kings, heirs and a stolen bride</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Herodotus on King Ariston</div>
+        <p class="quote sm">When Ariston was king in Sparta he had no children, despite the fact that he had married twice. [61.2] He refused to acknowledge that he might himself be the reason, and therefore married for the third time.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 6.61.1–2 · Ariston, Eurypontid king c. 550–515 BC · trans. B. Wilson · Cooley E20</p>
+      </div>
+      <p class="body small">How he got his third wife — by tricking a friend into handing her over — is told in Herodotus 6.62, a passage left out of Cooley’s extract. Her son was Demaratus.</p>
+      <div class="src">
+        <div class="k">Source · Herodotus on Demaratus</div>
+        <p class="quote sm">[65.2] … Leotychidas had been engaged to marry Perkalos, the daughter of Chilon, who was himself the son of Demarmenos. But by a bit of sharp practice Demaratos had carried her off and married her himself.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 6.65.2 · Demaratus, king c. 515–491 BC · trans. B. Wilson · Cooley E20</p>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">Marriage inside the royal families</div><p class="body">Anaxandridas “had married his own niece” (Herodotus, Cooley E8). Cooley: such marriages “were inevitably conducted within the narrow constraints of Spartan society, often in the case of royal marriages within the family itself – so Leonidas married Gorgo, daughter of his half-brother (and former king)”.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Heirs were public business</div><p class="body">The ephors heard Ariston say of the newborn Demaratus, “It can’t be mine”; years later Leotychidas called those ephors as witnesses when he challenged Demaratus’ right to be king.</p></div>
+      <p class="qprompt reveal">Does “carried her off” prove Plutarch’s kidnapping?</p>
+      <div class="note reveal" data-code="counter"><p class="body">No. Herodotus calls it “sharp practice” because she was already engaged to Leotychidas. ‘Carried her off’ may echo a wedding custom, but one royal case cannot show that every Spartan bride was ‘kidnapped’.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · A king without an heir" data-title="Notes 3 — A king without an heir" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>A king without an heir</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L27 · Marriage customs and the mirage</b></span><span>3 · Royal marriages</span></div>
+    <div class="row"><div class="cq">What happened to King Anaxandridas?</div>
+      <div class="nts reveal">childless (c. 550 BC) <span class="sep">·</span> ephors: divorce + remarry → he refused <span class="sep">·</span> ephors + gerousia: keep her, add a 2nd wife “to produce children and guarantee the succession” → agreed under threat (Hdt 5.39–40, E8)</div></div>
+    <div class="row"><div class="cq">What does “un-Spartiate” show?</div>
+      <div class="nts reveal">normal = <b>one wife</b> <span class="sep">·</span> an exception, for the royal line</div></div>
+    <div class="row"><div class="cq">Other royal marriages?</div>
+      <div class="nts reveal">Ariston: three marriages for an heir <span class="sep">·</span> Demaratus “carried off” a rival’s bride-to-be (Hdt 6.61–65, E20) <span class="sep">·</span> often within the family: Leonidas m. Gorgo, his half-brother’s daughter (Cooley)</div></div>
+    <div class="row"><div class="cq">Did the ephors and gerousia decide royal marriages?</div>
+      <div class="nts reveal">No evidence of a rule: <b>one case</b>, pressing a king for the succession</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · What marriage was for" data-title="We do — custom → purpose" data-kind="practice">
+<div class="wrap l27-dense">
+  <p class="eyebrow">4 · What marriage was for · We do · 8 minutes · fill in the table</p>
+  <h2>Custom → purpose</h2>
+  <p class="task l27-task">Type in the boxes (on a laptop or phone), or copy the table into your notes. Every row needs a source <b>and</b> its date.</p>
+  <div class="tbl-scroll"><table class="tbl compact l27-grid l27-blank">
+    <tr><th>Custom</th><th>Purpose for the state</th><th>Source and date</th><th>Problem with the source</th></tr>
+    <tr><td>Marriage at maturity</td><td><textarea class="l27-in" data-k="p1" rows="1" aria-label="Marriage at maturity: purpose" placeholder="strong children …"></textarea></td><td><textarea class="l27-in" data-k="s1" rows="1" aria-label="Marriage at maturity: source and date" placeholder="Xenophon, Constitution 1.6 …"></textarea></td><td><textarea class="l27-in" data-k="r1" rows="1" aria-label="Marriage at maturity: problem with the source"></textarea></td></tr>
+    <tr><td>The ‘kidnapping’ wedding</td><td><textarea class="l27-in" data-k="p2" rows="1" aria-label="Kidnapping wedding: purpose"></textarea></td><td><textarea class="l27-in" data-k="s2" rows="1" aria-label="Kidnapping wedding: source and date"></textarea></td><td><textarea class="l27-in" data-k="r2" rows="1" aria-label="Kidnapping wedding: problem with the source"></textarea></td></tr>
+    <tr><td>Secret visits</td><td><textarea class="l27-in" data-k="p3" rows="1" aria-label="Secret visits: purpose"></textarea></td><td><textarea class="l27-in" data-k="s3" rows="1" aria-label="Secret visits: source and date"></textarea></td><td><textarea class="l27-in" data-k="r3" rows="1" aria-label="Secret visits: problem with the source"></textarea></td></tr>
+    <tr><td>Penalties for bachelors</td><td><textarea class="l27-in" data-k="p4" rows="1" aria-label="Bachelors: purpose"></textarea></td><td><textarea class="l27-in" data-k="s4" rows="1" aria-label="Bachelors: source and date"></textarea></td><td><textarea class="l27-in" data-k="r4" rows="1" aria-label="Bachelors: problem with the source"></textarea></td></tr>
+    <tr><td>Rewards for fathers of sons</td><td><textarea class="l27-in" data-k="p5" rows="1" aria-label="Fathers: purpose"></textarea></td><td><textarea class="l27-in" data-k="s5" rows="1" aria-label="Fathers: source and date"></textarea></td><td><textarea class="l27-in" data-k="r5" rows="1" aria-label="Fathers: problem with the source"></textarea></td></tr>
+    <tr><td>Sharing wives to father children</td><td><textarea class="l27-in" data-k="p6" rows="1" aria-label="Sharing wives: purpose"></textarea></td><td><textarea class="l27-in" data-k="s6" rows="1" aria-label="Sharing wives: source and date"></textarea></td><td><textarea class="l27-in" data-k="r6" rows="1" aria-label="Sharing wives: problem with the source"></textarea></td></tr>
+    <tr><td>A childless king pressed to take a second wife</td><td><textarea class="l27-in" data-k="p7" rows="1" aria-label="Royal marriage: purpose"></textarea></td><td><textarea class="l27-in" data-k="s7" rows="1" aria-label="Royal marriage: source and date"></textarea></td><td><textarea class="l27-in" data-k="r7" rows="1" aria-label="Royal marriage: problem with the source"></textarea></td></tr>
+  </table></div>
+  <p class="small">Your typing stays in this browser on this device. <button class="btn l27-clear" type="button">Clear my table</button></p>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · What marriage was for" data-title="Custom → purpose, completed" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">4 · What marriage was for · check — the completed table</p>
+  <h2>Custom → purpose, completed</h2>
+  <div class="tbl-scroll"><table class="tbl compact l27-grid">
+    <tr><th>Custom</th><th>Purpose for the state</th><th>Source and date</th><th>Problem with the source</th></tr>
+    <tr class="reveal"><td>Marriage at maturity</td><td>strong children: Xenophon calls it “eugenically advantageous”</td><td class="l27-src">Xenophon, <i>LP</i> 1.6 (prob. late 390s or 380s BC; D68) · Plutarch, <i>Lyk.</i> 15.3 (c. AD 100; D71)</td><td>Xenophon means the men’s age, Plutarch the brides’; women’s “late teens” is Cooley’s estimate (“probably”)</td></tr>
+    <tr class="reveal"><td>The ‘kidnapping’ wedding: shaved head, man’s cloak, straw bed</td><td>none given; brides taken “in the full flower of sexual maturity” — healthy births?</td><td class="l27-src">Plutarch, <i>Lyk.</i> 15.3 <b>only</b> (c. AD 100; D71)</td><td>one late writer, about 470 years after Leuctra; no classical writer describes a ‘kidnapping’ wedding</td></tr>
+    <tr class="reveal"><td>Secret visits</td><td>desire and “more vigorous” children (Xenophon); “a training in self control and moderation” (Plutarch)</td><td class="l27-src">Xenophon, <i>LP</i> 1.5 (D68) · Plutarch, <i>Lyk.</i> 15.4–5 (D71)</td><td>Xenophon gives the rule and a eugenic reason; the fuller story and the moral reason are Plutarch’s</td></tr>
+    <tr class="reveal"><td>Penalties for bachelors</td><td>push men to marry and father citizens</td><td class="l27-src">Xenophon, <i>LP</i> 9.5 (fines; D96) · Plutarch, <i>Lyk.</i> 15.1–2 (shaming; D71)</td><td>Xenophon mentions the fines only in passing; the naked march is in Plutarch alone</td></tr>
+    <tr class="reveal"><td>Rewards for fathers of sons</td><td>“as many Spartiates as possible”</td><td class="l27-src">Aristotle, <i>Politics</i> 1270b (330s–320s BC; D28)</td><td>one writer and no date for the law — but a critic attacking it is unlikely to have invented it</td></tr>
+    <tr class="reveal"><td>Sharing wives to father children</td><td>strong children; children “the common property of the state” (Plutarch)</td><td class="l27-src">Xenophon, <i>LP</i> 1.7–9 (D68) · Plutarch, <i>Lyk.</i> 15.6–8 (D71)</td><td>both present it as Lycurgus’ plan; Xenophon admits the result “is an open question for others to decide”</td></tr>
+    <tr class="reveal"><td>A childless king pressed to take a second wife</td><td>“to produce children and guarantee the succession”</td><td class="l27-src">Herodotus 5.39–40 (events c. 550 BC; written c. 450s–420s BC; E8)</td><td>one royal case; Herodotus calls it “a thoroughly un-Spartiate procedure”</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · What marriage was for" data-title="Notes 4 — What marriage was for" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>What marriage was for</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L27 · Marriage customs and the mirage</b></span><span>4 · What marriage was for</span></div>
+    <div class="row"><div class="cq">What did marriage do for the state?</div>
+      <div class="nts reveal">produced <b>citizens</b> → sons for the army <span class="sep">·</span> strong children: “eugenically advantageous” (Xen.) <span class="sep">·</span> children “the common property of the state” (Plut. 15.8)</div></div>
+    <div class="row"><div class="cq">How did the state push men to marry?</div>
+      <div class="nts reveal">penalties for bachelors (Xen. 9.5; Plut. 15.1–2) <span class="sep">·</span> rewards for fathers of 3 and 4 sons (Arist.) <span class="sep">·</span> a king pressed to marry again (Hdt)</div></div>
+    <div class="row"><div class="cq">Why might Sparta care so much?</div>
+      <div class="nts reveal">Cooley: family law “seems especially concerned with maintaining citizen numbers” → manpower an issue already in the Archaic period? (“would suggest”)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Who says what — and when? (timeline)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Marriage and the mirage · I do — the evidence in time <span class="optional">If time</span></p>
+  <h2>Who says what about marriage — and when?</h2>
+  <figure class="diagram l27-tlfig"><svg class="l27-tl" viewBox="0 0 1600 616" role="img" aria-label="Who says what about Spartan marriage, and when. A timeline from 700 BC to AD 150, with the period studied running to the Battle of Leuctra in 371 BC. Alcman, late 7th century BC, probably Spartan: girls pray for lovely marriage. Herodotus, writing c. 450s to 420s BC: a childless king pressed to take a second wife, about 550 BC, and Demaratus carrying off a rival’s bride-to-be. Xenophon’s Constitution, probably late 390s or 380s BC, an Athenian admirer: marrying at the height of physical powers, secret visits, wife-sharing and fines for bachelors. Aristotle’s Politics, 330s to 320s BC, a critic: fathers of three sons exempt from military duty, and of four from all taxation. Plutarch’s Life of Lycurgus, about AD 100, a moral biographer: the kidnapping wedding, the shaved head and man’s cloak, secret visits, bachelors shamed, wife-sharing, and adultery unheard of. From Leuctra to Plutarch is about 470 years.">
+<text class="bandl" x="353" y="30">the period you study</text><rect class="band" x="70" y="44" width="565" height="16" rx="4"/><line class="leu" x1="635" y1="40" x2="635" y2="134"/><text class="leul" x="645" y="58">Leuctra, 371 BC</text>
+<line class="axis" x1="60" y1="118" x2="1540" y2="118"/>
+<line class="tick" x1="70" y1="109" x2="70" y2="127"/><text class="tk" x="70" y="98">700 BC</text>
+<line class="tick" x1="414" y1="109" x2="414" y2="127"/><text class="tk" x="414" y="98">500 BC</text>
+<line class="tick" x1="757" y1="109" x2="757" y2="127"/><text class="tk" x="757" y="98">300 BC</text>
+<line class="tick" x1="1101" y1="109" x2="1101" y2="127"/><text class="tk" x="1101" y="98">100 BC</text>
+<line class="tick" x1="1444" y1="109" x2="1444" y2="127"/><text class="tk" x="1444" y="98">AD 100</text>
+<line class="tick bcad" x1="1272" y1="100" x2="1272" y2="136"/><text class="tk sm" x="1272" y="92">BC | AD</text>
+<g class="linked pre" id="l27t-alc"><rect class="rng" x="199" y="110" width="43" height="16" rx="5"/><path class="ld" d="M220,130 L204,232"/><rect class="bx" x="60" y="236" width="288" height="300" rx="12"/><text class="nm" x="204" y="274">Alcman</text><text class="dt" x="204" y="302">late 7th century BC</text><text class="dt" x="204" y="328">probably Spartan</text><text class="cu" x="76" y="362">girls’ chorus: they pray</text><text class="cu" x="76" y="390">for ‘Lovely marriage’</text></g>
+<g class="linked pre" id="l27t-her"><rect class="rng" x="491" y="110" width="60" height="16" rx="5"/><path class="ld" d="M521,130 L502,232"/><rect class="bx" x="358" y="236" width="288" height="300" rx="12"/><text class="nm" x="502" y="274">Herodotus</text><text class="dt" x="502" y="302">wrote c. 450s–420s BC</text><text class="dt" x="502" y="328">not a Spartan</text><text class="cu" x="374" y="362">• a childless king pressed</text><text class="cu" x="388" y="390">to take a second wife</text><text class="cu" x="388" y="418">(c. 550 BC)</text><text class="cu" x="374" y="446">• Demaratus ‘carried off’</text><text class="cu" x="388" y="474">a rival’s bride-to-be</text></g>
+<g class="linked pre" id="l27t-xen"><rect class="rng" x="594" y="110" width="26" height="16" rx="5"/><path class="ld" d="M607,130 L800,232"/><rect class="bx" x="656" y="236" width="288" height="300" rx="12"/><text class="nm" x="800" y="274">Xenophon</text><text class="dt" x="800" y="302">probably late 390s or 380s BC</text><text class="dt" x="800" y="328">an Athenian admirer</text><text class="cu" x="672" y="362">• men marry at the height</text><text class="cu" x="686" y="390">of their physical powers</text><text class="cu" x="672" y="418">• secret visits</text><text class="cu" x="672" y="446">• wife-sharing</text><text class="cu" x="672" y="474">• fines for bachelors</text></g>
+<g class="linked post" id="l27t-ari"><rect class="rng" x="690" y="110" width="33" height="16" rx="5"/><path class="ld" d="M706,130 L1098,232"/><rect class="bx" x="954" y="236" width="288" height="300" rx="12"/><text class="nm" x="1098" y="274">Aristotle</text><text class="dt" x="1098" y="302">330s–320s BC</text><text class="dt" x="1098" y="328">a critic of Sparta</text><text class="cu" x="970" y="362">• fathers of three sons</text><text class="cu" x="984" y="390">exempt from military</text><text class="cu" x="984" y="418">duty; of four, from all</text><text class="cu" x="984" y="446">taxation</text></g>
+<g class="linked rom" id="l27t-plu"><rect class="rng" x="1441" y="110" width="7" height="16" rx="5"/><path class="ld" d="M1444,130 L1396,232"/><rect class="bx" x="1252" y="236" width="288" height="300" rx="12"/><text class="nm" x="1396" y="274">Plutarch</text><text class="dt" x="1396" y="302">c. AD 100</text><text class="dt" x="1396" y="328">a moral biographer</text><text class="cu" x="1268" y="362">• ‘a kind of kidnapping’</text><text class="cu" x="1268" y="390">• shaved head, man’s cloak</text><text class="cu" x="1268" y="418">• secret visits</text><text class="cu" x="1268" y="446">• bachelors shamed</text><text class="cu" x="1268" y="474">• wife-sharing</text><text class="cu" x="1268" y="502">• ‘adultery … unheard of’</text></g>
+<g class="linked gap" id="l27t-gap"><line x1="635" y1="566" x2="1444" y2="566"/><line x1="635" y1="554" x2="635" y2="578"/><line x1="1444" y1="554" x2="1444" y2="578"/><text x="1040" y="602">Leuctra (371 BC) to Plutarch (c. AD 100): about 470 years</text></g>
+</svg>
+    <figcaption>Drawn to scale for this lesson; dates of writing are approximate. <span class="l27-key pre"></span>written before Leuctra <span class="l27-key post"></span>after Leuctra, 4th century BC <span class="l27-key rom"></span>the Roman period. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l27t-alc" hidden></i>
+  <i class="reveal" data-also="#l27t-her" hidden></i>
+  <i class="reveal" data-also="#l27t-xen" hidden></i>
+  <i class="reveal" data-also="#l27t-ari" hidden></i>
+  <i class="reveal" data-also="#l27t-plu" hidden></i>
+  <i class="reveal" data-also="#l27t-gap" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Best attested, least secure" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">5 · Marriage and the mirage · I do — sorting the evidence</p>
+  <h2>Best attested — and least secure</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">Best attested</div>
+      <ul class="body">
+        <li>the state’s interest in children — Xenophon (an admirer), Herodotus (an outsider) and Aristotle (a critic) all show it</li>
+        <li>marriage at maturity (Xenophon for men, Plutarch for brides), secret visits, sharing wives, penalties for bachelors — in Xenophon <i>and</i> Plutarch</li>
+      </ul></div>
+    <div class="card reveal"><div class="k">One witness, but credible</div>
+      <ul class="body">
+        <li>rewards for fathers of sons — Aristotle alone, a critic unlikely to have invented it</li>
+        <li>a king pressed to take a second wife — Herodotus alone, one case</li>
+      </ul></div>
+    <div class="card quiet reveal"><div class="k">Least secure: Plutarch alone</div>
+      <ul class="body">
+        <li>the ‘kidnapping’, the shaved head, the man’s cloak, the straw bed</li>
+        <li>the bachelors’ naked march and song</li>
+        <li>every moral reason: “a training in self control and moderation”</li>
+      </ul></div>
+  </div>
+  <div class="note reveal" data-code="analysis"><div class="k">The test we used</div><p class="body">Who reports it, and when? Is it confirmed by a writer with a different purpose? Could the later writer simply be copying the earlier one?</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Good stories to pass on" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">5 · Marriage and the mirage · the mirage at work <span class="optional">If time</span></p>
+  <h2>“Good stories to pass on”</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, ending his account of marriage</div>
+        <p class="quote sm">[9] These practices, sanctioned for the sake of good breeding and national eugenics, had so little to do with the later reputation of their women for sexual promiscuity that in those days adultery was totally unheard of there. [10] There is a good story told about Geradas, a very old fashioned sort of Spartiate, who was asked by a stranger what punishment was applied to adulterers in their country. … “He would be fined one enormous bull,” said Geradas, “so big that it could cover Mount Taygetos and drink from the river Eurotas.” … “Indeed,” laughed Geradas; “and how could there possibly be an adulterer in Sparta?”</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 15.9–10 (part) · written c. AD 100 · trans. B. Wilson · Cooley D71</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · a saying of Leonidas</div>
+        <p class="quote sm">When asked by his wife Gorgo, as he was setting out to fight the Persians at Thermopylai, if he had any orders for her, he said, “Marry good men and produce good children.”</p>
+        <p class="prov">Plutarch, <i>Sayings of Lakedaimonians</i>, Leonidas 2 · late 1st or early 2nd century AD, nearly six centuries after Thermopylae · trans. in Cooley F31</p>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="keyterm"><div class="k">Cooley’s warning</div><p class="body">“Many traditions about Spartans were simply good stories to pass on”. Of the sayings: “We cannot know whether any of these are authentic, but together they can serve as a perfect illustration of the main themes of the Spartan ‘mirage’.”</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Notice</div><p class="body">Plutarch is answering a “later reputation” — the mirage had a hostile side too (Aristotle’s women who “live wantonly”, Lesson 14).</p></div>
+      <div class="card tinted reveal"><div class="k">Gesture vote</div><p class="body nq">“Plutarch’s ‘kidnapping’ wedding was a real custom in classical Sparta.” Thumbs up · sideways · down — and give a reason.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Purpose shapes each account" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">5 · Marriage and the mirage · why each writer tells it his way</p>
+  <h2>Purpose shapes each account</h2>
+  <div class="l27-four">
+    <div class="card reveal"><div class="k">Xenophon · an admirer</div><p class="body">Every custom is Lycurgus’ plan for stronger children — yet he admits that whether it worked “is an open question for others to decide” (1.10).<span class="l27-src">Cooley: “a kind of political pamphlet, defending Sparta against its critics”</span></p></div>
+    <div class="card reveal"><div class="k">Plutarch · a moralist</div><p class="body">Every custom has a moral reason, and he concludes that “in those days adultery was totally unheard of there”.<span class="l27-src">Cooley: “his main aim was to draw characters which could be instructive as moral examples”</span></p></div>
+    <div class="card reveal"><div class="k">Aristotle · a critic</div><p class="body">He reports the law on fathers only to criticise it: “there will inevitably be many poor men”.<span class="l27-src">Cooley: “He offers valuable criticism of the Spartan system, informed by Sparta’s decline in the fourth century.”</span></p></div>
+    <div class="card reveal"><div class="k">Herodotus · an outsider</div><p class="body">A royal scandal, not a law — probably from informants we cannot check, but his “un-Spartiate” suggests he knew the normal practice.<span class="l27-src">Cooley, on his claims to Spartan sources: “we have no way of telling how much of this information is indeed authentic”</span></p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So:</b> the customs can be checked against each other; the <i>explanations</i> are where each writer’s purpose — and the mirage — shows most.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Quick Check (sections 6–7)" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow">Check for understanding · Quick Check · cold call</p>
+  <h2>Quick Check: marriage customs and the mirage</h2>
+  <ol class="rq" data-answers>
+    <li>Describe three Spartan marriage customs and give the source for each.
+      <span class="sol reveal">Men married “at the height of their physical powers” (Xenophon, <i>Constitution</i> 1.6, Cooley D68); it was a disgrace to be seen going into the wife’s room, so husbands visited in secret (Xenophon 1.5; Plutarch, <i>Lykourgos</i> 15.4–5, D71); the wedding was “a kind of kidnapping”, the bride’s head shaved and a man’s cloak put on her (Plutarch 15.3 only).</span></li>
+    <li>How did the state reward fathers and punish bachelors?
+      <span class="sol reveal">A father of three sons was exempt from military duty and of four from all taxation (Aristotle, <i>Politics</i> 1270b, D28). Bachelors paid “the standard fines” (Xenophon 9.5, D96) and, Plutarch says, were banned from watching the Gymnopaedia, marched naked round the agora in winter singing a song against themselves, and lost the respect of the young (15.1–2).</span></li>
+    <li>Which custom is best attested, and which is least secure? Explain why.
+      <span class="sol reveal">Best attested: the state’s interest in producing children, and the customs both Xenophon (early 4th century BC, first-hand) and Plutarch report. Least secure: the ‘kidnapping’ wedding — only Plutarch, writing about AD 100 to teach moral lessons, describes it, and no classical writer confirms it.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Notes 5 — Marriage and the mirage" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Marriage and the mirage</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L27 · Marriage customs and the mirage</b></span><span>5 · The mirage</span></div>
+    <div class="row"><div class="cq">Which custom is best attested, and which is least secure? Explain why.</div>
+      <div class="nts reveal"><b>Best</b>: the state’s interest in children (Xen., Hdt, Arist. — different purposes) <span class="sep">·</span> <b>Least</b>: the ‘kidnapping’, shaved head, cloak — Plut. alone, c. AD 100</div></div>
+    <div class="row"><div class="cq">Where is the mirage?</div>
+      <div class="nts reveal">in the <b>explanations</b>: every custom = Lycurgus’ wise plan <span class="sep">·</span> “adultery … unheard of” (Plut. 15.9) <span class="sep">·</span> Geradas’ bull; Leonidas’ saying → “good stories to pass on” (Cooley)</div></div>
+    <div class="row"><div class="cq">How does purpose shape each account?</div>
+      <div class="nts reveal">Xen. admirer (“political pamphlet”) <span class="sep">·</span> Plut. moralist <span class="sep">·</span> Arist. critic (“many poor men”) <span class="sep">·</span> Hdt outsider with unchecked informants</div></div>
+    <div class="row"><div class="cq">Most of the detail comes from …?</div>
+      <div class="nts reveal">the <b>latest</b> writer: Plutarch, ≈ 470 yrs after Leuctra <span class="sep">·</span> Cooley: “the most extensive accounts … were written in the Roman period”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="You do — an evaluative paragraph">
+<div class="wrap l27-dense">
+  <p class="eyebrow">5 · Marriage and the mirage · You do · 20 minutes · Chapter 13 Activity D, in five moves · press K for the timer</p>
+  <h2>Evaluate the reliability of Plutarch and Xenophon as evidence for Spartan marriage customs.</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="moves">
+      <span class="l">Judge</span><span>Open with a qualified judgement: which writer is more reliable, and for which customs?</span>
+      <span class="l">Evidence</span><span>Use Plutarch, <i>Lykourgos</i> 15 and Xenophon, <i>Constitution</i> 1.5–9 and 9.5 precisely, with each writer’s date and who he was.</span>
+      <span class="l">Analyse</span><span>Explain where they agree (maturity, secret visits, sharing wives, bachelors) and where Plutarch stands alone (the ‘kidnapping’).</span>
+      <span class="l">Evaluate</span><span>Weigh date, purpose and perspective. Bring in Herodotus or Aristotle as a check. Use modality: probably, suggests, may.</span>
+      <span class="l">Resolve</span><span>Close with a refined judgement — not a repeat of your first sentence.</span>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">Foundation · a frame</div>
+        <p class="body nq">“Xenophon is probably the more reliable witness for … because … . However, … . Plutarch’s account of … is less secure, because … . Therefore …”</p></div>
+      <div class="card quiet"><div class="k">Extension</div>
+        <p class="body">Assess how far Spartan marriage customs are ‘mirage’: which details are best and worst attested?</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · Marriage and the mirage" data-title="Check — swap and underline">
+<div class="wrap">
+  <p class="eyebrow">Check · peer check, then cold call · 5 minutes</p>
+  <h2>Swap paragraphs with a partner</h2>
+  <div class="cols c3">
+    <div class="card accent"><div class="k">1 · Underline</div><p class="lead">the judgement sentence</p></div>
+    <div class="card accent"><div class="k">2 · Circle</div><p class="lead">every modal word: probably, may, suggests</p></div>
+    <div class="card accent"><div class="k">3 · Tick</div><p class="lead">each move you can find: Judge · Evidence · Analyse · Evaluate · Resolve</p></div>
+  </div>
+  <p class="cue">Cold call: three judgements, read aloud. Does each one say <i>which</i> writer, for <i>which</i> customs?</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="A model paragraph, annotated">
+<div class="wrap">
+  <p class="eyebrow">5 · Marriage and the mirage · a model paragraph written for this lesson, annotated</p>
+  <h2>Five moves, one paragraph</h2>
+  <div class="annot wide" data-veil="Write and check your own paragraph first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="d27-1">Xenophon is probably the more reliable witness to Spartan marriage, but only for its rules, not for the reasons he gives them.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="d27-2">Writing probably in the late 390s or 380s BC, with ‘access to first hand information about Sparta’ (Cooley), he reports that men had to ‘marry when at the height of their physical powers’ and that it was ‘a disgrace for a man to be seen going into or leaving his wife’s room’.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="d27-3">Plutarch, writing about AD 100, gives much the same rules and the same sharing of wives, so on these points the two agree; only Plutarch, however, describes the wedding as ‘a kind of kidnapping’, with the bride’s head shaved and a man’s cloak.</span><span class="mk">3</span>
+      <span class="code" data-code="counter" id="d27-4">Their agreement is weaker than it looks, because Plutarch ‘cites dozens of earlier works’ and may simply be following Xenophon, and both credit every custom to Lycurgus: Xenophon wrote ‘a kind of political pamphlet, defending Sparta against its critics’, while Plutarch’s aim was moral, so his claim that the secret visits were ‘a training in self control and moderation’ tells us more about Plutarch than about Sparta.</span><span class="mk">4</span>
+      <span class="code" data-code="judgement" id="d27-5">Xenophon is therefore the better witness to what the customs were in the early 4th century BC, while Plutarch’s unique details, such as the kidnapping, may record a real rite but cannot be confirmed.</span><span class="mk">5</span>
+      <p class="meta">Model written for this lesson · about 200 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">The five moves</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#d27-1"><span class="mk">1</span><b>Judge</b><span class="tx nq">Which writer, and for what: “for its rules, not for the reasons”. “Probably” is the modality.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#d27-2"><span class="mk">2</span><b>Evidence</b><span class="tx">Date and access to information (from Cooley) and two short quotations built into the sentence.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#d27-3"><span class="mk">3</span><b>Analyse</b><span class="tx">Where the two agree, and where Plutarch stands alone.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#d27-4"><span class="mk">4</span><b>Evaluate</b><span class="tx">Copying, purpose, and a reason that belongs to the writer, not to Sparta.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#d27-5"><span class="mk">5</span><b>Resolve</b><span class="tx">A sharper judgement than the first: better for what, and when; “may” for the kidnapping.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Marriage and the mirage" data-title="Summary" data-kind="notes">
+<div class="wrap l27-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>How did marriage serve the Spartan state?</li>
+          <li>Which customs does only Plutarch describe, and how does he explain them?</li>
+          <li>How far is the evidence for Spartan marriage the mirage?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">Spartan marriage was the state’s business: Xenophon, Aristotle and Herodotus show rules and pressures meant to produce children, from marriage at the height of men’s physical powers and penalties for bachelors to rewards for fathers of sons and, in one royal case, a second wife to secure the succession. Plutarch, writing about AD 100, adds the most vivid customs — the ‘kidnapping’ wedding, the shaved head and man’s cloak — and explains every custom as part of Lycurgus’ wise design. The state’s interest in children is well attested by writers with different purposes, but the details found only in Plutarch, and every writer’s explanations, are where the mirage is strongest.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Plutarch’s wedding and his reasons</label></li>
+        <li><label><input type="checkbox"> 2 · What Xenophon and Aristotle confirm</label></li>
+        <li><label><input type="checkbox"> 3 · A king without an heir</label></li>
+        <li><label><input type="checkbox"> 4 · What marriage was for</label></li>
+        <li><label><input type="checkbox"> 5 · Marriage and the mirage</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="An HSC-style question for this lesson" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>No past paper has asked about marriage alone</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">But it is in NESA’s lists</div><p class="body">2019 Q10(c): “Marriage, fertility, procreation, parenthood”. 2020 Q11(b): “Marriage customs, such as bride-kidnapping (Plutarch) and wife-sharing for reproduction (Xenophon).”</p></div>
+    <div class="card"><div class="k">The pattern</div><p class="body">“To what extent …” questions about sources appear elsewhere in the paper — for example 2020 Question 3 (8 marks), on the core topic.</p></div>
+    <div class="card accent"><div class="k">8 marks</div><p class="body">Section II: 25 marks in about 45 minutes — about 1.8 minutes a mark, so about 14 minutes.</p></div>
+  </div>
+  <p class="lead">One question written for this lesson: take it apart, plan it, write it, then compare with an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC-style: marriage and the mirage" data-title="The question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style, written for this lesson · Section II · 8 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">To what extent</span> do <span class="code" data-code="keyterm" data-letter="K">the sources for Spartan marriage customs</span> <span class="code" data-code="keyterm" data-letter="K">reflect the Spartan mirage</span>? <span class="code" data-code="scope" data-letter="S">Support your response using evidence from relevant sources.</span></p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Not from a past paper. We do: take it apart and plan it together · You do: write it in 14 minutes.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="Take it apart" data-kind="hsc">
+<div class="wrap l27-dense">
+  <p class="eyebrow">HSC-style · We do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">To what extent</div><p class="body">Not one of the glossary’s key words: NESA’s glossary notes that questions “will continue to incorporate self-explanatory terms like ‘how,’ ‘why,’ or ‘to what extent.’” It asks for a judgement of degree — how far, not yes or no — as “Assess” does: “Make a judgement of value, quality, outcomes, results or size.”</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The sources · reflect the mirage</div><p class="body">Judge the <b>writers</b>, not just the customs: Plutarch, Xenophon, Aristotle, Herodotus. The mirage is “a sum of stereotypes that came to dominate the Spartan image” (Cooley): idealised, distorted, often late.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">Support your response</div><p class="body">Named, dated writers and short quotations — and the gap between the period (to 371 BC) and when each wrote.</p></div>
+    <div class="card accent reveal"><div class="k">8 marks</div><p class="body">About 14 minutes · a judgement of degree in your first sentence · three or more named writers · what is mirage and what is not · about 250–360 words.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="What the markers reward" data-kind="hsc">
+<div class="wrap l27-dense">
+  <p class="eyebrow">HSC-style · NESA’s criteria and feedback for a question of the same type</p>
+  <h2>What the markers reward</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2020 Question 3, 8 marks)</th></tr>
+      <tr><td class="m">7–8</td><td>Provides a reasoned judgement about the extent to which the given sources help historians to understand the roles of slaves and freedmen in Pompeii and Herculaneum · Supports the response using evidence from the sources provided and refers to other relevant source(s) · Communicates ideas and information using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5–6</td><td>Provides some judgement on the extent to which the given sources help historians to understand the roles of slaves and/or freedmen in Pompeii and/or Herculaneum · Refers to the sources provided and other source(s) · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">3–4</td><td>Demonstrates some knowledge and/or understanding of sources or slaves/freedmen in Pompeii and/or Herculaneum · May refer to the sources provided · May use some historical terms and/or concepts</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">provide a sustained judgement about the extent that the given sources could help historians</span><span class="q">show that there are limitations regarding the two sources for the groups represented</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">ensuring that a judgement about the sources is provided if asked in the question instead of explaining the roles slaves and freedmen played in the society.</span></p></div>
+      <div class="card accent reveal"><div class="k">For our question</div><p class="body">A reasoned judgement about how far the marriage sources reflect the mirage; evidence from named writers; terms such as mirage, corroborate, reliability. Judge the sources — don’t just describe the customs.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2020 HSC Ancient History Marking Guidelines, Question 3 (Section I, Cities of Vesuvius), and the 2020 marking feedback for Question 3 — a different question of the same type, quoted exactly. Our question has no sources printed with it, so “the sources provided” becomes the sources you know.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="Plan it" data-kind="hsc">
+<div class="wrap l27-dense">
+  <p class="eyebrow">HSC-style · We do — a plan in four moves</p>
+  <h2>One judgement, four moves</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Move</th><th>Point</th><th>Evidence</th><th>→ How far it is mirage</th></tr>
+    <tr class="reveal"><td><b>1 · Judgement</b></td><td colspan="3">To a large extent in the vivid details and in every writer’s explanations; much less in the core — that Sparta made marriage the state’s business.</td></tr>
+    <tr class="reveal"><td><b>2 · Most mirage</b></td><td>the ‘kidnapping’ wedding; moral reasons; “adultery … unheard of”</td><td>Plutarch, <i>Lyk.</i> 15.3–10 (c. AD 100) · Cooley on his late material and moral aim</td><td>one late writer and one wise lawgiver: idealisation</td></tr>
+    <tr class="reveal"><td><b>3 · Least mirage</b></td><td>rules for marriage; bachelors; fathers; a king pressed for an heir</td><td>Xenophon, <i>LP</i> 1.5–6, 9.5 · Aristotle, <i>Pol.</i> 1270b · Herodotus 5.39–40</td><td>earlier writers with different purposes agree on the state’s interest</td></tr>
+    <tr class="reveal"><td><b>4 · Evaluate, resolve</b></td><td>even the best witness idealises</td><td>Xenophon 1.10 (“an open question”) · Cooley: “Were the rules really ever as rigid as the sources suggest?”</td><td>the mirage lies in the explanations and the unique details</td></tr>
+  </table></div>
+  <p class="cue reveal">Close by returning to the judgement — sharper than you began.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC-style: marriage and the mirage" data-title="You write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style · You do · 14 minutes · press K for the timer</p>
+  <h2>To what extent do the sources for Spartan marriage customs reflect the Spartan mirage? Support your response using evidence from relevant sources. <span class="small">(8 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement of degree in your first sentence</li>
+        <li>at least three named writers, each with a date</li>
+        <li>what is mirage — and what is not</li>
+        <li>a limit on even your best witness</li>
+        <li>about 250–360 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “The sources for Spartan marriage reflect the mirage to a large extent in …, but much less in …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="Model, paragraph 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style · annotated model written for this lesson · paragraph 1 of 2</p>
+  <h2>Answer first, then where the mirage is strongest</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m27-1">The sources for Spartan marriage reflect the mirage to a large extent, because most of their detail comes from the latest and most idealising writer, but their core is confirmed by earlier writers with different purposes.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m27-2">Only Plutarch, writing about AD 100, describes the wedding as ‘a kind of kidnapping’ in which the bride’s head was shaved and she was dressed ‘in a man’s cloak and sandals’, and he explains the secret visits that followed as ‘a training in self control and moderation’.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m27-3">His account makes every custom part of one wise design by Lycurgus and concludes that ‘in those days adultery was totally unheard of there’ — a moral lesson rather than a record of practice.</span><span class="mk">3</span>
+      <span class="code" data-code="counter" id="m27-4">Cooley warns that much of Plutarch’s material ‘dates from after Sparta’s decline in the fourth century’, and no classical writer describes a kidnapping wedding, so these vivid details are the least secure part of the evidence and the clearest sign of the mirage.</span><span class="mk">4</span>
+      <p class="meta">Model written for this lesson · paragraph 1 of 2</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m27-1"><span class="mk">1</span><b>A judgement of degree</b><span class="tx nq">“To a large extent … but”: how far, with the reason, in the first sentence.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m27-2"><span class="mk">2</span><b>Named, dated, quoted</b><span class="tx">Plutarch and “about AD 100”, with short quotations built into the sentence.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m27-3"><span class="mk">3</span><b>Why this is the mirage</b><span class="tx">One lawgiver, one moral design: Cartledge’s mirage of laws that shaped every part of life (Lesson 1).</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m27-4"><span class="mk">4</span><b>Evaluate with a historian</b><span class="tx">Cooley on Plutarch’s sources — and an argument from silence used carefully (“no classical writer”).</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="Model, paragraph 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style · annotated model written for this lesson · paragraph 2 of 2</p>
+  <h2>Then where it is weakest — and a sharper judgement</h2>
+  <div class="annot wide" data-veil="Show the second paragraph">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m27-5">The mirage is much weaker, however, in the evidence that Sparta treated marriage as the state’s business.</span><span class="mk">5</span>
+      <span class="code" data-code="evidence" id="m27-6">Xenophon, writing probably in the late 390s or 380s BC with first-hand information, confirms that men had to ‘marry when at the height of their physical powers’, that it was ‘a disgrace for a man to be seen going into or leaving his wife’s room’, and that there were ‘the standard fines for remaining a bachelor’.</span><span class="mk">6</span>
+      <span class="code" data-code="analysis" id="m27-7">Aristotle, a critic, reports the law exempting fathers of three sons from military duty only to argue that it would produce ‘many poor men’, and Herodotus shows the ephors and the gerousia pressing King Anaxandridas to take a second wife ‘to produce children and guarantee the succession’; writers with such different purposes are unlikely to share one distortion.</span><span class="mk">7</span>
+      <span class="code" data-code="counter" id="m27-8">Even so, Xenophon was an admirer defending Sparta, and he admits that whether the customs made children stronger ‘is an open question for others to decide’.</span><span class="mk">8</span>
+      <span class="code" data-code="judgement" id="m27-9">The sources therefore reflect the mirage most in their explanations and in the details only Plutarch reports, and least in their shared core: Sparta, apparently anxious about its number of citizens, made marriage and childbirth the state’s concern.</span><span class="mk">9</span>
+      <p class="meta">Model written for this lesson · both paragraphs ≈ 360 words, about 14 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m27-5"><span class="mk">5</span><b>Signpost the turn</b><span class="tx">“However” — the second half of “to what extent”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m27-6"><span class="mk">6</span><b>The closest witness</b><span class="tx">Xenophon’s date and access, then three customs in his own words.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m27-7"><span class="mk">7</span><b>Corroboration that counts</b><span class="tx">A critic and an outsider agree with an admirer — different purposes make agreement stronger.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m27-8"><span class="mk">8</span><b>Limit the best witness</b><span class="tx">The “limitations” the 2020 feedback rewarded: even Xenophon idealises.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m27-9"><span class="mk">9</span><b>A reasoned judgement</b><span class="tx">Sharper than the opening: most in the explanations, least in the core — with a hedge that follows Cooley’s “seems” (“apparently”).</span></div>
+      <div class="verdict reveal"><b>Written to the 7–8 criteria:</b> a reasoned judgement about the extent, supported by named sources, with their limits.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="Why answers drop marks" data-kind="hsc">
+<div class="wrap l27-dense">
+  <p class="eyebrow">HSC-style · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">3–4 · describes the customs</span>
+      <p class="resp">Spartan weddings were like a kidnapping: the bride’s head was shaved and she wore a man’s cloak. Bachelors had to march naked around the agora, and fathers of three sons did not have to fight …</p>
+      <p class="why">Knowledge, but no judgement about the sources — the 2020 markers’ area to improve: “a judgement about the sources … instead of explaining the roles”.</p></div>
+    <div class="rung reveal"><span class="mark">5–6 · all mirage</span>
+      <p class="resp">Plutarch wrote hundreds of years later and admired Lycurgus, so everything we are told about Spartan marriage is the mirage and none of it can be trusted.</p>
+      <p class="why">A judgement, but one-sided and thinly supported: it names only Plutarch and ignores Xenophon, Aristotle and Herodotus, who confirm the state’s interest. “Some judgement”, not “a reasoned judgement”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · false corroboration</span>
+      <p class="resp">Xenophon proves the kidnapping was real, because he also says husbands visited their wives secretly, and Herodotus says the ephors and gerousia chose every king’s wife.</p>
+      <p class="why">Secret visits do not confirm a kidnapping wedding, and Herodotus describes one exceptional case, not a rule.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style: marriage and the mirage" data-title="Mark your own" data-kind="hsc">
+<div class="wrap l27-dense">
+  <p class="eyebrow">HSC-style · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement of degree — how far, not yes or no</label></li>
+        <li><label><input type="checkbox"> named at least three writers, each with a date</label></li>
+        <li><label><input type="checkbox"> separated what only Plutarch reports from what earlier writers confirm</label></li>
+        <li><label><input type="checkbox"> explained why Plutarch’s account looks like the mirage (date, purpose)</label></li>
+        <li><label><input type="checkbox"> put a limit on even the best witness (Xenophon the admirer)</label></li>
+        <li><label class="nq"><input type="checkbox"> no “the ephors chose every king’s wife”; no secret visits “proving” the kidnapping</label></li>
+        <li><label><input type="checkbox"> closed with a sharper judgement than you began with</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Read only your first and last sentences. Do they say <i>how far</i> the sources reflect the mirage, and <i>where</i>?</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the main Spartan marriage customs in this period.</b> (4 marks)</p>
+        <p class="body"><b>How useful is Plutarch for understanding Spartan marriage customs?</b> (6 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · Chapter 13 Activity A</p>
+  <h2>Put these in chronological order — and date each</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Pausanias describes the throne of Apollo at Amyklai.</span></li>
+    <li><span class="k">B</span><span>Tyrtaeus composes a poem refusing to honour men for running or wrestling.</span></li>
+    <li><span class="k">C</span><span>Cynisca wins the four-horse chariot race at Olympia.</span></li>
+    <li><span class="k">D</span><span>The throne of Apollo is built at Amyklai.</span></li>
+    <li><span class="k">E</span><span>Plutarch writes his <i>Life of Lycurgus</i>.</span></li>
+    <li><span class="k">F</span><span>A Laconian workshop paints the Arkesilas cup.</span></li>
+    <li><span class="k">G</span><span>Herodotus writes about King Anaxandridas and his two wives.</span></li>
+  </ul>
+  <div data-answers>
+    <p class="sol reveal">B (mid-7th century BC) → F (c. 565–560 BC) → D (late 6th century BC) → G (c. 450s–420s BC) → C (396 or 392 BC) → E (c. AD 100) → A (2nd century AD)</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l27-two" data-answers>
+    <li><span class="n">1</span><span>Aristotle says the father of three sons was exempt from military duty.</span>
+      <span class="sol reveal">True <span class="why">— “a man who has had three sons should be exempt from military duty, and the father of four exempt from all taxation” (<i>Politics</i> 1270b, Cooley D28).</span></span></li>
+    <li><span class="n">2</span><span>Xenophon describes the Spartan wedding as a kind of kidnapping.</span>
+      <span class="sol no reveal">False <span class="why">— only Plutarch does (<i>Lykourgos</i> 15.3, D71). Xenophon says only that it was a disgrace to be seen going into or leaving the wife’s room (1.5).</span></span></li>
+    <li><span class="n">3</span><span>Herodotus says the ephors and the gerousia decided whom every Spartan king married.</span>
+      <span class="sol no reveal">False <span class="why">— he reports one case: they pressed the childless Anaxandridas to take a second wife, and he calls the result “a thoroughly un-Spartiate procedure” (5.39–40, E8).</span></span></li>
+    <li><span class="n">4</span><span>Plutarch says unmarried men were banned from watching the Gymnopaedia.</span>
+      <span class="sol reveal">True <span class="why">— “They were banned from being spectators at the Gymnopaidiai” (15.1, D71).</span></span></li>
+    <li><span class="n">5</span><span>Plutarch explains the bride’s shaved head and man’s cloak as a training in self-control.</span>
+      <span class="sol no reveal">False <span class="why">— he gives no reason for them; “a training in self control and moderation” is his reason for the secret visits (15.5).</span></span></li>
+    <li><span class="n">6</span><span>Xenophon is sure that Lycurgus’ rules produced stronger children.</span>
+      <span class="sol no reveal">False <span class="why">— whether they did “is an open question for others to decide” (1.10, D68).</span></span></li>
+    <li><span class="n">7</span><span>Cooley thinks Spartan women probably married later than most other Greek girls.</span>
+      <span class="sol reveal">True <span class="why">— “probably married later than most girls elsewhere in Greece (late teens, rather than early/mid teens)”.</span></span></li>
+    <li><span class="n">8</span><span>Aristotle praises the law that rewarded fathers of many sons.</span>
+      <span class="sol no reveal">False <span class="why">— he says that if many sons are born “there will inevitably be many poor men” (D28).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>households</span><span>kidnapping</span><span>military</span><span>mirage</span><span>moderation</span><span>powers</span><span>room</span><span>succession</span></div>
+  <ol class="cloze" data-answers>
+    <li>Plutarch says Spartan marriages took the form of a kind of <span class="gap"><span class="sol reveal">kidnapping</span></span>.</li>
+    <li>Xenophon says it was a disgrace for a man to be seen going into or leaving his wife’s <span class="gap"><span class="sol reveal">room</span></span>.</li>
+    <li>Xenophon says men should marry at the height of their physical <span class="gap"><span class="sol reveal">powers</span></span>.</li>
+    <li>Plutarch calls the secret visits a training in self-control and <span class="gap"><span class="sol reveal">moderation</span></span>.</li>
+    <li>Aristotle says a father of three sons was exempt from <span class="gap"><span class="sol reveal">military</span></span> duty.</li>
+    <li>The ephors and gerousia wanted Anaxandridas to produce children and guarantee the <span class="gap"><span class="sol reveal">succession</span></span>.</li>
+    <li>Anaxandridas kept two wives and two separate <span class="gap"><span class="sol reveal">households</span></span>.</li>
+    <li>The idealised, distorted image of Sparta created by writers is called the Spartan <span class="gap"><span class="sol reveal">mirage</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph</p>
+  <h2>How useful is Herodotus’ story of King Anaxandridas for understanding Spartan marriage?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what, and less useful for what?</span>
+    <span class="l">Evidence</span><span>Use Herodotus 5.39–40 precisely, with its date and the date of the events.</span>
+    <span class="l">Analyse</span><span>Explain what the story shows about the state and marriage.</span>
+    <span class="l">Evaluate</span><span>Weigh it: one case, a king, informants we cannot check — and what “un-Spartiate” implies.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Herodotus’ story of Anaxandridas is useful evidence that a king’s marriage was the state’s business, but much less useful for ordinary Spartan marriage. Writing in the 5th century BC, a century or more after the events of about 550 BC, he reports that the ephors and the gerousia pressed the childless king to take a second wife ‘to produce children and guarantee the succession’, and that they warned him to comply ‘so as to avoid some more serious action against you by the Spartiates’. This shows Spartan officials putting the royal line before a king’s wishes, which fits the interest in children that Xenophon and Aristotle describe for citizens. Yet it is a single, exceptional case about a king, and Cooley notes that Herodotus ‘appears consistently to underestimate Kleomenes’, the son of this second marriage, perhaps because of hostile informants. Herodotus himself calls the arrangement ‘a thoroughly un-Spartiate procedure’, so the story is most useful for what it implies about the norm: Spartans married one wife at a time, and only the survival of a royal house justified an exception.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · Chapter 13 Activity E · HSC-style, written for the chapter</p>
+  <h2>To what extent does the evidence for Spartan cultural and everyday life support the image of an austere, military society? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis:</b> how far, and for which period? For example: the image fits some later evidence, but Archaic art, festivals and leisure overturn it, and much of the austere picture is late.</li>
+    <li><b>Art and architecture:</b> ivories found at Orthia (7th century BC), small bronzes, Laconian black-figure cups; Cavanagh: “the skill and grace of these artefacts serve to undermine the notion of a grim austerity”; modest temples (Orthia about 16 × 7 m) against the late-6th-century throne of Apollo; the debate about why display art declined.</li>
+    <li><b>Poetry and leisure:</b> Tyrtaeus (courage above running and wrestling) against Alcman (beauty, choruses, a prayer for marriage); hunting as training (Xenophon) against chariot-racing as a display of wealth (Damonon; Cynisca, 396 or 392 BC).</li>
+    <li><b>Marriage:</b> customs that served the state (Xenophon, Aristotle, Herodotus) weighed against the mirage (Plutarch, c. AD 100). Conclude: austere in its ideals, perhaps, but not in all its practice — Cooley asks, “Were the rules really ever as rigid as the sources suggest?”</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (1)" data-kind="practice notes">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · Chapter 13 review, questions 1–4</p>
+  <h2>Chapter review: cultural and everyday life (1)</h2>
+  <ol class="rq" data-answers>
+    <li>Describe one example each of Spartan sculpture, painted pottery and ivory or bone carving.
+      <span class="sol reveal">Sculpture: stone hero reliefs such as the Chrysapha relief (c. 540 BC: an enthroned pair, a snake, small worshippers) — free-standing statues of young men and women “are not attested” (Cavanagh); or small bronzes such as the bronze girl of 520–500 BC, who “may be running or … dancing” (D64). Painted pottery: Laconian black-figure, such as the Arkesilas cup (c. 565–560 BC), with King Arkesilas of Cyrene watching goods being weighed. Ivory: a 7th-century lion, 7.5 cm long, found at the Sanctuary of Artemis Orthia; the raw ivory had to be imported.</span></li>
+    <li>Why does Cavanagh say Archaic Laconian art undermines the notion of a grim austerity?
+      <span class="sol reveal">Because of the quality of the work: “Already the Spartans avoid excessive monumentality at home, but the skill and grace of these artefacts serve to undermine the notion of a grim austerity.” Fine ivories, bronzes, painted pottery and temple roof ornaments whose style “was imitated widely in the Peloponnese” show wealth and taste.</span></li>
+    <li>Explain two interpretations of the decline of Laconian display art.
+      <span class="sol reveal">Some argue it marks “the onset of Spartan austerity” — a change in Spartan society in the later Archaic period (Hodkinson accepts a change, but not a permanent one: “Already by the later fifth century Sparta was being transformed back into a plutocratic society”). Others argue the Spartans “were no different from other contemporaries elsewhere in the Peloponnese”, so the decline “does not reflect a political or social reform”. Cavanagh: “These and other debates continue.”</span></li>
+    <li>Describe the location, deity and key features of Orthia, the Menelaion and the Amyklaion.
+      <span class="sol reveal">Artemis Orthia: beside the Eurotas at Limnai; an altar and a temple rebuilt several times, the Archaic temple only about 16 × 7 m; rich votives of ivory and lead. The Menelaion: Menelaus and Helen, at Therapne on high ground east of the Eurotas, “A few miles south-east of Sparta” (Cooley); a shrine of c. 700 BC beside Mycenaean remains, a stepped stone platform, offerings naming the couple. The Amyklaion: Apollo and Hyacinthus, about 5–6 km south of Sparta; home of the Hyakinthia; the late-6th-century throne of Apollo, known mainly from Pausanias.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (2)" data-kind="practice notes">
+<div class="wrap prac l27-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · Chapter 13 review, questions 5–8</p>
+  <h2>Chapter review: cultural and everyday life (2)</h2>
+  <ol class="rq" data-answers start="5">
+    <li>Compare the purposes and audiences of Tyrtaeus and Alcman.
+      <span class="sol reveal">Tyrtaeus (mid-7th century BC, probably Spartan) wrote elegies to rally Spartans at war; his songs were later sung on campaign after dinner, for a prize (Philochoros, Cooley A2). Alcman (late 7th century BC, probably Spartan) wrote lyric songs in Sparta’s Doric dialect for choruses of girls at festivals, on beauty, rivalry, piety and marriage. Both were “writing poetry not history” (Cooley).</span></li>
+    <li>Explain three Spartan leisure activities, with evidence for each.
+      <span class="sol reveal">Athletics: Thucydides says “The Lakedaimonians were the first to strip naked, to take off their clothes in public and rub themselves with oil after exercising” (1.6.5, C42). Horse-racing: Sparta’s best event became the one for which “great wealth is a prerequisite” (Cooley); the Damonon stele (c. 400 BC?) records local victories, and Cynisca won at Olympia in 396 or 392 BC. Hunting: “Lykourgos established hunting as the most honourable activity, unless prevented by official obligations” (Xenophon, <i>Constitution</i> 4.7, D79), to keep older men fit for war.</span></li>
+    <li>Explain how Spartan marriage customs served the state.
+      <span class="sol reveal">They were meant to produce strong children, especially sons for the army: men married “at the height of their physical powers” (Xenophon); bachelors were fined and shamed (Xenophon; Plutarch); fathers of three sons were exempt from military duty (Aristotle); husbands could agree to let another man father children; and the ephors and gerousia pressed one childless king to take a second wife for the succession (Herodotus). Cooley: family law “seems especially concerned with maintaining citizen numbers”.</span></li>
+    <li>Evaluate how far Spartan marriage customs belong to the Spartan mirage.
+      <span class="sol reveal">Partly. The state’s interest in children is confirmed by writers with different purposes — Xenophon an admirer, Aristotle a critic, Herodotus an outsider. But the most vivid customs — the ‘kidnapping’, the shaved head and man’s cloak — and every moral explanation come from Plutarch alone, about AD 100, who claims “in those days adultery was totally unheard of there”. The mirage lies mostly in the explanations and the late details.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave · 2 minutes</p>
+  <h2>One custom, its purpose — and how reliable the evidence for it is</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1 · Write</div><p class="lead">One custom · what it was for · who reports it, when, and how far you trust him.</p></div>
+    <div class="card accent"><div class="k">2 · Hinge</div><p class="lead">Who says Spartan marriages took “the form of a kind of kidnapping”? <b>A</b> Xenophon · <b>B</b> Herodotus · <b>C</b> Plutarch</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> decline and defeat at Leuctra, 371 BC. Aristotle complained that rewarding fathers of many sons only multiplied poor men — next lesson asks how a shrinking citizen body left Sparta unable to recover.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Plutarch, <i>Lykourgos</i> 15 (D71, trans. B. Wilson); Plutarch, <i>Sayings of Lakedaimonians</i>, Leonidas 2 (F31); Xenophon, <i>Constitution of the Lakedaimonians</i> 1.4–10, 4.7 and 9.5 (D68, D79, D96, trans. B. Wilson); Herodotus 5.39–41, 6.57, 6.61 and 6.63–66 (E8, D8, E20, trans. B. Wilson; 6.62 paraphrased); Thucydides 1.6.5 (C42, trans. B. Wilson); Aristotle, <i>Politics</i> 1269b–1270b (D69, D54, D28); Tyrtaeus fr. 12 and Alcman fr. 4A (A9, A17, trans. K. Hughes); Philochoros in Athenaios (A2); the Damonon stele (C83). Introductions and notes by M. G. L. Cooley (the literary sources, the Spartan mirage, Lykourgos, women, oliganthropia, King Kleomenes, Spartan women in Section E), W. G. Cavanagh (Lakonian archaeology) and S. Hodkinson (inscriptions; his conclusion on property and wealth, as quoted by Cooley).</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">NSW Education Standards Authority: 2019 and 2020 HSC Ancient History marking guidelines (2019 Question 10 (c); 2020 Questions 3 and 11 (b)); 2020 marking feedback (Questions 3 and 11); glossary of key words (“Assess”, “Evaluate” and its note on self-explanatory terms). © NESA. The 8-mark question in section 6 is written for this lesson.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images</div>
+      <ul class="small"><li>A modern painting: Le Barbier’s early 19th-century picture of a Spartan woman handing her son his shield — the ‘with it or on it’ story, not ancient evidence — Clarke & Garner, Fig 5.3</li><li>A stone bust commonly believed to represent Plutarch — Clarke & Garner, Fig 1.10</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The custom → purpose table and the timeline were drawn for this lesson.</p></div>
+  </div>
+</div>
+</section>
+
+<script>
+/* Lesson 27: the custom → purpose table. Typing in a box must not move the slides, so key and
+   click events from the boxes stop here; the table is saved in this browser only. */
+(function(){
+  var KEY = "sparta-l27-table";
+  var boxes = Array.prototype.slice.call(document.querySelectorAll(".l27-in"));
+  function inBox(e){ return e.target && e.target.classList && e.target.classList.contains("l27-in"); }
+  ["keydown", "keyup", "keypress", "click"].forEach(function(type){
+    window.addEventListener(type, function(e){ if (inBox(e)) e.stopPropagation(); }, true);
+  });
+  var saved = {};
+  try{ saved = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; }catch(err){ saved = {}; }
+  boxes.forEach(function(b){
+    if (saved[b.dataset.k]) b.value = saved[b.dataset.k];
+    b.addEventListener("input", function(){
+      saved[b.dataset.k] = b.value;
+      try{ localStorage.setItem(KEY, JSON.stringify(saved)); }catch(err){}
+    });
+  });
+  Array.prototype.slice.call(document.querySelectorAll(".l27-clear")).forEach(function(btn){
+    btn.addEventListener("click", function(){
+      boxes.forEach(function(b){ b.value = ""; });
+      saved = {};
+      try{ localStorage.removeItem(KEY); }catch(err){}
+    });
+  });
+})();
+</script>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

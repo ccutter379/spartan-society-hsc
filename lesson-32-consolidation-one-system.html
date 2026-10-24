@@ -1,0 +1,2233 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L32 · Consolidation: One System and its Legacy</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: how Sparta’s features depended on each other, Sparta after Sparta and the mirage in modern memory, and a revision plan, with guided notes and HSC practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 32 (consolidation: one system, and its legacy). Every class starts l32. */
+/* Two SVGs from make_l32_diagrams.py: svg_l32map.svg (the interrelation map) and svg_l32tl.svg (the
+   reception timeline). The quiz, the chain, the dependence table, the OVPRL table and the past-paper
+   table are plain HTML, so they reflow on phones. */
+
+/* small lesson pointer chip ("L8") used in answers, the chain and tables */
+.l32-les{display:inline-block; margin-left:.35em; padding:0 .45em; border:1px solid var(--rule); border-radius:999px;
+  font-family:var(--mono); font-size:.78em; font-weight:700; color:var(--deep); background:var(--surface);
+  white-space:nowrap; vertical-align:.08em;}
+
+/* ---- the whole-unit quiz: two columns of numbered questions, answers revealed one at a time */
+.l32-quiz{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.4em 1.1em;}
+.l32-quiz li{display:grid; grid-template-columns:1.8em 1fr; column-gap:.5em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.36em .7em; font-size:calc(var(--fs-body)*.78);
+  line-height:1.32;}
+.l32-quiz li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.l32-quiz li .sol{font-weight:600;}
+@media (max-width:900px){ .l32-quiz{grid-template-columns:1fr;} }
+@media (max-height:820px){
+  html:not(.read) .l32-quiz{gap:.3em .9em;}
+  html:not(.read) .l32-quiz li{font-size:calc(var(--fs-body)*.72); line-height:1.26; padding:.28em .6em;}
+}
+
+/* ---- dense slides: tighter type on short projectors */
+@media (max-height:820px){
+  html:not(.read) .l32-dense .keylist li{font-size:calc(var(--fs-body)*.84); line-height:1.25;}
+  html:not(.read) .l32-dense .keylist .d{font-size:calc(var(--fs-body)*.74); line-height:1.25;}
+  html:not(.read) .l32-dense .keylist{gap:5px;}
+  html:not(.read) .l32-dense .note .body, html:not(.read) .l32-dense .card .body{font-size:calc(var(--fs-body)*.82); line-height:1.36;}
+  html:not(.read) .l32-dense .src .quote.sm{font-size:calc(var(--fs-body)*.84); line-height:1.4;}
+  html:not(.read) .l32-dense .qprompt{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l32-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l32-dense .tbl.compact td, html:not(.read) .l32-dense .tbl.compact th{padding:.3em .55em;}
+  html:not(.read) .l32-dense .wrap, html:not(.read) .l32-dense.wrap{gap:10px;}
+  html:not(.read) .l32-dense .stack{gap:8px;}
+  html:not(.read) .l32-dense .checks label{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+  html:not(.read) .l32-dense .checks{gap:.35em;}
+  html:not(.read) .l32-dense .tf li{font-size:calc(var(--fs-body)*.74); line-height:1.28; padding:.3em .7em;}
+  html:not(.read) .l32-dense .tf{gap:.3em;}
+  html:not(.read) .l32-dense.prac{gap:8px;}
+  html:not(.read) .l32-dense .rq{font-size:calc(var(--fs-body)*.72); line-height:1.3; gap:.3em;}
+  html:not(.read) .l32-dense .rq .sol{margin-top:.1em;}
+}
+
+/* ---- the chain (section 1): a keylist whose last step loops back to the first */
+.l32-chain .num{background:#7E1F2A;}
+.l32-chain li.l32-loop .num{background:var(--c-judgement);}
+.l32-chain .d{display:block;}
+.l32-chainfig .figure img{max-height:calc(100vh - 360px); object-fit:cover;}
+html.read .l32-chainfig .figure img{max-height:50vh;}
+
+/* ---- the dependence table */
+.l32-dep td:first-child{font-weight:700; white-space:nowrap; color:var(--deep);}
+
+/* ---- the interrelation map (svg_l32map.svg) */
+.l32-map{background:var(--surface); border-radius:10px; box-shadow:var(--shadow);}
+.l32-map text{font-family:var(--ui); fill:var(--ink);}
+.l32-map .l32m-t, .l32-map .l32m-s, .l32-map .l32m-bn{text-anchor:middle;}
+.l32-map .l32m-node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3;}
+.l32-map .l32m-t{font-size:34px; font-weight:700; fill:var(--deep);}
+.l32-map .l32m-s{font-size:23px; fill:var(--slate);}
+.l32-map .l32m-hub rect{fill:var(--statement); stroke:var(--statement);}
+.l32-map .l32m-hub .l32m-t{fill:#FBF4F0; letter-spacing:.06em;}
+.l32-map .l32m-hub .l32m-s{fill:#F6D3D6;}
+.l32-map .l32m-ln{fill:none; stroke:var(--ink); stroke-width:4;}
+.l32-map .l32m-dash{stroke:var(--c-counter); stroke-dasharray:14 10;}
+.l32-map .l32m-head{fill:var(--ink);}
+.l32-map .l32m-w{font-size:25px; font-weight:600; paint-order:stroke; stroke:var(--surface); stroke-width:7px;
+  stroke-linejoin:round;}
+.l32-map .l32m-e{font-size:21px; font-style:italic; fill:var(--slate); paint-order:stroke; stroke:var(--surface);
+  stroke-width:7px; stroke-linejoin:round;}
+.l32-map .l32m-bd{fill:#7E1F2A; stroke:var(--surface); stroke-width:3;}
+.l32-map .l32m-bn{font-size:18px; font-weight:700; fill:#fff;}
+html:not(.read) .l32-mapfig svg{max-height:calc(100vh - 225px);}
+.l32-mapfig figcaption .l32-solid, .l32-mapfig figcaption .l32-dashed{display:inline-block; width:2.2em; height:0;
+  vertical-align:.3em; margin:0 .3em; border-top:3px solid var(--ink);}
+.l32-mapfig figcaption .l32-dashed{border-top:3px dashed var(--c-counter);}
+
+/* ---- the reception timeline (svg_l32tl.svg) */
+.l32-tl{background:var(--surface); border-radius:10px; box-shadow:var(--shadow);}
+.l32-tl text{font-family:var(--ui); fill:var(--ink);}
+.l32-tl .l32t-axis{stroke:var(--ink); stroke-width:5;}
+.l32-tl .l32t-axhead{fill:var(--ink);}
+.l32-tl .l32t-ns{font-size:20px; font-style:italic; fill:var(--slate);}
+.l32-tl .l32t-era{font-size:19px; font-weight:700; letter-spacing:.12em; fill:var(--slate);}
+.l32-tl .l32t-brk line{stroke:var(--surface); stroke-width:9;}
+.l32-tl .l32t-card{fill:var(--surface); stroke:var(--deep); stroke-width:2.5;}
+.l32-tl .l32t-lead{stroke:var(--slate); stroke-width:2.5; stroke-dasharray:5 6;}
+.l32-tl .l32t-dot{fill:var(--deep);}
+.l32-tl .l32t-date{fill:var(--deep); font-size:29px; font-weight:700;}
+.l32-tl .l32t-ev{font-size:22.5px;}
+.l32-tl .l32t-src{fill:var(--slate); font-size:18.5px; font-style:italic;}
+html:not(.read) .l32-tlfig svg{max-height:calc(100vh - 300px);}
+
+/* ---- Source 14.5: two images beside the OVPRL table */
+.l32-figs{display:flex; flex-direction:column; gap:clamp(8px,1.2vh,14px);}
+.l32-figs .figure img{height:calc((100vh - 400px) / 2); max-height:none; object-fit:contain; background:var(--surface);}
+html.read .l32-figs .figure img{height:auto; max-height:46vh;}
+.l32-ovprl td:first-child{font-weight:700; white-space:nowrap; color:var(--deep);}
+.l32-ovprl td .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding-left:.55em;
+  margin-top:.2em;}
+
+/* ---- the statue beside the sayings */
+.l32-side .figure img{max-height:calc(100vh - 470px); object-fit:contain; background:var(--surface);}
+html.read .l32-side .figure img{max-height:50vh;}
+.l32-cover .figure img{max-height:62vh;}
+
+/* ---- the revision plan */
+.l32-plan{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+.l32-plan .card .body{font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+@media (max-width:900px){ .l32-plan{grid-template-columns:1fr;} }
+
+/* ---- the past-paper table */
+.l32-hsc td{vertical-align:top;}
+.l32-hsc td.l32-yr{font-family:var(--disp); font-weight:700; color:var(--deep); white-space:nowrap;}
+.l32-hsc td.l32-pt{font-family:var(--mono); font-weight:700; white-space:nowrap;}
+.l32-hsc td.l32-mk{text-align:center; font-weight:700; white-space:nowrap;}
+.l32-hsc td.l32-ls{white-space:nowrap;}
+.l32-hsc .l32-srcq{display:block; font-size:.86em; color:var(--slate);}
+.l32-hsc tr.l32-first td{border-top:2px solid var(--deep);}
+@media (max-height:820px){
+  html:not(.read) .l32-hsc{font-size:calc(var(--fs-body)*.68);}
+  html:not(.read) .l32-hsc td, html:not(.read) .l32-hsc th{padding:.26em .5em;}
+}
+
+/* ---- the credits slide: smaller print on short projectors */
+@media (max-height:820px){
+  html:not(.read) .l32-credits .small{font-size:calc(var(--fs-chrome)*.84); line-height:1.36;}
+  html:not(.read) .l32-credits .stack{gap:8px;}
+}
+
+/* ---- Read mode: hidden answers in the quiz and the OVPRL table take no space until shown */
+html.read .l32-quiz[data-answers]:not(.answers-on) .sol,
+html.read .l32-ovprl[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ---- phones: wide diagrams scroll sideways at a readable size */
+@media (max-width:700px){
+  html.read .diagram svg.l32-map{min-width:900px; max-height:none;}
+  html.read .diagram svg.l32-tl{min-width:900px; max-height:none;}
+  .l32-hsc td.l32-ls{white-space:normal;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 32" data-title="Consolidation: one system, and its legacy" data-kind="intro">
+<div class="wrap l32-cover">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 32</p>
+      <h1>Consolidation: one system, and its legacy</h1>
+      <p class="lead">How did Sparta’s features depend on each other — and how has Sparta been remembered and reinvented since?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/bradley-3-3-eurotas-valley-view.jpg" alt="A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground"><figcaption>A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground — <span class="cr">Bradley, Fig 3.3</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 32" data-title="Whole-unit quiz (1–10)" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Whole-unit retrieval quiz · 15 minutes for all 20 · from memory, no notes</p>
+  <h2>Twenty questions on the whole unit: 1–10</h2>
+  <ol class="l32-quiz" data-answers>
+    <li><span class="n">1</span><span>Thucydides imagined Sparta’s ruins: a city that is “simply a collection of” what?</span>
+      <span class="sol reveal">Villages — Thucydides 1.10.2 (Cooley G2) <span class="l32-les">L2</span></span></li>
+    <li><span class="n">2</span><span>Under the rider to the Great Rhetra, who could dissolve the assembly if it adopted a “crooked proposal”?</span>
+      <span class="sol reveal">The elders and the founder-leaders (the kings) — Plutarch, <i>Lykourgos</i> 6 (Cooley D48) <span class="l32-les">L3</span></span></li>
+    <li><span class="n">3</span><span>How many ephors were elected each year?</span>
+      <span class="sol reveal">Five — Cooley, introduction to D16–D21 <span class="l32-les">L6</span></span></li>
+    <li><span class="n">4</span><span>After the quarrel between Cleomenes and Demaratus, how many kings could go out with an army?</span>
+      <span class="sol reveal">One — Herodotus 5.75 (Cooley D6) <span class="l32-les">L4</span></span></li>
+    <li><span class="n">5</span><span>What did Cinadon say his aim had been?</span>
+      <span class="sol reveal">“To be no one’s inferior in Lakedaimon.” — Xenophon, <i>Hellenika</i> 3.3.11 (Cooley E53b) <span class="l32-les">L7</span></span></li>
+    <li><span class="n">6</span><span>What was the title of the official in charge of the boys’ education?</span>
+      <span class="sol reveal">The paidonomos (“boy-herd”) — Xenophon (Cooley D74) <span class="l32-les">L9</span></span></li>
+    <li><span class="n">7</span><span>Into how many regiments (morai) does Xenophon say the army was divided?</span>
+      <span class="sol reveal">Six — Xenophon, <i>Constitution of the Lakedaimonians</i> 11.4 (Cooley D88) <span class="l32-les">L11</span></span></li>
+    <li><span class="n">8</span><span>Who made a formal declaration of war on the helots when they took office?</span>
+      <span class="sol reveal">The ephors — Aristotle, reported by Plutarch, <i>Lykourgos</i> 28 (Cooley D44) <span class="l32-les">L12</span></span></li>
+    <li><span class="n">9</span><span>How much of the land does Aristotle say was owned by women?</span>
+      <span class="sol reveal">“almost two-fifths” — <i>Politics</i> 1270a (Cooley D54) <span class="l32-les">L14</span></span></li>
+    <li><span class="n">10</span><span>What did Cynisca win at Olympia?</span>
+      <span class="sol reveal">The chariot race — her victory monument (Cooley C55) and Pausanias (C56) <span class="l32-les">L14</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 32" data-title="Whole-unit quiz (11–20)" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Whole-unit retrieval quiz · questions 11–20</p>
+  <h2>Twenty questions on the whole unit: 11–20</h2>
+  <ol class="l32-quiz" data-answers>
+    <li><span class="n">11</span><span>Which inscription lists gifts of money to the Lacedaemonians “for the war”?</span>
+      <span class="sol reveal">The Spartan war fund inscription (Cooley B12) <span class="l32-les">L18</span></span></li>
+    <li><span class="n">12</span><span>Name Sparta’s three great festivals of Apollo.</span>
+      <span class="sol reveal">The Karneia, the Hyakinthia and the Gymnopaedia — Cooley, introduction to C61–C94 <span class="l32-les">L21</span></span></li>
+    <li><span class="n">13</span><span>According to Plutarch, how long could mourning last?</span>
+      <span class="sol reveal">Eleven days — <i>Lykourgos</i> 27.2 (Cooley B35b) <span class="l32-les">L22</span></span></li>
+    <li><span class="n">14</span><span>In what material is the 7th-century BC lion from the sanctuary of Artemis Orthia carved?</span>
+      <span class="sol reveal">Ivory — Cavanagh’s introduction in Cooley, Figure 1 <span class="l32-les">L24</span></span></li>
+    <li><span class="n">15</span><span>Who wrote of the Hyakinthia, “No one misses the festival”?</span>
+      <span class="sol reveal">Polycrates, quoted by Athenaeus (Cooley C69) <span class="l32-les">L21</span></span></li>
+    <li><span class="n">16</span><span>Where is the Menelaion?</span>
+      <span class="sol reveal">At Therapne, on high ground east of the Eurotas, south-east of the town (Cooley, introduction to C29–C31) <span class="l32-les">L2</span><span class="l32-les">L25</span></span></li>
+    <li><span class="n">17</span><span>Which poet wrote maiden-songs for choruses of Spartan girls?</span>
+      <span class="sol reveal">Alcman — fragment 1 (Cooley A14) <span class="l32-les">L13</span><span class="l32-les">L26</span></span></li>
+    <li><span class="n">18</span><span>Plutarch says Spartan marriages “take the form of a kind of” what?</span>
+      <span class="sol reveal">Kidnapping — <i>Lykourgos</i> 15 (Cooley D71) <span class="l32-les">L27</span></span></li>
+    <li><span class="n">19</span><span>Which Theban commander planned the victory at Leuctra in 371 BC?</span>
+      <span class="sol reveal">Epaminondas — Diodorus says he won “through his own generalship” (Cooley E108); Plutarch calls him “the Boiotarch” (E110) <span class="l32-les">L28</span></span></li>
+    <li><span class="n">20</span><span>What Greek word means a shortage of citizen manpower?</span>
+      <span class="sol reveal"><i>Oliganthropia</i> — Aristotle, <i>Politics</i> (Cooley D28) <span class="l32-les">L28</span></span></li>
+  </ol>
+  <div class="card tinted"><p class="body"><b>Score yourself out of 20.</b> Circle the two topics you missed first: they start your revision plan (slide 24).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 32" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>explain how the features of Spartan society were interrelated</li>
+        <li>explain how Sparta has been remembered and reinvented since 371 BC</li>
+        <li>plan how I will keep Sparta fresh until the HSC</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>draw an interrelation map with at least eight evidence-based links</li>
+        <li>explain one chain of cause and effect that links at least three features of Spartan society</li>
+        <li>explain what one modern image shows about the reception of Sparta, rather than about Sparta itself</li>
+        <li>choose my first two revision topics and the past HSC questions that go with them</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two terms to get right</div>
+    <p class="body"><b>Interrelated</b>: linked, so that a change in one part affects the others. <b>Reception</b>: how later societies use and reinvent the ancient past.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 32" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L32 · One system, and its legacy</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (c. = about)</span></div></div>
+      <div class="row"><div class="cq">How are helots linked to citizenship?</div><div class="nts">helots’ produce → mess dues → …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Four checkpoints: one system · the interrelation map · Sparta after Sparta · Sparta in modern memory.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 32" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>One system</th><th>Meaning</th></tr>
+      <tr><td>interrelated</td><td>linked, so that a change in one part affects the others</td></tr>
+      <tr><td>kleros · kleroi</td><td>a citizen’s plot of land, farmed by helots (Plutarch’s equal lots are late tradition: Lesson 15)</td></tr>
+      <tr><td>syssitia</td><td>the common messes; every member paid a monthly contribution</td></tr>
+      <tr><td>homoioi</td><td>“Equals” or “Peers”: the name the full citizens gave themselves</td></tr>
+      <tr><td>hypomeiones</td><td>people of “lesser status”: probably Spartans who had lost citizen status, for example by failing to pay their mess contribution</td></tr>
+      <tr><td>oliganthropia</td><td>a shortage of men: the shrinking number of full citizens</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Legacy</th><th>Meaning</th></tr>
+      <tr><td>reception</td><td>how later societies use and reinvent the ancient past</td></tr>
+      <tr><td>Spartan mirage</td><td>the idealised, partly invented picture of Sparta, named by François Ollier in 1933 (Lesson 1)</td></tr>
+      <tr><td>Roman Sparta</td><td>the city of the Roman period that Plutarch and Pausanias knew</td></tr>
+      <tr><td>Laconic</td><td>short and sharp, like the sayings credited to Spartans</td></tr>
+      <tr><td>molōn labe</td><td>Greek for “come and get them”: Leonidas’ reply to Xerxes in Plutarch’s <i>Sayings</i></td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Leuktra, Lakedaimonians, Gymnopaidiai). In your own writing use Lycurgus, Leuctra, Lacedaemonians and Gymnopaedia. Cooley spells the mess <i>syssition</i> (plural <i>syssitia</i>).</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · One system" data-title="The syllabus asks for this" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · One system · the syllabus content focus · 1 minute</p>
+  <h2>The syllabus asks for this</h2>
+  <div class="src">
+    <div class="k">Option G · content focus</div>
+    <p class="quote nq">“Through an investigation of key features of Spartan society to the Battle of Leuctra 371 BC, <b>and their interrelated nature</b>, students examine a range of archaeological and written sources and relevant historiographical issues.”</p>
+    <p class="prov">NESA, <i>Ancient History Stage 6 Syllabus</i> (2017), Option G: Spartan society to the Battle of Leuctra 371 BC, content focus</p>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="keyterm"><div class="k">Interrelated</div><p class="body">Each feature depended on the others. Pull one thread and the rest move.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">So</div><p class="body">A weakness in one feature spread through the rest. Today you join up the lessons of the whole unit.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · One system" data-title="One chain — and it loops back" data-kind="notes">
+<div class="wrap l32-dense">
+  <p class="eyebrow">1 · One system · I do — one chain, thought aloud · 8 minutes</p>
+  <h2>One chain — and it loops back</h2>
+  <div class="split" style="--cols:1.75fr 1fr">
+    <ol class="keylist l32-chain">
+      <li class="reveal"><span class="num">1</span><span class="t">Helots farmed the land and handed over part of the harvest</span><span class="d">Tyrtaeus: “Half of all the produce the ploughland bears” (Cooley A6) <span class="l32-les">L8</span></span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">The harvest paid each Spartiate’s monthly mess contribution</span><span class="d">barley-meal, wine, cheese and figs — Plutarch, <i>Lykourgos</i> 12 (Cooley D63) <span class="l32-les">L12</span></span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Mess membership was the mark of citizenship</span><span class="d">Aristotle: “anyone who cannot pay this tax cannot belong” (Cooley D62) <span class="l32-les">L12</span></span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Men who could not pay probably fell to the hypomeiones</span><span class="d">Cooley: “presumably descendants of homoioi who had lost their status” (note on E53b) <span class="l32-les">L7</span></span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Inheritance and dowries concentrated land in fewer hands</span><span class="d">Aristotle, writing after Leuctra: “almost two-fifths of the whole country is owned by women” (Cooley D54) <span class="l32-les">L14</span></span></li>
+      <li class="reveal"><span class="num">6</span><span class="t">Fewer citizens meant fewer hoplites</span><span class="d">Spartiates fell from about 8,000 in 480 BC to an estimated c. 1,500 by 371 BC (Cooley’s table, D29); at Leuctra “four hundred of the seven hundred Spartiates present had fallen” (Xenophon, Cooley E109) <span class="l32-les">L7</span><span class="l32-les">L28</span></span></li>
+      <li class="reveal l32-loop"><span class="num">7</span><span class="t">Defeat let Thebes free Messenia and its helots — so much of the land that fed the messes was lost</span><span class="d">Messene refounded, 370/69 BC (Diodorus, Cooley H71): step 7 cuts into step 1 <span class="l32-les">L28</span></span></li>
+    </ol>
+    <div class="stack l32-chainfig">
+      <figure class="figure"><img src="images/clarke-6-2-eurotas-olive-groves.jpg" alt="Olive groves in the fertile Eurotas valley today"><figcaption>Olive groves in the fertile Eurotas valley today — <span class="cr">Clarke & Garner, Fig 6.2</span></figcaption></figure>
+      <div class="note reveal" data-code="judgement"><div class="k">The loop</div><p class="body">The chain ends where it began: losing Messenia’s helots and land broke the first link and weakened every link after it.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · One system" data-title="Hinge: from helots to citizenship">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>Which two steps link the helots to citizenship?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>The helots served in the army, and soldiers became citizens</span></li>
+    <li id="l32-hq2"><span class="n">2</span><span>The helots’ produce paid the mess dues, and a man who could not pay lost his place</span></li>
+    <li><span class="n">3</span><span>The helots worshipped at the festivals, and festivals made men citizens</span></li>
+    <li><span class="n">4</span><span>The kings owned the helots, and the kings chose the citizens</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l32-hq2" hidden></i>
+  <div class="note reveal" data-code="evidence"><p class="body"><b>Quick Check, section 5:</b> helots handed over “Half of all the produce the ploughland bears” (Tyrtaeus, A6), which paid each man’s mess contribution (Plutarch, D63); and “anyone who cannot pay this tax cannot belong” (Aristotle, D62).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · One system" data-title="What each feature depended on" data-kind="notes">
+<div class="wrap l32-dense">
+  <p class="eyebrow">1 · One system · We do — cover the right-hand columns and predict</p>
+  <h2>What each feature depended on — and what it made possible</h2>
+  <div class="tbl-scroll"><table class="tbl compact l32-dep">
+    <tr><th>Feature</th><th>Depended on</th><th>Made possible</th></tr>
+    <tr><td>Helots</td><td class="reveal">the army and the krypteia <span class="l32-les">L12</span></td><td class="reveal">Spartiates free from farming and trade <span class="l32-les">L17</span></td></tr>
+    <tr><td>Agoge</td><td class="reveal">the state, citizen families and festivals <span class="l32-les">L9</span></td><td class="reveal">trained hoplites and entry to the messes <span class="l32-les">L10</span></td></tr>
+    <tr><td>Syssitia</td><td class="reveal">produce from helot-worked land <span class="l32-les">L12</span></td><td class="reveal">citizenship and, probably, the army’s basic units <span class="l32-les">L12</span></td></tr>
+    <tr><td>Women and land</td><td class="reveal">inheritance and dowry laws <span class="l32-les">L14</span></td><td class="reveal">citizen births, but also concentrated wealth <span class="l32-les">L14</span></td></tr>
+    <tr><td>Army</td><td class="reveal">citizens, perioikoi and helots <span class="l32-les">L11</span></td><td class="reveal">control of Messenia and, after 404 BC, leadership of Greece <span class="l32-les">L28</span></td></tr>
+    <tr><td>Religion</td><td class="reveal">the kings as priests (Herodotus 6.56, Cooley D5) and the festival calendar <span class="l32-les">L22</span></td><td class="reveal">shared festivals and discipline, but also delays: the full army waited for the Karneia before Thermopylae (Herodotus 7.206, Cooley F11) <span class="l32-les">L21</span></td></tr>
+  </table></div>
+  <p class="cue reveal">Which row is the weakest point in the whole system? Be ready to justify it.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · One system" data-title="Notes 1 — One system" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 4</p>
+  <h2>One system: how the features depended on each other</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L32 · One system, and its legacy</b></span><span>1 · One system</span></div>
+    <div class="row"><div class="cq">What does “interrelated” mean?</div>
+      <div class="nts reveal">Linked, so a change in one part affects the others <span class="sep">·</span> the syllabus asks for the key features and their “interrelated nature”</div></div>
+    <div class="row"><div class="cq">Explain the link between helots and citizenship in two steps.</div>
+      <div class="nts reveal">Helots hand over “Half of all the produce” (Tyrtaeus, A6) → pays the <b>monthly mess contribution</b> (Plut. <i>Lyc.</i> 12, D63) <span class="sep">·</span> no dues → “cannot belong” (Aristotle, D62) → <b>citizenship rests on helot labour</b></div></div>
+    <div class="row"><div class="cq">How did women’s landholding affect the number of citizens?</div>
+      <div class="nts reveal">Inheritance + dowries → “almost two-fifths” owned by women (D54) → land in few hands → poor men can’t pay → <b>fewer citizens</b> <span class="sep">·</span> Aristotle writes 330s–320s BC, after Leuctra</div></div>
+    <div class="row"><div class="cq">Where does the chain loop?</div>
+      <div class="nts reveal">700 Spartiates present at Leuctra, 400 fell (E109) → Messenia lost, Messene refounded 370/69 BC (H71) → <b>much of the land that fed the messes is gone</b></div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The interrelation map" data-title="The interrelation map (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The interrelation map · We do — build it together · 12 minutes</p>
+  <h2>Eight features, twelve links — each with its evidence</h2>
+  <figure class="diagram l32-mapfig"><svg class="l32-map" viewBox="0 0 1800 760" role="img" aria-label="The interrelation map: eight features of Spartan society and twelve evidence-based links. Helots bring half of all the produce to the economy; the economy pays the mess dues that decide citizenship; women own almost two-fifths of the land; the education aims at election to a mess and is followed by military training for the army; the messes probably formed units of the army; security against the helots comes first and the helots go to war with the army; the new ephors declare war on the helots; kings and ephors exchange oaths monthly; the king leads the army and holds two priesthoods; the army waits until the Karneia is over.">
+<defs><marker id="l32m-ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path class="l32m-head" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l32m-ahs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5.5" markerHeight="5.5" orient="auto"><path class="l32m-head" d="M10,0 L0,5 L10,10 z"/></marker></defs>
+<g class="linked l32m-link" id="l32m-1"><path class="l32m-ln" d="M1600,444 L1082,654" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="1075" cy="448" r="15"/><text class="l32m-bn" x="1075" y="454">1</text><text class="l32m-w" x="1060" y="488" text-anchor="start">helots bring ‘Half of all the produce’</text><text class="l32m-e" x="1060" y="515" text-anchor="start">Tyrtaeus · Cooley A6 · L8, L17</text></g>
+<g class="linked l32m-link" id="l32m-2"><path class="l32m-ln" d="M1076,700 L1640,444" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="1315" cy="650" r="15"/><text class="l32m-bn" x="1315" y="656">2</text><text class="l32m-w" x="1300" y="690" text-anchor="start">no mess dues, no citizenship</text><text class="l32m-e" x="1300" y="717" text-anchor="start">Aristotle · Cooley D62 · L12, L28</text></g>
+<g class="linked l32m-link" id="l32m-3"><path class="l32m-ln" d="M327,690 L726,690" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="353" cy="715" r="15"/><text class="l32m-bn" x="353" y="721">3</text><text class="l32m-w" x="524" y="676" text-anchor="middle">‘almost two-fifths’ is women’s</text><text class="l32m-e" x="524" y="722" text-anchor="middle">Aristotle · Cooley D54 · L14</text></g>
+<g class="linked l32m-link" id="l32m-4"><path class="l32m-ln" d="M250,438 L734,650" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="40" cy="532" r="15"/><text class="l32m-bn" x="40" y="538">4</text><text class="l32m-w" x="25" y="572" text-anchor="start">its aim: ‘Election to a syssition’</text><text class="l32m-e" x="25" y="599" text-anchor="start">Cooley, D60–D63 intro · L9, L12</text></g>
+<g class="linked l32m-link" id="l32m-5"><path class="l32m-ln" d="M327,384 L756,384" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="358" cy="409" r="15"/><text class="l32m-bn" x="358" y="415">5</text><text class="l32m-w" x="539" y="370" text-anchor="middle">then ‘purely military education’</text><text class="l32m-e" x="539" y="416" text-anchor="middle">Cooley, D24–D29 intro · L7, L9</text></g>
+<g class="linked l32m-link" id="l32m-6"><path class="l32m-ln l32m-dash" d="M900,636 L900,452" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="867" cy="480" r="15"/><text class="l32m-bn" x="867" y="486">6</text><text class="l32m-w" x="882" y="520" text-anchor="end">messes probably = army units</text><text class="l32m-e" x="882" y="547" text-anchor="end">Cooley, D60–D63 intro · L12</text></g>
+<g class="linked l32m-link" id="l32m-7"><path class="l32m-ln" d="M1044,384 L1471,384" marker-start="url(#l32m-ahs)" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="1089" cy="409" r="15"/><text class="l32m-bn" x="1089" y="415">7</text><text class="l32m-w" x="1260" y="370" text-anchor="middle">security first — and taken to war</text><text class="l32m-e" x="1260" y="416" text-anchor="middle">Thucydides D39 · Kritias D40</text><text class="l32m-e" x="1260" y="442" text-anchor="middle">Herodotus E84 · L8, L12</text></g>
+<g class="linked l32m-link" id="l32m-8"><path class="l32m-ln" d="M1690,124 L1690,320" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="1657" cy="174" r="15"/><text class="l32m-bn" x="1657" y="180">8</text><text class="l32m-w" x="1672" y="214" text-anchor="end">new ephors declare war</text><text class="l32m-e" x="1672" y="241" text-anchor="end">Aristotle in Plutarch · D44 · L12</text></g>
+<g class="linked l32m-link" id="l32m-9"><path class="l32m-ln" d="M1044,70 L1471,70" marker-start="url(#l32m-ahs)" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="1105" cy="95" r="15"/><text class="l32m-bn" x="1105" y="101">9</text><text class="l32m-w" x="1260" y="56" text-anchor="middle">oaths ‘once a month’</text><text class="l32m-e" x="1260" y="102" text-anchor="middle">Xenophon · Cooley D9 · L6</text></g>
+<g class="linked l32m-link" id="l32m-10"><path class="l32m-ln" d="M900,124 L900,316" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="933" cy="174" r="15"/><text class="l32m-bn" x="933" y="180">10</text><text class="l32m-w" x="918" y="214" text-anchor="start">king ‘shall lead the army’</text><text class="l32m-e" x="918" y="241" text-anchor="start">Xenophon · Cooley D9 · L4, L6</text></g>
+<g class="linked l32m-link" id="l32m-11"><path class="l32m-ln" d="M756,70 L329,70" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="380" cy="95" r="15"/><text class="l32m-bn" x="380" y="101">11</text><text class="l32m-w" x="540" y="56" text-anchor="middle">‘two priesthoods’</text><text class="l32m-e" x="540" y="102" text-anchor="middle">Herodotus · Cooley D5 · L4</text></g>
+<g class="linked l32m-link" id="l32m-12"><path class="l32m-ln" d="M250,124 L768,322" marker-end="url(#l32m-ah)"/><circle class="l32m-bd" cx="40" cy="186" r="15"/><text class="l32m-bn" x="40" y="192">12</text><text class="l32m-w" x="25" y="226" text-anchor="start">army waits for the Karneia</text><text class="l32m-e" x="25" y="253" text-anchor="start">Herodotus · Cooley F11 · L21</text></g>
+<g class="l32m-node" id="l32n-rel"><rect x="25" y="18" width="300" height="104" rx="16"/><text class="l32m-t" x="175" y="64">Religion</text><text class="l32m-s" x="175" y="98">gods · festivals · sacrifice</text></g>
+<g class="l32m-node" id="l32n-kin"><rect x="760" y="18" width="280" height="104" rx="16"/><text class="l32m-t" x="900" y="64">Kings</text><text class="l32m-s" x="900" y="98">two royal houses</text></g>
+<g class="l32m-node" id="l32n-gov"><rect x="1475" y="18" width="300" height="104" rx="16"/><text class="l32m-t" x="1625" y="64">Government</text><text class="l32m-s" x="1625" y="98">ephors · gerousia · assembly</text></g>
+<g class="l32m-node" id="l32n-ago"><rect x="25" y="332" width="300" height="104" rx="16"/><text class="l32m-t" x="175" y="378">Agoge</text><text class="l32m-s" x="175" y="412">the boys’ education</text></g>
+<g class="l32m-node l32m-hub" id="l32n-arm"><rect x="760" y="322" width="280" height="124" rx="16"/><text class="l32m-t" x="900" y="378">ARMY</text><text class="l32m-s" x="900" y="412">citizen hoplites</text></g>
+<g class="l32m-node" id="l32n-soc"><rect x="1475" y="326" width="300" height="116" rx="16"/><text class="l32m-t" x="1625" y="378">Social structure</text><text class="l32m-s" x="1625" y="412">Spartiates · perioikoi · helots</text></g>
+<g class="l32m-node" id="l32n-wom"><rect x="25" y="638" width="300" height="104" rx="16"/><text class="l32m-t" x="175" y="684">Women and land</text><text class="l32m-s" x="175" y="718">heiresses · dowries</text></g>
+<g class="l32m-node" id="l32n-eco"><rect x="730" y="638" width="340" height="104" rx="16"/><text class="l32m-t" x="900" y="684">Economy</text><text class="l32m-s" x="900" y="718">land · helot produce · messes</text></g>
+</svg>
+    <figcaption>Drawn for this lesson. <span class="l32-solid"></span>a source or Cooley says so · <span class="l32-dashed"></span>probably — an inference · L8 = the lesson that taught the evidence. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l32m-1" hidden></i>
+  <i class="reveal" data-also="#l32m-2" hidden></i>
+  <i class="reveal" data-also="#l32m-3" hidden></i>
+  <i class="reveal" data-also="#l32m-4" hidden></i>
+  <i class="reveal" data-also="#l32m-5" hidden></i>
+  <i class="reveal" data-also="#l32m-6" hidden></i>
+  <i class="reveal" data-also="#l32m-7" hidden></i>
+  <i class="reveal" data-also="#l32m-8" hidden></i>
+  <i class="reveal" data-also="#l32m-9" hidden></i>
+  <i class="reveal" data-also="#l32m-10" hidden></i>
+  <i class="reveal" data-also="#l32m-11" hidden></i>
+  <i class="reveal" data-also="#l32m-12" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The interrelation map" data-title="Reading the map" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The interrelation map · We do — read it, then pull one thread</p>
+  <h2>Reading the map</h2>
+  <div class="cols c3">
+    <div class="stack">
+      <p class="qprompt">Which features have the most links? Which has the fewest?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">The <b>army</b> and the <b>economy</b> (five each). Fewest: <b>women and land</b> (one) — but fewest is not least important: Aristotle linked the shortage of citizens to land concentrated in few hands, with almost two-fifths of the country owned by women (D54, D28).</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal">Pull one thread: Messenia is lost in 370/69 BC. Follow the arrows.</p>
+      <div class="note reveal" data-code="evidence"><p class="body">Links 1 → 2 → 6 and 7: less helot produce, fewer men able to pay their mess dues, a smaller army — and the helots of Messenia now free (Lesson 28).</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal">Which link is only “probably”? What should your answer do with it?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Link 6: Cooley says the messes “probably formed a basic grouping within the army”. Keep his “probably” in your own writing.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="2 · The interrelation map" data-title="Vote: strength and weakness">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Which feature best explains both Sparta’s strength and its weakness?</h2>
+  <div class="cols c2">
+    <ol class="opts">
+      <li><span class="n">1</span><span>The helot system</span></li>
+      <li><span class="n">2</span><span>The agoge</span></li>
+      <li><span class="n">3</span><span>Citizenship tied to land and the messes</span></li>
+      <li><span class="n">4</span><span>The dual kingship</span></li>
+    </ol>
+    <div class="stack">
+      <div class="note reveal" data-code="judgement"><div class="k">Choice 1, argued</div><p class="body">Helot labour freed the citizens (A6) — but where the helots were concerned, security always came first (Thucydides, D39), and losing Messenia broke the system (H71).</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Choice 3, argued</div><p class="body">Mess dues decided who counted as one of the “Equals” (homoioi), the exclusive citizen body (D62; Cooley, introduction to D52–D59) — but as land concentrated, the citizens fell, by Aristotle’s day, to “not even one thousand” (D28).</p></div>
+    </div>
+  </div>
+  <p class="cue reveal">There is no single right answer: any choice earns marks if you argue both sides with evidence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The interrelation map" data-title="Notes 2 — The interrelation map" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 4</p>
+  <h2>The interrelation map</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L32 · One system, and its legacy</b></span><span>2 · The map</span></div>
+    <div class="row"><div class="cq">Land, messes and citizens?</div>
+      <div class="nts reveal">Helot produce (A6) → mess dues → citizenship (D62) <span class="sep">·</span> women’s land (D54) <span class="sep">·</span> education aims at election to a mess (Cooley)</div></div>
+    <div class="row"><div class="cq">The army?</div>
+      <div class="nts reveal">Education, then “purely military education until the age of 30” (Cooley) <span class="sep">·</span> messes <b>probably</b> army units <span class="sep">·</span> security first over the helots (D39), the Spartiate’s spear (Kritias, D40), helots taken to war (E84)</div></div>
+    <div class="row"><div class="cq">Kings, government, religion?</div>
+      <div class="nts reveal">King leads the army + monthly oaths with the ephors (D9) <span class="sep">·</span> ephors declare war on the helots (D44) <span class="sep">·</span> “two priesthoods” (D5) <span class="sep">·</span> Karneia delays the army (F11)</div></div>
+    <div class="row"><div class="cq">Which feature best explains both Sparta’s strength and its weakness?</div>
+      <div class="nts reveal">e.g. the <b>helot system</b>: freed citizens (A6) but demanded security (D39); Messenia lost (H71) <span class="sep">·</span> or <b>land-based citizenship</b>: “Equals” (Cooley, intro to D52–D59) tied to mess dues (D62) but, by Aristotle’s day, “not even one thousand” (D28)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Sparta after Sparta" data-title="The city Plutarch and Pausanias knew" data-kind="notes">
+<div class="wrap l32-dense">
+  <p class="eyebrow">3 · Sparta after Sparta · I do</p>
+  <h2>After Leuctra: the city Plutarch and Pausanias knew</h2>
+  <div class="split" style="--cols:1fr 1.2fr">
+    <div class="stack">
+      <div class="card accent"><div class="k">After Leuctra</div><p class="body">Sparta survived as a small state. Cooley: the Messenian helots’ “successful bid for freedom in 370/69 BC reduced Sparta to a middling power of small significance” (Lesson 28).</p></div>
+      <div class="src">
+        <div class="k">Cooley, on reading the later writers</div>
+        <p class="quote sm">in order to interpret later authors’ reports of Sparta, we also have to understand the life of the Hellenistic and Roman city</p>
+        <p class="prov">Cooley, introduction to section F (“The Spartan Mirage”), citing Cartledge &amp; Spawforth, <i>Hellenistic and Roman Sparta</i></p>
+      </div>
+      <div class="note reveal" data-code="judgement"><div class="k">Quick Check · section 6</div><p class="body">Why must we understand Roman Sparta to read Plutarch and Pausanias? <b>They knew the Sparta of their own day</b>, where old customs had been restored, reinvented or staged — so what they report as ancient may not be classical.</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt">What did that later city do with its famous past?</p>
+      <div class="card reveal"><div class="k">It restored — or re-invented — it</div><p class="body">The Spartans “tried to restore (or re-invent) their ancestral constitution”, and “many new ideas were presented as ancient” (Cooley, citing Kennell and Cartledge &amp; Spawforth). <span class="l32-les">L19</span><span class="l32-les">L27</span></p></div>
+      <div class="card reveal"><div class="k">It staged it for visitors</div><p class="body">The whipping at the altar of Artemis Orthia: Cooley calls it “not classical but designed for sadistic Roman tourists” (note on C94). <span class="l32-les">L10</span></p></div>
+      <div class="card reveal"><div class="k">It honoured its heroes</div><p class="body">At the memorial of Leonidas, Pausanias saw that “Every year speeches are made there and there is a contest in which only Spartiates may compete” (3.14.1, Cooley F27). <span class="l32-les">L22</span></p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Sparta after Sparta" data-title="The Spartans and the mirage" data-kind="notes">
+<div class="wrap l32-dense">
+  <p class="eyebrow">3 · Sparta after Sparta · We do — two sayings about Leonidas</p>
+  <h2>The Spartans helped build the mirage</h2>
+  <div class="split l32-side" style="--cols:1.55fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Pausanias</div>
+        <p class="quote sm">Before Leuktra, no setback had ever befallen the Lakedaimonians, with the result that they did not admit that they had ever been beaten in an infantry contest: for they say that Leonidas won but had insufficient followers for a wholesale slaughter of the Persians</p>
+        <p class="prov">Pausanias, <i>Description of Greece</i> 1.13.5 · 2nd century AD · trans. in Cooley F8</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><p class="body">Even Thermopylae was retold as a kind of victory. Cooley: the Spartans “played a crucial role in creating and maintaining the Spartan mirage”.</p></div>
+      <div class="src reveal">
+        <div class="k">Source · Plutarch, a saying of Leonidas</div>
+        <p class="quote sm">When Xerxes wrote to him, “Hand over your weapons,” he wrote back, “Come and get them.”</p>
+        <p class="prov">Plutarch, <i>Sayings of Lakedaimonians</i>, Leonidas 10 (<i>Moralia</i> 225A–E) · late 1st or early 2nd century AD, nearly six centuries after Thermopylae · trans. in Cooley F31. In Greek, “Come and get them” is <i>molōn labe</i>.</p>
+      </div>
+    </div>
+    <div class="stack">
+      <figure class="figure contain"><img src="images/clarke-7-12-modern-leonidas-statue.jpg" alt="A modern statue of King Leonidas near ancient Sparta — Clarke &amp; Garner note his place in modern Greek nationalism: commemoration, not a portrait"><figcaption>A modern statue of King Leonidas near ancient Sparta — Clarke & Garner note his place in modern Greek nationalism: commemoration, not a portrait — <span class="cr">Clarke & Garner, Fig 7.12</span></figcaption></figure>
+      <div class="note reveal" data-code="counter"><div class="k">Can we trust it?</div><p class="body">Cooley on Plutarch’s collection of sayings: “We cannot know whether any of these are authentic, but together they can serve as a perfect illustration of the main themes of the Spartan ‘mirage’.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Sparta after Sparta" data-title="Hinge: who first reports ‘Come and get them’?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>What is the earliest surviving source for Leonidas’ “Come and get them”?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Herodotus, writing c. 450s–420s BC</span></li>
+    <li><span class="n">2</span><span>Xenophon’s <i>Constitution of the Lakedaimonians</i></span></li>
+    <li id="l32-hq3"><span class="n">3</span><span>Plutarch’s <i>Sayings</i>, c. AD 100</span></li>
+    <li><span class="n">4</span><span>The film <i>300</i> (2006)</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l32-hq3" hidden></i>
+  <div class="note reveal" data-code="counter"><div class="k">Careful</div><p class="body">Herodotus’ famous Thermopylae saying is a different one: Dienekes’ “If the Persians shut out the sun, we’ll be fighting in the shade instead” (Herodotus 7.226, Cooley F20). Cooley notes that Plutarch’s <i>Sayings</i> give that line to Leonidas too: sayings moved from man to man.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Sparta after Sparta" data-title="Notes 3 — Sparta after Sparta" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 4</p>
+  <h2>Sparta after Sparta</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L32 · One system, and its legacy</b></span><span>3 · Sparta after Sparta</span></div>
+    <div class="row"><div class="cq">Why must we understand Roman Sparta to read Plutarch and Pausanias?</div>
+      <div class="nts reveal">After Leuctra → “a middling power” <span class="sep">·</span> later Spartans “restore (or re-invent)” old ways (Cooley, after Kennell) <span class="sep">·</span> Orthia whipping for “Roman tourists” <span class="sep">·</span> Plutarch + Pausanias saw <b>that</b> city</div></div>
+    <div class="row"><div class="cq">Who built the mirage?</div>
+      <div class="nts reveal">The <b>Spartans</b> too: “a crucial role” (Cooley) <span class="sep">·</span> boast: never beaten in an infantry battle before Leuctra (Pausanias 1.13.5, F8)</div></div>
+    <div class="row"><div class="cq">Where does molōn labe come from, and why is it hard to trust?</div>
+      <div class="nts reveal">Plutarch’s <i>Sayings</i>, Leonidas 10 (F31), c. AD 100 → ≈ 6 centuries after 480 BC <span class="sep">·</span> Cooley: “We cannot know whether any of these are authentic”</div></div>
+    <div class="row"><div class="cq">So how can we use the sayings?</div>
+      <div class="nts reveal">As evidence of the <b>mirage</b> (what Spartans were believed to say), not of what Leonidas said</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Sparta in modern memory" data-title="Sparta after Sparta (timeline)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · Sparta in modern memory · I do — the reception, card by card</p>
+  <h2>Sparta after Sparta: a reception timeline</h2>
+  <figure class="diagram l32-tlfig"><svg class="l32-tl" viewBox="0 0 1640 600" role="img" aria-label="Sparta after Sparta: a reception timeline, not to scale. 480 BC, Thermopylae becomes the most famous example of Spartan valour. Before 371 BC, the Spartans boast that they were never beaten in an infantry battle. In the Hellenistic and Roman periods the Spartans restore or re-invent their ancestral constitution. About AD 100, Plutarch collects the saying Come and get them, molon labe. 1835 to 1845, later admirers such as Delacroix paint Lycurgus. 1933, Ollier names the Spartan mirage. 1962, the film The 300 Spartans. 2006, the film 300. 2020, a Molon labe flag at a US election rally.">
+<line class="l32t-axis" x1="30" y1="300" x2="1610" y2="300"/>
+<path class="l32t-axhead" d="M1610,288 L1634,300 L1610,312 z"/>
+<text class="l32t-ns" x="1606" y="340" text-anchor="end">not to scale</text>
+<g class="l32t-brk"><line x1="728.125" y1="316" x2="740.125" y2="284"/><line x1="742.125" y1="316" x2="754.125" y2="284"/></g>
+<text class="l32t-era" x="716.125" y="284" text-anchor="end">ANCIENT</text>
+<text class="l32t-era" x="774.125" y="340" text-anchor="start">MODERN</text>
+<g class="linked l32t-item" id="l32t-1"><line class="l32t-lead" x1="165" y1="210" x2="165" y2="291"/><circle class="l32t-dot" cx="165" cy="300" r="9"/><rect class="l32t-card" x="10" y="14" width="310" height="196" rx="12"/><text class="l32t-date" x="26" y="52">480 BC</text><text class="l32t-ev" x="26" y="86">Thermopylae: a defeat that</text><text class="l32t-ev" x="26" y="115">soon became Sparta’s most</text><text class="l32t-ev" x="26" y="144">famous example of valour</text><text class="l32t-src" x="26" y="194">Cooley, intro to F9–F26</text></g>
+<g class="linked l32t-item" id="l32t-2"><line class="l32t-lead" x1="329" y1="390" x2="329" y2="309"/><circle class="l32t-dot" cx="329" cy="300" r="9"/><rect class="l32t-card" x="174" y="390" width="310" height="196" rx="12"/><text class="l32t-date" x="190" y="428">before 371 BC</text><text class="l32t-ev" x="190" y="462">Spartans boast they were</text><text class="l32t-ev" x="190" y="491">never beaten in an</text><text class="l32t-ev" x="190" y="520">infantry battle</text><text class="l32t-src" x="190" y="570">Pausanias 1.13.5 · Cooley F8 · L28</text></g>
+<g class="linked l32t-item" id="l32t-3"><line class="l32t-lead" x1="492" y1="210" x2="492" y2="291"/><circle class="l32t-dot" cx="492" cy="300" r="9"/><rect class="l32t-card" x="338" y="14" width="310" height="196" rx="12"/><text class="l32t-date" x="354" y="52">Hellenistic–Roman</text><text class="l32t-ev" x="354" y="86">Spartans ‘restore (or</text><text class="l32t-ev" x="354" y="115">re-invent)’ their ancestral</text><text class="l32t-ev" x="354" y="144">constitution</text><text class="l32t-src" x="354" y="194">Cooley, citing Kennell · L19, L27</text></g>
+<g class="linked l32t-item" id="l32t-4"><line class="l32t-lead" x1="656" y1="390" x2="656" y2="309"/><circle class="l32t-dot" cx="656" cy="300" r="9"/><rect class="l32t-card" x="501" y="390" width="310" height="196" rx="12"/><text class="l32t-date" x="517" y="428">c. AD 100</text><text class="l32t-ev" x="517" y="462">Plutarch’s Sayings: Leonidas</text><text class="l32t-ev" x="517" y="491">answers Xerxes, ‘Come and</text><text class="l32t-ev" x="517" y="520">get them’ (molōn labe)</text><text class="l32t-src" x="517" y="570">Plutarch · Cooley F31</text></g>
+<g class="linked l32t-item" id="l32t-5"><line class="l32t-lead" x1="820" y1="210" x2="820" y2="291"/><circle class="l32t-dot" cx="820" cy="300" r="9"/><rect class="l32t-card" x="665" y="14" width="310" height="196" rx="12"/><text class="l32t-date" x="681" y="52">1835–45</text><text class="l32t-ev" x="681" y="86">Later admirers: Delacroix</text><text class="l32t-ev" x="681" y="115">paints Lycurgus consulting</text><text class="l32t-ev" x="681" y="144">the Pythia (Lesson 3)</text><text class="l32t-src" x="681" y="194">textbook: Clarke &amp; Garner Fig 2.3</text></g>
+<g class="linked l32t-item" id="l32t-6"><line class="l32t-lead" x1="984" y1="390" x2="984" y2="309"/><circle class="l32t-dot" cx="984" cy="300" r="9"/><rect class="l32t-card" x="829" y="390" width="310" height="196" rx="12"/><text class="l32t-date" x="845" y="428">1933</text><text class="l32t-ev" x="845" y="462">François Ollier names</text><text class="l32t-ev" x="845" y="491">the Spartan mirage</text><text class="l32t-src" x="845" y="570">Cooley, intro to section F · L1</text></g>
+<g class="linked l32t-item" id="l32t-7"><line class="l32t-lead" x1="1148" y1="210" x2="1148" y2="291"/><circle class="l32t-dot" cx="1148" cy="300" r="9"/><rect class="l32t-card" x="992" y="14" width="310" height="196" rx="12"/><text class="l32t-date" x="1008" y="52">1962</text><text class="l32t-ev" x="1008" y="86">The 300 Spartans: a</text><text class="l32t-ev" x="1008" y="115">‘swords and sandals’ film</text><text class="l32t-ev" x="1008" y="144">of Thermopylae</text><text class="l32t-src" x="1008" y="194">textbook: Clarke &amp; Garner Fig 7.13</text></g>
+<g class="linked l32t-item" id="l32t-8"><line class="l32t-lead" x1="1311" y1="390" x2="1311" y2="309"/><circle class="l32t-dot" cx="1311" cy="300" r="9"/><rect class="l32t-card" x="1156" y="390" width="310" height="196" rx="12"/><text class="l32t-date" x="1172" y="428">2006</text><text class="l32t-ev" x="1172" y="462">300, the film of Frank</text><text class="l32t-ev" x="1172" y="491">Miller’s graphic novel</text><text class="l32t-src" x="1172" y="570">Cooley, intro to section F · L1</text></g>
+<g class="linked l32t-item" id="l32t-9"><line class="l32t-lead" x1="1475" y1="210" x2="1475" y2="291"/><circle class="l32t-dot" cx="1475" cy="300" r="9"/><rect class="l32t-card" x="1320" y="14" width="310" height="196" rx="12"/><text class="l32t-date" x="1336" y="52">2020</text><text class="l32t-ev" x="1336" y="86">A ‘Molon labe’ flag at a</text><text class="l32t-ev" x="1336" y="115">US election rally</text><text class="l32t-src" x="1336" y="194">textbook: Clarke &amp; Garner Fig 9.3</text></g>
+</svg>
+    <figcaption>Drawn for this lesson; not to scale. Every card names its source; “textbook” = Clarke &amp; Garner. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l32t-1" hidden></i>
+  <i class="reveal" data-also="#l32t-2" hidden></i>
+  <i class="reveal" data-also="#l32t-3" hidden></i>
+  <i class="reveal" data-also="#l32t-4" hidden></i>
+  <i class="reveal" data-also="#l32t-5" hidden></i>
+  <i class="reveal" data-also="#l32t-6" hidden></i>
+  <i class="reveal" data-also="#l32t-7" hidden></i>
+  <i class="reveal" data-also="#l32t-8" hidden></i>
+  <i class="reveal" data-also="#l32t-9" hidden></i>
+  <div class="note reveal" data-code="judgement"><p class="body">Cooley: “the process of re-inventing Sparta for new times and contexts is still continuing”.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Sparta in modern memory" data-title="Source 14.5 — Sparta in modern memory" data-kind="notes">
+<div class="wrap l32-dense">
+  <p class="eyebrow">4 · Sparta in modern memory · We do — Source 14.5 with OVPRL</p>
+  <h2>Source 14.5: Sparta in modern memory</h2>
+  <div class="split" style="--cols:.8fr 1.3fr">
+    <div class="l32-figs">
+      <figure class="figure contain"><img src="images/clarke-7-13-300-spartans-poster-1962.jpg" alt="A promotional poster for the 1962 film The 300 Spartans — modern reception, not ancient evidence"><figcaption>A promotional poster for the 1962 film The 300 Spartans — modern reception, not ancient evidence — <span class="cr">Clarke & Garner, Fig 7.13</span></figcaption></figure>
+      <figure class="figure contain"><img src="images/clarke-9-3-molon-labe-flag-2020.jpg" alt="A boat at a 2020 United States election rally flies a black flag bearing a crested helmet and the Greek words ΜΟΛΩΝ ΛΑΒΕ (molon labe) — modern reception, not ancient evidence"><figcaption>A boat at a 2020 United States election rally flies a black flag bearing a crested helmet and the Greek words ΜΟΛΩΝ ΛΑΒΕ (molon labe) — modern reception, not ancient evidence — <span class="cr">Clarke & Garner, Fig 9.3</span></figcaption></figure>
+    </div>
+    <div class="stack">
+      <p class="small"><b>Provenance:</b> poster for <i>The 300 Spartans</i>, directed by Rudolph Maté (1962); photograph of a <i>molon labe</i> flag at a US election rally (2020). Both are modern reception, not ancient evidence.</p>
+      <div class="tbl-scroll"><table class="tbl compact l32-ovprl" data-answers>
+        <tr><th>OVPRL</th><th>Question, then a model answer</th></tr>
+        <tr><td>Origin</td><td>Who made each image, and when?<span class="sol reveal">A promotional poster for the film, 1962; a photograph at a 2020 rally — about 2,400 and 2,500 years after Thermopylae.</span></td></tr>
+        <tr><td>Value</td><td>What do they reveal about modern uses of Sparta, rather than about Sparta itself?<span class="sol reveal">Leonidas’ last stand sells as entertainment, and his reply serves as a modern slogan of defiance.</span></td></tr>
+        <tr><td>Purpose</td><td>The 1962 film was made during the Cold War. Why might a story of a few free men against a vast empire appeal then?<span class="sol reveal">Audiences could probably read it as a free West standing against a great power — an inference from its date, not a fact about Sparta.</span></td></tr>
+        <tr><td>Reliability</td><td>Which details come from ancient sources, and how late are they?<span class="sol reveal">The 300 and the stand at Thermopylae: Herodotus (c. 450s–420s BC). “Molon labe”: Plutarch, c. AD 100.</span></td></tr>
+        <tr><td>Limitations</td><td>Which people of Laconia are missing from both images?<span class="sol reveal">Helots and perioikoi: Cooley says the Spartans “were probably accompanied by periokoi and helots who also lost their lives”. And women.</span></td></tr>
+      </table></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Sparta in modern memory" data-title="Notes 4 — Sparta in modern memory" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 4</p>
+  <h2>Sparta in modern memory</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L32 · One system, and its legacy</b></span><span>4 · Modern memory</span></div>
+    <div class="row"><div class="cq">What is reception?</div>
+      <div class="nts reveal">How later societies use and reinvent the past <span class="sep">·</span> Cooley: re-inventing Sparta “is still continuing”</div></div>
+    <div class="row"><div class="cq">The layers?</div>
+      <div class="nts reveal">480 BC Thermopylae → Spartans’ boast (F8) → Hellenistic–Roman “re-invent” → Plutarch’s sayings (F31) → painters (Delacroix) → Ollier 1933 → films 1962, 2006 → a 2020 rally flag</div></div>
+    <div class="row"><div class="cq">Choose one image and explain what it shows about modern reception.</div>
+      <div class="nts reveal">e.g. the 2020 flag: a saying first found in Plutarch (c. AD 100) turned into a modern <b>political slogan</b> → evidence for its users, not for Leonidas</div></div>
+    <div class="row"><div class="cq">What do the images leave out?</div>
+      <div class="nts reveal">Helots and perioikoi who “probably” died too (Cooley) <span class="sep">·</span> the Thespians and Thebans <span class="sep">·</span> women</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Sparta in modern memory" data-title="Summary" data-kind="notes">
+<div class="wrap l32-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes · You do</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.7fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>How did Sparta’s features depend on each other?</li>
+          <li>Why did that make the system both strong and fragile?</li>
+          <li>How has Sparta been remembered and reinvented since?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">Sparta’s features formed one system: helot labour paid the mess dues that made a man a citizen, education made citizens into soldiers, the messes probably formed the army’s basic units, and kings, ephors and festivals bound war, religion and helot control together. Because each feature rested on the others, a weakness in one — fewer citizens as land concentrated, or the loss of Messenia’s helots — spread through all of them. After Leuctra, later Spartans, Plutarch, painters, film-makers and modern politics kept reinventing Sparta, so its legacy often tells us more about them than about Sparta.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · One system: the chain and how it loops</label></li>
+        <li><label><input type="checkbox"> 2 · The map: twelve links, each with evidence</label></li>
+        <li><label><input type="checkbox"> 3 · Sparta after Sparta: Roman Sparta and the sayings</label></li>
+        <li><label><input type="checkbox"> 4 · Modern memory: the timeline and Source 14.5</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Your revision plan" data-title="A revision plan for Sparta" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Your revision plan · You do · keep Sparta fresh until the HSC</p>
+  <h2>A revision plan for Sparta</h2>
+  <div class="l32-plan">
+    <div class="card accent"><div class="k">Every week</div><p class="body">A 10-minute starter: pick one feature from the map and write its links and evidence from memory. Then make or test one source card per syllabus dot point: who, when, what it shows, one limitation.</p></div>
+    <div class="card accent"><div class="k">Every fortnight</div><p class="body">One past HSC part in the time its marks allow — about 1.8 minutes a mark — then self-mark against NESA’s marking guidelines and the model on this site. The table on slides 32–33 says where each one is taught.</p></div>
+    <div class="card accent"><div class="k">Before each exam</div><p class="body">A full Section II in 45 minutes, without notes. The Lessons 30–31 page has one ready: HSC 2021 Question 11.</p></div>
+  </div>
+  <div class="card quiet">
+    <div class="k">Start today: tick when done</div>
+    <ul class="checks">
+      <li><label><input type="checkbox"> I have written down my two weakest topics from the quiz (slides 2–3)</label></li>
+      <li><label><input type="checkbox"> I have found the lessons that teach them, and the past HSC questions that go with them (slides 32–33)</label></li>
+      <li><label><input type="checkbox"> I have chosen my first timed question and the date I will do it</label></li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="One synthesis question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>One synthesis question: the whole unit in one answer</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 12 marks ≈ 22 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">Not from a past paper</div><p class="body">HSC-style, written for this lesson, to the pattern of a 12-mark “Explain” part such as 2022 Q11(d).</p></div>
+  </div>
+  <p class="lead">We take it apart, plan it from the interrelation map, read one annotated model paragraph, then you mark your own plan.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC-style synthesis" data-title="HSC-style synthesis — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style, written for this lesson · Section II · 12 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> how <span class="code" data-code="keyterm" data-letter="K">the features of Spartan society were interrelated</span> <span class="code" data-code="scope" data-letter="S">in this period</span>. <span class="code" data-code="evidence" data-letter="E">Support your response using evidence from relevant sources.</span></p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <p class="lead">Not from a past paper. The source sentence copies the wording of 2024 Q11(d).</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style synthesis" data-title="HSC-style synthesis — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style synthesis · We do — deconstruct it with the NESA glossary</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">“Relate cause and effect. Make the relationships between things evident. Provide why and/or how.” Every paragraph shows how one feature <b>caused or depended on</b> another: because, so, therefore.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The features … interrelated</div><p class="body">Not a tour of the features one by one. Pick three or four threads of the map and follow each one across several features.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">To Leuctra, 371 BC. Flag late evidence: Aristotle wrote after Leuctra, Plutarch c. AD 100, Pausanias in the 2nd century AD.</p></div>
+    <div class="note reveal" data-code="evidence"><div class="k">Evidence from relevant sources</div><p class="body">Named writers with dates and Cooley codes, integrated into your sentences — and at least one evaluated.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">12 marks</div><p class="body">About 22 minutes · a judgement first · three threads, one paragraph each · a refined judgement to finish · about 450–550 words.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style synthesis" data-title="HSC-style synthesis — the criteria" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style synthesis · the standard to aim for</p>
+  <h2>NESA’s criteria for a 12-mark “Explain” part</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2022, part (d))</th></tr>
+      <tr><td class="m">10–12</td><td>Provides a well-developed explanation, demonstrating detailed knowledge and understanding relevant to the question · Integrates evidence from the source provided and other relevant sources to support the response · Communicates ideas and information logically and coherently using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">7–9</td><td>Provides an explanation, demonstrating knowledge and understanding relevant to the question · Uses evidence from the source provided to support the response and refers to other relevant source(s) · Communicates ideas and information logically using appropriate historical terms and concepts</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="scope"><div class="k">Read it carefully</div><p class="body">2022 Q11(d) printed a source (Aristotle on the mixed constitution). This question prints none, so all your evidence comes from “other relevant sources”.</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">The step up to 10–12</div><p class="body">“well-developed” and “Integrates”: the evidence sits inside the explanation, and the explanation runs logically from one feature to the next.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2022 HSC Ancient History Marking Guidelines, Section II, part (d), quoted exactly (top two bands). Lesson 6 models 2022 Q11(d) itself.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style synthesis" data-title="HSC-style synthesis — plan it from the map" data-kind="hsc">
+<div class="wrap l32-dense">
+  <p class="eyebrow">HSC-style synthesis · We do — a plan built from the interrelation map · 8 minutes</p>
+  <h2>Three threads of the map, one paragraph each</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Move</th><th>The thread</th><th>Evidence (map links)</th><th>→ Why it matters</th></tr>
+    <tr class="reveal"><td><b>Judge</b></td><td colspan="3">Sparta’s features formed one system resting on helot labour and an exclusive citizen body, so a weakness in one spread to the rest.</td></tr>
+    <tr class="reveal"><td><b>1 · Land and citizens</b></td><td>helots → land → mess dues → citizenship</td><td>Tyrtaeus (A6) · Plutarch (D63) · Aristotle (D62, D54) — links 1–3</td><td>citizenship tied to land; numbers fall as land concentrates</td></tr>
+    <tr class="reveal"><td><b>2 · Education and army</b></td><td>education → mess → army ↔ helots</td><td>Cooley’s introductions · Thucydides (D39) · Herodotus (E84) — links 4–7</td><td>an army of citizens that also kept the helots working</td></tr>
+    <tr class="reveal"><td><b>3 · Kings, ephors, gods</b></td><td>kings ↔ ephors; kings → army and religion; ephors → helots</td><td>Xenophon (D9) · Herodotus (D5, F11) · Plutarch citing Aristotle (D44) — links 8–12</td><td>authority and religion bound war and helot control together; ritual could delay the army</td></tr>
+    <tr class="reveal"><td><b>Evaluate</b></td><td colspan="3">Much evidence is late or idealised: Xenophon admired Sparta, Plutarch wrote c. AD 100, Aristotle after Leuctra. Cooley: “it is probably impossible for us to find out ‘what life was really like’ in classical Sparta” — so keep each “probably”.</td></tr>
+    <tr class="reveal"><td><b>Resolve</b></td><td colspan="3">The links were the system’s strength and its weakness: Leuctra and the loss of Messenia broke several at once (Lesson 28).</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style synthesis" data-title="HSC-style synthesis — a model paragraph" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style synthesis · I do — an annotated model paragraph (thread 1) · written for this lesson</p>
+  <h2>A paragraph that follows one thread</h2>
+  <div class="annot wide" data-veil="Plan your own answer first — then show the annotated model paragraph">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="l32p-1">The deepest link in the Spartan system ran from helot labour, through the land, to citizenship itself.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="l32p-2">The helots brought their masters ‘Half of all the produce the ploughland bears’, in the words of Tyrtaeus, a 7th-century poet who was probably a Spartan,</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="l32p-3">so the citizens did not need to farm and could give their lives to training, the army and the messes.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="l32p-4">That produce paid each man’s monthly contribution of barley-meal, wine, cheese and figs, which Plutarch lists (<i>Lycurgus</i> 12), and Aristotle shows what hung on it: ‘anyone who cannot pay this tax cannot belong’.</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="l32p-5">Land therefore decided citizenship, and citizenship decided the size of the army.</span><span class="mk">5</span>
+      <span class="code" data-code="counter" id="l32p-6">Aristotle wrote after Leuctra and Plutarch around AD 100, so both look back on the system; but Xenophon, a contemporary, records that only seven hundred Spartiates were present at Leuctra, which suggests the citizen body had already shrunk.</span><span class="mk">6</span>
+      <span class="code" data-code="judgement" id="l32p-7">The link that freed Spartiates to be citizen soldiers also tied their numbers to the land, so when Messenia and its helots were lost in 370/69 BC, the system lost much of its base.</span><span class="mk">7</span>
+      <p class="meta">Model written for this lesson · paragraph 1 of 3 · 181 words, about 7 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#l32p-1"><span class="mk">1</span><b>Judge</b><span class="tx">A claim about a <i>link</i>, not a feature. No roadmap sentence: it starts with the argument.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#l32p-2"><span class="mk">2</span><b>Evidence with provenance</b><span class="tx">Named poet, his date, the hedge (“probably a Spartan”), exact words (Cooley A6).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#l32p-3"><span class="mk">3</span><b>Analyse</b><span class="tx">“so”: helots → citizens free to train. The relationship made evident — NESA’s “explain”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#l32p-4"><span class="mk">4</span><b>Two writers, two jobs</b><span class="tx">Plutarch for the dues (D63), Aristotle for what depended on them (D62).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#l32p-5"><span class="mk">5</span><b>Three features in one sentence</b><span class="tx">Land → citizenship → army: the interrelation the question asks for.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#l32p-6"><span class="mk">6</span><b>Evaluate</b><span class="tx">Dates of the sources, then a check from a contemporary (Xenophon, E109). “suggests” keeps the hedge.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#l32p-7"><span class="mk">7</span><b>Resolve</b><span class="tx">Back to the opening claim, now refined: the same link was strength and weakness.</span></div>
+      <div class="verdict reveal"><b>Written to the 10–12 criteria:</b> evidence integrated into a logical explanation. Paragraphs 2 and 3 follow threads 2 and 3 of the plan.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style synthesis" data-title="HSC-style synthesis — mark your own" data-kind="hsc">
+<div class="wrap l32-dense">
+  <p class="eyebrow">HSC-style synthesis · Self-mark your plan or paragraph</p>
+  <h2>Mark your own</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement about how the features were linked — no roadmap sentence</label></li>
+        <li><label><input type="checkbox"> followed a thread across at least three features, with because, so or therefore</label></li>
+        <li><label><input type="checkbox"> named writers with dates and Cooley codes, inside my sentences</label></li>
+        <li><label><input type="checkbox"> evaluated at least one source (date, purpose, how late)</label></li>
+        <li><label><input type="checkbox"> kept “probably” where the evidence is uncertain (the messes as army units; the hypomeiones)</label></li>
+        <li><label><input type="checkbox"> finished with a refined judgement, not a repeat of the first sentence</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-line test</div><p class="body">Read only your first and last sentences. Do they state how the features were linked — and why that mattered?</p></div>
+      <div class="card accent"><div class="k">More practice</div><p class="body"><b>To what extent did the features that made Sparta strong also cause its decline by 371 BC?</b> (15 marks) — the plan is on slide 38.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Past HSC questions" data-title="Past HSC questions and their lessons (2019–2021)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · For revision · every past Sparta question, and the lessons that teach it · 1 of 2</p>
+  <h2>Which past HSC question goes with which lesson? 2019–2021</h2>
+  <div class="tbl-scroll"><table class="tbl compact l32-hsc">
+    <tr><th>Year</th><th>Part</th><th>Question</th><th>Marks</th><th>Lessons</th></tr>
+    <tr class="l32-first"><td class="l32-yr">2019 Q10</td><td class="l32-pt">(a)</td><td>Outline the roles of the helots in this period.</td><td class="l32-mk">4</td><td class="l32-ls">8 · also 17</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>What does the ephorate reveal about Spartan political organisation in this period?</td><td class="l32-mk">6</td><td class="l32-ls">6</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>Explain how religious festivals help us to understand Spartan society in this period. <span class="l32-srcq">With Source K, Athenaeus on the Karneia, and other relevant sources</span></td><td class="l32-mk">15</td><td class="l32-ls">21</td></tr>
+    <tr class="l32-first"><td class="l32-yr">2020 Q11</td><td class="l32-pt">(a)</td><td>Describe the role of women in this period.</td><td class="l32-mk">5</td><td class="l32-ls">14 · also 13</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>With reference to Source L, what do Greek writers reveal about Spartan cultural life in this period? <span class="l32-srcq">Source L: Pausanias 3.14.8</span></td><td class="l32-mk">8</td><td class="l32-ls">26</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>What evidence do archaeological and written sources provide about the Spartan economy in this period?</td><td class="l32-mk">12</td><td class="l32-ls">18 · also 15–17</td></tr>
+    <tr class="l32-first"><td class="l32-yr">2021 Q11</td><td class="l32-pt">(a)</td><td>Outline the key features of the site of Sparta.</td><td class="l32-mk">3</td><td class="l32-ls">2</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>What is known about Spartan technology in this period?</td><td class="l32-mk">5</td><td class="l32-ls">16</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>Explain the importance of Lycurgus and the Great Rhetra in this period.</td><td class="l32-mk">7</td><td class="l32-ls">3</td></tr>
+    <tr><td></td><td class="l32-pt">(d)</td><td>Analyse the role of the army in Spartan society in this period. <span class="l32-srcq">With Source L, Tyrtaeus 12.27–34W, and other relevant sources · the whole paper: Lessons 30–31</span></td><td class="l32-mk">10</td><td class="l32-ls">11</td></tr>
+  </table></div>
+  <p class="small">Questions from the NESA HSC Ancient History papers, Section II, Option G. © NESA. “Lessons” = where the question is modelled on this site (“also” = where its content is taught).</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Past HSC questions" data-title="Past HSC questions and their lessons (2022–2025)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · For revision · every past Sparta question, and the lessons that teach it · 2 of 2</p>
+  <h2>Which past HSC question goes with which lesson? 2022–2025</h2>
+  <div class="tbl-scroll"><table class="tbl compact l32-hsc">
+    <tr><th>Year</th><th>Part</th><th>Question</th><th>Marks</th><th>Lessons</th></tr>
+    <tr class="l32-first"><td class="l32-yr">2022 Q11</td><td class="l32-pt">(a)</td><td>Outline the role of ONE god or goddess worshipped by the Spartans in this period.</td><td class="l32-mk">2</td><td class="l32-ls">21</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>What was the significance of festivals for Spartan society?</td><td class="l32-mk">4</td><td class="l32-ls">21</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>What do art and architecture reveal about cultural and everyday life in Sparta in this period?</td><td class="l32-mk">7</td><td class="l32-ls">24 · 25</td></tr>
+    <tr><td></td><td class="l32-pt">(d)</td><td>Explain the political organisation of Sparta in this period. <span class="l32-srcq">With Source M, Aristotle, and other relevant sources</span></td><td class="l32-mk">12</td><td class="l32-ls">6 · also 3–5</td></tr>
+    <tr class="l32-first"><td class="l32-yr">2023 Q11</td><td class="l32-pt">(a)</td><td>Outline the key features of Spartan land ownership in this period.</td><td class="l32-mk">5</td><td class="l32-ls">15 · also 14</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>Explain the role of Spartan kings in this period.</td><td class="l32-mk">8</td><td class="l32-ls">4</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>What does evidence reveal about religion in Sparta in this period?</td><td class="l32-mk">12</td><td class="l32-ls">22 · also 21</td></tr>
+    <tr class="l32-first"><td class="l32-yr">2024 Q11</td><td class="l32-pt">(a)</td><td>Outline the natural features of Sparta during this period.</td><td class="l32-mk">3</td><td class="l32-ls">2</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>How did Greek writers view Spartan society during this period?</td><td class="l32-mk">4</td><td class="l32-ls">19 · also 1</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>Explain the importance of myths and legends for Spartan society during this period.</td><td class="l32-mk">6</td><td class="l32-ls">3 · also 22</td></tr>
+    <tr><td></td><td class="l32-pt">(d)</td><td>What does evidence reveal about Spartan social structure during this period? <span class="l32-srcq">Support your response using evidence from relevant sources</span></td><td class="l32-mk">12</td><td class="l32-ls">8 · 28 · also 7</td></tr>
+    <tr class="l32-first"><td class="l32-yr">2025 Q11</td><td class="l32-pt">(a)</td><td>Outline the role of the ekklesia in Sparta during this period.</td><td class="l32-mk">4</td><td class="l32-ls">5</td></tr>
+    <tr><td></td><td class="l32-pt">(b)</td><td>Explain how the Spartans controlled the helots.</td><td class="l32-mk">6</td><td class="l32-ls">12</td></tr>
+    <tr><td></td><td class="l32-pt">(c)</td><td>Assess the importance of education and training in Spartan society during this period. <span class="l32-srcq">With an interpretation by Jean Ducat and other relevant sources</span></td><td class="l32-mk">15</td><td class="l32-ls">10 · also 9</td></tr>
+  </table></div>
+  <p class="small">Questions from the NESA HSC Ancient History papers, Section II, Option G. © NESA. Every year totals 25 marks; the last part is always worth 10–15.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · written for this lesson</p>
+  <h2>Put the reception of Sparta in order, earliest first</h2>
+  <p class="task">Write the letters in order and a date beside each.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>François Ollier names the Spartan mirage</span></li>
+    <li><span class="k">B</span><span>Plutarch collects Leonidas’ reply “Come and get them” in his <i>Sayings</i></span></li>
+    <li><span class="k">C</span><span>The battle of Thermopylae</span></li>
+    <li><span class="k">D</span><span>Spartans try to restore, or re-invent, their ancestral constitution</span></li>
+    <li><span class="k">E</span><span>The film <i>The 300 Spartans</i></span></li>
+    <li><span class="k">F</span><span>Delacroix paints Lycurgus consulting the Pythia</span></li>
+    <li><span class="k">G</span><span>Messene is refounded and Messenia is lost</span></li>
+    <li><span class="k">H</span><span>A “Molon labe” flag flies at a US election rally</span></li>
+  </ul>
+  <div data-answers>
+    <p class="sol reveal">C (480 BC) → G (370/69 BC) → D (Hellenistic period onwards) → B (c. AD 100) → F (1835–45) → A (1933) → E (1962) → H (2020)</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l32-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify · written for this lesson</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf" data-answers>
+    <li><span class="n">1</span><span>Cooley says the Spartan education was a precondition for becoming a citizen.</span>
+      <span class="sol reveal">True <span class="why">— “This special Spartan education was a precondition for becoming a citizen” (introduction to D73–D81).</span></span></li>
+    <li><span class="n">2</span><span>Herodotus says the Spartan kings held two priesthoods.</span>
+      <span class="sol reveal">True <span class="why">— of “Zeus of Lakedaimon and Zeus, Lord of Heaven” (Herodotus 6.56, D5).</span></span></li>
+    <li><span class="n">3</span><span>The sources prove that each mess was a unit of the army.</span>
+      <span class="sol no reveal">False <span class="why">— Cooley says only that messes “probably formed a basic grouping within the army”.</span></span></li>
+    <li><span class="n">4</span><span>Aristotle, writing before Leuctra, warned that Spartan land was falling into the hands of a few.</span>
+      <span class="sol no reveal">False <span class="why">— he wrote in the 330s–320s BC, after Leuctra, about his own day (D54).</span></span></li>
+    <li><span class="n">5</span><span>Herodotus is the earliest surviving source for Leonidas’ reply “Come and get them”.</span>
+      <span class="sol no reveal">False <span class="why">— it is in Plutarch’s <i>Sayings</i>, c. AD 100 (F31). Herodotus’ famous line is Dienekes’ “fighting in the shade” (7.226, F20). Cooley’s Thermopylae introduction loosely lists ‘come and get them’ among Herodotus’ sayings, but no passage of Herodotus contains it.</span></span></li>
+    <li><span class="n">6</span><span>Cooley thinks the sayings Plutarch collected are authentic.</span>
+      <span class="sol no reveal">False <span class="why">— “We cannot know whether any of these are authentic” (introduction to section F).</span></span></li>
+    <li><span class="n">7</span><span>Pausanias says that before Leuctra the Spartans would not admit they had ever been beaten in an infantry battle.</span>
+      <span class="sol reveal">True <span class="why">— “they did not admit that they had ever been beaten in an infantry contest” (Pausanias 1.13.5, F8).</span></span></li>
+    <li><span class="n">8</span><span>Helots went to war with the Spartan army.</span>
+      <span class="sol reveal">True <span class="why">— at Plataea, “five thousand were Spartiates who were guarded by thirty-five thousand light-armed helots” (Herodotus 9.28, E84).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze · item 1 is Chapter 14 Activity C</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>army</span><span>contribution</span><span>hypomeiones</span><span>Karneia</span><span>mirage</span><span>priesthoods</span><span>Sayings</span><span>women</span></div>
+  <ol class="cloze" data-answers>
+    <li>François Ollier named the idealised picture of Sparta the Spartan <span class="gap"><span class="sol reveal">mirage</span></span>.</li>
+    <li>Each mess member paid a monthly <span class="gap"><span class="sol reveal">contribution</span></span> of barley-meal, wine, cheese and figs.</li>
+    <li>Aristotle says almost two-fifths of the land was owned by <span class="gap"><span class="sol reveal">women</span></span>.</li>
+    <li>Spartans who lost citizen status were probably among the <span class="gap"><span class="sol reveal">hypomeiones</span></span>.</li>
+    <li>Cooley says the messes probably formed a basic grouping within the <span class="gap"><span class="sol reveal">army</span></span>.</li>
+    <li>Herodotus says the kings held two <span class="gap"><span class="sol reveal">priesthoods</span></span>.</li>
+    <li>Herodotus says the main army would join Leonidas once the festival of the <span class="gap"><span class="sol reveal">Karneia</span></span> was over.</li>
+    <li>The earliest surviving source for molōn labe is Plutarch’s collection of <span class="gap"><span class="sol reveal">Sayings</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph</p>
+  <h2>How far was the helot system the feature on which all the others depended?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: how far, and why not entirely?</span>
+    <span class="l">Evidence</span><span>Use at least two links from the map, each with a named source and its date.</span>
+    <span class="l">Analyse</span><span>Explain what depended on the helots — and what the helot system itself depended on.</span>
+    <span class="l">Evaluate</span><span>Weigh the evidence: which writers are late, outsiders or writing after Leuctra?</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">The helot system was the base on which the other features rested, but it did not stand alone, because it needed an army and a citizen body to keep it in place. Helots handed over ‘Half of all the produce the ploughland bears’ (Tyrtaeus), and that produce paid the mess dues on which citizenship depended, since anyone who could not pay ‘cannot belong’ (Aristotle). Free of farm work, citizens could give their lives to training and war. Yet the dependence ran both ways: Thucydides says that where the helots were concerned, considerations of security came first, and Aristotle, as reported by Plutarch, says the ephors declared war on them on taking office. Much of this evidence is late or written after Leuctra, but the loss of Messenia in 370/69 BC bears it out: when the helots of Messenia were freed, the system that rested on them could not be rebuilt. The helots were the foundation of the system, but the army, the messes and the ephors were what held them in place.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, not from a past paper · Chapter 14, Activity E</p>
+  <h2>To what extent did the features that made Sparta strong also cause its decline by 371 BC? <span class="small">(15 marks)</span></h2>
+  <p class="task">Support your response using evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis:</b> were Sparta’s strengths and weaknesses the same features?</li>
+    <li><b>The helot system:</b> freedom for war (Tyrtaeus, A6) against security and the fear of revolt (Thucydides, D39; the revolt of the 460s, Lesson 12) and the loss of Messenia (H71).</li>
+    <li><b>Citizenship and land:</b> mess contributions (D63, D62), inheritance and women’s land (D54), <i>oliganthropia</i> (D28).</li>
+    <li><b>Leuctra:</b> weigh Xenophon (E109), Aristotle (D28), Plutarch and Cooley — Lesson 28’s “caused or revealed?”.</li>
+  </ol>
+  <p class="small">The map (slide 12) and the synthesis plan (slide 29) give the core; this question adds a judgement of “to what extent”.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review" data-kind="practice notes">
+<div class="wrap prac l32-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · chapter review, sections 5–6</p>
+  <h2>Chapter review: one system, and its legacy</h2>
+  <ol class="rq" data-answers>
+    <li>Explain one chain that links helots, the syssitia and citizenship.
+      <span class="sol reveal">Helots handed over “Half of all the produce the ploughland bears” (Tyrtaeus, A6); this paid each man’s monthly mess contribution (Plutarch, D63); and a man who could not pay lost his place, since “anyone who cannot pay this tax cannot belong” (Aristotle, D62). Citizenship therefore rested on helot labour.</span></li>
+    <li>How has Sparta been reinvented in modern times? Use one image as evidence.
+      <span class="sol reveal">As a model of heroic resistance and a slogan. The 2020 flag turns Leonidas’ “molōn labe”, first found in Plutarch c. AD 100, into a modern political slogan; the 1962 poster sells Thermopylae as a film. Both show their makers’ concerns, and leave out the helots and perioikoi who probably died there too (Cooley).</span></li>
+    <li>Why does the education system belong on the interrelation map?
+      <span class="sol reveal">Cooley: education was “a precondition for becoming a citizen”, its aim was election to a mess, and it was followed by military training until 30 — so it linked citizenship, the messes and the army.</span></li>
+    <li>What did the kings link together?
+      <span class="sol reveal">War, religion and government: the king led the army “on all expeditions” and swore a monthly oath with the ephors (Xenophon, D9), and held “two priesthoods” (Herodotus, D5).</span></li>
+    <li>Why must Plutarch and Pausanias be used with care for classical Sparta?
+      <span class="sol reveal">They wrote in the Roman period and knew a Sparta that had restored, or re-invented, its customs and staged some for visitors (Cooley; the Orthia whipping, note on C94).</span></li>
+    <li>Explain how one weakness spread through the Spartan system.
+      <span class="sol reveal">As land concentrated through inheritance and dowries (D54), fewer men could pay their mess dues (D62), so citizen numbers fell: from about 8,000 in 480 BC to an estimated c. 1,500 by 371 BC (Cooley’s table, D29), and by Aristotle’s day “not even one thousand” (D28). At Leuctra “four hundred of the seven hundred Spartiates present had fallen” (Xenophon, E109), and the defeat cost Sparta Messenia and its helots (H71).</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Bridge to the Greek World" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Bridge · 5 minutes · what comes next</p>
+  <h2>You will meet Sparta again — in the Persian Wars</h2>
+  <div class="cols c3">
+    <div class="card accent"><div class="k">480 BC</div><p class="body"><b>Leonidas at Thermopylae.</b> You already know how the Spartans, and later ages, remembered it.</p></div>
+    <div class="card accent"><div class="k">479 BC</div><p class="body"><b>The regent Pausanias at Plataea</b> — not the travel writer. Herodotus: “five thousand were Spartiates who were guarded by thirty-five thousand light-armed helots” (9.28, Cooley E84).</p></div>
+    <div class="card accent"><div class="k">The Peloponnesian League</div><p class="body">Sparta’s alliance: the army, the kings and the ephors you have studied, leading other Greeks.</p></div>
+  </div>
+  <p class="lead">You meet the wars already knowing Sparta: the helots behind the hoplites, the kings at the front, and the mirage that grew afterwards.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>One interrelation, and the source that proves it</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead nq">“______ depended on ______ because ______ (source: ______).”</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One thing Sparta’s modern reception leaves out.</p></div>
+  </div>
+  <p class="body"><b>This is the last lesson of the Sparta unit.</b> Keep the map: it is your revision plan for every Section II question.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l32-credits">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Tyrtaeus frs 6–7 (A6, trans. K. Hughes); Herodotus 6.56, 7.206, 7.226 and 9.28 (D5, F11, F20, E84, trans. B. Wilson); Thucydides 1.10.2 and 4.80.3 (G2, D39, trans. B. Wilson); Xenophon, <i>Hellenika</i> 3.3.11 and 6.4.15 (E53b, E109), <i>Constitution of the Lakedaimonians</i> 2, 11 and 15 (D74, D88, D9, trans. B. Wilson); Aristotle, <i>Politics</i> 1270a and 1271a (D54, D28, D62); Plutarch, <i>Lykourgos</i> 6, 12, 15, 27.2 and 28 (D48, D63, D71, B35b, D44, trans. B. Wilson), <i>Sayings of Lakedaimonians</i>, Leonidas (F31); Pausanias 1.13.5 and 3.14.1 (F8, F27); Polycrates in Athenaeus 4.17 (C69); Herodotus 5.75 (D6); the Spartan war fund (B12); Cynisca’s monument (C55); Alcman fr. 1 (A14). Cooley’s introductions and notes, including W. G. Cavanagh’s introduction to Lakonian archaeology.</p>
+        <p class="small">Modern, as cited in Cooley: F. Ollier, <i>Le Mirage spartiate</i> (1933); E. Rawson, <i>The Spartan Tradition in European Thought</i> (1969); N. M. Kennell, <i>The Gymnasium of Virtue</i> (1995); P. Cartledge and A. Spawforth, <i>Hellenistic and Roman Sparta</i>.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images</div>
+        <ul class="small"><li>A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground — Bradley, Fig 3.3</li><li>Olive groves in the fertile Eurotas valley today — Clarke & Garner, Fig 6.2</li><li>A modern statue of King Leonidas near ancient Sparta — Clarke & Garner note his place in modern Greek nationalism: commemoration, not a portrait — Clarke & Garner, Fig 7.12</li><li>A promotional poster for the 1962 film The 300 Spartans — modern reception, not ancient evidence — Clarke & Garner, Fig 7.13</li><li>A boat at a 2020 United States election rally flies a black flag bearing a crested helmet and the Greek words ΜΟΛΩΝ ΛΑΒΕ (molon labe) — modern reception, not ancient evidence — Clarke & Garner, Fig 9.3</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The interrelation map and the reception timeline were drawn for this lesson.</p></div>
+      <div class="card quiet"><div class="k">HSC and syllabus material</div>
+        <p class="small">HSC questions 2019–2025 and the 2022 part (d) marking criteria: NSW Education Standards Authority, HSC Ancient History examinations and marking guidelines. NESA glossary of key words (“explain”); <i>Ancient History Stage 6 Syllabus</i> (2017), Option G content focus. © NESA.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
