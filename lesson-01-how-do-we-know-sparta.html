@@ -1,0 +1,2259 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L1 · How Do We Know Sparta?</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the Greek writers, the archaeology and the Spartan mirage, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+
+/* ---- Lesson 1: the writers' timeline (make_l01_diagrams.py) and the writers' table */
+.l01-tl text{font-family:var(--ui); fill:var(--ink); paint-order:stroke; stroke:var(--surface);
+  stroke-width:7px; stroke-linejoin:round;}
+.l01-tl .l01-bg{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.l01-tl .l01-period{fill:var(--tint);}
+.l01-tl .l01-per-lbl{fill:var(--deep); font-size:22px; font-weight:700; letter-spacing:.04em; stroke:none;}
+.l01-tl .l01-lane{stroke:var(--paper-rule); stroke-width:1.5;}
+.l01-tl .l01-axis{stroke:var(--ink); stroke-width:4;}
+.l01-tl .l01-tick{stroke:var(--slate); stroke-width:2;}
+.l01-tl .l01-tick-lbl{fill:var(--slate); font-size:22px; text-anchor:middle;}
+.l01-tl .l01-leu{stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:10 7;}
+.l01-tl .l01-leu-lbl{fill:var(--c-judgement); font-size:24px; font-weight:700;}
+.l01-tl .l01-life{fill:var(--deep);}
+.l01-tl .l01-act{fill:var(--surface); stroke:var(--deep); stroke-width:3; stroke-dasharray:7 4;}
+.l01-tl .l01-nm{font-size:27px; font-weight:700;}
+.l01-tl .l01-dt{font-size:21px; fill:var(--slate);}
+.l01-tl .l01-end{text-anchor:end;} .l01-tl .l01-mid{text-anchor:middle;}
+.l01-tl .l01-ev{fill:var(--slate);}
+.l01-tl .l01-ev-lbl{font-size:25px; font-weight:700; text-anchor:middle;}
+.l01-tl .l01-dim line{stroke:var(--c-evidence); stroke-width:3.5;}
+.l01-tl .l01-dim text{fill:var(--c-evidence); font-size:25px; font-weight:700; text-anchor:middle;}
+.l01-tl .l01-key text{stroke:none;}
+.l01-tl .l01-key .l01-act{fill:var(--surface);}
+@media (max-width:700px){
+  html.read .diagram svg.l01-tl{min-width:900px; max-height:none;}
+  html.read .l01-writers{min-width:760px;}
+}
+/* the writers' table: dates never break; the last column carries the judgement */
+.l01-writers td:first-child{font-weight:700; white-space:nowrap;}
+.l01-writers td.l01-dates{white-space:nowrap;}
+.l01-writers .l01-pro{display:block;} .l01-writers .l01-con{display:block; color:var(--c-judgement);}
+.l01-writers .l01-pro::before{content:"✓ "; color:var(--c-evidence); font-weight:700;}
+.l01-writers .l01-con::before{content:"! "; font-weight:700;}
+/* myth-or-evidence list: statement, then (revealed) the writer behind it */
+.l01-claims{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.l01-claims li{display:grid; grid-template-columns:1.9em 1fr 1.25fr; gap:.2em .8em; align-items:baseline;
+  background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:.4em .8em;
+  font-size:calc(var(--fs-body)*.9); line-height:1.35;}
+.l01-claims .n{font-family:var(--mono); font-weight:700; color:var(--deep);}
+.l01-claims .who{color:var(--slate); font-size:.92em;}
+.l01-claims .who b{color:var(--ink);}
+@media (max-width:900px){ .l01-claims li{grid-template-columns:1.9em 1fr;} .l01-claims .who{grid-column:2;} }
+/* the verbs table in the HSC section */
+.l01-verbs td:first-child{font-weight:700; white-space:nowrap;}
+.l01-verbs td.l01-def{font-family:var(--serif); font-style:italic;}
+/* Activity A answer key: nine events in date order, three columns */
+.seq.l01-key3{grid-template-columns:repeat(3,1fr); margin-top:.3em;}
+.seq.l01-key3 li{grid-template-columns:3.4em 1fr; color:var(--ink); font-weight:400;}
+.seq.l01-key3 li .k{white-space:nowrap;}
+@media (max-width:900px){ .seq.l01-key3{grid-template-columns:1fr;} }
+.seq.l01-q3{grid-template-columns:repeat(3,1fr);}
+@media (max-width:900px){ .seq.l01-q3{grid-template-columns:1fr;} }
+/* the main timeline may use more of the slide: it has no text below it */
+html:not(.read) .diagram svg.l01-tl:not(.l01-hw){max-height:calc(100vh - 235px);}
+/* short projectors (e.g. 1366 × 768): the busiest Lesson 1 slides tighten up */
+@media (max-height:820px){
+  html:not(.read) .l01-dense{gap:10px;}
+  html:not(.read) .l01-dense .quote.sm{font-size:calc(var(--fs-body)*.76); line-height:1.38;}
+  html:not(.read) .l01-dense .quote{font-size:calc(var(--fs-body)*.9);}
+  html:not(.read) .l01-dense .src{padding:10px 16px;}
+  html:not(.read) .l01-dense .src .prov{margin-top:.4em;}
+  html:not(.read) .l01-dense .note{padding:.45em .85em;}
+  html:not(.read) .l01-dense .note .body, html:not(.read) .l01-dense .card .body,
+  html:not(.read) .l01-dense .qprompt{font-size:calc(var(--fs-body)*.8); line-height:1.36;}
+  html:not(.read) .l01-dense .card{padding:10px 16px;}
+  html:not(.read) .l01-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l01-dense .tbl.compact td{padding:.3em .55em;}
+  html:not(.read) .l01-dense .figure img{max-height:30vh;}
+  html:not(.read) .l01-dense .l01-claims li, html:not(.read) .l01-dense .tf li,
+  html:not(.read) .l01-dense .seq li{font-size:calc(var(--fs-body)*.74); padding:.26em .65em;}
+  html:not(.read) .l01-dense .moves{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l01-dense .prac{gap:6px;}
+}
+.l01-tl .l01-ev-lbl.l01-start{text-anchor:start;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 1" data-title="How do we know Sparta?" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 1</p>
+      <h1>How do we know Sparta?</h1>
+      <p class="lead">Who told us what we think we know about Sparta — and how far can we trust them?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-8-7-menelaion.jpg" alt="The Menelaion at Therapne, with Mt Taygetus behind"><figcaption>The Menelaion at Therapne, with Mt Taygetus behind — <span class="cr">Clarke & Garner, Fig 8.7</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 1" data-title="Myth or evidence?" data-kind="intro">
+<div class="wrap l01-dense">
+  <p class="eyebrow">Spaced review · 6 minutes · gesture vote: thumbs up = true · down = false · sideways = not sure</p>
+  <h2>Myth or evidence? And who says so?</h2>
+  <div class="split" style="--cols:1fr 13em">
+    <ol class="l01-claims">
+      <li><span class="n">1</span><span>Spartan boys left home at seven to be trained by the state.</span>
+        <span class="who reveal"><b>Plutarch</b>, <i>Life of Lycurgus</i> 16 (Cooley D76) · written c.&nbsp;AD&nbsp;100</span></li>
+      <li><span class="n">2</span><span>Spartans used iron money instead of gold and silver coins.</span>
+        <span class="who reveal"><b>Plutarch</b>, <i>Life of Lycurgus</i> 9 (Cooley D58) · c.&nbsp;AD&nbsp;100</span></li>
+      <li><span class="n">3</span><span>Spartan women owned land.</span>
+        <span class="who reveal"><b>Aristotle</b>, <i>Politics</i> 2.9 (Cooley D54): “almost two-fifths of the whole country is owned by women” · 330s–320s BC</span></li>
+      <li><span class="n">4</span><span>Spartan mothers sent their sons to war with a shield, saying “with it or on it”.</span>
+        <span class="who reveal"><b>Plutarch</b>, <i>Sayings of Spartan Women</i> (Cooley F35) · c.&nbsp;AD&nbsp;100</span></li>
+      <li><span class="n">5</span><span>Sparta had no city walls.</span>
+        <span class="who reveal"><b>Xenophon</b>, <i>Hellenika</i> 6.5.27–28 (Cooley K5), on 370/69 BC · an Athenian, writing in the 360s–350s BC</span></li>
+      <li><span class="n">6</span><span>Weak babies were left in a chasm at the foot of Mt Taygetus.</span>
+        <span class="who reveal"><b>Plutarch</b>, <i>Life of Lycurgus</i> 16 (Cooley D73) · c.&nbsp;AD&nbsp;100</span></li>
+    </ol>
+    <figure class="figure contain"><img src="images/clarke-1-10-bust-believed-plutarch.jpg" alt="A stone bust commonly believed to represent Plutarch"><figcaption>A stone bust commonly believed to represent Plutarch — <span class="cr">Clarke & Garner, Fig 1.10</span></figcaption></figure>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body">Every claim rests on an outsider — and four of the six on one man, Plutarch, writing centuries later. Almost everything we “know” about Sparta comes to us this way.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 1" data-title="Today’s goals" data-kind="intro">
+<div class="wrap l01-dense">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>explain why most written evidence about Sparta comes from outsiders writing later</li>
+        <li>place the six syllabus writers in time and judge how close each was to the events</li>
+        <li>explain the Spartan mirage and how historians respond to it</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>place Herodotus, Thucydides, Xenophon, Aristotle, Pausanias and Plutarch on a timeline relative to Leuctra (371 BC) and say which were contemporaries</li>
+        <li>explain what the Spartan mirage is and why it is a problem for historians</li>
+        <li>judge what a named writer is reliable <i>for</i>, and what he is not</li>
+        <li>describe how Section II of the HSC examination is structured and how it uses sources</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two terms to get right</div>
+    <p class="body">A <b>mirage</b> looks real from a distance but is not quite there: the <b>Spartan mirage</b> is the idealised, partly invented picture of Sparta. <b>Contemporary</b> means living, or written, at the time of the events described.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 1" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L1 · How do we know Sparta?</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (c. = about; Thuc. = Thucydides)</span></div></div>
+      <div class="row"><div class="cq">Why no “main source”?</div><div class="nts">only 2 Spartan poets survive …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: no voice of its own · the writers in time · evidence from inside Sparta · the Spartan mirage · reliable for what?</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 1" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary · start the unit word wall</p>
+  <h2>Words you will use all unit</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Thinking about sources</th><th>Meaning</th></tr>
+      <tr><td>Spartan mirage</td><td>the idealised, distorted picture of Sparta built up by ancient writers and by the Spartans themselves</td></tr>
+      <tr><td>contemporary</td><td>living, or written, at the time of the events described</td></tr>
+      <tr><td>provenance</td><td>where a source comes from: who made it, when, where and for whom</td></tr>
+      <tr><td>perspective</td><td>a source’s point of view, shaped by who made it and what he believed</td></tr>
+      <tr><td>autopsy</td><td>in history, seeing something with your own eyes, as Pausanias did</td></tr>
+      <tr><td>fragment</td><td>a surviving piece of a lost work, on papyrus or quoted by a later writer</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Sparta and its evidence</th><th>Meaning</th></tr>
+      <tr><td>Lacedaemonians</td><td>the Greek writers’ name for the Spartans (Cooley: Lakedaimonians); Lacedaemon was the state and its territory</td></tr>
+      <tr><td>Spartiate</td><td>a full Spartan citizen; Spartiates called themselves <i>homoioi</i>, “equals” or “peers”</td></tr>
+      <tr><td>laconophile</td><td>someone who admires Sparta and its way of life</td></tr>
+      <tr><td>votive offering</td><td>a gift dedicated to a god, often in thanks or to keep a promise</td></tr>
+      <tr><td>epigraphy</td><td>the study of inscriptions carved, cast or scratched on stone, metal or pottery</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Tyrtaios, Alkman, Lakedaimonians). In your own writing use Lycurgus, Tyrtaeus, Alcman — and be consistent. The syllabus spells <i>periokoi</i>; most books use <i>perioikoi</i>. Both are correct.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · No voice of its own" data-title="A famous society with almost no voice" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · No voice of its own · I do</p>
+  <h2>A famous society with almost no voice of its own</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <p class="body">Cooley: Sparta “dominated interstate politics in mainland Greece throughout the Archaic and Classical period”. Yet the Spartans left us almost nothing written about themselves.</p>
+      <div class="src">
+        <div class="k">The editor of our sourcebook</div>
+        <p class="quote sm">Apart from two poets of the seventh century BC, namely Tyrtaios and Alkman, we do not have any literary sources that originate from Sparta.</p>
+        <p class="quote sm">… there is no ancient text that can serve as a ‘main source’ …</p>
+        <p class="prov">M. G. L. Cooley (ed.), <i>Sparta</i>, 2nd edn (2023), introduction to the literary sources · a modern historian, not an ancient source</p>
+      </div>
+    </div>
+    <div class="cols c2">
+      <div class="card sm reveal"><div class="k">Outsiders</div><p class="body">The writers came from Athens, Asia Minor, Boeotia and northern Greece, each with reasons to praise or blame Sparta.</p></div>
+      <div class="card sm reveal"><div class="k">Distance in time</div><p class="body">The fullest accounts, by Plutarch and Pausanias, were written five to eight centuries after many of the events they describe.</p></div>
+      <div class="card sm reveal"><div class="k">Change</div><p class="body">Sparta changed greatly after it lost Messenia in 370/69 BC, so later writers often described a Sparta that no longer existed.</p></div>
+      <div class="card sm reveal"><div class="k">Secrecy</div><p class="body">Cooley: “In the classical period, Sparta was not easily accessible to strangers”. Even a careful contemporary could not find out basic facts.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · No voice of its own" data-title="The historian’s problem in one sentence" data-kind="notes">
+<div class="wrap l01-dense">
+  <p class="eyebrow">1 · No voice of its own · We do — reading a source with OVPRL</p>
+  <h2>The historian’s problem in one sentence</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="src">
+      <div class="k">Source · Thucydides, on the battle of Mantinea, 418 BC</div>
+      <p class="quote sm">[68.2] But it would be impossible for me to give the exact numbers of the forces on either side, whether of the individual units or the whole armies. <span class="code" data-code="evidence" data-letter="E">The secret nature of their political arrangements makes it impossible to discover the numbers of Lakedaimonians</span>, and as for the others, the natural human tendency to exaggerate one’s own resources makes all estimates unreliable. …</p>
+      <p class="quote sm">[74.3] … On the Lakedaimonian side, allied casualties were negligible; as for their own losses, it is difficult to establish the truth, but <span class="code" data-code="counter" data-letter="C">anecdotal evidence suggests they were about 300 dead</span>.</p>
+      <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 5.68.2 and 5.74.3 · an Athenian general, exiled in 424 BC, writing in the late 5th century BC · trans. B. Wilson · Cooley E101, E104 (also D83)</p>
+    </div>
+    <div class="stack">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th></th><th>Ask</th><th>Model answer</th></tr>
+      <tr><td><b>O</b></td><td>An Athenian general in this war: how might that limit what he could find out?</td><td class="reveal">He was on the other side, and the Spartans hid their numbers from everyone.</td></tr>
+      <tr><td><b>V</b></td><td>What does it reveal about how Spartans handled information?</td><td class="reveal">Even basic military facts were kept secret.</td></tr>
+      <tr><td><b>P</b></td><td>Why would a careful historian admit he could not get the figures?</td><td class="reveal">He wants accuracy, so he says what he cannot know — then estimates from the army’s units.</td></tr>
+      <tr><td><b>R</b></td><td>Does admitting uncertainty make him more or less trustworthy?</td><td class="reveal">More: he separates what he knows from what he has only heard.</td></tr>
+      <tr><td><b>L</b></td><td>What can this passage <i>not</i> tell us?</td><td class="reveal">Exact numbers, and almost nothing about Spartan society beyond the army.</td></tr>
+    </table></div>
+    <i class="reveal" data-paint="evidence" hidden></i>
+    <i class="reveal" data-paint="counter" hidden></i>
+    <div class="note reveal" data-code="judgement"><p class="body">The evidence is thin and slanted, but not useless: Thucydides still estimates the numbers and explains his method.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · No voice of its own" data-title="Notes 1 — No voice of its own" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>No voice of its own</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L1 · How do we know Sparta?</b></span><span>1 · No voice of its own</span></div>
+    <div class="row"><div class="cq">Name the only two writers whose works originate from Sparta itself.</div>
+      <div class="nts reveal"><b>Tyrtaeus</b> (mid-7th c. BC) + <b>Alcman</b> (late 7th c. BC) — poets, both “probably Spartan” (Cooley) <span class="sep">·</span> no ancient “main source”</div></div>
+    <div class="row"><div class="cq">Four problems?</div>
+      <div class="nts reveal"><b>Outsiders</b> <span class="sep">·</span> <b>distance</b>: Plutarch, Pausanias 5–8 centuries later <span class="sep">·</span> <b>change</b> after Messenia lost 370/69 BC <span class="sep">·</span> <b>secrecy</b></div></div>
+    <div class="row"><div class="cq">Why could Thucydides not discover the size of the Spartan army?</div>
+      <div class="nts reveal">“The secret nature of their political arrangements” (5.68.2, Cooley E101) → he estimates from units; Spartan dead from “anecdotal evidence” (5.74.3)</div></div>
+    <div class="row"><div class="cq">So what?</div>
+      <div class="nts reveal">Evidence thin + slanted, <b>not useless</b> → always ask who wrote, when, why</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Placing a writer in time (worked example)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The writers in time · I do — think aloud</p>
+  <h2>Placing a writer in time: Herodotus</h2>
+  <figure class="diagram"><svg class="l01-tl l01-hw" viewBox="0 0 1600 512" role="img" aria-label="Worked example on a to-scale timeline: Herodotus wrote c. 450s to 420s BC, one to two generations after the Persian Wars of 490 to 479 BC, about fifty to ninety years before the Battle of Leuctra in 371 BC, and two centuries or more after the Great Rhetra, probably in place by c. 700 BC.">
+<rect class="l01-bg" x="2" y="2" width="1596" height="508" rx="14"/>
+<rect class="l01-period" x="70.0" y="44" width="582.5" height="306"/><text class="l01-per-lbl" x="86.0" y="34">The period you study: Sparta to Leuctra</text>
+<line class="l01-leu" x1="652.5" y1="14" x2="652.5" y2="362"/><text class="l01-leu-lbl" x="664.5" y="34">Battle of Leuctra, 371 BC</text>
+<line class="l01-axis" x1="70" y1="350" x2="1530" y2="350"/><line class="l01-tick" x1="146.8" y1="340" x2="146.8" y2="360"/><text class="l01-tick-lbl" x="146.8" y="388">700 BC</text><line class="l01-tick" x1="300.5" y1="340" x2="300.5" y2="360"/><text class="l01-tick-lbl" x="300.5" y="388">600</text><line class="l01-tick" x1="454.2" y1="340" x2="454.2" y2="360"/><text class="l01-tick-lbl" x="454.2" y="388">500</text><line class="l01-tick" x1="607.9" y1="340" x2="607.9" y2="360"/><text class="l01-tick-lbl" x="607.9" y="388">400</text><line class="l01-tick" x1="761.6" y1="340" x2="761.6" y2="360"/><text class="l01-tick-lbl" x="761.6" y="388">300</text><line class="l01-tick" x1="915.3" y1="340" x2="915.3" y2="360"/><text class="l01-tick-lbl" x="915.3" y="388">200</text><line class="l01-tick" x1="1068.9" y1="340" x2="1068.9" y2="360"/><text class="l01-tick-lbl" x="1068.9" y="388">100 BC</text><line class="l01-tick" x1="1222.6" y1="340" x2="1222.6" y2="360"/><text class="l01-tick-lbl" x="1222.6" y="388">BC | AD</text><line class="l01-tick" x1="1376.3" y1="340" x2="1376.3" y2="360"/><text class="l01-tick-lbl" x="1376.3" y="388">AD 100</text><line class="l01-tick" x1="1530.0" y1="340" x2="1530.0" y2="360"/><text class="l01-tick-lbl" x="1530.0" y="388">AD 200</text>
+<g class="linked" id="l01h-bar"><rect class="l01-act" x="517.2" y="249" width="59.9" height="26" rx="5"/><text class="l01-nm l01-end" x="503.2" y="260">Herodotus</text><text class="l01-dt l01-end" x="503.2" y="284">wrote c. 450s–420s BC</text></g>
+<g class="linked" id="l01h-pw"><rect class="l01-ev" x="469.6" y="338" width="16.9" height="24" rx="3"/><text class="l01-ev-lbl l01-start" x="459.6" y="432">Persian Wars, 490–479 BC</text><text class="l01-dt" x="459.6" y="460">he wrote one to two generations later</text></g>
+<g class="linked l01-dim" id="l01h-leu"><line x1="517.2" y1="196" x2="652.5" y2="196"/><line x1="517.2" y1="182" x2="517.2" y2="210"/><line x1="652.5" y1="182" x2="652.5" y2="210"/><line x1="577.2" y1="187" x2="577.2" y2="205"/><text x="584.8" y="168">about 50–90 years before Leuctra</text></g>
+<g class="linked" id="l01h-rh"><path class="l01-ev" d="M146.8,334 l16,16 l-16,16 l-16,-16 z"/><text class="l01-ev-lbl l01-start" x="24" y="432">Great Rhetra</text><text class="l01-dt" x="24" y="460">probably in place by c. 700 BC</text><text class="l01-dt" x="24" y="488">reforms credited to Lycurgus</text><g class="l01-dim"><line x1="146.8" y1="128" x2="517.2" y2="128"/><line x1="146.8" y1="114" x2="146.8" y2="142"/><line x1="517.2" y1="114" x2="517.2" y2="142"/><text x="332.0" y="110">two centuries or more after the Great Rhetra</text></g></g>
+</svg>
+    <figcaption>Drawn to scale for this lesson; dates from Cooley, except the Great Rhetra (textbook Chapter 3). <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l01h-bar" hidden></i>
+  <i class="reveal" data-also="#l01h-pw" hidden></i>
+  <i class="reveal" data-also="#l01h-leu" hidden></i>
+  <i class="reveal" data-also="#l01h-rh" hidden></i>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So:</b> Herodotus is close to some events (the Persian Wars), far from others (the reforms credited to Lycurgus) — and he wrote before Leuctra, so he cannot tell us about Sparta’s fall.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Herodotus asks a Spartan">
+<div class="wrap">
+  <p class="eyebrow">2 · The writers in time · We do — reading a source <span class="optional">If time</span></p>
+  <h2>Herodotus asks a Spartan</h2>
+  <div class="split" style="--cols:1.5fr .85fr 1.3fr">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">[55.2] I met the grandson of this Archias in Pitana (that was his village), another Archias, son of Samios, who held the Samians in greater honour than any other foreigners, who told me that his father had been given the name Samios because his father, Archias, had died fighting heroically in Samos. He said that he honoured the Samians because they had given his grandfather a public funeral.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 3.55.2, on the Spartan expedition to Samos, 525 BC · written c. 450s–420s BC · from Halicarnassus in Asia Minor · trans. B. Wilson · Cooley H12</p>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-1-7-herodotus-statue-bodrum.jpg" alt="A modern statue of Herodotus in Bodrum, Turkey (ancient Halicarnassus) — a modern imagining, not an ancient portrait"><figcaption>A modern statue of Herodotus in Bodrum, Turkey (ancient Halicarnassus) — a modern imagining, not an ancient portrait — <span class="cr">Clarke & Garner, Fig 1.7</span></figcaption></figure>
+    <div class="stack tight">
+      <p class="qprompt">Where did Herodotus get this, and from whom?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">In person, from the hero’s grandson, in Sparta. Cooley: “Most of his work is based on original research and inquiries”.</p></div>
+      <p class="qprompt reveal">How reliable is a family story two generations later?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Good evidence for what a Spartan family proudly remembered; weaker for what happened at Samos. A proud grandson may leave things out.</p></div>
+      <div class="note reveal" data-code="analysis"><p class="body">Cooley: Herodotus “generally admires Sparta’s laws and the virtue and courage they inspired in individual Spartans.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Thucydides checks the stories">
+<div class="wrap l01-dense">
+  <p class="eyebrow">2 · The writers in time · one writer correcting another <span class="optional">If time</span></p>
+  <h2>Thucydides checks the stories</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Thucydides, on his own method</div>
+        <p class="quote sm">I lived through it all while being old enough to understand it, and applied my attention so as to understand it accurately.</p>
+        <p class="prov">Thucydides 5.26.5, as quoted in Cooley’s introduction to the literary sources</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Thucydides, on careless Greeks</div>
+        <p class="quote sm">In many other instances of things that happen currently and not in the forgotten past, people in the rest of Greece are also mistaken; for example in thinking that the kings of the Lakedaimonians have not one vote each but two; and that they have a ‘Pitanate’ company, which has never been the case. This is how little effort people make in seeking the truth, rather than accepting readily-available opinions.</p>
+        <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 1.20.3 · trans. B. Wilson · Cooley H1</p>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">Who is he correcting?</div><p class="body">Herodotus had reported both claims: the kings’ two votes (6.57, Cooley D8) and a Pitanate company (9.53, Cooley E85). One writer is correcting another — but Cooley adds that “it is not actually clear who is right”.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">His perspective</div><p class="body">Cooley: his view of Sparta seems “strongly influenced by an Athenian perspective, not so much as an enemy, but rather as a polar opposite”.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">His advantage</div><p class="body">Exiled after his command at Amphipolis in 424 BC, he could hear the Peloponnesian side of the war.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Card sort">
+<div class="wrap">
+  <p class="eyebrow">2 · The writers in time · We do — guided card sort · 12 minutes · press K for the timer</p>
+  <h2>Card sort: place the other five writers</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">In pairs, place these cards on your timeline</div>
+        <ul class="body">
+          <li>Thucydides · Xenophon · Aristotle · Plutarch · Pausanias</li>
+          <li>Herodotus is already placed; the two Spartan poets, Tyrtaeus and Alcman, go at the start</li>
+        </ul>
+      </div>
+      <div class="card quiet">
+        <div class="k">Then decide, for each writer</div>
+        <ul class="body">
+          <li>Was he alive at the time of the events he describes?</li>
+          <li>Did he live in, or visit, Sparta?</li>
+          <li>What might shape his view of Sparta?</li>
+        </ul>
+      </div>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-1-8-thucydides-xenophon-vienna.jpg" alt="Modern statues of Thucydides (left) and Xenophon (right) at the Austrian Parliament in Vienna, built in the 19th century"><figcaption>Modern statues of Thucydides (left) and Xenophon (right) at the Austrian Parliament in Vienna, built in the 19th century — <span class="cr">Clarke & Garner, Fig 1.8</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="The timeline" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The writers in time · We do — check your card sort</p>
+  <h2>The writers in time</h2>
+  <figure class="diagram"><svg class="l01-tl" viewBox="0 0 1600 724" role="img" aria-label="To-scale timeline from 750 BC to AD 200. Tyrtaeus, mid-7th century BC, and Alcman, late 7th century BC, both probably Spartan. Herodotus wrote c. 450s to 420s BC. Thucydides c. 455 to 400 BC. Xenophon c. 430 to c. 350 BC. Aristotle 384 to 322 BC. The Battle of Leuctra, 371 BC, falls in the lifetimes of Xenophon and Aristotle. Plutarch, before AD 50 to after AD 120. Pausanias, 2nd century AD.">
+<rect class="l01-bg" x="2" y="2" width="1596" height="720" rx="14"/>
+<rect class="l01-period" x="70.0" y="44" width="582.5" height="560"/><text class="l01-per-lbl" x="86.0" y="34">The period you study: Sparta to Leuctra</text>
+<line class="l01-lane" x1="70" y1="97.0" x2="1530" y2="97.0"/>
+<line class="l01-lane" x1="70" y1="163.0" x2="1530" y2="163.0"/>
+<line class="l01-lane" x1="70" y1="229.0" x2="1530" y2="229.0"/>
+<line class="l01-lane" x1="70" y1="295.0" x2="1530" y2="295.0"/>
+<line class="l01-lane" x1="70" y1="361.0" x2="1530" y2="361.0"/>
+<line class="l01-lane" x1="70" y1="427.0" x2="1530" y2="427.0"/>
+<line class="l01-lane" x1="70" y1="493.0" x2="1530" y2="493.0"/>
+<line class="l01-lane" x1="70" y1="559.0" x2="1530" y2="559.0"/>
+<line class="l01-leu" x1="652.5" y1="14" x2="652.5" y2="616"/><text class="l01-leu-lbl" x="664.5" y="34">Battle of Leuctra, 371 BC</text>
+<line class="l01-axis" x1="70" y1="604" x2="1530" y2="604"/><line class="l01-tick" x1="146.8" y1="594" x2="146.8" y2="614"/><text class="l01-tick-lbl" x="146.8" y="642">700 BC</text><line class="l01-tick" x1="300.5" y1="594" x2="300.5" y2="614"/><text class="l01-tick-lbl" x="300.5" y="642">600</text><line class="l01-tick" x1="454.2" y1="594" x2="454.2" y2="614"/><text class="l01-tick-lbl" x="454.2" y="642">500</text><line class="l01-tick" x1="607.9" y1="594" x2="607.9" y2="614"/><text class="l01-tick-lbl" x="607.9" y="642">400</text><line class="l01-tick" x1="761.6" y1="594" x2="761.6" y2="614"/><text class="l01-tick-lbl" x="761.6" y="642">300</text><line class="l01-tick" x1="915.3" y1="594" x2="915.3" y2="614"/><text class="l01-tick-lbl" x="915.3" y="642">200</text><line class="l01-tick" x1="1068.9" y1="594" x2="1068.9" y2="614"/><text class="l01-tick-lbl" x="1068.9" y="642">100 BC</text><line class="l01-tick" x1="1222.6" y1="594" x2="1222.6" y2="614"/><text class="l01-tick-lbl" x="1222.6" y="642">BC | AD</text><line class="l01-tick" x1="1376.3" y1="594" x2="1376.3" y2="614"/><text class="l01-tick-lbl" x="1376.3" y="642">AD 100</text><line class="l01-tick" x1="1530.0" y1="594" x2="1530.0" y2="614"/><text class="l01-tick-lbl" x="1530.0" y="642">AD 200</text>
+<g class="linked" id="l01t-tyr"><rect class="l01-act" x="208.3" y="86.0" width="30.7" height="22" rx="5"/><text class="l01-nm" x="253.1" y="93.0">Tyrtaeus</text><text class="l01-dt" x="253.1" y="119.0">mid-7th c. BC · probably Spartan</text></g>
+<g class="linked" id="l01t-alc"><rect class="l01-act" x="262.1" y="152.0" width="38.4" height="22" rx="5"/><text class="l01-nm" x="314.5" y="159.0">Alcman</text><text class="l01-dt" x="314.5" y="185.0">late 7th c. BC · probably Spartan</text></g>
+<g class="linked" id="l01t-her"><rect class="l01-act" x="517.2" y="218.0" width="59.9" height="22" rx="5"/><text class="l01-nm l01-end" x="503.2" y="225.0">Herodotus</text><text class="l01-dt l01-end" x="503.2" y="251.0">wrote c. 450s–420s BC · Halicarnassus</text></g>
+<g class="linked" id="l01t-thu"><rect class="l01-life" x="523.4" y="284.0" width="84.5" height="22" rx="5"/><text class="l01-nm l01-end" x="509.4" y="291.0">Thucydides</text><text class="l01-dt l01-end" x="509.4" y="317.0">c. 455–400 BC · Athens</text></g>
+<g class="linked" id="l01t-xen"><rect class="l01-life" x="561.8" y="350.0" width="122.9" height="22" rx="5"/><text class="l01-nm l01-end" x="547.8" y="357.0">Xenophon</text><text class="l01-dt l01-end" x="547.8" y="383.0">c. 430–c. 350 BC · Athens</text></g>
+<g class="linked" id="l01t-ari"><rect class="l01-life" x="632.5" y="416.0" width="95.3" height="22" rx="5"/><text class="l01-nm l01-end" x="618.5" y="423.0">Aristotle</text><text class="l01-dt l01-end" x="618.5" y="449.0">384–322 BC · Stagira, worked in Athens</text></g>
+<g class="linked" id="l01t-plu"><rect class="l01-life" x="1291.8" y="482.0" width="122.9" height="22" rx="5"/><text class="l01-nm l01-end" x="1277.8" y="489.0">Plutarch</text><text class="l01-dt l01-end" x="1277.8" y="515.0">before AD 50 – after AD 120 · Chaeronea</text></g>
+<g class="linked" id="l01t-pau"><rect class="l01-act" x="1445.5" y="548.0" width="46.1" height="22" rx="5"/><text class="l01-nm l01-end" x="1431.5" y="555.0">Pausanias</text><text class="l01-dt l01-end" x="1431.5" y="581.0">2nd century AD · described the Sparta of c. AD 150</text></g>
+<g class="l01-key"><rect class="l01-life" x="70" y="676" width="44" height="18" rx="4"/><text class="l01-dt" x="126" y="692">lifetime</text><rect class="l01-act" x="260" y="676" width="44" height="18" rx="4"/><text class="l01-dt" x="316" y="692">when he wrote or was active (no firm life dates)</text><text class="l01-dt l01-end" x="1530" y="692">Dates: Cooley, Sparta (2023). Other books differ slightly.</text></g>
+</svg>
+    <figcaption>Drawn to scale for this lesson. Dates are Cooley’s; other books differ slightly. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l01t-tyr" hidden></i>
+  <i class="reveal" data-also="#l01t-alc" hidden></i>
+  <i class="reveal" data-also="#l01t-her" hidden></i>
+  <i class="reveal" data-also="#l01t-thu" hidden></i>
+  <i class="reveal" data-also="#l01t-xen" hidden></i>
+  <i class="reveal" data-also="#l01t-ari" hidden></i>
+  <i class="reveal" data-also="#l01t-plu" hidden></i>
+  <i class="reveal" data-also="#l01t-pau" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Who wrote what, when (1)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The writers in time · the writers before Leuctra</p>
+  <h2>Who wrote what, when — before Leuctra</h2>
+  <div class="tbl-scroll"><table class="tbl compact l01-writers">
+    <tr><th>Writer</th><th>Dates</th><th>From</th><th>Main work for Sparta</th><th>How close to Leuctra (371 BC)?</th></tr>
+    <tr class="reveal"><td>Tyrtaeus</td><td class="l01-dates">mid-7th century BC</td><td>probably Sparta</td><td>war poems (fragments)</td><td>About three centuries before; wrote while Sparta fought to hold Messenia</td></tr>
+    <tr class="reveal"><td>Alcman</td><td class="l01-dates">late 7th century BC</td><td>probably Sparta (some said Sardis)</td><td>songs for girls’ choruses (fragments)</td><td>About two and a half centuries before; wrote for Spartan festivals</td></tr>
+    <tr class="reveal"><td>Herodotus</td><td class="l01-dates">wrote c. 450s–420s BC</td><td>Halicarnassus, Asia Minor</td><td><i>Histories</i> (the Persian Wars)</td><td>Wrote about 50–90 years before; talked to Spartans</td></tr>
+    <tr class="reveal"><td>Thucydides</td><td class="l01-dates">c. 455–400 BC</td><td>Athens</td><td><i>History of the Peloponnesian War</i></td><td>Lived through the war of 431–404 BC; died about 30 years before Leuctra</td></tr>
+  </table></div>
+  <p class="small">The table runs in date order. Dates are Cooley’s; books differ slightly (Clarke &amp; Garner: Herodotus c. 484–425 BC, Thucydides c. 460–c. 400 BC). Choose one set and be consistent.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Who wrote what, when (2)" data-kind="notes">
+<div class="wrap l01-dense">
+  <p class="eyebrow">2 · The writers in time · Leuctra and after</p>
+  <h2>Who wrote what, when — Leuctra and after</h2>
+  <div class="tbl-scroll"><table class="tbl compact l01-writers">
+    <tr><th>Writer</th><th>Dates</th><th>From</th><th>Main work for Sparta</th><th>How close to Leuctra (371 BC)?</th></tr>
+    <tr class="reveal"><td>Xenophon</td><td class="l01-dates">c. 430–c. 350 BC</td><td>Athens</td><td><i>Constitution of the Lakedaimonians</i>; <i>Hellenika</i></td><td>An adult contemporary; served with King Agesilaus and lived under Spartan protection — an admirer</td></tr>
+    <tr class="reveal"><td>Aristotle</td><td class="l01-dates">384–322 BC</td><td>Stagira; worked in Athens</td><td><i>Politics</i>, Book 2</td><td>A boy in 371 BC; wrote in the 330s–320s BC with hindsight, blaming a shortage of citizens (<i>oliganthropia</i>)</td></tr>
+    <tr class="reveal"><td>Plutarch</td><td class="l01-dates">before AD 50 – after AD 120</td><td>Chaeronea, Boeotia</td><td><i>Life of Lycurgus</i>; other <i>Lives</i>; <i>Sayings</i></td><td>More than four centuries after; cites over fifty earlier works, but wrote to give moral examples</td></tr>
+    <tr class="reveal"><td>Pausanias</td><td class="l01-dates">2nd century AD</td><td>Asia Minor</td><td><i>Description of Greece</i>, Books 3–4</td><td>More than five centuries after; walked around Roman Sparta and described what he saw</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="judgement"><p class="body">Only <b>Xenophon</b> was an adult witness of Sparta at the time of Leuctra. The writer we rely on most for Spartan institutions, <b>Plutarch</b>, is among the furthest away in time — and <b>Pausanias</b>, our guide to monuments and cults, is further still.</p></div>
+  <p class="small">Lesson 19 looks at each of these four later witnesses in depth.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Think – pair – share">
+<div class="wrap">
+  <p class="eyebrow">2 · The writers in time · We do — think, pair, share</p>
+  <h2>Think – pair – share</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <p class="qprompt">Which writers were contemporaries of classical Sparta?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">Herodotus, Thucydides and Xenophon — and Aristotle for Sparta after Leuctra (he was only a boy in 371 BC). The poets were contemporaries of archaic Sparta.</p></div>
+      <p class="qprompt reveal">Which one was closest in time to the Battle of Leuctra?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">Xenophon, an adult in 371 BC with friends at Sparta.</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal">Which writers were not Athenian?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">Herodotus (Halicarnassus), Aristotle (Stagira, though he worked in Athens), Plutarch (Chaeronea) and Pausanias (Asia Minor).</p></div>
+      <p class="qprompt reveal">Who is missing from the list?</p>
+      <div class="note reveal" data-code="counter"><p class="body">The Spartans. Apart from the two poets, no Spartan wrote an account of Sparta that survives.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The writers in time" data-title="Notes 2 — The writers in time" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The writers in time</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L1 · How do we know Sparta?</b></span><span>2 · The writers in time</span></div>
+    <div class="row"><div class="cq">The syllabus six: when?</div>
+      <div class="nts reveal"><b>Herodotus</b> wrote c. 450s–420s BC <span class="sep">·</span> <b>Thucydides</b> c. 455–400 <span class="sep">·</span> <b>Xenophon</b> c. 430–c. 350 <span class="sep">·</span> <b>Aristotle</b> 384–322 BC <span class="sep">·</span> <b>Plutarch</b> before AD 50 – after AD 120 <span class="sep">·</span> <b>Pausanias</b> 2nd c. AD</div></div>
+    <div class="row"><div class="cq">Which syllabus writer was an adult at the time of Leuctra?</div>
+      <div class="nts reveal"><b>Xenophon</b> only <span class="sep">·</span> Aristotle a boy (b. 384) <span class="sep">·</span> Thucydides dead (c. 400) <span class="sep">·</span> Plutarch, Pausanias 4–5+ centuries later</div></div>
+    <div class="row"><div class="cq">Where from?</div>
+      <div class="nts reveal">Athenians: Thucydides, Xenophon <span class="sep">·</span> others: Herodotus (Halicarnassus), Aristotle (Stagira → Athens), Plutarch (Chaeronea), Pausanias (Asia Minor) <span class="sep">·</span> no Spartan except the 2 poets</div></div>
+    <div class="row"><div class="cq">Placing a writer</div>
+      <div class="nts reveal">Herodotus: 1–2 generations after the Persian Wars <span class="sep">·</span> about 50–90 yrs before Leuctra <span class="sep">·</span> 2+ centuries after the Rhetra → close to some events, far from others</div></div>
+    <div class="row"><div class="cq">The pattern</div>
+      <div class="nts reveal">Main writer for institutions, <b>Plutarch</b> = among the <b>furthest away</b> in time <span class="sep">·</span> <b>Pausanias</b> (monuments, cults) further still</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Evidence from inside Sparta" data-title="Sparta’s own voices: Tyrtaeus and Alcman" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · Evidence from inside Sparta · I do — the two poets</p>
+  <h2>Sparta’s own voices: Tyrtaeus and Alcman</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">The editor of our sourcebook</div>
+        <p class="quote sm">Our best, and arguably only reliable literary evidence for Sparta comes from the works of two early poets, Tyrtaios and Alkman.</p>
+        <p class="prov">Cooley, <i>Sparta</i>, introduction to section A</p>
+      </div>
+      <div class="cols c2">
+        <div class="card sm reveal"><div class="k">Tyrtaeus · mid-7th century BC</div><p class="body">War poetry, written while Sparta fought to hold Messenia. Spartans recited his poems for generations, even on campaign (Philochorus, quoted by Athenaeus: Cooley A2).</p></div>
+        <div class="card sm reveal"><div class="k">Alcman · late 7th century BC</div><p class="body">Perhaps a generation later: songs for girls’ choruses at festivals, full of beauty, gold, praise of the chorus-leader and a headband “From Lydia” (Alcman fr. 1, Cooley A14) — not the grim Sparta of the stereotype.</p></div>
+      </div>
+    </div>
+    <div class="stack">
+      <figure class="figure contain"><img src="images/hurley-56-alcman-papyrus.jpg" alt="A papyrus fragment containing one of Alcman’s maiden-songs"><figcaption>A papyrus fragment containing one of Alcman’s maiden-songs — <span class="cr">Hurley et al., Source 56</span></figcaption></figure>
+      <div class="note reveal" data-code="counter"><p class="body">Both were “probably Spartan” (Cooley). Their poems survive only as fragments: quoted by later writers, or found on papyrus in Egypt.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Evidence from inside Sparta" data-title="Tyrtaeus: the man who stands firm">
+<div class="wrap l01-dense">
+  <p class="eyebrow">3 · Evidence from inside Sparta · We do — a Spartan voice with OVPRL</p>
+  <h2>Tyrtaeus: the man who stands firm</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="src">
+      <div class="k">Source · Tyrtaeus</div>
+      <p class="quote sm">This excellence, this prize is the best and finest<br>In the world for a young man to win.<br>This is a general benefaction for the city and all its people,<br>Whenever a man stands foursquare in the front line and abides<br>Unceasingly, and completely forgets shameful flight,<br>Steadfastly risking his life and spirit,<br>And standing beside the next man gives verbal encouragement.<br>This man is good in war.</p>
+      <p class="prov">Tyrtaeus, fragment 12, lines 13–20 (preserved by Stobaeus, <i>Anthology</i> 4.10.1 and 6) · mid-7th century BC · trans. K. Hughes · Cooley A9</p>
+    </div>
+    <div class="stack">
+      <div class="tbl-scroll"><table class="tbl compact">
+        <tr><th></th><th>Ask</th><th>Model answer</th></tr>
+        <tr><td><b>O</b></td><td>Why is a 7th-century Spartan source unusually valuable?</td><td class="reveal">It is one of only two literary voices from inside Sparta.</td></tr>
+        <tr><td><b>V</b></td><td>What ideal of the citizen-soldier does it present?</td><td class="reveal">Hold your place, never flee, encourage the next man — courage as a service to the whole city.</td></tr>
+        <tr><td><b>P</b></td><td>What did Tyrtaeus want his audience to do?</td><td class="reveal">Stand and fight. It is persuasion, not a record.</td></tr>
+        <tr><td><b>R</b></td><td>Does it describe how Spartans fought, or how they <i>should</i> fight?</td><td class="reveal">How they should: an ideal, sung to Spartans.</td></tr>
+      </table></div>
+      <div class="note reveal" data-code="judgement"><p class="body">Some Spartan ideals, such as never leaving the battle line, were Spartan before any outsider wrote about them.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Evidence from inside Sparta" data-title="A dispute about Alcman">
+<div class="wrap">
+  <p class="eyebrow">3 · Evidence from inside Sparta · We do — limitations</p>
+  <h2>A dispute about Alcman</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · the Suda on Alcman</div>
+        <p class="quote">Alkman: a Lakonian from Messoa: pace Krates who mistakenly says he was a Lydian from Sardis.</p>
+        <p class="prov"><i>Suda</i>, Lexicon, “Alkman” · a 10th-century AD encyclopaedia · trans. in Cooley A13</p>
+      </div>
+      <div class="note" data-code="keyterm"><p class="body">Messoa (Mesoa) was one of Sparta’s villages (Lesson 2). Crates was a scholar of the 2nd century BC.</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt"><b>L</b> · The Suda was written about 1,600 years after Alcman. What does the dispute show?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Even the poets’ own lives are uncertain. Cooley: “Alkman’s birthplace was widely disputed” — and late biographies tend to read the poems as autobiography.</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body">The poets give us Spartan voices, but they were “writing poetry not history” (Cooley), and their work survives only in fragments.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Evidence from inside Sparta" data-title="Evidence from the ground" data-kind="notes">
+<div class="wrap l01-dense">
+  <p class="eyebrow">3 · Evidence from inside Sparta · archaeology and inscriptions</p>
+  <h2>Evidence from the ground</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack">
+      <figure class="figure contain"><img src="images/clarke-7-6-lead-votives-orthia.jpg" alt="Small lead offerings from the Sanctuary of Artemis Orthia: a ring, a soldier, a goddess and some form of animal"><figcaption>Small lead offerings from the Sanctuary of Artemis Orthia: a ring, a soldier, a goddess and some form of animal — <span class="cr">Clarke & Garner, Fig 7.6</span></figcaption></figure>
+      <p class="small"><b>Provenance:</b> lead votive figurines · Sanctuary of Artemis Orthia, Sparta, beside the Eurotas · Archaic period · excavated by the British School at Athens early in the 20th century (published by R. M. Dawkins, 1929). Clarke &amp; Garner: more than 100,000 lead figurines have been found there.</p>
+      <div class="note reveal" data-code="evidence"><div class="k">What they show</div><p class="body">Cavanagh: such figurines “celebrate the participants in festivals: hoplite warriors, female celebrants”, and Spartan craftwork serves “to undermine the notion of a grim austerity.”</p></div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">But …</div><p class="body">“The archaeological evidence for the Spartan state is, like the written evidence, fragmentary, biased and open to interpretation.” Dates “can seldom be refined even as closely as to a generation or two” (Cavanagh, in Cooley).</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Inscriptions</div><p class="body">Hodkinson: they give “contemporary ‘insider’ evidence unmediated by the lens of external or later literary commentators”, from “mostly Spartiate men, but also a sprinkling of others”. The Spartans’ “undeserved reputation for illiteracy” is a myth. Few survive: many were probably on bronze plaques, “later melted down for their metal content”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Evidence from inside Sparta" data-title="Notes 3 — Evidence from inside Sparta" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Evidence from inside Sparta</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L1 · How do we know Sparta?</b></span><span>3 · Evidence from inside</span></div>
+    <div class="row"><div class="cq">The two poets?</div>
+      <div class="nts reveal"><b>Tyrtaeus</b>, mid-7th c. BC, war poems <span class="sep">·</span> <b>Alcman</b>, late 7th c. BC, girls’ choruses <span class="sep">·</span> both “probably Spartan” → Cooley: “arguably only reliable literary evidence”</div></div>
+    <div class="row"><div class="cq">What can they show?</div>
+      <div class="nts reveal"><b>Ideals</b>: never leave the line (Tyrtaeus fr. 12, Cooley A9) <span class="sep">·</span> festivals, gold, luxury (Alcman fr. 1, A14) → not grim</div></div>
+    <div class="row"><div class="cq">Their limits?</div>
+      <div class="nts reveal">“writing poetry not history” <span class="sep">·</span> fragments, quoted later or on papyrus <span class="sep">·</span> lives disputed (Suda v. Crates on Alcman, A13)</div></div>
+    <div class="row"><div class="cq">Archaeology?</div>
+      <div class="nts reveal">Orthia lead offerings → festival-goers, warriors <span class="sep">·</span> but “fragmentary, biased and open to interpretation”; hard to date closely (Cavanagh)</div></div>
+    <div class="row"><div class="cq">Inscriptions?</div>
+      <div class="nts reveal">“contemporary ‘insider’ evidence” (Hodkinson) <span class="sep">·</span> Spartans literate <span class="sep">·</span> few survive (bronze melted down)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Spartan mirage" data-title="The Spartan mirage" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The Spartan mirage · I do — the key idea of the unit</p>
+  <h2>The Spartan mirage</h2>
+  <div class="split" style="--cols:1.5fr .7fr">
+    <div class="stack">
+      <p class="body">In 1933 the French scholar <b>François Ollier</b> named the problem in his book <i>Le Mirage spartiate</i>. A mirage looks real from a distance but is not quite there.</p>
+      <div class="note" data-code="keyterm"><div class="k">Cooley’s definition</div><p class="body">The Spartan mirage is “a sum of stereotypes that came to dominate the Spartan image.” Many texts “from the fifth century BC onwards reflect an idealisation and distortion of traditions about Spartan society”.</p></div>
+      <div class="card accent">
+        <div class="k">Paul Cartledge: three parts of the ancient myth</div>
+        <ol class="body">
+          <li class="reveal">Sparta had been free of civil strife almost forever,</li>
+          <li class="reveal">because all Spartans obeyed the laws of Lycurgus,</li>
+          <li class="reveal">and those laws affected every part of life and were in some respects very different from those of other Greek states.</li>
+        </ol>
+      </div>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-7-14-300-film-poster-2006.jpg" alt="Poster for the film 300 (2006), adapted from a graphic novel: a hypermasculine, highly militarised Leonidas"><figcaption>Poster for the film 300 (2006), adapted from a graphic novel: a hypermasculine, highly militarised Leonidas — <span class="cr">Clarke & Garner, Fig 7.14</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Spartan mirage" data-title="Watching the mirage form">
+<div class="wrap">
+  <p class="eyebrow">4 · The Spartan mirage · We do — watching it form <span class="optional">If time</span></p>
+  <h2>Watching the mirage form: Demaratus and Xerxes</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote">“So the Lakedaimonians, fighting singly, are the equals of any man, but together they are the best of all. They are free, but not altogether free. For they have a master above them – the law, which they fear much more than your subjects fear you.”</p>
+      <p class="prov">Herodotus, <i>Histories</i> 7.104.4 · the exiled Spartan king Demaratus speaks to the Persian king Xerxes in 480 BC — as Herodotus imagines it · written c. 450s–420s BC · trans. B. Wilson · Cooley D46</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt">Who is really speaking?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Herodotus. Cooley: “Hdt. here imagines the exiled king Demaratos” giving this advice. The speech is built on Sparta’s reputation.</p></div>
+      <p class="qprompt reveal">Which part of Cartledge’s myth does it show?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">Obedience to the law: a whole people ruled by its laws, more than any king could rule his subjects.</p></div>
+      <p class="qprompt reveal">Why might Spartans have liked this picture?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">It made them look invincible. Cooley: the Spartans “played a crucial role in creating and maintaining the Spartan mirage”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Spartan mirage" data-title="Beyond the mirage" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · The Spartan mirage · its critics, and a gesture vote</p>
+  <h2>Can historians get beyond the mirage?</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="note" data-code="counter"><div class="k">The extreme view</div><p class="body">Cooley describes the view that “all evidence for Sparta is so distorted that it is impossible to study Sparta herself” — and rejects it: “This is an over pessimistic stance, but caution is advisable and can actually bring new insights.”</p></div>
+      <div class="card accent reveal"><div class="k">How historians do it</div>
+        <ul class="body">
+          <li>compare writers of different dates</li>
+          <li>test them against archaeology and inscriptions</li>
+          <li>separate the layers of tradition — Nigel Kennell showed some “Lycurgan” customs were Hellenistic and Roman reconstructions</li>
+        </ul>
+        <p class="small">The aim of A. Powell and S. Hodkinson (eds), <i>Sparta Beyond the Mirage</i> (2002). Elizabeth Rawson traced how Europeans kept reinventing Sparta — and novels and films still do.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card tinted reveal"><div class="k">Who made the mirage?</div><p class="body">Outsiders admired, feared or mocked Sparta. But Tyrtaeus praised the man who never leaves the front line in the 7th century BC, and Cooley argues the Spartans themselves “played a crucial role in creating and maintaining the Spartan mirage” by guarding their image abroad.</p></div>
+      <div class="card quiet reveal"><div class="k">Gesture vote</div><p class="lead">The mirage is mainly an outsiders’ distortion.</p><p class="small">Thumbs up = agree · sideways = both · thumbs down = disagree. Be ready to name a source.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The Spartan mirage" data-title="Notes 4 — The Spartan mirage" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The Spartan mirage</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L1 · How do we know Sparta?</b></span><span>4 · The mirage</span></div>
+    <div class="row"><div class="cq">Who first suggested the idea of the Spartan mirage, and when?</div>
+      <div class="nts reveal"><b>François Ollier</b>, <i>Le Mirage spartiate</i>, <b>1933</b> <span class="sep">·</span> Cooley: “a sum of stereotypes that came to dominate the Spartan image”</div></div>
+    <div class="row"><div class="cq">List Cartledge’s three parts of the Spartan myth.</div>
+      <div class="nts reveal">1 no civil strife, almost forever <span class="sep">·</span> 2 all obeyed Lycurgus’ laws <span class="sep">·</span> 3 laws affected every part of life → in some respects unlike other Greeks</div></div>
+    <div class="row"><div class="cq">Why is Demaratus’ speech an example of the mirage?</div>
+      <div class="nts reveal">Herodotus <b>imagines</b> it (7.104.4, Cooley D46): Spartans fear the law more than Xerxes’ subjects fear him → idealised obedience, from an outsider</div></div>
+    <div class="row"><div class="cq">Beyond the mirage?</div>
+      <div class="nts reveal">Not impossible (Cooley: “over pessimistic”) → compare dates, test against archaeology + inscriptions, separate layers (Kennell; Powell &amp; Hodkinson 2002)</div></div>
+    <div class="row"><div class="cq">Who made it?</div>
+      <div class="nts reveal">Outsiders <b>and</b> Spartans themselves (Cooley) <span class="sep">·</span> from the 5th c. BC onwards</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Reliable for what?" data-title="OVPRL: five questions for every source" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Reliable for what? · I do — the habit for every source</p>
+  <h2>Stop asking “is it reliable?” Ask “reliable for what?”</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <ol class="keylist">
+      <li class="reveal"><span class="num">O</span><span class="t">Origin</span><span class="d">Who made it, when and where?</span></li>
+      <li class="reveal"><span class="num">V</span><span class="t">Value</span><span class="d">What does it reveal?</span></li>
+      <li class="reveal"><span class="num">P</span><span class="t">Purpose</span><span class="d">Why was it made?</span></li>
+      <li class="reveal"><span class="num">R</span><span class="t">Reliability</span><span class="d">How far can it be trusted, and why?</span></li>
+      <li class="reveal"><span class="num">L</span><span class="t">Limitations</span><span class="d">What can it not tell us?</span></li>
+    </ol>
+    <div class="stack">
+      <div class="card quiet reveal"><div class="k">A weak judgement</div><p class="lead nq">“Xenophon is biased.”</p></div>
+      <div class="card accent reveal"><div class="k">An analytical judgement</div><p class="lead nq">“Xenophon admired Sparta, so his account of the boys’ training is valuable for its aims but may hide its failures.”</p></div>
+      <p class="cue reveal">Bias is not a reason to throw a source away — it tells you what the source is good evidence for.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Reliable for what?" data-title="Reliable for what? Match the witness">
+<div class="wrap">
+  <p class="eyebrow">5 · Reliable for what? · We do — cold call <span class="optional">If time</span></p>
+  <h2>Which writer is the best witness — and what is the catch?</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>You want to know …</th><th>Best witness</th><th>Trust him for … / be careful with …</th></tr>
+    <tr><td>what Spartans were taught to admire in the 7th century</td><td class="reveal"><b>Tyrtaeus</b></td><td class="reveal">Spartan ideals of courage / poetry, not history</td></tr>
+    <tr><td>stories Spartans told about themselves in the 5th century</td><td class="reveal"><b>Herodotus</b></td><td class="reveal">what he heard from Spartans / oral tradition; Sparta’s heroic reputation</td></tr>
+    <tr><td>Sparta in the Peloponnesian War, 431–404 BC</td><td class="reveal"><b>Thucydides</b></td><td class="reveal">events he lived through / an Athenian viewpoint; Spartan secrecy</td></tr>
+    <tr><td>Sparta at the time of Leuctra</td><td class="reveal"><b>Xenophon</b></td><td class="reveal">fourth-century Sparta at close range / an admirer who idealises</td></tr>
+    <tr><td>why the Spartan system failed</td><td class="reveal"><b>Aristotle</b></td><td class="reveal">analysis with hindsight / he hunts for faults</td></tr>
+    <tr><td>earlier writers whose books are lost</td><td class="reveal"><b>Plutarch</b></td><td class="reveal">preserving lost writers / moral aims; mixes periods</td></tr>
+    <tr><td>the temples and rituals of Roman Sparta</td><td class="reveal"><b>Pausanias</b></td><td class="reveal">monuments he saw / how rituals began</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Reliable for what?" data-title="You do — writer cards and the mirage">
+<div class="wrap">
+  <p class="eyebrow">5 · Reliable for what? · You do · 18 minutes · press K for the timer</p>
+  <h2>Your turn: writer cards, then the mirage</h2>
+  <div class="cols c2" style="align-items:start">
+    <div class="card accent">
+      <div class="k">1 · Writer cards (everyone)</div>
+      <p class="body">One card for each of the six syllabus writers:</p>
+      <ul class="body">
+        <li><b>who</b> · <b>when</b> · <b>from where</b></li>
+        <li><b>link to Sparta</b> (visited? lived there? asked Spartans?)</li>
+        <li><b>likely bias</b> — and what he is still reliable for</li>
+      </ul>
+      <p class="small">Keep the cards in the front of your folder: they are your “Origin” notes for every source this unit.</p>
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">2 · Foundation</div><p class="body">Cards with dates filled in. Finish this sentence for two writers: <span class="nq">“… is useful for Sparta because he lived …, but limited because ….”</span></p></div>
+      <div class="card quiet"><div class="k">2 · Standard</div><p class="body">Complete all six cards. Write 100 words explaining the Spartan mirage.</p></div>
+      <div class="card quiet"><div class="k">2 · Extension</div><p class="body">Is the mirage an outsiders’ distortion or the Spartans’ own self-image? Use Thucydides 5.68.2 and Tyrtaeus to argue a position (Ollier, and Powell &amp; Hodkinson’s <i>Sparta Beyond the Mirage</i>).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Reliable for what?" data-title="Notes 5 — Reliable for what?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Reliable for what?</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L1 · How do we know Sparta?</b></span><span>5 · Reliable for what?</span></div>
+    <div class="row"><div class="cq">OVPRL?</div>
+      <div class="nts reveal"><b>O</b>rigin (who, when, where) <span class="sep">·</span> <b>V</b>alue (what it reveals) <span class="sep">·</span> <b>P</b>urpose (why made) <span class="sep">·</span> <b>R</b>eliability (how far, why) <span class="sep">·</span> <b>L</b>imitations (what it can’t tell us)</div></div>
+    <div class="row"><div class="cq">The key question?</div>
+      <div class="nts reveal">Not “is it reliable?” but <b>reliable for what?</b> → bias tells you what a source is good evidence for</div></div>
+    <div class="row"><div class="cq">Best witnesses?</div>
+      <div class="nts reveal">Ideals → Tyrtaeus <span class="sep">·</span> war of 431–404 → Thucydides <span class="sep">·</span> Leuctra era → Xenophon <span class="sep">·</span> failure → Aristotle <span class="sep">·</span> lost writers → Plutarch <span class="sep">·</span> Roman Sparta → Pausanias</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Reliable for what?" data-title="Summary" data-kind="notes">
+<div class="wrap l01-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>Why is it hard to know what Sparta was really like?</li>
+          <li>When did the main writers live, compared with Leuctra?</li>
+          <li>What is the Spartan mirage, and how do historians get past it?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">Almost all our written evidence for Sparta comes from outsiders, many writing centuries later, because apart from the poets Tyrtaeus and Alcman no Spartan literary work survives and Sparta kept its affairs secret. Herodotus and Thucydides wrote before Leuctra, only Xenophon was an adult at the time of Leuctra, and Aristotle, Plutarch and Pausanias looked back on Sparta after its fall. The idealised picture they built, the Spartan mirage, came from admirers and from the Spartans themselves, so historians ask what each source is reliable for and test the writers against archaeology and inscriptions.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · No voice of its own: two poets, four problems</label></li>
+        <li><label><input type="checkbox"> 2 · The writers in time, against Leuctra</label></li>
+        <li><label><input type="checkbox"> 3 · Evidence from inside: poets, archaeology, inscriptions</label></li>
+        <li><label><input type="checkbox"> 4 · The Spartan mirage and its critics</label></li>
+        <li><label><input type="checkbox"> 5 · Reliable for what? OVPRL</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Answering HSC questions" data-title="How Sparta is examined: Section II" data-kind="hsc">
+<div class="wrap l01-dense">
+  <p class="eyebrow">6 · Answering HSC questions · how Sparta is examined</p>
+  <h2>Section II of the HSC: what you will face</h2>
+  <div class="cols c3">
+    <div class="card sm"><div class="k">25 marks · about 45 minutes</div><p class="body">One question on Sparta, and you “Answer ALL parts of the question”. The paper also gives 5 minutes’ reading time in total.</p></div>
+    <div class="card sm"><div class="k">Three or four parts</div><p class="body">NESA: “Questions will contain three or four parts. One part will be worth 10 to 15 marks.” So far (2019–2025) that has always been the last part.</p></div>
+    <div class="card sm"><div class="k">Sources — sometimes</div><p class="body">“Questions may include sources and/or interpretations.” When they do, the source is printed under the question (Source L in 2020, for example). In 2023 and 2024 there were none.</p></div>
+    <div class="card accent sm"><div class="k">Time</div><p class="body">About 1.8 minutes a mark: 3 marks ≈ 5 minutes · 4 marks ≈ 7 · 12 marks ≈ 22 · 15 marks ≈ 27.</p></div>
+    <div class="card accent sm"><div class="k">How it is marked</div><p class="body">The paper: how well you “demonstrate historical knowledge and understanding relevant to the question”, “communicate ideas and information logically” and “use historical terms and concepts appropriately”.</p></div>
+    <div class="card accent sm"><div class="k">Each part differs</div><p class="body">Each part has its own criteria. Some short parts reward “accurate information relevant to the question” alone (2024 (a)); longer parts also mark communication and terms.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Answering HSC questions" data-title="One whole Section II: HSC 2024" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions · an example: 2024, Question 11 (no sources)</p>
+  <h2>One whole Sparta question, 25 marks</h2>
+  <div class="tbl-scroll"><table class="tbl">
+    <tr><th>Part</th><th>Question (HSC 2024)</th><th>Marks</th><th>About</th></tr>
+    <tr><td><b>(a)</b></td><td>Outline the natural features of Sparta during this period.</td><td class="num">3</td><td>5 min · Lesson 2</td></tr>
+    <tr><td><b>(b)</b></td><td>How did Greek writers view Spartan society during this period?</td><td class="num">4</td><td>7 min · <b>today</b> and Lesson 19</td></tr>
+    <tr><td><b>(c)</b></td><td>Explain the importance of myths and legends for Spartan society during this period.</td><td class="num">6</td><td>11 min · Lesson 3</td></tr>
+    <tr><td><b>(d)</b></td><td>What does evidence reveal about Spartan social structure during this period? Support your response using evidence from relevant sources.</td><td class="num">12</td><td>22 min · Lesson 28</td></tr>
+  </table></div>
+  <p class="cue reveal">Notice: the marks climb part by part, and so must the depth. One part of every Sparta question so far has asked about sources or what evidence reveals.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Answering HSC questions" data-title="The question words" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions · NESA’s glossary of key words</p>
+  <h2>The question words NESA has used for Sparta</h2>
+  <div class="tbl-scroll"><table class="tbl compact l01-verbs">
+    <tr><th>Word</th><th>NESA glossary</th><th>Sparta questions, 2019–2025</th></tr>
+    <tr><td>Outline</td><td class="l01-def">“Sketch in general terms; indicate the main features of.”</td><td>part (a) in 2019 and 2021–2025 · 2–5 marks</td></tr>
+    <tr><td>Describe</td><td class="l01-def">“Provide characteristics and features.”</td><td>2020 (a) · 5 marks</td></tr>
+    <tr><td>Explain</td><td class="l01-def">“Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</td><td>six parts, 2019–2025 · 6–15 marks</td></tr>
+    <tr><td>Analyse</td><td class="l01-def">“Identify components and the relationship between them. Draw out and relate implications.”</td><td>2021 (d) · 10 marks</td></tr>
+    <tr><td>Assess</td><td class="l01-def">“Make a judgement of value, quality, outcomes, results or size.”</td><td>2025 (c) · 15 marks</td></tr>
+    <tr><td>How … ? What does … reveal?</td><td>Not glossary words. NESA: “the HSC exam questions will continue to incorporate self-explanatory terms like ‘how,’ ‘why,’ or ‘to what extent.’”</td><td>2024 (b) “How did …”; seven parts ask what evidence reveals or what is known</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2024 Q11(b)" data-title="HSC 2024 Q11(b) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 · Section II · Question 11 (b) · 4 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">How did</span> <span class="code" data-code="keyterm" data-letter="K">Greek writers</span> <span class="code" data-code="directive" data-letter="D">view</span> <span class="code" data-code="keyterm" data-letter="K">Spartan society</span> <span class="code" data-code="scope" data-letter="S">during this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Today: take the question apart and plan it. Lesson 19: write it and compare with NESA’s sample answer.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(b)" data-title="HSC 2024 Q11(b) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(b) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">How did … view</div><p class="body">Not a glossary word, but the criteria reward “an informed explanation”: say what each writer thought of Sparta <i>and why</i> he saw it that way. The markers asked students to explain “rather than describe”.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Greek writers · Spartan society</div><p class="body">Plural and named: more than one writer, each by name. “Spartan society” means its laws, way of life and people — not just its battles.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">During this period</div><p class="body">Sparta to 371 BC. Writers of the period (Tyrtaeus, Herodotus, Thucydides, Xenophon) and those who looked back on it (Aristotle, Plutarch, Pausanias) both count: say which is which.</p></div>
+    <div class="card accent reveal"><div class="k">4 marks</div><p class="body">About 7 minutes · two or three named writers, each with a view and a reason · about 80–120 words · no introduction.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(b)" data-title="HSC 2024 Q11(b) — what the markers rewarded" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(b) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria</th></tr>
+      <tr><td class="m">4</td><td>Provides an informed explanation relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">3</td><td>Provides an explanation relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">2</td><td>Provides some information relevant to the question · May use some historical terms and concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">explain more than one Greek writer’s view of Spartan society (b)</span><span class="q">use appropriate historical terms and concepts (b,c,d)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">referring to specific Greek writers and their views (b)</span><span class="q">focusing on the specific wording of the question(s) to explain rather than describe (b,c)</span><span class="q">providing appropriate depth in responses, guided by the mark value of each part of the question</span></p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2024 HSC Ancient History Marking Guidelines (Section II, part (b)) and the 2024 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2024 Q11(b)" data-title="HSC 2024 Q11(b) — plan it" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2024 Q11(b) · We do — a plan, not an answer</p>
+  <h2>Plan it: writer → view → evidence → why</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Writer: when, and who he was</th><th>His view of Spartan society</th><th>Evidence</th><th>Why he saw it that way</th></tr>
+    <tr class="reveal"><td>Thucydides · an Athenian, c. 455–400 BC · general, exiled 424 BC</td><td>a secretive society that outsiders could not fully know</td><td>“The secret nature of their political arrangements” (5.68.2)</td><td>an Athenian outsider; Cooley: he saw Sparta “not so much as an enemy, but rather as a polar opposite”</td></tr>
+    <tr><td>Writer 2 — an insider? <span class="small">(Tyrtaeus)</span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr>
+    <tr><td>Writer 3 — an eyewitness or a later writer? <span class="small">(Xenophon; or Aristotle or Plutarch)</span></td><td><span class="blank"></span></td><td><span class="blank"></span></td><td><span class="blank"></span></td></tr>
+  </table></div>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">Open with the pattern</div><p class="body nq">“Greek writers viewed Spartan society as …, but each view depended on when he wrote and who he was.”</p></div>
+    <div class="card accent"><div class="k">Choose for contrast</div><p class="body">Different centuries and positions: an insider, an outsider who asked questions, an eyewitness, a later critic. Name every writer.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l01-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing</p>
+  <h2>Put these in order, earliest first</h2>
+  <p class="task">Write the letters in order and a date beside each.</p>
+  <ul class="seq l01-q3">
+    <li><span class="k">A</span><span>Pausanias visits Sparta</span></li>
+    <li><span class="k">B</span><span>Thucydides records the battle of Mantinea</span></li>
+    <li><span class="k">C</span><span>Tyrtaeus composes his war poems</span></li>
+    <li><span class="k">D</span><span>The Battle of Leuctra</span></li>
+    <li><span class="k">E</span><span>Aristotle writes the <i>Politics</i></span></li>
+    <li><span class="k">F</span><span>Herodotus writes his <i>Histories</i></span></li>
+    <li><span class="k">G</span><span>Alcman writes songs for girls’ choruses</span></li>
+    <li><span class="k">H</span><span>Plutarch writes the <i>Life of Lycurgus</i></span></li>
+    <li><span class="k">I</span><span>Xenophon fights at Coronea</span></li>
+  </ul>
+  <div data-answers>
+    <div class="sol reveal"><ol class="seq key l01-key3">
+      <li><span class="k">1 · C</span><span>Tyrtaeus’ war poems — <b>mid-7th century BC</b></span></li>
+      <li><span class="k">2 · G</span><span>Alcman’s songs — <b>late 7th century BC</b></span></li>
+      <li><span class="k">3 · F</span><span>Herodotus’ <i>Histories</i> — <b>c. 450s–420s BC</b></span></li>
+      <li><span class="k">4 · B</span><span>Mantinea, recorded by Thucydides — <b>418 BC</b></span></li>
+      <li><span class="k">5 · I</span><span>Xenophon at Coronea — <b>394 BC</b></span></li>
+      <li><span class="k">6 · D</span><span>The Battle of Leuctra — <b>371 BC</b></span></li>
+      <li><span class="k">7 · E</span><span>Aristotle’s <i>Politics</i> — <b>330s–320s BC</b></span></li>
+      <li><span class="k">8 · H</span><span>Plutarch’s <i>Lycurgus</i> — <b>c. AD 100</b></span></li>
+      <li><span class="k">9 · A</span><span>Pausanias in Sparta — <b>2nd century AD</b> (the Sparta of his day, c. AD 150)</span></li>
+    </ol></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l01-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify</p>
+  <h2>True or false? Justify with evidence</h2>
+  <ol class="tf" data-answers>
+    <li><span class="n">1</span><span>Tyrtaeus and Alcman are the only literary sources that originate from Sparta.</span>
+      <span class="sol reveal">True <span class="why">— “Apart from two poets of the seventh century BC, namely Tyrtaios and Alkman, we do not have any literary sources that originate from Sparta” (Cooley). Both were probably Spartan.</span></span></li>
+    <li><span class="n">2</span><span>Herodotus was an Athenian.</span>
+      <span class="sol no reveal">False <span class="why">— he came from Halicarnassus in Asia Minor, “one of the few Greek authors of the classical period who were not Athenian” (Cooley).</span></span></li>
+    <li><span class="n">3</span><span>Thucydides was alive at the time of the Battle of Leuctra.</span>
+      <span class="sol no reveal">False <span class="why">— c. 455–400 BC: he died about thirty years before 371 BC.</span></span></li>
+    <li><span class="n">4</span><span>Aristotle wrote the <i>Politics</i> before Leuctra.</span>
+      <span class="sol no reveal">False <span class="why">— he was a boy in 371 BC and wrote in the 330s–320s BC, with hindsight.</span></span></li>
+    <li><span class="n">5</span><span>Pausanias described the Sparta of the Roman period.</span>
+      <span class="sol reveal">True <span class="why">— he walked around Roman Sparta; little of his information “can be firmly linked to the classical period” (Cooley).</span></span></li>
+    <li><span class="n">6</span><span>Plutarch believed the facts about Lycurgus were well established.</span>
+      <span class="sol no reveal">False <span class="why">— he opens his <i>Life of Lycurgus</i> by admitting that the accounts disagree (Plutarch, <i>Lycurgus</i> 1, Cooley F2: Lessons 3 and 19).</span></span></li>
+    <li><span class="n">7</span><span>Archaeological evidence is free of problems of interpretation.</span>
+      <span class="sol no reveal">False <span class="why">— Cavanagh: it is “fragmentary, biased and open to interpretation”, and rarely dated closer than a generation or two.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Agesilaus</span><span>Alcman</span><span>contemporary</span><span>Description</span><span>Halicarnassus</span><span>mirage</span><span>moral</span><span>oliganthropia</span></div>
+  <ol class="cloze" data-answers>
+    <li>The idealised picture of Sparta in ancient writing is called the Spartan <span class="gap"><span class="sol reveal">mirage</span></span>.</li>
+    <li>Herodotus came from <span class="gap"><span class="sol reveal">Halicarnassus</span></span> in Asia Minor.</li>
+    <li>Xenophon served alongside the Spartan king <span class="gap"><span class="sol reveal">Agesilaus</span></span>.</li>
+    <li>Aristotle blamed Sparta’s collapse on a shortage of citizens, which he called <span class="gap"><span class="sol reveal">oliganthropia</span></span>.</li>
+    <li>Pausanias wrote a <span class="gap"><span class="sol reveal">Description</span></span> of Greece, based on his own visits.</li>
+    <li>Plutarch wrote his <i>Lives</i> to provide <span class="gap"><span class="sol reveal">moral</span></span> examples.</li>
+    <li>Sparta’s two poets were Tyrtaeus and <span class="gap"><span class="sol reveal">Alcman</span></span>.</li>
+    <li>A source created at the time of the events it describes is <span class="gap"><span class="sol reveal">contemporary</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l01-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · an analytical paragraph · HSC-style, written for this lesson</p>
+  <h2>How useful are Tyrtaeus and Alcman as evidence for Spartan society?</h2>
+  <p class="task">Use Tyrtaeus fragment 12, the Suda on Alcman, and at least one other kind of evidence.</p>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what, and less useful for what?</span>
+    <span class="l">Evidence</span><span>Quote or describe a precise detail from each poet, with its provenance.</span>
+    <span class="l">Analyse</span><span>Explain what each detail shows about Spartan values or life.</span>
+    <span class="l">Evaluate</span><span>Weigh their limits: poetry, fragments, disputed lives — and test them against archaeology.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Tyrtaeus and Alcman are uniquely valuable because they are the only literary voices from inside Sparta, but they are better evidence for Spartan ideals than for how Spartan society worked. Cooley calls them ‘Our best, and arguably only reliable literary evidence for Sparta’. In the mid-7th century Tyrtaeus praised the man who ‘stands foursquare in the front line’ and ‘completely forgets shameful flight’, which shows that holding the battle line was a Spartan ideal long before any outsider described it. Alcman’s songs for girls’ choruses, full of gold, beauty and a headband from Lydia, show a festive Sparta far from the grim stereotype, and the lead offerings from Artemis Orthia support that picture. Yet the poets were ‘writing poetry not history’: Tyrtaeus describes how Spartans should fight, both survive only in fragments, and even Alcman’s birthplace was disputed, as the Suda’s rejection of Crates shows. The poets therefore reveal the values Spartans sang about in the 7th century, which must be tested against archaeology before they are treated as a description of society.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent does the Spartan mirage prevent historians from understanding Spartan society? <span class="small">(12 marks)</span></h2>
+  <p class="task">Support your response with evidence from at least three Greek writers and one archaeological source. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Define</b> the Spartan mirage and name the scholar who first identified it (Ollier, 1933); give your judgement in your first sentence.</li>
+    <li><b>Three writers from different centuries</b> — for example Herodotus (Demaratus, Cooley D46), Xenophon and Plutarch: how did each one’s date, origin and purpose shape his picture?</li>
+    <li><b>Evidence from inside Sparta:</b> Tyrtaeus fragment 12 (Cooley A9), the Suda on Alcman (A13) and the Orthia lead offerings — what can they add, and what can they not?</li>
+    <li><b>Judge:</b> is the mirage mainly an outsiders’ distortion, the Spartans’ own self-image, or both — and how far can historians get past it? (Cooley: the extreme view is “an over pessimistic stance”.)</li>
+  </ol>
+  <p class="small">Allow about 22 minutes for 12 marks. Lesson 19 adds Xenophon’s admiration and criticism, Aristotle and Plutarch as full sources.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Quick checks review" data-kind="practice notes">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 6 of 6 · the Lesson 1 quick checks</p>
+  <h2>Quick checks: answer from memory</h2>
+  <ol class="rq" data-answers>
+    <li>Name the only two writers whose works originate from Sparta itself.
+      <span class="sol reveal">Tyrtaeus and Alcman, poets of the 7th century BC — both probably Spartan.</span></li>
+    <li>Which syllabus writer was an adult at the time of Leuctra?
+      <span class="sol reveal">Xenophon (c. 430–c. 350 BC). Aristotle was a boy; Thucydides had died.</span></li>
+    <li>Why could Thucydides not discover the size of the Spartan army?
+      <span class="sol reveal">“The secret nature of their political arrangements makes it impossible to discover the numbers of Lakedaimonians” (5.68.2): he had to estimate.</span></li>
+    <li>Who first suggested the idea of the Spartan mirage, and when?
+      <span class="sol reveal">François Ollier, in <i>Le Mirage spartiate</i>, 1933.</span></li>
+    <li>List Cartledge’s three parts of the Spartan myth.
+      <span class="sol reveal">Sparta was free of civil strife almost forever; this was because all Spartans obeyed the laws of Lycurgus; and those laws affected every part of life and were in some respects very different from those of other Greek states.</span></li>
+    <li>Why is Demaratus’ speech an example of the mirage?
+      <span class="sol reveal">Herodotus imagines an exiled Spartan king telling Xerxes that Spartans fear the law more than Xerxes’ subjects fear him: an outsider’s idealised picture of Spartan obedience, built on Sparta’s reputation.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Hinge: closest to Leuctra" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>Which writer lived closest in time to the Battle of Leuctra (371 BC)?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Herodotus</span></li>
+    <li id="l01-hq2"><span class="n">2</span><span>Xenophon</span></li>
+    <li><span class="n">3</span><span>Plutarch</span></li>
+    <li><span class="n">4</span><span>Pausanias</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l01-hq2" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body">Xenophon, c. 430–c. 350 BC: an adult in 371 BC. Herodotus wrote about 50–90 years before; Plutarch and Pausanias more than four and five centuries after.</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">The Spartan mirage is …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">It matters to historians because …</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> the land and the site of Sparta. Thucydides predicted that Sparta’s ruins would make visitors doubt it had ever been powerful — we test that prediction.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Thucydides 1.20.3, 5.26.5, 5.68.2 and 5.74.3 (H1, E101, E104, D83, trans. B. Wilson); Herodotus 3.55.2 and 7.104.4 (H12, D46, trans. B. Wilson); Tyrtaeus fr. 12 (A9, trans. K. Hughes); Alcman fr. 1 (A14, trans. K. Hughes); the Suda on Alcman (A13); Aristotle, <i>Politics</i> 2.9 (D54). Cited: Plutarch, <i>Lycurgus</i> 9 and 16 (D58, D73, D76) and <i>Sayings of Spartan Women</i> (F35); Xenophon, <i>Hellenika</i> 6.5.27–28 (K5); Philochorus in Athenaeus (A2). Introductions by Cooley, W. G. Cavanagh (archaeology) and S. Hodkinson (inscriptions).</p>
+        <p class="small">Modern: F. Ollier, <i>Le Mirage spartiate</i> (1933, 1943); P. Cartledge, <i>Spartan Reflections</i> (Bristol 2013); A. Powell &amp; S. Hodkinson (eds), <i>Sparta Beyond the Mirage</i> (2002); N. M. Kennell, <i>The Gymnasium of Virtue</i> (1995); E. Rawson, <i>The Spartan Tradition in European Thought</i> (1969); R. M. Dawkins, <i>The Sanctuary of Artemis Orthia at Sparta</i> (1929). Alternative dates: Clarke &amp; Garner, ch. 1.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC questions, marking criteria and marking feedback: NSW Education Standards Authority, 2019–2025 HSC Ancient History examinations, the 2024 marking guidelines and feedback, the HSC exam specifications (2017 syllabus) and the glossary of key words. © NESA.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images</div>
+      <ul class="small"><li>The Menelaion at Therapne, with Mt Taygetus behind — Clarke & Garner, Fig 8.7</li><li>A stone bust commonly believed to represent Plutarch — Clarke & Garner, Fig 1.10</li><li>A modern statue of Herodotus in Bodrum, Turkey (ancient Halicarnassus) — a modern imagining, not an ancient portrait — Clarke & Garner, Fig 1.7</li><li>Modern statues of Thucydides (left) and Xenophon (right) at the Austrian Parliament in Vienna, built in the 19th century — Clarke & Garner, Fig 1.8</li><li>A papyrus fragment containing one of Alcman’s maiden-songs — Hurley et al., Source 56</li><li>Small lead offerings from the Sanctuary of Artemis Orthia: a ring, a soldier, a goddess and some form of animal — Clarke & Garner, Fig 7.6</li><li>Poster for the film 300 (2006), adapted from a graphic novel: a hypermasculine, highly militarised Leonidas — Clarke & Garner, Fig 7.14</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The two timelines were drawn for this lesson.</p></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2520 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L6 · Ephorate and Mixed Constitution</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the ephorate and the mixed constitution, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+
+/* ---- Lesson 6 (the ephorate and the mixed constitution). Every class starts l06-. */
+/* responsibilities of the ephorate: hub and spokes (svg_l06eph.svg) */
+.l06-eph text{font-family:var(--ui); fill:var(--ink);}
+.l06-eph .l06-sp rect{fill:var(--surface); stroke:var(--deep); stroke-width:3;}
+.l06-eph .l06-spoke{stroke:var(--slate); stroke-width:3; stroke-dasharray:2 7; stroke-linecap:round;}
+.l06-eph .l06-t{font-size:34px; font-weight:700; fill:var(--deep);}
+.l06-eph .l06-d{font-size:27px;}
+.l06-eph .l06-s{font-size:23px; fill:var(--slate); font-style:italic;}
+.l06-eph .l06-hub ellipse{fill:var(--statement);}
+.l06-eph .l06-hub text{fill:#FBF4F0; text-anchor:middle;}
+.l06-eph .l06-ht{font-size:48px; font-weight:700;}
+.l06-eph .l06-hs{font-size:27px;}
+
+/* checks and balances: layers on Lesson 3's government diagram (svg_l06chk.svg) */
+.l06-chk .l06c-t{font-size:31px; font-weight:700;}
+.l06-chk .l06c-d{font-size:25px;}
+.l06-chk .l06c-oath line{stroke:var(--c-directive); stroke-width:6; stroke-dasharray:14 10;}
+.l06-chk .l06c-oath text{fill:var(--c-directive);} .l06-chk .l06c-hb{fill:var(--c-directive);}
+.l06-chk .l06c-prep line{stroke:var(--c-evidence); stroke-width:6;}
+.l06-chk .l06c-prep text{fill:var(--c-evidence);} .l06-chk .l06c-hg{fill:var(--c-evidence);}
+.l06-chk .l06c-court rect{fill:var(--w-counter); stroke:var(--c-counter); stroke-width:3; stroke-dasharray:10 7;}
+.l06-chk .l06c-court .ca{stroke:var(--c-counter); stroke-width:5;}
+.l06-chk .l06c-court text{fill:var(--c-counter);} .l06-chk .l06c-hc{fill:var(--c-counter);}
+.l06-chk .l06c-who rect, .l06-chk .l06c-who circle{fill:var(--w-keyterm); stroke:var(--c-keyterm); stroke-width:3;}
+.l06-chk .l06c-who text{fill:var(--c-keyterm);}
+.l06-chk .l06c-q{font-size:36px; font-weight:700;}
+.l06-sw{display:inline-block; width:.8em; height:.8em; border-radius:3px; margin-right:.35em; vertical-align:-.05em;}
+.l06-sw.l06-b{background:var(--c-directive);} .l06-sw.l06-g{background:var(--c-evidence);}
+.l06-sw.l06-p{background:var(--c-counter);} .l06-sw.l06-k{background:var(--c-keyterm);}
+.l06-key{display:flex; flex-wrap:wrap; gap:.3em 1.2em; font-size:var(--fs-chrome); color:var(--slate);}
+/* full-width diagram slides may use a little more of the screen when presenting */
+html:not(.read) .diagram.l06-tall svg{max-height:calc(100vh - 250px);}
+
+/* the mixed constitution (HTML, merges Hurley Source 13 with Aristotle) */
+.l06-mix{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.2vw,20px); align-items:start;}
+.l06-col{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.l06-hd{background:var(--deep); color:var(--surface); border-radius:8px; padding:.35em .8em; line-height:1.25;}
+.l06-hd b{display:block; font-size:var(--fs-body);}
+.l06-hd span{font-size:calc(var(--fs-body)*.78);}
+.l06-bx{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:8px;
+  padding:.4em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.l06-bx b{display:block;}
+.l06-bx .l06-who{display:block; font-size:var(--fs-chrome); color:var(--slate); margin-top:.2em;}
+.l06-bx.l06-q{border:2px dashed var(--c-judgement); border-left:6px solid var(--c-judgement); background:var(--w-judgement);}
+@media (max-width:700px){ .l06-mix{grid-template-columns:1fr;} }
+
+/* Report or judgement? — click to sort (pure CSS: each choice colours itself) */
+.l06-rj{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:clamp(4px,.7vh,8px);}
+.l06-rj li{display:grid; grid-template-columns:1fr auto auto 15em; gap:.3em .6em; align-items:center;
+  background:var(--surface); border:1px solid var(--rule); border-radius:8px; padding:.28em .8em;
+  font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+.l06-rj .l06-ph{font-family:var(--serif); font-style:italic;}
+.l06-pick{cursor:pointer; position:relative; display:inline-block;}
+.l06-pick input{position:absolute; opacity:0; width:1px; height:1px; margin:0;}
+.l06-pick span{display:inline-block; padding:.1em .65em; border:2px solid var(--rule); border-radius:999px;
+  font-weight:700; font-size:.88em; white-space:nowrap;}
+.l06-pick input:focus-visible + span{outline:3px solid var(--bright); outline-offset:2px;}
+.l06-pick.l06-ok input:checked + span{background:var(--w-evidence); border-color:var(--c-evidence); color:var(--c-evidence);}
+.l06-pick.l06-ok input:checked + span::after{content:" ✓";}
+.l06-pick.l06-no input:checked + span{background:var(--w-judgement); border-color:var(--c-judgement); color:var(--c-judgement);}
+.l06-pick.l06-no input:checked + span::after{content:" ✗ think again";}
+.l06-rj .sol{font-size:.86em; line-height:1.25;}
+@media (max-width:700px){
+  .l06-rj li{grid-template-columns:auto auto 1fr;}
+  .l06-rj .l06-ph, .l06-rj .sol{grid-column:1 / -1;}
+}
+
+/* case-study cards and dense source slides */
+.l06-case{display:grid; grid-template-columns:1.25fr 1fr; gap:clamp(12px,1.8vw,30px); align-items:start;}
+@media (max-width:900px){ .l06-case{grid-template-columns:1fr;} }
+@media (max-height:820px){
+  html:not(.read) .l06-dense .src .quote.sm{font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+  html:not(.read) .l06-dense .note .body, html:not(.read) .l06-dense .card .body{font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+  html:not(.read) .l06-dense .qprompt{font-size:calc(var(--fs-body)*.9);}
+  html:not(.read) .l06-dense .rq{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l06-dense .tbl.compact{font-size:calc(var(--fs-body)*.74);}
+}
+
+/* phones: wide diagrams scroll sideways at a readable size */
+@media (max-width:700px){
+  html.read .diagram svg.l06-eph{min-width:1000px; max-height:none;}
+  html.read .diagram svg.l06-chk{min-width:780px; max-height:none;}
+}
+
+/* the mixed constitution grid: columns and rows set by class; phones read it column by column */
+.l06-mix .l06-c1{grid-column:1;} .l06-mix .l06-c2{grid-column:2;} .l06-mix .l06-c3{grid-column:3;}
+.l06-mix .l06-hd{grid-row:1;} .l06-mix .l06-r2{grid-row:2;} .l06-mix .l06-r3{grid-row:3;}
+.l06-mix .note .body{font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+@media (max-width:700px){
+  .l06-mix > *{grid-column:1 !important; grid-row:auto !important;}
+  .l06-mix .l06-o1{order:1;} .l06-mix .l06-o2{order:2;} .l06-mix .l06-o3{order:3;} .l06-mix .l06-o4{order:4;}
+  .l06-mix .l06-o5{order:5;} .l06-mix .l06-o6{order:6;} .l06-mix .l06-o7{order:7;} .l06-mix .l06-o8{order:8;}
+  .l06-mix .l06-o9{order:9;}
+}
+@media (max-height:820px){
+  html:not(.read) .l06-mix .l06-bx, html:not(.read) .l06-mix .note .body{font-size:calc(var(--fs-body)*.76); line-height:1.3;}
+  html:not(.read) .l06-mix .l06-hd b{font-size:calc(var(--fs-body)*.9);}
+}
+/* marks column that never wraps ("10–12") */
+.l06-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+/* two-column practice lists on wide screens */
+.l06-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l06-two{gap:.4em .7em;}
+@media (max-width:900px){ .l06-two{grid-template-columns:1fr;} }
+@media (max-height:820px){
+  html:not(.read) .l06-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.32em .7em;}
+  html:not(.read) .l06-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 6" data-title="The ephorate and the mixed constitution" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 6</p>
+      <h1>The ephorate and the mixed constitution</h1>
+      <p class="lead">Five men, elected for a single year, could fine a king. Who really ran Sparta — and why was its constitution praised as ‘mixed’?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-1-6-agora-footings.jpg" alt="Footings and walls identified as part of Sparta’s agora, the centre of public life"><figcaption>Footings and walls identified as part of Sparta’s agora, the centre of public life — <span class="cr">Clarke & Garner, Fig 1.6</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 6" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From the council and the assembly to the overseers</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Last lesson</div>
+      <p class="body">The gerousia (28 elders + the 2 kings) prepared the business and judged the gravest cases; the ekklesia decided by shouting — but only on what was put to it, and the rider let the elders and kings dissolve it.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">The fourth part of the constitution, the one the Great Rhetra never mentions: five <b>ephors</b>. Who watched the kings — and why did writers call Sparta’s constitution ‘mixed’?</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 5, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 6" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate how the ephorate balanced the power of the kings and the people</li>
+        <li>evaluate how Xenophon and Aristotle judged the Spartan system of government</li>
+        <li>plan a 12-mark response that uses a source and own knowledge</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>explain at least four powers of the ephors, including their checks on the kings, naming a source for each</li>
+        <li>explain why Sparta was praised as a ‘mixed constitution’, and what Aristotle thought of it</li>
+        <li>separate what Aristotle reports from what he judges</li>
+        <li>write a thesis and three-paragraph plan for HSC 2022 Q11(d)</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body">An <b>ephor</b> (“overseer”) is one official; the <b>ephorate</b> is the board of five — never the ekklesia, the citizens’ assembly.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 6" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L6 · The ephorate and the mixed constitution</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (eph. = ephors)</span></div></div>
+      <div class="row"><div class="cq">Who were the ephors?</div><div class="nts">5, elected each year …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: who the ephors were · their powers · ephors and kings · Aristotle’s verdict · the system in practice.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 6" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The office</th><th>Meaning</th></tr>
+      <tr><td>ephor</td><td>one of five chief officials elected each year; the word means overseer</td></tr>
+      <tr><td>ephorate</td><td>the office of ephor, or the board of five ephors</td></tr>
+      <tr><td>eponymous ephor</td><td>the ephor whose name identified the year</td></tr>
+      <tr><td>magistrate</td><td>an elected official of the state</td></tr>
+      <tr><td>embassy</td><td>a group of envoys sent by another state</td></tr>
+      <tr><td>capital case</td><td>a trial in which the penalty could be death</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The constitution</th><th>Meaning</th></tr>
+      <tr><td>mixed constitution</td><td>a government blending rule by one (monarchy), by a few (oligarchy) and by the many (democracy)</td></tr>
+      <tr><td>aristocracy</td><td>rule by the ‘best’ — men of birth and merit</td></tr>
+      <tr><td>oligarchy</td><td>rule by a small, privileged group</td></tr>
+      <tr><td>probouleusis</td><td>preparing business in advance: the gerousia drew up the motions (Lesson 5)</td></tr>
+      <tr><td>accountable</td><td>having to answer for your actions to someone who can punish you</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Theopompos, Kleomenes, Lakedaimonians). In your own writing use Lycurgus, Theopompus, Cleomenes, Lacedaemonians.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Who were the ephors?" data-title="Five overseers" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Who were the ephors? · I do</p>
+  <h2>Five overseers, elected for one year</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack">
+      <div class="card accent reveal"><div class="k">How many, and for how long?</div><p class="body">Five, elected each year by the assembly. Cooley: “The ephors were the five leading magistrates of Sparta, elected annually by the assembly.”</p></div>
+      <div class="card accent reveal"><div class="k">Who could stand?</div><p class="body">Probably any Spartiate entitled to vote in the assembly (Cooley). Aristotle complains that “the ephors come from the whole population”.</p></div>
+      <div class="card accent reveal"><div class="k">Only once</div><p class="body">Cooley: “since an ephor could only serve once, ever poorer Spartans had to serve” as the citizen body shrank.</p></div>
+    </div>
+    <div class="stack">
+      <figure class="figure contain"><img src="images/clarke-2-7-five-ephors-engraving.jpg" alt="A later engraving imagining the five ephors — a modern illustration, not ancient evidence"><figcaption>A later engraving imagining the five ephors — a modern illustration, not ancient evidence — <span class="cr">Clarke & Garner, Fig 2.7</span></figcaption></figure>
+      <p class="qprompt reveal">Can this picture be evidence for the ephors?</p>
+      <p class="body reveal">No — it is a later artist’s imagination. Only the number five comes from the ancient sources.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Who were the ephors?" data-title="The eponymous ephor" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Who were the ephors? · We do — two sources</p>
+  <h2>The ephor who named the year</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Pausanias</div>
+      <p class="quote sm">The ephors manage all the most serious business and provide the ephor who gives his name to the year.</p>
+      <p class="prov">Pausanias, <i>Description of Greece</i> 3.11.2 · a Greek traveller writing under Roman rule, 2nd century AD · trans. in Cooley D16</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · the peace treaty of 421 BC, in Thucydides</div>
+      <p class="quote sm">[19.1] The beginning of the treaty shall be: in Lakedaimon, when Pleistolas is ephor, on the fourth day before the end of the month of Artemision …</p>
+      <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 5.19.1 · an Athenian, writing after 404 BC · trans. B. Wilson · Cooley B17</p>
+    </div>
+  </div>
+  <div class="cols c2">
+    <div class="stack tight">
+      <p class="qprompt reveal">How did Spartans and Athenians date a year?</p>
+      <p class="body reveal">By the name of an official: an ephor at Sparta, an archon at Athens. The treaty goes on to give the Athenian date by its archon, Alcaeus.</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Why does this matter for us?</p>
+      <p class="body reveal">An official record names the ephor, so the office was central to Sparta’s public life. Xenophon’s list of the ephors “who gave their names to the years” of the war includes Pleistolas (Cooley E32).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Who were the ephors?" data-title="When did the ephorate begin?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Who were the ephors? · We do — two writers disagree <span class="optional">If time</span></p>
+  <h2>When did the ephorate begin?</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">Lykourgos was also responsible for the institution of the ephorate and the gerousia.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 1.65.5 · written c. 450s–420s BC · trans. B. Wilson · Cooley F3</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · Plutarch</div>
+      <p class="quote sm">Roughly some 130 years after Lykourgos came the appointment of the first ephors, Elatos and his associates, during the reign of Theopompos.</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 7.1 · written c. AD 100 · trans. B. Wilson · Cooley D17</p>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="note reveal" data-code="counter"><div class="k">The clash</div><p class="body">Herodotus credits Lycurgus; Plutarch puts the first ephors about 130 years later, under King Theopompus.</p></div>
+    <div class="note reveal" data-code="evidence"><div class="k">The Rhetra</div><p class="body">The Great Rhetra names kings, elders and assembly, but no ephors (Lesson 3).</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">Safest conclusion</div><p class="body">The ephorate was added after the Rhetra, at a date no one can fix.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Who were the ephors?" data-title="Notes 1 — Who were the ephors?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Who were the ephors?</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L6 · The ephorate and the mixed constitution</b></span><span>1 · Who were the ephors?</span></div>
+    <div class="row"><div class="cq">How were the ephors chosen, and how long did they serve?</div>
+      <div class="nts reveal"><b>5</b> ephors, <b>elected each year</b> by the assembly <span class="sep">·</span> prob. any Spartiate who could vote <span class="sep">·</span> Aristotle: “from the whole population” <span class="sep">·</span> <b>once only</b> (Cooley) → ever poorer ephors</div></div>
+    <div class="row"><div class="cq">What was the eponymous ephor? Evidence?</div>
+      <div class="nts reveal">One ephor <b>named the year</b> <span class="sep">·</span> Pausanias 3.11.2 (D16) <span class="sep">·</span> treaty of 421 BC: “when Pleistolas is ephor” (Thuc. 5.19.1, B17)</div></div>
+    <div class="row"><div class="cq">When did the office begin?</div>
+      <div class="nts reveal">Hdt 1.65: Lycurgus <span class="sep">·</span> Plut. <i>Lyc.</i> 7 (D17): c. 130 yrs later, under <b>Theopompus</b> <span class="sep">·</span> Rhetra: no ephors → added <b>later</b>, date unknown</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The ephors’ powers" data-title="Responsibilities of the ephorate (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The ephors’ powers · I do — the whole picture, with the source for each</p>
+  <h2>Responsibilities of the ephorate</h2>
+  <figure class="diagram l06-tall"><svg class="l06-eph" viewBox="0 0 2000 846" role="img" aria-label="Diagram: the responsibilities of the ephorate. Around the five ephors: they watched the kings, two going on campaign with a king (Xenophon); exchanged oaths with the kings every month (Xenophon); removed and tried officials and sat in the court that tried kings (Xenophon; Pausanias); fined anyone, even kings; summoned and presided over the gerousia and the assembly; were probably also able to propose legislation; received embassies; called up the army by age groups; controlled education and the krypteia; declared war on the helots every year (Aristotle, as reported by Plutarch); and one ephor gave his name to the year (Pausanias).">
+<g class="linked l06-sp" id="l06e-1"><line class="l06-spoke" x1="1000" y1="423" x2="434.0" y2="182.0"/><rect x="12" y="10" width="440" height="172" rx="16"/><text class="l06-t" x="34" y="54">Watched the kings</text><text class="l06-d" x="34" y="92">two ephors went on campaign</text><text class="l06-d" x="34" y="124">with a king</text><text class="l06-s" x="34" y="164">Xenophon · Cooley D7, E43</text></g>
+<g class="linked l06-sp" id="l06e-2"><line class="l06-spoke" x1="1000" y1="423" x2="811.3" y2="182.0"/><rect x="524" y="10" width="440" height="172" rx="16"/><text class="l06-t" x="546" y="54">A monthly oath</text><text class="l06-d" x="546" y="92">kings and ephors exchanged</text><text class="l06-d" x="546" y="124">oaths every month</text><text class="l06-s" x="546" y="164">Xenophon · Cooley D9</text></g>
+<g class="linked l06-sp" id="l06e-3"><line class="l06-spoke" x1="1000" y1="423" x2="1188.7" y2="182.0"/><rect x="1036" y="10" width="440" height="172" rx="16"/><text class="l06-t" x="1058" y="54">Justice</text><text class="l06-d" x="1058" y="92">removed and tried officials;</text><text class="l06-d" x="1058" y="124">sat in the court for kings</text><text class="l06-s" x="1058" y="164">Xenophon D19 · Pausanias E44</text></g>
+<g class="linked l06-sp" id="l06e-4"><line class="l06-spoke" x1="1000" y1="423" x2="1566.0" y2="182.0"/><rect x="1548" y="10" width="440" height="172" rx="16"/><text class="l06-t" x="1570" y="54">Fines</text><text class="l06-d" x="1570" y="92">on anyone they chose —</text><text class="l06-d" x="1570" y="124">even on kings</text><text class="l06-s" x="1570" y="164">Xenophon D19 · Cooley</text></g>
+<g class="linked l06-sp" id="l06e-5"><line class="l06-spoke" x1="1000" y1="423" x2="1548.0" y2="350.9"/><rect x="1548" y="236" width="440" height="172" rx="16"/><text class="l06-t" x="1570" y="280">Ran the meetings</text><text class="l06-d" x="1570" y="318">summoned and presided over</text><text class="l06-d" x="1570" y="350">the gerousia and assembly</text><text class="l06-s" x="1570" y="390">Cooley · Thucydides E31</text></g>
+<g class="linked l06-sp" id="l06e-6"><line class="l06-spoke" x1="1000" y1="423" x2="1548.0" y2="495.1"/><rect x="1548" y="438" width="440" height="172" rx="16"/><text class="l06-t" x="1570" y="482">Laws</text><text class="l06-d" x="1570" y="520">“probably also able to</text><text class="l06-d" x="1570" y="552">propose legislation”</text><text class="l06-s" x="1570" y="592">Cooley, on the ephorate</text></g>
+<g class="linked l06-sp" id="l06e-7"><line class="l06-spoke" x1="1000" y1="423" x2="1566.0" y2="664.0"/><rect x="1548" y="664" width="440" height="172" rx="16"/><text class="l06-t" x="1570" y="708">Foreign policy</text><text class="l06-d" x="1570" y="746">received embassies; chose</text><text class="l06-d" x="1570" y="778">which envoys could speak</text><text class="l06-s" x="1570" y="818">Cooley, on the ephorate</text></g>
+<g class="linked l06-sp" id="l06e-8"><line class="l06-spoke" x1="1000" y1="423" x2="1188.7" y2="664.0"/><rect x="1036" y="664" width="440" height="172" rx="16"/><text class="l06-t" x="1058" y="708">Called up the army</text><text class="l06-d" x="1058" y="746">proclaimed which age</text><text class="l06-d" x="1058" y="778">groups would serve</text><text class="l06-s" x="1058" y="818">Xenophon · Cooley D88</text></g>
+<g class="linked l06-sp" id="l06e-9"><line class="l06-spoke" x1="1000" y1="423" x2="811.3" y2="664.0"/><rect x="524" y="664" width="440" height="172" rx="16"/><text class="l06-t" x="546" y="708">Education</text><text class="l06-d" x="546" y="746">controlled the system;</text><text class="l06-d" x="546" y="778">fined brawling young men</text><text class="l06-s" x="546" y="818">Cooley · Xenophon D79</text></g>
+<g class="linked l06-sp" id="l06e-10"><line class="l06-spoke" x1="1000" y1="423" x2="434.0" y2="664.0"/><rect x="12" y="664" width="440" height="172" rx="16"/><text class="l06-t" x="34" y="708">Krypteia</text><text class="l06-d" x="34" y="746">controlled the krypteia</text><text class="l06-s" x="34" y="818">Cooley (see D42–D44)</text></g>
+<g class="linked l06-sp" id="l06e-11"><line class="l06-spoke" x1="1000" y1="423" x2="452.0" y2="495.1"/><rect x="12" y="438" width="440" height="172" rx="16"/><text class="l06-t" x="34" y="482">War on the helots</text><text class="l06-d" x="34" y="520">declared every year</text><text class="l06-s" x="34" y="564">(Aristotle, as reported by</text><text class="l06-s" x="34" y="592">Plutarch, Cooley D44)</text></g>
+<g class="linked l06-sp" id="l06e-12"><line class="l06-spoke" x1="1000" y1="423" x2="452.0" y2="350.9"/><rect x="12" y="236" width="440" height="172" rx="16"/><text class="l06-t" x="34" y="280">Eponymous ephor</text><text class="l06-d" x="34" y="318">one ephor gave his name</text><text class="l06-d" x="34" y="350">to the year</text><text class="l06-s" x="34" y="390">Pausanias · Cooley D16</text></g>
+<g class="l06-hub"><ellipse cx="1000" cy="423" rx="250" ry="118"/><text class="l06-ht" x="1000" y="417">The ephorate</text><text class="l06-hs" x="1000" y="463">five ephors · one year · once only</text></g>
+</svg>
+    <figcaption>Rebuilt for this lesson from Clarke &amp; Garner, Fig 2.6, with every responsibility checked against Cooley. Clarke’s label <i>Advisers to the kings</i> is left out (next slide). <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l06e-1, #l06e-2" hidden></i>
+  <i class="reveal" data-also="#l06e-3, #l06e-4" hidden></i>
+  <i class="reveal" data-also="#l06e-5, #l06e-6" hidden></i>
+  <i class="reveal" data-also="#l06e-7, #l06e-8" hidden></i>
+  <i class="reveal" data-also="#l06e-9, #l06e-10" hidden></i>
+  <i class="reveal" data-also="#l06e-11, #l06e-12" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The ephors’ powers" data-title="Not advisers to the kings">
+<div class="wrap">
+  <p class="eyebrow">2 · The ephors’ powers · checking a textbook diagram</p>
+  <h2>Watchers, not advisers</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="src">
+      <div class="k">Source · Xenophon, on the king’s sacrifices on campaign</div>
+      <p class="quote sm">[5] Two ephors also attend, but they take no part in the proceedings unless requested to do so by the king. But because they watch what each person does, they ensure that all present conduct themselves with the appropriate level of decorum.</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 13.5 · probably written late 390s or 380s BC · trans. B. Wilson · Cooley D7</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt">Were the two ephors on campaign the king’s advisers?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">Not normally: they “take no part … unless requested” by the king. Their job was to <b>watch</b> — a check, not advice.</p></div>
+      <div class="note reveal" data-code="counter"><p class="body">The “advisers” given to King Agis in 418 BC were “ten senior Spartiate officials”, not ephors (Thucydides 5.63, Cooley E98 — section 5).</p></div>
+      <div class="note reveal" data-code="analysis"><p class="body">A modern diagram is an interpretation. Test every label against the ancient evidence.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The ephors’ powers" data-title="Xenophon on the power of the ephors" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">2 · The ephors’ powers · We do — an admirer’s account</p>
+  <h2>Xenophon: obedience — and the power of the ephors</h2>
+  <div class="split" style="--cols:1.55fr 1fr">
+    <div class="src">
+      <div class="k">Source · Xenophon</div>
+      <p class="quote sm">[2] … in Sparta the most powerful citizens are the ones who show the greatest deference towards the magistrates, taking pride in their own humility, and in running instead of walking to obey their summons. … [4] So <span class="code" data-code="evidence" data-letter="E">the ephors have the right to impose fines on anyone they choose, and to exact immediate payment; they can depose a magistrate from his office even in mid-term, and can also imprison him and put him on trial for his life</span>. Since they possess such extensive powers, by contrast with the practice in other cities, they do not allow elected officials to rule as they like for the whole year of their elective term; instead, <span class="code" data-code="judgement" data-letter="J">rather like tyrants and the presidents of the games</span>, they punish with immediate effect anyone they detect breaking the law in any particular.</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 8.2–4 (part) · probably written late 390s or 380s BC · an Athenian who fought for King Agesilaus and was given an estate by the Spartans · trans. B. Wilson · Cooley D19</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">List the ephors’ powers.</p>
+      <p class="body reveal">Fine anyone, at once · depose any magistrate mid-term · imprison him · put him on trial for his life.</p>
+      <p class="qprompt reveal" data-paint="judgement">Why is the comparison striking?</p>
+      <p class="body reveal">An admirer likens the ephors to <b>tyrants</b> — and means it as praise of Spartan obedience.</p>
+      <div class="note reveal" data-code="counter"><p class="body">Cooley: the work is “a kind of political pamphlet, defending Sparta against its critics”, and it “probably depicts a somewhat idealised Sparta”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The ephors’ powers" data-title="The army, the young and the helots">
+<div class="wrap l06-dense">
+  <p class="eyebrow">2 · The ephors’ powers · We do — reaching into every part of Spartan life</p>
+  <h2>The army, the young — and the helots</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon</div>
+        <p class="quote sm">[11.2] First of all the ephors issue a proclamation setting out the age groups required to serve as cavalry, hoplites, and then craftsmen.</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 11.2 · trans. B. Wilson · Cooley D88</p>
+      </div>
+      <div class="note reveal" data-code="evidence"><div class="k">The young</div><p class="body">Cooley: “They had control over the education system”; they selected men for the élite corps and “controlled the krypteia”.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, reporting Aristotle</div>
+        <p class="quote sm">[4] Significantly, Aristotle reports that the ephors, whenever they first took office, would make a formal declaration of war on the helots, so that their murder would never involve religious pollution.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 28.4 · written c. AD 100 · trans. B. Wilson · Cooley D44</p>
+      </div>
+      <p class="qprompt reveal">Why declare war on the helots?</p>
+      <p class="body reveal">Killing an enemy in war brought no religious pollution — so helots could be killed without offending the gods.</p>
+      <div class="note reveal" data-code="counter"><p class="body">One late source: Aristotle, <b>as reported by Plutarch</b>. Say so whenever you use it.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The ephors’ powers" data-title="An inscription names the ephors" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The ephors’ powers · We do — evidence carved at the time</p>
+  <h2>An inscription names the kings and the ephors</h2>
+  <div class="src">
+    <div class="k">Source · an inscription from Delos</div>
+    <p class="quote">[…of the precincts] and the sacrifices and temples and property of the god. The kings were Agis, Pausanias. The ephors were Thyionidas, Aristogenidas, Archistas, Sologas, Phedilas. At Delos the archon was [A]nd[rodik?]os.</p>
+    <p class="prov">Inscription recording Spartan arrangements for the sanctuary of Apollo on Delos, fragment b · c. 403–400 BC · IG V 1, 1564 (Rhodes and Osborne 3) · trans. in Cooley B27. Square brackets mark missing or uncertain letters.</p>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">What does listing all five ephors beside the kings suggest?</p>
+      <p class="body reveal">The ephors shared the kings’ official standing: Sparta’s official acts were recorded under the names of both.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Why trust an inscription?</p>
+      <p class="body reveal">It is an official record made at the time, not a later writer’s account — though it too was set up for a purpose.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">What can it not tell us?</p>
+      <p class="body reveal">It is a fragment: it names the ephors but says nothing about their powers.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The ephors’ powers" data-title="Notes 2 — The ephors’ powers" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The ephors’ powers</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L6 · The ephorate and the mixed constitution</b></span><span>2 · Their powers</span></div>
+    <div class="row"><div class="cq">Over government and justice?</div>
+      <div class="nts reveal"><b>Summoned + presided over</b> gerousia and assembly <span class="sep">·</span> “probably also able to propose legislation” <span class="sep">·</span> fine anyone, depose, imprison, try officials (Xen. <i>LP</i> 8.4, D19) <span class="sep">·</span> sat in the <b>court</b> for kings (E44)</div></div>
+    <div class="row"><div class="cq">Over foreign policy, army, the young?</div>
+      <div class="nts reveal">Received <b>embassies</b> <span class="sep">·</span> proclaimed which <b>age groups</b> served (D88) <span class="sep">·</span> controlled <b>education</b> and the <b>krypteia</b> (Cooley)</div></div>
+    <div class="row"><div class="cq">Over the helots?</div>
+      <div class="nts reveal">War declared each year on taking office → no religious pollution (<b>Aristotle, as reported by Plutarch</b>, <i>Lyc.</i> 28.4, D44)</div></div>
+    <div class="row"><div class="cq">Evidence of status?</div>
+      <div class="nts reveal">Delos inscription c. 403–400 BC (B27): 2 kings + <b>5 ephors</b> named <span class="sep">·</span> Xenophon, an admirer: “rather like tyrants”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Ephors and kings" data-title="Xenophon on the king (1)" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">3 · Ephors and kings · We do — Xenophon on the king and the state (1 of 2)</p>
+  <h2>What the king received — and who stayed seated</h2>
+  <div class="src">
+    <div class="k">Source · Xenophon</div>
+    <p class="quote sm">[2] He laid it down that the king, by virtue of his divine origin, shall offer all public sacrifice on behalf of the state; that he shall lead the army on all expeditions sent out by the state; [3] that he shall receive a portion of every sacrificial animal as his prerogative; that specified tracts of high quality land in many of the territories of the perioikoi shall belong to him, sufficient to sustain the royal household adequately but without excessive wealth. … [6] … Everyone rises from their seats when the king appears, <span class="code" data-code="counter" data-letter="C">except for the ephors from their official chairs</span>.</p>
+    <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 15.2–3, 6 (part) · probably written late 390s or 380s BC · trans. B. Wilson · Cooley D9</p>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">Which privileges are religious, military and economic?</p>
+      <p class="body reveal">Public sacrifice; leading every expedition; a portion of every sacrifice and royal estates.</p></div>
+    <div class="stack tight"><p class="qprompt reveal" data-paint="counter">Who does not rise for the king?</p>
+      <p class="body reveal">The ephors, from their official chairs — honour given to the king, but not by the state’s overseers.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Who does Xenophon credit with all this?</p>
+      <p class="body reveal">“He” is Lycurgus. Xenophon credits more to the lawgiver than any other source (Cooley) — treat that with care.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Ephors and kings" data-title="Xenophon on the king (2): the monthly oath" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">3 · Ephors and kings · We do — Xenophon on the king and the state (2 of 2)</p>
+  <h2>The monthly oath</h2>
+  <div class="src">
+    <div class="k">Source · Xenophon, continued</div>
+    <p class="quote sm">[7] Kings and ephors exchange oaths with one another once a month, <span class="code" data-code="scope" data-letter="S">ephors on behalf of the state, the kings on their own behalf</span>. The king’s oath declares that <span class="code" data-code="evidence" data-letter="E">he will reign in accordance with the established laws of the state</span>; and for the state the ephors declare that <span class="code" data-code="judgement" data-letter="J">so long as the king keeps his oath, they will maintain the royal prerogatives undiminished</span>. [8] Such, then, are the domestic honours bestowed upon the king during his lifetime. They are not really significantly greater than those of the individual citizen, because Lykourgos had no desire to encourage in them the characteristic arrogance of tyrants, nor to stimulate in the ordinary citizen resentment at the king’s powers. [9] As for the honours heaped upon a king at his death, here the laws of Lykourgos aim to show that the kings of the Lakedaimonians are honoured not as mere mortals but as demigods.</p>
+    <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 15.7–9 · trans. B. Wilson · Cooley D9</p>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal" data-paint="scope">Who swears for whom?</p>
+      <p class="body reveal">The ephors for the state; each king for himself.</p></div>
+    <div class="stack tight"><p class="qprompt reveal" data-paint="evidence">What does the king promise?</p>
+      <p class="body reveal">To rule by the established laws — every month.</p></div>
+    <div class="stack tight"><p class="qprompt reveal" data-paint="judgement">What does “so long as” do?</p>
+      <p class="body reveal">It makes the kingship <b>conditional</b> on keeping the laws.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Ephors and kings" data-title="Kings could be watched, fined and tried" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">3 · Ephors and kings · I do — four checks on the kings</p>
+  <h2>Kings could be watched, fined and tried</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">1 · The monthly oath</div><p class="body">The king swore to rule by the laws; the ephors kept his privileges only while he did (Xenophon, D9).</p></div>
+    <div class="card accent reveal"><div class="k">2 · Watched on campaign</div><p class="body">“Two ephors also attend” the king’s sacrifices and watch everyone (Xenophon, D7).</p></div>
+    <div class="card accent reveal"><div class="k">3 · Fines</div><p class="body">Cooley: the ephors could “impose fines on individual citizens (including kings)”.</p></div>
+    <div class="card accent reveal"><div class="k">4 · Trials</div><p class="body">In c. 493 BC “Kleomenes’ enemies haled him before the ephors” (Herodotus 6.82, Cooley E19). The court that tried kings included the ephors (section 5).</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> The kings were honoured as demigods at death, yet in life they were held to the laws by officials who changed every year.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Ephors and kings" data-title="Check: which was not the ephors’ power?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Which of these was <u>not</u> a power of the ephors?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Presiding over the assembly when it voted</span></li>
+    <li><span class="n">2</span><span>Fining a king</span></li>
+    <li id="l06hq3"><span class="n">3</span><span>Commanding the army on campaign</span></li>
+    <li><span class="n">4</span><span>Receiving foreign embassies</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l06hq3" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body">The king led “the army on all expeditions” (Xenophon, D9). Two ephors went with him — to watch, not to command.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Ephors and kings" data-title="Notes 3 — Ephors and kings" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Ephors and kings</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L6 · The ephorate and the mixed constitution</b></span><span>3 · Ephors and kings</span></div>
+    <div class="row"><div class="cq">The monthly oath?</div>
+      <div class="nts reveal">Once a month: king swears to rule by the laws <span class="sep">·</span> ephors, for the state, keep his privileges “so long as the king keeps his oath” (Xen. <i>LP</i> 15.7, D9) → kingship <b>conditional</b></div></div>
+    <div class="row"><div class="cq">Name four ways the ephors limited the kings</div>
+      <div class="nts reveal">Oath <span class="sep">·</span> 2 ephors on campaign — <b>watch, not advise</b> (D7) <span class="sep">·</span> <b>fines</b>, even on kings <span class="sep">·</span> <b>trials</b>: Cleomenes before the ephors c. 493 BC (E19)</div></div>
+    <div class="row"><div class="cq">And the honours?</div>
+      <div class="nts reveal">All rise for the king — except the ephors <span class="sep">·</span> honours kept modest to avoid tyrants’ arrogance <span class="sep">·</span> demigods at death (D9)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Aristotle’s verdict" data-title="Aristotle on the ephorate" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">4 · Aristotle’s verdict · We do — read the critic</p>
+  <h2>Aristotle on the ephorate</h2>
+  <div class="src">
+    <div class="k">Source · Aristotle</div>
+    <p class="quote sm">But the rules about the ephorate are also bad. Absolute power over the most important matters is theirs, but the ephors come from the whole population with the result that very frequently extremely poor men stumble into office, who can be bought as a result of their poverty. … Furthermore, because their power was too great and like a tyrant’s, even the kings were forced to curry popular favour. … So this office holds the constitution together, since the people keep quiet through sharing the supreme power … As it is, the kings do so because of the honour given them; the great and the good because of the gerousia (this office is a prize for excellence); the people because of the ephorate (for appointments are made from the whole citizenry). And yet though it is right that this office should be chosen from everyone, it should not be chosen as it currently is since the method is too childish.</p>
+    <p class="prov">Aristotle, <i>Politics</i> 2.9, 1270b6–35 (part) · written 330s–320s BC · trans. in Cooley D18</p>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="scope"><div class="k">Who and when?</div><p class="body">A philosopher (384–322 BC) based in Athens, whose students described 158 constitutions. Cooley: the <i>Politics</i> was “composed in the 330s/320s by when Sparta was a second-rate power” — after Leuctra (371 BC).</p></div>
+    <div class="note reveal" data-code="counter"><div class="k">Praise, then criticism</div><p class="body">Earlier in Book 2 he reports that “some” praise Sparta as a mix of monarchy, oligarchy and democracy (<i>Politics</i> 2.6). Here he gives his own, much harsher, view.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Aristotle’s verdict" data-title="Report or judgement? (click to sort)" data-kind="notes">
+<div class="wrap prac">
+  <p class="eyebrow">4 · Aristotle’s verdict · I do, then you sort — click Report or Judgement for each phrase</p>
+  <h2>Report or judgement?</h2>
+  <p class="task">A <b>report</b> states what the office was or did. A <b>judgement</b> is Aristotle’s opinion or explanation. Click to sort; the colour tells you if you are right.</p>
+  <ol class="l06-rj" data-answers>
+    <li><span class="l06-ph">“Absolute power over the most important matters is theirs”</span>
+      <label class="l06-pick l06-ok"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-no"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Report: their power — though “Absolute” is his strong word</span></li>
+    <li><span class="l06-ph">“the ephors come from the whole population”</span>
+      <label class="l06-pick l06-ok"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-no"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Report: how chosen</span></li>
+    <li><span class="l06-ph">“very frequently extremely poor men stumble into office”</span>
+      <label class="l06-pick l06-no"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-ok"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Judgement built on a report: poor men did serve (Cooley), but “stumble” and “very frequently” are his opinion</span></li>
+    <li><span class="l06-ph">“their power was too great and like a tyrant’s”</span>
+      <label class="l06-pick l06-no"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-ok"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Judgement: “too great”</span></li>
+    <li><span class="l06-ph">“the ephors have authority in important legal cases”</span>
+      <label class="l06-pick l06-ok"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-no"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Report: a power</span></li>
+    <li><span class="l06-ph">“So this office holds the constitution together”</span>
+      <label class="l06-pick l06-no"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-ok"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Judgement: his explanation</span></li>
+    <li><span class="l06-ph">“the method is too childish”</span>
+      <label class="l06-pick l06-no"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-ok"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Judgement: “childish”</span></li>
+    <li><span class="l06-ph">“the lifestyle of the ephors is not in keeping with the policy of the state”</span>
+      <label class="l06-pick l06-no"><input type="checkbox"><span>Report</span></label><label class="l06-pick l06-ok"><input type="checkbox"><span>Judgement</span></label>
+      <span class="sol reveal">Judgement: his verdict</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Aristotle’s verdict" data-title="A mixed constitution? (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · Aristotle’s verdict · I do — the mixed constitution, and a question</p>
+  <h2>A mixed constitution — but where does the ephorate belong?</h2>
+  <p class="small">Aristotle reports that “some” praised Sparta as a mix of “oligarchy, monarchy, and democracy” (<i>Politics</i> 2.6). How does each part fit?</p>
+  <div class="l06-mix">
+    <div class="l06-hd l06-c1 l06-o1"><b>Monarchy</b><span>rule by one</span></div>
+    <div class="l06-hd l06-c2 l06-o3"><b>Aristocracy or oligarchy</b><span>rule by the best, or by the few</span></div>
+    <div class="l06-hd l06-c3 l06-o6"><b>Democracy</b><span>rule by the many</span></div>
+    <div class="l06-bx l06-c1 l06-r2 l06-o2 reveal"><b>The two kings</b>Aristotle: they back the constitution “because of the honour given them”.</div>
+    <div class="l06-bx l06-c2 l06-r2 l06-o4 reveal"><b>The gerousia</b>“the great and the good because of the gerousia (this office is a prize for excellence)”</div>
+    <div class="l06-bx l06-c3 l06-r2 l06-o7 reveal"><b>The ekklesia</b>The citizens’ assembly. Cooley: it “added a democratic element to the constitution”.</div>
+    <div class="l06-bx l06-q l06-c2 l06-r3 l06-o5 reveal"><b>The ephorate?</b>Hurley’s textbook diagram puts it here: a small board of five, holding power Aristotle calls “too great and like a tyrant’s”.</div>
+    <div class="l06-bx l06-q l06-c3 l06-r3 l06-o8 reveal"><b>The ephorate?</b>Aristotle puts it here: the people back the constitution “because of the ephorate (for appointments are made from the whole citizenry)”.</div>
+    <div class="note l06-c1 l06-r3 l06-o9 reveal" data-code="judgement"><div class="k">Who is right?</div><p class="body">Both have a point. Open election from all citizens looks democratic; five men with vast power for a year looks oligarchic — even tyrannical.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Aristotle’s verdict" data-title="Aristotle’s criticisms" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">4 · Aristotle’s verdict · I do — the flaws he finds</p>
+  <h2>Aristotle’s criticisms — fair or extreme?</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">The ephors</div>
+      <ul class="body">
+        <li>poor men “who can be bought”</li>
+        <li>power “too great and like a tyrant’s”</li>
+        <li>judge without written laws</li>
+        <li>a lifestyle “too relaxed”</li>
+      </ul></div>
+    <div class="card accent reveal"><div class="k">The gerousia (Lesson 5)</div>
+      <ul class="body">
+        <li>elders took bribes</li>
+        <li>never held to account</li>
+        <li>judge for life, though “old age can affect mind as well as body”</li>
+      </ul></div>
+    <div class="card accent reveal"><div class="k">The kings</div>
+      <ul class="body">
+        <li>chosen by birth, not by their lives</li>
+        <li>set against each other on purpose: safety depended “on the kings being at loggerheads”</li>
+      </ul></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">Cooley’s verdict</div><p class="body">“Though some of Aristotle’s interpretation is extreme”, the lack of written laws, popular courts and any public scrutiny of outgoing officials “did make the ephors hugely powerful.”</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Aristotle’s verdict" data-title="You do — annotate Aristotle">
+<div class="wrap l06-dense">
+  <p class="eyebrow">4 · Aristotle’s verdict · You do · 7 minutes · press K for the timer</p>
+  <h2>Annotate Aristotle: O, V, P, R, L</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Aristotle, on the kings</div>
+        <p class="quote sm">As for the kingship, whether it is better or not better for states, should be a separate discussion; but certainly it would be better that each should be chosen for his own lifestyle rather than as they are chosen now. It is clear that the lawgiver does not himself think that he can make them great and good – at any rate he mistrusts them as not being sufficiently good men, and therefore they used to send enemies together on embassies and thought that the safety of the state was dependent on the kings being at loggerheads.</p>
+        <p class="prov">Aristotle, <i>Politics</i> 2.9, 1271a18–26 · written 330s–320s BC · trans. in Cooley D1</p>
+      </div>
+      <p class="small">Annotate this extract and the extract on the ephorate (two slides back), in your notes, in your own words.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">Prompts</div>
+        <ul class="body">
+          <li><b>O</b> — when did he write, and what had happened to Sparta by then?</li>
+          <li><b>V</b> — which statements are reports, and which judgements?</li>
+          <li><b>P</b> — he compared constitutions to find the best: why look for faults?</li>
+          <li><b>R</b> — one criticism you think fair, one exaggerated</li>
+          <li><b>L</b> — what does he not tell us about how the ekklesia worked?</li>
+        </ul></div>
+      <div class="src reveal" data-veil="Show model notes">
+        <div class="k">Model margin notes (ephorate extract)</div>
+        <p class="quote sm model">O: Ar., Athens, 330s–320s BC, after Leuctra · V: powers + how chosen; why each group backs the system · P: hunting faults · R: powers confirmed by Xen.; some views “extreme” (Cooley) · L: his own day; nothing on assembly procedure</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Aristotle’s verdict" data-title="Notes 4 — Aristotle’s verdict" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Aristotle’s verdict</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L6 · The ephorate and the mixed constitution</b></span><span>4 · Aristotle’s verdict</span></div>
+    <div class="row"><div class="cq">Which three forms were said to be mixed, and which body stood for each?</div>
+      <div class="nts reveal">“Some” praised the mix (<i>Pol.</i> 2.6) <span class="sep">·</span> <b>monarchy</b> = 2 kings (“honour”) <span class="sep">·</span> <b>aristocracy/oligarchy</b> = gerousia (“a prize for excellence”) <span class="sep">·</span> <b>democracy</b> = ephorate (Aristotle, D18) + ekklesia (Cooley) — Hurley: ephorate = oligarchy</div></div>
+    <div class="row"><div class="cq">Two criticisms of the ephors, two of the gerousia</div>
+      <div class="nts reveal">Ephors: poor + bribable; “like a tyrant’s”; no written laws; “too relaxed” <span class="sep">·</span> Gerousia: bribes; not held to account; old age (D13)</div></div>
+    <div class="row"><div class="cq">Why does it matter that he wrote after Leuctra?</div>
+      <div class="nts reveal"><i>Politics</i> 330s–320s BC, when Sparta was “a second-rate power” → hindsight, looks for flaws <span class="sep">·</span> Cooley: some views “extreme”, but ephors really were hugely powerful</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Checks and balances (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · How did it really work? · We do — add the checks to the diagram</p>
+  <h2>Checks and balances: who checks whom?</h2>
+  <figure class="diagram l06-tall"><svg class="gv l06-chk" viewBox="-370 0 1570 706" role="img" aria-label="Diagram of checks and balances in Spartan government. Base: the two kings sat in the gerousia; the ephors supervised the kings and summoned and presided over the ekklesia; the ekklesia elected the elders for life and the ephors each year. Added layers: the kings and ephors exchanged a monthly oath; the gerousia prepared the motions put to the assembly, and the rider let kings and elders dissolve it; a court of the elders and the ephors, with the other king, could try a king; and who checked the ephors? Cooley: probably accountable to the gerousia, but we do not know exact details.">
+<defs><marker id="l06g-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l06c-ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="l06c-hb" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l06c-ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="l06c-hg" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l06c-ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path class="l06c-hc" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="node kings" id="l06g-kings"><rect x="30" y="20" width="400" height="210" rx="22"/><text class="ttl" x="230" y="110">Two kings</text><text class="sub" x="230" y="160">from the Agiad and</text><text class="sub" x="230" y="198">Eurypontid families</text></g>
+<g class="node ger" id="l06g-ger"><rect x="770" y="20" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="84">Gerousia</text><text class="sub" x="970" y="128">a council of 30:</text><text class="sub" x="970" y="165">28 elders (men over 60)</text><text class="sub" x="970" y="202">+ the two kings</text></g>
+<g class="node eph" id="l06g-eph"><rect x="30" y="470" width="400" height="210" rx="22"/><text class="ttl" x="230" y="570">Five <tspan class="it">ephors</tspan></text><text class="sub" x="230" y="616">(officials)</text></g>
+<g class="node ekk" id="l06g-ekk"><rect x="770" y="470" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="542">Ekklesia</text><text class="sub" x="970" y="586">assembly of all citizens</text><text class="sub" x="970" y="623">(probably men over 30)</text></g>
+<line class="ln" x1="440" y1="125" x2="760" y2="125" marker-end="url(#l06g-a)"/><text class="rel" x="600" y="104">Members</text><text class="how" x="600" y="166">the kings sat in it</text>
+<line class="ln" x1="230" y1="464" x2="230" y2="236" marker-end="url(#l06g-a)"/><text class="rel left" x="252" y="330">Supervised</text><text class="how left" x="252" y="366">two ephors went on</text><text class="how left" x="252" y="396">campaign with a king</text>
+<line class="ln" x1="970" y1="464" x2="970" y2="236" marker-end="url(#l06g-a)"/><text class="rel right" x="948" y="330">Elected</text><text class="how right" x="948" y="366">the elders, for life,</text><text class="how right" x="948" y="396">by shouting</text>
+<text class="rel" x="600" y="494">Presided over</text><text class="how" x="600" y="524">and summoned it</text><line class="ln" x1="440" y1="548" x2="760" y2="548" marker-end="url(#l06g-a)"/><line class="ln" x1="760" y1="608" x2="440" y2="608" marker-end="url(#l06g-a)"/><text class="rel" x="600" y="652">Elected annually</text>
+<g class="linked l06c-oath" id="l06c-oath"><line x1="110" y1="240" x2="110" y2="460" marker-start="url(#l06c-ab)" marker-end="url(#l06c-ab)"/><text class="l06c-t right" x="88" y="318">Monthly oath</text><text class="l06c-d right" x="88" y="354">king: rule by the laws;</text><text class="l06c-d right" x="88" y="386">ephors: keep his rights</text><text class="l06c-d right" x="88" y="418">while he does (D9)</text></g>
+<g class="linked l06c-prep" id="l06c-prep"><line x1="1146" y1="240" x2="1146" y2="458" marker-end="url(#l06c-ag)"/><text class="l06c-t left" x="990" y="312">Prepares</text><text class="l06c-d left" x="990" y="346">the motions</text><text class="l06c-d left" x="990" y="378">+ the rider</text><text class="l06c-d left" x="990" y="410">(D48)</text></g>
+<g class="linked l06c-court" id="l06c-court"><rect x="-356" y="22" width="330" height="206" rx="14"/><line class="ca" x1="-24" y1="125" x2="24" y2="125" marker-end="url(#l06c-ac)"/><text class="l06c-t left" x="-334" y="64">Court for kings</text><text class="l06c-d left" x="-334" y="102">the 28 elders</text><text class="l06c-d left" x="-334" y="134">+ the ephors</text><text class="l06c-d left" x="-334" y="166">+ the other king</text><text class="l06c-d left" x="-334" y="204">(Pausanias, E44)</text></g>
+<g class="linked l06c-who" id="l06c-who"><rect x="-356" y="466" width="364" height="230" rx="14"/><text class="l06c-t left" x="-334" y="506">Who checks</text><text class="l06c-t left" x="-334" y="542">the ephors?</text><text class="l06c-d left" x="-334" y="584">Cooley: “probably</text><text class="l06c-d left" x="-334" y="614">accountable to the</text><text class="l06c-d left" x="-334" y="644">gerousia, but we do</text><text class="l06c-d left" x="-334" y="674">not know exact details”</text><circle cx="402" cy="498" r="24"/><text class="l06c-q" x="402" y="510">?</text></g>
+</svg>
+    <figcaption>Built on Lesson 3’s diagram of Spartan government (from Clarke &amp; Garner, Fig 2.4, labels checked against Cooley). Added for this lesson:
+      <span class="l06-key"><span><span class="l06-sw l06-b"></span>the monthly oath</span><span><span class="l06-sw l06-g"></span>the gerousia prepares the motions</span><span><span class="l06-sw l06-p"></span>the court for kings</span><span><span class="l06-sw l06-k"></span>who checks the ephors?</span></span>
+      <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l06c-oath" hidden></i>
+  <i class="reveal" data-also="#l06c-prep" hidden></i>
+  <i class="reveal" data-also="#l06c-court" hidden></i>
+  <i class="reveal" data-also="#l06c-who" data-hl="#l06g-eph" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Case study 1: 432 BC" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">5 · How did it really work? · case study 1 of 3 · 432 BC (Lesson 5)</p>
+  <h2>432 BC: the ephor runs the vote, the king is overruled</h2>
+  <div class="l06-case">
+    <div class="src">
+      <div class="k">Source · Thucydides</div>
+      <p class="quote sm">[1] After this speech, in his capacity as presiding ephor, he put the question to the vote in the assembly of the Lakedaimonians. [2] Lakedaimonians take decisions by acclamation rather than casting votes, and he pretended that he could not tell from their shouts which side of the debate had won. In reality, he wanted them to make their vote clearly and unequivocally, and thus to inspire them to action. … [3] The two sides separated and there was a large majority for those who thought the treaties had been broken.</p>
+      <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 1.87.1–3 · written late 5th century BC · trans. B. Wilson · Cooley E31</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt">What does it show?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">The ephor Sthenelaidas <b>presided</b> and chose how to take the vote.</p></div>
+      <div class="note reveal" data-code="analysis"><p class="body">The assembly decided, and rejected King Archidamus’ caution. Cooley: the king’s speech was “a view, not a command nor state policy – and, of course, it is rejected by popular vote.”</p></div>
+      <div class="note reveal" data-code="counter"><p class="body">Why the division? Thucydides: to “inspire them to action”; Cooley suggests it “may have been intended to bring moral pressure on the undecided”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Case study 2: 418 BC" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">5 · How did it really work? · case study 2 of 3 · 418 BC</p>
+  <h2>418 BC: a king punished — and given advisers</h2>
+  <div class="l06-case">
+    <div class="src">
+      <div class="k">Source · Thucydides</div>
+      <p class="quote sm">[2] … in a frenzy of anger which was unlike their usual behaviour they voted to tear down his house and to fine him 10,000 drachmas. [3] He begged them not to do so, promising to redeem his disgrace by heroic action when he next took the field, and after that they could do whatever they wished. [4] So they suspended the fine and the destruction of his house, but passed a temporary measure, of a kind hitherto unheard of in Sparta, by which ten senior Spartiate officials would be appointed as his advisers, and that he would not be allowed to lead an army out of the city without their official sanction.</p>
+      <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 5.63, on King Agis after his truce with Argos · trans. B. Wilson · Cooley E98</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt">How does it show the limits on royal power?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">King Agis made a truce on his own and led the army home; the Spartans voted a huge fine and the destruction of his house.</p></div>
+      <div class="note reveal" data-code="analysis"><p class="body">Even his command was restricted: no army out of the city without his advisers’ sanction.</p></div>
+      <div class="note reveal" data-code="counter"><p class="body">The advisers were ten Spartiates, <b>not ephors</b> — and the measure was “temporary”, “hitherto unheard of”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Case study 3: 403 BC" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">5 · How did it really work? · case study 3 of 3 · 403 BC</p>
+  <h2>403 BC: a king on trial before elders and ephors</h2>
+  <div class="l06-case">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Pausanias the travel writer</div>
+        <p class="quote sm">When Pausanias returned from Athens after fighting a pointless battle, his enemies put him on trial. In the case of the king of the Lakedaimonians, the court that sat consisted of the twenty-eight so-called elders and the ruling ephors, along with the king of the other house. Fourteen of the elders together with Agis (II), the king of the other house, decided that Pausanias was guilty, but the rest of the court voted for acquittal.</p>
+        <p class="prov">Pausanias, <i>Description of Greece</i> 3.5.2 · 2nd century AD, about King Pausanias in 403 BC · trans. in Cooley E44</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Xenophon, on the campaign</div>
+        <p class="quote sm">For it is customary for two of the ephors to go on campaign with the king …</p>
+        <p class="prov">Xenophon, <i>Hellenika</i> 2.4.36 · trans. in Cooley E43</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt">What does the trial reveal?</p>
+      <div class="note reveal" data-code="evidence"><p class="body">The court for a king: the 28 elders, the ephors and the other king.</p></div>
+      <div class="note reveal" data-code="analysis"><p class="body">The vote was close: 14 elders and King Agis against; the rest of the court, including the ephors, for acquittal.</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body">Rival kings, a divided gerousia, and ephors with a decisive voice: power was shared and contested.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Kings who dominated" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow">5 · How did it really work? · I do — personal power</p>
+  <h2>Yet some kings dominated</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="stack">
+      <div class="card accent reveal"><div class="k">Personal authority</div><p class="body">Cooley: a king’s influence “depended less on actual constitutional power than on an individual’s personal authority”. Cleomenes I (c. 520–c. 490 BC) and Agesilaus II (c. 399–360 BC) each dominated Spartan policy for decades.</p></div>
+      <div class="card accent reveal"><div class="k">Permanent v. annual</div><p class="body">The gerousia sat for life; the ephors for one year; the assembly had the final vote, but only on motions put to it.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, on King Agesilaus</div>
+        <p class="quote sm">The ephors and the elders had the greatest power at that time under the constitution. The former rule for just a one-off year, the elders hold their office for life, both groups being appointed so that the kings should not be absolute rulers … whenever he happened to be seated on the throne, doing official business, he would stand up when the ephors came in …</p>
+        <p class="prov">Plutarch, <i>Life of Agesilaos</i> (part) · written c. AD 100 · trans. in Cooley E47</p>
+      </div>
+      <p class="qprompt reveal">How did Agesilaus gain power?</p>
+      <p class="body reveal">By courting the ephors and elders instead of clashing with them — obedience became his route to influence.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Not a frozen system">
+<div class="wrap">
+  <p class="eyebrow">5 · How did it really work? · weighing the witnesses <span class="optional">If time</span></p>
+  <h2>Admirer, critic — and a system that changed</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Xenophon, admitting change</div>
+      <p class="quote sm">[1] If someone were to ask me whether I think that Lykourgos’ laws remain unchanged to this day, I have to confess in all honesty that I could not say so with any confidence.</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 14.1 · c. 380 BC (Cooley) · trans. B. Wilson · Cooley E70</p>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">Xenophon</div><p class="body">An admirer, writing before Leuctra: praises obedience to the ephors — yet admits he cannot say Lycurgus’ laws remain unchanged.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Aristotle</div><p class="body">A critic with hindsight: praise is “outweighed by his severe criticism of a number of fundamental flaws” (Schütrumpf, as cited by Cooley).</p></div>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>In your writing:</b> name each source, say when it was written, and never describe one frozen system for three centuries.</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · How did it really work?" data-title="Vote: who really ran Sparta?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote</p>
+  <h2 class="nq">“The ephors were the real rulers of Sparta.”</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
+    <div class="card"><div class="k">Sideways</div><p class="lead">Partly</p></div>
+    <div class="card"><div class="k">Thumbs down</div><p class="lead">Disagree</p></div>
+  </div>
+  <p class="cue">Justify your vote with one case study: 432, 418 or 403 BC.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Notes 5 — How did it really work?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>How did the system really work?</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L6 · The ephorate and the mixed constitution</b></span><span>5 · In practice</span></div>
+    <div class="row"><div class="cq">Who checks whom?</div>
+      <div class="nts reveal">Oath (kings ↔ ephors) <span class="sep">·</span> gerousia prepares motions; rider <span class="sep">·</span> court: elders + ephors + other king <span class="sep">·</span> ephors: “probably accountable to the gerousia” (Cooley) — details unknown</div></div>
+    <div class="row"><div class="cq">What do the case studies show?</div>
+      <div class="nts reveal"><b>432</b>: ephor presides, assembly overrules King Archidamus (E31) <span class="sep">·</span> <b>418</b>: King Agis fined (suspended) + 10 Spartiate advisers, not ephors (E98) <span class="sep">·</span> <b>403</b>: King Pausanias acquitted narrowly by elders + ephors (E44)</div></div>
+    <div class="row"><div class="cq">How did kings still dominate?</div>
+      <div class="nts reveal"><b>Personal authority</b> (Cooley): Cleomenes I, Agesilaus II <span class="sep">·</span> Agesilaus courted ephors + elders (E47)</div></div>
+    <div class="row"><div class="cq">A frozen system?</div>
+      <div class="nts reveal">No: Xenophon admits change (14.1, E70) <span class="sep">·</span> admirer (Xen.) v. critic with hindsight (Ar.) → name + date every source</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How did it really work?" data-title="Summary" data-kind="notes">
+<div class="wrap l06-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>Who were the ephors, and what could they do?</li>
+          <li>How did they limit the kings?</li>
+          <li>Was Sparta a balanced mixed constitution?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">The ephors were five officials elected each year from the whole citizen body, who presided over the gerousia and assembly, fined and tried citizens, and controlled embassies, the army call-up and education. They limited the kings through a monthly oath that made the kingship conditional, by watching them on campaign, and by fining and trying them. Sparta was praised as a mixed constitution, but Aristotle criticised the ephors’ tyrant-like power, and the case studies show power shared and contested rather than neatly balanced.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Who the ephors were</label></li>
+        <li><label><input type="checkbox"> 2 · Their powers, with a source for each</label></li>
+        <li><label><input type="checkbox"> 3 · Ephors and kings</label></li>
+        <li><label><input type="checkbox"> 4 · Aristotle: the mix, the criticisms</label></li>
+        <li><label><input type="checkbox"> 5 · In practice: 432, 418, 403 BC</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC questions on government" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>Today’s lesson has been examined twice</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 6 marks ≈ 11 minutes; 12 marks ≈ 22 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">Get the names right</div><p class="body">2022 markers: “using the correct names of the elements of the Spartan political system”.</p></div>
+  </div>
+  <p class="lead">Question 1 (2019, 6 marks): we take NESA’s own sample apart. Question 2 (2022, 12 marks, with a source): we deconstruct and plan it, you plan your own, then compare with a model paragraph.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2019 Q10(b)" data-title="HSC 2019 Q10(b) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2019 · Section II · Question 10 (b) · 6 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">What does</span> <span class="code" data-code="keyterm" data-letter="K">the ephorate</span> <span class="code" data-code="directive" data-letter="D">reveal</span> about <span class="code" data-code="keyterm" data-letter="K">Spartan political organisation</span> <span class="code" data-code="scope" data-letter="S">in this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Question 1 · I do — watch how the question is taken apart, then how NESA’s sample is built.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2019 Q10(b)" data-title="HSC 2019 Q10(b) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2019 Q10(b) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c3">
+    <div class="note reveal" data-code="directive"><div class="k">What does … reveal?</div><p class="body">Not a glossary key word. Use each feature of the ephorate as evidence and say what it shows about the whole system.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The ephorate → political organisation</div><p class="body">From the office (who, how chosen, powers) to the system: kings, gerousia, assembly and the balance between them.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">To 371 BC. Your writers span centuries, so name and date them.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">6 marks</div><p class="body">About 11 minutes · a judgement first · four or five features, each tied to what it reveals · about 130–200 words (NESA’s own sample is shorter: 74 words).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2019 Q10(b)" data-title="HSC 2019 Q10(b) — the marking criteria" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2019 Q10(b) · the marking guidelines</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.5fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact l06-marks">
+      <tr><th>Marks</th><th>Criteria (2019, part (b))</th></tr>
+      <tr><td class="m">6</td><td>Demonstrates thorough knowledge and understanding of historical features relevant to the question · Communicates ideas and information logically using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–5</td><td>Demonstrates sound knowledge and understanding of historical features relevant to the question · Communicates using appropriate terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Provides some knowledge and/or understanding relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">The step up to 6</div><p class="body">“Thorough” knowledge, communicated “logically”: features linked into one argument about the system, not a list.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">No feedback</div><p class="body">NESA published no marking feedback for this question, so the sample answer (next) is our best guide.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2019 HSC Ancient History Marking Guidelines (Section II, part (b)), quoted exactly.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2019 Q10(b)" data-title="HSC 2019 Q10(b) — NESA’s sample, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2019 Q10(b) · I do — NESA’s sample answer, annotated</p>
+  <h2>NESA’s sample answer, in 74 words</h2>
+  <div class="annot">
+    <div class="ans">
+      <span class="code" data-code="judgement" id="s19-1">The ephorate’s structure and role indicate that Spartan political organisation was based on a balance between monarchy, oligarchy and democracy.</span><span class="mk">1</span>
+      <span class="code" data-code="keyterm" id="s19-2">Ephors were the most powerful individuals in Sparta.</span><span class="mk">2</span>
+      <span class="code" data-code="evidence" id="s19-3">They were magistrates elected annually by the people (and could not be re-elected).</span><span class="mk">3</span>
+      <span class="code" data-code="counter" id="s19-4">They swore an oath to protect the constitution.</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="s19-5">They monitored the king’s use of power and could place a king on trial.</span><span class="mk">5</span>
+      <span class="code" data-code="evidence" id="s19-6">They accompanied kings on campaign.</span><span class="mk">6</span>
+      <span class="code" data-code="counter" id="s19-7">They declared war annually on helots.</span><span class="mk">7</span>
+      <p class="meta">Sample answer from the NESA 2019 HSC Ancient History Marking Guidelines · 74 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#s19-1"><span class="mk">1</span><b>Answer first</b><span class="tx">What the ephorate reveals, in the question’s words: a balance of monarchy, oligarchy and democracy.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#s19-2"><span class="mk">2</span><b>A claim to qualify</b><span class="tx">Aristotle gives the board of five “Absolute power over the most important matters”, but as individuals, kings such as Agesilaus could outweigh them (Cooley).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#s19-3"><span class="mk">3</span><b>Structure</b><span class="tx">Annual, open election, once only — the people’s share. Cooley agrees an ephor “could only serve once”.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#s19-4"><span class="mk">4</span><b>Xenophon says …</b><span class="tx">The oath was the monthly exchange with the kings: the ephors kept the king’s privileges “so long as the king keeps his oath” (Xenophon, D9).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#s19-5"><span class="mk">5</span><b>Role: a check on the kings</b><span class="tx">Monitoring and trials: the limit on the monarchical part.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#s19-6"><span class="mk">6</span><b>A specific detail</b><span class="tx">Two ephors went with the king (Xenophon, D7) — to watch, not to command.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#s19-7"><span class="mk">7</span><b>Keep the hedge</b><span class="tx">Our only source is Aristotle, as reported by Plutarch (D44). Name it.</span></div>
+      <div class="verdict reveal"><b>NESA’s sample.</b> Mostly accurate, judgement first — but check the oath (note 4).</div>
+      <p class="sharper reveal"><b>Even sharper:</b> say what each feature reveals (open election → the people’s share; vast power for a year → the few), and name Xenophon and Aristotle.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2019 Q10(b)" data-title="HSC 2019 Q10(b) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2019 Q10(b) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · a list</span>
+      <p class="resp">The ephors were five officials elected every year. They could fine people, went on campaign with the kings and declared war on the helots.</p>
+      <p class="why">Some knowledge, but it never says what the ephorate reveals about how Sparta was governed.</p></div>
+    <div class="rung reveal"><span class="mark">4–5 marks · one side only</span>
+      <p class="resp">The ephorate reveals that the kings’ power was limited: the ephors exchanged oaths with them every month and two went on campaign to watch them …</p>
+      <p class="why">Sound, but only the kings. Nothing on the people’s share (open election) or on the ephors’ own great power.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · the wrong body</span>
+      <p class="resp">The ephorate was the assembly of all Spartan citizens over 30. It elected the elders by shouting and voted on war.</p>
+      <p class="why">That is the ekklesia. The 2025 markers asked for “not confusing the ekklesia with the ephorate, gerousia, krypteia or other Spartan terms”.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 · Section II · Question 11 (d) · 12 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> the <span class="code" data-code="keyterm" data-letter="K">political organisation</span> of <span class="code" data-code="scope" data-letter="S">Sparta in this period</span>. <span class="code" data-code="evidence" data-letter="E">Support your response using evidence from Source M and other relevant sources.</span></p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <p class="lead">Question 2 · We do, then you do — deconstruct and plan it together, plan your own, then compare with a model paragraph.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — Source M" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(d) · We do — read the source on the paper</p>
+  <h2>Source M</h2>
+  <div class="src">
+    <div class="k">Source M, as printed on the 2022 HSC paper</div>
+    <p class="quote sm">Some, indeed, say that the best constitution is a combination of all existing forms, and they praise the Lacedaemonian [Spartan] because it is made up of oligarchy, monarchy, and democracy . . . but the Ephors are chosen from the whole people, and so the office is apt to fall into the hands of very poor men, who, being badly off, are open to bribes.</p>
+    <p class="prov">“Source M: Aristotle, On the Spartan Constitution 2.6–9” (NESA’s label). It is not the title of a work by Aristotle: the text is B. Jowett’s translation of Aristotle, <i>Politics</i> 2.6 and 2.9. The second sentence is the same passage as Cooley D18 in another translation; the first (<i>Politics</i> 2.6) is not in Cooley.</p>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">Whose view is the first sentence?</p>
+      <p class="body reveal">Others’: Aristotle reports what “some” say. It shows how Sparta was praised, not his own verdict.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">What does he criticise?</p>
+      <p class="body reveal">The ephors: open election → very poor men → bribes. Cooley’s translation: “who can be bought as a result of their poverty”.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">How should you use it?</p>
+      <p class="body reveal">Quote a few words, say what they show, then test them against other sources: Xenophon, Thucydides, Pausanias.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(d) · We do — deconstruct together</p>
+  <h2>What does this question want?</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">How the parts worked together and why: cause and effect. A tour of four institutions is a description.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Political organisation</div><p class="body">Kings, gerousia, ekklesia, ephorate — who could take part (citizenship) and how power was balanced.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">Sparta in this period</div><p class="body">Archaic period to 371 BC; show awareness that the system changed.</p></div>
+    <div class="note reveal" data-code="evidence"><div class="k">Source M and other sources</div><p class="body">Use Source M, then corroborate or challenge it: Xenophon, Thucydides, Plutarch, Pausanias.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">12 marks</div><p class="body">About 22 minutes · a thesis that answers “explain” · three paragraphs · about 450–600 words.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — the criteria and the feedback" data-kind="hsc">
+<div class="wrap l06-dense">
+  <p class="eyebrow">HSC 2022 Q11(d) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact l06-marks">
+      <tr><th>Marks</th><th>Criteria (2022, part (d))</th></tr>
+      <tr><td class="m">10–12</td><td>Provides a well-developed explanation, demonstrating detailed knowledge and understanding relevant to the question · Integrates evidence from the source provided and other relevant sources to support the response · Communicates ideas and information logically and coherently using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">7–9</td><td>Provides an explanation, demonstrating knowledge and understanding relevant to the question · Uses evidence from the source provided to support the response and refers to other relevant source(s) · Communicates ideas and information logically using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–6</td><td>Provides a description demonstrating some knowledge relevant to the question · May refer to the source provided and/or to other source(s) · Communicates ideas using some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1–3</td><td>Makes general statement(s) in relation to the question · May refer to source(s) · May use historical terms and/or concepts</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">use the source provided and multiple other sources to support their explanation (d)</span><span class="q">clearly explain rather than describe the Spartan political organisation (d)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">using the correct names of the elements of the Spartan political system (d)</span><span class="q">providing a coherent explanation (d)</span><span class="q">referring to multiple sources and using the supplied source to support their explanation (d)</span></p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2022 HSC Ancient History Marking Guidelines (Section II, part (d)) and the 2022 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — what the markers listed" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(d) · NESA’s “answers could include”</p>
+  <h2>What the marking guidelines listed</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="note" data-code="evidence"><div class="k">Answers could include (NESA 2022, Option G)</div>
+      <p class="fb"><span class="q">Ephors</span><span class="q">Gerousia</span><span class="q">Dual kingship</span><span class="q">Ekklesia</span><span class="q">Mixed constitution – eg Source M reveals the perceived strength of Sparta’s mixed constitution, made up of oligarchic, monarchical and democratic elements</span><span class="q">Lycurgan reform</span><span class="q">Strict citizenship of the city state</span><span class="q">Women participated in the assembly and could participate in acclamation but were excluded from other formal structures within Spartan society.</span></p></div>
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">Cooley says …</div><p class="body">Cooley’s account has no place for women in the assembly: it was “probably all men over 30 years of age”, and in Greek constitutions “women were also universally excluded”. He gives no evidence that Spartan women joined its acclamation.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Use the rest</div><p class="body">“Lycurgan reform”: Plutarch dates the ephorate about 130 years after Lycurgus (D17). “Citizenship”: only full Spartiates had a political voice.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2022 HSC Ancient History Marking Guidelines, Section II part (d), Option G (quoted exactly).</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — a plan" data-kind="hsc">
+<div class="wrap l06-dense">
+  <p class="eyebrow">HSC 2022 Q11(d) · We do — a model plan, written for this lesson</p>
+  <h2>Thesis, three paragraphs, evidence under each</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Move</th><th>Topic sentence</th><th>Evidence</th><th>→ Explain</th></tr>
+    <tr class="reveal"><td><b>Thesis</b></td><td colspan="3">Sparta’s political organisation combined monarchy, oligarchy and democracy in the ‘mixed’ constitution that, Source M says, ‘some’ praised — but in practice the balance favoured the few: the gerousia and, above all, the ephors.</td></tr>
+    <tr class="reveal"><td><b>1 · The dual kingship</b></td><td>Two hereditary kings held great military and religious power, but limited political power.</td><td>Herodotus 6.56–57 (D5, D8) · 5.75 (D6) · Xenophon 15 (D9: the oath)</td><td>honour and command, but two votes in thirty and a monthly oath</td></tr>
+    <tr class="reveal"><td><b>2 · Gerousia and ekklesia</b></td><td>The people had ‘decision and power’, but only on motions the gerousia prepared.</td><td>Plutarch, <i>Lyc.</i> 6, 26 (D48, D15) · Thucydides 1.87 (E31) · Aristotle (D13) · only full Spartiates voted</td><td>accept or reject, never propose: the few outweighed the many</td></tr>
+    <tr class="reveal"><td><b>3 · The ephorate (Source M)</b></td><td>Meant to give the people a share, it became the strongest office.</td><td>Source M · Aristotle (D18) · Xenophon 8.4, 15.7 (D19, D9) · Plutarch, <i>Lyc.</i> 28.4 (D44, reporting Aristotle) · <i>Lyc.</i> 7 (D17)</td><td>Source M shows the design; the powers show where control lay</td></tr>
+    <tr class="reveal"><td><b>Conclusion</b></td><td colspan="3">The ‘mixed’ ideal describes how the system was meant to work; the ephors and the gerousia show that it worked mainly for the few.</td></tr>
+  </table></div>
+  <p class="small reveal">This plan covers every point NESA listed except women in the assembly, which Cooley does not support.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — you plan" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(d) · You do · 23 minutes · press K for the timer</p>
+  <h2>Explain the political organisation of Sparta in this period. Support your response using evidence from Source M and other relevant sources. <span class="small">(12 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Write</div>
+      <ul class="body">
+        <li>a thesis that explains — a position, not a list</li>
+        <li>three topic sentences: kings · gerousia and ekklesia · ephorate and the balance</li>
+        <li>the evidence under each, with Source M quoted and tested</li>
+        <li>the correct names: ekklesia, gerousia, ephors</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Sparta’s political organisation combined three forms of rule, but in practice …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — a model paragraph" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(d) · annotated model · paragraph 3 of the plan</p>
+  <h2>Using Source M — then testing it</h2>
+  <div class="annot wide" data-veil="Plan your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m22-1">The ephorate, the office Source M singles out, was meant to give ordinary citizens a share in government, yet in practice it became the strongest check in the whole system.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m22-2">Aristotle reports that ‘some’ praised Sparta for combining ‘oligarchy, monarchy, and democracy’, but objects that because ‘the Ephors are chosen from the whole people’, the office can fall to ‘very poor men, who, being badly off, are open to bribes’.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m22-3">Election from the whole citizen body was the democratic element: elsewhere he explains that the people accept the constitution ‘because of the ephorate (for appointments are made from the whole citizenry)’.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m22-4">Yet once elected, five men held great power for a year. Xenophon, an admirer, says they could ‘impose fines on anyone they choose’ and depose, imprison and try any magistrate; every month the kings swore to reign by the laws; and in 403 BC the ephors sat with the elders in the court that narrowly acquitted King Pausanias.</span><span class="mk">4</span>
+      <span class="code" data-code="counter" id="m22-5">Aristotle wrote in the 330s–320s BC, after Leuctra, and Cooley judges some of his interpretation ‘extreme’, but Xenophon, writing before Leuctra, describes the same powers, so Aristotle’s picture of a hugely powerful office is corroborated, even if his charge that poor ephors could be bought is harder to test.</span><span class="mk">5</span>
+      <span class="code" data-code="judgement" id="m22-6">The ephorate therefore shows that Sparta’s mixed constitution was balanced in design but tilted in practice towards a few powerful officials.</span><span class="mk">6</span>
+      <p class="meta">Model written for this lesson · one body paragraph ≈ 200 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-1"><span class="mk">1</span><b>A claim, not a heading</b><span class="tx">It names Source M’s office and says what it did, not just what it was.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-2"><span class="mk">2</span><b>Use the source — briefly</b><span class="tx">Short quotations from Source M built into the sentence; “some” shows Aristotle is reporting others’ praise.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m22-3"><span class="mk">3</span><b>Explain</b><span class="tx">Why the office counted as democratic: cause and effect, in Aristotle’s own words.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-4"><span class="mk">4</span><b>Other relevant sources</b><span class="tx">Xenophon, the monthly oath and the trial of 403 BC: the source provided plus others, as the markers asked.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m22-5"><span class="mk">5</span><b>Evaluate</b><span class="tx">Date, purpose and corroboration: the critic and the admirer agree on the powers; the bribery charge rests on Aristotle alone.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-6"><span class="mk">6</span><b>Back to the thesis</b><span class="tx">Balanced in design, tilted in practice — the line of explanation the plan set up.</span></div>
+      <div class="verdict reveal"><b>Written to the 10–12 criteria:</b> it explains rather than describes, integrates Source M with other sources, and uses the correct names.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2022 Q11(d)" data-title="HSC 2022 Q11(d) — check your plan" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(d) · Self-mark and peer check</p>
+  <h2>Check your plan</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> a thesis that takes a position on how the system worked</label></li>
+        <li><label><input type="checkbox"> topic sentences that are claims, not headings</label></li>
+        <li><label><input type="checkbox"> Source M quoted — and tested against another source</label></li>
+        <li><label><input type="checkbox"> at least three other named sources, with dates</label></li>
+        <li><label><input type="checkbox"> kings, gerousia, ekklesia and ephors, correctly named</label></li>
+        <li><label><input type="checkbox"> the war on the helots as Aristotle, reported by Plutarch</label></li>
+      </ul>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">Peer check (2 minutes)</div>
+        <p class="body">Swap theses with a partner. Does it <b>explain</b>, or only <b>describe</b>? The markers wanted students to “clearly explain rather than describe the Spartan political organisation”.</p></div>
+      <div class="card accent"><div class="k">More practice · written for this lesson</div>
+        <p class="body"><b>Outline the powers of the ephors.</b> (4 marks)</p>
+        <p class="body"><b>Assess the role of the ephorate in limiting the power of the Spartan kings.</b> (10 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l06-dense">
+  <p class="eyebrow">Practice and review · 1 of 7 · sequencing</p>
+  <h2>Put these in order, earliest first — and say what each shows</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>A peace treaty is dated “when Pleistolas is ephor”</span></li>
+    <li><span class="k">B</span><span>The presiding ephor Sthenelaidas puts the war vote to the assembly</span></li>
+    <li><span class="k">C</span><span>The Spartans give King Agis ten advisers</span></li>
+    <li><span class="k">D</span><span>King Pausanias is narrowly acquitted by elders and ephors</span></li>
+    <li><span class="k">E</span><span>An inscription at Delos names two kings and five ephors</span></li>
+    <li><span class="k">F</span><span>The first ephors, in the reign of King Theopompus (Plutarch)</span></li>
+    <li><span class="k">G</span><span>Aristotle criticises the ephors in his <i>Politics</i></span></li>
+    <li><span class="k">H</span><span>Xenophon praises Spartan obedience to the ephors</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq l06-two">
+      <li class="sol reveal"><b>F</b> (reign of Theopompus, c. 720–675 BC; Plutarch: about 130 years after Lycurgus) — the ephorate came after the Great Rhetra.</li>
+      <li class="sol reveal"><b>B</b> (432 BC) — an ephor presided; the assembly decided and overruled King Archidamus.</li>
+      <li class="sol reveal"><b>A</b> (421 BC) — one ephor named the year.</li>
+      <li class="sol reveal"><b>C</b> (418 BC) — a king could be punished; the advisers were Spartiates, not ephors.</li>
+      <li class="sol reveal"><b>D</b> (403 BC) — the court for kings: elders, ephors and the other king.</li>
+      <li class="sol reveal"><b>E</b> (c. 403–400 BC) — the ephors’ official standing beside the kings (could be as early as 403: accept D and E either way).</li>
+      <li class="sol reveal"><b>H</b> (probably late 390s or 380s BC) — an admirer, before Leuctra.</li>
+      <li class="sol reveal"><b>G</b> (330s–320s BC) — a critic, after Leuctra.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l06-dense">
+  <p class="eyebrow">Practice and review · 2 of 7 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l06-two" data-answers>
+    <li><span class="n">1</span><span>Five new ephors were elected every year.</span>
+      <span class="sol reveal">True <span class="why">— “The ephors were the five leading magistrates of Sparta, elected annually by the assembly” (Cooley).</span></span></li>
+    <li><span class="n">2</span><span>The kings and ephors exchanged oaths once a month.</span>
+      <span class="sol reveal">True <span class="why">— “Kings and ephors exchange oaths with one another once a month” (Xenophon, D9).</span></span></li>
+    <li><span class="n">3</span><span>The ephorate is listed in the Great Rhetra.</span>
+      <span class="sol no reveal">False <span class="why">— the Rhetra names kings, elders and assembly; Plutarch dates the first ephors “Roughly some 130 years after Lykourgos” (D17).</span></span></li>
+    <li><span class="n">4</span><span>A Spartan could serve as ephor many times.</span>
+      <span class="sol no reveal">False <span class="why">— Cooley: “an ephor could only serve once”.</span></span></li>
+    <li><span class="n">5</span><span>The two ephors on campaign advised the king on every decision.</span>
+      <span class="sol no reveal">False <span class="why">— they “take no part in the proceedings unless requested to do so by the king” (Xenophon, D7); they watched.</span></span></li>
+    <li><span class="n">6</span><span>The ten advisers given to King Agis in 418 BC were ephors.</span>
+      <span class="sol no reveal">False <span class="why">— “ten senior Spartiate officials would be appointed as his advisers” (Thucydides 5.63, E98).</span></span></li>
+    <li><span class="n">7</span><span>Xenophon, an admirer of Sparta, compares the ephors to tyrants.</span>
+      <span class="sol reveal">True <span class="why">— “rather like tyrants and the presidents of the games” (D19).</span></span></li>
+    <li><span class="n">8</span><span>Aristotle wrote his criticisms before Sparta’s defeat at Leuctra.</span>
+      <span class="sol no reveal">False <span class="why">— the <i>Politics</i> was “composed in the 330s/320s by when Sparta was a second-rate power” (Cooley).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 7 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>advisers</span><span>bought</span><span>depose</span><span>ephorate</span><span>eponymous</span><span>five</span><span>month</span><span>Theopompus</span></div>
+  <ol class="cloze" data-answers>
+    <li>Every year the assembly elected <span class="gap"><span class="sol reveal">five</span></span> ephors.</li>
+    <li>Kings and ephors exchanged oaths once a <span class="gap"><span class="sol reveal">month</span></span>.</li>
+    <li>Aristotle said very poor ephors could be <span class="gap"><span class="sol reveal">bought</span></span>.</li>
+    <li>The ephor who gave his name to the year was called the <span class="gap"><span class="sol reveal">eponymous</span></span> ephor.</li>
+    <li>Plutarch dates the first ephors to the reign of King <span class="gap"><span class="sol reveal">Theopompus</span></span>.</li>
+    <li>Xenophon says the ephors could <span class="gap"><span class="sol reveal">depose</span></span> a magistrate even in mid-term.</li>
+    <li>In 418 BC the Spartans appointed ten <span class="gap"><span class="sol reveal">advisers</span></span> to King Agis.</li>
+    <li>Aristotle says the people support the constitution because of the <span class="gap"><span class="sol reveal">ephorate</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l06-dense">
+  <p class="eyebrow">Practice and review · 4 of 7 · write an analytical paragraph</p>
+  <h2>How did the ephorate limit the power of the Spartan kings?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: how far did the ephors control the kings?</span>
+    <span class="l">Evidence</span><span>Use Xenophon (the monthly oath; the ephors on campaign) and one case: King Pausanias in 403 BC or King Agis in 418 BC.</span>
+    <span class="l">Analyse</span><span>Explain what a king could no longer do on his own.</span>
+    <span class="l">Evaluate</span><span>Weigh Xenophon’s purpose and date — and the kings who still dominated.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement, not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">The ephorate limited the kings mainly by making their position conditional and their conduct answerable, though a forceful king could still dominate. Each month, Xenophon reports, the king swore to reign ‘in accordance with the established laws of the state’, while the ephors promised to keep his prerogatives ‘so long as the king keeps his oath’; on campaign, two ephors attended his sacrifices and watched what everyone did. Kings could also be tried: in 403 BC King Pausanias faced a court of the elders and the ruling ephors and was acquitted only narrowly. A king could not simply act as he pleased, because his privileges, his conduct in the field and even his throne depended in part on officials elected each year. Xenophon admired Sparta and may describe the system as it was meant to work, yet the trials support him; on the other hand, Cooley notes that kings such as Cleomenes I and Agesilaus II still dominated through personal authority. The ephors set firm limits on the office of king, but how far they restrained a particular king depended on that king’s standing.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 7 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent was the government of Sparta a balanced mixed constitution? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence: was Sparta truly balanced, or did one part — the ephorate, or the elite gerousia — hold the real power?</li>
+    <li><b>How each part was meant to balance the others:</b> Aristotle on why kings, the “great and the good” and the people each backed the system (D18); the monthly oath (D9).</li>
+    <li><b>The system in action:</b> 432 BC (Thucydides, E31), 418 BC (Thucydides, E98), 403 BC (Pausanias, E44).</li>
+    <li><b>Weigh the witnesses:</b> Aristotle (a critic, 330s–320s BC) against Xenophon (an admirer, probably writing in the late 390s or 380s BC) — and Cooley’s view that Sparta fits a narrow oligarchy “reasonably well”.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (1)" data-kind="practice notes">
+<div class="wrap prac l06-dense">
+  <p class="eyebrow">Practice and review · 6 of 7 · Chapter 5 review, questions 1–4</p>
+  <h2>Chapter review: government (1)</h2>
+  <ol class="rq" data-answers>
+    <li>What were the four parts of the Spartan constitution?
+      <span class="sol reveal">The two kings, the gerousia (council of elders), the ekklesia (assembly of citizens) and the ephorate (five annual officials).</span></li>
+    <li>What were the two main functions of the gerousia?
+      <span class="sol reveal">Preparing business for the assembly (probouleusis), and judging the most serious cases — with the ephors it formed the highest court, which could even try a king.</span></li>
+    <li>How did the ekklesia make decisions, and what could ordinary citizens not do there?
+      <span class="sol reveal">By shouting: “Lakedaimonians take decisions by acclamation rather than casting votes” (Thucydides 1.87). Citizens could not table motions, and the rider let elders and kings dissolve an assembly that altered them; Cooley finds no evidence they could speak.</span></li>
+    <li>Explain how and why Sthenelaidas changed the usual voting procedure in 432 BC.
+      <span class="sol reveal">He claimed he could not judge the shout and had citizens stand on two sides. Thucydides says he wanted a clear vote to inspire them; Cooley suggests it “may have been intended to bring moral pressure on the undecided”.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (2)" data-kind="practice notes">
+<div class="wrap prac l06-dense">
+  <p class="eyebrow">Practice and review · 7 of 7 · Chapter 5 review, questions 5–8</p>
+  <h2>Chapter review: government (2)</h2>
+  <ol class="rq" data-answers start="5">
+    <li>Why did Aristotle think the election of the elders was childish, and what does this reveal about his own values?
+      <span class="sol reveal">Judging candidates by the loudness of a shout seemed crude to him, and candidates had to campaign: “a man should hold office whether he wants it or not, if he is worthy of it” (D13). He valued merit and reasoned judgement over popular display and ambition.</span></li>
+    <li>Compare Xenophon’s and Aristotle’s views of the ephors. Why might they differ?
+      <span class="sol reveal">Xenophon, an admirer writing before Leuctra, presents the ephors’ tyrant-like power as a sign of Spartan obedience; Aristotle, a philosopher writing after Leuctra, sees the same power as dangerous in poor, bribable men. Purpose, date and perspective explain the difference.</span></li>
+    <li>Evaluate the claim that the ekklesia had little real power. Use at least two sources.
+      <span class="sol reveal">Partly true: it could not propose, ephors managed its votes (Thucydides 1.87), and Cooley calls the system strongly oligarchic. But it elected officials and decided war and peace: in 432 BC it overruled a king, and a treaty of 418 BC begins “The Assembly of the Lakedaimonians has decided” (B19).</span></li>
+    <li>To what extent did the ephorate balance the power of the kings and the people?
+      <span class="sol reveal">It checked the kings (oath, campaign, fines, trials) and gave the people a share through open annual election. But five men held power “too great and like a tyrant’s” with little scrutiny, and strong kings like Agesilaus still dominated: it limited the kings more than it empowered the people.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One check on the kings’ power was … because …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">Democratic or oligarchic? Where would you put the ephorate — and why?</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Spartiates, ‘inferiors’ and perioikoi. Only full citizens could shout in the assembly or serve as ephor — and in about 399 BC the ephors faced a conspiracy led by Cinadon, a man who was not one of the equals.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Herodotus 1.65.5, 5.75, 6.56–57 and 6.82.1 (F3, D6, D5, D8, E19, trans. B. Wilson); Thucydides 1.87, 5.19.1, 5.59–60 and 5.63 (E31, B17, E97, E98, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 4.6, 8.2–4, 11.2, 13.5, 14.1 and 15.2–9 (D79, D19, D88, D7, E70, D9, trans. B. Wilson) and <i>Hellenika</i> 2.3.9–10 and 2.4.36 (E32, E43); Plutarch, <i>Life of Lykourgos</i> 6, 7.1, 26 and 28.4 (D48, D17, D15, D44, trans. B. Wilson) and <i>Life of Agesilaos</i> (E47); Aristotle, <i>Politics</i> 1270b6–35, 1270b35–1271a18 and 1271a18–26 (D18, D13, D1); Pausanias 3.5.2 and 3.11.2 (E44, D16); inscription from Delos, IG V 1, 1564 (B27); a treaty of 418 BC (B19). Cooley’s introductions to the political structure, the kings, the gerousia, the ephorate and the assembly, including E. Schütrumpf, ‘Aristotle on Sparta’ (1994), and G. E. M. de Ste Croix, ‘Trials at Sparta’ (2002), as cited there.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC questions, Source M, marking criteria, sample answer, “answers could include” and marking feedback: NSW Education Standards Authority, 2019 and 2022 HSC Ancient History examinations and marking guidelines, and the 2022 and 2025 marking feedback. © NESA. Source M is Aristotle, <i>Politics</i> 2.6 and 2.9, in B. Jowett’s translation, as printed on the 2022 paper. NESA glossary of key words for “explain”.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images and diagrams</div>
+      <ul class="small"><li>Footings and walls identified as part of Sparta’s agora, the centre of public life — Clarke & Garner, Fig 1.6</li><li>A later engraving imagining the five ephors — a modern illustration, not ancient evidence — Clarke & Garner, Fig 2.7</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Diagrams drawn for this lesson: the responsibilities of the ephorate (rebuilt from Clarke &amp; Garner, Fig 2.6); the mixed constitution (merging Hurley et al., <i>Antiquity 2</i>, Source 13, with Aristotle); checks and balances (built on Lesson 3’s redraw of Clarke &amp; Garner, Fig 2.4).</p></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
