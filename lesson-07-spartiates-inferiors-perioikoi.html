@@ -1,0 +1,2390 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L7 · Spartiates, Inferiors and Perioikoi</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the Spartiates, the inferiors, the perioikoi and the conspiracy of Cinadon, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+
+/* ---- Lesson 7 (Spartiates, inferiors and perioikoi). Every class starts l07-. */
+/* the social structure (svg_l07social.svg) */
+.l07-soc text{font-family:var(--ui); fill:var(--ink);}
+.l07-soc .l07-state{fill:none; stroke:var(--slate); stroke-width:3; stroke-dasharray:14 10;}
+.l07-soc .l07-stl{font-size:27px; font-weight:700; fill:var(--slate); letter-spacing:.02em;}
+.l07-soc .l07-step0{fill:none; stroke:var(--rule); stroke-width:3; stroke-dasharray:6 8;}
+.l07-soc .l07-spt rect{fill:var(--statement); stroke:var(--statement);}
+.l07-soc .l07-spt text{fill:#FBF4F0;}
+.l07-soc .l07-wom .l07-sep{stroke:#F6D3D6; stroke-width:2; stroke-dasharray:4 6;}
+.l07-soc .l07-wom text{fill:#F6D3D6;}
+.l07-soc .l07-inf > rect{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.l07-soc .l07-mini{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.l07-soc .l07-hel rect{fill:var(--surface-2); stroke:var(--slate); stroke-width:3;}
+.l07-soc .l07-per rect{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:4;}
+.l07-soc .l07-per .l07-h{fill:var(--c-evidence);}
+.l07-soc .l07-gapline{stroke:var(--c-evidence); stroke-width:3; stroke-dasharray:4 9; stroke-linecap:round;}
+.l07-soc .l07-out{font-size:26px; font-weight:700; fill:var(--c-evidence);}
+.l07-soc .l07-h{font-size:38px; font-weight:700;}
+.l07-soc .l07-d{font-size:28px;}
+.l07-soc .l07-dw{font-size:27px; font-style:italic;}
+.l07-soc .l07-di{font-size:27px; font-style:italic; fill:var(--slate);}
+.l07-soc .l07-mt{font-size:30px; font-weight:700; font-style:italic; fill:var(--deep);}
+.l07-soc .l07-md{font-size:26px;}
+.l07-soc .l07-down{fill:none; stroke:var(--c-judgement); stroke-width:5;}
+.l07-soc .l07-up{fill:none; stroke:var(--c-evidence); stroke-width:5;}
+.l07-soc .l07-ahd{fill:var(--c-judgement);} .l07-soc .l07-ahu{fill:var(--c-evidence);}
+.l07-soc .l07-mvd{font-size:25px; font-weight:700; fill:var(--c-judgement);}
+.l07-soc .l07-mvu{font-size:25px; font-weight:700; fill:var(--c-evidence);}
+.l07-soc .l07-nt{font-size:28px; font-weight:700; fill:var(--deep);}
+
+/* Spartiate numbers (svg_l07nums.svg) */
+.l07-nums text{font-family:var(--ui); fill:var(--ink);}
+.l07-nums .l07-grid{stroke:var(--rule); stroke-width:2;}
+.l07-nums .l07-ax{stroke:var(--ink); stroke-width:3;}
+.l07-nums .l07-tk{font-size:24px; fill:var(--slate);}
+.l07-nums .l07-yl{font-size:25px; font-weight:700; fill:var(--slate);}
+.l07-nums .l07-bar rect{fill:var(--deep);}
+.l07-nums .l07-est rect{fill:url(#l07n-hatch); stroke:var(--deep); stroke-width:3; stroke-dasharray:10 6;}
+.l07-nums .l07-hbg{fill:var(--tint);} .l07-nums .l07-hl{stroke:var(--deep); stroke-width:5;}
+.l07-nums .l07-ks{fill:var(--deep);}
+.l07-nums .l07-kt{font-size:26px; fill:var(--ink);}
+.l07-nums .l07-val{font-size:36px; font-weight:700;}
+.l07-nums .l07-yr{font-size:32px; font-weight:700;}
+.l07-nums .l07-src{font-size:24px; fill:var(--slate);}
+.l07-nums .l07-dbl{fill:none; stroke:var(--c-counter); stroke-width:4; stroke-dasharray:12 9;}
+.l07-nums .l07-cvt{font-size:28px; font-weight:700; fill:var(--c-counter);}
+.l07-nums .l07-cvn{font-size:28px; font-style:italic; fill:var(--c-counter);}
+
+/* full-width diagram slides may use a little more of the screen when presenting */
+html:not(.read) .diagram.l07-tall svg{max-height:calc(100vh - 270px);}
+html:not(.read) .diagram.l07-chart svg{max-height:calc(100vh - 330px);}
+
+/* phones: wide diagrams scroll sideways at a readable size */
+@media (max-width:700px){
+  html.read .diagram svg.l07-soc{min-width:900px; max-height:none;}
+  html.read .diagram svg.l07-nums{min-width:640px; max-height:none;}
+}
+
+/* the group table (Xenophon, Hellenika 3.3.6): first column bold, rows reveal */
+.l07-gt td:first-child{font-weight:700; white-space:nowrap;}
+.l07-gt td{vertical-align:top;}
+.l07-gt .l07-ev{font-size:.9em; color:var(--slate);}
+
+/* "whose words are we reading?" chain */
+.l07-chain .p{font-size:calc(var(--fs-body)*.86);}
+.l07-chain .p small{display:block; font-weight:400; color:var(--slate); font-size:.82em;}
+
+/* dense source slides on short projectors */
+@media (max-height:820px){
+  html:not(.read) .l07-dense .src .quote.sm{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+  html:not(.read) .l07-dense .note .body, html:not(.read) .l07-dense .card .body,
+  html:not(.read) .l07-dense .body{font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+  html:not(.read) .l07-dense .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .l07-dense .keylist .d{font-size:calc(var(--fs-body)*.78); line-height:1.3;}
+  html:not(.read) .l07-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l07-dense .rq{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l07-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.32em .7em;}
+  html:not(.read) .l07-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+  html:not(.read) .l07-dense .figure img{max-height:30vh;}
+}
+/* two-column practice lists on wide screens */
+.l07-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l07-two{gap:.4em .7em;}
+@media (max-width:900px){ .l07-two{grid-template-columns:1fr;} }
+/* marks column that never wraps */
+.l07-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+/* a narrow figure beside text */
+.l07-fig .figure img{max-height:44vh;}
+@media (max-height:820px){ html:not(.read) .l07-fig .figure img{max-height:36vh;} }
+
+/* short projectors: checklists and the credits slide */
+@media (max-height:820px){
+  html:not(.read) .l07-dense .checks{gap:.3em;}
+  html:not(.read) .l07-dense .checks label{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+  html:not(.read) .l07-dense .card.quiet .small{font-size:calc(var(--fs-chrome)*.92); line-height:1.32;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 7" data-title="Spartiates, inferiors and perioikoi" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1.25fr .75fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 7</p>
+      <h1>Spartiates, inferiors and perioikoi</h1>
+      <p class="lead">Who counted as a full citizen of Sparta, how could a man stop being one — and what did everyone else think of the citizens?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall contain"><img src="images/bradley-3-9-bronze-spartiate-cloak.jpg" alt="A bronze figure of a Spartiate wrapped in a cloak and wearing a crested helmet — an ancient artefact; the textbook gives no date, find-spot or museum"><figcaption>A bronze figure of a Spartiate wrapped in a cloak and wearing a crested helmet — an ancient artefact; the textbook gives no date, find-spot or museum — <span class="cr">Bradley, Fig 3.9</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 7" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From the people who governed to the people who were governed</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Last lesson</div>
+      <p class="body">Five ephors, elected each year from the whole citizen body, watched the kings; ancient writers praised the result as a ‘mixed constitution’. But only full citizens could shout in the assembly or serve as ephor.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">Who actually counted as a citizen — and how could you stop being one? Who were the free neighbours with no vote? And in about 399 BC, why did a young man named <b>Cinadon</b> plot against the citizens?</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 6, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 7" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse how citizenship was gained and lost at Sparta</li>
+        <li>account for the different perspectives of groups in Spartan society</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>define homoioi, hypomeiones, neodamodeis, mothakes, tresantes and perioikoi accurately</li>
+        <li>explain what Xenophon’s account of Cinadon’s conspiracy reveals about how non-citizens viewed the Spartiates — and why it may exaggerate</li>
+        <li>write a “This Does That” sentence about a group’s perspective</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two pairs of words to get right</div>
+    <p class="body">A <b>Spartiate</b> is a full citizen; <b>Lacedaemonians</b>, the usual Greek word for ‘Spartans’, can include the perioikoi as well. The <b>perioikoi</b> were free men in their own towns; the <b>helots</b> were not free.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 7" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L7 · Spartiates, inferiors and perioikoi</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Sp. = Spartiates, per. = perioikoi)</span></div></div>
+      <div class="row"><div class="cq">Who were the homoioi?</div><div class="nts">full citizens, adult men …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: the social pyramid · the homoioi · the inferiors · the perioikoi · Cinadon’s conspiracy.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 7" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The citizen body</th><th>Meaning</th></tr>
+      <tr><td>Spartiate</td><td>a full citizen of Sparta: an adult man who met all the conditions of citizenship</td></tr>
+      <tr><td>homoioi</td><td>‘equals’, perhaps best translated ‘peers’: the Spartiates’ name for themselves</td></tr>
+      <tr><td>syssitia</td><td>the common messes (one mess: a syssition): groups of citizens who ate regular evening meals together</td></tr>
+      <tr><td>hypomeiones</td><td>‘men of lesser status’: probably Spartiates, or their descendants, who had lost full rights</td></tr>
+      <tr><td>tresantes</td><td>‘tremblers’: men disgraced for cowardice in battle</td></tr>
+      <tr><td>oliganthropia</td><td>the shortage of Spartiate citizen manpower</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Outside it</th><th>Meaning</th></tr>
+      <tr><td>mothakes</td><td>boys raised and educated with Spartiate sons; free or slaves? the sources disagree</td></tr>
+      <tr><td>neodamodeis</td><td>helots set free, probably to serve in the army: free, but not citizens</td></tr>
+      <tr><td>perioikoi</td><td>‘those who live around (us)’: free people of the towns around Sparta, with no political rights there</td></tr>
+      <tr><td>helot</td><td>one of the subject population, tied to the land and worked for Spartiate masters (Lesson 8)</td></tr>
+      <tr><td>Lacedaemonians</td><td>the usual Greek word for ‘Spartans’; it can include the perioikoi</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Kinadon, Lakedaimonians, Lykourgos, Aristodamos). In your own writing use Cinadon, Lacedaemonians, Lycurgus, Aristodemus. The syllabus spells the free neighbours <i>periokoi</i>, as Cooley does in several places; most books use <i>perioikoi</i>. Both are correct.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Reading the social pyramid" data-title="Spartan society in one picture (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Reading the social pyramid · I do — build it, then question it</p>
+  <h2>Spartan society in one picture?</h2>
+  <figure class="diagram l07-tall"><svg class="l07-soc" viewBox="0 0 1720 960" role="img" aria-label="Diagram of Spartan society, drawn for this lesson. A stepped pyramid shows status, not numbers. Top: the Spartiates, or homoioi, the adult male full citizens, a few thousand men; the two kings were Spartiates too. Spartiate women belonged to citizen families but had no political rights. Middle: the so-called inferiors, which were not one class: hypomeiones, men of lesser status, probably Spartiates who had lost full rights; tresantes, disgraced for cowardice; mothakes, raised with Spartiate boys, free or slaves according to different sources; and neodamodeis, helots probably freed to serve in the army, free but not citizens. Bottom: the helots, tied to the land, whose conditions Cooley calls somewhat different from those of slaves in most other parts of Greece. Outside the pyramid: the perioikoi, personally free, in at least 50 towns, with no citizen rights at Sparta, who fought as hoplites. Arrows show movement: men could lose full status through poverty, failed training or mess election, misconduct or cowardice; helots could be freed as neodamodeis; and some mothakes, such as Lysander, became citizens. Cooley: a few thousand Spartiates controlled a subject population of at least a hundred thousand. All these groups together made up the Lacedaemonian state.">
+<defs><marker id="l07s-ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="l07-ahd" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l07s-au" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="l07-ahu" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="l07-state" x="8" y="8" width="1704" height="944" rx="22"/>
+<text class="l07-stl" x="34" y="48">The Lacedaemonian state: all these groups together (Cooley)</text>
+<rect class="l07-step0" x="310" y="66" width="660" height="196" rx="14"/>
+<rect class="l07-step0" x="120" y="300" width="1040" height="350" rx="14"/>
+<rect class="l07-step0" x="20" y="680" width="1240" height="186" rx="14"/>
+<g class="linked l07-spt" id="l07s-1"><rect x="310" y="66" width="660" height="196" rx="14"/><text class="l07-h" x="640" y="116" text-anchor="middle">Spartiates (homoioi)</text><text class="l07-d" x="640" y="158" text-anchor="middle">adult male full citizens — a few thousand</text><text class="l07-d" x="640" y="194" text-anchor="middle">the two kings were Spartiates too</text></g>
+<g class="linked l07-wom" id="l07s-2"><line class="l07-sep" x1="350" y1="216" x2="930" y2="216"/><text class="l07-dw" x="640" y="248" text-anchor="middle">Spartiate women: citizen families, no political rights</text></g>
+<g class="linked l07-hel" id="l07s-3"><rect x="20" y="680" width="1240" height="186" rx="14"/><text class="l07-h" x="640" y="730" text-anchor="middle">Helots</text><text class="l07-d" x="640" y="772" text-anchor="middle">tied to the land; most worked the estates of Spartiates (Lesson 8)</text><text class="l07-d" x="640" y="806" text-anchor="middle">Cooley: “somewhat different from those of slaves</text><text class="l07-d" x="640" y="840" text-anchor="middle">in most other parts of Greece”</text></g>
+<g class="linked l07-inf" id="l07s-4"><rect x="120" y="300" width="1040" height="350" rx="14"/><text class="l07-h" x="640" y="350" text-anchor="middle">‘Inferiors’ — not one class</text><rect class="l07-mini" x="140" y="370" width="492" height="128" rx="10"/><text class="l07-mt" x="158" y="404">hypomeiones</text><text class="l07-md" x="158" y="434">‘men of lesser status’: probably</text><text class="l07-md" x="158" y="462">Spartiates, or their descendants,</text><text class="l07-md" x="158" y="490">who lost full rights</text><rect class="l07-mini" x="648" y="370" width="492" height="128" rx="10"/><text class="l07-mt" x="666" y="404">mothakes</text><text class="l07-md" x="666" y="434">raised with Spartiate boys;</text><text class="l07-md" x="666" y="462">free or slaves? sources disagree</text><rect class="l07-mini" x="140" y="510" width="492" height="128" rx="10"/><text class="l07-mt" x="158" y="544">tresantes</text><text class="l07-md" x="158" y="574">‘tremblers’: Spartiates disgraced</text><text class="l07-md" x="158" y="602">for cowardice</text><rect class="l07-mini" x="648" y="510" width="492" height="128" rx="10"/><text class="l07-mt" x="666" y="544">neodamodeis</text><text class="l07-md" x="666" y="574">helots freed, probably to serve in</text><text class="l07-md" x="666" y="602">the army: free, not citizens</text></g>
+<g class="linked l07-per" id="l07s-5"><line class="l07-gapline" x1="1354" y1="290" x2="1354" y2="720"/><rect x="1374" y="300" width="330" height="410" rx="14"/><text class="l07-h" x="1396" y="350">Perioikoi</text><text class="l07-di" x="1396" y="384">‘those who live</text><text class="l07-di" x="1396" y="414">around (us)’</text><text class="l07-d" x="1396" y="470">personally free</text><text class="l07-d" x="1396" y="504">own towns (at least 50)</text><text class="l07-d" x="1396" y="538">and their own land</text><text class="l07-d" x="1396" y="572">no citizen rights</text><text class="l07-d" x="1396" y="606">at Sparta</text><text class="l07-d" x="1396" y="640">fought as hoplites</text><text class="l07-d" x="1396" y="674">alongside Spartiates</text><text class="l07-out" x="1539" y="278" text-anchor="middle">free, but outside</text><text class="l07-out" x="1539" y="244" text-anchor="middle">beside the pyramid:</text></g>
+<g class="linked l07-mov" id="l07s-6"><path class="l07-down" d="M 306 236 C 250 252, 270 266, 260 294" marker-end="url(#l07s-ah)"/><text class="l07-mvd" x="28" y="100">lost full status:</text><text class="l07-mvd" x="28" y="129">poverty, failed</text><text class="l07-mvd" x="28" y="158">training or mess</text><text class="l07-mvd" x="28" y="187">election,</text><text class="l07-mvd" x="28" y="216">misconduct,</text><text class="l07-mvd" x="28" y="245">cowardice</text><path class="l07-up" d="M 1210 676 C 1220 620, 1210 562, 1168 552" marker-end="url(#l07s-au)"/><text class="l07-mvu" x="1176" y="470">helots</text><text class="l07-mvu" x="1176" y="499">freed as</text><text class="l07-mvu" x="1176" y="528">neodamodeis</text><path class="l07-up" d="M 1100 368 C 1120 250, 1060 170, 980 162" marker-end="url(#l07s-au)"/><text class="l07-mvu" x="1010" y="100">some mothakes became</text><text class="l07-mvu" x="1010" y="130">citizens: Lysander,</text><text class="l07-mvu" x="1010" y="160">they say (Phylarchus)</text></g>
+<g class="linked l07-num" id="l07s-7"><text class="l07-nt" x="860" y="920" text-anchor="middle">Cooley: “a few thousand Spartiates” controlled “a subject population of at least a hundred thousand”</text></g>
+</svg>
+    <figcaption>Drawn for this lesson to replace two textbook diagrams (Hurley et al., Source 9; Clarke &amp; Garner, Fig 3.2), with every label checked against Cooley. The steps show status, not numbers. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l07s-1" hidden></i>
+  <i class="reveal" data-also="#l07s-2" hidden></i>
+  <i class="reveal" data-also="#l07s-3" hidden></i>
+  <i class="reveal" data-also="#l07s-4" hidden></i>
+  <i class="reveal" data-also="#l07s-5" hidden></i>
+  <i class="reveal" data-also="#l07s-6" hidden></i>
+  <i class="reveal" data-also="#l07s-7" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Reading the social pyramid" data-title="What a neat pyramid leaves out" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">1 · Reading the social pyramid · I do — what the picture hides</p>
+  <h2>What a neat pyramid leaves out</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">Movement</div><p class="body">Down: men who lost full rights. Up: helots freed as neodamodeis; Lysander, said by Phylarchus to have been a mothax, “became a citizen through his courage” (Cooley D30).</p></div>
+    <div class="card accent reveal"><div class="k">Wealth</div><p class="body">The ‘equals’ were not equal in wealth. Cooley: “Equality among Spartiates was, however, never more than an ideal.”</p></div>
+    <div class="card accent reveal"><div class="k">Numbers and change</div><p class="body">“a few thousand Spartiates” controlled “a subject population of at least a hundred thousand” (Cooley) — and the citizen body kept shrinking (section 2).</p></div>
+    <div class="card accent reveal"><div class="k">Where does it put women?</div><p class="body">Spartiate women belonged to citizen families but had no political rights (Lessons 13–14).</p></div>
+    <div class="card accent reveal"><div class="k">Free is not the same as citizen</div><p class="body">The perioikoi were free but had no vote at Sparta, yet a single ladder must put them above or below the inferiors — which is why this diagram sets them beside it. No ancient source ranks the two.</p></div>
+    <div class="card accent reveal"><div class="k">Time</div><p class="body">The labels come from sources centuries apart, from Herodotus (c. 450s–420s BC) to Aelian (3rd century AD).</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> A diagram is a starting point, not evidence. Use it to organise your notes, then test every label against a named source.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Reading the social pyramid" data-title="Checking the textbook diagrams">
+<div class="wrap l07-dense">
+  <p class="eyebrow">1 · Reading the social pyramid · We do — test the labels <span class="optional">If time</span></p>
+  <h2>Two textbook diagrams, tested against the sources</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Diagram</th><th>Label</th><th>The problem</th><th>Evidence</th></tr>
+    <tr class="reveal"><td>Hurley, Source 9</td><td>“parthenai”</td><td>The Partheniai, misspelt. Aristotle says they were sent off to found Taras — dated c. 706 BC — so they are not a group in classical Sparta.</td><td>Aristotle, <i>Politics</i> 1306b (D26); Cooley H5–H6</td></tr>
+    <tr class="reveal"><td>Hurley, Source 9</td><td>“mothoces”</td><td>A misspelling of <b>mothakes</b>.</td><td>Phylarchus, Aelian (D30–D31)</td></tr>
+    <tr class="reveal"><td>Hurley, Source 9</td><td>“Spartan citizen women”</td><td>Women had no political rights: say <b>Spartiate women</b>.</td><td>Cooley: “Full citizens of Sparta (adult males)”</td></tr>
+    <tr class="reveal"><td>Hurley, Source 9</td><td>helots labelled as slaves</td><td>Too simple: helot conditions were “somewhat different from those of slaves in most other parts of Greece”.</td><td>Cooley, on the helots</td></tr>
+    <tr class="reveal"><td>Clarke &amp; Garner, Fig 3.2</td><td>perioikoi above the inferiors</td><td>No ancient source ranks them. The perioikoi were a separate, free population, “personally free, but politically their communities were subject to Sparta”.</td><td>Cooley, note on the perioikoi</td></tr>
+    <tr class="reveal"><td>Clarke &amp; Garner, Fig 3.2</td><td class="nq">“Inferiors (Spartiates who lost their citizenship)”</td><td>Leaves out the mothakes and neodamodeis, and drops the hedge: hypomeiones were “presumably descendants of homoioi who had lost their status”.</td><td>Cooley, note on E53b</td></tr>
+  </table></div>
+  <p class="cue reveal">What Hurley gets right: the perioikoi sit <b>outside</b> the pyramid, and the hypomeiones and neodamodeis are named.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Reading the social pyramid" data-title="Notes 1 — Reading the social pyramid" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Reading the social pyramid</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L7 · Spartiates, inferiors and perioikoi</b></span><span>1 · The social pyramid</span></div>
+    <div class="row"><div class="cq">What does the pyramid show?</div>
+      <div class="nts reveal"><b>Spartiates</b> (homoioi) at the top — the kings were Spartiates too <span class="sep">·</span> <b>‘inferiors’</b>: not one class <span class="sep">·</span> <b>helots</b> at the base <span class="sep">·</span> <b>perioikoi</b> beside it: free, not citizens</div></div>
+    <div class="row"><div class="cq">What does it hide?</div>
+      <div class="nts reveal">Movement down (tresantes; prob. hypomeiones) + up (neodamodeis, some mothakes) <span class="sep">·</span> wealth gaps: equality “never more than an ideal” (Cooley) <span class="sep">·</span> numbers: a few thousand v. ≥ 100,000 subjects <span class="sep">·</span> change over time</div></div>
+    <div class="row"><div class="cq">Textbook errors?</div>
+      <div class="nts reveal">Hurley: “parthenai” (Partheniai left for Taras, c. 706 BC) <span class="sep">·</span> “mothoces” → <b>mothakes</b> <span class="sep">·</span> “citizen women” → <b>Spartiate women</b>, no political rights <span class="sep">·</span> Clarke: perioikoi ranked above inferiors — no basis</div></div>
+    <div class="row"><div class="cq">Lacedaemonians or Spartiates?</div>
+      <div class="nts reveal"><b>Lacedaemonians</b> = usual word for ‘Spartans’; can include perioikoi (Hdt 9.28: 10,000 Lacedaemonians, 5,000 of them Spartiates) <span class="sep">·</span> <b>Spartiates</b> = full citizens only</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="How to be — and stay — a Spartiate" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">2 · The homoioi · I do — earning and keeping citizenship</p>
+  <h2>How to be — and stay — a Spartiate</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="stack">
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Be born to a Spartiate family</span><span class="d">The usual starting point — but not enough on its own.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Complete the state education</span><span class="d">Later writers call it the <i>agoge</i> (Lessons 9–10), followed by military training until the age of 30 (Cooley).</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Be elected to a mess (syssition)</span><span class="d">Election needed “a unanimous vote of approval among all members” (Cooley).</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Pay your monthly mess contribution</span><span class="d">Barley, wine, cheese and figs, plus a little money (Plutarch, Cooley D63).</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Own enough land, worked by helots, to pay it</span><span class="d">Spartiates could not trade, so land was the only income.</span></li>
+      <li class="reveal"><span class="num">6</span><span class="t">Obey the laws and show courage</span><span class="d">Cowards were disgraced (section 3).</span></li>
+    </ol>
+    <div class="note reveal" data-code="judgement"><p class="body"><b>Lose any of these — through poverty, failure or cowardice — and a man could lose his full rights.</b> Citizenship was earned and kept, not simply inherited.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, on electing a new member of a mess</div>
+        <p class="quote sm">The procedure for electing a candidate for the mess is traditionally said to have been as follows: each of the members took a piece of soft bread in his hand … If the bread remained exactly as received, it meant “yes”; but a “no” vote was indicated by crushing the bread tightly in one’s fingers. [6] … even if only one such was found in the bowl, the would-be candidate was rejected …</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 12.5–6 (part) · written c. AD 100 · trans. B. Wilson · Cooley D63</p>
+      </div>
+      <div class="note reveal" data-code="keyterm"><div class="k">The name they gave themselves</div><p class="body">Homoioi means ‘Equals’ or ‘Similars’; Cooley says it “is perhaps best translated as ‘Peers’, which reflects a sense of equality within an exclusive élite.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="Source 6.1 — losing one’s place" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">2 · The homoioi · We do — an admirer and a critic agree</p>
+  <h2>Losing one’s place among the homoioi</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source 6.1 A · Xenophon</div>
+      <p class="quote sm">[7] In fact he made it an inescapable obligation to practise every form of political virtue. To all those who carried out those legal obligations to the full he gave full and equal political rights as a personal possession, <span class="code" data-code="counter" data-letter="C">without reference to any deficiencies of health or lack of financial resources</span>. But if anyone failed to carry them out to the full, he made it clear that <span class="code" data-code="evidence" data-letter="E">such a man was no longer to be regarded as one of the homoioi</span> (‘Equals’).</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 10.7 · probably written late 390s or 380s BC · “he” is Lycurgus · trans. B. Wilson · Cooley D51</p>
+    </div>
+    <div class="src">
+      <div class="k">Source 6.1 B · Aristotle, on the common meals</div>
+      <p class="quote sm">For it ought to be the case that funds come from public revenue, just as in Crete: but with the Lakedaimonians everybody has to contribute, even those who are very poor and unable to afford this expense … For it is not easy for the very poor to participate, but the ancient mark of citizenship for them is that <span class="code" data-code="judgement" data-letter="J">anyone who cannot pay this tax cannot belong</span>.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1271a26–37 (part) · written 330s–320s BC · trans. in Cooley D62</p>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">Admirer or critic — and when?</p>
+      <p class="body reveal">Xenophon admired Sparta (probably late 390s or 380s BC); Aristotle criticised it (330s–320s BC).</p></div>
+    <div class="stack tight"><p class="qprompt reveal" data-paint="evidence">What could cost a man his place?</p>
+      <p class="body reveal">Failing his obligations (Xenophon); not paying for the common meals (Aristotle).</p></div>
+    <div class="stack tight"><p class="qprompt reveal" data-paint="counter">How does Aristotle challenge Xenophon?</p>
+      <p class="body reveal" data-paint="judgement">Money did matter: the very poor “cannot belong”.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="Why poor Spartiates fell out" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">2 · The homoioi · I do — the system’s central weakness</p>
+  <h2>Why poor Spartiates fell out</h2>
+  <div class="pattern">
+    <span class="p reveal">No trade allowed</span><span class="arr reveal">→</span>
+    <span class="p reveal">Land the only income</span><span class="arr reveal">→</span>
+    <span class="p e reveal">Land split by inheritance and dowries</span><span class="arr reveal">→</span>
+    <span class="p a reveal">Contribution unpaid</span><span class="arr reveal">→</span>
+    <span class="p c reveal">Full rights lost</span>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="evidence"><div class="k">Cooley explains the chain</div><p class="body">“Spartiates were not allowed to engage in any form of trade, which means that there was no way of supplementing insufficient income from property by other means.” Land “was passed down the generations through inheritance and dowries”, so in the end “some Spartan families failed to produce their contributions for the syssitia, and therefore lost their full citizen rights.”</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">The ideal and the reality</div><p class="body">“Equality among Spartiates was, however, never more than an ideal.” Some families grew rich enough to race chariots at the great games; others slid out of the citizen body.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="Fewer and fewer Spartiates (chart)" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">2 · The homoioi · I do — the result in numbers</p>
+  <h2>Fewer and fewer Spartiates, 480–370 BC</h2>
+  <div class="split" style="--cols:2.2fr 1fr">
+    <figure class="diagram l07-chart"><svg class="l07-nums" viewBox="0 0 1640 760" role="img" aria-label="Bar chart of Spartiate numbers, from Cooley's table D29: 8,000 in 480 BC (Herodotus 7.234, Demaratus to Xerxes); 3,500 in 418 BC (Thucydides 5.68), a figure Cooley thinks Thucydides possibly or even likely halved, so perhaps about 7,000; 2,500 in 394 BC, an estimate in Cooley's note on Xenophon, Hellenika 4.2.16, where Xenophon gives 6,000 Lacedaemonian hoplites, perhaps as low as 2,000; about 1,500 in 371 BC, an estimate (Cooley's table cites Xenophon, Hellenika 6.1.1); and fewer than 1,000 in 370 BC, Aristotle's figure (Politics 1270a). Solid bars are figures given by an ancient writer; hatched bars are modern estimates.">
+<defs><pattern id="l07n-hatch" patternUnits="userSpaceOnUse" width="14" height="14" patternTransform="rotate(45)"><rect class="l07-hbg" width="14" height="14"/><line class="l07-hl" x1="0" y1="0" x2="0" y2="14"/></pattern></defs>
+<line class="l07-ax" x1="140" y1="560" x2="1620" y2="560"/><text class="l07-tk" x="128" y="569" text-anchor="end">0</text>
+<line class="l07-grid" x1="140" y1="444" x2="1620" y2="444"/><text class="l07-tk" x="128" y="453" text-anchor="end">2,000</text>
+<line class="l07-grid" x1="140" y1="328" x2="1620" y2="328"/><text class="l07-tk" x="128" y="337" text-anchor="end">4,000</text>
+<line class="l07-grid" x1="140" y1="212" x2="1620" y2="212"/><text class="l07-tk" x="128" y="221" text-anchor="end">6,000</text>
+<line class="l07-grid" x1="140" y1="96" x2="1620" y2="96"/><text class="l07-tk" x="128" y="105" text-anchor="end">8,000</text>
+<text class="l07-yl" x="30" y="70">Spartiates</text>
+<g class="l07-key"><rect class="l07-ks" x="758" y="172" width="40" height="28" rx="4"/><text class="l07-kt" x="812" y="196">figure given by an ancient writer</text><g class="l07-est"><rect x="758" y="218" width="40" height="28" rx="4"/></g><text class="l07-kt" x="812" y="242">modern estimate</text></g>
+<g class="linked l07-bar" id="l07n-1"><rect x="212" y="96" width="170" height="464" rx="6"/><text class="l07-val" x="297" y="78" text-anchor="middle">8,000</text><text class="l07-yr" x="297" y="606" text-anchor="middle">480 BC</text><text class="l07-src" x="297" y="648" text-anchor="middle">Herodotus 7.234 (F23):</text><text class="l07-src" x="297" y="678" text-anchor="middle">Demaratus to Xerxes</text></g>
+<g class="linked l07-bar" id="l07n-2"><rect x="506" y="357" width="170" height="203" rx="6"/><text class="l07-val" x="591" y="339" text-anchor="middle">3,500</text><text class="l07-yr" x="591" y="606" text-anchor="middle">418 BC</text><text class="l07-src" x="591" y="648" text-anchor="middle">Thucydides 5.68 (E101):</text><text class="l07-src" x="591" y="678" text-anchor="middle">the army at Mantinea</text></g>
+<g class="linked l07-bar l07-est" id="l07n-3"><rect x="800" y="415" width="170" height="145" rx="6"/><text class="l07-val" x="885" y="397" text-anchor="middle">2,500</text><text class="l07-yr" x="885" y="606" text-anchor="middle">394 BC</text><text class="l07-src" x="885" y="648" text-anchor="middle">estimate, note on</text><text class="l07-src" x="885" y="678" text-anchor="middle">Xenophon, Hellenika</text><text class="l07-src" x="885" y="708" text-anchor="middle">4.2.16 (E105)</text></g>
+<g class="linked l07-bar l07-est" id="l07n-4"><rect x="1094" y="473" width="170" height="87" rx="6"/><text class="l07-val" x="1179" y="455" text-anchor="middle">c. 1,500</text><text class="l07-yr" x="1179" y="606" text-anchor="middle">371 BC</text><text class="l07-src" x="1179" y="648" text-anchor="middle">estimate (Cooley’s</text><text class="l07-src" x="1179" y="678" text-anchor="middle">table cites Xenophon,</text><text class="l07-src" x="1179" y="708" text-anchor="middle">Hellenika 6.1.1)</text></g>
+<g class="linked l07-bar" id="l07n-5"><rect x="1388" y="502" width="170" height="58" rx="6"/><text class="l07-val" x="1473" y="484" text-anchor="middle">&lt; 1,000</text><text class="l07-yr" x="1473" y="606" text-anchor="middle">370 BC</text><text class="l07-src" x="1473" y="648" text-anchor="middle">Aristotle, Politics</text><text class="l07-src" x="1473" y="678" text-anchor="middle">1270a (D28)</text></g>
+<g class="linked l07-cav" id="l07n-6"><rect class="l07-dbl" x="506" y="154" width="170" height="203" rx="6"/><text class="l07-cvt" x="591" y="136" text-anchor="middle">7,000 if doubled?</text><text class="l07-cvn" x="758" y="92">Cooley: “It is possible or even likely that</text><text class="l07-cvn" x="758" y="126">Thucydides has halved the true figure for 418 BC”</text></g>
+</svg>
+      <figcaption>Drawn for this lesson from Cooley’s table of Spartiate numbers (D29), with the source of each figure. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <i class="reveal" data-also="#l07n-1, #l07n-2, #l07n-3, #l07n-4, #l07n-5" hidden></i>
+    <i class="reveal" data-also="#l07n-6" hidden></i>
+    <div class="stack tight">
+      <p class="qprompt reveal">Describe the trend.</p>
+      <p class="body reveal">Down at every point: from about 8,000 in 480 BC to fewer than 1,000 in Aristotle’s figure — a shortage called <i>oliganthropia</i>.</p>
+      <p class="qprompt reveal">Which figure is least secure?</p>
+      <p class="body reveal">418 BC: Cooley thinks Thucydides may have halved it. And 394 BC is not a count at all: Xenophon gives 6,000 Lacedaemonian hoplites, and Cooley says the Spartiates among them “may have been as low as 2,500 or 2,000”.</p>
+      <p class="qprompt reveal">Battle deaths?</p>
+      <p class="body reveal">Not the main cause: casualties “were comparatively low by classical Greek standards” (Cooley). The decline “probably reflects a social-demographic change”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="A life without work" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">2 · The homoioi · I do — occupations</p>
+  <h2>A life without work — almost</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">What Spartiates did</div><p class="body">Cooley: “a life dedicated to leisure pursuits, namely socializing, politics, exercise and hunting; and active contribution to the city’s defence.”</p></div>
+    <div class="card accent reveal"><div class="k">What they could not do</div><p class="body">Xenophon: “in Sparta Lykourgos refused to allow free citizens to have anything to do with money making” (Cooley D53). No farming, crafts or trade.</p></div>
+    <div class="card accent reveal"><div class="k">A few inherited jobs</div><p class="body">Herodotus: “Their heralds and flute-players and meat-cooks adopt their father’s professions” (6.60, Cooley D24).</p></div>
+  </div>
+  <div class="note reveal" data-code="analysis"><div class="k">So who did the work?</div><p class="body">The helots farmed the land (Lesson 8); the perioikoi probably handled trade and crafts (section 4). The Spartiates’ way of life depended on people who were not citizens.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="Source 6.2 — a bronze Spartiate">
+<div class="wrap l07-dense">
+  <p class="eyebrow">2 · The homoioi · We do — reading an object <span class="optional">If time</span></p>
+  <h2>A bronze Spartiate: how did a citizen want to be seen?</h2>
+  <div class="split l07-fig" style="--cols:.62fr 1.5fr">
+    <figure class="figure contain"><img src="images/bradley-3-9-bronze-spartiate-cloak.jpg" alt="A bronze figure of a Spartiate wrapped in a cloak and wearing a crested helmet — an ancient artefact; the textbook gives no date, find-spot or museum"><figcaption>A bronze figure of a Spartiate wrapped in a cloak and wearing a crested helmet — an ancient artefact; the textbook gives no date, find-spot or museum — <span class="cr">Bradley, Fig 3.9</span></figcaption></figure>
+    <div class="stack tight">
+      <p class="qprompt reveal">O — what can and cannot be said about who made it, and when?</p>
+      <p class="body reveal">It is ancient, but the textbook gives no date, find-spot or museum. Compare the 6th-century bronze warrior, 10 cm tall, found at Sparta, that Cooley prints as Figure 2 (British Museum 1929,1016.6).</p>
+      <p class="qprompt reveal">V — what does it suggest about how a Spartiate wished to be seen?</p>
+      <p class="body reveal">As a citizen-soldier: helmeted, wrapped in his cloak, upright and still.</p>
+      <p class="qprompt reveal">P — many small bronzes were offerings. Does it matter that we cannot prove this one was?</p>
+      <p class="body reveal">Yes: an offering would show how a man presented himself to a god. Without a find-spot we cannot be sure who saw it.</p>
+      <p class="qprompt reveal">R and L — a real man or an ideal? What does it leave out?</p>
+      <p class="body reveal">More likely an ideal type: the face is hidden. It shows nothing of wealth, of the mess, or of the helots and perioikoi whose work supported him.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The homoioi" data-title="Notes 2 — The homoioi" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The homoioi: earning and keeping citizenship</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L7 · Spartiates, inferiors and perioikoi</b></span><span>2 · The homoioi</span></div>
+    <div class="row"><div class="cq">What does homoioi mean, and why might peers be a better translation than equals?</div>
+      <div class="nts reveal">‘Equals’ / ‘Similars’ <span class="sep">·</span> Cooley: “perhaps best translated as ‘Peers’” → equality only <b>inside an exclusive élite</b>, not equal wealth</div></div>
+    <div class="row"><div class="cq">List four conditions for remaining a full citizen.</div>
+      <div class="nts reveal">Spartiate birth (usual start) <span class="sep">·</span> <b>state education</b> <span class="sep">·</span> <b>elected to a mess</b> — one ‘no’ = rejected (Plut., D63) <span class="sep">·</span> <b>monthly contribution</b> from own land worked by helots <span class="sep">·</span> courage + obedience (Xen., D51)</div></div>
+    <div class="row"><div class="cq">Explain why a poor Spartiate was likely to lose his citizenship.</div>
+      <div class="nts reveal">No trade → land the only income <span class="sep">·</span> land split by <b>inheritance + dowries</b> <span class="sep">·</span> can’t pay → “cannot belong” (Aristotle, D62)</div></div>
+    <div class="row"><div class="cq">Describe the decline in Spartiate numbers between 480 and 371 BC.</div>
+      <div class="nts reveal">8,000 (480) → 3,500 (418; perhaps halved) → 2,500 (394; an estimate, perhaps 2,000) → c. 1,500 (371) <span class="sep">·</span> Aristotle: “not even one thousand” <span class="sep">·</span> = <b>oliganthropia</b> (Cooley D29)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The inferiors" data-title="Falling out: hypomeiones and tresantes" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">3 · The inferiors · We do — losing status</p>
+  <h2>Falling out: hypomeiones and tresantes</h2>
+  <div class="cols c2">
+    <div class="stack tight">
+      <div class="card accent"><div class="k">Hypomeiones · ‘men of lesser status’</div>
+        <p class="body">Cooley: Xenophon’s account of Cinadon (section 5) is “the only use of the term”. They “were presumably descendants of homoioi who had lost their status: this might be through poverty (and being unable to contribute to the syssitia); through failure to complete their training or be elected to a mess; or for being convicted of misconduct.”</p></div>
+      <div class="src">
+        <div class="k">Thucydides, on the men who had surrendered on Sphacteria (425 BC), in 421 BC</div>
+        <p class="quote sm">So they deprived them of their citizenship, even though some of them already held high positions … In due course, however, they were reinstated.</p>
+        <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 5.34.2 · written late 5th century BC · trans. B. Wilson · Cooley E52</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Tresantes · Xenophon, on cowards</div>
+        <p class="quote sm">But in Lakedaimon, everyone would be ashamed to share a meal with a coward in the same mess, or to wrestle with him at the gymnasium.</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 9.4 · probably written late 390s or 380s BC · trans. B. Wilson · Cooley D96</p>
+      </div>
+      <div class="src">
+        <div class="k">Herodotus, on Aristodemus, who missed the last stand at Thermopylae</div>
+        <p class="quote sm">When he got home to Lakedaimon, Aristodamos was greeted with shame and disgrace of the following kind: no Spartiate would give him a light for his fire or even speak to him … But afterwards, at the battle of Plataia, he redeemed himself and his disgrace was forgotten.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 7.231 · written c. 450s–420s BC · trans. B. Wilson · Cooley F21</p>
+      </div>
+    </div>
+  </div>
+  <div class="note reveal" data-code="analysis"><p class="body"><b>What do the stories share?</b> Disgrace was social as well as legal — and not always for ever: Aristodemus redeemed himself, and the Sphacteria men were reinstated.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The inferiors" data-title="Mothakes: free or slave?" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">3 · The inferiors · We do — sources that disagree</p>
+  <h2>Moving up? The mothakes</h2>
+  <div class="cols c2">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Phylarchus (3rd century BC), quoted by Athenaeus</div>
+        <p class="quote sm">So the mothakes are free, though not actually Lakedaimonians, but still share exactly the same education. They say that Lysander who fought the Athenians at sea was one of these, though he became a citizen through his courage.</p>
+        <p class="prov">Phylarchos, FGrH 81 F43, in Athenaeus, <i>Scholars at Dinner</i> 6.102 · trans. in Cooley D30</p>
+      </div>
+      <div class="src">
+        <div class="k">Aelian (3rd century AD)</div>
+        <p class="quote sm">Kallikratidas and Gylippos and Lysander were called mothakes at Lakedaimon. This was the name for slaves of the wealthy whom fathers sent along with their sons …</p>
+        <p class="prov">Aelian, <i>Miscellaneous History</i> 12.43 · trans. in Cooley D31</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Why do the sources disagree?</p>
+      <p class="body reveal">Both are late — Phylarchus wrote in the 3rd century BC, Aelian some five centuries after him — and one calls mothakes free, the other slaves. Both name Lysander; Aelian adds Callicratidas and Gylippus.</p>
+      <div class="note reveal" data-code="judgement"><div class="k">A modern verdict</div><p class="body">Hodkinson, as cited by Cooley, concludes that the sources describe “a genuine status-type of the classical period: free-born Lakedaimonians from poor or disenfranchised families, adopted by a wealthy ‘patron’” — with the possibility, or even the certainty, of citizenship.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">But Herodotus …</div><p class="body">… says Tisamenus the seer and his brother “were the only people ever to become Spartiate citizens” (9.35, Cooley D25). That sits awkwardly with Lysander.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The inferiors" data-title="Neodamodeis: freed, not citizens" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">3 · The inferiors · We do — freed helots</p>
+  <h2>Neodamodeis: free, but not citizens</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Thucydides, 421 BC</div>
+        <p class="quote sm">The Lakedaimonians passed a decree declaring that the helots who had fought with Brasidas should be set free and allowed to live wherever they liked. Soon afterwards they settled them with other neodamodeis in Lepreon …</p>
+        <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 5.34.1 · trans. B. Wilson · Cooley E52</p>
+      </div>
+      <div class="src">
+        <div class="k">Xenophon, 396 BC</div>
+        <p class="quote sm">Lysander … persuaded Agesilaos to make an expedition to Asia if the Lakedaimonians would give him thirty Spartiates, two thousand freed helots, and a contingent of six thousand of the allies.</p>
+        <p class="prov">Xenophon, <i>Hellenika</i> 3.4.2 · trans. in Cooley E131</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Free — and citizens?</p>
+      <p class="body reveal">Free, but not citizens. Cooley: they gained freedom and “certain rights”, “although they did not attain full citizen status”.</p>
+      <p class="qprompt reveal">Why might Sparta free helots?</p>
+      <p class="body reveal">To fight. Cooley: the measure “may have been introduced to slow the decline of Spartiate numbers, especially in the army.”</p>
+      <div class="note reveal" data-code="analysis"><p class="body">Look at the numbers in Xenophon: thirty Spartiates, but two thousand freed helots.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The inferiors" data-title="Hinge: which group?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Helots who had been set free were called …</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>hypomeiones</span></li>
+    <li><span class="n">2</span><span>tresantes</span></li>
+    <li id="l07hq3"><span class="n">3</span><span>neodamodeis</span></li>
+    <li><span class="n">4</span><span>mothakes</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l07hq3" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>Neodamodeis</b>: free, but not full citizens. Tresantes had fallen <i>from</i> the citizen body, and the hypomeiones probably had too; mothakes were raised alongside it.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The inferiors" data-title="Notes 3 — The inferiors" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>The inferiors: falling out of the citizen body</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L7 · Spartiates, inferiors and perioikoi</b></span><span>3 · The inferiors</span></div>
+    <div class="row"><div class="cq">Name and define two groups of inferiors.</div>
+      <div class="nts reveal"><b>hypomeiones</b> ‘men of lesser status’: prob. lost status (poverty, training, mess, misconduct); one use only (Xen. <i>Hell.</i> 3.3.6) <span class="sep">·</span> <b>tresantes</b>: cowards <span class="sep">·</span> <b>mothakes</b>: raised with citizen boys <span class="sep">·</span> <b>neodamodeis</b>: freed helots, prob. for the army — free, not citizens</div></div>
+    <div class="row"><div class="cq">How were cowards treated at Sparta? Give one piece of evidence.</div>
+      <div class="nts reveal">Shunned at mess + gymnasium (Xen., D96) <span class="sep">·</span> Aristodemus: no light for his fire, until Plataea (Hdt 7.231, F21) <span class="sep">·</span> Sphacteria men lost citizenship 421 BC — later <b>reinstated</b> (Thuc. 5.34, E52)</div></div>
+    <div class="row"><div class="cq">Why do the sources for the mothakes contradict each other?</div>
+      <div class="nts reveal">Phylarchus (3rd c. BC): free, not Lacedaemonians <span class="sep">·</span> Aelian (3rd c. AD): slaves of the wealthy <span class="sep">·</span> late sources, centuries apart <span class="sep">·</span> Hdt: only Tisamenus + brother became citizens v. Lysander “became a citizen” <span class="sep">·</span> Hodkinson (in Cooley): a real classical group</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The perioikoi" data-title="Free but without a voice" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">4 · The perioikoi · I do — the free neighbours</p>
+  <h2>The perioikoi: free, but without a voice</h2>
+  <div class="split l07-fig" style="--cols:1.35fr 1fr">
+    <div class="cols c2">
+      <div class="card accent reveal"><div class="k">Free — but subject</div><p class="body">Cooley: “They were personally free, but politically their communities were subject to Sparta, and the perioikoi did not enjoy any form of citizen rights in Sparta.”</p></div>
+      <div class="card accent reveal"><div class="k">Their own towns</div><p class="body">At least 50 towns, almost all in Laconia, with a few in Messenia; their own land, and probably their own local government.</p></div>
+      <div class="card accent reveal"><div class="k">Soldiers</div><p class="body">They “fought as hoplites alongside the Spartiates” by the time of the Persian Wars, and had to follow Sparta’s command in war — no foreign policy of their own.</p></div>
+      <div class="card accent reveal"><div class="k">Workers and traders</div><p class="body">They “probably handled most of the economic activities that were prohibited to Lakedaimonians”: probably overseas trade and fishing, iron, lead and building stone.</p></div>
+    </div>
+    <div class="stack tight">
+      <figure class="figure contain"><img src="images/clarke-6-3-gytheio.jpg" alt="Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base"><figcaption>Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base — <span class="cr">Clarke & Garner, Fig 6.3</span></figcaption></figure>
+      <div class="note reveal" data-code="evidence"><p class="body">At Plataea, 479 BC: “Ten thousand Lakedaimonians held the right wing: of them, five thousand were Spartiates” (Herodotus 9.28, Cooley E84) — the rest presumably perioikoi.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The perioikoi" data-title="Source 6.3 — in service and in revolt" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">4 · The perioikoi · We do — two snapshots, 42 years apart</p>
+  <h2>Perioikoi in Spartan service — and in revolt</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source 6.3 A · Thucydides, 412 BC</div>
+      <p class="quote">Eualas, a Spartiate, commanded the army; Deiniadas, a perioikos, the ships.</p>
+      <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 8.22.1 · written late 5th century BC · trans. B. Wilson · Cooley E56</p>
+    </div>
+    <div class="src">
+      <div class="k">Source 6.3 B · Xenophon, 370 BC</div>
+      <p class="quote sm">Some of the perioikoi were there, appealing to the Thebans and insisting that they would revolt if they would only make an appearance in the countryside. They said that the perioikoi had just been summoned by the Spartiates but were unwilling to help them.</p>
+      <p class="prov">Xenophon, <i>Hellenika</i> 6.5.25 · a history covering 411–362 BC · trans. in Cooley E59</p>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">What two roles do the perioikoi play?</p>
+      <p class="body reveal">Trusted commander of a fleet (412 BC); would-be rebels inviting an invader (370 BC).</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Does B show how many felt this way?</p>
+      <p class="body reveal">No: “Some of the perioikoi” told the Thebans what “the perioikoi” felt. Cooley: others “participated actively in the defence of Lakonia”.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">What does our evidence lack?</p>
+      <p class="body reveal">Names and voices: Deiniadas and a spy, Phrynis, are “the only two perioikoi named in Thucydides” (Cooley).</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The perioikoi" data-title="Were the perioikoi loyal?" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">4 · The perioikoi · We do — weigh the evidence</p>
+  <h2>Were the perioikoi loyal?</h2>
+  <div class="tbl-scroll"><table class="tbl compact">
+    <tr><th>Evidence of loyalty</th><th>Evidence against</th></tr>
+    <tr class="reveal"><td>479 BC: perioikoi presumably made up half the Lacedaemonians on the right wing at Plataea (Herodotus 9.28).</td><td>c. 464 BC: after the earthquake, the helots revolted “Together with the neighbouring perioikoi of Thouria and Aithaia” (Thucydides 1.101.2, Cooley E62).</td></tr>
+    <tr class="reveal"><td>412 BC: Deiniadas, a perioikos, commanded Spartan ships (E56).</td><td>c. 399 BC: Cinadon claimed to speak for the perioikoi, among others (Xenophon, Cooley E53a).</td></tr>
+    <tr class="reveal"><td>381 BC: “Many of the better sort of perioikoi volunteered” for a campaign (Xenophon, <i>Hellenika</i> 5.3.9, Cooley E57).</td><td>370 BC: some perioikoi urged the invading Thebans on (E59) — though others helped to defend Laconia.</td></tr>
+  </table></div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="evidence"><div class="k">A modern view</div><p class="body">Cartledge, as cited by Cooley, sees the perioikoi as a “territorial reserve against the helots”, essentially loyal; Cooley calls 464 BC “the exception before 370/69 BC”.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">Judgement</div><p class="body">Mostly loyal: the exceptions came at moments of crisis — an earthquake, a conspiracy, a foreign invasion — and even then not all the perioikoi joined in.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The perioikoi" data-title="Notes 4 — The perioikoi" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The perioikoi: free but without a voice</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L7 · Spartiates, inferiors and perioikoi</b></span><span>4 · The perioikoi</span></div>
+    <div class="row"><div class="cq">Who were the perioikoi?</div>
+      <div class="nts reveal">‘Those who live around (us)’ <span class="sep">·</span> ≥ 50 towns, mostly Laconia <span class="sep">·</span> <b>personally free</b>, own land, prob. local government <span class="sep">·</span> <b>no citizen rights</b> at Sparta; no foreign policy of their own</div></div>
+    <div class="row"><div class="cq">What did they do?</div>
+      <div class="nts reveal"><b>Hoplites</b> (Plataea: 5,000 of 10,000 Lacedaemonians were Spartiates) <span class="sep">·</span> prob. trade, fishing, crafts <span class="sep">·</span> Gytheion = chief naval base <span class="sep">·</span> Deiniadas commanded ships, 412 BC (E56)</div></div>
+    <div class="row"><div class="cq">Give one piece of evidence for perioikic loyalty and one against it.</div>
+      <div class="nts reveal"><b>For</b>: volunteers, 381 BC (E57); Cartledge: “territorial reserve against the helots” <span class="sep">·</span> <b>Against</b>: Thouria + Aithaia join the helots, c. 464 BC (E62); some invite the Thebans, 370 BC (E59) — others defend Laconia</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="Source 6.4 — the informer’s story" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · We do — supported reading (1 of 3)</p>
+  <h2>c. 399 BC: an informer goes to the ephors</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="src">
+      <div class="k">Source 6.4 · Xenophon on the conspiracy of Cinadon</div>
+      <p class="quote sm">Within five days of the end of the sacrifice, someone reported a conspiracy to the ephors and that the leader of it was Kinadon. [5] He was young in appearance and strong in spirit, but <span class="code" data-code="keyterm" data-letter="K">not one of the equals (homoioi)</span>. When the ephors asked how he said the plan would be carried out, the informant said that Kinadon had taken him to the edge of the agora and told him to count how many Spartiates were in the agora. “And I,” he said, “counted <span class="code" data-code="evidence" data-letter="E">the king, the ephors, the members of the gerousia, and about forty others</span>, and asked ‘Why did you tell me to count them, Kinadon?’ He said, ‘Imagine that these are your enemies, and <span class="code" data-code="judgement" data-letter="J">all the others are your allies – more than four thousand of them in the agora</span>.’” … and out of all those who happened to be on the estates of the Spartiates, one enemy – the owner, but many allies on each estate.</p>
+      <p class="prov">Xenophon, <i>Hellenika</i> 3.3.4–5 (part) · Xenophon lived c. 430–c. 350 BC; the <i>Hellenika</i> covers 411–362 BC · trans. in Cooley E53a</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="keyterm">Who was Cinadon?</p>
+      <p class="body reveal">Young and strong, but not one of the homoioi — probably one of the hypomeiones.</p>
+      <p class="qprompt reveal" data-paint="evidence">How many Spartiates did the informer count?</p>
+      <p class="body reveal">The king, the ephors, the gerousia <b>and</b> about forty others — about <b>75</b>. Cooley adds them up: “gerousia (30) + 5 ephors + 40 against 4,000”.</p>
+      <p class="qprompt reveal" data-paint="judgement">What was Cinadon’s point?</p>
+      <p class="body reveal">Even in the city’s centre, citizens were a tiny minority — and on every estate there was “one enemy – the owner”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="“Gladly eat them even raw”" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · We do — supported reading (2 of 3)</p>
+  <h2>“Gladly eat them even raw”</h2>
+  <div class="split l07-fig" style="--cols:1.5fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source 6.4 · continued</div>
+        <p class="quote sm">[6] The ephors asked how many Kinadon said knew about the matter, he said that Kinadon said that amongst his group and amongst the leaders, those in the know were reliable but not very many; but what they said was that they knew on behalf of all, <span class="code" data-code="evidence" data-letter="E">helots and neodamodeis, and the hypomeiones (‘men of lesser status’), and the periokoi</span>. For amongst them, whenever a word was said about Spartiates, no one could hide the fact that <span class="code" data-code="judgement" data-letter="J">they would gladly eat them even raw</span>.</p>
+        <p class="prov">Xenophon, <i>Hellenika</i> 3.3.6 · trans. in Cooley E53a</p>
+      </div>
+      <p class="qprompt reveal">Whose words are we reading?</p>
+      <div class="pattern l07-chain reveal">
+        <span class="p">Cinadon<small>claims to speak for four groups</small></span><span class="arr">→</span>
+        <span class="p">the informer<small>reports him</small></span><span class="arr">→</span>
+        <span class="p">the ephors<small>question the informer</small></span><span class="arr">→</span>
+        <span class="p c">Xenophon<small>writes it down, years later</small></span>
+      </div>
+    </div>
+    <div class="stack tight">
+      <figure class="figure contain"><img src="images/clarke-1-6-agora-walls-l07.jpg" alt="Footings and walls identified as part of Sparta’s agora, where Cinadon told the informer to count the Spartiates (the agora’s exact site is disputed)"><figcaption>Footings and walls identified as part of Sparta’s agora, where Cinadon told the informer to count the Spartiates (the agora’s exact site is disputed) — <span class="cr">Clarke & Garner, Fig 1.6</span></figcaption></figure>
+      <div class="note reveal" data-code="analysis"><p class="body">Four non-citizen groups named side by side — and, Cooley notes, the only use of the word <i>hypomeiones</i>.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="The group table" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · We do — the group table (3 of 3)</p>
+  <h2>The four groups Cinadon named</h2>
+  <div class="tbl-scroll"><table class="tbl compact l07-gt">
+    <tr><th>Group</th><th>Status</th><th>Obligations</th><th>Attitude to Spartiates</th><th>Evidence</th></tr>
+    <tr class="reveal"><td>helots</td><td>unfree subjects “with limited personal freedom” (Cooley), tied to the land</td><td>worked the Spartiates’ estates (Lesson 8)</td><td>Cinadon’s claim: they would “gladly eat them even raw”</td><td class="l07-ev">on each estate “one enemy – the owner” (E53a)</td></tr>
+    <tr class="reveal"><td>neodamodeis</td><td>freed helots: free, but not full citizens</td><td>probably military service: 2,000 were asked for Agesilaus’ expedition to Asia, 396 BC</td><td>the same claim</td><td class="l07-ev">Thucydides 5.34 (E52); Xenophon, <i>Hell.</i> 3.4.2 (E131)</td></tr>
+    <tr class="reveal"><td>hypomeiones</td><td>‘men of lesser status’: probably descendants of homoioi who had lost their status</td><td>unknown — Cinadon “had previously done other such jobs for the ephors”</td><td>Cinadon’s own aim: “To be no one’s inferior in Lakedaimon”</td><td class="l07-ev">Xenophon, <i>Hell.</i> 3.3.9, 3.3.11 (E53b) and Cooley’s note</td></tr>
+    <tr class="reveal"><td>perioikoi</td><td>personally free, in their own towns; no citizen rights at Sparta</td><td>followed Sparta’s command in war; fought as hoplites</td><td>the same claim — but many stayed loyal</td><td class="l07-ev">E57 (381 BC volunteers); E59 (370 BC)</td></tr>
+  </table></div>
+  <p class="cue reveal">Notice the attitude column: three of the four entries are one man’s claim, reported second-hand.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="How the ephors reacted" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · I do — what the response reveals</p>
+  <h2>How the ephors reacted</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <div class="src">
+      <div class="k">Source · Xenophon, continued</div>
+      <p class="quote sm">[8] When they heard this, the ephors thought that the plots he described had been carefully laid and were very worried; <span class="code" data-code="evidence" data-letter="E">they did not summon the so-called ‘little assembly’ but instead, summoning one of the elders here and another one there</span>, they decided to dispatch Kinadon to Aulon with some other revolutionaries … [11] … Finally they asked him what his aim had been in doing this. He answered “To be <span class="code" data-code="judgement" data-letter="J">no one’s inferior in Lakedaimon</span>.” After this his hands were bound, his neck put in a halter and he and those with him were led round the city being flogged and tortured.</p>
+      <p class="prov">Xenophon, <i>Hellenika</i> 3.3.8, 3.3.11 (part) · trans. in Cooley E53b</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">What does the response reveal about the ephors’ power?</p>
+      <p class="body reveal">They acted fast and in secret: no ‘little assembly’, the elders consulted one by one, Cinadon sent off on a false errand to Aulon and arrested outside the city. We know nothing else about the ‘little assembly’ (Cooley).</p>
+      <p class="qprompt reveal" data-paint="judgement">What does his aim suggest?</p>
+      <p class="body reveal">That lesser status was felt keenly: the aim he gave was equal standing in Lacedaemon.</p>
+      <div class="note reveal" data-code="evidence"><p class="body">Aristotle used Cinadon as his example of strife “when a man of courage gets no share in office” (<i>Politics</i> 1306b, Cooley D26).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="Can we trust it?" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · I do — reliability</p>
+  <h2>Can we trust it? A view from below — at third hand</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">Cooley’s warning</div><p class="body">“Kinadon has every reason to exaggerate the discrepancy in numbers on each side (gerousia (30) + 5 ephors + 40 against 4,000), the extent to which the various ‘intermediate’ classes of hypomeiones, neodamodeis, perioikoi would identify with helots rather than Spartiates and even the extent of helot hatred for the Spartiates.”</p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">And the outcome</div><p class="body">“After all the Spartan state managed to remain stable until 370/69 BC” (Cooley).</p></div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="analysis"><div class="k">The writer</div><p class="body">Xenophon fought for King Agesilaus and had “reason to be grateful to Agesilaos and Sparta” (Cooley): a plot early in his friend’s reign, crushed by the ephors.</p></div>
+      <div class="note reveal" data-code="keyterm"><div class="k">NESA’s 2024 marking guidelines list</div><p class="body">“Evidence from Xenophon demonstrates that perioikoi, helots and inferiors were unhappy with their position in the Spartan social system, revealed in the Kinadon conspiracy of 399 BC.”</p>
+        <p class="body"><b>Cooley says</b> these are Cinadon’s claims, which he had “every reason to exaggerate”: write <span class="nq">“Xenophon reports Cinadon’s claim that …”</span>.</p></div>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So:</b> good evidence that Spartiates were a small minority even in the city (Cooley: “probably a small minority”), though Cinadon may have exaggerated the gap; good evidence for the groups that existed; weak, second-hand evidence for what those groups <i>felt</i>.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="You do — annotate Xenophon">
+<div class="wrap l07-dense">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · You do · 8 minutes · press K for the timer</p>
+  <h2>Annotate Xenophon’s account: O, V, P, R, L</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <div class="card accent"><div class="k">Prompts (the chapter’s OVPRL questions)</div>
+        <ul class="body">
+          <li><b>O</b> — Xenophon lived through these events and was a friend of King Agesilaus. How might this shape his account?</li>
+          <li><b>V</b> — Which groups does the source name, and what does it claim they felt?</li>
+          <li><b>P</b> — Whose words are we really reading? Trace the chain.</li>
+          <li><b>R</b> — Cooley says Cinadon had every reason to exaggerate. What, and why?</li>
+          <li><b>L</b> — Whose voices are missing?</li>
+        </ul></div>
+      <p class="small">Mark the groups in the margin of your notes copy: <b>Sp</b> Spartiates · <b>In</b> inferiors · <b>Pe</b> perioikoi · <b>He</b> helots. Own words, short phrases.</p>
+    </div>
+    <div class="src reveal" data-veil="Show model margin notes">
+      <div class="k">Model margin notes</div>
+      <p class="quote sm model">O: Xen., c. 430–c. 350 BC; alive at the time; friend of Agesilaus → plot crushed early in his reign · V: names helots, neodamodeis, hypomeiones, perioikoi; count ≈ 75 Sp. v. 4,000+; claims hatred · P: Cinadon → informer → ephors → Xen.: a conspirator’s claims, not the groups’ own words · R: Cinadon wants allies, so inflates numbers + hatred (Cooley); state stable to 370/69 BC · L: no helot, perioikos or neodamodes speaks; no women</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="A “This Does That” sentence" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · I do — modelling the sentence</p>
+  <h2>A “This Does That” sentence</h2>
+  <div class="pattern">
+    <span class="p e">Evidence</span><span class="arr">→</span>
+    <span class="p a">Analytical verb</span><span class="arr">→</span>
+    <span class="p c">What it shows</span>
+  </div>
+  <div class="src reveal">
+    <div class="k">Model sentence · written for this lesson</div>
+    <p class="quote model">The informer’s count of about seventy-five Spartiates — the king, the ephors, the elders and ‘about forty others’ — against Cinadon’s ‘more than four thousand’ others in the agora <b>suggests</b> how small a minority full citizens were, even if Cinadon exaggerated, and <b>reveals</b> that those excluded could be imagined as a resentful majority.</p>
+  </div>
+  <div class="cols c2">
+    <div class="card quiet reveal"><div class="k">Verb bank</div><p class="body">reveals · suggests · exposes · reinforces · undermines · conveys</p></div>
+    <div class="note reveal" data-code="counter"><div class="k">Watch the count</div><p class="body">Not “about forty Spartiates”: about forty <i>others</i>, on top of the king, the ephors and the gerousia.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · The conspiracy of Cinadon" data-title="Vote: did the non-citizens hate the Spartiates?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote</p>
+  <h2 class="nq">“Cinadon’s conspiracy proves that the non-citizens hated the Spartiates.”</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
+    <div class="card"><div class="k">Sideways</div><p class="lead">Partly</p></div>
+    <div class="card"><div class="k">Thumbs down</div><p class="lead">Disagree</p></div>
+  </div>
+  <p class="cue">Justify your vote with one piece of evidence — and say who is speaking in it.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · The conspiracy of Cinadon" data-title="You do — an analytical paragraph">
+<div class="wrap">
+  <p class="eyebrow">5 · The conspiracy of Cinadon · You do · 19 minutes · press K for the timer</p>
+  <h2>What does the conspiracy of Cinadon reveal about Spartan social structure c. 399 BC?</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Write one analytical paragraph in five moves</div>
+      <ul class="body">
+        <li><b>Judge</b> — a qualified answer in your first sentence</li>
+        <li><b>Evidence</b> — the groups Cinadon names and the count in the agora, with provenance</li>
+        <li><b>Analyse</b> — at least one “This Does That” sentence</li>
+        <li><b>Evaluate</b> — whose words are these, and why might they exaggerate?</li>
+        <li><b>Resolve</b> — your refined judgement</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Then add one line</div>
+      <p class="body">How did Spartiates represent themselves? Use the bronze Spartiate from section 2.</p>
+      <p class="body nq">Stuck? Start: “The conspiracy of Cinadon reveals a society in which …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="Notes 5 — The conspiracy of Cinadon" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>The conspiracy of Cinadon</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L7 · Spartiates, inferiors and perioikoi</b></span><span>5 · Cinadon</span></div>
+    <div class="row"><div class="cq">Who was Cinadon, and what was his stated aim?</div>
+      <div class="nts reveal">Young, strong, “not one of the equals” → prob. one of the <b>hypomeiones</b> <span class="sep">·</span> c. 399 BC, early in Agesilaus’ reign <span class="sep">·</span> aim: “To be no one’s inferior in Lakedaimon”</div></div>
+    <div class="row"><div class="cq">Which four non-citizen groups does the source name?</div>
+      <div class="nts reveal"><b>Helots · neodamodeis · hypomeiones · perioikoi</b> (Xen. <i>Hell.</i> 3.3.6, E53a) <span class="sep">·</span> count: king + ephors + gerousia + ~40 others ≈ <b>75</b> Spartiates v. 4,000+</div></div>
+    <div class="row"><div class="cq">Give two reasons to doubt Cinadon’s claims.</div>
+      <div class="nts reveal">A conspirator’s claims via informer → ephors → Xenophon (friend of Agesilaus) <span class="sep">·</span> Cooley: “every reason to exaggerate” numbers + hatred <span class="sep">·</span> state stable until 370/69 BC</div></div>
+    <div class="row"><div class="cq">What does the ephors’ handling of the plot reveal about their power?</div>
+      <div class="nts reveal">Fast + secret: no ‘little assembly’, elders consulted one by one <span class="sep">·</span> false errand to Aulon, arrest, flogging <span class="sep">·</span> the ephors led the state’s security</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The conspiracy of Cinadon" data-title="Summary" data-kind="notes">
+<div class="wrap l07-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>How was full citizenship kept — and lost?</li>
+          <li>Who stood below or beside the Spartiates?</li>
+          <li>What does Cinadon’s conspiracy show, and how far can we trust it?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">The Spartiates, or homoioi, were a small élite of adult male citizens who kept full rights only by completing the state education, winning election to a mess and paying a monthly contribution, so poverty or cowardice could cost a man his status, and their numbers fell from about 8,000 in 480 BC to about 1,500 by 371 BC. Below or beside them stood the ‘inferiors’ (hypomeiones, tresantes, mothakes and neodamodeis) and the perioikoi, free Lacedaemonians in their own towns with no political rights at Sparta. Cinadon’s conspiracy of c. 399 BC suggests how small a minority the Spartiates were, though its numbers and its picture of hatred are a conspirator’s claims, which he had every reason to exaggerate.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · The social pyramid: what it shows and hides</label></li>
+        <li><label><input type="checkbox"> 2 · The homoioi: conditions, losing out, numbers</label></li>
+        <li><label><input type="checkbox"> 3 · The inferiors: four kinds, the sources</label></li>
+        <li><label><input type="checkbox"> 4 · The perioikoi: free, without a voice — loyal?</label></li>
+        <li><label><input type="checkbox"> 5 · Cinadon: the count, the groups, the doubts</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering an ‘explain’ question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>An ‘explain’ question on today’s lesson</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 6 marks ≈ 11 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">No past paper fits</div><p class="body">No HSC question from 2019 to 2025 has asked about this lesson alone. The closest, 2024 Q11(d) on Spartan social structure (12 marks), is taught in Lesson 8, after the helots.</p></div>
+  </div>
+  <p class="lead">So today’s question is HSC-style, written for this lesson: we take it apart, you write for 11 minutes, then you mark it against NESA’s 6-mark criteria and an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC-style question" data-title="HSC-style question — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style, written for this lesson · Section II · 6 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> how <span class="code" data-code="keyterm" data-letter="K">full citizenship</span> was <span class="code" data-code="keyterm" data-letter="K">gained and lost</span> in <span class="code" data-code="scope" data-letter="S">Sparta during this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Take it apart together, write it yourself, then check it against NESA’s criteria and a model.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · We do — deconstruct it with the NESA glossary</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">“Relate cause and effect … Provide why and/or how.” Not a list of rules: <i>how</i> each step made a man a citizen, and <i>why</i> men fell out.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Full citizenship · gained <i>and</i> lost</div><p class="body">Both halves. Gained: birth, education, mess election, contribution. Lost: poverty, cowardice, failure, misconduct — with the terms homoioi, syssition, hypomeiones.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In Sparta during this period</div><p class="body">From the archaic period to 371 BC — so the effect over time matters: a shrinking citizen body.</p></div>
+    <div class="card accent reveal"><div class="k">6 marks</div><p class="body">About 11 minutes · a judgement first · three or four causes, each linked to its effect · two or three named sources · about 150–200 words · no long introduction.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC-style question" data-title="HSC-style question — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · You do · 11 minutes · press K for the timer</p>
+  <h2>Explain how full citizenship was gained and lost in Sparta during this period. <span class="small">(6 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence that covers both halves</li>
+        <li>how citizenship was gained, step by step</li>
+        <li>how it was lost — and why poorer men fell out</li>
+        <li>named sources: Plutarch, Xenophon, Aristotle, Herodotus, Thucydides</li>
+        <li>about 150–200 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Full citizenship in Sparta depended less on birth than on …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — the criteria" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · how a 6-mark ‘explain’ question is marked</p>
+  <h2>What the markers reward</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact l07-marks">
+      <tr><th>Marks</th><th>NESA’s criteria for a 6-mark part (b), 2025</th></tr>
+      <tr><td class="m">6</td><td>Provides an informed explanation relevant to the question · Communicates effectively using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5</td><td>Provides an explanation relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4</td><td>Provides some explanation relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Provides some information relevant to the question · May use some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses (2024), students were able to</div>
+        <p class="fb"><span class="q">use historical terms and concepts, such as spartiate, perioikoi and helots to demonstrate understanding of the Spartan social structure (d).</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve (2024)</div>
+        <p class="fb"><span class="q">focusing on the specific wording of the question(s) to explain rather than describe (b,c)</span><span class="q">providing appropriate depth in responses, guided by the mark value of each part of the question</span></p></div>
+    </div>
+  </div>
+  <p class="small">Sources: NESA, 2025 HSC Ancient History Marking Guidelines, Section II part (b) (the criteria for 2025 Q11(b), “Explain how the Spartans controlled the helots”); NESA, 2024 marking feedback for Question 11 (the parts are in brackets). Quoted exactly; applied here to a question written for this lesson.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — a model, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · Check your answer — a model written for this lesson</p>
+  <h2>Judgement, how it was gained, how it was lost, the result</h2>
+  <div class="annot wide" data-veil="Write first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="c7-1">Full citizenship in Sparta depended less on birth than on meeting demanding obligations, and a man who failed them could lose it, which helps to explain why the citizen body shrank.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="c7-2">A Spartiate’s son had to complete the state education and win election to a mess (syssition), where, in Plutarch’s account, one crushed piece of bread meant ‘the would-be candidate was rejected’.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="c7-3">Membership then depended on wealth, because each member paid a monthly contribution: Aristotle says ‘anyone who cannot pay this tax cannot belong’.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="c7-4">Conduct mattered too: Xenophon says a man who failed his obligations was ‘no longer to be regarded as one of the homoioi’, and Herodotus says that after Thermopylae no Spartiate would give Aristodemus a light for his fire.</span><span class="mk">4</span>
+      <span class="code" data-code="counter" id="c7-5">Loss was not always final: the men who surrendered on Sphacteria lost their citizenship in 421 BC, but ‘In due course, however, they were reinstated’.</span><span class="mk">5</span>
+      <span class="code" data-code="analysis" id="c7-6">Because Spartiates could not trade and land was split by inheritance and dowries, poorer men dropped out, probably becoming hypomeiones, while outsiders were almost never admitted: Herodotus says only Tisamenus and his brother ever became Spartiate citizens.</span><span class="mk">6</span>
+      <span class="code" data-code="keyterm" id="c7-7">The result was a shrinking élite: from about 8,000 Spartiates in 480 BC to about 1,500 by 371 BC (Cooley’s table).</span><span class="mk">7</span>
+      <p class="meta">Model written for this lesson · 205 words, about 11 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#c7-1"><span class="mk">1</span><b>Answer first</b><span class="tx nq">Both halves of the question, and an effect (“which helps to explain”) — the line the answer will follow.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#c7-2"><span class="mk">2</span><b>How it was gained</b><span class="tx nq">Two steps, the right term (syssition) and a named source. “In Plutarch’s account” respects his own caution that the procedure “is traditionally said” to have worked this way.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#c7-3"><span class="mk">3</span><b>Cause → effect</b><span class="tx">Why wealth mattered: no contribution, no membership. A critic’s words as evidence.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#c7-4"><span class="mk">4</span><b>How it was lost: conduct</b><span class="tx">An admirer’s rule (Xenophon) and a specific case (Herodotus): two kinds of evidence for one point.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#c7-5"><span class="mk">5</span><b>Qualify</b><span class="tx">Not every loss was final. Accurate qualifications like this show the detailed knowledge an “informed” explanation needs.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#c7-6"><span class="mk">6</span><b>The deeper cause</b><span class="tx">No trade + divided land → poorer men out; few let in. The hedge “probably” is kept.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#c7-7"><span class="mk">7</span><b>The effect over the period</b><span class="tx">Numbers tie the explanation to “during this period”.</span></div>
+      <div class="verdict reveal"><b>Written to the 6-mark criteria:</b> an informed explanation of both halves.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> add Lysander, said by Phylarchus to have been a mothax, who “became a citizen through his courage”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · a list of rules</span>
+      <p class="resp">To be a Spartan citizen you had to do the agoge, join a mess and pay food every month. You lost it if you were a coward or poor.</p>
+      <p class="why">Accurate information, but no explanation: no sources, few terms, and nothing on why poor men fell out.</p></div>
+    <div class="rung reveal"><span class="mark">4 marks · half the question</span>
+      <p class="resp">Citizenship was gained through the state education and election to a mess, where one vote against you meant rejection, as Plutarch describes …</p>
+      <p class="why">Some real explanation of gaining citizenship — but losing it, the other half of the question, is missing.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · the wrong group</span>
+      <p class="resp">Spartiates who lost their citizenship became perioikoi or helots and had to work the land.</p>
+      <p class="why">No source says so. Men who lost full rights were probably the hypomeiones; the perioikoi were a separate free people in their own towns.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — mark your own" data-kind="hsc">
+<div class="wrap l07-dense">
+  <p class="eyebrow">HSC-style question · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement covering both gaining and losing</label></li>
+        <li><label><input type="checkbox"> explained at least two steps to gaining citizenship (education, mess election)</label></li>
+        <li><label><input type="checkbox"> explained why wealth mattered: the monthly contribution, no trade</label></li>
+        <li><label><input type="checkbox"> explained at least one way status was lost through conduct</label></li>
+        <li><label><input type="checkbox"> named at least two writers, not “the sources”</label></li>
+        <li><label><input type="checkbox"> used homoioi, syssition and hypomeiones correctly — with “probably” for the hypomeiones</label></li>
+        <li><label><input type="checkbox"> linked it to the shrinking number of Spartiates</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-word test</div>
+        <p class="body">Circle every “because”, “so” and “which meant”. An explanation needs at least three.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the position of the perioikoi in Spartan society during this period.</b> (4 marks)</p>
+        <p class="body"><b>What does the conspiracy of Cinadon reveal about Spartan society during this period?</b> (8 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l07-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · written for this lesson</p>
+  <h2>Put these in order, earliest first — and say what each shows about status</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>An informer tells the ephors of Cinadon’s plot</span></li>
+    <li><span class="k">B</span><span>Deiniadas, a perioikos, commands Spartan ships</span></li>
+    <li><span class="k">C</span><span>Demaratus tells Xerxes that Sparta has “about eight thousand men”</span></li>
+    <li><span class="k">D</span><span>Some perioikoi urge the Thebans to invade Laconia</span></li>
+    <li><span class="k">E</span><span>The perioikoi of Thouria and Aithaia join the helots on Mount Ithome</span></li>
+    <li><span class="k">F</span><span>The Spartiates who surrendered on Sphacteria lose their citizenship</span></li>
+    <li><span class="k">G</span><span>Agesilaus’ expedition to Asia is to include two thousand freed helots</span></li>
+    <li><span class="k">H</span><span>At Plataea, 5,000 of the 10,000 Lacedaemonians on the right wing are Spartiates</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq l07-two">
+      <li class="sol reveal"><b>C</b> (480 BC) — Herodotus 7.234 (F23): the highest figure in Cooley’s table.</li>
+      <li class="sol reveal"><b>H</b> (479 BC) — Herodotus 9.28 (E84): only half the Lacedaemonians were Spartiates; the rest were presumably perioikoi.</li>
+      <li class="sol reveal"><b>E</b> (c. 464 BC) — Thucydides 1.101 (E62): the perioikic exception before 370/69 BC.</li>
+      <li class="sol reveal"><b>F</b> (421 BC) — Thucydides 5.34 (E52): citizenship lost — and later restored.</li>
+      <li class="sol reveal"><b>B</b> (412 BC) — Thucydides 8.22 (E56): a perioikos trusted with a command.</li>
+      <li class="sol reveal"><b>A</b> (c. 399 BC) — Xenophon, <i>Hellenika</i> 3.3 (E53a–b): the four non-citizen groups named.</li>
+      <li class="sol reveal"><b>G</b> (396 BC) — <i>Hellenika</i> 3.4.2 (E131): freed helots as soldiers.</li>
+      <li class="sol reveal"><b>D</b> (370 BC) — <i>Hellenika</i> 6.5.25 (E59): some perioikoi turn against Sparta after Leuctra.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l07-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify · written for this lesson</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l07-two" data-answers>
+    <li><span class="n">1</span><span>The perioikoi had full citizen rights at Sparta.</span>
+      <span class="sol no reveal">False <span class="why">— they “did not enjoy any form of citizen rights in Sparta” (Cooley), though they were personally free.</span></span></li>
+    <li><span class="n">2</span><span>Aristotle says a man who could not pay his mess contribution could not belong.</span>
+      <span class="sol reveal">True <span class="why">— “anyone who cannot pay this tax cannot belong” (<i>Politics</i> 1271a, D62).</span></span></li>
+    <li><span class="n">3</span><span>A candidate for a mess needed only a majority of the votes.</span>
+      <span class="sol no reveal">False <span class="why">— in Plutarch’s account one crushed piece of bread rejected him (D63); Cooley: “a unanimous vote of approval among all members”.</span></span></li>
+    <li><span class="n">4</span><span>The informer counted about forty Spartiates in the agora.</span>
+      <span class="sol no reveal">False <span class="why">— “the king, the ephors, the members of the gerousia, and about forty others”: about 75 (E53a).</span></span></li>
+    <li><span class="n">5</span><span>The Spartiates who surrendered on Sphacteria lost their citizenship for ever.</span>
+      <span class="sol no reveal">False <span class="why">— “In due course, however, they were reinstated” (Thucydides 5.34, E52).</span></span></li>
+    <li><span class="n">6</span><span>Neodamodeis were freed helots who became full citizens.</span>
+      <span class="sol no reveal">False <span class="why">— free, but “they did not attain full citizen status” (Cooley, note on E53b).</span></span></li>
+    <li><span class="n">7</span><span>Xenophon’s account of Cinadon is the only place the word hypomeiones is used.</span>
+      <span class="sol reveal">True <span class="why">— Cooley: “this is the only use of the term” (note on E53b).</span></span></li>
+    <li><span class="n">8</span><span>All the perioikoi supported the Theban invasion of 370 BC.</span>
+      <span class="sol no reveal">False <span class="why">— “Some of the perioikoi” appealed to the Thebans (E59); others “participated actively in the defence of Lakonia” (Cooley).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze · Chapter 6 Activity C</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>asses</span><span>Gytheion</span><span>homoioi</span><span>hypomeiones</span><span>Messenia</span><span>mothakes</span><span>neodamodeis</span><span>perioikoi</span></div>
+  <ol class="cloze" data-answers>
+    <li>Full Spartan citizens called themselves the <span class="gap"><span class="sol reveal">homoioi</span></span>.</li>
+    <li>Xenophon calls the men of lesser status the <span class="gap"><span class="sol reveal">hypomeiones</span></span>.</li>
+    <li>Helots set free, probably to serve in the army, were called <span class="gap"><span class="sol reveal">neodamodeis</span></span>.</li>
+    <li>Boys of poorer families raised alongside Spartiate sons were called <span class="gap"><span class="sol reveal">mothakes</span></span>.</li>
+    <li>The free inhabitants of the towns around Sparta were the <span class="gap"><span class="sol reveal">perioikoi</span></span>.</li>
+    <li>Sparta’s chief naval base, a perioikic town, was <span class="gap"><span class="sol reveal">Gytheion</span></span>.</li>
+    <li>Tyrtaeus compares the conquered Messenians to <span class="gap"><span class="sol reveal">asses</span></span> under heavy burdens. <span class="small">(Lesson 8)</span></li>
+    <li>Thucydides says most helots descended from the original people of <span class="gap"><span class="sol reveal">Messenia</span></span>. <span class="small">(Lesson 8)</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l07-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph · Chapter 6 Activity D</p>
+  <h2>What does the conspiracy of Cinadon reveal about Spartan social structure c. 399 BC?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: what does it reveal, and how far can it be trusted?</span>
+    <span class="l">Evidence</span><span>Quote the groups Cinadon names and the count in the agora, with provenance.</span>
+    <span class="l">Analyse</span><span>Explain what this shows about the citizen body and the groups outside it — use a “This Does That” sentence.</span>
+    <span class="l">Evaluate</span><span>Whose words are these? Why might Cinadon exaggerate? What happened next?</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement, not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">The conspiracy of Cinadon reveals a small citizen élite ruling a much larger, divided population, though it is weaker evidence for how that population felt. Xenophon’s informer counted only the king, the ephors, the gerousia and ‘about forty others’ in the agora, some seventy-five Spartiates, against ‘more than four thousand’ others, and Cinadon claimed to speak for ‘helots and neodamodeis, and the hypomeiones’ and the perioikoi. This count suggests how small a minority the citizens were by c. 399 BC, even allowing for Cinadon’s exaggeration, and the list shows several distinct groups between the Spartiates and the helots. Cinadon himself was ‘not one of the equals’ and wanted ‘To be no one’s inferior in Lakedaimon’, which suggests how keenly lesser status was felt. Yet these are a conspirator’s claims, passed through an informer and the ephors to Xenophon, a friend of King Agesilaus; Cooley warns that Cinadon ‘has every reason to exaggerate’, and the state stayed stable until 370/69 BC. The passage is therefore good evidence for the groups in Sparta’s social structure and for the citizens being a minority, but only second-hand evidence for its perspectives.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent were the Spartiates a closed and shrinking élite in this period? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — for example: closed in principle and shrinking in fact, but with some movement in and out.</li>
+    <li><b>Closed:</b> the conditions of citizenship (Xenophon D51, Aristotle D62, Plutarch D63); Herodotus’ “only people ever” (D25); the hypomeiones and Cinadon (E53a–b).</li>
+    <li><b>Shrinking:</b> Cooley’s table (D29) with its caveats; Aristotle’s “not even one thousand” (D28); why poorer men dropped out.</li>
+    <li><b>But:</b> mothakes such as Lysander (D30, D31); neodamodeis free but not citizens (E52, E131); the Sphacteria men reinstated (E52); loyal perioikoi (E57) — and the state stable until 370/69 BC. Weigh the witnesses: Xenophon the admirer, Aristotle the critic, Cinadon the conspirator.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Review — sections 1–5" data-kind="practice notes">
+<div class="wrap prac l07-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · short review · written for this lesson</p>
+  <h2>Review: Spartiates, inferiors and perioikoi</h2>
+  <ol class="rq l07-two" data-answers>
+    <li>Why might ‘peers’ be a better translation of homoioi than ‘equals’?
+      <span class="sol reveal">The homoioi were equal only as members of “an exclusive élite” (Cooley); in wealth they were not equal.</span></li>
+    <li>Name two things a Spartiate had to do to keep his full rights.
+      <span class="sol reveal">Any two: complete the state education; be elected to a mess; pay the monthly contribution; show courage and obey the laws.</span></li>
+    <li>Why could a poor Spartiate not escape losing his status?
+      <span class="sol reveal">He was not allowed to trade, so if his land could not cover his mess contribution he had no other income.</span></li>
+    <li>What does hypomeiones mean, and why must you say “probably” when defining them?
+      <span class="sol reveal">‘Men of lesser status’. The word is used only once, and no source explains who they were: Cooley says they were “presumably descendants of homoioi who had lost their status”.</span></li>
+    <li>Give one piece of evidence that a lost status could be regained.
+      <span class="sol reveal">The Sphacteria men “were reinstated” (Thucydides 5.34); Aristodemus “redeemed himself” at Plataea (Herodotus 7.231).</span></li>
+    <li>In what ways were the perioikoi free, and in what ways subject to Sparta?
+      <span class="sol reveal">Free: their own towns, land and probably local government. Subject: no citizen rights at Sparta, no foreign policy, Sparta’s command in war.</span></li>
+    <li>How many Spartiates did the informer count, and why might Cinadon want the number to look small?
+      <span class="sol reveal">About 75 (king, ephors, gerousia, about forty others) against more than 4,000: a small enemy makes a revolt look easy and attracts allies.</span></li>
+    <li>Why is Xenophon’s account second-hand evidence for what non-citizens felt?
+      <span class="sol reveal">It reports Cinadon’s claims, as told by an informer to the ephors and written down by Xenophon; no helot, perioikos or freed helot speaks.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · 6 minutes · before you leave</p>
+  <h2>Two answers</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">Define two of: homoioi · hypomeiones · neodamodeis · perioikoi.</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">Name one way a Spartiate could lose his full citizenship.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> the helots — the base of the pyramid — and why the sources describe them so differently.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l07-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">Ancient sources</div>
+      <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Xenophon, <i>Constitution of the Lakedaimonians</i> 7.2, 9.4 and 10.7 (D53, D96, D51, trans. B. Wilson) and <i>Hellenika</i> 3.3.4–11, 3.4.2, 5.3.9 and 6.5.25 (E53a–b, E131, E57, E59); Aristotle, <i>Politics</i> 1270a, 1271a26–37 and 1306b (D28, D62, D26); Plutarch, <i>Life of Lykourgos</i> 12 and 21 (D63, D97, trans. B. Wilson); Herodotus 6.60, 7.231, 7.234, 9.28 and 9.35 (D24, F21, F23, E84, D25, trans. B. Wilson); Thucydides 1.101.2, 5.34 and 8.22.1 (E62, E52, E56, trans. B. Wilson); Phylarchos, FGrH 81 F43, in Athenaeus (D30); Aelian, <i>Miscellaneous History</i> 12.43 (D31); Antiochus and Ephorus, in Strabo, <i>Geography</i> 6.3.2–3 (H5–H6). Cooley’s introductions and notes: social structure, the Spartiates, oliganthropia and his table of Spartiate numbers (D29), the mothakes, the perioikoi, the helots, wealth and property, the common meals, the assembly, the ancient authors, and his notes on E52–E56, E101 and E53b — including S. Hodkinson, <i>Property and Wealth in Classical Sparta</i> (2000), and P. Cartledge, <i>Sparta and Lakonia</i>, as cited there.</p></div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images and diagrams</div>
+        <ul class="small"><li>A bronze figure of a Spartiate wrapped in a cloak and wearing a crested helmet — an ancient artefact; the textbook gives no date, find-spot or museum — Bradley, Fig 3.9</li><li>Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base — Clarke & Garner, Fig 6.3</li><li>Footings and walls identified as part of Sparta’s agora, where Cinadon told the informer to count the Spartiates (the agora’s exact site is disputed) — Clarke & Garner, Fig 1.6</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: Spartan society as a stepped pyramid (replacing Hurley et al., <i>Antiquity 2</i>, Source 9 and Clarke &amp; Garner, Fig 3.2, labels corrected from Cooley); Spartiate numbers (Cooley’s table, D29); the group table (Xenophon, <i>Hellenika</i> 3.3.6).</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">Criteria: NSW Education Standards Authority, 2025 HSC Ancient History Marking Guidelines (Section II part (b)); 2024 marking guidelines (Question 11(d), “answers could include”) and 2024 marking feedback for Question 11. © NESA. NESA glossary of key words (“explain”). The 6-mark question, the models and the practice questions were written for this lesson.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2154 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L9 · The Agoge: Purpose and Stages</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the purpose and stages of Spartan education, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+
+/* ---- Lesson 9 (the agoge: purpose and stages). Every class starts l09-. */
+/* the stages of growing up — a modern reconstruction (svg_l09stages.svg) */
+.l09-st text{font-family:var(--ui); fill:var(--ink);}
+.l09-st .ban{font-size:25px; font-weight:700; letter-spacing:.06em; fill:var(--c-keyterm);}
+.l09-st .bans{font-weight:400; letter-spacing:0; fill:var(--slate);}
+.l09-st .gl{font-size:29px; font-weight:700; fill:var(--deep);}
+.l09-st .gs{font-size:22px; fill:var(--slate);}
+.l09-st .bar rect{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.l09-st .bar.xen rect{fill:var(--w-evidence); stroke:var(--c-evidence);}
+.l09-st .bar.unc rect{stroke-dasharray:12 8;}
+.l09-st .bt{font-size:28px; font-weight:700; text-anchor:middle;}
+.l09-st .bs{font-size:23px; text-anchor:middle;}
+.l09-st .bs.sm{font-size:21px;}
+.l09-st .fz{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:6 7;}
+.l09-st .fzt{font-size:23px; font-weight:700; text-anchor:middle; fill:var(--c-judgement);}
+.l09-st .axis{stroke:var(--ink); stroke-width:4;}
+.l09-st .tick{stroke:var(--ink); stroke-width:3;}
+.l09-st .tl{font-size:24px; font-weight:700; text-anchor:middle; fill:var(--slate);}
+.l09-st .tl.end{text-anchor:end; font-weight:400;}
+.l09-st .dot{fill:var(--deep);}
+.l09-st .ld{stroke:var(--slate); stroke-width:2.5; stroke-dasharray:4 6;}
+.l09-st .cd{fill:var(--surface); stroke:var(--deep); stroke-width:2.5;}
+.l09-st .cd.lg{fill:var(--surface-2); stroke:var(--rule);}
+.l09-st .ct{font-size:26px; font-weight:700; fill:var(--deep);}
+.l09-st .cl{font-size:23px;}
+.l09-st .hl{fill:var(--c-keyterm); opacity:.85;}
+.l09-st .br{fill:none; stroke:var(--c-keyterm); stroke-width:3.5;}
+.l09-st .eq{fill:var(--w-keyterm); stroke:var(--c-keyterm); stroke-width:3;}
+.l09-st .eqt{font-size:34px; font-weight:700; text-anchor:middle; fill:var(--c-keyterm);}
+.l09-st .eqs{font-size:24px; font-weight:700; fill:var(--c-keyterm);}
+html:not(.read) .diagram.l09-tall svg{max-height:calc(100vh - 235px);}
+/* phones: the stages diagram scrolls sideways at a readable size */
+@media (max-width:700px){
+  html.read .diagram svg.l09-st{min-width:1000px; max-height:none;}
+}
+
+/* "The features — and Xenophon's reasons" (HTML table, matches Cooley D74) */
+.l09-feat{font-size:calc(var(--fs-body)*.9);}
+.l09-feat td{padding:.5em .75em;}
+@media (max-height:820px){ html:not(.read) .l09-feat{font-size:calc(var(--fs-body)*.8);} html:not(.read) .l09-feat td{padding:.36em .6em;} }
+.l09-feat td:first-child{font-family:var(--mono); font-weight:700; color:var(--deep); white-space:nowrap;}
+.l09-feat td:nth-child(3){font-family:var(--serif); font-style:italic;}
+.l09-feat td:last-child{font-weight:700;}
+.l09-feat .l09-op td{font-family:var(--ui); font-style:normal; font-weight:400; background:var(--tint);}
+.l09-feat .l09-op td:first-child{color:var(--deep);}
+
+/* one altar, two rituals: a then / now comparison */
+.l09-tn{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px); align-items:start;}
+@media (max-width:900px){ .l09-tn{grid-template-columns:1fr;} }
+
+/* the purposes of the education (five aims) */
+.l09-aims{display:grid; grid-template-columns:repeat(5,1fr); gap:clamp(8px,1vw,16px);}
+.l09-aims .card{padding:clamp(10px,1.5vh,18px) clamp(12px,1vw,18px);}
+.l09-aims .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+.l09-aims .l09-src{display:block; margin-top:.4em; font-size:var(--fs-chrome); color:var(--slate);}
+@media (max-width:1100px){ .l09-aims{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:700px){ .l09-aims{grid-template-columns:1fr;} }
+
+/* short projectors (1366 × 768): long sources, tables and lists tighten */
+@media (max-height:820px){
+  html:not(.read) .l09-dense .src .quote.sm{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+  html:not(.read) .l09-dense .src .quote{font-size:calc(var(--fs-body)*.92);}
+  html:not(.read) .l09-dense .src .prov{font-size:calc(var(--fs-chrome)*.92);}
+  html:not(.read) .l09-dense .note .body, html:not(.read) .l09-dense .card .body,
+  html:not(.read) .l09-dense .stack.tight .body{font-size:calc(var(--fs-body)*.8); line-height:1.34;}
+  html:not(.read) .l09-dense .note{padding:.45em .9em;}
+  html:not(.read) .l09-dense .qprompt{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l09-dense .tbl.compact{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l09-dense .tbl.compact td{padding:.32em .6em;}
+  html:not(.read) .l09-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.28em .7em;}
+  html:not(.read) .l09-dense .seq li{font-size:calc(var(--fs-body)*.76); padding:.28em .7em;}
+  html:not(.read) .l09-dense .rq{font-size:calc(var(--fs-body)*.74); row-gap:.32em;}
+  html:not(.read) .l09-dense .moves{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l09-dense .cornell .nts, html:not(.read) .l09-dense .cornell .cq{font-size:calc(var(--fs-body)*.8); padding-top:.35em; padding-bottom:.35em;}
+  html:not(.read) .l09-dense .figure.short img{height:20vh;}
+  html:not(.read) .l09-dense .card ol.body{font-size:calc(var(--fs-body)*.8); line-height:1.34;}
+  html:not(.read) .l09-dense .keylist li{font-size:calc(var(--fs-body)*.9);}
+  html:not(.read) .l09-dense .keylist .d{font-size:calc(var(--fs-body)*.78); line-height:1.3;}
+  html:not(.read) .l09-aims .card .body{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l09-dense .verdict{font-size:calc(var(--fs-body)*.72); padding:.4em .7em; line-height:1.32;}
+  html:not(.read) .l09-dense .margin{gap:5px;}
+}
+/* two-column practice lists on wide screens */
+.l09-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.rq.l09-two{column-gap:2.8em;}
+@media (max-width:900px){ .l09-two{grid-template-columns:1fr;} }
+
+/* phones: the features table and the witnesses table stack row by row instead of scrolling */
+@media (max-width:700px){
+  .l09-feat tr:first-child, .l09-wit tr:first-child{display:none;}
+  .l09-feat, .l09-feat tbody, .l09-feat tr, .l09-feat td,
+  .l09-wit, .l09-wit tbody, .l09-wit tr, .l09-wit td{display:block; width:auto;}
+  .l09-feat tr, .l09-wit tr{border-bottom:2px solid var(--rule); padding:.45em 0;}
+  .l09-feat td, .l09-wit td{border:0; padding:.15em .6em;}
+  .l09-feat td:nth-child(3)::before{content:"Xenophon’s reason: "; font-family:var(--ui); font-style:normal; font-weight:700; color:var(--slate);}
+  .l09-feat td:nth-child(4)::before{content:"So it trained: "; font-weight:400; color:var(--slate);}
+  .l09-feat .l09-op td:nth-child(2)::before{content:none;}
+  .l09-wit td:nth-child(2){color:var(--slate);}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 9" data-title="The agoge: purpose and stages" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1.25fr .75fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 9</p>
+      <h1>The agoge: purpose and stages</h1>
+      <p class="lead">What was the Spartan education for, how did a boy move through it — and how much of the famous picture belongs to the classical period?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall contain"><img src="images/bradley-3-13-boys-supervised-l09.jpg" alt="A modern illustration of barefoot Spartan boys in rough cloaks, watched by an older man — an artist’s imagining, not ancient evidence"><figcaption>A modern illustration of barefoot Spartan boys in rough cloaks, watched by an older man — an artist’s imagining, not ancient evidence — <span class="cr">Bradley, Fig 3.13</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 9" data-title="Spaced review" data-kind="intro">
+<div class="wrap l09-dense">
+  <p class="eyebrow">Spaced review · 6 minutes · from memory, no notes</p>
+  <h2>Five questions</h2>
+  <div class="split" style="--cols:1fr 1.3fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">Who wrote “Half of all the produce the ploughland bears”?</span><span class="d">Lesson 8</span></li>
+      <li><span class="num">2</span><span class="t">When did Myron of Priene probably write?</span><span class="d">Lesson 8</span></li>
+      <li><span class="num">3</span><span class="t">Who were the hypomeiones?</span><span class="d">Lesson 7</span></li>
+      <li><span class="num">4</span><span class="t">When did Plutarch write, and why?</span><span class="d">A writer</span></li>
+      <li><span class="num">5</span><span class="t">What is a helot?</span><span class="d">A term</span></li>
+    </ol>
+    <div class="stack">
+      <div class="card quiet" data-veil="Show the answers">
+        <div class="k">Answers</div>
+        <ol class="body">
+          <li class="reveal">Tyrtaeus (fr. 6–7, Cooley A6), on the captured Messenians — mid-7th century BC, probably a Spartan</li>
+          <li class="reveal">Probably the 3rd century BC (Cooley); his words survive only in Athenaeus, who wrote about AD 200</li>
+          <li class="reveal">“Men of lesser status”: presumably Spartiates who had lost full status — perhaps through poverty, failing to finish the training or to be elected to a mess, or misconduct (Cooley)</li>
+          <li class="reveal">About AD 100. Cooley: “his main aim was to draw characters which could be instructive as moral examples”</li>
+          <li class="reveal">One of the unfree people of Laconia and Messenia, tied to the land they farmed for the Spartiates: “subjects of the Spartiates with limited personal freedom” (Cooley)</li>
+        </ol>
+      </div>
+      <div class="note reveal" data-code="judgement"><div class="k">Today’s bridge</div><p class="body">Answer 3: a Spartiate could lose his place by failing to finish the training. Today: the training itself.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 9" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse the purpose and stages of the Spartan education as Xenophon presents it</li>
+        <li>explain how the contest at the altar of Artemis Orthia changed over time</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>describe the stages and features of the education in sequence, and explain why the ages in modern tables are reconstructions</li>
+        <li>give the reason Xenophon offers for each hardship, and say why he offers it</li>
+        <li>explain how Xenophon and Pausanias show change over time at the altar of Orthia</li>
+        <li>write a 6-mark explanation of the purpose of the education</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">A word to get right</div>
+    <p class="body">The syllabus says <b>agoge</b>, so use it — but no classical writer used it for Sparta. Xenophon simply calls it <i>paideia</i>, “education”.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 9" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L9 · The agoge: purpose and stages</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Xen. = Xenophon, Plut. = Plutarch)</span></div></div>
+      <div class="row"><div class="cq">Who ran the education?</div><div class="nts">the paidonomos (“boy-herd”) …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: the state’s business · Xenophon’s system · the stages · Orthia then and now · what it was for.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 9" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The system</th><th>Meaning</th></tr>
+      <tr><td>agoge</td><td>“upbringing” or “training”: a later name for the Spartan state education; no classical source uses it for Sparta</td></tr>
+      <tr><td>paideia</td><td>“education”: the usual classical word, used by Xenophon</td></tr>
+      <tr><td>paidonomos</td><td>the “boy-herd”: the senior Spartan in charge of the boys’ education</td></tr>
+      <tr><td>paidagogos</td><td>elsewhere in Greece, usually a slave who looked after a boy and took him to school</td></tr>
+      <tr><td>agele (pl. agelai)</td><td>a “herd”: Plutarch’s word for a group of boys who lived and trained together</td></tr>
+      <tr><td>Artemis Orthia</td><td>a goddess whose sanctuary beside the Eurotas was famous for the boys’ contests</td></tr>
+      <tr><td>ephebe</td><td>a youth on the edge of manhood; Pausanias’ and Plutarch’s word for those whipped at Orthia</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The age groups</th><th>Meaning</th></tr>
+      <tr><td>paides</td><td>boys: the youngest stage (from seven, says Plutarch)</td></tr>
+      <tr><td>paidikoi</td><td>teenagers: Xenophon’s word for the middle stage (many books write <i>paidiskoi</i>)</td></tr>
+      <tr><td>hebontes · eirens</td><td>the young men, probably about 20 to 30: Xenophon mostly says hebontes, Plutarch eirens. Cooley’s glossary gives both as “a Spartan man in his twenties”</td></tr>
+      <tr><td>hippeis</td><td>“knights”: 300 young men chosen each year, who had probably never been cavalrymen</td></tr>
+      <tr><td>hippagretai</td><td>the three men picked by the ephors (“the three outstanding members of the year group”), who each chose a hundred hippeis</td></tr>
+      <tr><td>syssition (pl. syssitia)</td><td>a common mess; membership was needed for full citizenship (Lesson 12)</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Lakedaimonians, Ortheia). In your own writing use Lycurgus, Lacedaemonians, Orthia.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The state’s business" data-title="Why the state raised Spartan boys" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">1 · Education as the business of the state · I do</p>
+  <h2>Not the father’s decision</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, on Spartan newborns</div>
+        <p class="quote sm">[16.1] It was not the father’s decision whether to bring up his offspring. He would first have to bring it in his arms to the place called the Lesche (public meeting place), where the elders of the tribesmen gathered. Having assessed the infant, they instructed him to rear it, if it seemed sturdy and robust … But if it seemed weak or deformed, they sent it to the so-called Apothetai (the place of cast-offs), a great chasm at the foot of Mount Taygetos.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 16.1 (part) · written c. AD 100 · trans. B. Wilson · Cooley D73</p>
+      </div>
+      <p class="qprompt reveal">Who decided — and how far can we trust it?</p>
+      <div class="note reveal" data-code="counter"><p class="body">The elders of the tribe, not the father — nor the ephors or the gerousia. But Plutarch wrote nearly five centuries after Xenophon: treat this as tradition, not proven practice.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card accent reveal"><div class="k">Public business</div><p class="body">Cooley: the Spartans’ idea of public business “included the raising of new generations of citizens, which in most Greek cities was a matter of private family life.”</p></div>
+      <div class="card accent reveal"><div class="k">The road to citizenship</div><p class="body">“This special Spartan education was a precondition for becoming a citizen, and it created a high degree of conformity within Spartan society, while also separating Spartiates from all others” (Cooley).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The state’s business" data-title="Two witnesses — and a late word" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">1 · Education as the business of the state · I do — who tells us?</p>
+  <h2>Two witnesses, nearly five centuries apart — and a late word</h2>
+  <div class="cols c2">
+    <div class="card accent reveal">
+      <div class="k">Xenophon (c. 430–c. 350 BC)</div>
+      <p class="body">An Athenian who fought for King Agesilaus. “The Spartans gave him an estate near Olympia, and he may have lived in Sparta and even had his sons participate in the Spartan education system” (Cooley). His <i>Constitution of the Lakedaimonians</i>, probably written in the late 390s or 380s BC, describes the boys in chapters 2–4.</p>
+    </div>
+    <div class="card accent reveal">
+      <div class="k">Plutarch (before AD 50 – after AD 120)</div>
+      <p class="body">A Greek writing under Roman rule; his <i>Life of Lykourgos</i> 16–21 is the other fairly full account. But Cooley warns that “much of his material also dates from after Sparta’s decline in the fourth century”, and “late sources on the issue, such as Plutarch, have to be treated with caution.”</p>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">So who do we rely on?</div><p class="body">Cooley: “for the classical period, we have to rely mainly on Xenophon who was clearly familiar with the system, but only offers a rough overview.”</p></div>
+  <div class="note reveal" data-code="keyterm"><div class="k">Even the name is late</div><p class="body">The word <i>agoge</i> “is never applied by any classical-period source specifically to Sparta’s public education”; “It does not appear in any source in a specifically Spartan context until c. 240–230 BC.” Xenophon’s word is <i>paideia</i>. Later writers do use it: in the translation in Cooley of Plutarch, <i>Agesilaos</i> 1, “The agoge was a harsh and painful way of life” (D75).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The state’s business" data-title="Notes 1 — The state’s business" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Education as the business of the state</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L9 · The agoge: purpose and stages</b></span><span>1 · The state’s business</span></div>
+    <div class="row"><div class="cq">Why was education a matter for the state, not the family?</div>
+      <div class="nts reveal">Spartan “public business” included raising citizens (Cooley) <span class="sep">·</span> education = <b>precondition for citizenship</b> → conformity; set Spartiates apart</div></div>
+    <div class="row"><div class="cq">Who inspected newborns?</div>
+      <div class="nts reveal"><b>Elders of the tribe</b>, not the father (Plut. <i>Lyc.</i> 16.1, D73) <span class="sep">·</span> written c. AD 100 → tradition, not proof</div></div>
+    <div class="row"><div class="cq">Our two witnesses?</div>
+      <div class="nts reveal"><b>Xenophon</b>, c. 430–c. 350 BC; <i>Constitution</i> prob. late 390s/380s BC; well informed, an admirer <span class="sep">·</span> <b>Plutarch</b>, c. AD 100; much material later → caution <span class="sep">·</span> rely mainly on Xen.: “a rough overview”</div></div>
+    <div class="row"><div class="cq">Why does Cooley say <i>agoge</i> should be used with care?</div>
+      <div class="nts reveal">Never used by a classical source for Sparta <span class="sep">·</span> first in a Spartan context c. 240–230 BC <span class="sep">·</span> Xen.’s word = <b><i>paideia</i></b></div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Xenophon on the boys" data-title="Source 7.1 — who ran the system?" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">2 · Xenophon on the boys · We do — Source 7.1</p>
+  <h2>Who ran the system?</h2>
+  <div class="split" style="--cols:1.75fr 1fr">
+    <div class="src">
+      <div class="k">Source 7.1 · Xenophon on the education of boys</div>
+      <p class="quote sm">[2.1] … In other parts of Greece, parents who claim to educate their sons as well as possible put them under the care and control of a paidagogos at the very first opportunity … [2] <span class="code" data-code="counter" data-letter="C">Lykourgos did the opposite.</span> Instead of letting each individual father appoint a slave as paidagogos, <span class="code" data-code="evidence" data-letter="E">he gave overall charge of boys’ education to the so-called paidonomos (boy-herd), who was appointed from one of the members of the highest political class</span>. He gave this official full authority to compel their attendance, to supervise them, and to punish them severely if they misbehaved. <span class="code" data-code="analysis" data-letter="A">He gave him a team of young men (hebontes) armed with whips with which to inflict punishment where necessary.</span> <span class="code" data-code="judgement" data-letter="J">As a result high levels of respect for authority and general discipline are characteristic of their society.</span></p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 2.1–2 (part) · an Athenian, probably writing in the late 390s or 380s BC · trans. B. Wilson · Cooley D74</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">Who was in charge?</p>
+      <p class="body reveal">A paidonomos, the “boy-herd”: a state official from the top class, not a family slave.</p>
+      <p class="qprompt reveal" data-paint="analysis">How was it enforced?</p>
+      <p class="body reveal">Young men with whips. Later in the passage, any citizen present could give orders and punish, and the sharpest eirens took charge when no adult was there.</p>
+      <p class="qprompt reveal" data-paint="judgement">What does Xenophon say it achieved?</p>
+      <p class="body reveal">Respect for authority and discipline — obedience.</p>
+      <p class="qprompt reveal" data-paint="counter">Why start with “the opposite”?</p>
+      <p class="body reveal">Every point is set against other Greeks: description becomes praise.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Xenophon on the boys" data-title="The features — and Xenophon’s reasons (table)" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">2 · Xenophon on the boys · I do — Source 7.1 continued</p>
+  <h2>The features — and Xenophon’s reasons</h2>
+  <div class="tbl-scroll"><table class="tbl l09-feat">
+    <tr><th>§</th><th>What Lycurgus laid down</th><th>The reason Xenophon gives</th><th>So it trained …</th></tr>
+    <tr class="reveal"><td>2.3</td><td>bare feet: “compelling them to go barefoot”</td><td>“better at climbing hills and safer when coming down steep slopes”</td><td>soldiers who could move fast over rough ground</td></tr>
+    <tr class="reveal"><td>2.4</td><td>“one tunic all the year round”</td><td>“better prepared to face cold and heat alike”</td><td>endurance</td></tr>
+    <tr class="reveal"><td>2.5</td><td>“only enough food to ensure that they never felt full”</td><td>“better able to keep going on an empty stomach where necessary”</td><td>endurance on campaign</td></tr>
+    <tr class="reveal"><td>2.6–8</td><td>“alleviate their hunger pangs by some stealing” — but a beating if caught</td><td>“more skilful at finding supplies and better soldiers overall”; the caught are punished “for being ineffective thieves”</td><td>resourcefulness and cunning</td></tr>
+    <tr class="reveal l09-op"><td>Purpose</td><td colspan="3">Every point is built as “Lykourgos did the opposite” of other Greeks: an admirer’s case that Sparta’s way produced better men.</td></tr>
+  </table></div>
+  <p class="small">Xenophon, <i>Constitution of the Lakedaimonians</i> 2.3–8 · trans. B. Wilson · Cooley D74. The contest at the altar of Orthia (2.9, also Cooley C84) is in section 4.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Xenophon on the boys" data-title="Reading Xenophon — and a modern picture">
+<div class="wrap l09-dense">
+  <p class="eyebrow">2 · Xenophon on the boys · We do — how far can we trust him? <span class="optional">If time</span></p>
+  <h2>An admirer’s account — and a picture built from a later writer</h2>
+  <div class="split" style="--cols:.55fr 1fr">
+    <figure class="figure contain"><img src="images/bradley-3-13-boys-supervised-l09.jpg" alt="A modern illustration of barefoot Spartan boys in rough cloaks, watched by an older man — an artist’s imagining, not ancient evidence"><figcaption>A modern illustration of barefoot Spartan boys in rough cloaks, watched by an older man — an artist’s imagining, not ancient evidence — <span class="cr">Bradley, Fig 3.13</span></figcaption></figure>
+    <div class="stack tight">
+      <p class="qprompt reveal">What kind of work is Xenophon’s <i>Constitution</i>?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Cooley: “a kind of political pamphlet, defending Sparta against its critics”, which “probably depicts a somewhat idealised Sparta”. He “credits more aspects of Spartan society to the lawgiver than any other ancient source”.</p></div>
+      <p class="qprompt reveal">How does he explain away the stealing?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">“So the Lakedaimonians punish those who are caught for being ineffective thieves.” The beating punishes failure, not theft.</p></div>
+      <p class="qprompt reveal">Is the picture evidence?</p>
+      <div class="note reveal" data-code="judgement"><p class="body">No: it is modern. Its barefoot, cloaked boys gathering reeds “that grew beside the River Eurotas” come from Plutarch (D76), writing nearly five centuries after Xenophon — not from classical evidence.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Xenophon on the boys" data-title="Check: which is not in Xenophon?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · hold up 1–4 fingers</p>
+  <h2>Which of these is <u>not</u> in Xenophon’s account of the boys?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Boys went barefoot to harden their feet</span></li>
+    <li><span class="n">2</span><span>Boys wore one tunic all year round</span></li>
+    <li id="l09hq3"><span class="n">3</span><span>Reading and writing lessons were kept to the minimum</span></li>
+    <li><span class="n">4</span><span>Boys could steal food, but were beaten if caught</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l09hq3" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body">That is Plutarch, writing nearly five centuries after Xenophon: “Reading and writing lessons were restricted to the minimum necessary” (<i>Lykourgos</i> 16.6, Cooley D76). Section 3 tests the claim.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Xenophon on the boys" data-title="Notes 2 — Xenophon’s system" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Xenophon on the boys</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L9 · The agoge: purpose and stages</b></span><span>2 · Xenophon’s system</span></div>
+    <div class="row"><div class="cq">Who was the paidonomos, and who helped him?</div>
+      <div class="nts reveal">“Boy-herd”, from the top class, full power to compel + punish <span class="sep">·</span> young men (<b>hebontes</b>) with <b>whips</b> <span class="sep">·</span> any citizen could punish; eirens in charge if no adult (Xen. <i>LP</i> 2, D74)</div></div>
+    <div class="row"><div class="cq">Name four hardships</div>
+      <div class="nts reveal"><b>Bare feet</b> → hills <span class="sep">·</span> <b>one tunic</b> → cold + heat <span class="sep">·</span> <b>never full</b> → empty stomach <span class="sep">·</span> <b>stealing</b> → “better soldiers overall”</div></div>
+    <div class="row"><div class="cq">Why punish stealing if it was allowed?</div>
+      <div class="nts reveal">Punished “for being ineffective thieves” (2.8) — failure, not theft</div></div>
+    <div class="row"><div class="cq">How reliable?</div>
+      <div class="nts reveal">Well informed (estate from Sparta; maybe lived there) <span class="sep">·</span> but an admirer: “Lykourgos did the opposite”, idealised, no ages (Cooley)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Growing up: the stages" data-title="Source 7.2 — choosing the 300; Plutarch’s herds" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">3 · Growing up: the stages · We do — Source 7.2</p>
+  <h2>Two descriptions of the older boys and young men</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Extract A · Xenophon on the young men</div>
+        <p class="quote sm">[3] The ephors start by selecting the three outstanding members of the year group, who are designated hippagretai (guard commanders). Each of these selects a hundred others, openly stating the reasons for choosing this one and rejecting that. [4] As a result, those who fail to win the honour of selection become enemies of those who rejected them and bitter rivals of those who were chosen in their stead.</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 4.3–4 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D79</p>
+      </div>
+      <div class="note reveal" data-code="evidence"><p class="body">The 300 were the <b>hippeis</b>. Cooley: “although the name means ‘knights’ they had probably never been actual cavalrymen”.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Extract B · Plutarch on the herds and the eirens</div>
+        <p class="quote sm">As soon as they all reached the age of seven, he took over control and enrolled them in agelai (herds), thus ensuring that they all shared the same discipline and upbringing, and so got used to playing and studying together. …</p>
+        <p class="quote sm">This eiren, therefore, is a twenty-year old, and he commands those put under him in practice battles, while in barracks he makes them serve his meals as if they were servants.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 16.4 and 17.2 · written c. AD 100 · trans. B. Wilson · Cooley D76, D78</p>
+      </div>
+      <p class="qprompt reveal">Which writer gives ages — and why does that matter?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Only Plutarch, writing nearly five centuries after Xenophon, when the system had been revived and changed. Xenophon gives none. And Plutarch has to explain “eiren” to his readers.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Growing up: the stages" data-title="The stages — a modern reconstruction (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · Growing up: the stages · I do — putting the sources together</p>
+  <h2>The stages of growing up — a modern reconstruction</h2>
+  <figure class="diagram l09-tall"><svg class="l09-st" viewBox="0 0 1600 712" role="img" aria-label="The stages of the Spartan education, a modern reconstruction. Plutarch, writing about AD 100, gives ages: boys (paides) in herds from 7, without a tunic from 12, until about 18; then perhaps the melleirens, 18 to 20; then the eirens, from 20. Xenophon, writing in the 4th century BC, gives no ages: boys (paides), then teenagers (paidikoi), the start of this stage disputed, then young men (hebontes), then men eligible for the highest offices. Milestones: inspected by the elders of the tribe at birth; at 7 boys leave home to live with their age group; in the teens they become paidikoi; at about 20 the education ends with a contest at Orthia and election to a mess by unanimous vote. The young men, probably 20 to about 30, are called hebontes by Xenophon and eirens by Plutarch: one stage with two names. They served in the army and ate in the messes, 300 were chosen each year as hippeis, and they may not yet have voted in the assembly.">
+<text class="ban" x="12" y="30">A MODERN RECONSTRUCTION<tspan class="bans"> — the ages come from Plutarch and from Cooley’s reading of the sources; Xenophon gives none</tspan></text>
+<g class="linked" id="l09s-plu"><text class="gl" x="12" y="82">Plutarch</text><text class="gs" x="12" y="108">c. AD 100</text><text class="gs" x="12" y="132">gives ages</text><g class="bar plu"><rect x="440" y="52" width="440" height="82" rx="10"/><text class="bt" x="660.0" y="87">paides (boys)</text><text class="bs" x="660.0" y="117">in ‘herds’ from 7 · no tunic from 12</text></g><g class="bar plu unc"><rect x="880" y="52" width="80" height="82" rx="10"/><text class="bt" x="920.0" y="102">?</text></g><text class="bs" x="920.0" y="160">melleirens?</text><g class="bar plu unc"><rect x="960" y="52" width="400" height="82" rx="10"/><text class="bt" x="1160.0" y="87">eirens (young men)</text><text class="bs" x="1160.0" y="117">an eiren is ‘a twenty-year old’</text></g></g>
+<g class="linked" id="l09s-xen"><text class="gl" x="12" y="216">Xenophon</text><text class="gs" x="12" y="242">4th c. BC</text><text class="gs" x="12" y="266">gives no ages</text><g class="bar xen"><rect x="440" y="186" width="260.0" height="82" rx="10"/><text class="bt" x="530.0" y="221">paides</text><text class="bs" x="530.0" y="251">(boys)</text></g><g class="bar xen"><rect x="700.0" y="186" width="260.0" height="82" rx="10"/><text class="bt" x="870.0" y="221">paidikoi</text><text class="bs" x="870.0" y="251">(teenagers)</text></g><rect class="fz" x="620.0" y="178" width="160.0" height="98" rx="10"/><text class="fzt" x="700.0" y="298">start ‘disputed’</text><g class="bar xen"><rect x="960" y="186" width="400" height="82" rx="10"/><text class="bt" x="1160.0" y="236">hebontes (young men)</text></g><g class="bar xen unc"><rect x="1360" y="186" width="230" height="82" rx="10"/><text class="bs sm" x="1475.0" y="212">after this stage:</text><text class="bs sm" x="1475.0" y="236">the highest offices;</text><text class="bs sm" x="1475.0" y="260">hunting</text></g></g>
+<line class="axis" x1="160" y1="330" x2="1585" y2="330"/>
+<line class="tick" x1="160" y1="320" x2="160" y2="340"/><text class="tl" x="160" y="366">birth</text>
+<line class="tick" x1="440" y1="320" x2="440" y2="340"/><text class="tl" x="440" y="366">7</text>
+<line class="tick" x1="640" y1="320" x2="640" y2="340"/><text class="tl" x="640" y="366">12</text>
+<line class="tick" x1="880" y1="320" x2="880" y2="340"/><text class="tl" x="880" y="366">18</text>
+<line class="tick" x1="960" y1="320" x2="960" y2="340"/><text class="tl" x="960" y="366">20</text>
+<line class="tick" x1="1360" y1="320" x2="1360" y2="340"/><text class="tl" x="1360" y="366">30</text>
+<text class="tl end" x="1585" y="366">years of age</text>
+<g class="linked ms" id="l09s-m1"><circle class="dot" cx="160" cy="330" r="10"/><line class="ld" x1="160" y1="376" x2="160" y2="396"/><rect class="cd" x="10" y="396" width="290" height="142" rx="12"/><text class="ct" x="26" y="432">Birth</text><text class="cl" x="26" y="464">inspected by the elders</text><text class="cl" x="26" y="493">of the tribe (Plutarch)</text><circle class="dot" cx="440" cy="330" r="10"/><line class="ld" x1="440" y1="376" x2="457" y2="396"/><rect class="cd" x="312" y="396" width="290" height="142" rx="12"/><text class="ct" x="328" y="432">At 7 (Plutarch)</text><text class="cl" x="328" y="464">boys leave home to live</text><text class="cl" x="328" y="493">with their age group</text></g>
+<g class="linked ms" id="l09s-m2"><circle class="dot" cx="700.0" cy="330" r="10"/><line class="ld" x1="700.0" y1="376" x2="759" y2="396"/><rect class="cd" x="614" y="396" width="290" height="142" rx="12"/><text class="ct" x="630" y="432">In the teens</text><text class="cl" x="630" y="464">the boys become paidikoi;</text><text class="cl" x="630" y="493">exact age ‘disputed’</text></g>
+<g class="linked ms" id="l09s-m3"><circle class="dot" cx="960" cy="330" r="10"/><line class="ld" x1="960" y1="376" x2="932" y2="562"/><rect class="cd" x="614" y="562" width="636" height="142" rx="12"/><text class="ct" x="630" y="598">About 20: the education ends</text><text class="cl" x="630" y="630">a contest at Orthia marks the end of boyhood (Cooley);</text><text class="cl" x="630" y="659">then election to a mess, by a unanimous vote —</text><text class="cl" x="630" y="688">and a mess was needed for full citizenship</text></g>
+<g class="linked ms" id="l09s-m4"><rect class="hl" x="960" y="323" width="400" height="14" rx="7"/><path class="br" d="M960,372 v12 H1360 v-12 M1160,384 V396"/><circle class="eq" cx="1160" cy="161" r="21"/><text class="eqt" x="1160" y="170">=</text><text class="eqs" x="1192" y="168">one stage, two names</text><rect class="cd" x="970" y="396" width="620" height="142" rx="12"/><text class="ct" x="986" y="432">Young men: probably 20 to c. 30 (Cooley)</text><text class="cl" x="986" y="464">Xenophon: hebontes · Plutarch: eirens — one stage</text><text class="cl" x="986" y="493">army service and the mess · 300 chosen as hippeis</text><text class="cl" x="986" y="522">a vote in the assembly from 20 or c. 30? ‘not clear’</text><rect class="cd" x="1265" y="562" width="325" height="142" rx="12"/><text class="ct" x="1281" y="598">Who led the boys?</text><text class="cl" x="1281" y="630">young men: with whips</text><text class="cl" x="1281" y="659">(Xenophon); an eiren for</text><text class="cl" x="1281" y="688">each herd (Plutarch)</text></g>
+<rect class="cd lg" x="10" y="562" width="590" height="142" rx="12"/><text class="ct" x="26" y="598">How to read it</text><text class="cl" x="26" y="630">solid bar = a stage the writer names</text><text class="cl" x="26" y="659">dashed = its length or start is uncertain</text><text class="cl" x="26" y="688">Xenophon gives no ages: his bars follow Cooley</text>
+</svg>
+    <figcaption>Drawn for this lesson from Cooley’s introductions to the education system, the young men and the assembly, and his notes on D77–D79. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l09s-plu" hidden></i>
+  <i class="reveal" data-also="#l09s-xen" hidden></i>
+  <i class="reveal" data-also="#l09s-m1" hidden></i>
+  <i class="reveal" data-also="#l09s-m2" hidden></i>
+  <i class="reveal" data-also="#l09s-m3" hidden></i>
+  <i class="reveal" data-also="#l09s-m4" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Growing up: the stages" data-title="More than physical training?">
+<div class="wrap l09-dense">
+  <p class="eyebrow">3 · Growing up: the stages · what did boys learn — and who went through it? <span class="optional">If time</span></p>
+  <h2>More than physical training?</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">Music, poetry and dance</div><p class="body">Cooley: “Spartan youths were expected to perform at such occasions, and were clearly trained to do so” — at festivals (Lesson 10).</p></div>
+    <div class="card accent reveal"><div class="k">Laconic speech</div><p class="body">After supper the eiren might ask a boy “to say who was the best among the citizens” (Plutarch, D80). Cooley: the skill was “probably practised at common meals when the boys were expected to answer questions accurately and in the appropriate manner”.</p></div>
+    <div class="card accent reveal"><div class="k">Reading and writing?</div><p class="body">Plutarch: “Reading and writing lessons were restricted to the minimum necessary” (D76). But Stephen Hodkinson, introducing the inscriptions in Cooley: “recent studies have shown that the Spartiates were far more literate than previously supposed”. Cooley is more careful: “it seems likely that most Spartiates achieved at least a basic level of literacy”.</p></div>
+    <div class="card accent reveal"><div class="k">Who went through it?</div><p class="body">Not the heirs to the throne: “The law exempts boys being raised as future kings from this compulsory practice” (Plutarch, <i>Agesilaos</i> 1, D75). Yet the <i>mothakes</i>, boys “from poor or disenfranchised families” (Hodkinson, as cited by Cooley), did: they “share exactly the same education” (Phylarchus, 3rd century BC, D30 — Lesson 7).</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Growing up: the stages" data-title="Notes 3 — The stages" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>The stages of growing up</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L9 · The agoge: purpose and stages</b></span><span>3 · The stages</span></div>
+    <div class="row"><div class="cq">Put the main stages in order</div>
+      <div class="nts reveal"><b>paides</b> (from 7, Plut.) → <b>paidikoi</b> (teens; start “disputed”) → young men = <b>hebontes</b> (Xen.) = <b>eirens</b> (Plut.), prob. 20 to c. 30 → highest offices</div></div>
+    <div class="row"><div class="cq">Who were the hippeis, and how were they chosen?</div>
+      <div class="nts reveal">300 young men a year <span class="sep">·</span> ephors pick 3 <b>hippagretai</b>, each picks 100, giving reasons → rivalry (Xen. <i>LP</i> 4.3–4, D79) <span class="sep">·</span> “knights” but prob. never cavalry</div></div>
+    <div class="row"><div class="cq">When did the education end?</div>
+      <div class="nts reveal">About 20: contest at Orthia (Cooley) → <b>elected to a mess</b>, unanimous vote → needed for citizenship <span class="sep">·</span> vote in assembly from 20 or c. 30? not clear</div></div>
+    <div class="row"><div class="cq">Why are the ages in modern tables reconstructions?</div>
+      <div class="nts reveal">Xen. gives <b>no ages</b> <span class="sep">·</span> ages from Plut. (c. AD 100), after the system changed <span class="sep">·</span> Cooley hedges them: “disputed”, “probably”</div></div>
+    <div class="row"><div class="cq">More than physical training?</div>
+      <div class="nts reveal">Music, poetry, dance for festivals <span class="sep">·</span> Laconic answers at meals (prob.) <span class="sep">·</span> literacy: Plut. “minimum” v. Hodkinson “far more literate” <span class="sep">·</span> future kings exempt</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The altar of Orthia" data-title="The Sanctuary of Artemis Orthia" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">4 · The altar of Artemis Orthia, then and now · I do</p>
+  <h2>One sanctuary, many centuries</h2>
+  <div class="split" style="--cols:1fr .42fr 1fr">
+    <figure class="figure"><img src="images/clarke-8-8-artemis-orthia.jpg" alt="Remains of the Sanctuary of Artemis Orthia beside the Eurotas"><figcaption>Remains of the Sanctuary of Artemis Orthia beside the Eurotas — <span class="cr">Clarke & Garner, Fig 8.8</span></figcaption></figure>
+    <figure class="figure contain"><img src="images/bradley-3-23-orthia-ivory-l09.jpg" alt="A carved ivory or bone figure of Artemis Orthia in a patterned dress, between two birds — an ancient artefact"><figcaption>A carved ivory or bone figure of Artemis Orthia in a patterned dress, between two birds — an ancient artefact — <span class="cr">Bradley, Fig 3.23</span></figcaption></figure>
+    <div class="stack tight">
+      <div class="card reveal"><div class="k">Where — and how grand?</div><p class="body">Beside the Eurotas in Limnai (Lesson 2), “especially famous as the site of the boys’ contests” (Cooley). A modest temple: the Archaic temple measured about 16 × 7 m (W. G. Cavanagh, in Cooley).</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Cooley’s warning</div><p class="body">“This festival shows above all the dangers of later tradition (and a memorable story) obscuring real history.”</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Layers of time</div><p class="body">Cooley says the Roman-period whipping contests “seem to have been so popular as to merit the building of the semi-circular seating of the third-century AD Roman theatre”. The remains mix many centuries.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The altar of Orthia" data-title="One altar, two rituals (Source 7.3)" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">4 · The altar of Artemis Orthia, then and now · We do — continuity and change</p>
+  <h2>One altar, two rituals</h2>
+  <div class="l09-tn">
+    <div class="src">
+      <div class="k">Then · Xenophon, Source 7.1 continued</div>
+      <p class="quote sm">[9] He made it a special competition to steal cheeses from the altar of Artemis Orthia, while giving others to task of whipping the would-be thieves, thus seeking to demonstrate that a little pain means a long term gain in fame and delight.</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 2.9 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D74 and C84 (“He” is Lycurgus)</p>
+    </div>
+    <div class="src">
+      <div class="k">Now · Source 7.3, Pausanias on the whipping</div>
+      <p class="quote sm">There was an oracle that the altar should be bloodied with human blood: this used to be someone chosen by lot, but Lykourgos changed this to a whipping of ephebes, so that the altar could get its fill of human blood in this way: the priestess stands by them, holding the wooden statue of the goddess. It is small and therefore normally light, but if the floggers hold back their strokes because of an ephebe’s good looks or noble birth, then the statue becomes too heavy for the woman to carry, and she blames the floggers and says that it is their fault that she is struggling.</p>
+      <p class="prov">Pausanias, <i>Description of Greece</i> 3.16.10–11 · a Greek traveller writing under Roman rule, 2nd century AD · trans. in Cooley C93</p>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">What continued?</p>
+      <p class="body reveal">The altar, the whips, the young — and the credit to Lycurgus.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">What changed?</p>
+      <p class="body reveal">A stealing contest with whips became a whipping to bloody the altar, watched by the priestess.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Why tell a story of human sacrifice?</p>
+      <p class="body reveal">Perhaps to give a Roman-period ritual an ancient, sacred origin. Cooley calls it “an entirely specious justification”.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The altar of Orthia" data-title="The witnesses, in order">
+<div class="wrap l09-dense">
+  <p class="eyebrow">4 · The altar of Artemis Orthia, then and now · the witnesses in order <span class="optional">If time</span></p>
+  <h2>From a contest to a spectacle</h2>
+  <div class="tbl-scroll"><table class="tbl compact l09-wit">
+    <tr><th>Witness</th><th>When</th><th>What they describe</th></tr>
+    <tr class="reveal"><td><b>Xenophon</b></td><td>probably late 390s or 380s BC</td><td>a competition to steal cheeses, with others whipping “the would-be thieves” (D74, C84)</td></tr>
+    <tr class="reveal"><td><b>Plato</b>, <i>Laws</i> 633b–c</td><td>4th century BC</td><td>endurance of pain “in the ‘raids’ with many whippings resulting each time” (C85)</td></tr>
+    <tr class="reveal"><td><b>Cicero</b>, a Roman</td><td>1st century BC</td><td>boys beaten at the altar, “even, on several occasions as I heard when I was there, with fatalities” (C92)</td></tr>
+    <tr class="reveal"><td><b>Plutarch</b></td><td>c. AD 100</td><td>“present day ephebes, many of whom I have seen being flogged to death at the altar of Artemis Orthia” (D80); a yearly contest “called the flogging” (C94)</td></tr>
+    <tr class="reveal"><td><b>Pausanias</b></td><td>2nd century AD</td><td>a whipping of ephebes to bloody the altar, said to replace a human sacrifice (C93)</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="judgement"><div class="k">Cooley’s judgement</div><p class="body">In classical times the contest “was not the show for sadistic Roman tourists it later became”, and “the only fourth-century BC sources show a less gruesome contest.”</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The altar of Orthia" data-title="Hinge: who describes the cheese-stealing contest?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · one, two or three fingers</p>
+  <h2>The cheese-stealing contest at the altar of Orthia is described by:</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Pausanias</span></li>
+    <li id="l09hc2"><span class="n">2</span><span>Xenophon</span></li>
+    <li><span class="n">3</span><span>Plutarch</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l09hc2" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body">Xenophon, <i>Constitution of the Lakedaimonians</i> 2.9 (Cooley D74, C84). Pausanias and Plutarch describe the Roman-period flogging.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The altar of Orthia" data-title="You do — annotate Xenophon and Pausanias">
+<div class="wrap l09-dense">
+  <p class="eyebrow">4 · The altar of Artemis Orthia · You do · 12 minutes · press K for the timer</p>
+  <h2>Your turn: annotate Sources 7.1 and 7.3 — O, V, P, R, L</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">Source 7.1 · Xenophon</div>
+      <ul class="body">
+        <li><b>O</b> — the Spartans gave him an estate and he may have lived in Sparta: does that make him reliable, or simply well informed?</li>
+        <li><b>V</b> — list the officials and the features of the boys’ life he describes</li>
+        <li><b>P</b> — how does “Lykourgos did the opposite” turn description into praise?</li>
+        <li><b>R</b> — how does he explain away the stealing?</li>
+        <li><b>L</b> — no ages, and nothing in this passage on girls or on boys who failed: why does that matter?</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">Source 7.3 · Pausanias</div>
+      <ul class="body">
+        <li><b>O</b> — a traveller under Roman rule: how many centuries after Xenophon?</li>
+        <li><b>V</b> — what does he tell us about the ritual in his own day, and the priestess?</li>
+        <li><b>P</b> — why might a guide for educated visitors record the story behind a ritual?</li>
+        <li><b>R</b> — he credits the change to Lycurgus: why be suspicious (Lesson 3)?</li>
+        <li><b>L</b> — can a 2nd-century AD account show what happened in the 4th century BC?</li>
+      </ul>
+    </div>
+  </div>
+  <div class="src reveal" data-veil="Show model margin notes">
+    <div class="k">Model margin notes — yours should be in your own words</div>
+    <p class="quote sm model">Xen.: O well informed (estate from Sparta; perhaps lived there), but an admirer, writing prob. late 390s/380s BC · V paidonomos + whip-carrying young men; bare feet, one tunic, hunger, stealing; cheese contest · P “the opposite” of other Greeks = praise · R stealing excused: caught = “ineffective thieves” · L this passage: no ages, nothing on girls or failures. — Paus.: O 2nd c. AD, c. 550 yrs later · V whipping of ephebes; priestess + statue · P explains a strange ritual to visitors · R Lycurgus credited: “specious” (Cooley) · L evidence for the Roman ritual, not the classical one.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The altar of Orthia" data-title="Notes 4 — Orthia then and now" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The altar of Artemis Orthia, then and now</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L9 · The agoge: purpose and stages</b></span><span>4 · Orthia then and now</span></div>
+    <div class="row"><div class="cq">Describe the contest as Xenophon tells it</div>
+      <div class="nts reveal">Boys try to <b>steal cheeses</b> from the altar; others <b>whip</b> them <span class="sep">·</span> “a little pain means a long term gain in fame and delight” (Xen. <i>LP</i> 2.9, D74/C84)</div></div>
+    <div class="row"><div class="cq">How had it changed by the time of Pausanias, Cicero and Plutarch?</div>
+      <div class="nts reveal">A <b>flogging</b> of ephebes for endurance <span class="sep">·</span> deaths (Cicero heard; Plutarch “seen”) <span class="sep">·</span> spectators; theatre seating, 3rd c. AD <span class="sep">·</span> Paus.: replaced a human sacrifice, by Lycurgus (C93)</div></div>
+    <div class="row"><div class="cq">What stayed the same?</div>
+      <div class="nts reveal">Same <b>altar</b>, whips, the young <span class="sep">·</span> both credit <b>Lycurgus</b></div></div>
+    <div class="row"><div class="cq">Cooley’s verdict</div>
+      <div class="nts reveal">Classical contest “less gruesome” <span class="sep">·</span> Roman show for “sadistic Roman tourists” <span class="sep">·</span> Pausanias’ story = “entirely specious” → one altar, different meanings</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What was it for?" data-title="The purposes of the education" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow">5 · What was it for? · I do — pulling it together</p>
+  <h2>Five purposes — and whose purposes they are</h2>
+  <div class="l09-aims">
+    <div class="card accent reveal"><div class="k">Obedience</div><p class="body">“high levels of respect for authority and general discipline”<span class="l09-src">Xenophon 2.2 (D74)</span></p></div>
+    <div class="card accent reveal"><div class="k">Endurance</div><p class="body">bare feet, one tunic, too little food: ready for hills, cold, heat and hunger<span class="l09-src">Xenophon 2.3–5 (D74)</span></p></div>
+    <div class="card accent reveal"><div class="k">Resourcefulness</div><p class="body">stealing to make them “more skilful at finding supplies and better soldiers overall”<span class="l09-src">Xenophon 2.7 (D74)</span></p></div>
+    <div class="card accent reveal"><div class="k">Competition</div><p class="body">the cheese contest at Orthia; the yearly choice of 300 hippeis, in a stage that “served to distinguish the future élite”<span class="l09-src">Xenophon 2.9, 4.3 (D74, D79); Cooley</span></p></div>
+    <div class="card accent reveal"><div class="k">Citizens alike</div><p class="body">a precondition for citizenship that “created a high degree of conformity”<span class="l09-src">Cooley, introduction</span></p></div>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="analysis"><div class="k">So what?</div><p class="body">Each feature served the state, not the family: obedient, enduring, resourceful soldiers who were alike, and set apart from perioikoi, helots and other Greeks.</p></div>
+    <div class="note reveal" data-code="counter"><div class="k">Whose purposes?</div><p class="body">The reasons are Xenophon’s, an admirer’s, and the stamp of Lycurgus on each is his too. The Spartans may not have put it so neatly.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What was it for?" data-title="Notes 5 — What was it for?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>What was the education for?</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L9 · The agoge: purpose and stages</b></span><span>5 · What it was for</span></div>
+    <div class="row"><div class="cq">What were the military aims?</div>
+      <div class="nts reveal"><b>Obedience</b> (whips, any citizen could punish) <span class="sep">·</span> <b>endurance</b> (feet, tunic, hunger) <span class="sep">·</span> <b>resourcefulness</b> (stealing) → “better soldiers overall” (Xen. 2.7)</div></div>
+    <div class="row"><div class="cq">What did the competitions do?</div>
+      <div class="nts reveal">Orthia contest: pain → “fame and delight” <span class="sep">·</span> hippeis: rivalry; the young men’s stage “served to distinguish the future élite” (Cooley)</div></div>
+    <div class="row"><div class="cq">How did it make citizens?</div>
+      <div class="nts reveal">Precondition for citizenship → mess election <span class="sep">·</span> <b>conformity</b>; set Spartiates apart (Cooley)</div></div>
+    <div class="row"><div class="cq">Whose view?</div>
+      <div class="nts reveal">Mostly <b>Xenophon’s</b> reasons: an admirer, idealised <span class="sep">·</span> later writers describe a changed system</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · What was it for?" data-title="Summary" data-kind="notes">
+<div class="wrap l09-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.7fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>Who ran the education, and what was it for?</li>
+          <li>What were the stages — and how sure are we of the ages?</li>
+          <li>How did the contest at the altar of Orthia change?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">At Sparta the state, not the family, raised the boys: Xenophon, our best classical witness, describes a public education under a paidonomos in which hardship, hunger and licensed stealing trained obedient, enduring and resourceful soldiers, though the word agoge itself is a later label. Boys moved from the paides (from seven, says Plutarch) to the teenage paidikoi and then to the young men, probably aged about 20 to 30, who were elected to a mess and competed to be among the 300 hippeis — a sequence pieced together by modern historians, mostly from Plutarch’s ages. At the altar of Artemis Orthia, Xenophon’s cheese-stealing contest became a brutal Roman-period flogging, which Pausanias explained with a story of human sacrifice ended by Lycurgus.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · The state’s business; two witnesses; a late word</label></li>
+        <li><label><input type="checkbox"> 2 · Xenophon’s system and his reasons</label></li>
+        <li><label><input type="checkbox"> 3 · The stages: one stage, two names</label></li>
+        <li><label><input type="checkbox"> 4 · Orthia then and now</label></li>
+        <li><label><input type="checkbox"> 5 · What the education was for</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering an HSC ‘explain’ question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>An HSC-style question, written for this lesson</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 6 marks ≈ 11 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">Purpose</div><p class="body">Not what the education <i>was</i>, but what it was <i>for</i>: each feature tied to the aim it served.</p></div>
+  </div>
+  <p class="lead">No HSC paper from 2019 to 2025 has asked a short question on the stages or purpose of the boys’ education. The 2025 paper asked a 15-mark question on education and training: that is Lesson 10.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC-style question" data-title="The question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style, written for this lesson · Section II · 6 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> the <span class="code" data-code="keyterm" data-letter="K">purpose</span> of <span class="code" data-code="keyterm" data-letter="K">Spartan education</span> <span class="code" data-code="scope" data-letter="S">in this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Not from a past paper. Take it apart, write it yourself, then check it against NESA’s 6-mark criteria and an annotated model.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="Take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · We do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect.” So: feature → why → what it achieved. A list of hardships is a description.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The purpose of Spartan education</div><p class="body">What it was for: obedience, endurance, resourcefulness, competition, and citizens who were alike. Purposes, plural — more than “to make soldiers”.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">The Archaic and Classical periods, to 371 BC: lead with Xenophon. Plutarch and Pausanias wrote much later — label them, and keep the Roman flogging out of the classical picture.</p></div>
+    <div class="card accent reveal"><div class="k">6 marks</div><p class="body">About 11 minutes · a judgement first · three or four purposes, each with a feature and a named source · about 130–200 words.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="The criteria and the markers’ advice" data-kind="hsc">
+<div class="wrap l09-dense">
+  <p class="eyebrow">HSC-style question · NESA’s 6-mark criteria and the 2025 markers’ feedback</p>
+  <h2>What the markers reward</h2>
+  <div class="split" style="--cols:1.05fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2025, part (b))</th></tr>
+      <tr><td class="m">6</td><td>Provides an informed explanation relevant to the question · Communicates effectively using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5</td><td>Provides an explanation relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4</td><td>Provides some explanation relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Provides some information relevant to the question · May use some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">2025 · on the education question (c)</div>
+        <p class="fb">In better responses, students were able to <span class="q">assess a number of features of Sparta’s education and training regimes, including physical, military and ideological areas (c)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">2025 · on the 6-mark question (b)</div>
+        <p class="fb">Areas for students to improve include <span class="q">focusing on the methods of controlling the helots, rather than describing the role of the helots (b)</span></p>
+        <p class="body">The same trap here: focus on the purposes, rather than describing the boys’ life.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2025 HSC Ancient History Marking Guidelines, Section II part (b) — the criteria for a 6-mark “explain” question on a different topic (“Explain how the Spartans controlled the helots”) — and the 2025 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC-style question" data-title="You write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · You do · 11 minutes · press K for the timer</p>
+  <h2>Explain the purpose of Spartan education in this period. <span class="small">(6 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence</li>
+        <li>three or four purposes, each tied to a feature</li>
+        <li>Xenophon named, with his reasons</li>
+        <li>terms: paidonomos, hebontes, hippeis, syssition</li>
+        <li>about 130–200 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Spartan education aimed to turn every boy into …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="A model, annotated" data-kind="hsc">
+<div class="wrap l09-dense">
+  <p class="eyebrow">HSC-style question · Check your answer — a model written for this lesson</p>
+  <h2>Feature → reason → purpose, then evaluate</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m9-1">Spartan education aimed to make every boy an obedient, enduring and resourceful soldier and a citizen like his fellows, set apart from everyone else.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m9-2">Xenophon, in Cooley’s words ‘clearly familiar with the system’, says Lycurgus put the boys under a paidonomos with whip-carrying young men, so that ‘high levels of respect for authority and general discipline’ became typical of Sparta.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m9-3">Each hardship had a military reason: bare feet made boys ‘better at climbing hills’, one tunic all year prepared them for ‘cold and heat alike’, and short rations taught them to ‘keep going on an empty stomach’.</span><span class="mk">3</span>
+      <span class="code" data-code="analysis" id="m9-4">Stealing food was allowed, to make boys ‘better soldiers overall’, and those caught were punished for being ‘ineffective thieves’.</span><span class="mk">4</span>
+      <span class="code" data-code="keyterm" id="m9-5">Competition carried the training into adulthood: each year three hippagretai chose 300 young men as hippeis, and the rejected watched the chosen for any lapse.</span><span class="mk">5</span>
+      <span class="code" data-code="analysis" id="m9-6">Because finishing the education and winning election to a mess were conditions of full citizenship, the system created what Cooley calls ‘a high degree of conformity within Spartan society’.</span><span class="mk">6</span>
+      <span class="code" data-code="counter" id="m9-7">Xenophon idealises and gives no ages, and the harsher picture comes from later writers describing a changed system, but his account shows an education that served the state, not the family.</span><span class="mk">7</span>
+      <p class="meta">Model written for this lesson · about 200 words, about 11 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m9-1"><span class="mk">1</span><b>Answer first</b><span class="tx">Several purposes in one sentence — military and civic. Everything after explains them.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m9-2"><span class="mk">2</span><b>A named witness, weighed</b><span class="tx">Xenophon, with a reason to trust him, and his own words for the aim: obedience.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m9-3"><span class="mk">3</span><b>The explain move</b><span class="tx">Feature → reason → purpose, three times: NESA’s “relate cause and effect”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m9-4"><span class="mk">4</span><b>Explain the strange</b><span class="tx">Licensed stealing makes sense once its purpose is stated.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m9-5"><span class="mk">5</span><b>Specific and precise</b><span class="tx">Hippagretai, 300 hippeis: the detail that makes an explanation “informed”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m9-6"><span class="mk">6</span><b>Beyond the military</b><span class="tx">The civic purpose — the “ideological” side the 2025 markers named in the education question.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m9-7"><span class="mk">7</span><b>Evaluate, then close</b><span class="tx">The limits of the evidence, then back to the judgement: the state, not the family.</span></div>
+      <div class="verdict reveal"><b>Written to the 6-mark criteria:</b> an informed explanation, with cause and effect, named evidence and precise terms.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="Why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · describes, not explains</span>
+      <p class="resp">Spartan boys left home at seven and lived in groups. They went barefoot, wore one tunic all year and were given little food. They were allowed to steal but were beaten if they were caught.</p>
+      <p class="why">Accurate features, but no purposes: it never says what any of it was <i>for</i>.</p></div>
+    <div class="rung reveal"><span class="mark">4–5 marks · one purpose only</span>
+      <p class="resp">The purpose of Spartan education was to make strong soldiers. Going barefoot made boys better at climbing hills and hunger trained them to keep going without food …</p>
+      <p class="why">A real explanation, but only military, and no named source. Obedience, competition and citizenship are missing.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · Roman evidence as classical</span>
+      <p class="resp">The main purpose was to teach boys to bear pain: every year they were whipped at the altar of Artemis Orthia, often to death, to prove their courage.</p>
+      <p class="why">That flogging belongs to the Roman period (Cicero, Plutarch, Pausanias). Xenophon’s classical contest was stealing cheeses.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="Mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement naming more than one purpose</label></li>
+        <li><label><input type="checkbox"> tied at least three features to their purpose (cause → effect)</label></li>
+        <li><label><input type="checkbox"> named Xenophon and gave his reasons precisely</label></li>
+        <li><label><input type="checkbox"> included a purpose beyond the military: obedience, citizenship, sameness</label></li>
+        <li><label><input type="checkbox"> used terms correctly: paidonomos, hebontes or eirens, hippeis, syssition</label></li>
+        <li><label><input type="checkbox"> kept the Roman flogging out of the classical picture — or labelled it</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the stages of Spartan education.</b> (4 marks)</p>
+        <p class="small">Use the stages diagram: name each stage, say who describes it, and hedge the ages.</p></div>
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Underline every “because” and “so” in your answer. No underlines means a description, not an explanation.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put the stages in order" data-kind="practice">
+<div class="wrap prac l09-dense">
+  <p class="eyebrow">Practice and review · 1 of 5 · sequencing</p>
+  <h2>Put these stages of a Spartan boy’s life in order — and name the source for each</h2>
+  <p class="task">Remember: the ages come from Plutarch and Cooley’s reading; Xenophon gives none.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>He is elected to a mess (syssition), by a unanimous vote.</span></li>
+    <li><span class="k">B</span><span>He is inspected by the elders of his tribe.</span></li>
+    <li><span class="k">C</span><span>He walks in silence, hands under his cloak, eyes on the ground.</span></li>
+    <li><span class="k">D</span><span>As one of the young men, he may be chosen as one of the 300 hippeis.</span></li>
+    <li><span class="k">E</span><span>He leaves home to live in a herd (agele) with boys of his age.</span></li>
+    <li><span class="k">F</span><span>His youth over, he may hold the highest offices, and he hunts to stay fit.</span></li>
+    <li><span class="k">G</span><span>He serves meals to an eiren in barracks and fights in practice battles under him.</span></li>
+    <li><span class="k">H</span><span>He goes without a tunic and is given one cloak a year.</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq">
+      <li class="sol reveal"><b>B</b> — birth (Plutarch, <i>Lykourgos</i> 16.1, D73)</li>
+      <li class="sol reveal"><b>E</b> — from seven (Plutarch 16.4, D76)</li>
+      <li class="sol reveal"><b>H, G, C</b> in any order — the years before about 20, in two writers’ words: from twelve (Plutarch 16.6, D76); under an eiren (Plutarch 17.2, D78); the teenage paidikoi (Xenophon 3.4, D77)</li>
+      <li class="sol reveal"><b>A</b> — when the education is complete, about 20 (Cooley)</li>
+      <li class="sol reveal"><b>D</b> — the young men, probably 20 to c. 30 (Xenophon 4.3, D79)</li>
+      <li class="sol reveal"><b>F</b> — after the young men’s stage (Xenophon 4.7, D79)</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l09-dense">
+  <p class="eyebrow">Practice and review · 2 of 5 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l09-two" data-answers>
+    <li><span class="n">1</span><span>Xenophon gives the age at which each stage of the education began.</span>
+      <span class="sol no reveal">False <span class="why">— he gives no ages; the ages come from Plutarch (D76, D78).</span></span></li>
+    <li><span class="n">2</span><span>The paidonomos was helped by young men carrying whips.</span>
+      <span class="sol reveal">True <span class="why">— “a team of young men (hebontes) armed with whips” (Xenophon, D74).</span></span></li>
+    <li><span class="n">3</span><span>Classical writers regularly called the Spartan education the agoge.</span>
+      <span class="sol no reveal">False <span class="why">— the term “is never applied by any classical-period source specifically to Sparta’s public education” (Cooley); Xenophon calls it paideia.</span></span></li>
+    <li><span class="n">4</span><span>Xenophon describes a contest to steal cheeses from the altar of Artemis Orthia.</span>
+      <span class="sol reveal">True <span class="why">— <i>Constitution</i> 2.9 (Cooley D74, C84).</span></span></li>
+    <li><span class="n">5</span><span>In Xenophon, a boy caught stealing was punished for stealing at all.</span>
+      <span class="sol no reveal">False <span class="why">— the Spartans “punish those who are caught for being ineffective thieves” (2.8).</span></span></li>
+    <li><span class="n">6</span><span>Xenophon’s hebontes and Plutarch’s eirens were two different age groups.</span>
+      <span class="sol no reveal">False <span class="why">— Cooley treats them as the same young men: “hebontes in Xenophon, eirens in Plutarch”.</span></span></li>
+    <li><span class="n">7</span><span>Pausanias says Lycurgus replaced a human sacrifice at Orthia with a whipping of ephebes.</span>
+      <span class="sol reveal">True <span class="why">— C93; Cooley calls this “an entirely specious justification”.</span></span></li>
+    <li><span class="n">8</span><span>Every Spartan boy went through the education, including the heirs to the throne.</span>
+      <span class="sol no reveal">False <span class="why">— “The law exempts boys being raised as future kings from this compulsory practice” (Plutarch, D75).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l09-dense">
+  <p class="eyebrow">Practice and review · 3 of 5 · write an analytical paragraph</p>
+  <h2>How useful is Xenophon’s account (Source 7.1) for understanding Spartan education in the classical period?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what, and how far?</span>
+    <span class="l">Evidence</span><span>Quote two features he describes, with their reasons, and his phrase “Lykourgos did the opposite”.</span>
+    <span class="l">Analyse</span><span>Explain what the account reveals about the aims of the education.</span>
+    <span class="l">Evaluate</span><span>Weigh his value as a contemporary against his limits: an admirer, no ages, and nothing in this passage on girls or on boys who failed.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Xenophon’s account is the most useful evidence we have for the classical education, but it shows the system as an admirer wanted it seen. Writing probably in the late 390s or 380s BC, before the changes that followed Leuctra, he describes a compulsory public education run by a paidonomos with whip-carrying young men, and boys who went barefoot, wore ‘one tunic all the year round’ and were kept hungry. Each hardship comes with a military reason — bare feet made boys ‘better at climbing hills’, and licensed stealing made them better soldiers — so the account reveals the aims of the system as well as its features. Yet Cooley calls the work ‘a kind of political pamphlet, defending Sparta against its critics’: every point is framed by ‘Lykourgos did the opposite’, the stealing is explained away, and this passage gives no ages and says nothing of girls or of boys who failed. Even so, since Plutarch wrote centuries later about a changed system, Cooley concludes that ‘we have to rely mainly on Xenophon’. Xenophon is therefore highly useful for what the classical education aimed to do, but much less reliable for how harsh it was or how it worked year by year.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 4 of 5 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent was the main purpose of Spartan education to produce soldiers? <span class="small">(10 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence: largely military — but it also made citizens who were obedient and alike.</li>
+    <li><b>The military purpose:</b> Xenophon’s reasons for each hardship (Cooley D74); the hippeis and their rivalry (D79).</li>
+    <li><b>The civic purpose:</b> obedience to every citizen; music, dance and Laconic speech; a precondition for citizenship that “created a high degree of conformity” (Cooley).</li>
+    <li><b>Weigh the evidence:</b> Xenophon idealises and gives no ages; Plutarch and Pausanias describe a later, changed system (the altar of Orthia).</li>
+  </ol>
+  <p class="small">The 6-mark model in section 6 is the core of this answer.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Quick Check review" data-kind="practice notes">
+<div class="wrap prac l09-dense">
+  <p class="eyebrow">Practice and review · 5 of 5 · the Quick Checks for sections 1–3, with answers written for this lesson</p>
+  <h2>Quick Check review</h2>
+  <ol class="rq l09-two" data-answers>
+    <li>Why was education at Sparta a matter for the state rather than the family?
+      <span class="sol reveal">Spartans counted “the raising of new generations of citizens” as public business; the education was a precondition for citizenship and created conformity (Cooley). Plutarch even has the elders of the tribe decide whether a baby was reared (D73).</span></li>
+    <li>Who was the paidonomos, and who helped him enforce discipline?
+      <span class="sol reveal">The “boy-herd”, a senior Spartan from the top class with full power to compel and punish; young men (hebontes) with whips helped him, and any citizen could punish the boys (Xenophon, D74).</span></li>
+    <li>Name four hardships Xenophon says Lycurgus imposed. Why were boys punished for stealing if stealing was allowed?
+      <span class="sol reveal">Bare feet, one tunic all year, never enough food to feel full, stealing to make up the rations. Those caught were punished “for being ineffective thieves”.</span></li>
+    <li>Why does Cooley say the word agoge should be used with care?
+      <span class="sol reveal">No classical source uses it for Sparta; it first appears in a Spartan context c. 240–230 BC. Xenophon’s word is paideia.</span></li>
+    <li>Put the main stages in order.
+      <span class="sol reveal">Paides → paidikoi → the young men, whom Xenophon calls hebontes and Plutarch eirens: one stage, not two.</span></li>
+    <li>Who were the hippeis, and how were they chosen?
+      <span class="sol reveal">300 young men chosen each year: the ephors picked three hippagretai, and each chose a hundred, giving his reasons (D79). Despite the name, probably never cavalry.</span></li>
+    <li>Why must the ages in modern tables be treated as reconstructions?
+      <span class="sol reveal">Xenophon gives none; the ages come from Plutarch, writing about AD 100 after the system had changed, and Cooley hedges them (“disputed”, “probably”).</span></li>
+    <li>Give one piece of evidence that the education involved more than physical training.
+      <span class="sol reveal">Boys answered questions such as who was “the best among the citizens” (Plutarch, D80); youths were trained to perform music and dance at festivals (Cooley).</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One hardship of the boys’ education — and the reason Xenophon gives for it.</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One thing that changed at the altar of Orthia between Xenophon and Pausanias.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> what the archaeology of Orthia shows — lead offerings and a victor’s dedication — the choruses of the Gymnopaedia, and two historians, Kennell and Ducat, on how much of the agoge is a later reconstruction.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Xenophon, <i>Constitution of the Lakedaimonians</i> 2, 3.4 and 4.3–7 (D74 with 2.9 also C84, D77, D79, trans. B. Wilson); Plutarch, <i>Life of Lykourgos</i> 16.1, 16.4–7, 17.2 and 18.1–2 (D73, D76, D78, D80, trans. B. Wilson), <i>Life of Agesilaos</i> 1 (D75) and <i>Spartan Customs</i> 40 (C94); Pausanias, <i>Description of Greece</i> 3.16.10–11 (C93); Plato, <i>Laws</i> 633b–c (C85); Cicero, <i>Tusculan Disputations</i> 2.34 (C92); Phylarchus in Athenaeus, <i>Scholars at Dinner</i> 6.102 (D30); Tyrtaeus fr. 6–7 (A6, trans. K. Hughes). Cooley’s glossary; his introductions to the literary sources, the education system, the young men, the mothakes, the helots, the assembly, Artemis, Artemis Orthia and the town of Sparta (section K); and his notes on D41, D77–D79, C94 and E53b (with J. F. Lazenby, N. M. Kennell and J. Ducat as cited there); S. Hodkinson’s introduction to the inscriptions and W. G. Cavanagh’s introduction to Laconian archaeology, both in Cooley.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">Marking criteria (2025 Section II part (b)) and marking feedback for Question 11: NSW Education Standards Authority, 2025 HSC Ancient History marking guidelines and feedback. © NESA. NESA glossary of key words for “explain”. The 6-mark and 10-mark questions were written for this lesson.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images and diagrams</div>
+      <ul class="small"><li>A modern illustration of barefoot Spartan boys in rough cloaks, watched by an older man — an artist’s imagining, not ancient evidence — Bradley, Fig 3.13</li><li>Remains of the Sanctuary of Artemis Orthia beside the Eurotas — Clarke & Garner, Fig 8.8</li><li>A carved ivory or bone figure of Artemis Orthia in a patterned dress, between two birds — an ancient artefact — Bradley, Fig 3.23</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the stages of growing up (a modern reconstruction, from Cooley) and the table of Xenophon’s features and reasons (from Cooley D74).</p></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
