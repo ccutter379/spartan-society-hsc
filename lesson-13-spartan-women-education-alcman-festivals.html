@@ -1,0 +1,2241 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L13 · Spartan Women I</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: stereotypes and status, girls’ education, Alcman’s Maiden-song and the bronze girls, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 13 (Spartan women I: education, Alcman and festivals). Every class starts l13-. */
+/* No SVG diagrams in this lesson: the key vocabulary, "Who tells us about Spartan girls?", the
+   OVPRL think-aloud, the can / cannot table and the synthesis grid are plain HTML tables, so
+   they reflow on phones. */
+
+/* who tells us: a coloured tag for whose voice it is */
+.l13-tag{display:inline-block; margin:0 .35em .15em 0; padding:.02em .5em; border-radius:999px;
+  font-size:.82em; font-weight:700; letter-spacing:.02em; white-space:nowrap; border:1px solid currentColor;}
+.l13-tag.sp{color:var(--c-evidence); background:var(--w-evidence);}
+.l13-tag.at{color:var(--c-keyterm); background:var(--w-keyterm);}
+.l13-tag.la{color:var(--c-counter); background:var(--w-counter);}
+.tbl.compact.l13-voices{font-size:calc(var(--fs-body)*.78);}
+.tbl.compact.l13-voices td{padding-top:.32em; padding-bottom:.32em;}
+.l13-full .body{max-width:none;}
+.l13-voices td:first-child{width:34%;}
+.l13-voices .l13-when{display:block; color:var(--slate); font-size:.92em;}
+
+/* OVPRL think-aloud: the code column */
+.l13-ovprl td:first-child{font-family:var(--mono); font-weight:700; color:var(--deep); width:2.4em; text-align:center;}
+.l13-ovprl td:nth-child(2){font-weight:600; width:38%;}
+
+/* can show / cannot show */
+.l13-cc th:first-child, .l13-cc td:first-child{border-left:5px solid var(--c-evidence);}
+.l13-cc th:last-child, .l13-cc td:last-child{border-left:5px solid var(--c-counter);}
+.l13-cc td{width:50%;}
+
+/* synthesis grid: says so / consistent with / silent */
+.l13-grid th{vertical-align:bottom;}
+.l13-grid .l13-sub{display:block; font-weight:400; font-size:.86em; opacity:.85;}
+.l13-grid td.y{background:var(--w-evidence);}
+.l13-grid td.m{background:var(--w-keyterm);}
+.l13-grid td.n{color:var(--slate);}
+.l13-grid td:first-child{white-space:nowrap;}
+
+/* two-column practice lists on wide screens */
+.l13-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l13-two{gap:.4em .7em;}
+@media (max-width:900px){ .l13-two{grid-template-columns:1fr;} }
+
+/* small figure beside a source; a tall object photo */
+.l13-fig .figure img{max-height:26vh; object-fit:contain; background:var(--surface);}
+html.read .l13-fig .figure img{max-height:42vh;}
+.l13-obj .figure img{max-height:calc(100vh - 300px); object-fit:contain; background:var(--surface);}
+html.read .l13-obj .figure img{max-height:60vh;}
+html:not(.read) .l13-obj.l13-short .figure img{max-height:calc(100vh - 420px);}
+/* credits: smaller print so both columns fit one screen */
+html:not(.read) .l13-cred .card.quiet .small{font-size:calc(var(--fs-chrome)*.9); line-height:1.32;}
+
+/* phones: tables wrap; tags may wrap */
+@media (max-width:700px){
+  .l13-grid td:first-child{white-space:normal;}
+  .l13-voices td:first-child{width:auto;}
+  .l13-ovprl td:nth-child(2){width:auto;}
+}
+
+/* dense slides on short projectors (1366 x 768) */
+@media (max-height:820px){
+  html:not(.read) .l13-dense .src .quote.sm{font-size:calc(var(--fs-body)*.84); line-height:1.4;}
+  html:not(.read) .l13-dense .src .quote:not(.sm){font-size:var(--fs-body); line-height:1.45;}
+  html:not(.read) .l13-dense .src{padding:10px 16px;}
+  html:not(.read) .l13-dense .src .prov{font-size:calc(var(--fs-chrome)*.92); margin-top:.45em;}
+  html:not(.read) .l13-dense .note{padding:.42em .85em;}
+  html:not(.read) .l13-dense .note .body, html:not(.read) .l13-dense .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.34;}
+  html:not(.read) .l13-dense .card{padding-top:10px; padding-bottom:10px;}
+  html:not(.read) .l13-dense .qprompt{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l13-dense .stack.tight > p.body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l13-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l13-dense .tbl.compact td{padding:.28em .55em;}
+  html:not(.read) .l13-dense .tbl.compact th{padding-top:.3em; padding-bottom:.3em;}
+  html:not(.read) .l13-dense .rq{font-size:calc(var(--fs-body)*.74); row-gap:.3em;}
+  html:not(.read) .l13-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.28em .7em;}
+  html:not(.read) .l13-dense .seq li{font-size:calc(var(--fs-body)*.76); padding:.28em .7em;}
+  html:not(.read) .l13-dense .fb{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l13-dense .cornell .nts, html:not(.read) .l13-dense .cornell .cq{font-size:calc(var(--fs-body)*.8); padding-top:.35em; padding-bottom:.35em;}
+  html:not(.read) .l13-dense .moves{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l13-dense .src .quote.sm.model{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l13-dense .card ol.body, html:not(.read) .l13-dense .card ul.body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l13-dense .keylist li{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .l13-dense .keylist .d{font-size:calc(var(--fs-body)*.76); line-height:1.3;}
+  html:not(.read) .l13-fig .figure img{max-height:20vh;}
+  html:not(.read) .l13-obj .figure img{max-height:calc(100vh - 250px);}
+  html:not(.read) .l13-obj.l13-short .figure img{max-height:calc(100vh - 330px);}
+  html:not(.read) .l13-dense .tbl.compact.l13-voices{font-size:calc(var(--fs-body)*.68);}
+  html:not(.read) .l13-dense .tbl.compact.l13-voices td{padding-top:.2em; padding-bottom:.2em;}
+  html:not(.read) .l13-dense .crit td.m{font-size:calc(var(--fs-big)*.8);}
+  html:not(.read) .l13-dense .tbl.crit.compact{font-size:calc(var(--fs-body)*.7);}
+  html:not(.read) .annot .verdict{font-size:calc(var(--fs-body)*.74); padding:.35em .7em; line-height:1.32;}
+  html:not(.read) .l13-dense .card.quiet .small, html:not(.read) .l13-dense .card.quiet ul.small{font-size:calc(var(--fs-chrome)*.84); line-height:1.3;}
+}
+
+/* phones and narrow windows: annotated answers stack */
+@media (max-width:900px){ .annot.wide{grid-template-columns:1fr;} }
+
+/* "This Does That" model sentences: a little space between the two */
+.l13-tdt .body + .body{margin-top:.55em;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 13" data-title="Spartan women I: education, Alcman and festivals" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 13</p>
+      <h1>Spartan women I: education, Alcman and festivals</h1>
+      <p class="lead">Almost every word about Spartan girls was written by men, and most of it by outsiders. What do they say girls learned, and why? And what do a song Spartan girls sang, a bronze girl made in Laconia and a bronze mirror support add?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-7-7-amyklaion.jpg" alt="The site of the sanctuary of Apollo at Amyklai"><figcaption>The site of the sanctuary of Apollo at Amyklai — <span class="cr">Clarke & Garner, Fig 7.7</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 13" data-title="Spaced review" data-kind="intro">
+<div class="wrap l13-dense">
+  <p class="eyebrow">Spaced review · 6 minutes · from memory, no notes</p>
+  <h2>Five questions</h2>
+  <div class="split" style="--cols:1fr 1.35fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">What was the krypteia?</span><span class="d">Lesson 12</span></li>
+      <li><span class="num">2</span><span class="t">How does Plutarch’s version of the 2,000 helots differ from Thucydides’?</span><span class="d">Lesson 12</span></li>
+      <li><span class="num">3</span><span class="t">What did Ducat claim about Spartan education?</span><span class="d">Lesson 10</span></li>
+      <li><span class="num">4</span><span class="t">Which Athenian writer, given an estate by the Spartans, admired Sparta?</span><span class="d">A writer</span></li>
+      <li><span class="num">5</span><span class="t">Who were the perioikoi?</span><span class="d">A term</span></li>
+    </ol>
+    <div class="stack">
+      <div class="card quiet" data-veil="Show the answers">
+        <div class="k">Answers</div>
+        <ol class="body">
+          <li class="reveal">Selected young men sent into the countryside, who hid by day and, some sources say, killed helots by night: Plutarch, drawing on Aristotle, says so; Plato describes a test of endurance.</li>
+          <li class="reveal">In Thucydides the helots put themselves forward and about 2,000 were chosen, garlanded and never seen again; Plutarch has the Spartans pick out the bravest (Cooley’s note on D44).</li>
+          <li class="reveal">Education was “at the heart of Spartan ideology and practice”: it aimed to make citizens “as far as possible the same”.</li>
+          <li class="reveal">Xenophon (c. 430–c. 350 BC) — the author of today’s first source.</li>
+          <li class="reveal">Free people of at least 50 towns, almost all in Laconia: personally free, but without citizen rights at Sparta; they fought in the Lacedaemonian army (Cooley).</li>
+        </ol>
+      </div>
+      <div class="note reveal" data-code="judgement"><div class="k">Looking back — and today</div><p class="body">Lessons 9–12 followed the boys through their education and the men into the army and the messes. Today: the other half of the citizen population — what Spartan girls learned, and why.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 13" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse what girls’ education and festival roles reveal about Spartan values</li>
+        <li>synthesise written and archaeological evidence about Spartan girls</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>explain the purpose Xenophon gives for girls’ training, and why he gives it</li>
+        <li>describe what Alcman’s Maiden-song shows about girls’ choruses</li>
+        <li>say what a bronze figure of a girl can and cannot show</li>
+        <li>write a paragraph that combines Xenophon, Alcman and a bronze girl</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body">A woman’s <b>role</b> is what she did; her <b>status</b> is her standing and rights. Today is mostly about roles: training, singing, taking part in festivals.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 13" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L13 · Spartan women I: education, Alcman and festivals</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Xen. = Xenophon, Plut. = Plutarch)</span></div></div>
+      <div class="row"><div class="cq">Who wrote about Spartan women?</div><div class="nts">men; mostly outsiders …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: whose voices · educating girls · Alcman and festivals · bronze girls · putting it together.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 13" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Girls and festivals</th><th>Meaning</th></tr>
+      <tr><td>partheneion</td><td>a maiden-song: a song written for a chorus of girls to perform at a festival</td></tr>
+      <tr><td>chorus</td><td>a group who sang and danced together, usually in honour of a god</td></tr>
+      <tr><td>chorus leader</td><td>the girl who led a chorus; Alcman’s chorus praises its own</td></tr>
+      <tr><td>votive</td><td>an offering dedicated to a god</td></tr>
+      <tr><td>Hyakinthia</td><td>a three-day festival of Apollo and Hyacinthus at Amyklai, about 5–6 km south of Sparta</td></tr>
+      <tr><td>Gymnopaedia</td><td>(Cooley: Gymnopaidiai) a summer festival of choral dancing and endurance in the agora (Lesson 10)</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Thinking about the evidence</th><th>Meaning</th></tr>
+      <tr><td>role</td><td>what a woman did: bearing and raising children, running a household, singing in choruses, serving the gods</td></tr>
+      <tr><td>status</td><td>a woman’s standing and rights, such as owning land (Lesson 14)</td></tr>
+      <tr><td>stereotype</td><td>a fixed, simplified picture of a group, often held by outsiders</td></tr>
+      <tr><td>eugenics</td><td>improving a population by controlling who has children</td></tr>
+      <tr><td>mirage</td><td>the idealised, distorted picture of Sparta in ancient and modern writing (Lesson 1)</td></tr>
+      <tr><td>synthesis</td><td>combining several sources, written and archaeological, into one judgement</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Alkman, Lykourgos, Lakedaimonians, Hyakinthia, Gymnopaidiai). In your own writing use Alcman, Lycurgus, Lacedaemonians, Hyakinthia (also spelt Hyacinthia) and Gymnopaedia.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Whose voices?" data-title="Famous — and notorious" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">1 · Whose voices? Stereotypes, roles and status · I do</p>
+  <h2>Famous — and notorious</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <div class="card accent"><div class="k">The reputation</div><p class="body">Cooley: Spartan women “were famous (and notorious) for being unusually independent and more ready to appear and speak in public than women elsewhere.”</p></div>
+      <div class="src">
+        <div class="k">Source · an Athenian comedy puts a Spartan woman on stage</div>
+        <p class="quote sm">Welcome Lakonian Lampito, my darling! / How beautiful you look, my sweetie! / And that complexion! And those rippling muscles of yours! / You could even throttle a bull.</p>
+        <p class="quote sm">Lampito: By the twin gods I’m sure I could; / I work out and do my squat-jumps.</p>
+        <p class="prov">Aristophanes, <i>Lysistrata</i> 79–84 (part) · Lysistrata greets Lampito · an Athenian comedy performed in 411 BC, during the war with Sparta · trans. K. Hughes · Cooley D66</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Who is speaking, to whom, and when?</p>
+      <p class="body reveal">An Athenian playwright, to an Athenian audience at a festival, in 411 BC — in the middle of the war with Sparta. The words are his, not a Spartan woman’s.</p>
+      <p class="qprompt reveal">What does the joke expect the audience to believe?</p>
+      <p class="body reveal">That Spartan women are muscular and athletic, and exercise. Cooley: Aristophanes “clearly found a useful source for laughs”.</p>
+      <p class="qprompt reveal">So is a comedy any use as evidence?</p>
+      <p class="body reveal">Not for what Spartan women did, but for what Athenians expected: Cooley calls the play “particularly useful as a guide to Athenian stereotypes of Sparta in this period.”</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Whose voices?" data-title="‘With it or on it’" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">1 · Whose voices? · I do — the stern Spartan mother</p>
+  <h2>“Son, with it or on it”</h2>
+  <div class="split" style="--cols:.9fr 1.2fr">
+    <figure class="figure contain"><img src="images/clarke-5-3-le-barbier-spartan-mother-l13.jpg" alt="A modern painting: Le Barbier’s early 19th-century picture of a Spartan woman handing her son his shield — the ‘with it or on it’ story, not ancient evidence"><figcaption>A modern painting: Le Barbier’s early 19th-century picture of a Spartan woman handing her son his shield — the ‘with it or on it’ story, not ancient evidence — <span class="cr">Clarke & Garner, Fig 5.3</span></figcaption></figure>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source · one of Plutarch’s <i>Sayings of Spartan Women</i></div>
+        <p class="quote sm">Another woman, handing her son his shield, encouraged him with the words, “Son, with it or on it.”</p>
+        <p class="prov">Plutarch, <i>Moralia</i> 241F = <i>Sayings of Spartan Women</i>, ‘Unknown women’ 16 · collected c. AD 100 · trans. in Cooley F35</p>
+      </div>
+      <p class="qprompt reveal">Why does Cooley call this famous saying “problematic”?</p>
+      <p class="body reveal">“dead Spartans were not carried back home at all, but buried where they fell”. The saying does not fit what Spartans did with their dead.</p>
+      <p class="qprompt reveal">Then what are the sayings good for?</p>
+      <p class="body reveal">The ideal, not the record. Cooley: “The stories then are very little use as genuine historical record, but certainly create an excellent impression of the Spartan mirage.”</p>
+      <div class="note reveal" data-code="evidence"><div class="k">NESA agrees</div><p class="body">The 2024 marking guidelines: “Plutarch also records the ‘Sayings of Spartan Women’, a text which reveals non-Spartan stereotypes about Spartan women linked to the militaristic nature of society.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Whose voices?" data-title="Who tells us about Spartan girls? (table)" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">1 · Whose voices? · I do — today’s sources, by who was speaking</p>
+  <h2>Who tells us about Spartan girls?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l13-voices">
+    <tr><th>Source · when</th><th>Whose voice?</th><th>On girls</th></tr>
+    <tr class="reveal"><td><b>Alcman</b>, Maiden-song (A14)<span class="l13-when">late 7th century BC</span></td><td><span class="l13-tag sp">inside Sparta</span> a poet working at Sparta, probably Spartan; words for girls to sing</td><td>a chorus of ten girls at “our festival”</td></tr>
+    <tr class="reveal"><td><b>A bronze girl</b> (D64)<span class="l13-when">520–500 BC</span></td><td><span class="l13-tag sp">made in Laconia</span> maker unknown</td><td>a girl in a short dress, running or dancing</td></tr>
+    <tr class="reveal"><td><b>Aristophanes</b>, <i>Lysistrata</i> (D66)<span class="l13-when">411 BC</span></td><td><span class="l13-tag at">Athenian</span> a comic playwright, in wartime</td><td>Lampito’s muscles: “I work out and do my squat-jumps”</td></tr>
+    <tr class="reveal"><td><b>Xenophon</b>, <i>Constitution</i> (D68)<span class="l13-when">probably late 390s or 380s BC</span></td><td><span class="l13-tag at">Athenian</span> an admirer, given an estate by the Spartans</td><td>races and wrestling, for strong children</td></tr>
+    <tr class="reveal"><td><b>Plato</b>, <i>Protagoras</i> (D72)<span class="l13-when">Plato c. 429–347 BC</span></td><td><span class="l13-tag at">Athenian</span> a philosopher</td><td>a speaker in his dialogue says Spartan women “think highly of education”</td></tr>
+    <tr class="reveal"><td><b>Polycrates</b> on the Hyakinthia (C69)<span class="l13-when">date unknown; quoted by Didymus (1st century BC) in Athenaeus (c. AD 200)</span></td><td><span class="l13-tag la">via later writers</span> “presumably a Lakonian local historian” (Cooley)</td><td>girls in carriages and racing-chariots</td></tr>
+    <tr class="reveal"><td><b>Plutarch</b>, <i>Lykourgos</i> 14–15, <i>Sayings</i> (D70, D71, F35)<span class="l13-when">c. AD 100</span></td><td><span class="l13-tag la">Roman period</span> a Greek under Roman rule</td><td>discus and javelin; songs praising and mocking young men</td></tr>
+  </table></div>
+  <div class="note reveal l13-full" data-code="judgement"><p class="body"><b>The pattern:</b> every writer here is a man, and only Alcman (and perhaps Polycrates) wrote from inside Laconia — Cooley: “Our (non-Spartan) sources are very male orientated”. Women’s own words survive only in a few inscriptions, “the voices of a few, largely wealthy, women speaking in their own words” (Hodkinson; Cynisca, Lesson 14).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Whose voices?" data-title="Check: role or status?">
+<div class="wrap prac l13-dense">
+  <p class="eyebrow">Check for understanding · point left for a role, right for status</p>
+  <h2>Role or status?</h2>
+  <div class="note" data-code="evidence"><div class="k">NESA’s 2020 feedback, on “Describe the role of women in this period”</div>
+    <p class="fb">Areas for students to improve include <span class="q">focusing on the roles of women rather than privileges or status (a)</span></p></div>
+  <ol class="tf l13-two" data-answers>
+    <li><span class="n">1</span><span>bearing and raising citizen sons</span><span class="sol reveal">Role <span class="why">— what she did</span></span></li>
+    <li><span class="n">2</span><span>owning land in her own name</span><span class="sol no reveal">Status <span class="why">— a right (Lesson 14)</span></span></li>
+    <li><span class="n">3</span><span>singing in a chorus at a festival</span><span class="sol reveal">Role <span class="why">— Alcman’s girls</span></span></li>
+    <li><span class="n">4</span><span>being free to appear in public</span><span class="sol no reveal">Status <span class="why">— her standing, compared with other Greek women</span></span></li>
+    <li><span class="n">5</span><span>running a household and estate while the men were at the mess or at war</span><span class="sol reveal">Role <span class="why">— what she did (Lesson 14)</span></span></li>
+    <li><span class="n">6</span><span>dedicating offerings to the gods</span><span class="sol reveal">Role <span class="why">— women dedicated at Orthia (section 3)</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Whose voices?" data-title="Notes 1 — Whose voices?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Whose voices? Stereotypes, roles and status</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L13 · Spartan women I: education, Alcman and festivals</b></span><span>1 · Whose voices?</span></div>
+    <div class="row"><div class="cq">Who wrote about Spartan women?</div>
+      <div class="nts reveal">Almost all <b>men</b>, nearly all <b>outsiders</b> (Athenians) or <b>much later</b> (Plutarch, c. AD 100) <span class="sep">·</span> Alcman, prob. Spartan, the exception <span class="sep">·</span> women’s own words: a few inscriptions (Lesson 14)</div></div>
+    <div class="row"><div class="cq">What was the stereotype, and where does it come from?</div>
+      <div class="nts reveal">“famous (and notorious)” for independence (Cooley) <span class="sep">·</span> <b>Lampito</b>: muscles, “squat-jumps” — Athenian comedy, 411 BC (D66) <span class="sep">·</span> stern mother: “Son, with it or on it” — Plutarch’s <i>Sayings</i>, “problematic” (F35)</div></div>
+    <div class="row"><div class="cq">Role or status?</div>
+      <div class="nts reveal"><b>Role</b> = what she did (children, household, choruses, gods) <span class="sep">·</span> <b>status</b> = standing and rights (land) <span class="sep">·</span> NESA 2020: focus on roles “rather than privileges or status”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Educating girls" data-title="Source 10.1 — Xenophon on girls" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">2 · Educating girls: strong bodies for strong sons · I do — Source 10.1</p>
+  <h2>Xenophon on the upbringing of girls</h2>
+  <div class="split" style="--cols:1.7fr 1fr">
+    <div class="src">
+      <div class="k">Source 10.1 · Xenophon on the upbringing of girls</div>
+      <p class="quote sm">[3] To begin at the beginning: let us first consider the question of procreation. In other countries, young girls, who are the state’s future mothers and are thought to have been properly brought up, are nurtured on the most restricted diet possible and with a minimum of delicacies. They are forced to abstain from wine completely or else only to drink it diluted with water. <span class="code" data-code="counter" data-letter="C">The rest of the Greeks expect their girls to sit quietly at their spinning, in imitation of the sedentary existence of most craftsmen.</span> But if women are brought up like that, how could anyone expect them to produce sturdy children? [4] As far as Lykourgos was concerned, there were enough female slaves to produce clothing, <span class="code" data-code="judgement" data-letter="J">whereas the most important task for freeborn women was producing children.</span> So as a first priority he laid it down that physical fitness was as important for women as for men. <span class="code" data-code="evidence" data-letter="E">So he established women’s competitions in both running and wrestling,</span> <span class="code" data-code="analysis" data-letter="A">in the belief that the offspring of two strong parents would be all the more robust.</span></p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 1.3–4 · an Athenian, c. 430–c. 350 BC, writing probably in the late 390s or 380s BC · trans. B. Wilson · Cooley D68</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="counter">What were girls elsewhere expected to do?</p>
+      <p class="body reveal">Sit quietly at their spinning, on a restricted diet, with little or no wine.</p>
+      <p class="qprompt reveal" data-paint="evidence">What did Spartan girls do instead?</p>
+      <p class="body reveal">Competitions in running and wrestling. Female slaves made the clothing.</p>
+      <p class="qprompt reveal" data-paint="judgement">What was a free woman’s most important task?</p>
+      <p class="body reveal">“producing children” — his starting point is “procreation”.</p>
+      <p class="qprompt reveal" data-paint="analysis">Why train girls at all?</p>
+      <p class="body reveal">Strong parents → strong children. The purpose is eugenic.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Educating girls" data-title="I do — OVPRL on Xenophon" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">2 · Educating girls · I do — thinking aloud with O, V, P, R, L</p>
+  <h2>How far can we trust Xenophon on girls?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l13-ovprl">
+    <tr><th>Code</th><th>The question I ask</th><th>My answer</th></tr>
+    <tr class="reveal"><td><b>O</b></td><td>A male Athenian admirer of Sparta: what access would he have had to Spartan girls?</td><td>He knew Sparta well — the Spartans gave him an estate, and he “may have lived in Sparta” (Cooley) — and girls exercised in public. But he writes as a male outsider: no Spartan woman speaks in his account.</td></tr>
+    <tr class="reveal"><td><b>V</b></td><td>What does he say girls did, and did not do?</td><td>Did: competitions in running and wrestling. Did not: sit spinning — “female slaves” made the clothing.</td></tr>
+    <tr class="reveal"><td><b>P</b></td><td>He begins with “procreation”. Why is he interested in girls at all?</td><td>As future mothers. His book is, in Cooley’s words, “a kind of political pamphlet, defending Sparta against its critics”, crediting the system to Lycurgus.</td></tr>
+    <tr class="reveal"><td><b>R</b></td><td>He builds a contrast with “other countries”. How might that exaggerate?</td><td>Every point is the opposite of other Greeks, so Sparta looks more different, and wiser, than it may have been. Cooley: the text “probably depicts a somewhat idealised Sparta”.</td></tr>
+    <tr class="reveal"><td><b>L</b></td><td>Which women are missing?</td><td>No girl or woman speaks. Nothing on music or festivals here. The “female slaves” (perhaps including helot women) appear only as clothing-makers.</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="counter"><div class="k">Not quite the first</div><p class="body">Xenophon’s is our fullest early prose account. The Athenian Critias (c. 460–403 BC), an admirer of Sparta writing a little earlier, already argued that “the mother of the child before its birth” should strengthen her body and exercise (Cooley D67, printed among Cooley’s sources on Spartan women).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Educating girls" data-title="Plutarch and Plato on girls" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">2 · Educating girls · We do — two more witnesses</p>
+  <h2>A later writer adds more</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch on Lycurgus’ rules for girls</div>
+        <p class="quote sm">[14.2] For them, before puberty, he instituted a physically tough curriculum of running, wrestling, discus and javelin throwing, so that the products of their wombs should have a really strong start in a powerful body, and develop all the more strongly. … [14.3] Sometimes they in turn would poke fun and hurl good-natured abuse at anyone who got out of line; and by contrast they would also write hymns of praise and deliver them in honour of those who deserved it, thus encouraging competitiveness and an eagerness to excel in the young men themselves.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 14.2–3 (part) · written c. AD 100 · trans. B. Wilson · Cooley D70</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · a speaker in a dialogue by an Athenian philosopher</div>
+        <p class="quote sm">In these states [Sparta and Crete] it is not only the men who think highly of education, but also the women.</p>
+        <p class="prov">Plato, <i>Protagoras</i> 342d · Plato c. 429–347 BC · trans. in Cooley D72</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What does Plutarch add to Xenophon?</p>
+      <p class="body reveal">Discus and javelin, and a public role: at festivals girls sang praise of brave young men and mocked those who “got out of line”.</p>
+      <p class="qprompt reveal">Why handle him with care?</p>
+      <p class="body reveal">He wrote about five centuries after Xenophon, and Cooley warns that “much of his material also dates from after Sparta’s decline in the fourth century”.</p>
+      <div class="l13-fig reveal"><figure class="figure contain"><img src="images/bradley-3-16-degas-young-spartans-l13.jpg" alt="A modern painting: Edgar Degas’ 19th-century ‘Young Spartans’, imagining girls and boys training together — how later Europeans pictured Sparta, not ancient evidence"><figcaption>A modern painting: Edgar Degas’ 19th-century ‘Young Spartans’, imagining girls and boys training together — how later Europeans pictured Sparta, not ancient evidence — <span class="cr">Bradley, Fig 3.16</span></figcaption></figure></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Educating girls" data-title="What was the training for?" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">2 · Educating girls · I do — two purposes</p>
+  <h2>What was the training for?</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">1 · Strong mothers, strong sons</div><p class="body">Xenophon: so “the offspring of two strong parents would be all the more robust”. Plutarch: so the children “should have a really strong start in a powerful body”, and mothers would “better tolerate childbirth”.</p></div>
+    <div class="card accent reveal"><div class="k">2 · Shared values</div><p class="body">Cooley adds: “a public education probably also ensured that the women fully subscribed to the community’s values.” Plutarch’s girls praised the brave and mocked the rest.</p></div>
+    <div class="card accent reveal"><div class="k">So: roles, not freedom</div><p class="body">The training prepared girls for their roles as mothers of citizens and, Cooley suggests, as women who upheld Spartan values — not freedom for its own sake.</p></div>
+  </div>
+  <div class="note reveal" data-code="evidence"><div class="k">NESA’s words, and Xenophon’s</div><p class="body">The 2025 marking guidelines: “Xenophon states that Lycurgus instituted physical training for women as much as men, as it was critical for Spartan women to be strong mothers and mothers of strong hoplites.” Xenophon himself speaks of “sturdy children” and robust offspring; “hoplites” is NESA’s gloss.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Educating girls" data-title="Hinge: Xenophon’s reason">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>Which reason does Xenophon give for girls’ races and wrestling?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>So that women could defend the city when the men were at war</span></li>
+    <li id="l13hq2"><span class="n">2</span><span>So that two strong parents would have stronger children</span></li>
+    <li><span class="n">3</span><span>So that the girls would attract husbands</span></li>
+    <li><span class="n">4</span><span>So that they could dance in the choruses at festivals</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l13hq2" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>2</b> — “in the belief that the offspring of two strong parents would be all the more robust” (Cooley D68). Option 3 is closer to Plutarch, who calls the girls’ processions and athletic competitions “in full view of the young men” incentives to marriage (D71).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Educating girls" data-title="Notes 2 — Educating girls" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Educating girls: strong bodies for strong sons</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L13 · Spartan women I: education, Alcman and festivals</b></span><span>2 · Educating girls</span></div>
+    <div class="row"><div class="cq">What did Xenophon say girls elsewhere in Greece were expected to do?</div>
+      <div class="nts reveal">“sit quietly at their spinning” <span class="sep">·</span> restricted diet, little or no wine (Xen. <i>LP</i> 1.3, D68)</div></div>
+    <div class="row"><div class="cq">Name two physical activities of Spartan girls and the writer who mentions each</div>
+      <div class="nts reveal"><b>Running</b> and <b>wrestling</b> competitions (Xen., prob. late 390s/380s BC) <span class="sep">·</span> + <b>discus</b> and <b>javelin</b> before puberty (Plut. <i>Lyc.</i> 14.2, c. AD 100, D70)</div></div>
+    <div class="row"><div class="cq">What purpose do Xenophon and Plutarch give for girls’ training?</div>
+      <div class="nts reveal">Strong mothers → strong children (<b>eugenics</b>) <span class="sep">·</span> Plut.: easier childbirth too</div></div>
+    <div class="row"><div class="cq">What second purpose does Cooley suggest?</div>
+      <div class="nts reveal">“probably also ensured that the women fully subscribed to the community’s values” <span class="sep">·</span> Plut.: girls praise the brave, mock the rest</div></div>
+    <div class="row"><div class="cq">How reliable?</div>
+      <div class="nts reveal">Xen.: well informed but male, Athenian, an admirer; idealised contrast with “other countries” <span class="sep">·</span> Plut.: late <span class="sep">·</span> Critias earlier (D67)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman and festivals" data-title="Alcman — a voice from inside Sparta" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">3 · Singing for the gods: Alcman’s Maiden-song and girls at festivals · I do</p>
+  <h2>Alcman: words from inside Sparta</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="cols c2">
+      <div class="card accent reveal"><div class="k">The poet</div><p class="body">Alcman: a “poet of the late-seventh century, BC, probably Spartan” (Cooley), who worked at Sparta. Cooley: “Apart from two poets of the seventh century BC, namely Tyrtaios and Alkman, we do not have any literary sources that originate from Sparta.”</p></div>
+      <div class="card accent reveal"><div class="k">The kind of song</div><p class="body">A <i>partheneion</i> (maiden-song), sung by a chorus of girls. Cooley: Alcman “invented the genre of choral songs for performances of girls or young women”.</p></div>
+      <div class="card accent reveal"><div class="k">The text</div><p class="body">Copied onto a papyrus in the 1st century AD and found in Egypt in 1855: the Louvre Papyrus. It is damaged, with gaps.</p></div>
+      <div class="card accent reveal"><div class="k">Why it matters</div><p class="body">One of very few sources from inside Sparta, and its words were sung by Spartan girls themselves.</p></div>
+    </div>
+    <figure class="figure contain"><img src="images/hurley-56-alcman-papyrus-l13.jpg" alt="A papyrus fragment of one of Alcman’s maiden-songs (Hurley et al.), shown to illustrate a papyrus; our extract comes from the Louvre Papyrus E3320"><figcaption>A papyrus fragment of one of Alcman’s maiden-songs (Hurley et al.), shown to illustrate a papyrus; our extract comes from the Louvre Papyrus E3320 — <span class="cr">Hurley et al., Source 56</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman and festivals" data-title="Source 10.2 — Alcman’s Maiden-song" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">3 · Alcman and festivals · We do — Source 10.2 · pairs</p>
+  <h2>Alcman’s Maiden-song (Partheneion)</h2>
+  <div class="split" style="--cols:1.55fr 1fr">
+    <div class="src">
+      <div class="k">Source 10.2 · Alcman’s Maiden-song (Partheneion)</div>
+      <p class="quote sm">Unweeping; and so I sing / The radiance of Agido; / I see her like the sun, which / Agido summons to shine on us; / <span class="code" data-code="keyterm" data-letter="K">But our renowned chorus leader</span> / In no way allows me either to praise, / Or to find fault with her; for she herself / Seems to be supreme, just as if / One were to put a horse among cattle, … <span class="code" data-code="evidence" data-letter="E">For an abundance of purple / Is not enough to give any protection, / Nor an intricate snake of solid gold, / Nor yet a headband / From Lydia, the glory / Of dark-eyed girls,</span> … For is not Hagesichora / With her pretty ankles present here, / And does she not stay near Agido / <span class="code" data-code="scope" data-letter="S">And praise our festival?</span> … For they are goddesses, but <span class="code" data-code="judgement" data-letter="J">this ten of ours / Sings as well as [eleven] girls;</span> / And gives voice like a swan on the streams / Of Xanthos; and she with her lovely golden hair.</p>
+      <p class="prov">Alkman, fragment 1, lines 39–47, 64–69, 78–81 and 98–101 (Louvre Papyrus E3320, a 1st-century AD copy found in Egypt in 1855) · late 7th century BC · trans. K. Hughes · Cooley A14</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="judgement">Who sings?</p>
+      <p class="body reveal">A chorus of ten girls: “this ten of ours” (lines 98–99).</p>
+      <p class="qprompt reveal" data-paint="keyterm">Who leads?</p>
+      <p class="body reveal">Their chorus leader, Hagesichora, whose name means ‘Leader of the chorus’. They also praise Agido, whose exact role is unclear.</p>
+      <p class="qprompt reveal" data-paint="evidence">What luxury goods appear?</p>
+      <p class="body reveal">Purple (probably cloth), a snake of solid gold (a bracelet or ornament), a headband from Lydia.</p>
+      <p class="qprompt reveal" data-paint="scope">What is the occasion?</p>
+      <p class="body reveal">“our festival” — apparently a religious ceremony (Cooley), sung in public.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman and festivals" data-title="What the song shows — and what it cannot" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">3 · Alcman and festivals · I do — weighing the song</p>
+  <h2>What the Maiden-song shows — and what it cannot</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">Girls trained in song and dance</div><p class="body">Cooley: girls in choruses “needed some training in singing and performing poetry, and group rehearsals in preparation for specific occasions.” NESA’s 2025 guidelines list girls “educated in maiden songs”.</p></div>
+    <div class="card accent reveal"><div class="k">Finery, not austerity</div><p class="body">Purple, gold and a Lydian headband are far from the grim austerity of the Spartan mirage. Contrast a later writer: “Adornment has been banned for women in Lakedaimon” (Heraclides, Cooley D65).</p></div>
+    <div class="note reveal" data-code="counter"><div class="k">Had Sparta changed?</div><p class="body">Cooley: “In the classical period Spartan women were probably subject to the general restrictions on conspicuous consumption of wealth, e.g. strict rules on dress, jewellery or luxury items.” Alcman’s girls sang more than two centuries before Xenophon wrote.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">What it cannot show</div><p class="body">The poem is a man’s words for a public ritual; the papyrus is damaged; Cooley says several elements “remain obscure” (it is not certain the chorus was competing). Which families did the singers come from? It does not say.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman and festivals" data-title="Girls at the Hyakinthia and at Orthia" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">3 · Alcman and festivals · We do — girls in public at the great festivals</p>
+  <h2>Girls at the Hyakinthia — and at Orthia</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · the Hyakinthia, at Apollo’s sanctuary at Amyklai</div>
+        <p class="quote sm">… the Lakedaimonians celebrate the festival of Hyakinthia over three days. … <span class="code" data-code="evidence" data-letter="E">As for the maidens, some ride in richly decorated wicker carriages, some process in racing-chariots drawn by horses.</span> The whole city is at a pitch of excitement and pleasure at the spectacle. … No one misses the festival – instead the city tends to be emptied for the spectacle.</p>
+        <p class="prov">Polykrates, <i>Lakedaimonian Customs</i>, as reported by Didymos (1st century BC) and quoted in Athenaeus, <i>Scholars at Dinner</i> 4.17 (Athenaeus flourished c. AD 200) · Polykrates’ date unknown · trans. in Cooley C69</p>
+      </div>
+      <div class="src">
+        <div class="k">Girls and women at Sparta’s sanctuaries · two scholars on the finds</div>
+        <p class="quote sm">Little lead figurines, humbler votives, celebrate the participants in festivals: hoplite warriors, female celebrants – perhaps members of choruses … and processions</p>
+        <p class="prov">W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, in M. G. L. Cooley (ed.), <i>Sparta</i> (2023). With S. Hodkinson, on Orthia: Aristomacha’s dedication to Eileithyia (Cooley C27; findspot unknown) “confirms the presence of female dedicators at the sanctuary, already inferred from the large number of bronze jewellery votives and numerous lead figurines depicting model looms …”.</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">What part did girls play at the Hyakinthia?</p>
+      <p class="body reveal">A public procession, in carriages and racing-chariots, before a city that “tends to be emptied for the spectacle”.</p>
+      <p class="qprompt reveal">How close is this witness?</p>
+      <p class="body reveal">Not close: Polycrates is “otherwise unknown (presumably a Lakonian local historian)”, his date is unknown, and we read him through two later writers.</p>
+      <div class="l13-fig reveal"><figure class="figure contain"><img src="images/clarke-5-2-brooches-dress-pins-orthia.jpg" alt="Brooches and dress pins of bronze, silver and bone found at the Sanctuary of Artemis Orthia"><figcaption>Brooches and dress pins of bronze, silver and bone found at the Sanctuary of Artemis Orthia — <span class="cr">Clarke & Garner, Fig 5.2</span></figcaption></figure></div>
+      <p class="small reveal">Festivals policed men too: Plutarch says unmarried men “were banned from being spectators at the Gymnopaidiai” (<i>Lykourgos</i> 15.1, Cooley D71; Lesson 10).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Alcman and festivals" data-title="Notes 3 — Alcman and festivals" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Alcman’s Maiden-song and girls at festivals</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L13 · Spartan women I: education, Alcman and festivals</b></span><span>3 · Alcman and festivals</span></div>
+    <div class="row"><div class="cq">Why is the Maiden-song unusual evidence?</div>
+      <div class="nts reveal"><b>Alcman</b>, late 7th c. BC, prob. Spartan <span class="sep">·</span> words <b>sung by Spartan girls</b> <span class="sep">·</span> Louvre papyrus, 1st c. AD copy, damaged (A14)</div></div>
+    <div class="row"><div class="cq">Who were Agido and Hagesichora, according to the Maiden-song?</div>
+      <div class="nts reveal">Girls the chorus praises <span class="sep">·</span> <b>Hagesichora</b> = ‘Leader of the chorus’ <span class="sep">·</span> <b>Agido</b>: radiant “like the sun”; exact role unclear</div></div>
+    <div class="row"><div class="cq">Which details in the song challenge the idea of Spartan austerity?</div>
+      <div class="nts reveal"><b>Purple</b>, a <b>gold snake</b>, a <b>Lydian headband</b> <span class="sep">·</span> v. later “Adornment has been banned” (D65); Cooley: classical women <b>prob.</b> under strict rules on dress, jewellery</div></div>
+    <div class="row"><div class="cq">What part did girls play at the Hyakinthia?</div>
+      <div class="nts reveal">Procession in decorated <b>wicker carriages</b> and <b>racing-chariots</b>, before the whole city (Polycrates, via Athenaeus, C69) <span class="sep">·</span> sanctuaries: lead figurines of female celebrants; women dedicators at Orthia</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Bronze girls" data-title="Source 10.3 — a bronze girl" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">4 · Bronze girls: what objects can and cannot show · We do — Source 10.3</p>
+  <h2>A bronze girl from Laconia</h2>
+  <div class="split" style="--cols:.62fr 1fr">
+    <div class="stack">
+      <div class="l13-obj"><figure class="figure contain"><img src="images/bradley-3-15-bronze-girl-l13.jpg" alt="Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1)"><figcaption>Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1) — <span class="cr">Bradley, Fig 3.15</span></figcaption></figure></div>
+    </div>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source 10.3 · how Cooley describes the object</div>
+        <p class="quote sm">Bronze figure of a girl. She may be running or, since she glances back, dancing. The bronze rivet surviving in the right foot perhaps suggests that this figure was originally a decorative fixture attached to a vessel or utensil. Produced in Lakonia, 520–500 BC, probably found at Prizren in Kosovo.</p>
+        <p class="prov">Bronze figure of a girl · height 114 mm · British Museum 1876,0510.1 · Cooley D64</p>
+      </div>
+      <p class="qprompt reveal">Made in Laconia, probably found in Kosovo: what does that suggest?</p>
+      <p class="body reveal">Laconian bronzes travelled far from Sparta, perhaps by trade or as gifts.</p>
+      <p class="qprompt reveal">Running or dancing? Which written sources fit each reading?</p>
+      <p class="body reveal">Running: Xenophon’s races (D68). Dancing: Alcman’s chorus (A14) and Plutarch’s girls at festivals (D70).</p>
+      <p class="qprompt reveal">A decoration on a vessel: a real girl, or an ideal?</p>
+      <p class="body reveal">A craftsman’s figure: perhaps an ideal or a type, probably not a portrait of anyone.</p>
+      <p class="qprompt reveal">Authentic and contemporary — so which details are less certain?</p>
+      <p class="body reveal">The findspot (“probably”), the purpose (“perhaps”) and what she is doing (“may be”).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Bronze girls" data-title="What objects can and cannot show (table)" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">4 · Bronze girls · I do — a second bronze, and the limits of objects</p>
+  <h2>What can a bronze girl show?</h2>
+  <div class="split" style="--cols:.4fr 1fr">
+    <div class="l13-obj l13-short"><figure class="figure contain"><img src="images/clarke-5-10-bronze-mirror-support-l13.jpg" alt="A bronze mirror support in the shape of a nude girl, c. 540–530 BC, which Clarke &amp; Garner describe as Spartan — an ancient artefact"><figcaption>A bronze mirror support in the shape of a nude girl, c. 540–530 BC, which Clarke & Garner describe as Spartan — an ancient artefact — <span class="cr">Clarke & Garner, Fig 5.10</span></figcaption></figure></div>
+    <div class="stack tight">
+      <div class="tbl-scroll"><table class="tbl compact l13-cc">
+        <tr><th>It can show</th><th>It cannot show</th></tr>
+        <tr class="reveal"><td>Laconian craftsmen made figures of girls in short dresses (and, if the mirror support is Spartan as Clarke &amp; Garner say, nude)</td><td>whether any figure is a Spartiate girl, or which event she belongs to</td></tr>
+        <tr class="reveal"><td>an image consistent with girls’ races (Xenophon) and dances (Alcman)</td><td>whether the running girl is running or dancing</td></tr>
+        <tr class="reveal"><td>such images were wanted, as decorations on bronze objects</td><td>whether nudity records a custom or follows an artist’s convention</td></tr>
+      </table></div>
+      <div class="note reveal" data-code="evidence"><div class="k">NESA’s 2022 marking guidelines</div><p class="body">Among the answers that could be included for “What do art and architecture reveal about cultural and everyday life in Sparta in this period?”: “Statuette of girl doing exercise, revealing the Spartan desire for fit and healthy women”.</p></div>
+      <div class="note reveal" data-code="counter"><p class="body"><b>Cooley says</b> the best-known bronze girl “may be running or, since she glances back, dancing”: use NESA’s point, but keep the hedge.</p></div>
+      <p class="qprompt reveal">Does the mirror support prove Plutarch’s naked processions?</p>
+      <p class="body reveal">No. Cooley says that “on some occasions they even appeared naked”, but a luxury mirror shows what an artist made, not a festival.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Bronze girls" data-title="Hinge: what can the bronze show on its own?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>On its own, without any written source, the bronze girl shows that …</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Spartan girls ran races in short dresses</span></li>
+    <li id="l13hq4"><span class="n">2</span><span>a Laconian workshop made a figure of a girl in a short dress</span></li>
+    <li><span class="n">3</span><span>the girl was the daughter of a Spartiate</span></li>
+    <li><span class="n">4</span><span>girls danced at the Hyakinthia</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l13hq4" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>2</b> — “Produced in Lakonia, 520–500 BC” (Cooley D64). The others need a written source, and even then the figure is only consistent with them, not proof.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Bronze girls" data-title="Notes 4 — Bronze girls" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Bronze girls: what objects can and cannot show</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L13 · Spartan women I: education, Alcman and festivals</b></span><span>4 · Bronze girls</span></div>
+    <div class="row"><div class="cq">What is the bronze girl, and where was it made and found?</div>
+      <div class="nts reveal">Bronze girl, short dress, 114 mm <span class="sep">·</span> made in <b>Laconia, 520–500 BC</b> <span class="sep">·</span> prob. found at Prizren, Kosovo <span class="sep">·</span> rivet → <b>perhaps</b> a fixture on a vessel (D64)</div></div>
+    <div class="row"><div class="cq">Running or dancing — and why does it matter?</div>
+      <div class="nts reveal">Cooley: “may be running or, since she glances back, dancing” → fits <b>Xen.</b> (races) or <b>Alcman</b> (chorus); proves neither</div></div>
+    <div class="row"><div class="cq">Give one thing the bronze girl supports in the written sources, and one thing it cannot tell us</div>
+      <div class="nts reveal">Supports: an active girl in a short dress — Cooley: girls wore “just a short chiton (tunic)” — fits races (Xen.) or dances (Alcman, Plut.) <span class="sep">·</span> Cannot: who she is, which event, real or ideal</div></div>
+    <div class="row"><div class="cq">What does the mirror support add?</div>
+      <div class="nts reveal">Nude girl, c. 540–530 BC (Clarke &amp; Garner) <span class="sep">·</span> Plut.’s naked processions? An artist’s <b>convention</b> or a custom: can’t tell</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Putting it together" data-title="Synthesis: written and archaeological evidence (table)" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow">5 · Putting it together · We do — written and archaeological evidence side by side</p>
+  <h2>What does each kind of evidence add?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l13-grid">
+    <tr><th>Girls’ education</th><th>Xenophon<span class="l13-sub">Athenian, prob. late 390s or 380s BC</span></th><th>Alcman<span class="l13-sub">prob. Spartan, late 7th c. BC</span></th><th>The bronze girl<span class="l13-sub">Laconian, 520–500 BC</span></th><th>Plutarch<span class="l13-sub">c. AD 100</span></th></tr>
+    <tr class="reveal"><td><b>Physical training</b></td><td class="y">running and wrestling competitions</td><td class="n">—</td><td class="m">may be running: consistent, not proof</td><td class="y">+ discus and javelin</td></tr>
+    <tr class="reveal"><td><b>Song and dance in public</b></td><td class="n">— (not in this passage)</td><td class="y">a chorus of ten at “our festival”</td><td class="m">may be dancing</td><td class="y">songs at festivals, before young men</td></tr>
+    <tr class="reveal"><td><b>Purpose</b></td><td class="y">strong children</td><td class="m">shows the occasion, “our festival”, not a stated purpose</td><td class="n">— (a decoration)</td><td class="y">strong children, easier childbirth</td></tr>
+  </table></div>
+  <div class="card accent reveal l13-tdt"><div class="k">Two “This Does That” sentences · written for this lesson</div>
+    <p class="body nq">Xenophon’s claim that Lycurgus set up “women’s competitions in both running and wrestling” is consistent with the bronze girl from Laconia, who may be running or dancing, while Alcman’s “this ten of ours” shows that girls were also trained to sing for the gods.</p>
+    <p class="body nq">The bronze girl confirms that Laconian craftsmen pictured girls in short dresses, but only Xenophon explains why girls trained: so that “the offspring of two strong parents would be all the more robust”.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Putting it together" data-title="You do — annotate the three sources">
+<div class="wrap l13-dense">
+  <p class="eyebrow">5 · Putting it together · You do · 8 minutes · press K for the timer</p>
+  <h2>Annotate Xenophon, Alcman and the bronze girl: O, V, P, R, L</h2>
+  <div class="cols c3">
+    <div class="card accent"><div class="k">Xenophon (Source 10.1)</div>
+      <ul class="body">
+        <li><b>O</b> male, Athenian, an admirer — access?</li>
+        <li><b>V</b> what girls did, and did not do</li>
+        <li><b>P</b> why begin with “procreation”?</li>
+        <li><b>R</b> the contrast with “other countries”</li>
+        <li><b>L</b> which women are missing?</li>
+      </ul></div>
+    <div class="card accent"><div class="k">Alcman (Source 10.2)</div>
+      <ul class="body">
+        <li><b>O</b> why is a 7th-century song for girls unusual?</li>
+        <li><b>V</b> who sings, who leads, what occasion?</li>
+        <li><b>P</b> how does a public festival shape the words?</li>
+        <li><b>R</b> authentic, but which lines are obscure?</li>
+        <li><b>L</b> whose experience is missing?</li>
+      </ul></div>
+    <div class="card accent"><div class="k">The bronze girl (Source 10.3)</div>
+      <ul class="body">
+        <li><b>O</b> made in Laconia, found in Kosovo?</li>
+        <li><b>V</b> running or dancing?</li>
+        <li><b>P</b> a decoration: real girl or ideal?</li>
+        <li><b>R</b> which details are uncertain?</li>
+        <li><b>L</b> a Spartiate? which event?</li>
+      </ul></div>
+  </div>
+  <div class="src reveal" data-veil="Show model margin notes">
+    <div class="k">Model margin notes — yours should be in your own words</div>
+    <p class="quote sm model">Xen.: O Athenian admirer, prob. late 390s/380s BC; knew Sparta, but a male outsider · V running + wrestling; not spinning · P strong mothers → robust children; praise of Lycurgus · R built as the opposite of “other countries” · L no woman speaks; “female slaves” only as clothing-makers. — Alcman: O late 7th c., prob. Spartan, words sung by girls · V chorus of ten; Hagesichora leads; “our festival” · P a public ritual: praise, finery · R authentic, but damaged and obscure in places · L a man’s words; which girls? — Bronze girl: O Laconian work, 520–500 BC, prob. found in Kosovo · V short dress; running or dancing · P perhaps a vessel fixture · R object authentic, meaning uncertain · L no name, no event.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Putting it together" data-title="Notes 5 — What it reveals about Spartan values" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>What girls’ education reveals about Spartan values</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L13 · Spartan women I: education, Alcman and festivals</b></span><span>5 · Putting it together</span></div>
+    <div class="row"><div class="cq">What did girls’ education aim to produce?</div>
+      <div class="nts reveal"><b>Mothers</b> of strong citizens (Xen., Plut.) <span class="sep">·</span> women who shared the city’s <b>values</b> (Cooley, prob.) <span class="sep">·</span> public performers for the gods (Alcman)</div></div>
+    <div class="row"><div class="cq">What does it reveal about Spartan values?</div>
+      <div class="nts reveal">The state comes first: even girls trained for the city’s needs <span class="sep">·</span> courage praised in public (Plut.) <span class="sep">·</span> religion and festivals central</div></div>
+    <div class="row"><div class="cq">How do written and archaeological evidence combine?</div>
+      <div class="nts reveal">Writers give <b>purposes</b> and activities <span class="sep">·</span> objects are contemporary and Laconian but <b>silent</b>: consistent with, not proof of</div></div>
+    <div class="row"><div class="cq">What are the limits?</div>
+      <div class="nts reveal">Male, mostly Athenian or late writers <span class="sep">·</span> Xen. idealises <span class="sep">·</span> Plut. late <span class="sep">·</span> no girl’s own words except as Alcman wrote them</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Putting it together" data-title="Summary" data-kind="notes">
+<div class="wrap l13-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>Who tells us about Spartan girls, and why does that matter?</li>
+          <li>What did girls learn, and what was it for?</li>
+          <li>What do Alcman’s song and the bronze girls add — and what can they not show?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">Almost everything written about Spartan girls comes from men, mostly Athenians such as Aristophanes and Xenophon or much later writers such as Plutarch, so their accounts often show outsiders’ stereotypes and ideals. Xenophon says Lycurgus set up competitions in running and wrestling so that strong parents would have strong children, Plutarch adds discus, javelin and songs at festivals, and Cooley suggests the education probably also made women share the city’s values. Alcman’s Maiden-song shows girls trained to sing for the gods at a festival, and bronze girls made in Laconia are consistent with races or dances, but the objects cannot say who the girls were or what they were doing.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Whose voices: Lampito, the sayings, role v. status</label></li>
+        <li><label><input type="checkbox"> 2 · Educating girls: Xenophon, Plutarch, two purposes</label></li>
+        <li><label><input type="checkbox"> 3 · Alcman’s Maiden-song and girls at festivals</label></li>
+        <li><label><input type="checkbox"> 4 · Bronze girls: can and cannot show</label></li>
+        <li><label><input type="checkbox"> 5 · Putting it together: Spartan values</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering an HSC ‘explain’ question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>An HSC-style question, written for this lesson</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 6 marks ≈ 11 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">Written and archaeological</div><p class="body">Use both kinds of evidence, and say how they relate: what each shows, and what it cannot.</p></div>
+  </div>
+  <p class="lead">No HSC paper from 2019 to 2025 has asked a short question on girls’ education alone. The 2020 paper asked “Describe the role of women in this period” (5 marks): that is Lesson 14.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC-style question" data-title="The question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style, written for this lesson · Section II · 6 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> what <span class="code" data-code="evidence" data-letter="E">written and archaeological evidence</span> reveals about <span class="code" data-code="keyterm" data-letter="K">the education of Spartan girls</span> <span class="code" data-code="scope" data-letter="S">in this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Not from a past paper. Take it apart, write it yourself, then check it against NESA’s 6-mark criteria and an annotated model.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="Take it apart" data-kind="hsc">
+<div class="wrap l13-dense">
+  <p class="eyebrow">HSC-style question · We do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect.” Say what each source shows and how it shows it — and why the girls were trained. A list of activities is a description.</p></div>
+    <div class="note reveal" data-code="evidence"><div class="k">Written and archaeological evidence</div><p class="body">Both kinds, named: Xenophon, Plutarch, Alcman; the bronze girl. Then relate them: supports, is consistent with, adds, cannot show.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The education of Spartan girls</div><p class="body">Physical training and music, and its purposes: strong mothers, shared values, public roles at festivals. Girls, not boys or women’s property.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">To 371 BC: lead with Alcman, the bronze girl and Xenophon. Plutarch wrote about AD 100 — label him as late.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">6 marks</div><p class="body">About 11 minutes · a judgement first · at least one writer and one object, each named and dated · what the evidence cannot show · about 150–200 words.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="The criteria and the markers’ advice" data-kind="hsc">
+<div class="wrap l13-dense">
+  <p class="eyebrow">HSC-style question · NESA’s 6-mark criteria and the markers’ feedback</p>
+  <h2>What the markers reward</h2>
+  <div class="split" style="--cols:1.05fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2025, part (b))</th></tr>
+      <tr><td class="m">6</td><td>Provides an informed explanation relevant to the question · Communicates effectively using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5</td><td>Provides an explanation relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4</td><td>Provides some explanation relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Provides some information relevant to the question · May use some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">2020 · on the Greek writers question (b)</div>
+        <p class="fb">In better responses, students were able to <span class="q">draw out different revelations about culture from a range of relevant Greek writers of different periods (b)</span></p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">2022 · on the art and architecture question (c)</div>
+        <p class="fb">In better responses, students were able to <span class="q">use examples of specific art and architecture to draw revelations about cultural and everyday life (c)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">2020 · areas to improve</div>
+        <p class="fb"><span class="q">integrating sources as evidence rather than relying solely on unsupported knowledge and understanding (b, c)</span></p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2025 HSC Ancient History Marking Guidelines, Section II part (b) — the criteria for a 6-mark “explain” question on a different topic (“Explain how the Spartans controlled the helots”) — and the 2020 and 2022 marking feedback for Question 11, quoted exactly.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC-style question" data-title="You write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · You do · 16 minutes · press K for the timer</p>
+  <h2>Explain what written and archaeological evidence reveals about the education of Spartan girls in this period. <span class="small">(6 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence</li>
+        <li>Xenophon and Alcman, named and dated</li>
+        <li>the bronze girl, and what it cannot show</li>
+        <li>at least one “This Does That” sentence linking two sources</li>
+        <li>about 150–200 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Written and archaeological evidence together suggest that Spartan girls were educated to …, although …”</p>
+      <p class="body nq">Link: “Xenophon’s claim that … is consistent with the bronze girl, which …, while Alcman’s song shows …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="A model, annotated" data-kind="hsc">
+<div class="wrap l13-dense">
+  <p class="eyebrow">HSC-style question · Check your answer — a model written for this lesson</p>
+  <h2>Source → what it shows → why, then the limits</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m13-1">Written and archaeological evidence suggest that Spartan girls received a public training of body and voice that served the city, though most written evidence comes from male outsiders.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m13-2">Xenophon, an Athenian admirer writing probably in the late 390s or 380s BC, says Lycurgus set up ‘women’s competitions in both running and wrestling’ so that ‘the offspring of two strong parents would be all the more robust’.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m13-3">The training was therefore eugenic: girls were prepared to be mothers of strong citizens, and Cooley adds that a public education ‘probably also ensured that the women fully subscribed to the community’s values’.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m13-4">Alcman’s Maiden-song, composed in the late 7th century BC for ‘this ten of ours’ to sing at ‘our festival’, shows that girls were also trained in choral song and dance for the gods.</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="m13-5">A bronze girl in a short dress, made in Laconia in 520–500 BC, is consistent with both, since she ‘may be running or, since she glances back, dancing’ (Cooley); but it cannot show who she was or which event she belongs to.</span><span class="mk">5</span>
+      <span class="code" data-code="counter" id="m13-6">Plutarch, writing about AD 100, adds discus and javelin, but he may be describing a later Sparta.</span><span class="mk">6</span>
+      <span class="code" data-code="judgement" id="m13-7">The evidence reveals an education shaped by the state’s needs, seen mostly through male and Athenian eyes.</span><span class="mk">7</span>
+      <p class="meta">Model written for this lesson · about 200 words, about 11 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m13-1"><span class="mk">1</span><b>Answer first</b><span class="tx">What the evidence reveals, in one sentence — with its main limit already flagged.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m13-2"><span class="mk">2</span><b>A named, dated writer</b><span class="tx">Xenophon’s own words, built into the sentence, with who he was.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m13-3"><span class="mk">3</span><b>The explain move</b><span class="tx">Training → strong mothers → strong citizens: NESA’s “relate cause and effect”. A historian’s hedge kept.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m13-4"><span class="mk">4</span><b>A second kind of education</b><span class="tx">Song as well as sport, from a source inside Sparta.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m13-5"><span class="mk">5</span><b>Archaeology, related to the texts</b><span class="tx">“Consistent with”, not “proves”: the object named, dated and placed, and its limit stated.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m13-6"><span class="mk">6</span><b>Weigh the late source</b><span class="tx">Plutarch used, but labelled as late — “in this period” answered.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m13-7"><span class="mk">7</span><b>Close the explanation</b><span class="tx">Back to the judgement, refined: whose needs, and whose eyes.</span></div>
+      <div class="verdict reveal"><b>Written to the 6-mark criteria:</b> an informed explanation, relating each source to what it reveals, with named evidence and precise terms.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="Why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · describes, not explains</span>
+      <p class="resp">Spartan girls ran, wrestled and threw the javelin. They sang in choruses at festivals and rode in chariots at the Hyakinthia. They were fitter than other Greek girls.</p>
+      <p class="why">Accurate information, but no sources, no purpose and no archaeology: it never says what the evidence reveals.</p></div>
+    <div class="rung reveal"><span class="mark">4–5 marks · written sources only</span>
+      <p class="resp">Xenophon says Lycurgus set up races and wrestling for girls so that strong parents would have strong children. Plutarch adds that they threw the discus and javelin …</p>
+      <p class="why">A real explanation of purpose, but no archaeological evidence, and Plutarch is not dated.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · the object proves it</span>
+      <p class="resp">The bronze statue of a running girl proves that Spartan girls ran races in short tunics, exactly as Xenophon says.</p>
+      <p class="why">Cooley says she “may be running or, since she glances back, dancing”, and Xenophon says nothing of dress. An object is consistent with a text; it does not prove it.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="Mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement about what the evidence reveals</label></li>
+        <li><label><input type="checkbox"> named and dated Xenophon, with the purpose he gives</label></li>
+        <li><label><input type="checkbox"> used Alcman for song and dance</label></li>
+        <li><label><input type="checkbox"> used the bronze girl, and said what it cannot show</label></li>
+        <li><label><input type="checkbox"> linked two sources in one “This Does That” sentence</label></li>
+        <li><label><input type="checkbox"> labelled Plutarch as late, if you used him</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the roles of Spartan girls in religious festivals.</b> (4 marks)</p>
+        <p class="body"><b>To what extent did the education of Spartan girls differ from that of girls elsewhere in Greece?</b> (10 marks)</p></div>
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Underline every source you named. Circle every “so”, “because” or “consistent with”. Underlines without circles are a list, not an explanation.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put the evidence in order" data-kind="practice">
+<div class="wrap prac l13-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · written for this lesson</p>
+  <h2>Put the evidence in order, earliest first — and say whose voice each is</h2>
+  <p class="task">For each, write: inside Laconia, Athenian outsider, later writer, or modern.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Plutarch writes his <i>Life of Lycurgus</i>, with girls throwing the discus and javelin</span></li>
+    <li><span class="k">B</span><span>Alcman composes a maiden-song for a chorus of ten girls</span></li>
+    <li><span class="k">C</span><span>A bronze mirror support in the shape of a nude girl is made</span></li>
+    <li><span class="k">D</span><span>The bronze girl now in the British Museum is made in Laconia</span></li>
+    <li><span class="k">E</span><span>Aristophanes puts Lampito on the Athenian stage in the <i>Lysistrata</i></span></li>
+    <li><span class="k">F</span><span>Xenophon writes that Lycurgus set up races and wrestling for girls</span></li>
+    <li><span class="k">G</span><span>Athenaeus preserves Polycrates’ account of the girls’ procession at the Hyakinthia</span></li>
+    <li><span class="k">H</span><span>Le Barbier paints a Spartan mother handing her son his shield</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq l13-two">
+      <li class="sol reveal"><b>1 · B</b> (late 7th century BC) — inside Laconia: Alcman, probably Spartan.</li>
+      <li class="sol reveal"><b>2 · C</b> (c. 540–530 BC, Clarke &amp; Garner) — inside Laconia, if Spartan as the textbook says.</li>
+      <li class="sol reveal"><b>3 · D</b> (520–500 BC) — inside Laconia: a Laconian workshop.</li>
+      <li class="sol reveal"><b>4 · E</b> (411 BC) — Athenian outsider, in wartime.</li>
+      <li class="sol reveal"><b>5 · F</b> (probably late 390s or 380s BC) — Athenian outsider, an admirer.</li>
+      <li class="sol reveal"><b>6 · A</b> (c. AD 100) — later writer, under Roman rule.</li>
+      <li class="sol reveal"><b>7 · G</b> (Athenaeus c. AD 200; Polycrates’ own date unknown) — later writer, preserving a presumably Laconian one.</li>
+      <li class="sol reveal"><b>8 · H</b> (early 19th century) — modern: a picture of the ideal, not evidence.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l13-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify · written for this lesson</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l13-two" data-answers>
+    <li><span class="n">1</span><span>Aristophanes, an Athenian, put a Spartan woman called Lampito on stage in 411 BC.</span>
+      <span class="sol reveal">True <span class="why">— <i>Lysistrata</i> 79–84, performed 411 BC (Cooley D66).</span></span></li>
+    <li><span class="n">2</span><span>Cooley treats “Son, with it or on it” as good evidence of what Spartans did with their dead.</span>
+      <span class="sol no reveal">False <span class="why">— it is “quite problematic as dead Spartans were not carried back home at all, but buried where they fell” (note on F35).</span></span></li>
+    <li><span class="n">3</span><span>Xenophon says Spartan girls competed in running and wrestling.</span>
+      <span class="sol reveal">True <span class="why">— “women’s competitions in both running and wrestling” (D68).</span></span></li>
+    <li><span class="n">4</span><span>Plutarch says girls threw the discus and javelin.</span>
+      <span class="sol reveal">True <span class="why">— “running, wrestling, discus and javelin throwing”, before puberty (<i>Lykourgos</i> 14.2, D70).</span></span></li>
+    <li><span class="n">5</span><span>Alcman’s Maiden-song was sung by a chorus of eleven girls.</span>
+      <span class="sol no reveal">False <span class="why">— “this ten of ours / Sings as well as [eleven] girls”: a chorus of ten (Cooley’s note on A14).</span></span></li>
+    <li><span class="n">6</span><span>The Maiden-song mentions purple and gold.</span>
+      <span class="sol reveal">True <span class="why">— “an abundance of purple”, “an intricate snake of solid gold” (A14).</span></span></li>
+    <li><span class="n">7</span><span>Polycrates says girls rode in carriages and racing-chariots at the Hyakinthia.</span>
+      <span class="sol reveal">True <span class="why">— “some ride in richly decorated wicker carriages, some process in racing-chariots drawn by horses” (C69) — preserved by later writers.</span></span></li>
+    <li><span class="n">8</span><span>The bronze girl in the British Museum was found at Sparta.</span>
+      <span class="sol no reveal">False <span class="why">— made in Laconia, but “probably found at Prizren in Kosovo” (D64).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze · Chapter 10 Activity C, items 1–3, and five written for this lesson</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Amyklai</span><span>Hagesichora</span><span>javelin</span><span>Laconia</span><span>Lampito</span><span>partheneion</span><span>values</span><span>wrestling</span></div>
+  <ol class="cloze" data-answers>
+    <li>Xenophon says Spartan girls competed in running and <span class="gap"><span class="sol reveal">wrestling</span></span>.</li>
+    <li>A song for a chorus of girls is called a <span class="gap"><span class="sol reveal">partheneion</span></span>.</li>
+    <li>In Alcman’s poem, the chorus leader whose name means ‘Leader of the chorus’ is <span class="gap"><span class="sol reveal">Hagesichora</span></span>.</li>
+    <li>Aristophanes put a Spartan woman called <span class="gap"><span class="sol reveal">Lampito</span></span> on the Athenian stage in 411 BC.</li>
+    <li>Plutarch says girls also threw the discus and the <span class="gap"><span class="sol reveal">javelin</span></span>.</li>
+    <li>Cooley suggests a second purpose: a public education probably made women share the community’s <span class="gap"><span class="sol reveal">values</span></span>.</li>
+    <li>At the Hyakinthia, held at <span class="gap"><span class="sol reveal">Amyklai</span></span>, some girls rode in carriages and racing-chariots.</li>
+    <li>The bronze girl in the British Museum was made in <span class="gap"><span class="sol reveal">Laconia</span></span> but probably found in Kosovo.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l13-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph · written for this lesson</p>
+  <h2>How useful is Alcman’s Maiden-song as evidence for the lives of Spartan girls?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for which part of girls’ lives?</span>
+    <span class="l">Evidence</span><span>Use the chorus of ten, “our festival”, the leaders and the finery, with the poem’s date and origin.</span>
+    <span class="l">Analyse</span><span>Explain what the song reveals about girls’ training and public roles.</span>
+    <span class="l">Evaluate</span><span>Weigh its value (early, from inside Sparta, sung by girls) against its limits (a man’s words, a ritual, a damaged papyrus).</span>
+    <span class="l">Resolve</span><span>Close with a refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Alcman’s Maiden-song is highly useful for the public, religious side of girls’ lives, but much less so for their everyday lives. Composed in the late 7th century BC by a poet who was probably Spartan, it was written for ‘this ten of ours’ to sing at what the girls call ‘our festival’, so its words were sung by Spartan girls themselves. It shows girls trained to perform as a chorus, praising their chorus leader, Hagesichora, and Agido, and admiring ‘an abundance of purple’ and ‘an intricate snake of solid gold’, a picture far from the austerity of later writers. Yet the words were written by a man for a public ritual, so they show how girls were meant to appear before the city rather than how they lived; the papyrus is damaged, Cooley warns that several elements ‘remain obscure’, and we cannot tell which families the singers came from. Even so, as one of the two longest surviving fragments of Alcman, both written for girls’ choruses, it tells us more about girls’ choruses than any Athenian account, though it says nothing of their athletic training.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · Chapter 10 Activity E</p>
+  <h2>To what extent were the roles of Spartan women shaped by the needs of the state? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves (Lesson 14 completes the evidence):</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence, responding to Cooley’s judgement that “Spartan women’s status within society was indeed different from that in most other Greek states”.</li>
+    <li><b>Education and marriage for strong citizens:</b> Xenophon’s races and wrestling (Cooley D68), Plutarch’s curriculum (D70); marriage customs (D68, D71: Lesson 14).</li>
+    <li><b>Public and religious roles:</b> Alcman’s chorus (A14), the Hyakinthia (C69), dedications at Orthia (Hodkinson in Cooley); the priestess question (B35: Lesson 14).</li>
+    <li><b>Property, influence and Cynisca:</b> Aristotle (D69, D54) and Herodotus (D8) in Lesson 14 — weighing Athenian stereotypes (Aristophanes, D66) and how few women’s own voices survive.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Quick Check review" data-kind="practice notes">
+<div class="wrap prac l13-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · the Quick Checks for sections 2 and 4, with answers written for this lesson</p>
+  <h2>Quick Check review</h2>
+  <ol class="rq l13-two" data-answers>
+    <li>What did Xenophon say girls elsewhere in Greece were expected to do?
+      <span class="sol reveal">“sit quietly at their spinning”, on “the most restricted diet possible”, drinking little or no wine (D68).</span></li>
+    <li>Name two physical activities of Spartan girls and the writer who mentions each.
+      <span class="sol reveal">Running and wrestling (Xenophon, D68); discus and javelin (Plutarch, <i>Lykourgos</i> 14.2, D70).</span></li>
+    <li>What purpose do Xenophon and Plutarch give for girls’ training?
+      <span class="sol reveal">Strong mothers would bear strong children; Plutarch adds that mothers would “better tolerate childbirth”.</span></li>
+    <li>What second purpose does Cooley suggest?
+      <span class="sol reveal">“a public education probably also ensured that the women fully subscribed to the community’s values.”</span></li>
+    <li>Who were Agido and Hagesichora, according to the Maiden-song?
+      <span class="sol reveal">Girls the chorus praises: Hagesichora, whose name means ‘Leader of the chorus’, leads it; Agido is praised for her radiance “like the sun”, but her exact role is unclear.</span></li>
+    <li>Which details in Source 10.2 challenge the idea of Spartan austerity?
+      <span class="sol reveal">“an abundance of purple”, “an intricate snake of solid gold” and a headband “From Lydia” — against the later claim that adornment was banned (D65).</span></li>
+    <li>What part did girls play at the Hyakinthia?
+      <span class="sol reveal">They processed in public, some in decorated wicker carriages, some in racing-chariots (Polycrates, C69).</span></li>
+    <li>Give one thing the bronze girl supports in the written sources, and one thing it cannot tell us.
+      <span class="sol reveal">Her active pose is consistent with girls running (Xenophon) or dancing (Alcman, Plutarch); it cannot tell us who she was, which event she belongs to, or whether she is running or dancing.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Written v. archaeological evidence</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One thing the written sources say about girls that the bronze figure supports.</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One thing the bronze figure cannot show.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Spartan women II — land, inheritance and marriage, Cynisca’s Olympic victory, and a priestess or a mother on the grave.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l13-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2 l13-cred">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources and objects</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Xenophon, <i>Constitution of the Lakedaimonians</i> 1.3–4 (D68, trans. B. Wilson); Plutarch, <i>Life of Lykourgos</i> 14.2–3 and 15.1 (D70, D71, trans. B. Wilson) and <i>Moralia</i> 241F, <i>Sayings of Spartan Women</i> (F35); Plato, <i>Protagoras</i> 342d (D72); Aristophanes, <i>Lysistrata</i> 79–84 (D66, trans. K. Hughes); Alcman, fragment 1 = Louvre Papyrus E3320 (A14, trans. K. Hughes); Polykrates in Athenaeus, <i>Scholars at Dinner</i> 4.17 (C69); Xenophon, <i>Hellenika</i> 4.5.11 (C70); Herakleides Pontikos, <i>Constitution of the Lakedaimonians</i> 2.8 (D65); Kritias fr. 32 (D67); Suda, <i>Lexicon</i> ‘Alkman’ (A13); Aristotle, <i>Politics</i> 1269b12–1270a15 (D69); bronze figure of a girl, British Museum 1876,0510.1 (D64). Cooley’s introductions to the literary sources (Alcman, Aristophanes, Xenophon, Plato, Plutarch, Athenaeus), to Sparta’s poetry and to Alcman (A13–A20), to women (D64–D72, pp. 122–123), to education (D73–D81) and to Spartan women (E78–E81), the festivals and the Hyakinthia, the perioikoi and the Spartan sayings, and his notes on A14, C69, D44 and F35; S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’ (pp. 17–18), and W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, both in Cooley.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">Marking criteria (2025 Section II part (b)); “answers could include” points (2025 part (c), 2024 part (d), 2022 part (c)); marking feedback for Question 11 (2020 parts (a)–(c), 2022 part (c)); HSC 2020 Q11(a), 2022 Q11(c) and 2025 Q11(b) wording; the Ducat interpretation printed with 2025 Q11(c): NSW Education Standards Authority, HSC Ancient History examinations, marking guidelines and feedback. © NESA. NESA glossary of key words for “explain”. The HSC-style questions were written for this lesson.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images</div>
+        <ul class="small"><li>The site of the sanctuary of Apollo at Amyklai — Clarke & Garner, Fig 7.7</li><li>A modern painting: Le Barbier’s early 19th-century picture of a Spartan woman handing her son his shield — the ‘with it or on it’ story, not ancient evidence — Clarke & Garner, Fig 5.3</li><li>A modern painting: Edgar Degas’ 19th-century ‘Young Spartans’, imagining girls and boys training together — how later Europeans pictured Sparta, not ancient evidence — Bradley, Fig 3.16</li><li>A papyrus fragment of one of Alcman’s maiden-songs (Hurley et al.), shown to illustrate a papyrus; our extract comes from the Louvre Papyrus E3320 — Hurley et al., Source 56</li><li>Brooches and dress pins of bronze, silver and bone found at the Sanctuary of Artemis Orthia — Clarke & Garner, Fig 5.2</li><li>Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1) — Bradley, Fig 3.15</li><li>A bronze mirror support in the shape of a nude girl, c. 540–530 BC, which Clarke & Garner describe as Spartan — an ancient artefact — Clarke & Garner, Fig 5.10</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The tables in this lesson were drawn for it from Cooley.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

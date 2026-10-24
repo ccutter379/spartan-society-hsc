@@ -622,6 +622,7 @@ h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
    tightens a long answer; .fold keeps only the current margin note open, so seven or
    more notes still fit on one projector screen */
 .annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
 .ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
 html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
 html:not(.read) .margin.fold .anote{padding:.36em .7em;}
@@ -764,6 +765,7 @@ html.read .figure img{max-height:60vh;}
 html.read .slide.filtered{display:none;}
 html.read [data-veil]:not(.unveiled){display:none;}
 html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
 html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
 html.read .present-only{display:none !important;}
 html:not(.read) .read-only{display:none !important;}

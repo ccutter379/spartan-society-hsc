@@ -1,0 +1,2249 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L14 · Spartan Women II</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: land, inheritance, heiresses, marriage and women’s own voices, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 14 (Spartan women II: land, inheritance and marriage). Every class starts l14-. */
+
+/* inheritance shares — Hodkinson's suggestion (svg_l14shares.svg) */
+.l14-sh text{font-family:var(--ui); fill:var(--ink);}
+.l14-sh .ban{font-size:26px; font-weight:700; letter-spacing:.06em; fill:var(--c-keyterm);}
+.l14-sh .bans{font-weight:400; letter-spacing:0; fill:var(--slate);}
+.l14-sh .rl{font-size:31px; font-weight:700; fill:var(--deep);}
+.l14-sh .rs{font-size:25px; fill:var(--slate);}
+.l14-sh .son{fill:var(--surface-2); stroke:var(--slate); stroke-width:3;}
+.l14-sh .dau{fill:var(--w-scope); stroke:var(--c-scope); stroke-width:3;}
+.l14-sh .bt{font-size:30px; font-weight:700; text-anchor:middle;}
+.l14-sh .bs{font-size:25px; text-anchor:middle;}
+.l14-sh .nt{font-size:24px; fill:var(--slate);}
+
+/* Cynisca's family (svg_l14tree.svg) */
+.l14-ft text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.l14-ft .bx{fill:var(--surface); stroke:var(--deep); stroke-width:3;}
+.l14-ft .bx.her{fill:var(--w-scope); stroke:var(--c-scope); stroke-width:5;}
+.l14-ft .nm{font-size:36px; font-weight:700;}
+.l14-ft .ln{font-size:27px;}
+.l14-ft text.ln{fill:var(--ink);}
+.l14-ft path.ln{fill:none; stroke:var(--ink); stroke-width:4;}
+.l14-ft .sm{font-size:25px; fill:var(--slate);}
+.l14-ft .rel{font-size:28px; font-weight:700; fill:var(--deep);}
+.l14-ft .sib{fill:none; stroke:var(--c-scope); stroke-width:4; stroke-dasharray:10 8;}
+
+/* Activity A as an ordered timeline (svg_l14time.svg) */
+.l14-tl text{font-family:var(--ui); fill:var(--ink);}
+.l14-tl .axis{stroke:var(--ink); stroke-width:4;}
+.l14-tl .brk{fill:none; stroke:var(--ink); stroke-width:4;}
+.l14-tl .tick{stroke:var(--ink); stroke-width:3;}
+.l14-tl .tick.bcad{stroke:var(--slate); stroke-dasharray:4 4;}
+.l14-tl .tk{font-size:21px; fill:var(--slate); text-anchor:middle;}
+.l14-tl .tk.sm{font-size:19px;}
+.l14-tl .dot{fill:var(--deep);}
+.l14-tl .rng{fill:var(--deep); opacity:.85;}
+.l14-tl .ld{stroke:var(--slate); stroke-width:2.5; stroke-dasharray:4 5;}
+.l14-tl .eb{fill:var(--surface); stroke:var(--deep); stroke-width:2.5;}
+.l14-tl .et{font-size:23px; font-weight:700;}
+.l14-tl .et .lt{fill:var(--deep);}
+.l14-tl .ed{font-size:21px; fill:var(--slate);}
+
+/* phones: the diagrams scroll sideways at a readable size */
+@media (max-width:700px){
+  html.read .diagram svg.l14-sh{min-width:640px; max-height:none;}
+  html.read .diagram svg.l14-ft{min-width:560px; max-height:none;}
+  html.read .diagram svg.l14-tl{min-width:960px; max-height:none;}
+}
+html:not(.read) .diagram.l14-short svg{max-height:calc(100vh - 390px);}
+/* the Activity A items in four columns on wide screens, so the timeline has room */
+.seq.l14-seq4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:1100px){ .seq.l14-seq4{grid-template-columns:1fr 1fr;} }
+@media (max-width:700px){ .seq.l14-seq4{grid-template-columns:1fr;} }
+html:not(.read) .diagram.l14-mid svg{max-height:calc(100vh - 380px);}
+
+/* "Evidence or opinion?" — the sort */
+.l14-eo td:first-child{font-family:var(--serif); font-style:italic; width:46%;}
+.l14-tag{display:inline-block; font-family:var(--ui); font-style:normal; font-weight:700; font-size:.8em;
+  letter-spacing:.05em; text-transform:uppercase; padding:.08em .55em; border-radius:999px; margin-right:.45em;
+  border:2px solid currentColor; white-space:nowrap;}
+.l14-tag.ev{color:var(--c-evidence); background:var(--w-evidence);}
+.l14-tag.op{color:var(--c-judgement); background:var(--w-judgement);}
+.l14-tag.bo{color:var(--c-counter); background:var(--w-counter);}
+.l14-tag.cl{color:var(--c-keyterm); background:var(--w-keyterm);}
+
+/* heiresses: Herodotus v. Aristotle */
+.l14-heir th:nth-child(2), .l14-heir td:nth-child(2){border-left:5px solid var(--c-evidence);}
+.l14-heir th:nth-child(3), .l14-heir td:nth-child(3){border-left:5px solid var(--c-counter);}
+.l14-heir td:first-child{font-weight:700; color:var(--deep); width:17%;}
+.l14-heir td .q{font-family:var(--serif); font-style:italic;}
+
+/* small figures beside a source */
+.l14-fig .figure img{max-height:30vh; object-fit:contain; background:var(--surface);}
+.l14-relief .figure img{max-height:44vh; width:auto; max-width:100%; object-fit:contain; background:var(--surface);}
+html.read .l14-fig .figure img{max-height:44vh;}
+
+/* two-column practice lists on wide screens */
+.l14-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l14-two{gap:.4em .7em;}
+@media (max-width:900px){ .l14-two{grid-template-columns:1fr;} }
+
+/* the roles of women (putting it together) */
+.l14-roles{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(8px,1vw,16px);}
+.l14-roles .card{padding:clamp(10px,1.5vh,18px) clamp(12px,1vw,18px);}
+.l14-roles .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+.l14-roles .l14-src{display:block; margin-top:.4em; font-size:var(--fs-chrome); color:var(--slate);}
+@media (max-width:1100px){ .l14-roles{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:700px){ .l14-roles{grid-template-columns:1fr;} }
+
+/* paragraph breaks inside a model answer */
+.ans .l14-pb{display:block; height:.5em;}
+
+/* dense slides on short projectors (1366 x 768) */
+@media (max-height:820px){
+  html:not(.read) .l14-dense .src .quote.sm{font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+  html:not(.read) .l14-dense .src .quote:not(.sm){font-size:var(--fs-body); line-height:1.45;}
+  html:not(.read) .l14-dense .src{padding:10px 16px;}
+  html:not(.read) .l14-dense .note .body, html:not(.read) .l14-dense .card .body{font-size:calc(var(--fs-body)*.82); line-height:1.34;}
+  html:not(.read) .l14-dense .note, html:not(.read) .l14-dense .card{padding-top:8px; padding-bottom:8px;}
+  html:not(.read) .l14-dense .qprompt{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l14-dense .stack.tight > p.body{font-size:calc(var(--fs-body)*.82); line-height:1.34;}
+  html:not(.read) .l14-dense .tbl{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l14-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l14-dense .tbl td{padding:.3em .6em;}
+  html:not(.read) .l14-dense .rq{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l14-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.3em .7em;}
+  html:not(.read) .l14-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+  html:not(.read) .l14-dense .fb{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l14-dense .cornell .nts, html:not(.read) .l14-dense .cornell .cq{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l14-dense .moves{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l14-dense .src .quote.sm.model{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l14-dense .keylist li{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l14-dense .l14-roles .card .body{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l14-dense .tbl.crit.compact{font-size:calc(var(--fs-body)*.68);}
+  html:not(.read) .l14-dense .crit td.m{font-size:calc(var(--fs-big)*.8);}
+  html:not(.read) .l14-fig .figure img{max-height:22vh;}
+  html:not(.read) .l14-relief .figure img{max-height:36vh;}
+  html:not(.read) .annot .verdict{font-size:calc(var(--fs-body)*.74); padding:.35em .7em; line-height:1.32;}
+  html:not(.read) .annot .sharper{font-size:calc(var(--fs-body)*.68); line-height:1.3;}
+  html:not(.read) .l14-dense .card.quiet .small{font-size:calc(var(--fs-chrome)*.84); line-height:1.3;}
+}
+
+/* phones and narrow windows: annotated answers stack */
+@media (max-width:900px){ .annot.wide{grid-template-columns:1fr;} }
+
+/* phones: a stack holding a wide diagram must not widen its grid column (the diagram scrolls instead) */
+.split > .stack{min-width:0;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 14" data-title="Spartan women II: land, inheritance and marriage" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 14</p>
+      <h1>Spartan women II: land, inheritance and marriage</h1>
+      <p class="lead">What roles did adult Spartan women hold — and how far can we trust Aristotle, our main witness, about them?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/bradley-3-5-olive-trees-l14.jpg" alt="Olive trees around Sparta today. In the classical period, farmland passed between Spartan families through inheritance, dowries and gifts"><figcaption>Olive trees around Sparta today. In the classical period, farmland passed between Spartan families through inheritance, dowries and gifts — <span class="cr">Bradley, Fig 3.5</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 14" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From girls to women</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Last lesson</div>
+      <p class="body">Spartan women were “famous (and notorious) for being unusually independent” (Cooley) — but almost every word about them was written by men, mostly outsiders. Girls ran and wrestled (Xenophon: so they would bear strong children) and sang in choruses (Alcman). A woman’s <b>role</b> is what she did; her <b>status</b> is her standing and rights.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">Adult women: who owned the land and how they got it, whom heiresses married, what marriage was for — and two places where we can still hear women, or about women, in inscriptions: Cynisca’s victory poem and the names on Spartan graves.</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 13, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 14" data-title="Today’s goals" data-kind="intro">
+<div class="wrap l14-dense">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate Aristotle’s evidence and judgements about Spartan women</li>
+        <li>evaluate the evidence for women’s land ownership, inheritance and marriage</li>
+        <li>describe the roles of women in a 5-mark answer</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>separate Aristotle’s evidence (land, heiresses) from his opinions (“live wantonly”)</li>
+        <li>explain how women came to own land, and compare Herodotus and Aristotle on heiresses</li>
+        <li>explain the priestess/childbirth question and why the translation matters</li>
+        <li>write a 5-mark description of women’s roles in 9 minutes</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to keep apart</div>
+    <p class="body">A woman’s <b>role</b> is what she did: bearing and raising children, running a household and estate, singing in choruses, serving the gods. Her <b>status</b> is her standing and rights, such as owning land. NESA’s 2020 feedback told students to focus “on the roles of women rather than privileges or status”.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 14" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L14 · Spartan women II: land, inheritance and marriage</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Ar. = Aristotle, Xen. = Xenophon)</span></div></div>
+      <div class="row"><div class="cq">What does Aristotle say about women’s land?</div><div class="nts">“almost two-fifths” …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: Aristotle — evidence or opinion · land and heiresses · marriage and motherhood · Cynisca · priestesses, the grave and women’s roles.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 14" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Land and marriage</th><th>Meaning</th></tr>
+      <tr><td>inheritance</td><td>property passed down when its owner dies</td></tr>
+      <tr><td>dowry</td><td>property given with a daughter when she married</td></tr>
+      <tr><td>heiress</td><td>a daughter who inherited her father’s property because he had no sons</td></tr>
+      <tr><td>kyrios</td><td>a woman’s legal guardian (usually her husband or nearest male relative), who in most Greek states controlled her property</td></tr>
+      <tr><td>estate</td><td>a family’s land, farmed for Spartiates by helots</td></tr>
+      <tr><td>oliganthropia</td><td>a shortage of citizen men (Aristotle’s word)</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Voices and memorials</th><th>Meaning</th></tr>
+      <tr><td>epigram</td><td>a short poem, often inscribed on a monument</td></tr>
+      <tr><td>heroon</td><td>a hero-shrine, where a remarkable dead person was honoured</td></tr>
+      <tr><td>votive</td><td>an offering dedicated to a god</td></tr>
+      <tr><td>priestess</td><td>a woman who served a god in a sanctuary and its rituals</td></tr>
+      <tr><td>emendation</td><td>a change made by a modern editor to an ancient text thought to be faulty</td></tr>
+      <tr><td>eugenics</td><td>improving a population by controlling who has children (Lesson 13)</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Kyniska, Archidamos, Agesilaos, Lakonia, Lykourgos). In your own writing use Cynisca, Archidamus, Agesilaus, Laconia, Lycurgus — Kyniska is also correct, if you are consistent.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Aristotle: evidence or opinion?" data-title="Aristotle on Spartan women" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">1 · Aristotle: evidence or opinion? · We do — Source 10.4, Extract A</p>
+  <h2>A hostile witness: Aristotle on Spartan women</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="src">
+      <div class="k">Source 10.4, Extract A · Aristotle on women</div>
+      <p class="quote sm">In addition <span class="code" data-code="judgement" data-letter="J">the freedom given to women is harmful</span> as regards both the purpose of the constitution and the prosperity of the state. … This is what has happened there, since the lawgiver wanted the whole state to be tough, and in respect of the men, he clearly did so, but neglected matters concerning the women. <span class="code" data-code="counter" data-letter="C">For they live wantonly in absolutely every way, and luxuriously.</span> As a result it is inevitable that wealth should be honoured in such a constitution, especially if they happen to be ruled by women … Since this was the case with the Lakedaimonians, <span class="code" data-code="evidence" data-letter="E">many things were controlled by women in the time of their empire.</span> … it was in this respect that the Lakonian women were most harmful, as they made clear in the attack by the Thebans. For they were no use, unlike women in other states, but created more panic than the enemy.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1269b12–1270a15 (part) · written 330s–320s BC, when Sparta was, in Cooley’s words, “a second-rate power” · a philosopher based in Athens · trans. in Cooley D69</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="judgement">What is his verdict?</p>
+      <p class="body reveal">The women’s freedom harmed the state. He is explaining what went wrong with Sparta.</p>
+      <p class="qprompt reveal" data-paint="counter">How does he describe them?</p>
+      <p class="body reveal">“Wantonly … luxuriously”: a sweeping moral attack on all women at once.</p>
+      <p class="qprompt reveal" data-paint="evidence">Is there anything you could test?</p>
+      <p class="body reveal">Influence (“many things were controlled by women”) and an event: the Theban invasion of 370/69 BC.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Aristotle: evidence or opinion?" data-title="Aristotle on land and heiresses" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">1 · Aristotle: evidence or opinion? · We do — Source 10.4, Extract B</p>
+  <h2>The same writer on land</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="src">
+      <div class="k">Source 10.4, Extract B · Aristotle on land</div>
+      <p class="quote sm">In addition to what has been said, one might censure the Lakedaimonians for an imbalanced distribution of wealth. For some of them have come to attain too much property, and others a tiny amount. Therefore the land has fallen into the hands of a small minority, and this through bad regulation of the laws. … And it is the case that <span class="code" data-code="evidence" data-letter="E">almost two-fifths of the whole country is owned by women, since many women inherit and because of the giving of large dowries</span>: <span class="code" data-code="counter" data-letter="C">it would have been better to draw up laws for there to be no dowry, or a small or moderate one</span>. But as things stand <span class="code" data-code="analysis" data-letter="A">one is permitted to give an heiress in marriage to whomever one wants; and if someone dies without making arrangements, then whoever he leaves as heir can give her in marriage to whomever he wishes</span>.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1270a15–29 (part) · written 330s–320s BC · trans. in Cooley D54</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">How much land did women own — and how did they get it?</p>
+      <p class="body reveal">“Almost two-fifths”, through inheritance and large dowries: specific, and probably true of his own day.</p>
+      <p class="qprompt reveal" data-paint="counter">What does he want changed?</p>
+      <p class="body reveal">Small dowries or none: his own recommendation.</p>
+      <p class="qprompt reveal" data-paint="analysis">Who decided whom an heiress married?</p>
+      <p class="body reveal">Her father — or, if he made no arrangements, the heir he left.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Aristotle: evidence or opinion?" data-title="Evidence or opinion? (sort)" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">1 · Aristotle: evidence or opinion? · I do — sort his words</p>
+  <h2>Evidence or opinion?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l14-eo">
+    <tr><th>Aristotle’s words (Cooley D69, D54)</th><th>Evidence or opinion — and why</th></tr>
+    <tr><td>“the freedom given to women is harmful as regards both the purpose of the constitution and the prosperity of the state”</td><td class="reveal"><span class="l14-tag op">opinion</span>his verdict: the argument he is making</td></tr>
+    <tr><td>“For they live wantonly in absolutely every way, and luxuriously.”</td><td class="reveal"><span class="l14-tag op">opinion</span>a sweeping, hostile judgement of all women</td></tr>
+    <tr><td>“many things were controlled by women in the time of their empire”</td><td class="reveal"><span class="l14-tag cl">claim to test</span>vague — which things? — but it suggests influence</td></tr>
+    <tr><td>they “created more panic than the enemy”</td><td class="reveal"><span class="l14-tag bo">event + judgement</span>the Theban invasion of 370/69 BC; Xenophon also says the women “could not even endure the sight of the smoke” (Cooley E69)</td></tr>
+    <tr><td>“almost two-fifths of the whole country is owned by women”</td><td class="reveal"><span class="l14-tag ev">evidence</span>a specific figure, probably for his own day</td></tr>
+    <tr><td>“many women inherit and because of the giving of large dowries”</td><td class="reveal"><span class="l14-tag ev">evidence</span>how the land came to them</td></tr>
+    <tr><td>“one is permitted to give an heiress in marriage to whomever one wants”</td><td class="reveal"><span class="l14-tag ev">evidence</span>a rule about heiresses (section 2)</td></tr>
+    <tr><td>“it would have been better to draw up laws for there to be no dowry, or a small or moderate one”</td><td class="reveal"><span class="l14-tag op">opinion</span>his recommendation</td></tr>
+  </table></div>
+  <div class="src reveal">
+    <div class="k">Use the evidence, discount the opinion · a model sentence</div>
+    <p class="quote sm model">Although Aristotle’s claim that Spartan women ‘live wantonly’ is a hostile judgement, his statement that almost two-fifths of the land was owned by women is specific evidence that women held property through inheritance and dowries.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Aristotle: evidence or opinion?" data-title="Notes 1 — Aristotle" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Aristotle: evidence or opinion?</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L14 · Spartan women II</b></span><span>1 · Aristotle</span></div>
+    <div class="row"><div class="cq">Who and when?</div>
+      <div class="nts reveal"><b>Aristotle</b>, <i>Politics</i> 2.9 · 330s–320s BC, after Leuctra · based in Athens · explaining Sparta’s <b>decline</b> → blames the women (D69, D54)</div></div>
+    <div class="row"><div class="cq">What evidence does Aristotle give about women’s land, and what opinions does he add?</div>
+      <div class="nts reveal"><b>Evidence:</b> “almost two-fifths” of the land owned by women · through inheritance + “large dowries” · heiresses given by father or heir <span class="sep">·</span> <b>Opinion:</b> “live wantonly … luxuriously”; freedom “harmful”; no dowries would be better</div></div>
+    <div class="row"><div class="cq">Anything in between?</div>
+      <div class="nts reveal">“many things were controlled by women” → <b>influence</b>, but vague <span class="sep">·</span> “more panic than the enemy” → a real event, 370/69 BC (Xen., E69), told with hostility</div></div>
+    <div class="row"><div class="cq">So how reliable?</div>
+      <div class="nts reveal">Trust the <b>figures and rules</b> (prob. his own day) <span class="sep">·</span> discount the <b>judgements</b> of character</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Land and heiresses" data-title="How women came to own land" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">2 · Land, inheritance and heiresses · I do</p>
+  <h2>How did women come to own so much land?</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <figure class="diagram l14-mid"><svg class="l14-sh" viewBox="0 0 1200 452" role="img" aria-label="Inheritance shares, Hodkinson’s suggestion, not an ancient rule. A family with one son and one daughter: the son gets two shares, two thirds of the property; the daughter gets one share, one third, given to her as her dowry when she marries. A family with no son: the daughter is an heiress and her father’s property goes with her (Herodotus and Aristotle).">
+<text class="ban" x="12" y="32">HODKINSON’S SUGGESTION<tspan class="bans"> — a modern suggestion (Cooley, note on D54), not an ancient rule</tspan></text>
+<g class="linked" id="l14s-one"><text class="rl" x="12" y="110">One son,</text><text class="rl" x="12" y="144">one daughter</text><rect class="son" x="230" y="70" width="633.3333333333334" height="100" rx="10"/><text class="bt" x="546.6666666666667" y="112">son · 2 shares</text><text class="bs" x="546.6666666666667" y="146">two-thirds of the property</text><rect class="dau" x="863.3333333333334" y="70" width="316.66666666666663" height="100" rx="10"/><text class="bt" x="1021.6666666666667" y="112">daughter · 1 share</text><text class="bs" x="1021.6666666666667" y="146">one-third, as her dowry</text><text class="nt" x="230" y="204">‘half as much as her brother’ → one-third, given at her marriage</text></g>
+<g class="linked" id="l14s-none"><text class="rl" x="12" y="310">No son</text><text class="rs" x="12" y="342">(an heiress)</text><rect class="dau" x="230" y="270" width="950" height="100" rx="10"/><text class="bt" x="705.0" y="312">daughter · her father’s property</text><text class="bs" x="705.0" y="346">her father, his heir or the kings decided whom she married</text><text class="nt" x="230" y="404">From Herodotus 6.57.4 (D8) and Aristotle 1270a (D54), not Hodkinson</text></g>
+</svg>
+      <figcaption>Drawn for this lesson: the first row from Cooley’s note on D54 (Hodkinson’s suggestion, not a rule any ancient writer states), the second from Herodotus (D8) and Aristotle (D54) — the next slide. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <div class="stack tight">
+      <div class="card accent reveal"><div class="k">Three ways land moved</div><p class="body">Land “could not be bought and sold in Sparta, but it changed hand through inheritance, dowries and gifts” (Cooley).</p></div>
+      <div class="card accent reveal" data-also="#l14s-one"><div class="k">A daughter’s share</div><p class="body">Cooley (note on D54): “The large dowries were a daughter’s legal inheritance given to her at the time of her marriage.” Hodkinson suggests she inherited “half as much as her brother”.</p></div>
+    </div>
+  </div>
+  <i class="reveal" data-also="#l14s-none" hidden></i>
+  <div class="note reveal" data-code="judgement"><div class="k">In her own name?</div><p class="body">Elsewhere a woman’s inheritance or dowry “would be held by her kyrios or legal guardian … but we have no evidence that this was also the case in Sparta” (Cooley). Unusual — “but not unique to Sparta”.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Land and heiresses" data-title="Heiresses: Herodotus and Aristotle (table)" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">2 · Land, inheritance and heiresses · We do — two writers, a century apart</p>
+  <h2>Heiresses: Herodotus and Aristotle</h2>
+  <div class="tbl-scroll"><table class="tbl l14-heir">
+    <tr><th></th><th>Herodotus, <i>Histories</i> 6.57.4 (Cooley D8)</th><th>Aristotle, <i>Politics</i> 1270a (Cooley D54)</th></tr>
+    <tr><td>When and who</td><td>written c. 450s–420s BC · from Halicarnassus, not a Spartan · trans. B. Wilson</td><td>written 330s–320s BC, after Leuctra · a critic of Sparta · trans. in Cooley</td></tr>
+    <tr><td>Where the rule appears</td><td>in a list of the kings’ privileges: “some legal matters over which the kings exercise sole jurisdiction”</td><td>in a complaint that “the land has fallen into the hands of a small minority”</td></tr>
+    <tr class="reveal"><td>If her father arranged it</td><td>she marries the man he betrothed her to (implied)</td><td><span class="q">“one is permitted to give an heiress in marriage to whomever one wants”</span></td></tr>
+    <tr class="reveal"><td>If he did not</td><td><span class="q">“if her father has not betrothed her to anyone, then the kings decide who is entitled to marry her”</span></td><td><span class="q">“whoever he leaves as heir can give her in marriage to whomever he wishes”</span></td></tr>
+  </table></div>
+  <div class="cols c2">
+    <div class="stack tight">
+      <p class="qprompt reveal">Did the rule change — or are Herodotus and Aristotle describing different situations?</p>
+      <div class="note reveal" data-code="counter"><p class="body"><b>Perhaps a change:</b> by the 4th century a father’s heir, not the kings, chose — and Aristotle blames “bad regulation of the laws”.</p></div>
+    </div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="analysis"><p class="body"><b>Perhaps different situations:</b> Herodotus’ kings decide “who is entitled” — a legal ruling between claimants? Aristotle describes a father, or the heir he named, choosing freely.</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>Either way,</b> whoever chose her husband decided which family her land joined.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Land and heiresses" data-title="Why women’s land mattered">
+<div class="wrap l14-dense">
+  <p class="eyebrow">2 · Land, inheritance and heiresses · I do — so what? <span class="optional">If time</span></p>
+  <h2>Why women’s land mattered</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">A role: running estates</div><p class="body">Spartiate men spent “much time with the other men” at the mess and at war, so “the women probably enjoyed comparative freedom in running their household, and they needed a certain independence and the ability to control an estate” (Cooley). That would probably have included directing helot labour.</p></div>
+    <div class="card accent reveal"><div class="k">Influence</div><p class="body">Aristotle complains that “many things were controlled by women”. Plutarch’s Gorgo, wife of King Leonidas, answers a foreign woman who says Laconian women “were the only ones to rule their men”: “Yes. But then, we are the only women who give birth to real men.”</p></div>
+    <div class="card accent reveal"><div class="k">Fewer citizens</div><p class="body">As land gathered in fewer families, “some Spartan families failed to produce their contributions for the syssitia, and therefore lost their full citizen rights” (Cooley). Aristotle: land for 30,000 hoplites, yet “the total number was not even one thousand”.</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>Power — or a symptom of decline?</b> Women’s property gave them a real economic role, but Aristotle, writing after Leuctra, links it to the shrinking citizen body. Was that cause, or just one part of a wider problem of land in a few hands?</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Land and heiresses" data-title="You do — annotate Aristotle">
+<div class="wrap l14-dense">
+  <p class="eyebrow">2 · Land, inheritance and heiresses · You do · 8 minutes · press K for the timer</p>
+  <h2>Your turn: annotate Source 10.4 — O, V, P, R, L</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card accent">
+      <div class="k">Aristotle, <i>Politics</i> 2.9 (Cooley D69, D54)</div>
+      <ul class="body">
+        <li><b>O</b> — he wrote after Leuctra and the Theban invasion of 370/69 BC. Why might that shape his view?</li>
+        <li><b>V</b> — find two pieces of factual evidence about land and inheritance.</li>
+        <li><b>P</b> — he is explaining why Sparta declined. Whom does he blame?</li>
+        <li><b>R</b> — highlight evidence in one colour and opinion in another. Which is more trustworthy?</li>
+        <li><b>L</b> — does this describe the 6th and 5th centuries, or only his own time?</li>
+      </ul>
+      <p class="small">Then draw → links to Herodotus 6.57.4 (the kings and heiresses, Cooley D8) and to Xenophon on girls (Lesson 13, Cooley D68).</p>
+    </div>
+    <div class="src reveal" data-veil="Show model margin notes">
+      <div class="k">Model margin notes — yours should be in your own words</div>
+      <p class="quote sm model">O Ar., 330s–320s BC, after Leuctra; outsider in Athens; Sparta now weak · V “almost two-fifths” owned by women; inheritance + large dowries; heiress given by father or heir · P explains decline → blames the women (and the lawgiver) · R figures + rules = evidence; “wantonly”, “ruled by women” = opinion; panic = real event (Xen. E69) · L prob. his own day only; no women’s voices → Hdt: kings chose for an unbetrothed heiress · Xen.: women’s main task = “producing children”</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Land and heiresses" data-title="Notes 2 — Land and heiresses" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Land, inheritance and heiresses</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L14 · Spartan women II</b></span><span>2 · Land and heiresses</span></div>
+    <div class="row"><div class="cq">How did land pass to women?</div>
+      <div class="nts reveal">No buying or selling → <b>inheritance, dowries, gifts</b> (Cooley) <span class="sep">·</span> dowry = a daughter’s inheritance, given at marriage <span class="sep">·</span> Hodkinson’s <b>suggestion</b>: half a brother’s share → ⅓ with one brother</div></div>
+    <div class="row"><div class="cq">In her own name?</div>
+      <div class="nts reveal">Elsewhere held by her <b>kyrios</b> <span class="sep">·</span> at Sparta “no evidence” of this (Cooley) → unusual, not unique</div></div>
+    <div class="row"><div class="cq">Who decided whom an unbetrothed heiress married, according to Herodotus and to Aristotle?</div>
+      <div class="nts reveal">Hdt 6.57.4 (D8, 5th c.): the <b>kings</b> <span class="sep">·</span> Ar. (D54, 4th c.): her father, or the <b>heir</b> he left <span class="sep">·</span> a change, or different situations? unclear</div></div>
+    <div class="row"><div class="cq">Why might Spartan women have managed estates more than other Greek women?</div>
+      <div class="nts reveal">Men at the <b>mess</b> and on <b>campaign</b> → women “probably” ran households, controlled estates (Cooley) <span class="sep">·</span> prob. directed helot labour (our inference)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Marriage and motherhood" data-title="Marriage: Xenophon and Plutarch" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">3 · Marriage and motherhood · I do — what was marriage for?</p>
+  <h2>Marriage for the state</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon on marriage</div>
+        <p class="quote sm">[6] As well as this, he also put an end to the practice of men marrying whenever they chose, and instead ordained that they should marry when at the height of their physical powers, on the assumption that this too was eugenically advantageous. … [8] … Lykourgos introduced a law which gave him the right to beget children with any mother of fine children and noble birth, provided he could persuade her husband to give his consent. [9] He gave permission for many such arrangements. As a result, women like the idea of running two households …</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 1.6–9 (part) · probably written in the late 390s or 380s BC · an Athenian admirer of Sparta · trans. B. Wilson · Cooley D68</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><p class="body">An older husband could also bring in “a someone who was physically and morally admirable, for the purpose of siring children for him” (1.7). The aim throughout: strong children.</p></div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, five centuries later</div>
+        <p class="quote sm">[3] Their marriages take the form of a kind of kidnapping. … [6] … he also made it perfectly acceptable for men of good standing to share children and the privilege of begetting them. … [8] Lykourgos’ motives for this were twofold: first, he did not regard children as the private property of their parents so much as the common property of the state …</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 15.3, 15.6, 15.8 (part) · written c. AD 100 · trans. B. Wilson · Cooley D71</p>
+      </div>
+      <div class="note reveal" data-code="evidence"><div class="k">When did women marry?</div><p class="body">Cooley: “probably married later than most girls elsewhere in Greece (late teens, rather than early/mid teens)”.</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">Both writers make marriage serve the state’s need for strong citizens, so <b>motherhood</b> was a woman’s central role — in Xenophon’s words, “the most important task for freeborn women was producing children”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Marriage and motherhood" data-title="Quick Check (sections 5–6)" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">Check for understanding · Quick Check · cold call</p>
+  <h2>Quick Check: land, heiresses and marriage</h2>
+  <ol class="rq l14-two" data-answers>
+    <li>What evidence does Aristotle give about women’s land, and what opinions does he add?
+      <span class="sol reveal">Evidence: “almost two-fifths of the whole country is owned by women”, through inheritance and “large dowries”; heiresses given in marriage by a father or his heir. Opinions: women “live wantonly … and luxuriously”; their freedom is “harmful”; dowries should be small or none.</span></li>
+    <li>Who decided whom an unbetrothed heiress married, according to Herodotus and to Aristotle?
+      <span class="sol reveal">Herodotus (5th century BC): “the kings decide who is entitled to marry her”. Aristotle (4th century BC): the father, or the heir he left. Whether the rule changed or the two describe different situations is unclear.</span></li>
+    <li>Why might Spartan women have managed estates more than other Greek women?
+      <span class="sol reveal">Spartiate men spent much of their time at the mess and on campaign, so women “probably” ran their households and needed “the ability to control an estate” (Cooley); they could also hold land themselves.</span></li>
+    <li>What reason does Plutarch give for Spartan marriage customs?
+      <span class="sol reveal">For letting another man father a wife’s children, Lycurgus “did not regard children as the private property of their parents so much as the common property of the state” (15.8, Cooley D71); the secret visits “acted as a training in self control and moderation” (15.5) — written c. AD 100.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Marriage and motherhood" data-title="Notes 3 — Marriage and motherhood" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Marriage and motherhood</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L14 · Spartan women II</b></span><span>3 · Marriage and motherhood</span></div>
+    <div class="row"><div class="cq">What does Xenophon say about marriage?</div>
+      <div class="nts reveal">Marry “at the height of their physical powers” → “eugenically advantageous” <span class="sep">·</span> children with another man’s wife, with her husband’s consent <span class="sep">·</span> women “running two households” (<i>LP</i> 1.6–9, D68)</div></div>
+    <div class="row"><div class="cq">What reason does Plutarch give for Spartan marriage customs?</div>
+      <div class="nts reveal">Sharing wives and children: children = “common property of the state” (<i>Lyc.</i> 15.8, D71) <span class="sep">·</span> secret visits = “a training in self control and moderation” (15.5) <span class="sep">·</span> c. AD 100 → late <span class="sep">·</span> wedding customs: Lesson 27</div></div>
+    <div class="row"><div class="cq">When did women marry?</div>
+      <div class="nts reveal">Prob. <b>late teens</b>, later than most Greek girls (Cooley)</div></div>
+    <div class="row"><div class="cq">A woman’s central role?</div>
+      <div class="nts reveal"><b>Motherhood</b>: “the most important task for freeborn women was producing children” (Xen.) <span class="sep">·</span> upholding values: Gorgo, “real men” (Plut., D70)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Cynisca’s own voice" data-title="Cynisca’s epigram and her family" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">4 · Women’s own voices · We do — Source 10.5, Extract A</p>
+  <h2>A woman’s own voice: Cynisca’s victory poem</h2>
+  <div class="split" style="--cols:1fr 1.25fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source 10.5, Extract A · Cynisca’s epigram</div>
+        <p class="quote">Sparta’s [kings are my]<br><span class="match" data-step="m1">Fathers and brothers</span>; after winning [with a chariot of swift-footed horses]<br>Kyniska set up this statue. I say that I am the only woman<br>Out of all Greece to win the crown.<br>Apelles, son of Kallikles made this.</p>
+        <p class="prov">Inscription on a fragmentary black marble statue base from Olympia · after her victory in the four-horse chariot race, 396 or 392 BC · IG 5.1.1564a = IvO 160 · trans. in Cooley C55. The words in brackets are restored from a copy in the <i>Palatine Anthology</i> (13.16).</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <figure class="diagram"><svg class="l14-ft" viewBox="0 0 1000 494" role="img" aria-label="Cynisca’s family. Her father, Archidamus II, was king from 469 to 427 BC. Her half-brother Agis II, whose mother was Lampido, was king from 427 to about 400 BC. Her brother Agesilaus II, whose mother was Eupolia, was king from about 400 to 360 BC. Cynisca won the four-horse chariot race at Olympia in 396 or 392 BC.">
+<g class="linked" id="l14f-dad"><rect class="bx king" x="320" y="12" width="360" height="132" rx="12"/><text class="nm" x="500.0" y="54">Archidamus II</text><text class="ln" x="500.0" y="87">king, 469–427 BC</text><text class="rel" x="500.0" y="120">her father</text><path class="ln" d="M500,144 V184 M165,184 H835 M165,184 V226 M500,184 V226 M835,184 V226"/></g>
+<rect class="bx her" x="335" y="226" width="330" height="162" rx="12"/><text class="nm" x="500.0" y="268">Cynisca</text><text class="ln" x="500.0" y="301">daughter of Archidamus</text><text class="ln" x="500.0" y="334">Olympic victory,</text><text class="ln" x="500.0" y="367">396 or 392 BC</text>
+<g class="linked" id="l14f-bro"><rect class="bx king" x="12" y="226" width="306" height="162" rx="12"/><text class="nm" x="165.0" y="268">Agis II</text><text class="ln" x="165.0" y="301">king, 427–c. 400 BC</text><text class="sm" x="165.0" y="334">his mother: Lampido</text><rect class="bx king" x="682" y="226" width="306" height="162" rx="12"/><text class="nm" x="835.0" y="268">Agesilaus II</text><text class="ln" x="835.0" y="301">king, c. 400–360 BC</text><text class="sm" x="835.0" y="334">his mother: Eupolia</text><path class="sib" d="M395,388 C395,450 165,450 165,388"/><path class="sib" d="M605,388 C605,450 835,450 835,388"/><text class="rel" x="250" y="482">half-brother</text><text class="rel" x="750" y="482">brother</text></g>
+</svg>
+        <figcaption>Drawn for this lesson from Cooley’s note on C55 and Plutarch, <i>Agesilaos</i> 1 (Cooley E82). <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+      <p class="qprompt reveal">What does Cynisca want to be remembered for?</p>
+      <p class="body reveal">Her royal family, her victory, and being unique: “the only woman / Out of all Greece”.</p>
+      <i class="reveal" data-also="#l14f-dad" data-hl="[data-step=m1]" hidden></i>
+      <i class="reveal" data-also="#l14f-bro" hidden></i>
+      <div class="note reveal" data-code="evidence"><p class="body">Hodkinson: inscriptions “provide precious evidence for the voices of a few, largely wealthy, women speaking in their own words.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Cynisca’s own voice" data-title="Cynisca: her words and Xenophon’s">
+<div class="wrap l14-dense">
+  <p class="eyebrow">4 · Women’s own voices · We do — Source 10.5, Extract B <span class="optional">If time</span></p>
+  <h2>Her words — and a friend of her brother’s</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source 10.5, Extract B · Xenophon on Agesilaus</div>
+        <p class="quote sm">Surely Agesilaos did what was seemly and dignified when he adorned his own estates with possessions worthy of a man – keeping hounds and horses for warriors – but persuaded his sister Kyniska to breed chariot horses, and showed by her victory that such a stud is a mark not of manliness but of wealth.</p>
+        <p class="prov">Xenophon, <i>Agesilaos</i> 9.6 · a praise-biography written after Agesilaus died in 360 BC · Xenophon fought for him · trans. in Cooley C57</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Pausanias at Sparta</div>
+        <p class="quote sm">Also in the Platanistas (‘Plane-tree Grove’) is the heroon (hero-shrine) of Kyniska, daughter of Archidamos, king of the Spartiates. She was the first woman to breed horses and the first to win the chariot race at Olympia.</p>
+        <p class="prov">Pausanias, <i>Description of Greece</i> 3.15.1 · 2nd century AD · trans. in Cooley C56</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <div class="l14-fig"><figure class="figure contain"><img src="images/bradley-3-30-chariot-vase-l14.jpg" alt="A chariot and horses on a black-figure vase: not a race, and nothing identifies it as Laconian"><figcaption>A chariot and horses on a black-figure vase: not a race, and nothing identifies it as Laconian — <span class="cr">Bradley, Fig 3.30</span></figcaption></figure></div>
+      <p class="qprompt reveal">How does Xenophon change the meaning of her win?</p>
+      <p class="body reveal">To him it proves only wealth, not manliness — and it is Agesilaus who “persuaded” her. Her own poem claims the glory.</p>
+      <div class="note reveal" data-code="counter"><p class="body">A king’s daughter is not a typical woman. Cooley: outsiders’ views were “probably shaped by exceptional women, especially members of the royal families”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Cynisca’s own voice" data-title="Notes 4 — Cynisca" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Cynisca: a woman’s own voice</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L14 · Spartan women II</b></span><span>4 · Cynisca</span></div>
+    <div class="row"><div class="cq">Who was Cynisca?</div>
+      <div class="nts reveal">Daughter of King <b>Archidamus</b> II · sister of <b>Agesilaus</b> II · half-sister of <b>Agis</b> II (Cooley, C55) <span class="sep">·</span> won the four-horse chariot race at Olympia, <b>396 or 392 BC</b></div></div>
+    <div class="row"><div class="cq">What does her epigram claim?</div>
+      <div class="nts reveal">Kings as “Fathers and brothers” <span class="sep">·</span> “the only woman / Out of all Greece to win the crown” (C55) → her own words, in public</div></div>
+    <div class="row"><div class="cq">How do the others see it?</div>
+      <div class="nts reveal">Xen. (<i>Ages.</i> 9.6, C57): Agesilaus “persuaded” her → a stud = “a mark not of manliness but of wealth” <span class="sep">·</span> Paus. (C56, 2nd c. AD): a <b>heroon</b> at Sparta; “the first woman to breed horses”</div></div>
+    <div class="row"><div class="cq">What can’t she show?</div>
+      <div class="nts reveal">A king’s daughter → <b>exceptional</b>, not typical <span class="sep">·</span> women’s voices = “a few, largely wealthy, women” (Hodkinson)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Priestesses and the grave" data-title="A name on the grave" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">5 · Priestesses and the grave · We do — Source 10.6</p>
+  <h2>Who earned a name on the grave?</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source 10.6, Extract A · Plutarch on burial</div>
+        <p class="quote">Those burying the body were not allowed to inscribe the name, unless the man had fallen in battle or the woman was a priestess. Mourning was limited to a brief period of eleven days.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 27.2 · written c. AD 100 · trans. B. Wilson · Cooley B35b</p>
+      </div>
+      <div class="src">
+        <div class="k">Source 10.6, Extract B · a memorial from Laconia</div>
+        <p class="quote">Agippia in childbirth.</p>
+        <p class="prov">Inscribed memorial · IG 5.1.714 · probably Hellenistic, after our period (Cooley) · trans. in Cooley B55</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">According to Plutarch, what earned a man — or a woman — an inscribed name?</p>
+      <p class="body reveal">Death in battle for a man; for a woman, being a priestess.</p>
+      <p class="qprompt reveal">Does the surviving evidence fit?</p>
+      <p class="body reveal">Spartan memorials are rare: only 24 “in war” stones are known (Cooley). Others name priests. A couple name women “in bed” — presumably in childbirth.</p>
+      <p class="qprompt reveal">Why does Extract B’s date matter?</p>
+      <p class="body reveal">It is probably Hellenistic, so it may not show the custom of our period. Cooley thinks another, written retrograde, is earlier: “possibly classical”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Priestesses and the grave" data-title="Priestess or childbirth?" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">5 · Priestesses and the grave · We do — pairs · the translation matters</p>
+  <h2>Priestess or childbirth?</h2>
+  <div class="split" style="--cols:1.45fr .7fr">
+    <div class="stack">
+      <div class="cols c2">
+        <div class="card accent reveal"><div class="k">What Plutarch’s text says</div><p class="body">“… or the woman was a <b>priestess</b>.”</p></div>
+        <div class="card quiet reveal"><div class="k">What some modern texts say</div><p class="body">Texts of Plutarch, “as for example Talbert’s translation for Penguin”, “have been changed to read as if he mentioned women dead in childbirth, rather than priestesses” (Cooley). A change like this is an <b>emendation</b>.</p></div>
+      </div>
+      <div class="note reveal" data-code="evidence"><div class="k">The test</div><p class="body">Matthew Dillon, following Hodkinson, points to a list of names from the Tainaron peninsula: seven women, “only three of whom are followed by ‘in bed’, thus showing that death in childbirth was not the reason for the names being inscribed.”</p></div>
+      <p class="qprompt reveal">What difference does the reading make to what we think women were honoured for?</p>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>“Priestess”:</b> honoured for a religious office. <b>“Childbirth”:</b> honoured for dying as a mother — a female match for death in battle. One word changes the picture of a woman’s role.</p></div>
+    </div>
+    <div class="l14-relief"><figure class="figure contain"><img src="images/hurley-32-girl-religious-rite-l14.jpg" alt="A stone relief described in Antiquity 2 as an early 5th-century BC Spartan girl in a religious rite, lifting her veil and pouring wine into a cup"><figcaption>A stone relief described in Antiquity 2 as an early 5th-century BC Spartan girl in a religious rite, lifting her veil and pouring wine into a cup — <span class="cr">Hurley et al., Source 32</span></figcaption></figure></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Priestesses and the grave" data-title="The roles of women — putting it together" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow">5 · Putting it together · I do — Lessons 13 and 14</p>
+  <h2>The roles of Spartan women — and the evidence</h2>
+  <div class="l14-roles">
+    <div class="card accent reveal"><div class="k">Bearing and raising citizens</div><p class="body">“the most important task for freeborn women was producing children”<span class="l14-src">Xenophon, <i>Constitution</i> 1.4 (D68)</span></p></div>
+    <div class="card accent reveal"><div class="k">Upholding Spartan values</div><p class="body">Gorgo: “we are the only women who give birth to real men”; mothers urging sons to fight<span class="l14-src">Plutarch, <i>Lykourgos</i> 14.4 (D70); <i>Sayings of Spartan Women</i> (F35) — late</span></p></div>
+    <div class="card accent reveal"><div class="k">Running households and estates</div><p class="body">probably, while the men were at the mess and at war; women held land through inheritance and dowries<span class="l14-src">Cooley; Aristotle (D54)</span></p></div>
+    <div class="card accent reveal"><div class="k">Choruses and festivals</div><p class="body">girls sang and danced, as in Alcman’s Maiden-song; maidens rode in carriages at the Hyakinthia<span class="l14-src">Alcman (A14); Polykrates (C69) — Lesson 13</span></p></div>
+    <div class="card accent reveal"><div class="k">Serving the gods</div><p class="body">priestesses; “Aristomacha dedicated (me) to the Eleuthia”, the goddess of childbirth; three of four named dedicators on the acropolis were women<span class="l14-src">Plutarch (B35b); C27; Hodkinson</span></p></div>
+    <div class="card accent reveal"><div class="k">Helot women</div><p class="body">the conquered Messenians (helots), “both they themselves and their wives”, mourned their masters; helots on estates were “probably also employed as household servants”<span class="l14-src">Tyrtaeus (A6); Cooley</span></p></div>
+  </div>
+  <div class="note reveal" data-code="counter"><p class="body"><b>Role, not status:</b> owning land is a right (status); running an estate is a role. Write about what women <i>did</i>.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Priestesses and the grave" data-title="Notes 5 — Priestesses and women’s roles" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Priestesses, the grave and women’s roles</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L14 · Spartan women II</b></span><span>5 · Priestesses and roles</span></div>
+    <div class="row"><div class="cq">Whose names were inscribed?</div>
+      <div class="nts reveal">Man “fallen in battle” or woman who “was a priestess” (Plut. <i>Lyc.</i> 27.2, B35b, c. AD 100) <span class="sep">·</span> only 24 “in war” stones known</div></div>
+    <div class="row"><div class="cq">Why does the translation matter?</div>
+      <div class="nts reveal">Some modern texts (Talbert’s Penguin) changed to “childbirth” = an <b>emendation</b> <span class="sep">·</span> Tainaron list: 7 women, only 3 “in bed” → childbirth not the reason (Dillon, Hodkinson) <span class="sep">·</span> religious office v. death as a mother</div></div>
+    <div class="row"><div class="cq">Women in religion?</div>
+      <div class="nts reveal">Priestesses <span class="sep">·</span> Aristomacha to Eileithyia (Eleuthia), goddess of childbirth (C27) <span class="sep">·</span> 3 of 4 named acropolis dedicators women (Hodkinson) <span class="sep">·</span> choruses (Alcman)</div></div>
+    <div class="row"><div class="cq">The roles, in one line</div>
+      <div class="nts reveal">Mothers · upholders of values · estate managers (prob.) · chorus singers · dedicators and priestesses · helot women: labour and service</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Priestesses and the grave" data-title="Summary" data-kind="notes">
+<div class="wrap l14-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.7fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What does Aristotle tell us about women’s land — and how far can we trust him?</li>
+          <li>How did marriage and motherhood serve the Spartan state?</li>
+          <li>Where can we hear women’s own voices, and what do they show?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">Aristotle, a hostile critic writing after Leuctra, claims that women owned almost two-fifths of the land through inheritance and large dowries — specific evidence, probably for his own day, that we can use while discounting his attacks on their character. Xenophon and Plutarch both present marriage as serving the state’s need for strong children, so motherhood was a woman’s central role, and while their husbands were at the mess or at war, women probably ran households and estates. Women’s own voices survive only in a few inscriptions by largely wealthy women, such as Cynisca’s Olympic victory poem, while Plutarch’s rule that a woman’s name could be inscribed only if she was a priestess points to a religious role that a modern emendation to ‘childbirth’ would hide.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Aristotle: evidence or opinion</label></li>
+        <li><label><input type="checkbox"> 2 · Land, inheritance and heiresses</label></li>
+        <li><label><input type="checkbox"> 3 · Marriage and motherhood</label></li>
+        <li><label><input type="checkbox"> 4 · Cynisca’s own voice</label></li>
+        <li><label><input type="checkbox"> 5 · Priestesses and women’s roles</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (a)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>Today’s lesson was examined in 2020</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 5 marks ≈ 9 minutes.</p></div>
+    <div class="card"><div class="k">Describe</div><p class="body">NESA: “Provide characteristics and features.”</p></div>
+    <div class="card accent"><div class="k">Role, not status</div><p class="body">What women <i>did</i> in Spartan society — not the rights and freedoms they had.</p></div>
+  </div>
+  <p class="lead">We take the question apart, read the criteria and the 2020 feedback, and you write it in 9 minutes. Then we test NESA’s sample answer against Cooley, compare a model, and you mark your own.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 · Section II · Question 11 (a) · 5 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Describe</span> the <span class="code" data-code="keyterm" data-letter="K">role of women</span> <span class="code" data-code="scope" data-letter="S">in this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">I do — watch the question taken apart. Then you write it, in 9 minutes.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(a) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Describe</div><p class="body">“Provide characteristics and features”: say what women did, with a specific Spartan detail for each role. No argument is needed — but a list of words is not a description.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The role of women</div><p class="body">Roles — bearing and raising children, estates, choruses and festivals, religion, influence — not rights or privileges. And which women? NESA’s sample includes helot women as well as Spartiates.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">Archaic and Classical Sparta, to 371 BC. Name late writers as late: Plutarch wrote about AD 100.</p></div>
+    <div class="card accent reveal"><div class="k">5 marks</div><p class="body">About 9 minutes · four or five roles, each with a specific detail or a named source · about 120–180 words · no introduction.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — the criteria and the feedback" data-kind="hsc">
+<div class="wrap l14-dense">
+  <p class="eyebrow">HSC 2020 Q11(a) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2020, part (a))</th></tr>
+      <tr><td class="m">5</td><td>Provides a detailed description relevant to the question · Communicates effectively using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4</td><td>Provides a sound description relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">3</td><td>Provides some description relevant to the question · Communicates using some appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">2</td><td>Provides some information relevant to the question · Uses some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">use historical terms specific to Sparta appropriately and accurately</span><span class="q">give detail specific to Spartan women, rather than women in general and ensure the focus was on the unique role of Spartan women within Sparta’s society (a)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">focusing on the roles of women rather than privileges or status (a)</span></p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">The step up</div><p class="body">“Some description” → “sound” → “detailed”: specific Spartan details, not things true of women anywhere.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2020 HSC Ancient History Marking Guidelines (Section II, part (a)) and the 2020 marking feedback for Question 11, quoted exactly.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(a) · You do · 9 minutes · press K for the timer</p>
+  <h2>Describe the role of women in this period. <span class="small">(5 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>roles — what women did — not rights or freedoms</li>
+        <li>four or five roles, each with a specific Spartan detail</li>
+        <li>at least two named sources</li>
+        <li>helot women as well as Spartiate women</li>
+        <li>about 120–180 words, no introduction</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “The central role of Spartiate women was …”</p>
+      <p class="small">The roles slide (slide 23) is your plan.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — NESA’s sample, annotated" data-kind="hsc">
+<div class="wrap l14-dense">
+  <p class="eyebrow">HSC 2020 Q11(a) · Check your answer — NESA’s sample answer, tested against Cooley</p>
+  <h2>NESA’s sample answer, annotated</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated sample">
+    <div class="ans long">
+      <span class="code" data-code="scope" id="s20-1">The role of women in Sparta was dependent on their social status.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="s20-2">Spartan women played a significant role in the management of houses and estates,</span><span class="mk">2</span>
+      <span class="code" data-code="counter" id="s20-3">and are suggested in sources to have had influence in both private and public affairs.</span><span class="mk">3</span>
+      <span class="code" data-code="keyterm" id="s20-4">They played a prominent role in religious festivals through choral singing and dancing.</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="s20-5">Their key social duty was to bear children for the Spartan state.</span><span class="mk">5</span>
+      <span class="code" data-code="judgement" id="s20-6">Helot women tended fields with their husbands and could also serve in Spartiate households, both as domestic servants and child-rearers.</span><span class="mk">6</span>
+      <p class="meta">Sample answer from the NESA 2020 HSC Ancient History Marking Guidelines · 85 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="scope" data-hl="#s20-1"><span class="mk">1</span><b>Which women?</b><span class="tx">Sets up two groups at once — Spartiate and helot women — so the answer is about all women.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#s20-2"><span class="mk">2</span><b>Cooley says: “probably”</b><span class="tx">Cooley: “the women probably enjoyed comparative freedom in running their household, and they needed a certain independence and the ability to control an estate”. Keep his hedge.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#s20-3"><span class="mk">3</span><b>A careful hedge</b><span class="tx">“Suggested in sources” — Aristotle’s hostile “many things were controlled by women”. Cooley warns that outsiders’ views were “probably shaped by exceptional women”, and that in Greek states women were “universally excluded” from political rights.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#s20-4"><span class="mk">4</span><b>A Spartan role</b><span class="tx">Choruses at festivals: Alcman’s Maiden-song and Plutarch (Lesson 13). Supported by Cooley.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#s20-5"><span class="mk">5</span><b>The central role</b><span class="tx">Xenophon: “the most important task for freeborn women was producing children”. Supported.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#s20-6"><span class="mk">6</span><b>Cooley says: less sure</b><span class="tx">Cooley says helots on Spartiate estates “were probably also employed as household servants”, but he gives no source for helot women in the fields or as child-rearers.</span></div>
+      <div class="verdict reveal"><b>NESA’s sample.</b> Five roles across two groups of women, in 85 words — but no ancient writer named, and two claims Cooley would hedge or cannot support.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> one named source per role — Xenophon for children, Alcman for choruses, Aristotle for women’s land and influence, and Cooley’s “probably” for running estates.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — a model, annotated" data-kind="hsc">
+<div class="wrap l14-dense">
+  <p class="eyebrow">HSC 2020 Q11(a) · a model written for this lesson, from Lessons 13 and 14</p>
+  <h2>Roles, a named source for each, the hedges kept</h2>
+  <div class="annot wide" data-veil="Show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="scope" id="m20-1">Spartiate women’s roles centred on producing and raising citizens, but they reached further into the household and the land than those of most Greek women, and included public religious roles.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m20-2">Xenophon says Lycurgus judged that ‘the most important task for freeborn women was producing children’, so girls trained in running and wrestling to bear strong sons.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m20-3">Mothers were also expected to uphold Spartan values: Plutarch, writing much later, has Gorgo claim that Spartan women ‘give birth to real men’.</span><span class="mk">3</span>
+      <span class="code" data-code="keyterm" id="m20-4">With their husbands at the mess or on campaign, women probably ran households and estates, and Aristotle claims that through inheritance and dowries women owned ‘almost two-fifths’ of the land in his day.</span><span class="mk">4</span>
+      <span class="code" data-code="evidence" id="m20-5">In religion, girls sang and danced in choruses such as Alcman’s Maiden-song, women dedicated offerings at Orthia and on the acropolis, and Plutarch says a woman’s name could be inscribed on her memorial only if she ‘was a priestess’.</span><span class="mk">5</span>
+      <span class="code" data-code="counter" id="m20-6">Helot women’s roles were different: Tyrtaeus has the conquered Messenians (helots), ‘both they themselves and their wives’, mourning their masters, and helots on Spartiate estates were probably also household servants.</span><span class="mk">6</span>
+      <p class="meta">Model written for this lesson · about 180 words, about 9 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="scope" data-hl="#m20-1"><span class="mk">1</span><b>Roles, framed</b><span class="tx">Names the main role and signals the others — no introduction beyond this.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m20-2"><span class="mk">2</span><b>A named writer</b><span class="tx">Xenophon, with his own words for the central role (D68) — and Lesson 13’s girls’ training as the link.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m20-3"><span class="mk">3</span><b>Late, and labelled</b><span class="tx">Plutarch is c. AD 100: “writing much later” tells the marker you know.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m20-4"><span class="mk">4</span><b>Status turned into role</b><span class="tx">Owning land is status; running estates is a role. The figure supports the role; “probably” keeps Cooley’s hedge, and “claims” marks the figure as Aristotle’s.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m20-5"><span class="mk">5</span><b>Specific to Sparta</b><span class="tx">Alcman, Orthia, the priestess rule (B35b): “detail specific to Spartan women”, as the feedback asked.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m20-6"><span class="mk">6</span><b>Other women</b><span class="tx">Helot women, with a source (Tyrtaeus A6) and Cooley’s hedge — the group NESA’s sample includes.</span></div>
+      <div class="verdict reveal"><b>Written to the 5-mark criteria:</b> a detailed description of roles, specific to Sparta, with named evidence and Spartan terms.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(a) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">Some information · status, not roles</span>
+      <p class="resp">Spartan women had much more freedom than other Greek women. They could own land in their own name, inherit property, exercise in public and speak their minds to men.</p>
+      <p class="why">Rights and freedoms: what women had, not what they did. NESA asked for “the roles of women rather than privileges or status”.</p></div>
+    <div class="rung reveal"><span class="mark">Some description · women anywhere</span>
+      <p class="resp">Women in Sparta looked after the house and the children, helped their husbands and took part in religion.</p>
+      <p class="why">Roles, but true of women in almost any Greek city. NESA wanted “detail specific to Spartan women, rather than women in general”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · a changed text</span>
+      <p class="resp">Spartan women who died in childbirth were honoured like soldiers killed in battle: Plutarch says both could have their names inscribed.</p>
+      <p class="why">Plutarch’s text says “priestess”; “childbirth” is a modern emendation, and the Tainaron list counts against it.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(a)" data-title="HSC 2020 Q11(a) — mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(a) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> wrote about roles — what women did — not rights or privileges</label></li>
+        <li><label><input type="checkbox"> four or more roles, each with a detail specific to Sparta</label></li>
+        <li><label><input type="checkbox"> named at least two writers (Xenophon, Alcman, Aristotle, Plutarch …)</label></li>
+        <li><label><input type="checkbox"> included women of different status: helot women as well as Spartiates</label></li>
+        <li><label><input type="checkbox"> kept the hedges: estates “probably”; Plutarch labelled as late</label></li>
+        <li><label><input type="checkbox"> did not claim Plutarch allowed names for women who died in childbirth; nothing from Pompeii</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing role in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Cover the sources: does each sentence still say what Spartan women <i>did</i>? If it says what they <i>had</i>, rewrite it as a role.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline how Spartan women came to own land in this period.</b> (4 marks)</p>
+        <p class="body"><b>Explain why Aristotle criticised Spartan women.</b> (5 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put the sources in order" data-kind="practice">
+<div class="wrap prac l14-dense">
+  <p class="eyebrow">Practice and review · 1 of 7 · sequencing · Chapter 10 Activity A</p>
+  <h2>Put these in the order they were made or written — and date each</h2>
+  <ul class="seq l14-seq4">
+    <li><span class="k">A</span><span>Aristotle’s <i>Politics</i></span></li>
+    <li><span class="k">B</span><span>Alcman’s Maiden-song</span></li>
+    <li><span class="k">C</span><span>Cynisca’s victory monument at Olympia</span></li>
+    <li><span class="k">D</span><span>Talbert’s Penguin translation of Plutarch</span></li>
+    <li><span class="k">E</span><span>The bronze girl (running or dancing)</span></li>
+    <li><span class="k">F</span><span>Plutarch’s <i>Life of Lycurgus</i></span></li>
+    <li><span class="k">G</span><span>Aristophanes’ <i>Lysistrata</i></span></li>
+  </ul>
+  <figure class="diagram l14-short" data-veil="Show the answer as a timeline"><svg class="l14-tl" viewBox="0 0 1600 510" role="img" aria-label="Activity A answer, earliest first: B, Alcman’s Maiden-song, late 7th century BC; E, the bronze girl, running or dancing, 520 to 500 BC; G, Aristophanes’ Lysistrata, performed 411 BC; C, Cynisca’s victory monument, after her victory in 396 or 392 BC; A, Aristotle’s Politics, 330s to 320s BC; F, Plutarch’s Life of Lycurgus, about AD 100; D, Talbert’s Penguin translation of Plutarch, 1988. Drawn to scale from 700 BC to AD 150, then a break.">
+<line class="axis" x1="60" y1="262" x2="1262" y2="262"/><line class="axis" x1="1318" y1="262" x2="1585" y2="262"/><path class="brk" d="M1262,246 l14,32 M1304,246 l14,32"/><text class="tk" x="1290" y="234">break</text>
+<line class="tick" x1="80" y1="253" x2="80" y2="271"/><text class="tk" x="80" y="292">700 BC</text>
+<line class="tick" x1="355" y1="253" x2="355" y2="271"/><text class="tk" x="355" y="292">500 BC</text>
+<line class="tick" x1="631" y1="253" x2="631" y2="271"/><text class="tk" x="631" y="292">300 BC</text>
+<line class="tick" x1="906" y1="253" x2="906" y2="271"/><text class="tk" x="906" y="292">100 BC</text>
+<line class="tick" x1="1181" y1="253" x2="1181" y2="271"/><text class="tk" x="1181" y="292">AD 100</text>
+<line class="tick bcad" x1="1044" y1="240" x2="1044" y2="284"/><text class="tk sm" x="1044" y="232">BC | AD</text>
+<g class="linked ev" id="l14a-1"><rect class="rng" x="183.2" y="254" width="34.4" height="16" rx="5"/><line class="ld" x1="200.4" y1="252" x2="205.0" y2="206"/><rect class="eb" x="15" y="132" width="380" height="74" rx="10"/><text class="et" x="29" y="163"><tspan class="lt">B ·</tspan> Alcman’s Maiden-song</text><text class="ed" x="29" y="192">late 7th century BC</text></g>
+<g class="linked ev" id="l14a-2"><rect class="rng" x="327.8" y="254" width="27.5" height="16" rx="5"/><line class="ld" x1="341.5" y1="272" x2="200.0" y2="328"/><rect class="eb" x="10" y="328" width="380" height="74" rx="10"/><text class="et" x="24" y="359"><tspan class="lt">E ·</tspan> the bronze girl</text><text class="ed" x="24" y="388">520–500 BC · running or dancing</text></g>
+<g class="linked ev" id="l14a-3"><circle class="dot" cx="477.8" cy="262" r="9"/><line class="ld" x1="477.8" y1="252" x2="470.0" y2="98"/><rect class="eb" x="280" y="24" width="380" height="74" rx="10"/><text class="et" x="294" y="55"><tspan class="lt">G ·</tspan> Aristophanes, Lysistrata</text><text class="ed" x="294" y="84">performed 411 BC</text></g>
+<g class="linked ev" id="l14a-4"><rect class="rng" x="498.4" y="254" width="6.0" height="16" rx="5"/><line class="ld" x1="501.2" y1="272" x2="560.0" y2="422"/><rect class="eb" x="370" y="422" width="380" height="74" rx="10"/><text class="et" x="384" y="453"><tspan class="lt">C ·</tspan> Cynisca’s monument</text><text class="ed" x="384" y="482">victory 396 or 392 BC</text></g>
+<g class="linked ev" id="l14a-5"><rect class="rng" x="576.9" y="254" width="26.2" height="16" rx="5"/><line class="ld" x1="590.0" y1="252" x2="760.0" y2="206"/><rect class="eb" x="570" y="132" width="380" height="74" rx="10"/><text class="et" x="584" y="163"><tspan class="lt">A ·</tspan> Aristotle, Politics</text><text class="ed" x="584" y="192">330s–320s BC</text></g>
+<g class="linked ev" id="l14a-6"><circle class="dot" cx="1181.2" cy="262" r="9"/><line class="ld" x1="1181.2" y1="272" x2="1400.0" y2="328"/><rect class="eb" x="1210" y="328" width="380" height="74" rx="10"/><text class="et" x="1224" y="359"><tspan class="lt">F ·</tspan> Plutarch, Life of Lycurgus</text><text class="ed" x="1224" y="388">c. AD 100</text></g>
+<g class="linked ev" id="l14a-7"><circle class="dot" cx="1530.0" cy="262" r="9"/><line class="ld" x1="1530.0" y1="252" x2="1400.0" y2="206"/><rect class="eb" x="1210" y="132" width="380" height="74" rx="10"/><text class="et" x="1224" y="163"><tspan class="lt">D ·</tspan> Talbert’s Penguin translation</text><text class="ed" x="1224" y="192">1988 (2nd edn 2005)</text></g>
+</svg>
+    <figcaption>The answer, drawn to scale from 700 BC to AD 150, then a break. Dates from Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l14a-1" hidden></i>
+  <i class="reveal" data-also="#l14a-2" hidden></i>
+  <i class="reveal" data-also="#l14a-3" hidden></i>
+  <i class="reveal" data-also="#l14a-4" hidden></i>
+  <i class="reveal" data-also="#l14a-5" hidden></i>
+  <i class="reveal" data-also="#l14a-6" hidden></i>
+  <i class="reveal" data-also="#l14a-7" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l14-dense">
+  <p class="eyebrow">Practice and review · 2 of 7 · true, false, justify · Chapter 10 Activity B</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l14-two" data-answers>
+    <li><span class="n">1</span><span>Xenophon says the most important task for freeborn Spartan women was spinning.</span>
+      <span class="sol no reveal">False <span class="why">— “the most important task for freeborn women was producing children”; there were “enough female slaves to produce clothing” (D68).</span></span></li>
+    <li><span class="n">2</span><span>Alcman’s Maiden-song was written to be sung by a chorus of girls.</span>
+      <span class="sol reveal">True <span class="why">— Cooley: “The text proclaims itself to have been sung by a chorus of ten girls” (A14).</span></span></li>
+    <li><span class="n">3</span><span>Aristotle says that almost two-fifths of the land was owned by women.</span>
+      <span class="sol reveal">True <span class="why">— “almost two-fifths of the whole country is owned by women” (<i>Politics</i> 1270a, D54).</span></span></li>
+    <li><span class="n">4</span><span>According to Herodotus, the ephors decided whom an unbetrothed heiress married.</span>
+      <span class="sol no reveal">False <span class="why">— “the kings decide who is entitled to marry her” (6.57.4, D8).</span></span></li>
+    <li><span class="n">5</span><span>Cynisca claimed to be the only woman in Greece to win the Olympic crown.</span>
+      <span class="sol reveal">True <span class="why">— “I say that I am the only woman / Out of all Greece to win the crown” (C55).</span></span></li>
+    <li><span class="n">6</span><span>In the text Cooley translates, Plutarch says women who died in childbirth could have their names inscribed.</span>
+      <span class="sol no reveal">False <span class="why">— “unless the man had fallen in battle or the woman was a priestess” (B35b); some modern texts were changed to “childbirth”.</span></span></li>
+    <li><span class="n">7</span><span>Cooley says Sparta was the only Greek state where women could own property in their own name.</span>
+      <span class="sol no reveal">False <span class="why">— it was “unusual in ancient Greece (but not unique to Sparta)”.</span></span></li>
+    <li><span class="n">8</span><span>Cynisca won as the breeder and owner of the horses: her monument showed a charioteer as well as Cynisca.</span>
+      <span class="sol reveal">True <span class="why">— Agesilaus “persuaded his sister Kyniska to breed chariot horses” (C57); the base had “chariot, horses, charioteer and a statue of Kyniska herself” (Pausanias, C52).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 7 · cloze · Chapter 10 Activity C, items 4–8, and three more</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Cynisca</span><span>dowries</span><span>emendation</span><span>half</span><span>kings</span><span>kyrios</span><span>priestess</span><span>two-fifths</span></div>
+  <ol class="cloze" data-answers>
+    <li>Aristotle claims that almost <span class="gap"><span class="sol reveal">two-fifths</span></span> of the land was owned by women.</li>
+    <li>Women gained land through inheritance and large <span class="gap"><span class="sol reveal">dowries</span></span>.</li>
+    <li>According to Herodotus, the <span class="gap"><span class="sol reveal">kings</span></span> decided whom an unbetrothed heiress would marry.</li>
+    <li>The king’s daughter who won the chariot race at Olympia was <span class="gap"><span class="sol reveal">Cynisca</span></span>.</li>
+    <li>Changing an ancient text to ‘childbirth’ instead of ‘priestess’ is an <span class="gap"><span class="sol reveal">emendation</span></span>.</li>
+    <li>Elsewhere in Greece, a woman’s property was usually held by her legal guardian, or <span class="gap"><span class="sol reveal">kyrios</span></span>.</li>
+    <li>Hodkinson suggests that a daughter inherited <span class="gap"><span class="sol reveal">half</span></span> as much as her brother.</li>
+    <li>Plutarch says a woman’s name could be inscribed on her memorial only if she was a <span class="gap"><span class="sol reveal">priestess</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l14-dense">
+  <p class="eyebrow">Practice and review · 4 of 7 · write an analytical paragraph · Chapter 10 Activity D</p>
+  <h2>How reliable is Aristotle as evidence for the role and status of Spartan women?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement that separates his evidence from his opinions.</span>
+    <span class="l">Evidence</span><span>Quote one piece of evidence and one opinion from Source 10.4, with its provenance (Cooley D69, D54).</span>
+    <span class="l">Analyse</span><span>Explain what the evidence shows about women’s property and roles.</span>
+    <span class="l">Evaluate</span><span>Weigh his date, purpose and perspective: after Leuctra, explaining decline, an outsider — and check one claim against another source.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Aristotle is reliable for the property Spartan women held in his own day, but much less reliable on their character. Writing in the 330s or 320s BC, he gives specific evidence: ‘almost two-fifths of the whole country is owned by women’, because ‘many women inherit’ and families gave ‘large dowries’, and a father could ‘give an heiress in marriage to whomever one wants’. These details show that women held land, which Cooley notes was unusual in Greece, and that marriage decided which family it joined. Yet Aristotle is explaining Sparta’s decline, and he blames the women, who ‘live wantonly in absolutely every way, and luxuriously’ and ‘created more panic than the enemy’ when the Thebans invaded. The second claim rests on a real event, since Xenophon also says the women ‘could not even endure the sight of the smoke’, but the first is a hostile generalisation by an outsider based in Athens, and his land figure probably describes only his own century. Aristotle is therefore valuable evidence for women’s status as property-holders in the 4th century BC, but his judgements of their behaviour tell us more about his argument than about Spartan women.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 7 · extended response · HSC-style, written for this lesson</p>
+  <h2>Assess whether Spartan women’s ownership of land is better evidence of their power or of the decline of the citizen body. <span class="small">(12 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence: power, decline — or both, depending on whose evidence you trust?</li>
+    <li><b>Power:</b> estates probably run by women (Cooley); “many things were controlled by women” (Aristotle, D69); Cynisca’s horse-breeding and her poem (C55, C57).</li>
+    <li><b>Decline:</b> land that “has fallen into the hands of a small minority” and women’s “almost two-fifths” (D54); land for 30,000 hoplites but “not even one thousand” men (D28); families who could not pay their mess contributions lost citizen rights (Cooley).</li>
+    <li><b>Weigh the evidence:</b> Aristotle writes after Leuctra to explain decline; Hodkinson’s half share is a modern suggestion; the figure probably describes the 4th century, not earlier.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (1)" data-kind="practice notes">
+<div class="wrap prac l14-dense">
+  <p class="eyebrow">Practice and review · 6 of 7 · Chapter 10 review, questions 1–4</p>
+  <h2>Chapter review: Spartan women (1)</h2>
+  <ol class="rq" data-answers>
+    <li>What purposes did girls’ education serve, according to Xenophon, Plutarch and Cooley?
+      <span class="sol reveal">Xenophon: strong mothers, “in the belief that the offspring of two strong parents would be all the more robust”. Plutarch: a strong start for their children, and mothers who could “endure labour pains more easily”. Cooley adds a second purpose: “a public education probably also ensured that the women fully subscribed to the community’s values.”</span></li>
+    <li>What does Alcman’s Maiden-song reveal about girls’ choruses?
+      <span class="sol reveal">It was sung by “a chorus of ten girls” (Cooley) at a religious festival, in praise of their chorus-leader Hagesichora (“Leader of the chorus”) and Agido, whose exact role is unclear. It mentions purple cloth, a golden snake and a Lydian headband, far from the austere mirage. It is late 7th-century and authentic, but damaged, and several elements “remain obscure”.</span></li>
+    <li>How did girls take part in the Hyakinthia and the cult of Artemis Orthia?
+      <span class="sol reveal">At the Hyakinthia, “As for the maidens, some ride in richly decorated wicker carriages, some process in racing-chariots drawn by horses” (Polykrates in Athenaeus, C69). Lead figurines from Spartan sanctuaries show “female celebrants – perhaps members of choruses” (Cavanagh); at Orthia, jewellery and lead figurines of looms suggest women dedicators (Hodkinson).</span></li>
+    <li>Explain how Spartan women came to own almost two-fifths of the land.
+      <span class="sol reveal">Land could not be bought or sold, so it moved through “inheritance, dowries and gifts” (Cooley). Aristotle says “many women inherit” and families gave “large dowries”; Hodkinson suggests a daughter inherited half as much as a brother. An heiress inherited her father’s property. Cooley finds no evidence that a kyrios held the land for them.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (2)" data-kind="practice notes">
+<div class="wrap prac l14-dense">
+  <p class="eyebrow">Practice and review · 7 of 7 · Chapter 10 review, questions 5–8</p>
+  <h2>Chapter review: Spartan women (2)</h2>
+  <ol class="rq" data-answers start="5">
+    <li>How did the rules for heiresses differ in Herodotus and Aristotle?
+      <span class="sol reveal">Herodotus (5th century BC): if her father had not betrothed her, “the kings decide who is entitled to marry her”. Aristotle (4th century BC): a father could give her “to whomever one wants”, and if he died without arrangements, his heir chose. The rule may have changed, or the two may describe different situations.</span></li>
+    <li>Describe Spartan marriage customs according to Xenophon and Plutarch, and explain their purpose.
+      <span class="sol reveal">Xenophon: men married “at the height of their physical powers”; an older husband could bring in an admired man to father children, and a man could have children with another’s wife if her husband consented. Plutarch: marriage by “a kind of kidnapping”, with secret visits. Purpose: strong children for the state — “eugenically advantageous” (Xenophon); children “the common property of the state” (Plutarch, writing c. AD 100).</span></li>
+    <li>Why does the translation of Plutarch, <i>Lycurgus</i> 27.2, matter?
+      <span class="sol reveal">Plutarch’s text says a woman’s name could be inscribed if she “was a priestess”; some modern texts, followed by Talbert’s Penguin translation, change this to women who died in childbirth. The reading decides whether women were honoured for a religious office or for dying as mothers. The Tainaron list of seven women, only three “in bed”, counts against “childbirth” (Dillon, following Hodkinson).</span></li>
+    <li>Evaluate the view that Spartan women were freer than other Greek women.
+      <span class="sol reveal">Largely true in some respects: girls trained in public, women could hold property in their own name with no known kyrios, probably ran estates, and a few, like Cynisca, won Olympic victories as owners of racehorses. But this “freedom” served the state’s need for strong children, heiresses’ marriages were decided by fathers, heirs or kings, and the evidence comes from outsiders “probably shaped by exceptional women”. Cooley’s conclusion: their status “was indeed different from that in most other Greek states”.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Check: gesture vote">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote · then cold call</p>
+  <h2>Thumbs up, sideways or down?</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Statement 1</div><p class="lead nq">“Aristotle is reliable about women’s land.”</p></div>
+    <div class="card accent"><div class="k">Statement 2</div><p class="lead nq">“Aristotle is reliable about women’s character.”</p></div>
+  </div>
+  <p class="cue">Explain the difference. Then: one role of Spartan women, and one source that shows it.</p>
+  <div class="note reveal" data-code="judgement"><p class="body">Land: specific figures and rules, probably for his own day. Character: hostile judgements from an outsider explaining Sparta’s decline.</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>One sentence</h2>
+  <div class="card accent"><div class="k">Complete it</div><p class="lead nq">Aristotle is more reliable about women’s ______ than about women’s ______ because …</p></div>
+  <p class="body"><b>Next lesson:</b> the economy — did every Spartiate really hold an equal share of land, as Plutarch says, or was it, as Aristotle complains, in the hands of a few?</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l14-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources and inscriptions</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Aristotle, <i>Politics</i> 1269b12–1270a29 and 1270a29–b6 (D69, D54, D28); Herodotus 6.57.4 and 6.71 (D8, E79, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 1.3–9 (D68, trans. B. Wilson), <i>Agesilaos</i> 9.6 (C57) and <i>Hellenika</i> 6.5.28 (E69); Plutarch, <i>Life of Lykourgos</i> 14, 15 and 27.2 (D70, D71, B35b, trans. B. Wilson), <i>Moralia</i> 238d and 241F (B35a, F35) and <i>Life of Agesilaos</i> 1 (E82); Pausanias 3.15.1, 6.1.6 and the king lists of 3.7–10 (C56, C52, E4); Polykrates in Athenaeus 4.17 (C69); Tyrtaeus fr. 6–7 and Alcman fr. 1 (A6, A14, trans. K. Hughes); Cynisca’s epigram, IG 5.1.1564a (C55); memorials IG 5.1.714 (B55) and 5.1.713 (B54); Aristomacha’s dedication (C27). Cooley’s glossary, his introductions to women, wealth, the helots and the constitution, and his notes on A14, B35, C55 and D54 (with S. Hodkinson, <i>Property and Wealth in Classical Sparta</i>, 2000, pp. 94–103, and M. Dillon, <i>Hermes</i> 135, 2007, as cited there); S. Hodkinson’s introduction to the inscriptions (pp. 17–18) and W. G. Cavanagh’s ‘Introduction to Lakonian Archaeology’, both in Cooley. R. J. A. Talbert, <i>Plutarch on Sparta</i> (1988; 2nd edn 2005).</p></div>
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images and diagrams</div>
+        <ul class="small"><li>Olive trees around Sparta today. In the classical period, farmland passed between Spartan families through inheritance, dowries and gifts — Bradley, Fig 3.5</li><li>A chariot and horses on a black-figure vase: not a race, and nothing identifies it as Laconian — Bradley, Fig 3.30</li><li>A stone relief described in Antiquity 2 as an early 5th-century BC Spartan girl in a religious rite, lifting her veil and pouring wine into a cup — Hurley et al., Source 32</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the inheritance shares (Hodkinson’s suggestion, from Cooley’s note on D54), Cynisca’s family (Cooley C55, E82), the timeline of sources and the two tables.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC question, marking criteria, sample answer and marking feedback: NSW Education Standards Authority, 2020 HSC Ancient History examination, marking guidelines and feedback. © NESA. NESA glossary of key words for “describe”. The other practice questions were written for this lesson.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
