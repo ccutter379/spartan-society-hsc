@@ -636,6 +636,7 @@ html:not(.read) .margin.fold .anote{padding:.36em .7em;}
   html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
   html.read .diagram .tl{min-width:900px; max-height:none;}
   html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
   html.read .swipe{display:inline;}
 }
 
@@ -671,6 +672,24 @@ html:not(.read) .margin.fold .anote{padding:.36em .7em;}
 .fd .step.bad{fill:var(--c-judgement);}
 .fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
 .fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
 
 /* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
 .match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;

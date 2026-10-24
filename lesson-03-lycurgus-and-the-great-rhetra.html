@@ -636,6 +636,7 @@ html:not(.read) .margin.fold .anote{padding:.36em .7em;}
   html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
   html.read .diagram .tl{min-width:900px; max-height:none;}
   html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
   html.read .swipe{display:inline;}
 }
 
@@ -671,6 +672,24 @@ html:not(.read) .margin.fold .anote{padding:.36em .7em;}
 .fd .step.bad{fill:var(--c-judgement);}
 .fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
 .fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
 
 /* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
 .match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
@@ -1093,11 +1112,22 @@ html:not(.read) .read-only{display:none !important;}
 <div class="wrap">
   <p class="eyebrow">3 · The Great Rhetra · Check for understanding <span class="optional">If time</span></p>
   <h2>Which office is missing from the Rhetra?</h2>
-  <div class="split" style="--cols:1fr 1.1fr">
-    <figure class="figure contain"><img src="images/clarke-2-4-structures-of-government.jpg" alt="The structures of Spartan government in the Classical period, including the ephors"><figcaption>The structures of Spartan government in the Classical period, including the ephors — <span class="cr">Clarke & Garner, Fig 2.4</span></figcaption></figure>
-    <div class="stack">
+  <div class="split" style="--cols:1.5fr 1fr">
+    <figure class="diagram"><svg class="gv" viewBox="0 0 1200 700" role="img" aria-label="Diagram of Spartan government in the Classical period. The two kings and the gerousia consulted each other; the kings sat in the gerousia, a council of 28 elders over sixty plus the two kings. The five ephors supervised the kings and chaired the ekklesia. The ekklesia, the assembly of citizens, elected the elders for life and the ephors each year.">
+<defs><marker id="gv-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="node kings" id="gv-kings"><rect x="30" y="20" width="400" height="210" rx="22"/><text class="ttl" x="230" y="110">Two kings</text><text class="sub" x="230" y="160">from the Agiad and</text><text class="sub" x="230" y="198">Eurypontid families</text></g>
+<g class="node ger" id="gv-ger"><rect x="770" y="20" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="84">Gerousia</text><text class="sub" x="970" y="128">a council of 30:</text><text class="sub" x="970" y="165">28 elders (men over 60)</text><text class="sub" x="970" y="202">+ the two kings</text></g>
+<g class="node eph" id="gv-eph"><rect x="30" y="470" width="400" height="210" rx="22"/><text class="ttl" x="230" y="570">Five <tspan class="it">ephors</tspan></text><text class="sub" x="230" y="616">(officials)</text></g>
+<g class="node ekk" id="gv-ekk"><rect x="770" y="470" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="542">Ekklesia</text><text class="sub" x="970" y="586">assembly of all citizens</text><text class="sub" x="970" y="623">(probably men over 30)</text></g>
+<line class="ln" x1="440" y1="125" x2="760" y2="125" marker-start="url(#gv-a)" marker-end="url(#gv-a)"/><text class="rel" x="600" y="104">Consulted</text><text class="how" x="600" y="166">kings sat in it</text>
+<line class="ln" x1="230" y1="464" x2="230" y2="236" marker-end="url(#gv-a)"/><text class="rel left" x="252" y="330">Supervised</text><text class="how left" x="252" y="366">two ephors went on</text><text class="how left" x="252" y="396">campaign with a king</text>
+<line class="ln" x1="970" y1="464" x2="970" y2="236" marker-end="url(#gv-a)"/><text class="rel right" x="948" y="330">Elected</text><text class="how right" x="948" y="366">the elders, for life,</text><text class="how right" x="948" y="396">by shouting</text>
+<text class="rel" x="600" y="494">Supervised</text><text class="how" x="600" y="524">an ephor chaired it</text><line class="ln" x1="440" y1="548" x2="760" y2="548" marker-end="url(#gv-a)"/><line class="ln" x1="760" y1="608" x2="440" y2="608" marker-end="url(#gv-a)"/><text class="rel" x="600" y="652">Elected annually</text>
+</svg>
+      <figcaption>Sparta’s government in the Classical period — based on Clarke &amp; Garner, Fig 2.4, with details from the sources in Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <div class="stack tight">
       <p class="qprompt">This diagram shows Sparta’s government in the Classical period. Which part does the Rhetra never mention?</p>
-      <div class="note reveal" data-code="judgement"><p class="body"><b>The five ephors</b> — the powerful annual officials of classical Sparta (Lesson 5).</p></div>
+      <div class="note reveal" data-code="judgement" data-hl="#gv-eph"><p class="body"><b>The five ephors</b> — the powerful annual officials of classical Sparta (Lesson 5).</p></div>
       <div class="note reveal" data-code="counter"><p class="body">Herodotus credits Lycurgus with the ephorate, yet Plutarch dates the first ephors “Roughly some 130 years after Lykourgos”, in the reign of King Theopompus (<i>Lykourgos</i> 7, Cooley D17).</p></div>
       <div class="note reveal" data-code="analysis"><p class="body">The sources cannot all be right. Lycurgus seems to have been credited with institutions that appeared at different times.</p></div>
     </div>
@@ -1817,7 +1847,7 @@ html:not(.read) .read-only{display:none !important;}
         <p class="small">HSC questions, marking criteria, sample answer, “answers could include” and marking feedback: NSW Education Standards Authority, 2021 and 2024 HSC Ancient History examinations, marking guidelines and feedback. © NESA. NESA glossary of key words for “explain”.</p></div>
     </div>
     <div class="card quiet"><div class="k">Images</div>
-      <ul class="small"><li>The remains of the Temple of Apollo at Delphi — Bradley, Fig 3.25</li><li>The structures of Spartan government in the Classical period, including the ephors — Clarke & Garner, Fig 2.4</li><li>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — Hurley et al., Source 51</li><li>Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court — Clarke & Garner, Fig 7.9</li><li>Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting — Clarke & Garner, Fig 2.3</li><li>A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC — Clarke & Garner, Fig 7.11</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+      <ul class="small"><li>The remains of the Temple of Apollo at Delphi — Bradley, Fig 3.25</li><li>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — Hurley et al., Source 51</li><li>Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court — Clarke & Garner, Fig 7.9</li><li>Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting — Clarke & Garner, Fig 2.3</li><li>A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC — Clarke & Garner, Fig 7.11</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019); Clarke & Garner, Spartan society textbook (school copy).</p>
       <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The timeline and the Rhetra diagram were drawn for this lesson.</p></div>
   </div>
 </div>
