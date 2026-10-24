@@ -1,0 +1,2296 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L15 · The Economy I: Land</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: land ownership, Plutarch’s equal lots and how historians test them, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 15 (The economy I: land ownership). Every class starts l15-. */
+
+/* the survey map (svg_l15survey.svg) */
+.map.l15-map .l15-river{stroke-width:4; opacity:.75;}
+.map.l15-map .l15-small{font-size:26px;}
+.map.l15-map .l15-area{fill:var(--w-evidence); fill-opacity:.55; stroke:var(--c-evidence); stroke-width:5;
+  stroke-dasharray:14 9;}
+.map.l15-map .l15-hi{fill:var(--c-evidence); opacity:.28;}
+html:not(.read) .l15-mapkeys .mapbox svg{height:calc(100vh - 330px);}
+html:not(.read) .l15-mapkeys .mapbox figcaption{max-width:calc((100vh - 330px) * 1.01);}
+.l15-mapkeys .keylist{gap:clamp(4px,.9vh,12px);}
+.l15-mapkeys .keylist li{font-size:calc(var(--fs-body)*.92);}
+.l15-mapkeys .keylist .d{font-size:calc(var(--fs-body)*.82);}
+@media (max-height:820px){
+  html:not(.read) .l15-mapkeys .keylist li{font-size:calc(var(--fs-body)*.8); line-height:1.25;}
+  html:not(.read) .l15-mapkeys .keylist .d{font-size:calc(var(--fs-body)*.74); line-height:1.28;}
+  html:not(.read) .l15-mapkeys .mapbox svg{height:calc(100vh - 290px);}
+  html:not(.read) .l15-mapkeys .mapbox figcaption{max-width:calc((100vh - 290px) * 1.01);}
+}
+@media (max-width:900px){ .l15-mapkeys .mapbox figcaption{max-width:none;} }
+
+/* "Weighing the evidence": three writers, three centuries */
+.l15-weigh td:first-child{font-weight:700; color:var(--deep); white-space:nowrap;}
+.l15-weigh td:nth-child(2){white-space:nowrap;}
+.l15-weigh td .q{font-family:var(--serif); font-style:italic;}
+.l15-weigh .l15-src{display:block; font-size:var(--fs-chrome); color:var(--slate); margin-top:.15em;}
+@media (max-width:700px){ .l15-weigh td:nth-child(2){white-space:normal;} }
+
+/* ownership or management? */
+.l15-tag{display:inline-block; font-family:var(--ui); font-style:normal; font-weight:700; font-size:.8em;
+  letter-spacing:.05em; text-transform:uppercase; padding:.08em .55em; border-radius:999px; margin-right:.45em;
+  border:2px solid currentColor; white-space:nowrap;}
+.l15-tag.own{color:var(--c-evidence); background:var(--w-evidence);}
+.l15-tag.man{color:var(--c-counter); background:var(--w-counter);}
+.l15-om th:first-child, .l15-om td:first-child{border-left:5px solid var(--c-evidence); width:50%;}
+.l15-om th:last-child, .l15-om td:last-child{border-left:5px solid var(--c-counter);}
+
+/* the chain from land to citizenship */
+.l15-chain .p small{display:block; font-weight:400; font-size:.78em; color:var(--slate); margin-top:.15em;}
+
+/* small figures beside a source */
+.l15-fig .figure img{max-height:30vh; object-fit:cover;}
+html.read .l15-fig .figure img{max-height:44vh;}
+
+/* two-column practice lists on wide screens */
+.l15-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l15-two{gap:.4em .7em;}
+@media (max-width:900px){ .l15-two{grid-template-columns:1fr;} }
+
+/* four owners side by side */
+.l15-four{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(8px,1vw,16px);}
+.l15-four .card{padding:clamp(10px,1.5vh,18px) clamp(12px,1vw,18px);}
+.l15-four .card .body{font-size:calc(var(--fs-body)*.84); line-height:1.4;}
+.l15-four .l15-src{display:block; margin-top:.4em; font-size:var(--fs-chrome); color:var(--slate);}
+@media (max-width:1100px){ .l15-four{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:700px){ .l15-four{grid-template-columns:1fr;} }
+
+/* paragraph breaks inside a model answer */
+.ans .l15-pb{display:block; height:.5em;}
+
+/* dense slides on short projectors (1366 x 768) */
+@media (max-height:820px){
+  html:not(.read) .l15-dense .src .quote.sm{font-size:calc(var(--fs-body)*.84); line-height:1.4;}
+  html:not(.read) .l15-dense .src .quote:not(.sm){font-size:var(--fs-body); line-height:1.45;}
+  html:not(.read) .l15-dense .src{padding:10px 16px;}
+  html:not(.read) .l15-dense .src .prov{margin-top:.4em;}
+  html:not(.read) .l15-dense .note .body, html:not(.read) .l15-dense .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.34;}
+  html:not(.read) .l15-dense .note, html:not(.read) .l15-dense .card{padding-top:8px; padding-bottom:8px;}
+  html:not(.read) .l15-dense .qprompt{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l15-dense .stack.tight > p.body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l15-dense .tbl{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l15-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l15-dense .tbl td{padding:.3em .6em;}
+  html:not(.read) .l15-dense .rq{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l15-dense .tf li{font-size:calc(var(--fs-body)*.72); padding:.28em .7em;}
+  html:not(.read) .l15-dense .seq li{font-size:calc(var(--fs-body)*.76); padding:.3em .7em;}
+  html:not(.read) .l15-dense .fb{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l15-dense .cornell .nts, html:not(.read) .l15-dense .cornell .cq{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l15-dense .moves{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l15-dense .src .quote.sm.model{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l15-dense .keylist li{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l15-dense .keylist .d{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l15-dense .l15-four .card .body{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l15-dense .tbl.crit.compact{font-size:calc(var(--fs-body)*.68);}
+  html:not(.read) .l15-dense .crit td.m{font-size:calc(var(--fs-big)*.8);}
+  html:not(.read) .l15-dense .pattern .p{font-size:calc(var(--fs-body)*.84); padding:.35em .7em;}
+  html:not(.read) .l15-fig .figure img{max-height:22vh;}
+  html:not(.read) .annot .verdict{font-size:calc(var(--fs-body)*.74); padding:.35em .7em; line-height:1.32;}
+  html:not(.read) .annot .sharper{font-size:calc(var(--fs-body)*.68); line-height:1.3;}
+  html:not(.read) .l15-dense .card.quiet .small{font-size:calc(var(--fs-chrome)*.84); line-height:1.3;}
+  html:not(.read) .l15-dense .bank span{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l15-dense .cloze{font-size:calc(var(--fs-body)*.8);}
+}
+
+/* phones and narrow windows: annotated answers stack */
+@media (max-width:900px){ .annot.wide{grid-template-columns:1fr;} }
+/* phones: the map scrolls sideways at a readable size; a stack beside it must not widen its column */
+@media (max-width:700px){ html.read .mapbox svg.l15-map{min-width:560px;} html.read .l15-mapkeys .mapbox{overflow-x:auto;} }
+.split > .stack{min-width:0;}
+/* the land-to-citizenship chain stays on one line beside the photo */
+.pattern.l15-chain{gap:.35em; flex-wrap:nowrap;}
+.pattern.l15-chain .p{font-size:calc(var(--fs-body)*.84); padding:.35em .65em; white-space:nowrap;}
+.pattern.l15-chain .arr{font-size:var(--fs-body);}
+@media (max-width:900px){ .pattern.l15-chain{flex-wrap:wrap;} }
+
+/* short projectors: annotated answers' margins and the self-mark list */
+@media (max-height:820px){
+  html:not(.read) .l15-dense .annot .anote{font-size:calc(var(--fs-body)*.72); padding:.24em .6em;}
+  html:not(.read) .l15-dense .annot .margin{gap:5px;}
+  html:not(.read) .l15-dense .annot .margin .head{font-size:calc(var(--fs-eyebrow)*.9);}
+  html:not(.read) .l15-dense .checks label{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+  html:not(.read) .l15-dense .checks{gap:.35em;}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 15" data-title="The economy I: land ownership" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 15</p>
+      <h1>The economy I: land ownership</h1>
+      <p class="lead">Did every Spartan citizen once hold an equal share of the land, as Plutarch says — and if not, who really owned it?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-6-2-eurotas-olive-groves.jpg" alt="Olive groves in the fertile Eurotas valley today"><figcaption>Olive groves in the fertile Eurotas valley today — <span class="cr">Clarke & Garner, Fig 6.2</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 15" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From women’s land to everyone’s land</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Lessons 7, 8 and 14</div>
+      <p class="body">Property “could not be bought and sold in Sparta, but it changed hand through inheritance, dowries and gifts” (Cooley); Aristotle says selling an estate was “dishonourable”. A dowry was a daughter’s inheritance, and Aristotle says women owned almost two-fifths of the land. Helots farmed the Spartiates’ estates, and a Spartiate who could not pay his mess contribution lost his full rights.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">Plutarch says Lycurgus once gave every Spartiate an equal lot. Was that ever true? If not, who owned Sparta’s land — and how did it pass from one owner to the next?</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 14, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 15" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate the evidence for how land was owned at Sparta, including Plutarch’s equal lots</li>
+        <li>outline land ownership in a 5-mark answer</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>explain Plutarch’s system and the reasons historians doubt it</li>
+        <li>explain how Tyrtaeus, Aristotle and Plutarch disagree about land and dues</li>
+        <li>write a 5-mark outline in 9 minutes that covers more than male Spartiates</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body">Land <b>ownership</b> is who held the land and how it passed on: lots, sale, gifts, inheritance, dowries. Land <b>management</b> is who worked it and what it produced. A <b>kleros</b> (plural <i>kleroi</i>) is a Spartiate’s estate, or ‘lot’.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 15" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L15 · The economy I: land ownership</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Plut. = Plutarch, Ar. = Aristotle)</span></div></div>
+      <div class="row"><div class="cq">Who owned the land?</div><div class="nts">Spartiates, women, perioikoi, kings …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: ownership, not management · Plutarch’s equal lots · testing the lots · other owners and why it mattered · the evidence of the fields.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 15" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Owning land</th><th>Meaning</th></tr>
+      <tr><td>kleros (pl. kleroi)</td><td>a lot or allotment of land; at Sparta, the estate that supported a Spartiate and paid his mess contribution</td></tr>
+      <tr><td>private property</td><td>land owned by a person or family, not by the state</td></tr>
+      <tr><td>bequeath</td><td>to leave property to someone after your death</td></tr>
+      <tr><td>dowry</td><td>property given with a daughter when she married; at Sparta, probably part of her inheritance</td></tr>
+      <tr><td>heiress</td><td>a daughter who inherits her father’s property because he has no sons</td></tr>
+      <tr><td>redistribution</td><td>taking land back from its holders and sharing it out again, usually more equally</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Weighing the evidence</th><th>Meaning</th></tr>
+      <tr><td>medimnos (pl. medimnoi)</td><td>a Greek dry measure for grain, about 50 litres at Athens; Cooley’s translations call it a ‘measure’ (D57) or a ‘bushel’ (D63)</td></tr>
+      <tr><td>late tradition</td><td>stories written down long after the time they describe; Cooley’s term for Plutarch’s equal lots</td></tr>
+      <tr><td>intensive survey</td><td>archaeology without digging: teams walk fields in lines, recording surface finds such as broken pottery to map settlement</td></tr>
+      <tr><td>argument from silence</td><td>a conclusion drawn from what a source does <i>not</i> say (Lesson 3)</td></tr>
+      <tr><td>ownership · management</td><td>who held the land and how it passed on · who worked it and what it produced</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Tyrtaios, Lakedaimonians, Lakonia, Polydoros, Kleomenes). In your own writing use Lycurgus, Tyrtaeus, Lacedaemonians, Laconia, Polydorus, Cleomenes.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Ownership, not management" data-title="Ownership, not management" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">1 · Ownership, not management · I do — what the question is about</p>
+  <h2>Ask about ownership</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card accent">
+      <div class="k">Four questions about any land</div>
+      <ol class="body">
+        <li class="reveal">Who held the land?</li>
+        <li class="reveal">How did they get it?</li>
+        <li class="reveal">Could they sell it, give it away or leave it to their children?</li>
+        <li class="reveal">Who lost it — and what happened to them?</li>
+      </ol>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="judgement"><div class="k">NESA’s 2023 marking feedback</div>
+        <p class="fb">Areas for students to improve include <span class="q">focusing on land ownership rather than land management (a)</span>In better responses, students were able to <span class="q">provide an outline of land ownership beyond just male Spartiates (a)</span></p></div>
+      <div class="card quiet reveal"><div class="k">Management</div><p class="body">Who worked the land, what it grew and what the workers handed over. Useful background — but it does not answer a question about ownership.</p></div>
+    </div>
+  </div>
+  <p class="small">In 2023 the HSC asked students to outline Spartan land ownership; this lesson is built around that question (section 6).</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Ownership, not management" data-title="Check: ownership or management?">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Check for understanding · point left for ownership, right for management</p>
+  <h2>Ownership or management?</h2>
+  <ol class="tf l15-two" data-answers>
+    <li><span class="n">1</span><span>Plutarch’s 9,000 lots for the Spartiates and 30,000 for the perioikoi</span>
+      <span class="sol reveal">Ownership <span class="why">— who held the land</span></span></li>
+    <li><span class="n">2</span><span>Helots worked the Spartiates’ estates</span>
+      <span class="sol no reveal">Management <span class="why">— who worked it</span></span></li>
+    <li><span class="n">3</span><span>Land passed on through inheritance and dowries</span>
+      <span class="sol reveal">Ownership <span class="why">— how it passed on</span></span></li>
+    <li><span class="n">4</span><span>The land grew corn, olives and vines</span>
+      <span class="sol no reveal">Management <span class="why">— what it produced</span></span></li>
+    <li><span class="n">5</span><span>Women owned almost two-fifths of the land</span>
+      <span class="sol reveal">Ownership <span class="why">— who held it (Aristotle)</span></span></li>
+    <li><span class="n">6</span><span>Helots handed over half the produce, or a fixed rent</span>
+      <span class="sol no reveal">Management <span class="why">— what the workers paid</span></span></li>
+    <li><span class="n">7</span><span>The kings held estates in the territories of the perioikoi</span>
+      <span class="sol reveal">Ownership <span class="why">— who held it (Xenophon)</span></span></li>
+    <li><span class="n">8</span><span>Selling an estate was dishonourable, but owners could give it away or bequeath it</span>
+      <span class="sol reveal">Ownership <span class="why">— how it could pass on (Aristotle)</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Ownership, not management" data-title="What the land grew and what a Spartiate owed" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">1 · Ownership, not management · I do — why owning land mattered</p>
+  <h2>What the land grew — and what a Spartiate owed his mess</h2>
+  <div class="split" style="--cols:.8fr 1.35fr">
+    <figure class="figure contain"><img src="images/bradley-3-3-eurotas-valley-view.jpg" alt="A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground"><figcaption>A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground — <span class="cr">Bradley, Fig 3.3</span></figcaption></figure>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">The land</div><p class="body">Cavanagh lists the region’s “agricultural commodities (corn, oil, wine), in particular of Messenia”.</p></div>
+      <div class="src reveal">
+        <div class="k">Source · Plutarch, on the common messes</div>
+        <p class="quote sm">… each mess member would contribute every month a bushel of barley-meal, eight gallons of wine, five pounds of cheese, and five half-pounds of figs, plus a very small sum of money for “extras”.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 12.2 · written c. AD 100 · trans. B. Wilson · Cooley D63</p>
+      </div>
+      <div class="pattern l15-chain reveal">
+        <span class="p">a kleros<small>his estate</small></span><span class="arr">→</span>
+        <span class="p e">helots farm it<small>the harvest</small></span><span class="arr">→</span>
+        <span class="p a">mess dues paid<small>every month</small></span><span class="arr">→</span>
+        <span class="p c">full citizen<small>or not</small></span>
+      </div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> Aristotle says of the mess contribution that “anyone who cannot pay this tax cannot belong” (Lesson 7). A Spartiate’s status depended on owning a farm and on the helots who worked it.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Ownership, not management" data-title="Who worked the land — and what did they pay?" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">1 · Ownership, not management · We do — two sources that disagree</p>
+  <h2>Who worked the land — and what did they pay?</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Tyrtaeus, on the conquered Messenians</div>
+      <p class="quote sm">Like asses distressed by great burdens,<br>Bringing to their masters from grievous necessity<br><span class="code" data-code="evidence" data-letter="E">Half of all the produce the ploughland bears.</span></p>
+      <p class="prov">Tyrtaios, fragments 6–7, quoted by Pausanias 4.14.4–5 · mid-7th century BC · trans. K. Hughes · Cooley A6</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · Plutarch</div>
+      <p class="quote sm">The helots worked the land for them, <span class="code" data-code="counter" data-letter="C">paying a rent established in advance</span>. Charging a higher rent was forbidden, so that the helots might make some profit and be happy to serve, and the masters would not be greedy for more.</p>
+      <p class="prov">Plutarch, <i>Lakonian Customs</i> 41 (<i>Moralia</i> 239E) · Plutarch lived from before AD 50 to after AD 120 · trans. in Cooley D36</p>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal" data-paint="evidence">How do they disagree?</p>
+      <p class="body reveal" data-paint="counter">Half the harvest (Tyrtaeus) or a fixed rent, set in advance (Plutarch). Both agree that helots farmed.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Which is closer to the period?</p>
+      <p class="body reveal">Tyrtaeus, “probably Spartan” in Cooley’s words, wrote in the mid-7th century BC. But his lines survive only because Pausanias quotes them in what Cooley calls his “(largely invented) history of Messenia”.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Ownership or management?</p>
+      <p class="body reveal">Management. Cooley: “Most helots worked for absentee landlords”. In a land-ownership answer, one phrase on helot labour is enough.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Ownership, not management" data-title="Notes 1 — Ownership, not management" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Ownership, not management</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L15 · The economy I: land ownership</b></span><span>1 · Ownership, not management</span></div>
+    <div class="row"><div class="cq">Ownership or management: what is the difference?</div>
+      <div class="nts reveal"><b>Ownership</b> = who held land + how it passed on (lots, sale, gift, inheritance, dowry) <span class="sep">·</span> <b>management</b> = who worked it, what it grew, what was paid <span class="sep">·</span> NESA 2023: write about <b>ownership</b></div></div>
+    <div class="row"><div class="cq">What did a Spartiate owe his mess, and why did it matter?</div>
+      <div class="nts reveal">Monthly barley-meal, wine, cheese, figs + a little money (Plut. <i>Lyc.</i> 12, D63) <span class="sep">·</span> can’t pay → “cannot belong” (Ar., D62) → status depended on a <b>kleros</b> worked by helots</div></div>
+    <div class="row"><div class="cq">What did helots hand over — and who says so?</div>
+      <div class="nts reveal">Tyrtaeus (mid-7th c., A6): “Half of all the produce” <span class="sep">·</span> Plutarch (D36): a <b>fixed rent</b> <span class="sep">·</span> sources disagree; both say helots farmed</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Plutarch’s equal lots" data-title="Source 11.1 — Plutarch on the division of the land" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">2 · Plutarch’s equal lots · I do — the most famous answer, and the latest</p>
+  <h2>Plutarch on the division of the land</h2>
+  <div class="split" style="--cols:1.7fr 1fr">
+    <div class="src">
+      <div class="k">Source 11.1 · Plutarch</div>
+      <p class="quote sm">[8.2] He persuaded the Lakedaimonians to deposit all their land into a single common pool, and then to make a brand new distribution of it, <span class="code" data-code="judgement" data-letter="J">such that they would in future all live with one another on a basis of equality and an equal share of the resources needed to make a living</span>. … [3] Having established this principle, he set about putting it into practice. <span class="code" data-code="evidence" data-letter="E">He divided the land of Lakonia into 30,000 allotments, and allocated them to the dwellers-round about, the perioikoi. As for the land belonging to the city of Sparta itself, that he divided into 9000 allotments, which would belong to the 9000 Spartiates.</span> <span class="code nq" data-code="counter" data-letter="C">Some say that Lykourgos made only 6000 allotments, and that 3000 were later added by Polydoros; others that Lykourgos allocated half the 9000 allotments, and Polydoros the other half.</span> [4] <span class="code" data-code="keyterm" data-letter="K">Each man’s allocation was sufficient to produce an annual crop of 70 measures of barley, 12 measures for his wife, and an appropriate amount of other fresh produce.</span> …</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 8.2–4 (part) · written c. AD 100 · trans. B. Wilson · Cooley D57</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="judgement">What was the aim?</p>
+      <p class="body reveal">Equality: everyone to live “on a basis of equality”.</p>
+      <p class="qprompt reveal" data-paint="evidence">Who received lots, and how many?</p>
+      <p class="body reveal">9,000 for the Spartiates, from the city’s own land; 30,000 for the perioikoi, from the rest of Laconia.</p>
+      <p class="qprompt reveal" data-paint="keyterm">What did each Spartiate lot produce?</p>
+      <p class="body reveal">70 measures of barley a year, 12 for his wife, and other fresh produce.</p>
+      <p class="qprompt reveal" data-paint="counter">What do the rival figures suggest?</p>
+      <p class="body reveal">Plutarch gives 9,000 lots, then reports two rival versions: 6,000 with 3,000 added later by King Polydorus, or half by each.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Plutarch’s equal lots" data-title="Plutarch’s system in four parts" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">2 · Plutarch’s equal lots · I do — the system as Plutarch tells it</p>
+  <h2>Plutarch’s system in four parts</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">A cure for inequality</span><span class="d">Before Lycurgus, Plutarch says, “Savage inequalities prevailed”; afterwards all were to live “on a basis of equality”.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Fixed numbers of lots</span><span class="d">9,000 for the Spartiates and 30,000 for the perioikoi — a rare mention of perioikic land, though as late as the rest of the account.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">A fixed yield</span><span class="d">70 measures of barley a year, 12 for his wife. Legend, Plutarch admits, has Lycurgus say that “the whole of Lakonia looked like the property of many brothers”.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">A lot for each new citizen</span><span class="d">The elders inspected each newborn; a sturdy one was reared and given one of the 9,000 lots. The fixed yield implies that others — the helots — did the farming.</span></li>
+    </ol>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source · Plutarch, on newborn Spartans</div>
+        <p class="quote sm">Having assessed the infant, they instructed him to rear it, if it seemed sturdy and robust, and they assigned to it one of the nine thousand allotments of land.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 16.1 · trans. B. Wilson · Cooley D73</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Polybius, a Greek historian of the 2nd century BC</div>
+        <p class="quote sm">First, with regard to having land – that no one should have a larger share, but all citizens should have an equal share of the state’s land.</p>
+        <p class="prov">Polybius, <i>Histories</i> 6.45 · from a list of “Features of the Spartan system” · trans. in Cooley D56</p>
+      </div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>Notice what is missing:</b> no buying or selling, no inheritance, no dowries — and no rich or poor. Hold that thought for section 3.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Plutarch’s equal lots" data-title="Notes 2 — Plutarch’s equal lots" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Plutarch’s equal lots</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L15 · The economy I: land ownership</b></span><span>2 · Plutarch’s equal lots</span></div>
+    <div class="row"><div class="cq">How many lots did Plutarch say were made for Spartiates, and how many for perioikoi?</div>
+      <div class="nts reveal"><b>9,000</b> Spartiate (the land of the city itself) <span class="sep">·</span> <b>30,000</b> perioikic (the rest of Laconia) (Plut. <i>Lyc.</i> 8, D57) <span class="sep">·</span> or 6,000 + 3,000 added by Polydorus</div></div>
+    <div class="row"><div class="cq">What did each Spartiate lot produce?</div>
+      <div class="nts reveal"><b>70 measures</b> (medimnoi) of barley a year + 12 for his wife + other fresh produce</div></div>
+    <div class="row"><div class="cq">What happened, in Plutarch’s account, when a healthy newborn was approved?</div>
+      <div class="nts reveal">Elders of the tribe inspected it; if “sturdy and robust” → reared + given <b>one of the 9,000 lots</b> (<i>Lyc.</i> 16, D73) → land tied to citizens, from birth</div></div>
+    <div class="row"><div class="cq">Why does Plutarch’s report of rival figures matter?</div>
+      <div class="nts reveal">“Some say … others” → he combined <b>different traditions</b>, not one record <span class="sep">·</span> aim = <b>equality</b>, so a moral story too</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="Can we trust Plutarch here?" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">3 · Testing the equal lots · I do — the writer before the claim</p>
+  <h2>Can we trust Plutarch here?</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">Late</div><p class="body">He wrote about AD 100, more than four centuries after Aristotle. Cooley: “much of his material also dates from after Sparta’s decline in the fourth century”.</p></div>
+    <div class="card accent reveal"><div class="k">No early source named</div><p class="body">Cooley’s rule: “any information in his text that is not explicitly identified as taken from a genuinely archaic or classical source should be considered as secondary material.” Plutarch names no early source for the equal lots.</p></div>
+    <div class="card accent reveal"><div class="k">Rival versions</div><p class="body">“Some say … others”: Cooley notes that he “assembles a narrative from divergent opinions”.</p></div>
+    <div class="card accent reveal"><div class="k">A moral purpose</div><p class="body">Cooley: “his main aim was to draw characters which could be instructive as moral examples”, “not to provide historical analysis”. Here the lesson is greed cured by equality.</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So:</b> Plutarch tells us what later Greeks believed about Lycurgus’ Sparta. To test the equal lots, we need earlier evidence — starting with a philosopher writing in the 330s–320s BC.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="Source 11.2 — Aristotle on land in the hands of a few" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">3 · Testing the equal lots · We do — an earlier witness</p>
+  <h2>Aristotle: land in the hands of a few</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="src">
+      <div class="k">Source 11.2 · Aristotle</div>
+      <p class="quote sm">In addition to what has been said, one might censure the Lakedaimonians for an imbalanced distribution of wealth. <span class="code" data-code="evidence" data-letter="E">For some of them have come to attain too much property, and others a tiny amount.</span> <span class="code" data-code="judgement" data-letter="J">Therefore the land has fallen into the hands of a small minority, and this through bad regulation of the laws.</span> <span class="code" data-code="keyterm" data-letter="K">For the lawgiver made buying and selling an existing estate dishonourable, and rightly so, but because he allowed those who wanted to, the right to give away or bequeath their estates, the end result was, inevitably, exactly the same.</span> <span class="code" data-code="counter" data-letter="C">And it is the case that almost two-fifths of the whole country is owned by women, since many women inherit and because of the giving of large dowries</span>: it would have been better to draw up laws for there to be no dowry, or a small or moderate one. But as things stand one is permitted to give an heiress in marriage to whomever one wants; and if someone dies without making arrangements, then whoever he leaves as heir can give her in marriage to whomever he wishes.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1270a15–29 · written 330s–320s BC · trans. in Cooley D54</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">What does he describe?</p>
+      <p class="body reveal">The opposite of equality: some Spartans with too much property, others with very little.</p>
+      <p class="qprompt reveal" data-paint="keyterm">How did land move, if selling was dishonourable?</p>
+      <p class="body reveal">By gift and bequest — and through women, who inherited and brought large dowries.</p>
+      <p class="qprompt reveal" data-paint="judgement">Evidence or judgement?</p>
+      <p class="body reveal">Land that “has fallen into the hands of a small minority” is his evidence; “bad regulation of the laws” is his judgement.</p>
+      <p class="qprompt reveal" data-paint="counter">Which century does it describe?</p>
+      <p class="body reveal">His own, the 4th century BC, after Leuctra. “Have come to attain” suggests a process over time.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="Weighing the evidence (table)" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">3 · Testing the equal lots · I do — three writers, three centuries</p>
+  <h2>Weighing the evidence</h2>
+  <div class="tbl-scroll"><table class="tbl l15-weigh">
+    <tr><th>Writer</th><th>Date</th><th>What he says about land</th><th>How far can we trust it?</th></tr>
+    <tr class="reveal"><td>Plutarch</td><td>about AD 100</td><td>Equal lots: 9,000 for the Spartiates, 30,000 for the perioikoi; fixed yields</td><td>A biographer with a moral aim, centuries later; names no early source; reports rival figures</td></tr>
+    <tr class="reveal"><td>Aristotle</td><td>330s–320s BC</td><td>Land has <span class="q">“fallen into the hands of a small minority”</span>; women own almost two-fifths; estates could be given away or bequeathed</td><td>A critic, writing after Leuctra about his own day; his students had researched Sparta’s constitution</td></tr>
+    <tr class="reveal"><td>Tyrtaeus</td><td>mid-7th century BC</td><td>Helots bring their masters <span class="q">“Half of all the produce the ploughland bears”</span>; Aristotle cites his <i>Eunomia</i> for calls to redistribute the land</td><td>Probably a Spartan, of his own time; these lines survive only in Pausanias’ quotation and Aristotle’s paraphrase</td></tr>
+  </table></div>
+  <p class="cue reveal">Different authors, different centuries, different purposes — and the latest is the only one to describe equality.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="Why historians doubt the equal lots" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">3 · Testing the equal lots · I do — four reasons historians give</p>
+  <h2>Why historians doubt the equal lots</h2>
+  <div class="cols c2">
+    <div class="card accent sm reveal"><div class="k">1 · Earlier inequality</div><p class="body">Aristotle cites Tyrtaeus’ poem <i>Eunomia</i> as evidence that after the Messenian War “some were so afflicted as a result of the war that they thought the land should be redistributed” (<i>Politics</i> 1306b–1307a, Cooley D26). If Aristotle reads the poem rightly, holdings were already unequal in the 7th century BC.</p></div>
+    <div class="card accent sm reveal"><div class="k">2 · Silence</div><p class="body">Aristotle discusses Spartan land and the lawgiver’s rules about it, but never mentions an original equal division — an argument from silence, so weigh it with care.</p></div>
+    <div class="card accent sm reveal"><div class="k">3 · Inheritance</div><p class="body">Daughters inherited too — Hodkinson suggests half as much as a brother (Cooley, note on D54) — and Aristotle has land “divided accordingly” among many sons (D28). Fixed lots handed out at birth cannot be squared with property divided among children.</p></div>
+    <div class="card accent sm reveal"><div class="k">4 · A later invention?</div><p class="body">In the 3rd century BC the reforming kings Agis IV (c. 244–241 BC) and Cleomenes III (235–222 BC) tried to redistribute land; Plutarch says Agis proposed 4,500 Spartiate lots and 15,000 for the perioikoi. Reformers needed a Lycurgan precedent, and Plutarch’s figures may echo their plans.</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">Cooley’s conclusion</div><p class="body">“There is, however, no evidence that in reality the land holdings of different Spartiates were, or ever had been, on a similar scale. In the classical period, land was held as private property which was passed down the generations through inheritance and dowries”.</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="3 · Testing the equal lots" data-title="Vote: were the lots ever equal?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote</p>
+  <h2 class="nq">“Every Spartiate once held an equal lot of land.”</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
+    <div class="card"><div class="k">Sideways</div><p class="lead">Unsure</p></div>
+    <div class="card"><div class="k">Thumbs down</div><p class="lead">Disagree</p></div>
+  </div>
+  <p class="cue">Justify your vote with a named writer and a date.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="We do — because, but, so" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · Testing the equal lots · We do · 8 minutes · building sentences together</p>
+  <h2>Because, but, so</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Finish the sentence three ways</div>
+        <p class="lead nq"><b>Plutarch says land was shared equally …</b></p>
+        <div class="bbs">
+          <span class="c">because</span><span class="m reveal">… Lycurgus made 9000 allotments “which would belong to the 9000 Spartiates”;</span>
+          <span class="c">but</span><span class="m reveal">… Aristotle, writing more than four centuries earlier, says “the land has fallen into the hands of a small minority”;</span>
+          <span class="c">so</span><span class="m reveal">… historians doubt that equal lots ever existed in the classical period: Cooley finds “no evidence” that holdings ever were “on a similar scale”.</span>
+        </div>
+      </div>
+    </div>
+    <div class="card quiet reveal">
+      <div class="k">Your turn · one more</div>
+      <p class="body nq"><b>Aristotle says selling an estate was dishonourable, but …, so …</b></p>
+      <p class="body m reveal">… the lawgiver allowed owners “to give away or bequeath their estates”, so “the end result was, inevitably, exactly the same”: land still fell into a few hands.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="You do — annotate Plutarch">
+<div class="wrap l15-dense">
+  <p class="eyebrow">3 · Testing the equal lots · You do · 8 minutes · press K for the timer</p>
+  <h2>Annotate Plutarch on the equal lots: O, V, P, R, L</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="card accent"><div class="k">Prompts (the chapter’s OVPRL questions)</div>
+      <ul class="body">
+        <li><b>O</b> — about how many centuries separate Plutarch from the Lycurgus he describes?</li>
+        <li><b>V</b> — who received lots, how many, and what did each produce?</li>
+        <li><b>P</b> — Plutarch wrote biographies to teach moral lessons. What lesson does this passage teach?</li>
+        <li><b>R</b> — he reports rival figures (6,000 or 9,000; Polydorus). What does this suggest about his sources?</li>
+        <li><b>L</b> — the passage never mentions inheritance, dowries or sale. Why is that a problem?</li>
+      </ul>
+      <p class="small">Then link it: ✓ where Tyrtaeus (Cooley A6) or Aristotle (Cooley D54) agrees, ✗ where they disagree. Short notes, your own words.</p>
+    </div>
+    <div class="tbl-scroll reveal" data-veil="Show model margin notes"><table class="tbl compact">
+      <tr><th>Code</th><th>Model margin note</th></tr>
+      <tr><td><b>O</b></td><td>Plut., c. AD 100; L.’s supposed date c. 9th–8th c. BC (Lesson 3) → about 9 centuries or more</td></tr>
+      <tr><td><b>V</b></td><td>9,000 Sp. lots + 30,000 perioikic; 70 measures barley + 12 for wife</td></tr>
+      <tr><td><b>P</b></td><td>moral: greed and “Savage inequalities” cured by equality</td></tr>
+      <tr><td><b>R</b></td><td>“Some say … others” → several traditions, no early source named</td></tr>
+      <tr><td><b>L</b></td><td>no sale, gift, inheritance, dowry → can’t explain how land moved</td></tr>
+      <tr><td><b>✓ ✗</b></td><td>✓ Tyrt.: helots farm · ✗ Ar.: “small minority”; ✗ Ar.: women own ~⅖</td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Testing the equal lots" data-title="Notes 3 — Testing the equal lots" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Testing the equal lots</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L15 · The economy I: land ownership</b></span><span>3 · Testing the equal lots</span></div>
+    <div class="row"><div class="cq">According to Aristotle, how did land fall into few hands if selling it was dishonourable?</div>
+      <div class="nts reveal">Lawgiver let owners <b>give away or bequeath</b> estates + many women inherit + <b>large dowries</b> → “the end result was, inevitably, exactly the same” (Ar., <i>Pol.</i> 1270a, D54)</div></div>
+    <div class="row"><div class="cq">What does Tyrtaeus’ Eunomia suggest about land in the 7th century BC?</div>
+      <div class="nts reveal">Aristotle: after the Messenian War some “thought the land should be redistributed” (D26) → holdings already <b>unequal</b> (Cooley: “Apparently”)</div></div>
+    <div class="row"><div class="cq">Why might the reforms of Agis IV and Cleomenes III have shaped the equal-lots story?</div>
+      <div class="nts reveal">3rd c. BC kings tried to <b>redistribute</b> land (Agis: 4,500 Sp. + 15,000 perioikic lots) → needed a <b>Lycurgan precedent</b> → Plut.’s figures <b>may</b> echo them</div></div>
+    <div class="row"><div class="cq">Plutarch or Aristotle: which is the better witness?</div>
+      <div class="nts reveal">Ar.: 330s–320s BC, his own day, researched; a critic <span class="sep">·</span> Plut.: c. AD 100, no early source <span class="sep">·</span> Cooley: “no evidence” of equal holdings; classical land = <b>private property</b></div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Other owners" data-title="Who else owned land?" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">4 · Other owners — and why it mattered · I do — beyond male Spartiates</p>
+  <h2>Who else owned land?</h2>
+  <div class="l15-four">
+    <div class="card accent reveal"><div class="k">The kings</div><p class="body">Xenophon: “specified tracts of high quality land in many of the territories of the perioikoi shall belong to him, sufficient to sustain the royal household adequately but without excessive wealth.”<span class="l15-src">Xenophon, <i>Constitution of the Lakedaimonians</i> 15.3 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D9</span></p></div>
+    <div class="card accent reveal"><div class="k">The perioikoi</div><p class="body">Cooley: “Perioikoi also owned their own land and were free to engage in any economic activity.” The richest probably had links with “the royal families who owned perioikic land”.<span class="l15-src">Cooley, ‘Perioikoi: a note’</span></p></div>
+    <div class="card accent reveal"><div class="k">Women</div><p class="body">Aristotle: “almost two-fifths of the whole country is owned by women”, through inheritance and large dowries (Lesson 14).<span class="l15-src">Aristotle, <i>Politics</i> 1270a · Cooley D54</span></p></div>
+    <div class="card quiet reveal"><div class="k">The helots</div><p class="body">They farmed other people’s estates: Cooley says “Most helots worked for absentee landlords”. It is “possible” they had private possessions, but the land they worked was not theirs.<span class="l15-src">Cooley, introduction to the helots (Lesson 8)</span></p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> There were owners beyond male Spartiates — women and the perioikoi — and the kings’ special estates, while the helots who did the work owned none of the land they farmed. This is the “beyond just male Spartiates” the 2023 markers rewarded.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Other owners" data-title="Rich and poor Spartiates" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">4 · Other owners — and why it mattered · I do — the classical evidence of inequality</p>
+  <h2>Rich and poor Spartiates — and why it mattered</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">The messes · Xenophon</div>
+        <p class="quote sm">… there are times when rich men provide wheat loaves instead of the usual ones.</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 5.3 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D61</p>
+      </div>
+      <div class="src">
+        <div class="k">The cavalry at Leuctra · Xenophon</div>
+        <p class="quote sm">This was because it was the very richest who bred the horses …</p>
+        <p class="prov">Xenophon, <i>Hellenika</i> 6.4.11 · on 371 BC · trans. in Cooley E54</p>
+      </div>
+      <div class="note reveal" data-code="evidence"><div class="k">Chariot racing</div><p class="body">Of 18 monuments known at Olympia for four-horse chariot victors between 560 and 364 BC, Cooley reports (citing Hodkinson), “of these 11 were for Spartans”. Some families “clearly had the wealth required to succeed (and to flaunt their success) at chariot racing on a Panhellenic stage”.</p></div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What do these show about land?</p>
+      <p class="body reveal">Horses and wheat bread took wealth, and a Spartiate’s wealth came from his land (he could not trade): some Spartiates held much more land than others in the classical period.</p>
+      <div class="note reveal" data-code="analysis"><div class="k">Why it mattered</div><p class="body">Aristotle: “if many sons are born, and the land divided accordingly, there will inevitably be many poor men” (D28). Cooley: “some Spartan families failed to produce their contributions for the syssitia, and therefore lost their full citizen rights.”</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>In short:</b> “Equality among Spartiates was, however, never more than an ideal” (Cooley) — and unequal land shrank the citizen body (Lessons 7 and 28).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Other owners" data-title="Notes 4 — Other owners and why it mattered" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Other owners — and why it mattered</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L15 · The economy I: land ownership</b></span><span>4 · Other owners</span></div>
+    <div class="row"><div class="cq">Name two groups other than male Spartiates who owned land, and one special kind of Spartiate holding.</div>
+      <div class="nts reveal"><b>Women</b>: almost ⅖ (Ar., D54) <span class="sep">·</span> <b>perioikoi</b>: their own land (Cooley) <span class="sep">·</span> special holding: the <b>kings’ estates</b> in perioikic territory (Xen., D9) <span class="sep">·</span> helots worked land, owned none of it</div></div>
+    <div class="row"><div class="cq">What classical evidence shows that some Spartiates were much richer than others?</div>
+      <div class="nts reveal">Rich men’s wheat loaves at the mess (Xen., D61) <span class="sep">·</span> “the very richest” bred the cavalry horses, 371 BC (Xen., E54) <span class="sep">·</span> 11 of 18 Olympic chariot monuments, 560–364 BC (Cooley)</div></div>
+    <div class="row"><div class="cq">Why did unequal land matter?</div>
+      <div class="nts reveal">Land divided among sons → “many poor men” (Ar., D28) → mess dues unpaid → <b>citizenship lost</b> → fewer Spartiates</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The evidence of the fields" data-title="What survey found (map)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · The evidence of the fields · I do — evidence filtered through no writer</p>
+  <h2>What intensive survey found</h2>
+  <div class="split l15-mapkeys" style="--cols:auto 1fr">
+    <figure class="mapbox"><svg class="map l15-map" viewBox="0 0 1000 988" role="img" aria-label="Map of what intensive archaeological survey found in Spartan territory, from W. G. Cavanagh. 1: close to Sparta, in the Eurotas valley, a mixture of modest and larger, more prosperous sites. 2: southern Laconia, around Helos near the mouth of the Eurotas, a scatter of small sites. 3: the island of Kythera, south of Laconia, with production sites inland and larger, more prosperous sites on the coast. 4: Messenia, west of Mount Taygetus, larger village communities that evidently housed the helots who worked the land for the Spartans.">
+<defs><clipPath id="l15-landclip"><path d="M1016.7,-20.9 1016.7,77.8 1005.7,80.3 1005.6,87.0 1009.5,90.2 1016.7,90.6 1016.7,109.3 992.6,108.7 981.1,110.9 980.8,116.7 990.9,137.3 979.4,139.6 971.5,139.5 956.4,132.5 956.4,127.8 967.7,127.8 967.7,123.0 961.2,121.2 953.5,122.6 946.3,121.9 941.2,114.0 952.6,118.7 949.9,112.2 945.8,107.3 933.7,99.2 929.3,103.8 923.8,104.0 918.4,100.7 916.7,77.3 918.1,68.8 930.5,76.8 936.2,71.7 940.3,62.0 941.2,51.8 956.4,61.3 956.4,56.9 953.6,50.6 951.1,35.7 943.3,32.8 931.8,26.3 912.2,31.3 903.3,28.0 910.8,23.3 903.3,9.0 884.0,21.5 880.5,28.0 872.7,3.0 867.1,-6.1 857.7,-15.2 846.0,-15.2 842.9,-20.9 834.1,-20.9 834.7,-19.5 831.4,-20.9 810.3,-20.9 796.7,-10.4 792.9,-14.6 783.3,-20.9 728.0,-20.9 731.5,-12.8 728.0,3.9 730.4,11.6 739.1,23.3 739.1,39.9 747.1,47.4 746.8,54.6 743.0,63.8 743.3,70.8 772.4,105.5 777.4,108.7 773.6,118.7 781.2,118.7 781.2,123.0 777.4,123.0 777.4,127.8 783.2,133.4 796.5,157.3 800.5,170.0 819.5,204.2 825.9,212.9 828.7,220.2 822.4,227.5 819.5,254.7 824.0,263.4 834.5,265.7 846.0,264.3 853.6,261.6 853.9,264.8 857.7,271.1 853.8,273.6 857.7,275.9 853.6,281.1 863.0,284.5 867.6,290.3 866.2,293.7 857.7,290.1 862.7,302.5 877.7,324.7 876.7,332.9 884.3,357.0 872.6,357.0 880.5,370.9 884.3,366.5 886.9,378.9 884.3,390.3 889.9,399.5 900.9,427.5 905.0,433.4 903.3,438.9 910.7,451.1 926.0,466.7 929.6,474.2 930.9,482.0 928.8,488.1 922.5,490.4 922.5,494.8 932.7,496.0 941.2,499.9 938.8,505.3 932.4,510.1 930.2,514.2 929.4,518.1 930.2,526.1 927.0,533.6 919.9,533.0 906.7,523.7 901.9,531.4 895.0,538.7 892.0,545.6 899.5,552.2 895.7,561.7 910.8,561.7 896.9,574.0 897.6,591.9 905.8,610.4 916.8,628.2 922.5,640.5 924.9,642.7 935.9,647.4 942.2,652.3 952.6,657.1 958.5,666.5 963.9,667.1 956.4,671.8 956.4,676.1 959.7,680.1 960.1,683.7 957.7,687.1 952.6,690.4 962.1,704.5 978.8,714.9 990.9,726.2 986.7,742.6 967.7,733.1 962.1,740.4 955.2,741.5 930.4,735.2 921.3,719.8 914.6,714.1 914.6,709.8 917.8,700.4 914.0,689.3 906.1,680.0 897.6,676.1 873.7,681.5 862.5,681.6 857.7,674.0 855.1,662.6 838.5,628.6 832.1,622.5 808.2,604.8 816.1,596.5 813.5,588.3 790.3,566.9 787.3,565.9 785.1,571.2 777.4,580.7 775.0,577.0 774.3,570.8 777.4,554.6 776.2,544.0 771.0,529.0 767.1,503.8 759.4,491.5 747.3,484.0 731.5,481.0 703.1,480.4 668.1,484.5 643.0,498.7 644.0,528.4 625.6,541.6 618.6,551.5 613.9,566.9 622.4,566.8 627.7,571.6 629.8,580.0 629.2,590.6 625.4,590.6 622.3,580.7 618.8,577.0 613.9,576.4 609.3,580.0 606.3,586.5 605.6,592.7 617.2,603.3 614.5,617.5 607.1,624.1 602.6,609.2 594.4,614.2 591.1,621.5 590.9,662.3 592.5,678.2 595.9,691.3 606.4,718.9 604.1,722.7 606.4,728.8 599.1,733.7 596.6,741.0 598.2,749.4 602.6,757.3 602.6,762.0 597.5,761.5 596.1,763.5 595.0,771.5 588.7,763.8 586.2,739.1 583.3,728.8 575.2,721.9 555.8,714.0 549.1,704.6 545.3,704.6 539.6,710.6 534.1,709.2 524.5,697.7 519.2,687.3 519.6,679.7 526.4,662.3 535.3,664.9 537.9,656.6 535.6,645.2 529.8,638.1 537.7,624.3 526.4,624.3 527.4,615.4 526.6,604.6 528.5,596.3 537.7,595.4 537.7,590.6 526.9,586.8 528.1,574.9 537.7,552.2 521.4,555.0 510.8,538.1 502.1,516.2 491.9,504.3 492.8,490.7 484.3,472.9 445.3,419.1 433.4,412.9 419.5,423.5 404.8,412.4 398.8,405.5 396.4,395.0 397.6,395.4 400.4,391.5 404.3,378.4 407.5,356.9 408.4,338.0 407.3,333.1 369.8,324.6 348.9,323.4 338.9,326.3 317.9,339.4 297.0,345.3 290.6,352.5 287.4,361.8 281.8,428.2 279.0,436.6 278.7,443.0 286.1,463.1 282.5,471.5 292.0,480.7 297.9,484.5 305.7,485.7 305.7,490.4 298.2,491.0 291.7,493.9 288.2,498.6 290.1,504.3 286.6,510.6 257.0,538.0 252.2,537.9 223.8,481.0 205.4,483.6 191.2,490.4 184.6,483.5 171.5,478.1 168.1,471.5 164.6,471.5 159.6,474.4 149.2,452.5 151.3,445.9 149.2,423.5 150.9,417.2 160.8,399.3 161.1,387.7 157.0,377.5 149.0,372.5 137.8,376.0 143.0,373.4 144.7,371.1 145.4,366.5 140.4,366.2 137.6,368.0 134.3,376.0 130.4,351.5 116.2,333.3 99.6,316.0 88.1,294.4 83.2,267.0 82.0,239.1 85.8,214.0 95.6,194.7 130.5,166.4 145.7,150.3 153.2,127.8 150.8,99.7 141.6,72.4 103.9,0.3 89.9,-20.9Z M884.3,829.0 920.5,855.1 930.2,866.5 935.5,878.4 932.1,881.4 923.8,881.7 914.6,886.0 910.2,892.9 908.0,902.0 906.7,942.7 903.8,943.8 895.7,942.9 885.8,940.3 879.1,941.4 872.6,948.1 870.9,938.0 865.1,933.6 849.8,928.7 850.0,920.8 847.9,919.6 838.5,919.6 830.3,904.0 827.1,900.2 831.8,861.1 831.2,845.1 822.0,815.1 823.1,808.1 840.3,778.2 847.0,772.6 853.6,776.7 875.7,817.9 884.3,829.0Z M191.2,519.0 200.0,523.5 200.9,531.2 198.9,542.3 198.8,556.9 193.4,550.9 191.2,542.7 183.6,547.9 188.6,520.4 191.2,519.0Z M153.2,528.4 153.9,503.8 156.0,493.1 160.8,485.7 168.2,490.7 171.9,490.4 171.9,494.8 164.6,499.9 164.8,507.2 153.2,528.4Z M949.1,147.2 961.7,155.3 965.8,159.0 968.0,163.9 969.3,171.3 968.0,177.9 962.2,180.9 950.6,178.3 943.9,171.9 938.4,164.1 930.2,156.7 938.6,149.3 949.1,147.2Z M868.7,709.1 871.9,716.2 870.0,724.7 863.5,719.4 861.1,713.4 858.8,712.3 850.9,712.9 848.1,714.5 844.8,719.2 839.8,720.2 836.1,717.2 836.1,712.4 838.5,706.7 845.3,701.9 847.7,695.7 851.5,691.8 856.9,688.7 861.0,687.8 864.9,690.4 867.9,696.0 869.4,706.4 868.7,709.1Z M73.8,303.0 77.0,310.4 75.2,313.2 75.4,318.2 70.4,325.3 70.0,321.6 71.7,316.3 68.6,314.4 65.2,307.9 73.8,303.0Z"/></clipPath></defs>
+<rect class="sea" width="1000" height="988"/>
+<path class="land" d="M1016.7,-20.9 1016.7,77.8 1005.7,80.3 1005.6,87.0 1009.5,90.2 1016.7,90.6 1016.7,109.3 992.6,108.7 981.1,110.9 980.8,116.7 990.9,137.3 979.4,139.6 971.5,139.5 956.4,132.5 956.4,127.8 967.7,127.8 967.7,123.0 961.2,121.2 953.5,122.6 946.3,121.9 941.2,114.0 952.6,118.7 949.9,112.2 945.8,107.3 933.7,99.2 929.3,103.8 923.8,104.0 918.4,100.7 916.7,77.3 918.1,68.8 930.5,76.8 936.2,71.7 940.3,62.0 941.2,51.8 956.4,61.3 956.4,56.9 953.6,50.6 951.1,35.7 943.3,32.8 931.8,26.3 912.2,31.3 903.3,28.0 910.8,23.3 903.3,9.0 884.0,21.5 880.5,28.0 872.7,3.0 867.1,-6.1 857.7,-15.2 846.0,-15.2 842.9,-20.9 834.1,-20.9 834.7,-19.5 831.4,-20.9 810.3,-20.9 796.7,-10.4 792.9,-14.6 783.3,-20.9 728.0,-20.9 731.5,-12.8 728.0,3.9 730.4,11.6 739.1,23.3 739.1,39.9 747.1,47.4 746.8,54.6 743.0,63.8 743.3,70.8 772.4,105.5 777.4,108.7 773.6,118.7 781.2,118.7 781.2,123.0 777.4,123.0 777.4,127.8 783.2,133.4 796.5,157.3 800.5,170.0 819.5,204.2 825.9,212.9 828.7,220.2 822.4,227.5 819.5,254.7 824.0,263.4 834.5,265.7 846.0,264.3 853.6,261.6 853.9,264.8 857.7,271.1 853.8,273.6 857.7,275.9 853.6,281.1 863.0,284.5 867.6,290.3 866.2,293.7 857.7,290.1 862.7,302.5 877.7,324.7 876.7,332.9 884.3,357.0 872.6,357.0 880.5,370.9 884.3,366.5 886.9,378.9 884.3,390.3 889.9,399.5 900.9,427.5 905.0,433.4 903.3,438.9 910.7,451.1 926.0,466.7 929.6,474.2 930.9,482.0 928.8,488.1 922.5,490.4 922.5,494.8 932.7,496.0 941.2,499.9 938.8,505.3 932.4,510.1 930.2,514.2 929.4,518.1 930.2,526.1 927.0,533.6 919.9,533.0 906.7,523.7 901.9,531.4 895.0,538.7 892.0,545.6 899.5,552.2 895.7,561.7 910.8,561.7 896.9,574.0 897.6,591.9 905.8,610.4 916.8,628.2 922.5,640.5 924.9,642.7 935.9,647.4 942.2,652.3 952.6,657.1 958.5,666.5 963.9,667.1 956.4,671.8 956.4,676.1 959.7,680.1 960.1,683.7 957.7,687.1 952.6,690.4 962.1,704.5 978.8,714.9 990.9,726.2 986.7,742.6 967.7,733.1 962.1,740.4 955.2,741.5 930.4,735.2 921.3,719.8 914.6,714.1 914.6,709.8 917.8,700.4 914.0,689.3 906.1,680.0 897.6,676.1 873.7,681.5 862.5,681.6 857.7,674.0 855.1,662.6 838.5,628.6 832.1,622.5 808.2,604.8 816.1,596.5 813.5,588.3 790.3,566.9 787.3,565.9 785.1,571.2 777.4,580.7 775.0,577.0 774.3,570.8 777.4,554.6 776.2,544.0 771.0,529.0 767.1,503.8 759.4,491.5 747.3,484.0 731.5,481.0 703.1,480.4 668.1,484.5 643.0,498.7 644.0,528.4 625.6,541.6 618.6,551.5 613.9,566.9 622.4,566.8 627.7,571.6 629.8,580.0 629.2,590.6 625.4,590.6 622.3,580.7 618.8,577.0 613.9,576.4 609.3,580.0 606.3,586.5 605.6,592.7 617.2,603.3 614.5,617.5 607.1,624.1 602.6,609.2 594.4,614.2 591.1,621.5 590.9,662.3 592.5,678.2 595.9,691.3 606.4,718.9 604.1,722.7 606.4,728.8 599.1,733.7 596.6,741.0 598.2,749.4 602.6,757.3 602.6,762.0 597.5,761.5 596.1,763.5 595.0,771.5 588.7,763.8 586.2,739.1 583.3,728.8 575.2,721.9 555.8,714.0 549.1,704.6 545.3,704.6 539.6,710.6 534.1,709.2 524.5,697.7 519.2,687.3 519.6,679.7 526.4,662.3 535.3,664.9 537.9,656.6 535.6,645.2 529.8,638.1 537.7,624.3 526.4,624.3 527.4,615.4 526.6,604.6 528.5,596.3 537.7,595.4 537.7,590.6 526.9,586.8 528.1,574.9 537.7,552.2 521.4,555.0 510.8,538.1 502.1,516.2 491.9,504.3 492.8,490.7 484.3,472.9 445.3,419.1 433.4,412.9 419.5,423.5 404.8,412.4 398.8,405.5 396.4,395.0 397.6,395.4 400.4,391.5 404.3,378.4 407.5,356.9 408.4,338.0 407.3,333.1 369.8,324.6 348.9,323.4 338.9,326.3 317.9,339.4 297.0,345.3 290.6,352.5 287.4,361.8 281.8,428.2 279.0,436.6 278.7,443.0 286.1,463.1 282.5,471.5 292.0,480.7 297.9,484.5 305.7,485.7 305.7,490.4 298.2,491.0 291.7,493.9 288.2,498.6 290.1,504.3 286.6,510.6 257.0,538.0 252.2,537.9 223.8,481.0 205.4,483.6 191.2,490.4 184.6,483.5 171.5,478.1 168.1,471.5 164.6,471.5 159.6,474.4 149.2,452.5 151.3,445.9 149.2,423.5 150.9,417.2 160.8,399.3 161.1,387.7 157.0,377.5 149.0,372.5 137.8,376.0 143.0,373.4 144.7,371.1 145.4,366.5 140.4,366.2 137.6,368.0 134.3,376.0 130.4,351.5 116.2,333.3 99.6,316.0 88.1,294.4 83.2,267.0 82.0,239.1 85.8,214.0 95.6,194.7 130.5,166.4 145.7,150.3 153.2,127.8 150.8,99.7 141.6,72.4 103.9,0.3 89.9,-20.9Z M884.3,829.0 920.5,855.1 930.2,866.5 935.5,878.4 932.1,881.4 923.8,881.7 914.6,886.0 910.2,892.9 908.0,902.0 906.7,942.7 903.8,943.8 895.7,942.9 885.8,940.3 879.1,941.4 872.6,948.1 870.9,938.0 865.1,933.6 849.8,928.7 850.0,920.8 847.9,919.6 838.5,919.6 830.3,904.0 827.1,900.2 831.8,861.1 831.2,845.1 822.0,815.1 823.1,808.1 840.3,778.2 847.0,772.6 853.6,776.7 875.7,817.9 884.3,829.0Z M191.2,519.0 200.0,523.5 200.9,531.2 198.9,542.3 198.8,556.9 193.4,550.9 191.2,542.7 183.6,547.9 188.6,520.4 191.2,519.0Z M153.2,528.4 153.9,503.8 156.0,493.1 160.8,485.7 168.2,490.7 171.9,490.4 171.9,494.8 164.6,499.9 164.8,507.2 153.2,528.4Z M949.1,147.2 961.7,155.3 965.8,159.0 968.0,163.9 969.3,171.3 968.0,177.9 962.2,180.9 950.6,178.3 943.9,171.9 938.4,164.1 930.2,156.7 938.6,149.3 949.1,147.2Z M868.7,709.1 871.9,716.2 870.0,724.7 863.5,719.4 861.1,713.4 858.8,712.3 850.9,712.9 848.1,714.5 844.8,719.2 839.8,720.2 836.1,717.2 836.1,712.4 838.5,706.7 845.3,701.9 847.7,695.7 851.5,691.8 856.9,688.7 861.0,687.8 864.9,690.4 867.9,696.0 869.4,706.4 868.7,709.1Z M73.8,303.0 77.0,310.4 75.2,313.2 75.4,318.2 70.4,325.3 70.0,321.6 71.7,316.3 68.6,314.4 65.2,307.9 73.8,303.0Z"/>
+<path class="laconia" clip-path="url(#l15-landclip)" d="M377.8,97.4 L427.8,118.3 L472.2,208.7 L500.0,292.2 L519.4,368.7 L388.9,382.6 L350.0,765.2 L350.0,1043.4 L1211.1,1043.4 L1211.1,626.1 L988.9,417.4 L861.1,208.7 L766.7,34.8 L611.1,20.9 L488.9,55.7Z"/>
+<path class="messenia" clip-path="url(#l15-landclip)" d="M-11.1,69.6 L294.4,69.6 L377.8,97.4 L427.8,118.3 L472.2,208.7 L500.0,292.2 L519.4,368.7 L388.9,382.6 L350.0,765.2 L-11.1,765.2Z"/>
+<g class="scale"><line x1="34" y1="954" x2="190.7" y2="954"/><text x="34" y="940">25 km</text></g>
+<text class="north" x="954" y="58" text-anchor="middle">N</text><path class="north" d="M954,68 l-12,30 l12,-8 l12,8z"/>
+<path class="mtn-band" d="M427.8,118.3 C435.2,133.3 460.2,179.7 472.2,208.7 C484.3,237.7 491.7,263.2 500.0,292.2 C508.3,321.1 515.7,352.5 522.2,382.6 C528.7,412.7 533.3,439.4 538.9,473.0 C544.4,506.7 550.0,549.5 555.6,584.3 C561.1,619.1 566.7,653.9 572.2,681.7 C577.8,709.5 586.1,739.7 588.9,751.3"/><path class="mtn-crest" d="M427.8,118.3 C435.2,133.3 460.2,179.7 472.2,208.7 C484.3,237.7 491.7,263.2 500.0,292.2 C508.3,321.1 515.7,352.5 522.2,382.6 C528.7,412.7 533.3,439.4 538.9,473.0 C544.4,506.7 550.0,549.5 555.6,584.3 C561.1,619.1 566.7,653.9 572.2,681.7 C577.8,709.5 586.1,739.7 588.9,751.3"/>
+<path class="river l15-river" d="M455.6,132.2 C462.0,141.4 482.4,169.3 494.4,187.8 C506.5,206.4 515.3,226.1 527.8,243.5 C540.3,260.9 559.7,275.9 569.4,292.2 C579.2,308.4 579.2,324.6 586.1,340.9 C593.1,357.1 600.5,373.3 611.1,389.6 C621.8,405.8 636.6,422.0 650.0,438.2 C663.4,454.5 684.7,478.8 691.7,486.9"/>
+<g class="linked" data-step="l15sp"><circle class="l15-area" cx="561.1" cy="295.6" r="75.2"/><g class="badge"><circle cx="633.8" cy="223.0" r="21"/><text x="633.8" y="231.5">1</text></g></g>
+<g class="linked" data-step="l15hel"><ellipse class="l15-area" cx="711.1" cy="466.1" rx="62" ry="46"/><circle class="town" cx="711.1" cy="476.5" r="9"/><text class="town-lbl" x="727.1" y="488.5" text-anchor="start">Helos</text><g class="badge"><circle cx="619.1" cy="510.5" r="21"/><text x="619.1" y="519.0">2</text></g></g>
+<g class="linked" data-step="l15kyt"><ellipse class="l15-area" cx="875.0" cy="866.1" rx="74" ry="92"/><g class="badge"><circle cx="768.2" cy="804.6" r="21"/><text x="768.2" y="813.1">3</text></g></g>
+<g class="linked" data-step="l15mes"><path class="l15-hi" clip-path="url(#l15-landclip)" d="M-11.1,69.6 L294.4,69.6 L377.8,97.4 L427.8,118.3 L472.2,208.7 L500.0,292.2 L519.4,368.7 L388.9,382.6 L350.0,765.2 L-11.1,765.2Z"/><g class="badge"><circle cx="211.1" cy="180.9" r="21"/><text x="211.1" y="189.4">4</text></g></g>
+<circle class="sparta" cx="561.1" cy="295.6" r="9"/>
+<text class="town-lbl" x="581.1" y="289.6" text-anchor="start">Sparta</text>
+<text class="river-lbl l15-small" x="519.6" y="180.9" text-anchor="start">Eurotas</text>
+<text class="mtn-lbl l15-small" x="518.4" y="556.5" text-anchor="end">Mt Taygetus</text>
+<text class="town-lbl l15-small" x="872.2" y="870.6" text-anchor="middle">Kythera</text>
+<text class="region-lbl strong" x="800.0" y="326.9" text-anchor="middle">LACONIA</text>
+<text class="region-lbl strong" x="200.0" y="97.4" text-anchor="middle">MESSENIA</text>
+<text class="region-lbl" x="666.7" y="34.8" text-anchor="middle">ARCADIA</text>
+<text class="sea-lbl" x="722.2" y="626.1" text-anchor="middle">Laconian Gulf</text>
+<text class="sea-lbl" x="355.6" y="473.0" text-anchor="middle">Messenian Gulf</text>
+<text class="sea-lbl" x="166.7" y="730.4" text-anchor="middle">IONIAN SEA</text>
+<text class="sea-lbl" x="900.0" y="173.9" text-anchor="middle">AEGEAN SEA</text>
+</svg>
+      <figcaption>Drawn for this lesson from W. G. Cavanagh’s summary in Cooley. The rings mark the areas he names, roughly; they are not survey boundaries. Coastline: Natural Earth (public domain). <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <ol class="keylist">
+      <li class="reveal" data-also="[data-step=l15sp]"><span class="num">1</span><span class="t">Close to Sparta</span><span class="d">For the 6th and 5th centuries BC, “a mixture of sites ranging from the modest to larger and more prosperous ones”.</span></li>
+      <li class="reveal" data-also="[data-step=l15hel]"><span class="num">2</span><span class="t">Southern Laconia</span><span class="d">“A scatter of small sites”, for example around Helos (its exact site is uncertain).</span></li>
+      <li class="reveal" data-also="[data-step=l15kyt]"><span class="num">3</span><span class="t">Kythera</span><span class="d">Sites inland “given over mainly to production”; those on the coast “larger and more prosperous”.</span></li>
+      <li class="reveal" data-also="[data-step=l15mes]"><span class="num">4</span><span class="t">Messenia</span><span class="d">A completely different pattern: “larger village communities; these evidently housed the helots who worked the land for the Spartans.”</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The evidence of the fields" data-title="What survey can and cannot tell us" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow">5 · The evidence of the fields · We do — weigh it</p>
+  <h2>What survey can — and cannot — tell us</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">It can show</div><p class="body">Where people lived and farmed, and how that changed. For the classical period, survey close to Sparta “has been used to argue for a gradual transformation in rural settlement. The smaller, possibly more marginal, sites become fewer and their holdings perhaps were swallowed up by the larger, more dominant sites.”</p></div>
+    <div class="card quiet reveal"><div class="k">It cannot show</div><p class="body">Who owned a site, or under what rules. Broken pottery shows settlement, not ownership — and archaeological dates “can seldom be refined even as closely as to a generation or two” (Cavanagh).</p></div>
+  </div>
+  <p class="qprompt reveal">Does the survey disprove Plutarch’s equal lots?</p>
+  <div class="note reveal" data-code="analysis"><div class="k">Our inference — not Cavanagh’s</div><p class="body">Not on its own: farms of different sizes could still sit on equal lots. But a mix of modest and prosperous sites, and small sites perhaps swallowed by larger ones, fits Aristotle’s land “fallen into the hands of a small minority” better than Plutarch’s equality.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The evidence of the fields" data-title="Notes 5 — The evidence of the fields" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>The evidence of the fields</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L15 · The economy I: land ownership</b></span><span>5 · The evidence of the fields</span></div>
+    <div class="row"><div class="cq">What did survey find near Sparta and in Messenia?</div>
+      <div class="nts reveal">6th–5th c.: dense network of small farmsteads + hamlets <span class="sep">·</span> near Sparta: <b>modest to larger, more prosperous</b> sites <span class="sep">·</span> Messenia: <b>larger villages</b> that “evidently housed the helots” (Cavanagh, in Cooley)</div></div>
+    <div class="row"><div class="cq">What can intensive survey tell us about land, and what can it not?</div>
+      <div class="nts reveal"><b>Can</b>: where people lived + farmed, change over time (small sites “perhaps” swallowed by larger) <span class="sep">·</span> <b>cannot</b>: who owned land, or the rules; dates only roughly</div></div>
+    <div class="row"><div class="cq">Does it support Plutarch or Aristotle?</div>
+      <div class="nts reveal">Fits <b>Aristotle</b> better (our inference) <span class="sep">·</span> does not disprove equal lots on its own</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · The evidence of the fields" data-title="Summary" data-kind="notes">
+<div class="wrap l15-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What was a kleros, and why did owning one matter?</li>
+          <li>What does Plutarch claim, and why do historians doubt it?</li>
+          <li>How was land really owned in the classical period, and by whom?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">A kleros was a Spartiate’s estate, farmed by helots, and a man who could not pay his mess contribution from it lost his full citizenship. Plutarch, writing about AD 100, claims Lycurgus made 9,000 equal Spartiate lots and 30,000 perioikic ones, but he names no early source, and earlier evidence shows inequality: Aristotle says “the land has fallen into the hands of a small minority”, and his report of Tyrtaeus’ Eunomia suggests calls for redistribution in the 7th century BC. In the classical period land was private property that passed by gift, inheritance and dowry, owned unequally by Spartiates, by women (almost two-fifths, Aristotle says), by the perioikoi and, in special estates, by the kings, while survey shows a mixture of modest and prosperous sites near Sparta and larger villages that evidently housed helots in Messenia.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Ownership v. management; the kleros and the mess</label></li>
+        <li><label><input type="checkbox"> 2 · Plutarch’s lots, yields and rival figures</label></li>
+        <li><label><input type="checkbox"> 3 · Aristotle, Tyrtaeus and four reasons for doubt</label></li>
+        <li><label><input type="checkbox"> 4 · Kings, perioikoi, women, helots; rich and poor</label></li>
+        <li><label><input type="checkbox"> 5 · What the survey can and cannot show</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (a)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>Today’s lesson was examined in 2023</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 5 marks ≈ 9 minutes.</p></div>
+    <div class="card"><div class="k">Outline</div><p class="body">NESA: “Sketch in general terms; indicate the main features of”.</p></div>
+    <div class="card accent"><div class="k">Ownership</div><p class="body">Who held the land and how it passed on — not who farmed it.</p></div>
+  </div>
+  <p class="lead">We take the question apart, read the criteria and the 2023 feedback, and you write it in 9 minutes. Then we test NESA’s sample answer against Cooley, compare a model, and you mark your own.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 · Section II · Question 11 (a) · 5 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Outline</span> the <span class="code" data-code="keyterm" data-letter="K">key features of Spartan land ownership</span> <span class="code" data-code="scope" data-letter="S">in this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">I do — watch the question taken apart. Then you write it, in 9 minutes.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(a) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Outline</div><p class="body">“Indicate the main features”: several features, each sketched briefly with a precise detail. No long argument — but say whose claim each feature is.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Key features of land ownership — plural</div><p class="body">The kleroi and why they mattered · Plutarch’s equal lots and the evidence of inequality · private property passed by gift, inheritance and dowry · owners beyond male Spartiates — women and the perioikoi — and the kings’ special estates.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">Archaic and classical Sparta, to 371 BC. Aristotle wrote a generation or two after it (330s–320s BC), about his own day; Plutarch wrote about AD 100 — label him as late.</p></div>
+    <div class="card accent reveal"><div class="k">5 marks</div><p class="body">About 9 minutes · five or six features · two or three named writers · about 130–190 words · no introduction.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — the criteria and the feedback" data-kind="hsc">
+<div class="wrap l15-dense">
+  <p class="eyebrow">HSC 2023 Q11(a) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria (2023, part (a))</th></tr>
+      <tr><td class="m">5</td><td>Provides an informed outline relevant to the question · Communicates effectively using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4</td><td>Provides a sound outline relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">3</td><td>Provides an outline relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">2</td><td>Provides some information relevant to the question · May use some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">provide an outline of land ownership beyond just male Spartiates (a)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">focusing on land ownership rather than land management (a)</span></p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Our reading of the step up</div><p class="body">“An outline” → “a sound outline” → “an informed outline” — specific features, named evidence and Spartan terms: kleroi, homoioi, perioikoi.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2023 HSC Ancient History Marking Guidelines (Section II, part (a)) and the 2023 marking feedback for Question 11, quoted exactly.</p>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(a) · You do · 9 minutes · press K for the timer</p>
+  <h2>Outline the key features of Spartan land ownership in this period. <span class="small">(5 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>ownership — who held land and how it passed on — not management</li>
+        <li>the kleroi, and Plutarch’s equal lots labelled as his claim</li>
+        <li>the earlier evidence of inequality</li>
+        <li>owners beyond male Spartiates — women and the perioikoi — and the kings’ special estates</li>
+        <li>two or three named writers; about 130–190 words, no introduction</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Spartiate land was held as kleroi, estates worked by helots, …”</p>
+      <p class="small">Your plan: the table of three writers (slide 16) and the four kinds of owner (slide 22).</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — NESA’s sample, annotated" data-kind="hsc">
+<div class="wrap l15-dense">
+  <p class="eyebrow">HSC 2023 Q11(a) · Check your answer — NESA’s sample answer, tested against Cooley</p>
+  <h2>NESA’s sample answer, annotated</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated sample">
+    <div class="ans long">
+      <span class="code" data-code="counter" id="s23-1">The Spartan system of land ownership involved an equal, one-time distribution of kleroi to the Spartan homoioi</span><span class="mk">1</span>
+      <span class="code" data-code="keyterm" id="s23-2">to be worked by the helots</span><span class="mk">2</span>
+      <span class="code" data-code="counter" id="s23-3">and passed on either via the inheritance of first-born sons or return to and redistribution by the state.</span><span class="mk">3</span>
+      <span class="code" data-code="judgement" id="s23-4">Earlier sources demonstrate a more complicated system of land ownership which had inequalities.</span><span class="mk">4</span>
+      <span class="code" data-code="evidence" id="s23-5">For example, there is reference to individuals providing a larger portion to the syssitia,</span><span class="mk">5</span>
+      <span class="code" data-code="evidence" id="s23-6">and to cavalry and chariot racing which required larger estates for the upkeep of horses.</span><span class="mk">6</span>
+      <span class="code" data-code="analysis" id="s23-7">Earlier sources show that land ownership was more private in character,</span><span class="mk">7</span>
+      <span class="code" data-code="scope" id="s23-8">and that women had some property rights.</span><span class="mk">8</span>
+      <p class="meta">Sample answer from the NESA 2023 HSC Ancient History Marking Guidelines · 101 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="counter" data-hl="#s23-1"><span class="mk">1</span><b>Cooley says: a late tradition, not a fact</b><span class="tx">The equal lots are Plutarch’s, c. AD 100. Cooley: “There is, however, no evidence that in reality the land holdings of different Spartiates were, or ever had been, on a similar scale.” Write “Plutarch claims …”.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#s23-2"><span class="mk">2</span><b>Labour in a phrase</b><span class="tx">The helots as workers — one phrase, then back to ownership. The right terms: kleroi, homoioi, helots.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#s23-3"><span class="mk">3</span><b>Cooley says: daughters inherited too</b><span class="tx">Cooley: “all sons would inherit equal shares”, and daughters inherited too; Aristotle has land “divided accordingly” among many sons (D28). Lots handed back for redistribution fit Plutarch’s picture of lots given at birth (D73) — late again.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#s23-4"><span class="mk">4</span><b>The turn</b><span class="tx">Late v. earlier evidence: here the answer starts to weigh its sources. But it names none — Aristotle, 330s–320s BC, would make it precise.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#s23-5"><span class="mk">5</span><b>Supported</b><span class="tx">Xenophon: “there are times when rich men provide wheat loaves instead of the usual ones” (D61).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#s23-6"><span class="mk">6</span><b>Supported</b><span class="tx">Xenophon: “it was the very richest who bred the horses” (E54); of 18 known Olympic monuments to four-horse chariot victors, 560–364 BC, “of these 11 were for Spartans” (Cooley).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#s23-7"><span class="mk">7</span><b>Supported</b><span class="tx">Cooley: “In the classical period, land was held as private property”. Aristotle adds how it moved: gift and bequest.</span></div>
+      <div class="anote reveal" data-code="scope" data-hl="#s23-8"><span class="mk">8</span><b>Cooley says: more than “some”</b><span class="tx">Aristotle: “almost two-fifths of the whole country is owned by women” — the feedback’s “beyond just male Spartiates”.</span></div>
+      <div class="verdict reveal"><b>NESA’s sample.</b> Four features — kleroi, inequality, private ownership, women — in 101 words. But it states Plutarch’s equal lots as fact, names no writer, and leaves out the perioikoi and the kings.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> begin “Plutarch claims …”, name Aristotle and Xenophon with dates, and add the perioikoi’s land and the kings’ estates.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — a model, annotated" data-kind="hsc">
+<div class="wrap l15-dense">
+  <p class="eyebrow">HSC 2023 Q11(a) · a model written for this lesson</p>
+  <h2>The system, the doubts, then every kind of owner</h2>
+  <div class="annot wide" data-veil="Show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m6-1">Spartiate land was held as kleroi, estates worked by helots that paid each citizen’s monthly mess contribution.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m6-2">Plutarch, writing about AD 100, claims that Lycurgus made 9,000 equal Spartiate lots and 30,000 for the perioikoi, each Spartiate lot yielding ‘an annual crop of 70 measures of barley, 12 measures for his wife’.</span><span class="mk">2</span>
+      <span class="code" data-code="counter" id="m6-3">This is probably idealised, since earlier evidence shows inequality: Aristotle cites Tyrtaeus’ Eunomia for those who, after the Messenian War, ‘thought the land should be redistributed’,</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m6-4">and in his own day, the 330s–320s BC, ‘the land has fallen into the hands of a small minority’.</span><span class="mk">4</span>
+      <span class="code" data-code="evidence" id="m6-5">Xenophon says ‘it was the very richest who bred the horses’ for the cavalry, and Spartans won many Olympic chariot races.</span><span class="mk">5</span>
+      <span class="code" data-code="analysis" id="m6-6">Land was private property: selling an estate was dishonourable, but owners could give it away or bequeath it.</span><span class="mk">6</span>
+      <span class="code" data-code="scope" id="m6-7">Women owned land too: Aristotle says ‘almost two-fifths of the whole country is owned by women’, through inheritance and dowries;</span><span class="mk">7</span>
+      <span class="code" data-code="judgement" id="m6-8">the perioikoi owned their own land; and each king held, Xenophon says, ‘specified tracts of high quality land in many of the territories of the perioikoi’. Helots farmed the estates but did not own them.</span><span class="mk">8</span>
+      <p class="meta">Model written for this lesson, from the unit’s modelled response MR-6, corrected · about 190 words, about 9 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m6-1"><span class="mk">1</span><b>The system in one sentence</b><span class="tx">Kleroi, helots, mess dues: why owning land mattered — no introduction.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m6-2"><span class="mk">2</span><b>Named, dated, a claim</b><span class="tx">“Plutarch … claims”: the late tradition labelled. The yield belongs to each Spartiate lot.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m6-3"><span class="mk">3</span><b>Earlier evidence of inequality</b><span class="tx">NESA’s point, with a source: Tyrtaeus, through Aristotle (D26). “Probably” keeps the judgement modest.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m6-4"><span class="mk">4</span><b>A critic, dated</b><span class="tx">Aristotle’s own words (D54), with his date.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m6-5"><span class="mk">5</span><b>Wealth shows</b><span class="tx">NESA’s sample answer’s cavalry and chariot racing, with a named writer (E54; C52 and Cooley’s note on C54).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m6-6"><span class="mk">6</span><b>Ownership, not management</b><span class="tx">How land passed on: no sale, but gift and bequest (D54).</span></div>
+      <div class="anote reveal" data-code="scope" data-hl="#m6-7"><span class="mk">7</span><b>Beyond male Spartiates</b><span class="tx">Women, with Aristotle’s figure — what the 2023 markers rewarded.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m6-8"><span class="mk">8</span><b>Every kind of owner</b><span class="tx">The perioikoi and the kings’ estates (D9) — and the helots placed correctly, as workers, not owners.</span></div>
+      <div class="verdict reveal"><b>Written to the 5-mark criteria:</b> an informed outline of several key features, with named writers and Spartan terms.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(a) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">Some information · management, not ownership</span>
+      <p class="resp">Spartan land was farmed by the helots, who handed over half of what they grew. The Eurotas valley produced barley, olives and wine, which fed the messes.</p>
+      <p class="why">Who worked the land and what it grew: management. NESA asked for “land ownership rather than land management”.</p></div>
+    <div class="rung reveal"><span class="mark">An outline · male Spartiates only</span>
+      <p class="resp">Lycurgus gave every Spartiate an equal kleros. Later, rich Spartiates gained more land, and poorer ones lost their lots and their citizenship.</p>
+      <p class="why">Real features, but only male Spartiates — and the equal lots stated as fact. Better responses went “beyond just male Spartiates”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · the numbers and the rules</span>
+      <p class="resp">Lycurgus divided Sparta into 30,000 equal lots for the Spartiates, and no one could sell their land, give it away or leave it to anyone.</p>
+      <p class="why">The 30,000 were Plutarch’s lots for the perioikoi (9,000 for Spartiates), and Aristotle says owners could “give away or bequeath their estates”.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(a)" data-title="HSC 2023 Q11(a) — mark your own" data-kind="hsc">
+<div class="wrap l15-dense">
+  <p class="eyebrow">HSC 2023 Q11(a) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> wrote about ownership — who held land and how it passed on — not management</label></li>
+        <li><label><input type="checkbox"> explained the kleroi, with Plutarch’s equal lots labelled as his claim</label></li>
+        <li><label><input type="checkbox"> gave earlier evidence of inequality (Aristotle, Tyrtaeus, the rich)</label></li>
+        <li><label><input type="checkbox"> showed land as private property: gift, bequest, inheritance, dowries</label></li>
+        <li><label><input type="checkbox"> went beyond male Spartiates — women and the perioikoi — and added the kings’ special estates</label></li>
+        <li><label><input type="checkbox"> named at least two writers, with dates; numbers right (9,000 and 30,000)</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing feature in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-word test</div>
+        <p class="body">Circle every owner you named. If the only one is “Spartiates”, the answer has not yet gone beyond male Spartiates.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Explain why historians doubt that Spartan land was ever divided into equal lots.</b> (6 marks)</p>
+        <p class="body"><b>To what extent were Spartan citizens equal in this period?</b> (12 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Practice and review · 1 of 7 · sequencing · written for this lesson</p>
+  <h2>Put these in order, earliest first — and say what each shows about land</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Plutarch writes that Lycurgus made 9,000 Spartiate lots</span></li>
+    <li><span class="k">B</span><span>Tyrtaeus composes his <i>Eunomia</i>, which Aristotle later cites for calls to redistribute the land</span></li>
+    <li><span class="k">C</span><span>Aristotle writes that almost two-fifths of the land is owned by women</span></li>
+    <li><span class="k">D</span><span>Xenophon describes the kings’ estates in the territories of the perioikoi</span></li>
+    <li><span class="k">E</span><span>The Spartan cavalry at Leuctra rides horses bred by “the very richest”</span></li>
+    <li><span class="k">F</span><span>A dense network of small farmsteads and hamlets develops in Laconia</span></li>
+    <li><span class="k">G</span><span>King Cleomenes III reigns and reforms Sparta’s institutions</span></li>
+    <li><span class="k">H</span><span>Polybius lists an equal share of land as a feature of the Spartan system</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq l15-two">
+      <li class="sol reveal"><b>1 · B</b> (mid-7th century BC) — inequality already, if Aristotle reads him rightly (D26).</li>
+      <li class="sol reveal"><b>2 · F</b> (6th and 5th centuries BC) — farms of many sizes near Sparta (Cavanagh).</li>
+      <li class="sol reveal"><b>3 · D</b> (probably late 390s or 380s BC) — a special royal holding (D9).</li>
+      <li class="sol reveal"><b>4 · E</b> (371 BC) — great estates behind the horses (E54).</li>
+      <li class="sol reveal"><b>5 · C</b> (330s–320s BC) — land owned by women, and “fallen into the hands of a small minority” (D54).</li>
+      <li class="sol reveal"><b>6 · G</b> (235–222 BC) — a reforming king; reformers needed a Lycurgan precedent.</li>
+      <li class="sol reveal"><b>7 · H</b> (2nd century BC) — the equal-land ideal, written after the reforms (D56).</li>
+      <li class="sol reveal"><b>8 · A</b> (c. AD 100) — the fullest and latest account of equal lots (D57).</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Practice and review · 2 of 7 · true, false, justify · Chapter 11 Activity B, items 1–2, and items written for this lesson</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l15-two" data-answers>
+    <li><span class="n">1</span><span>Plutarch says Lycurgus divided the land of Sparta into 9,000 lots.</span>
+      <span class="sol reveal">True <span class="why">— “As for the land belonging to the city of Sparta itself, that he divided into 9000 allotments” (D57) — though he also reports that some say Lycurgus made only 6,000.</span></span></li>
+    <li><span class="n">2</span><span>Aristotle says land at Sparta was shared equally among the citizens.</span>
+      <span class="sol no reveal">False <span class="why">— “the land has fallen into the hands of a small minority” (<i>Politics</i> 1270a, D54).</span></span></li>
+    <li><span class="n">3</span><span>Aristotle says the lawgiver let Spartiates give away or bequeath their estates.</span>
+      <span class="sol reveal">True <span class="why">— “he allowed those who wanted to, the right to give away or bequeath their estates” (D54).</span></span></li>
+    <li><span class="n">4</span><span>Aristotle quotes Tyrtaeus’ own words demanding a new division of the land.</span>
+      <span class="sol no reveal">False <span class="why">— he paraphrases: the <i>Eunomia</i> is his evidence that some “thought the land should be redistributed” (D26); Cooley: Tyrtaeus “Apparently” mentioned it.</span></span></li>
+    <li><span class="n">5</span><span>Xenophon says the kings held land in the territories of the perioikoi.</span>
+      <span class="sol reveal">True <span class="why">— “specified tracts of high quality land in many of the territories of the perioikoi shall belong to him” (D9).</span></span></li>
+    <li><span class="n">6</span><span>The perioikoi owned no land of their own.</span>
+      <span class="sol no reveal">False <span class="why">— “Perioikoi also owned their own land” (Cooley, ‘Perioikoi: a note’).</span></span></li>
+    <li><span class="n">7</span><span>Intensive survey shows who owned each farm near Sparta.</span>
+      <span class="sol no reveal">False <span class="why">— it maps where people lived and worked from surface finds, not ownership; and its dates “can seldom be refined even as closely as to a generation or two” (Cavanagh).</span></span></li>
+    <li><span class="n">8</span><span>Most known monuments to four-horse chariot victors at Olympia between 560 and 364 BC were for Spartans.</span>
+      <span class="sol reveal">True <span class="why">— of 18, “of these 11 were for Spartans” (Cooley, citing Hodkinson; note on C54).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Practice and review · 3 of 7 · cloze · Chapter 11 Activity C, items 1–3; items 4–8 written for this lesson</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>9,000</span><span>barley</span><span>dishonourable</span><span>helots</span><span>kleros</span><span>perioikoi</span><span>survey</span><span>women</span></div>
+  <ol class="cloze" data-answers>
+    <li>A Spartan allotment of land was called a <span class="gap"><span class="sol reveal">kleros</span></span>.</li>
+    <li>Plutarch says each Spartiate lot produced 70 measures of <span class="gap"><span class="sol reveal">barley</span></span> a year.</li>
+    <li>Aristotle says almost two-fifths of the land was owned by <span class="gap"><span class="sol reveal">women</span></span>.</li>
+    <li>Plutarch says Lycurgus made <span class="gap"><span class="sol reveal">9,000</span></span> lots for the Spartiates.</li>
+    <li>Aristotle says the lawgiver made buying and selling an estate <span class="gap"><span class="sol reveal">dishonourable</span></span>.</li>
+    <li>Xenophon says each king held high-quality land in the territories of the <span class="gap"><span class="sol reveal">perioikoi</span></span>.</li>
+    <li>Walking fields in lines and recording surface finds is called intensive <span class="gap"><span class="sol reveal">survey</span></span>.</li>
+    <li>In Messenia, survey found larger villages that evidently housed the <span class="gap"><span class="sol reveal">helots</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Practice and review · 4 of 7 · write an analytical paragraph · Chapter 11 Activity D</p>
+  <h2>How useful is Plutarch’s account of equal lots for understanding Spartan land ownership?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what — classical land ownership, or later beliefs about Sparta?</span>
+    <span class="l">Evidence</span><span>Quote Plutarch’s figures and compare them with Aristotle or Tyrtaeus, with dates.</span>
+    <span class="l">Analyse</span><span>Explain what Plutarch’s system would mean for how land was held and passed on.</span>
+    <span class="l">Evaluate</span><span>Weigh his date, purpose and missing sources, and why historians doubt the lots describe classical Sparta.</span>
+    <span class="l">Resolve</span><span>Close with a refined judgement, not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Plutarch’s account is of little use as evidence for how land was owned in classical Sparta, but valuable as evidence of the Lycurgan ideal later Greeks believed in. Writing about AD 100, he says Lycurgus divided “the land belonging to the city of Sparta itself” into “9000 allotments, which would belong to the 9000 Spartiates”, each producing “an annual crop of 70 measures of barley, 12 measures for his wife”, and that a sturdy newborn was assigned “one of the nine thousand allotments of land”. On this picture land was a gift of the state, tied to citizenship and never bought, divided or accumulated. Yet Plutarch names no early source, reports rival figures, and, as Cooley says, aimed to draw moral examples, “not to provide historical analysis”. Earlier evidence describes the opposite: Aristotle, in the 330s–320s BC, says “the land has fallen into the hands of a small minority”, through gifts, bequests and dowries, and cites Tyrtaeus for calls to redistribute land in the 7th century BC; Plutarch’s figures may even echo the 3rd-century reforms of Agis IV and Cleomenes III. Plutarch therefore shows the equality Spartans were later believed to have had, while Aristotle remains the better guide to how land was actually owned.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 7 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent was land ownership in Sparta equal during this period? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — for example: equal in the ideal that later writers described, unequal in practice throughout the period.</li>
+    <li><b>The case for equality:</b> Plutarch’s 9,000 lots and lots given at birth (Cooley D57, D73); Polybius (D56) — and why these are late tradition; the classical homoioi (‘Peers’) ideal (Xenophon, D51) was about status and lifestyle, not equal land.</li>
+    <li><b>The case against:</b> Tyrtaeus’ <i>Eunomia</i> in Aristotle (D26); land “fallen into the hands of a small minority” and women’s two-fifths (D54); many sons, “many poor men” (D28); the rich at the messes, in the cavalry and in chariot racing (D61, E54, C52); the kings’ and the perioikoi’s land (D9).</li>
+    <li><b>Historiography and archaeology:</b> Cooley’s “no evidence” that holdings were ever “on a similar scale”; Hodkinson’s “more enduring privately-oriented, wealth-based society”; the survey’s modest and prosperous sites — and what survey cannot show.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Review (1) — Quick Check §2" data-kind="practice notes">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Practice and review · 6 of 7 · review · Chapter 11 Quick Check for §2, answers written for this lesson</p>
+  <h2>Review (1): Plutarch’s equal lots</h2>
+  <ol class="rq l15-two" data-answers>
+    <li>How many lots did Plutarch say were made for Spartiates, and how many for perioikoi?
+      <span class="sol reveal">9,000 for the Spartiates, from “the land belonging to the city of Sparta itself”, and 30,000 for the perioikoi (D57) — or, he reports, 6,000 at first, with 3,000 added by Polydorus.</span></li>
+    <li>What did each Spartiate lot produce?
+      <span class="sol reveal">70 measures (medimnoi) of barley a year, 12 for his wife, and other fresh produce.</span></li>
+    <li>What happened, in Plutarch’s account, when a healthy newborn was approved?
+      <span class="sol reveal">The elders of the tribe inspected it; if it “seemed sturdy and robust” it was reared and “assigned … one of the nine thousand allotments of land” (D73).</span></li>
+    <li>Why does Plutarch’s report of rival figures matter?
+      <span class="sol reveal">He was combining different traditions, not copying one reliable record, and names no early source; Cooley says he “assembles a narrative from divergent opinions”.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Review (2) — Quick Check §3" data-kind="practice notes">
+<div class="wrap prac l15-dense">
+  <p class="eyebrow">Practice and review · 7 of 7 · review · Chapter 11 Quick Check for §3, answers written for this lesson</p>
+  <h2>Review (2): testing the equal lots</h2>
+  <ol class="rq l15-two" data-answers start="5">
+    <li>According to Aristotle, how did land fall into few hands if selling it was dishonourable?
+      <span class="sol reveal">Owners could “give away or bequeath their estates”, and many women inherited or received large dowries, so “the end result was, inevitably, exactly the same” (D54).</span></li>
+    <li>What does Tyrtaeus’ <i>Eunomia</i> suggest about land in the 7th century BC?
+      <span class="sol reveal">Aristotle says it shows that after the Messenian War some “thought the land should be redistributed” (D26): holdings were already unequal — if his paraphrase is right.</span></li>
+    <li>Why might the reforms of Agis IV and Cleomenes III have shaped the equal-lots story?
+      <span class="sol reveal">In the 3rd century BC they tried to redistribute land and needed a Lycurgan precedent; Plutarch’s figures may echo their plans (Agis proposed 4,500 Spartiate lots and 15,000 perioikic).</span></li>
+    <li>Name two groups other than male Spartiates who owned land, and one special kind of Spartiate holding.
+      <span class="sol reveal">Women (almost two-fifths, Aristotle, D54) and the perioikoi (Cooley); the kings’ estates in perioikic territory (Xenophon, D9).</span></li>
+    <li>What can intensive survey tell us about land, and what can it not?
+      <span class="sol reveal">It shows where people lived and farmed and how that changed — modest and prosperous sites near Sparta, larger villages that evidently housed helots in Messenia — but not who owned the land, or the rules, and it dates sites only roughly.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Hinge: which writer?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1, 2 or 3 fingers</p>
+  <h2>Which writer says almost two-fifths of the land belonged to women?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Tyrtaeus, mid-7th century BC</span></li>
+    <li id="l15hq2"><span class="n">2</span><span>Aristotle, 330s–320s BC</span></li>
+    <li><span class="n">3</span><span>Plutarch, about AD 100</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l15hq2" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>2 — Aristotle</b>: “almost two-fifths of the whole country is owned by women” (<i>Politics</i> 1270a, Cooley D54). Tyrtaeus wrote about the helots’ dues; Plutarch about equal lots.</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>One sentence</h2>
+  <div class="card accent"><div class="k">Complete it</div><p class="lead nq">One reason historians doubt the equal lots is …</p></div>
+  <p class="body"><b>Next lesson:</b> the economy II — technology: what the craftsmen of Laconia made from bronze, lead and clay.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l15-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">Ancient sources</div>
+      <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Plutarch, <i>Life of Lykourgos</i> 8.1–4, 12.2 and 16.1 (D57, D63, D73, trans. B. Wilson) and <i>Lakonian Customs</i> 41 (D36); Aristotle, <i>Politics</i> 1270a15–29, 1270a29–b6, 1271a and 1306b22–1307a5 (D54, D28, D62, D26); Tyrtaeus frs 6–7 (A6, trans. K. Hughes); Xenophon, <i>Constitution of the Lakedaimonians</i> 5.3 and 15.3 (D61, D9, trans. B. Wilson) and <i>Hellenika</i> 6.4.11 (E54); Polybius, <i>Histories</i> 6.45 (D56); Dicaearchus in Athenaeus (E77, teacher notes). Plutarch, <i>Life of Agis</i> 8 is paraphrased (not in Cooley). Cooley’s introductions to wealth and property (D52–D59), women, the helots, the literary sources and Spartan property and wealth (E71–E76), ‘Perioikoi: a note’, his introduction to oliganthropia, and his notes on D54 and C54, with S. Hodkinson, <i>Property and Wealth in Classical Sparta</i> (2000), as cited there; W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, in Cooley.</p></div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images and diagrams</div>
+        <ul class="small"><li>Olive groves in the fertile Eurotas valley today — Clarke & Garner, Fig 6.2</li><li>A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground — Bradley, Fig 3.3</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the survey map (from Cavanagh, in Cooley; coastline from Natural Earth, public domain), the “Weighing the evidence” table and the ownership or management sort.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC question, marking criteria, sample answer and marking feedback: NSW Education Standards Authority, 2023 HSC Ancient History examination, marking guidelines and marking feedback. © NESA. NESA glossary of key words (“outline”). The models and the practice questions were written for this lesson; the HSC model is the unit’s MR-6, corrected.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

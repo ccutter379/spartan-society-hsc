@@ -1,0 +1,2220 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L17 · The Economy III: Perioikoi and Helots</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the economic roles of the perioikoi and helots, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+
+/* ---- Lesson 17 (the economy III: perioikoi and helots). Every class starts l17-. */
+/* the economy concept map (svg_l17map.svg) */
+.l17-map text{font-family:var(--ui); fill:var(--ink);}
+.l17-map .l17-node rect{stroke-width:4;}
+.l17-map .l17-spt rect{fill:var(--statement); stroke:var(--statement);}
+.l17-map .l17-spt text{fill:#FBF4F0;}
+.l17-map .l17-hel rect{fill:var(--w-evidence); stroke:var(--c-evidence);}
+.l17-map .l17-per rect{fill:var(--w-analysis); stroke:var(--c-analysis);}
+.l17-map .l17-nt{font-size:40px; font-weight:700;}
+.l17-map .l17-hel .l17-nt{fill:var(--c-evidence);} .l17-map .l17-per .l17-nt{fill:var(--c-analysis);}
+.l17-map .l17-nd{font-size:26px;}
+.l17-map .l17-ln{fill:none; stroke-width:6; stroke-linejoin:round;}
+.l17-map .l17-hel-ln{stroke:var(--c-evidence);}
+.l17-map .l17-per-ln{stroke:var(--c-analysis);}
+.l17-map .l17-spt-ln{stroke:var(--c-judgement);}
+.l17-map .l17-unk-ln{stroke:var(--slate);}
+.l17-map .l17-dash{stroke-dasharray:16 11;}
+.l17-map .l17-ah-hel{fill:var(--c-evidence);} .l17-map .l17-ah-per{fill:var(--c-analysis);}
+.l17-map .l17-ah-spt{fill:var(--c-judgement);} .l17-map .l17-ah-unk{fill:var(--slate);}
+.l17-map .l17-lt{font-size:28px; font-weight:700;}
+.l17-map .l17-hel-t{fill:var(--c-evidence);} .l17-map .l17-per-t{fill:var(--c-analysis);}
+.l17-map .l17-spt-t{fill:var(--c-judgement);} .l17-map .l17-unk-t{fill:var(--slate);}
+.l17-map .l17-ld{font-size:25px;}
+.l17-map .l17-key-ln{stroke:var(--ink); stroke-width:5;}
+.l17-map .l17-kt{font-size:25px; fill:var(--slate);}
+html:not(.read) .diagram.l17-full svg{max-height:calc(100vh - 285px);}
+@media (max-height:820px){ html:not(.read) .diagram.l17-full svg{max-height:calc(100vh - 218px);} }
+
+/* phones: the wide concept map scrolls sideways at a readable size */
+@media (max-width:700px){
+  html.read .diagram svg.l17-map{min-width:900px; max-height:none;}
+}
+
+/* the resources grid (Hurley et al., Source 3, rebuilt with its labels corrected) */
+.l17-res{display:grid; grid-template-columns:1.12fr 1fr .78fr; gap:clamp(8px,1vw,16px); align-items:stretch;}
+.l17-res .l17-g1{grid-column:1; grid-row:1;} .l17-res .l17-g2{grid-column:2; grid-row:1;}
+.l17-res .l17-g3{grid-column:2; grid-row:2;} .l17-res .l17-g4{grid-column:1; grid-row:2;}
+.l17-res .l17-g5{grid-column:3; grid-row:1 / span 2; margin:0;}
+.l17-res .l17-fix .body{font-size:calc(var(--fs-body)*.74); line-height:1.34; margin:0 0 .5em;}
+@media (max-width:900px){ .l17-res{grid-template-columns:1fr;}
+  .l17-res .l17-g1, .l17-res .l17-g2, .l17-res .l17-g3, .l17-res .l17-g4, .l17-res .l17-g5{grid-column:auto; grid-row:auto;} }
+.l17-res .l17-box{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:.5em .9em .55em; box-shadow:var(--shadow);}
+.l17-res .l17-box.hel{border-top-color:var(--c-evidence);}
+.l17-res .l17-box.per{border-top-color:var(--c-analysis);}
+.l17-res .l17-bh{display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:.2em .8em;}
+.l17-res .l17-bt{font-weight:700; font-size:calc(var(--fs-body)*.92); color:var(--deep);}
+.l17-res .l17-who{font-size:calc(var(--fs-body)*.7); font-weight:700; padding:.05em .6em; border-radius:999px;
+  border:1px solid currentColor; white-space:nowrap;}
+.l17-res .hel .l17-who{color:var(--c-evidence);} .l17-res .per .l17-who{color:var(--c-analysis);}
+.l17-res ul{margin:.25em 0 0; padding-left:1.05em; font-size:calc(var(--fs-body)*.74); line-height:1.34;}
+.l17-res li{margin:.12em 0;}
+.l17-res li b{color:var(--ink);}
+.l17-res .l17-src{color:var(--slate);}
+
+/* "who made it?" evidence table */
+.l17-ev td{vertical-align:top;}
+.l17-ev td:first-child{font-weight:700;}
+.l17-ev .l17-no{color:var(--c-judgement);}
+
+/* roles of the helots in service (keylist with sources) */
+.l17-roles .keylist .d{font-size:calc(var(--fs-body)*.82);}
+
+/* chain of produce */
+.l17-chain .p{font-size:calc(var(--fs-body)*.84);}
+.l17-chain .p small{display:block; font-weight:400; color:var(--slate); font-size:.8em;}
+
+/* dense source slides on short projectors */
+@media (max-height:820px){
+  html:not(.read) .l17-dense .src .quote.sm{font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+  html:not(.read) .l17-dense .src .quote{font-size:calc(var(--fs-body)*.92);}
+  html:not(.read) .l17-dense .note .body, html:not(.read) .l17-dense .card .body,
+  html:not(.read) .l17-dense .body{font-size:calc(var(--fs-body)*.84); line-height:1.34;}
+  html:not(.read) .l17-dense .qprompt{font-size:calc(var(--fs-body)*.86);}
+  html:not(.read) .l17-dense .keylist .d{font-size:calc(var(--fs-body)*.76); line-height:1.28;}
+  html:not(.read) .l17-dense .keylist li{font-size:calc(var(--fs-body)*.9);}
+  html:not(.read) .l17-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l17-dense .rq{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l17-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.3em .7em;}
+  html:not(.read) .l17-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+  html:not(.read) .l17-dense .figure img{max-height:30vh;}
+  html:not(.read) .l17-dense .l17-res ul, html:not(.read) .l17-dense .l17-res .l17-fix .body{font-size:calc(var(--fs-body)*.68); line-height:1.28;}
+  html:not(.read) .l17-dense .checks{gap:.3em;}
+  html:not(.read) .l17-dense .checks label{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+  html:not(.read) .l17-dense .card.quiet .small{font-size:calc(var(--fs-chrome)*.92); line-height:1.32;}
+  html:not(.read) .l17-dense .cornell .nts, html:not(.read) .l17-dense .cornell .cq{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l17-dense .pattern .p{font-size:calc(var(--fs-body)*.78); padding:.35em .7em;}
+}
+/* two-column practice lists on wide screens */
+.l17-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.4em; align-items:start;}
+.tf.l17-two{gap:.4em .7em;}
+@media (max-width:900px){ .l17-two{grid-template-columns:1fr;} }
+/* marks column that never wraps */
+.l17-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+/* a narrow figure beside text */
+.l17-fig .figure img{max-height:40vh;}
+@media (max-height:820px){ html:not(.read) .l17-fig .figure img{max-height:32vh;} }
+
+/* a small figure with its caption beside it */
+.l17-side .figure{display:grid; grid-template-columns:auto 1fr; gap:.9em; align-items:end;}
+.l17-side .figure img{height:20vh; width:auto; max-height:none;}
+@media (max-height:820px){ html:not(.read) .l17-side .figure img{height:16vh;} }
+@media (max-width:700px){ .l17-side .figure{grid-template-columns:1fr;} .l17-side .figure img{height:auto; width:60%;} }
+
+/* the annotated model on short projectors: a tighter margin so the last notes clear the colour legend */
+@media (max-height:820px){
+  html:not(.read) .l17-annot .margin{gap:5px;}
+  html:not(.read) .l17-annot .anote{padding:.24em .6em;}
+  html:not(.read) .l17-annot .verdict{font-size:calc(var(--fs-body)*.76); padding:.35em .7em;}
+  html:not(.read) .l17-annot .sharper{font-size:calc(var(--fs-body)*.7);}
+}
+
+/* Read mode (phones): the resources grid at a readable size */
+html.read .l17-res ul, html.read .l17-res .l17-fix .body{font-size:calc(var(--fs-body)*.9); line-height:1.4;}
+html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:normal;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 17" data-title="The economy III: perioikoi and helots" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.05fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 17</p>
+      <h1>The economy III: perioikoi and helots</h1>
+      <p class="lead">Spartiates were barred from making money. So who fed them, served them, armed them and traded for them — and how much do the sources really tell us?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/bradley-3-5-olive-trees-around-sparta.jpg" alt="Olive trees around Sparta today — a modern photograph"><figcaption>Olive trees around Sparta today — a modern photograph — <span class="cr">Bradley, Fig 3.5</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 17" data-title="Spaced review" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Spaced review · 6 minutes · from memory, no notes</p>
+  <h2>Five questions</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">Bronze is an alloy of which two metals?</span><span class="d">Lesson 16</span></li>
+      <li><span class="num">2</span><span class="t">Where was the Arkesilas cup found?</span><span class="d">Lesson 16</span></li>
+      <li><span class="num">3</span><span class="t">How many Spartiate allotments does Plutarch say Lycurgus created?</span><span class="d">Lesson 15</span></li>
+      <li><span class="num">4</span><span class="t">Which writer says seven helots served each Spartiate — and at which battle?</span><span class="d">Lesson 8</span></li>
+      <li><span class="num">5</span><span class="t">Who were the neodamodeis?</span><span class="d">Lesson 7</span></li>
+    </ol>
+    <div class="card quiet" data-veil="Show the answers">
+      <div class="k">Answers</div>
+      <ol class="body">
+        <li class="reveal">Copper and tin</li>
+        <li class="reveal">At Vulci, in Etruria (Italy)</li>
+        <li class="reveal">9,000 — and 30,000 for the perioikoi (Plutarch, <i>Lykourgos</i> 8, Cooley D57). He also reports a version with 6,000, and 3,000 added later. Cooley calls it a “late tradition”.</li>
+        <li class="reveal">Herodotus: at Plataea, 479 BC, “seven serving each man” (9.28, Cooley E84)</li>
+        <li class="reveal">Helots who had been set free, probably to serve in the army: free, but not full citizens</li>
+      </ol>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 17" data-title="Recall: Lessons 7 and 8" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Recall · 2 minutes · cold call — Lessons 7 and 8 in one slide</p>
+  <h2>Two groups you already know</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">The perioikoi (Lesson 7)</div>
+      <ul class="body">
+        <li class="reveal">‘those who live around (us)’, in at least 50 towns, almost all in Laconia</li>
+        <li class="reveal">personally free, with their own land — but no citizen rights at Sparta</li>
+        <li class="reveal">fought as hoplites alongside the Spartiates</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">The helots (Lesson 8)</div>
+      <ul class="body">
+        <li class="reveal">unfree Greeks, native to Laconia and Messenia</li>
+        <li class="reveal">tied to the land, with their own families</li>
+        <li class="reveal">most worked the land of individual Spartiates</li>
+      </ul>
+    </div>
+  </div>
+  <p class="cue reveal">Today’s question is different: not <i>who</i> they were, but what work each group did in the Lacedaemonian economy — and how we know.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 17" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse the economic roles of the perioikoi and helots</li>
+        <li>explain how a group’s economic position shaped its experience of Spartan society</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>explain two economic roles each for the perioikoi and the helots, with a named source for each</li>
+        <li>explain why the Spartiates depended on both groups</li>
+        <li>separate what a source says from what historians infer</li>
+        <li>write a 6-mark explanation of the economic roles of the perioikoi and helots</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">One phrase to get right</div>
+    <p class="body">An <b>economic role</b> is the work a group did and what it produced or supplied. It is not the same as how the group was treated or controlled (Lesson 12).</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 17" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L17 · Perioikoi and helots in the economy</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Sp. = Spartiates, per. = perioikoi, prob. = probably)</span></div></div>
+      <div class="row"><div class="cq">Who did the farming?</div><div class="nts">helots, on Spartiates’ estates …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: the helots’ produce · helot service · the perioikoi · who made the weapons? · how the parts fitted together.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 17" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The economy</th><th>Meaning</th></tr>
+      <tr><td>kleros (pl. kleroi)</td><td>a lot of land; at Sparta, the estate that supported a Spartiate and paid his mess contribution (whether lots were ever equal: Lesson 15)</td></tr>
+      <tr><td>rent in kind</td><td>a payment made in produce (grain, oil, wine), not in money</td></tr>
+      <tr><td>subsistence</td><td>producing just enough to live on</td></tr>
+      <tr><td>surplus</td><td>produce left over after needs are met</td></tr>
+      <tr><td>mess contribution</td><td>the food (and a little money) each Spartiate owed his syssition every month</td></tr>
+      <tr><td>absentee landlord</td><td>an owner who lives elsewhere and leaves others to work his land</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>People and places</th><th>Meaning</th></tr>
+      <tr><td>perioikoi</td><td>‘those who live around (us)’: free people of at least 50 towns, with no citizen rights at Sparta</td></tr>
+      <tr><td>helots</td><td>an unfree population of Laconia and Messenia, tied to the land</td></tr>
+      <tr><td>Lacedaemonians</td><td>the usual Greek word for ‘Spartans’; it can include the perioikoi</td></tr>
+      <tr><td>Gytheion</td><td>a perioikic harbour town: Sparta’s chief naval base</td></tr>
+      <tr><td>Boia</td><td>a perioikic harbour town in south-eastern Laconia, with traces of iron workings</td></tr>
+      <tr><td>murex</td><td>a sea snail that produced a prized red-purple dye</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lakonia, Lakedaimonians, Tyrtaios, Kinadon, Aiginetans). In your own writing use Laconia, Lacedaemonians, Tyrtaeus, Cinadon, Aeginetans. The syllabus spells the free neighbours <i>periokoi</i>; most books use <i>perioikoi</i>. Both are accepted.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The helots: food" data-title="Who fed the Spartiates?" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">1 · The helots: food · I do — follow the barley</p>
+  <h2>Who fed the Spartiates?</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, on the common messes</div>
+        <p class="quote sm">[2] They would meet in groups of about fifteen, give or take a few, and each mess member would contribute every month a bushel of barley-meal, eight gallons of wine, five pounds of cheese, and five half-pounds of figs, plus a very small sum of money for “extras”.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 12.2 · written c. AD 100 · trans. B. Wilson · Cooley D63</p>
+      </div>
+      <p class="qprompt reveal">Where did a Spartiate’s barley, wine, cheese and figs come from?</p>
+      <div class="pattern l17-chain reveal">
+        <span class="p e">Helots farm the estate<small>most of the farm work</small></span><span class="arr">→</span>
+        <span class="p">Rent in kind<small>to the master</small></span><span class="arr">→</span>
+        <span class="p a">Household + mess dues<small>every month</small></span><span class="arr">→</span>
+        <span class="p c">He stays a citizen<small>no dues, no rights</small></span>
+      </div>
+    </div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">Cooley, on the helots’ rent</div><p class="body">Helots supplied their master with “a ‘rent’ in kind, which the Spartiate would use to maintain his own household and to meet his contributions to the syssitia”.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Why it mattered</div><p class="body">Cooley calls the mess contribution “a kind of property qualification, since men who were not able to meet these contributions would lose their full citizen rights” (Lesson 7). Helot labour paid for citizenship itself.</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">The big picture</div><p class="body">The helots “did most of the agricultural work (in all ancient Greek states agriculture was the basis of economic activity), which gave the Spartiates the resources and free time to maintain their unique society” (Cooley).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The helots: food" data-title="Half — or a fixed rent?" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">1 · The helots: food · We do — two sources, two arrangements</p>
+  <h2>Half the harvest — or a fixed rent?</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Tyrtaeus, on the conquered Messenians</div>
+      <p class="quote sm">Like asses distressed by great burdens,<br>Bringing to their masters from grievous necessity<br><span class="code" data-code="evidence" data-letter="E">Half of all the produce the ploughland bears.</span></p>
+      <p class="prov">Tyrtaios, fragments 6 and 7 (part, quoted by Pausanias) · mid-7th century BC · probably a Spartan poet · trans. K. Hughes · Cooley A6</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · Plutarch</div>
+      <p class="quote sm">The helots worked the land for them, <span class="code" data-code="counter" data-letter="C">paying a rent established in advance</span>. Charging a higher rent was forbidden, so that the helots might make some profit and be happy to serve, and the masters would not be greedy for more.</p>
+      <p class="prov">Plutarch, <i>Lakonian Customs</i> 41 (<i>Moralia</i> 239E) · written c. AD 100 · trans. in Cooley D36</p>
+    </div>
+  </div>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <i class="reveal" data-paint="counter" hidden></i>
+  <div class="cols c3">
+    <div class="stack tight"><p class="qprompt reveal">In a bad year, who loses under each?</p>
+      <p class="body reveal">A half share: master and helot both lose. A fixed rent: the helot must still pay, so he carries the risk.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">In a good year, who gains?</p>
+      <p class="body reveal">Under a fixed rent the helot keeps the extra — Plutarch’s own reason: “so that the helots might make some profit”.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Which was the classical system?</p>
+      <p class="body reveal">We cannot be sure. Tyrtaeus describes the conquered Messenians in the 7th century BC; Plutarch writes centuries later. They may describe different times or places (Lesson 8).</p></div>
+  </div>
+  <div class="note reveal" data-code="counter"><p class="body"><b>Careful:</b> the first two answers are our reasoning about how each arrangement works, not something an ancient writer says. Label reasoning like this as your own inference.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The helots: food" data-title="Where helots lived and worked" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">1 · The helots: food · We do — evidence from the fields <span class="optional">If time</span></p>
+  <h2>Where helots lived and worked: the archaeology</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">Messenia: big villages</div><p class="body">Intensive survey found “larger village communities; these evidently housed the helots who worked the land for the Spartans” (W. G. Cavanagh, in Cooley).</p></div>
+    <div class="card accent reveal"><div class="k">A farm building</div><p class="body">“A large building excavated at Kopanaki in Messenia contained storage jars and loom weights and other finds indicating agricultural activity.” (Cavanagh)</p></div>
+    <div class="card accent reveal"><div class="k">Not all the same</div><p class="body">In Laconia the evidence “seems to point at communities around a large estate”, and “In some areas helots may have lived in scattered farmsteads.” (Cooley)</p></div>
+  </div>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="note reveal" data-code="evidence"><div class="k">Running the farms</div><p class="body">Most helots “were probably quite independent in organising their activities”, and “It is possible that helots could have private possessions (de facto, if not de iure)” (Cooley).</p></div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What can survey show — and what can it not?</p>
+      <p class="body reveal">Survey shows where people lived and worked; excavation (Kopanaki) shows what they stored. Neither shows who owned the land, or what rent was paid.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · The helots: food" data-title="Notes 1 — The helots’ produce" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>The helots’ produce</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L17 · Perioikoi and helots in the economy</b></span><span>1 · The helots’ produce</span></div>
+    <div class="row"><div class="cq">What is a kleros, and who worked it?</div>
+      <div class="nts reveal">The estate that supported a Spartiate <span class="sep">·</span> worked by <b>helots</b>, mostly for absentee masters <span class="sep">·</span> helots prob. organised their own work (Cooley)</div></div>
+    <div class="row"><div class="cq">What did helots hand over?</div>
+      <div class="nts reveal"><b>Rent in kind</b> <span class="sep">·</span> Tyrtaeus (mid-7th c. BC): “Half” (A6) <span class="sep">·</span> Plutarch (c. AD 100): a fixed rent, never raised, so helots “might make some profit” (D36)</div></div>
+    <div class="row"><div class="cq">Where did it go?</div>
+      <div class="nts reveal">Master’s <b>household</b> + monthly <b>mess contribution</b>: barley-meal, wine, cheese, figs (Plut. <i>Lyc.</i> 12.2, D63) → no dues = no citizenship</div></div>
+    <div class="row"><div class="cq">What does archaeology add?</div>
+      <div class="nts reveal">Messenia: villages that “evidently housed the helots” (Cavanagh) <span class="sep">·</span> Kopanaki: storage jars, loom weights <span class="sep">·</span> settlement varied</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The helots: service" data-title="Service as well as food" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">2 · The helots: service · I do — work beyond the fields</p>
+  <h2>Service as well as food</h2>
+  <div class="split l17-roles" style="--cols:1.25fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Herodotus, on the Greek line at Plataea, 479 BC</div>
+        <p class="quote sm">[28.2] Ten thousand Lakedaimonians held the right wing: of them, five thousand were Spartiates who were guarded by thirty-five thousand light-armed helots – seven serving each man. … [29.1] All these troops, except the seven men accompanying each Spartiate, were hoplites …</p>
+        <p class="prov">Herodotus, <i>Histories</i> 9.28.2, 9.29.1 (part) · written c. 450s–420s BC · trans. B. Wilson · Cooley E84</p>
+      </div>
+      <div class="src">
+        <div class="k">Source · Thucydides, on Sphacteria, 425 BC</div>
+        <p class="quote sm">[5] … the Lakedaimonians had made it known that anyone wishing to take across to the island flour, wine, cheese or any other food that would help those besieged, would be given a large amount of money, and any helots doing so were promised their freedom.</p>
+        <p class="prov">Thucydides, <i>History of the Peloponnesian War</i> 4.26.5 · an Athenian, c. 455–400 BC · trans. B. Wilson · Cooley E92</p>
+      </div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Household servants</span><span class="d">Where a Spartiate family lived on an estate, helots “were probably also employed as household servants” (Cooley).</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Attendants in war</span><span class="d">35,000 light-armed helots at Plataea, “seven serving each man” (E84).</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Supply in war</span><span class="d">Helots carried food to the Lacedaemonians trapped on Sphacteria — for the promise of freedom (E92).</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Plunder — and trade</span><span class="d">After Plataea, “The helots stole many items which they sold to the Aiginetans” (Herodotus 9.80, Cooley E61).</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Soldiers</span><span class="d">In 370 BC, offered freedom: “More than six thousand helots, it is said, enrolled themselves” (Xenophon, <i>Hell.</i> 6.5.29, Cooley E69).</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The helots: service" data-title="What helot labour bought" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">2 · The helots: service · We do — a philosopher’s view</p>
+  <h2>What helot labour bought</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Aristotle</div>
+        <p class="quote sm">That it necessary for a state that is to be well governed to provide leisure from drudgery is a matter of common agreement: but how this is to be provided is not as easy to ascertain. … It seems also, besides anything else, that it is very hard work to keep watch on them and in determining how to deal with them.</p>
+        <p class="prov">Aristotle, <i>Politics</i> 2.9, 1269a34–1269b12 (part), on the helots · written 330s–320s BC · trans. in Cooley D27</p>
+      </div>
+      <div class="note reveal" data-code="evidence"><div class="k">The Spartiate way of life</div><p class="body">Cooley: it offered “landed property, leisure (no need to work for a living)” — and “Spartiates were not allowed to engage in any form of trade”.</p></div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Whose leisure — and whose drudgery?</p>
+      <p class="body reveal">The Spartiates’ leisure; the helots’ drudgery. Aristotle uses the helots as his example of how hard such a system is to manage.</p>
+      <p class="qprompt reveal">What did the system cost?</p>
+      <p class="body reveal">Watching the helots was “very hard work”. Economic role and control were two sides of one system (Lesson 12).</p>
+      <div class="note reveal" data-code="counter"><p class="body">Aristotle wrote after Sparta had lost Messenia (370/69 BC), as a critic looking for causes of its decline.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The helots: service" data-title="Notes 2 — Helot service" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Helot service</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L17 · Perioikoi and helots in the economy</b></span><span>2 · Helot service</span></div>
+    <div class="row"><div class="cq">What work did helots do besides farming?</div>
+      <div class="nts reveal">Household servants (prob.) <span class="sep">·</span> <b>attendants</b>: 35,000 at Plataea, “seven serving each man” (Hdt 9.28, E84) <span class="sep">·</span> food carriers to Sphacteria, 425 BC, for freedom (Thuc. 4.26, E92) <span class="sep">·</span> soldiers, 370 BC (E69)</div></div>
+    <div class="row"><div class="cq">Did helots ever trade?</div>
+      <div class="nts reveal">After Plataea some plunder was sold to the Aeginetans (Hdt 9.80, E61) <span class="sep">·</span> helots may have had private possessions — “possible” (Cooley)</div></div>
+    <div class="row"><div class="cq">What did helot labour buy?</div>
+      <div class="nts reveal">Spartiate <b>leisure</b>: “no need to work for a living” (Cooley) <span class="sep">·</span> Aristotle: “leisure from drudgery” (D27)</div></div>
+    <div class="row"><div class="cq">At what cost?</div>
+      <div class="nts reveal">Keeping watch was “very hard work” (Aristotle) → control (Lesson 12)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The perioikoi" data-title="Goods, trade and soldiers" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">3 · The perioikoi · I do — Cooley’s note, hedge by hedge</p>
+  <h2>The perioikoi: goods, trade and soldiers</h2>
+  <div class="split l17-fig" style="--cols:1.5fr 1fr">
+    <div class="cols c2">
+      <div class="card accent reveal"><div class="k">Free to work</div><p class="body">“Perioikoi also owned their own land and were free to engage in any economic activity.” Some were wealthy: Cooley reads Xenophon’s “better sort of perioikoi” (E57) that way.</p></div>
+      <div class="card accent reveal"><div class="k">Harbours and trade</div><p class="body">All the important harbours, “especially Gytheion, which served as chief naval base, were perioikic communities, and we can assume that perioikoi were involved in overseas trade and fishery”.</p></div>
+      <div class="card accent reveal"><div class="k">Resources</div><p class="body">Laconia’s “iron and lead deposits as well as high quality building stone” were “presumably exploited by the perioikoi”.</p></div>
+      <div class="card accent reveal"><div class="k">Goods and soldiers</div><p class="body">Goods “produced locally, for example pottery and of course armour and weapons”. The perioikoi fought as hoplites and were “a first line of defence against invasion by land or sea”.</p></div>
+    </div>
+    <div class="stack tight">
+      <figure class="figure contain"><img src="images/clarke-6-3-gytheio.jpg" alt="Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base"><figcaption>Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base — <span class="cr">Clarke & Garner, Fig 6.3</span></figcaption></figure>
+      <div class="note reveal" data-code="judgement"><p class="body">Cooley: “The Spartiates clearly had to rely on a variety of goods and services provided by the perioikoi, although the mechanism of exchange between the two groups remains unknown.”</p></div>
+    </div>
+  </div>
+  <p class="small">Quotations from ‘Perioikoi: a note’, in M. G. L. Cooley (ed.), <i>Sparta</i> (2023), pp. 105–106. Notice his hedges: <b>probably</b>, <b>we can assume</b>, <b>presumably</b>.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The perioikoi" data-title="Resources — and who probably worked them" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">3 · The perioikoi · I do — a textbook diagram, rebuilt and corrected</p>
+  <h2>What the land provided — and who probably worked it</h2>
+  <div class="l17-res">
+    <div class="l17-box hel l17-g1 reveal">
+      <div class="l17-bh"><span class="l17-bt">Farmland and animals</span><span class="l17-who">helots on Spartiates’ estates; perioikoi on their own land</span></div>
+      <ul>
+        <li><b>Barley, figs, cheese:</b> in the mess dues (Plutarch, D63); rich men gave “wheat loaves” (Xenophon, D61)</li>
+        <li><b>Goats:</b> a she-goat was sacrificed before battle (Xenophon, D7)</li>
+        <li><b>Olives and vines:</b> Cavanagh lists “corn, oil, wine”, “in particular of Messenia”</li>
+        <li><b>Pigs:</b> each king took “one piglet from every litter of pigs” (Xenophon, D9). Black broth: no recipe in Cooley (D63)</li>
+        <li><b>Hunting:</b> a source of “many dietary supplements” (Xenophon, D61)</li>
+      </ul>
+    </div>
+    <div class="l17-box per l17-g2 reveal">
+      <div class="l17-bh"><span class="l17-bt">Metals and clay</span><span class="l17-who">presumably the perioikoi</span></div>
+      <ul>
+        <li><b>Iron:</b> at Boia “traces of iron workings are common” (Cavanagh)</li>
+        <li><b>Lead, copper:</b> deposits near Boia “which may well have been tapped in antiquity” (Cavanagh): copper <b>possibly local</b></li>
+        <li><b>Tin:</b> imported, for bronze</li>
+        <li><b>Clay:</b> pottery “produced locally” (Cooley)</li>
+      </ul>
+    </div>
+    <div class="l17-box per l17-g3 reveal">
+      <div class="l17-bh"><span class="l17-bt">Stone</span><span class="l17-who">presumably the perioikoi</span></div>
+      <ul>
+        <li><b>Building stone</b> of “high quality” (Cooley)</li>
+        <li><b>Marble:</b> “the local marble was hard to work” (S. Hodkinson, in Cooley)</li>
+        <li><b>A quarry rule</b> cut in the rock at Gytheion, 5th century: “Let no one dig anything out.” (K6)</li>
+      </ul>
+    </div>
+    <div class="l17-box per l17-g4 reveal">
+      <div class="l17-bh"><span class="l17-bt">Sea and forest</span><span class="l17-who">probably the perioikoi</span></div>
+      <ul>
+        <li><b>Fish, trade:</b> “we can assume that perioikoi were involved in overseas trade and fishery” (Cooley)</li>
+        <li><b>Purple dye:</b> “the area around Kythera was famous for producing the prized purple dye” (Cavanagh)</li>
+        <li><b>Timber:</b> “may well have been another significant economic resource” (Cavanagh)</li>
+      </ul>
+    </div>
+    <div class="note reveal l17-fix l17-g5" data-code="counter"><div class="k">Corrected from Hurley et al., Source 3</div><p class="body">Copper changed from imported to <b>possibly local</b>.</p><p class="body">Taken out, because Cooley does not support them: porphyry, marble quarried on Mount Taygetus, sheep, chickens for eggs, bees, and black broth made from pigs’ blood.</p><p class="body">Added: olives, timber, purple dye, fish.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The perioikoi" data-title="Land, wealth and soldiers">
+<div class="wrap l17-dense">
+  <p class="eyebrow">3 · The perioikoi · We do — partners or subjects? <span class="optional">If time</span></p>
+  <h2>Perioikic land, wealth and soldiers</h2>
+  <div class="cols c2">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source · Plutarch, on Lycurgus’ division of land</div>
+        <p class="quote sm">He divided the land of Lakonia into 30,000 allotments, and allocated them to the dwellers-round about, the perioikoi.</p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 8.3 · written c. AD 100 · trans. B. Wilson · Cooley D57</p>
+      </div>
+      <div class="note reveal" data-code="counter"><p class="body">This belongs to the equal-lots story that Cooley calls a “late tradition” (Lesson 15) — but Cooley’s own view is that the perioikoi “owned their own land”.</p></div>
+      <div class="src">
+        <div class="k">Source · Xenophon, on a king’s privileges</div>
+        <p class="quote sm">… specified tracts of high quality land in many of the territories of the perioikoi shall belong to him, sufficient to sustain the royal household adequately but without excessive wealth.</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 15.3 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D9</p>
+      </div>
+    </div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">Links with the kings</div><p class="body">“The wealthiest perioikoi probably had personal connections with leading Spartans, especially the royal families who owned perioikic land.” (Cooley)</p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">Soldiers</div><p class="body">At Plataea only 5,000 of the 10,000 Lacedaemonians were Spartiates (E84); the rest were presumably perioikoi. Later, “during the Peloponnesian War, they were incorporated within the Spartiate contingents” (Cooley).</p></div>
+      <p class="qprompt reveal">Partners or subjects?</p>
+      <p class="body reveal">Both: free landowners, probably traders, and fellow hoplites — yet with no citizen rights at Sparta and no foreign policy of their own.</p>
+      <div class="note reveal" data-code="keyterm"><p class="body">NESA’s 2024 marking guidelines (Question 11(d), “answers could include”): “There is limited evidence for the role of perioikoi in Spartan society, with few textual references.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The perioikoi" data-title="Notes 3 — The perioikoi" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>The perioikoi in the economy</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L17 · Perioikoi and helots in the economy</b></span><span>3 · The perioikoi</span></div>
+    <div class="row"><div class="cq">What economic freedom did they have?</div>
+      <div class="nts reveal">Own land <span class="sep">·</span> “free to engage in any economic activity” <span class="sep">·</span> some wealthy (E57) <span class="sep">·</span> kings held estates in perioikic territory (Xen., D9)</div></div>
+    <div class="row"><div class="cq">What work did they probably do?</div>
+      <div class="nts reveal">Harbours (<b>Gytheion</b> = chief naval base) <span class="sep">·</span> overseas trade + fishing (“we can assume”) <span class="sep">·</span> iron, lead, stone (“presumably”) <span class="sep">·</span> pottery, armour, weapons made locally <span class="sep">·</span> hoplites</div></div>
+    <div class="row"><div class="cq">Which resources?</div>
+      <div class="nts reveal">Iron (Boia) <span class="sep">·</span> lead <span class="sep">·</span> copper <b>possibly local</b>; tin imported <span class="sep">·</span> building stone; marble “hard to work” <span class="sep">·</span> purple dye (Kythera) <span class="sep">·</span> timber <span class="sep">·</span> fish</div></div>
+    <div class="row"><div class="cq">How were they paid?</div>
+      <div class="nts reveal">Unknown: “the mechanism of exchange between the two groups remains unknown” (Cooley)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Who made the weapons?" data-title="Cinadon’s iron-works" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">4 · Who made the weapons? · We do — read the source for what it does say</p>
+  <h2>The iron-works Cinadon showed, c. 399 BC</h2>
+  <div class="split l17-fig" style="--cols:1.45fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon on the conspiracy of Cinadon</div>
+        <p class="quote sm">[7] When the ephors asked, “Where did they say they would get the weapons from?”, the informer claimed that Kinadon said, “Those of us in the army obviously have our own weapons,” and that as for the masses, <span class="code" data-code="evidence" data-letter="E">he led him to iron-works and showed him many knives, many swords, many skewers, many axes and hatchets, many sickles</span>. And he said that Kinadon said that all those things that men use to <span class="code" data-code="analysis" data-letter="A">work on the land, on timber, and in quarries</span>, were similarly weapons, and that most other trades had tools that would serve as weapons, especially against unarmed opponents.</p>
+        <p class="prov">Xenophon, <i>Hellenika</i> 3.3.7 · Xenophon lived c. 430–c. 350 BC · trans. in Cooley E53a</p>
+      </div>
+      <div class="l17-side"><figure class="figure contain"><img src="images/clarke-6-5-spartan-helmet-bm.jpg" alt="A bronze helmet in the British Museum, identified by the textbook as Spartan"><figcaption>A bronze helmet in the British Museum, identified by the textbook as Spartan — <span class="cr">Clarke & Garner, Fig 6.5</span></figcaption></figure></div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">What does the source show?</p>
+      <p class="body reveal">Iron-works stocked with weapons and tools in c. 399 BC (Xenophon does not say where), and other trades with tools of their own.</p>
+      <p class="qprompt reveal" data-paint="analysis">What work do the tools point to?</p>
+      <p class="body reveal">Farming, timber and quarrying — the work of the land, the forests and the stone.</p>
+      <p class="qprompt reveal">Does it say who worked in the iron-works?</p>
+      <div class="note reveal" data-code="counter"><p class="body"><b>No.</b> Xenophon lists the tools, not the workers. And these are Cinadon’s words, reported by an informer to the ephors (Lesson 7).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Who made the weapons?" data-title="So who made them?" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">4 · Who made the weapons? · I do — weigh the evidence</p>
+  <h2>So who made Sparta’s weapons?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l17-ev">
+    <tr><th>Evidence</th><th>What it shows</th><th>What it does not show</th></tr>
+    <tr class="reveal"><td>Xenophon, <i>Constitution</i> 7.1–2 (D53)</td><td>Elsewhere men are farmers, ship’s masters, merchants and craftsmen, but Lycurgus “refused to allow free citizens to have anything to do with money making”</td><td class="l17-no">whether every Spartiate kept to the ideal</td></tr>
+    <tr class="reveal"><td>Xenophon, <i>Constitution</i> 11.2 (D88)</td><td>The ephors called up age groups “to serve as cavalry, hoplites, and then craftsmen”</td><td class="l17-no">who those craftsmen were</td></tr>
+    <tr class="reveal"><td>Herodotus 6.60 (D24)</td><td>“Their heralds and flute-players and meat-cooks adopt their father’s professions”</td><td class="l17-no">anything about weapons; the meat-cooks were probably officials at sacrifices (Cooley)</td></tr>
+    <tr class="reveal"><td>Pausanias 3.17.2 (K3)</td><td>“the Lakedaimonians made Athena’s temple and her statue both in bronze”, under Gitiadas, “a local architect”</td><td class="l17-no">that Spartiates did the work: ‘Lacedaemonians’ can include the perioikoi</td></tr>
+    <tr class="reveal"><td>Cooley, ‘Perioikoi: a note’</td><td>Armour and weapons were made locally; Spartiates relied on perioikic “goods and services”</td><td class="l17-no">a source that names perioikic smiths</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>Verdict:</b> probably the perioikoi. It is the best inference from the evidence, not a proven fact — so write “probably”.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Who made the weapons?" data-title="Hinge: which statement fits?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>Which statement fits the evidence best?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Xenophon proves that the perioikoi made Sparta’s weapons.</span></li>
+    <li><span class="n">2</span><span>Spartiates made their own weapons in Sparta’s iron-works.</span></li>
+    <li id="l17hq3"><span class="n">3</span><span>Weapons were made in Laconia, probably by perioikoi, though no source names the makers.</span></li>
+    <li><span class="n">4</span><span>Sparta imported all its weapons from other Greek cities.</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l17hq3" hidden></i>
+  <div class="note reveal" data-code="counter"><p class="body"><b>3.</b> Option 1 is the trap: it turns Cooley’s “probably” into a fact. Option 2 clashes with Xenophon’s ban on money-making; option 4 with Cooley’s “produced locally”.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Who made the weapons?" data-title="Notes 4 — Who made the weapons?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Who made the weapons?</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L17 · Perioikoi and helots in the economy</b></span><span>4 · Who made the weapons?</span></div>
+    <div class="row"><div class="cq">What did Cinadon show the informer?</div>
+      <div class="nts reveal">Iron-works: knives, swords, skewers, axes, hatchets, sickles (Xen. <i>Hell.</i> 3.3.7, E53a) <span class="sep">·</span> tools for land, timber, quarries <span class="sep">·</span> <b>no workers named</b></div></div>
+    <div class="row"><div class="cq">What were Spartiates forbidden?</div>
+      <div class="nts reveal">“money making” (Xen. <i>LP</i> 7.2, D53): not farmers, ship’s masters, merchants or craftsmen <span class="sep">·</span> but heralds, flute-players and meat-cooks inherited their posts (Hdt 6.60, D24) — official roles, not money-making</div></div>
+    <div class="row"><div class="cq">What suggests that perioikoi made most Laconian goods, and why is it not certain?</div>
+      <div class="nts reveal">Spartiates barred + Cooley: goods made locally, perioikoi “probably” did such work <span class="sep">·</span> but no source names the makers; the army’s craftsmen are unnamed (D88); ‘Lacedaemonians’ includes perioikoi (K3)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How the parts fitted together" data-title="The economy concept map (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · How the parts fitted together · We do — build it together</p>
+  <h2>The economy as a system</h2>
+  <figure class="diagram l17-full"><svg class="l17-map" viewBox="0 0 1700 940" role="img" aria-label="Concept map of the Spartan economy, drawn for this lesson. Three groups. The Spartiates, full citizens who owned land and were barred from money-making. The helots, unfree and tied to the land. The perioikoi, free, with their own towns and land. Arrow 1, from the helots to the Spartiates: food, a rent in kind, half of the produce according to Tyrtaeus or a fixed rent according to Plutarch, which kept the master’s household and paid his mess contribution. Arrow 2, from the helots to the Spartiates: service, as household servants and as attendants in war, seven to each Spartiate at Plataea according to Herodotus. Arrow 3, dashed because it is an inference, from the perioikoi to the Spartiates: goods and weapons, probably; Cooley notes that pottery, armour and weapons were produced locally. Arrow 4, both ways, between the perioikoi and the Spartiates: defence; they fought as hoplites together and the perioikoi were a first line of defence. Arrow 5, from the Spartiates to the helots: control, such as the krypteia, taught in Lesson 12. Arrow 6, dashed, from the Spartiates to the perioikoi: payment, but how the two groups exchanged goods remains unknown.">
+<defs><marker id="l17m-ah" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="l17-ah-hel" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l17m-ap" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="l17-ah-per" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l17m-as" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="l17-ah-spt" d="M0,0 L10,5 L0,10 z"/></marker><marker id="l17m-au" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path class="l17-ah-unk" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="l17-node l17-spt"><rect x="590" y="24" width="520" height="196" rx="18"/><text class="l17-nt" x="850" y="76" text-anchor="middle">Spartiates</text><text class="l17-nd" x="850" y="116" text-anchor="middle">full citizens: landowners, soldiers</text><text class="l17-nd" x="850" y="149" text-anchor="middle">barred from ‘money making’ (D53)</text><text class="l17-nd" x="850" y="182" text-anchor="middle">‘no need to work for a living’ (Cooley)</text></g>
+<g class="l17-node l17-hel"><rect x="24" y="700" width="560" height="216" rx="18"/><text class="l17-nt" x="304" y="752" text-anchor="middle">Helots</text><text class="l17-nd" x="304" y="792" text-anchor="middle">unfree, ‘tied to the land’</text><text class="l17-nd" x="304" y="825" text-anchor="middle">farmed Spartiates’ estates</text><text class="l17-nd" x="304" y="858" text-anchor="middle">fixed rent → ‘some profit’ (D36)</text></g>
+<g class="l17-node l17-per"><rect x="1116" y="700" width="560" height="216" rx="18"/><text class="l17-nt" x="1396" y="752" text-anchor="middle">Perioikoi</text><text class="l17-nd" x="1396" y="792" text-anchor="middle">free; own land, at least 50 towns</text><text class="l17-nd" x="1396" y="825" text-anchor="middle">trade, fishing (‘we can assume’)</text><text class="l17-nd" x="1396" y="858" text-anchor="middle">iron, lead, stone (‘presumably’)</text></g>
+<g class="linked l17-f-hel" id="l17m-1"><path class="l17-ln l17-hel-ln" d="M96,694 V112 H580" marker-end="url(#l17m-ah)"/><text class="l17-lt l17-hel-t" x="124" y="92" text-anchor="start">1 · FOOD: rent in kind</text><text class="l17-ld" x="124" y="152">‘Half’ (Tyrtaeus, A6) or a fixed</text><text class="l17-ld" x="124" y="182">rent (Plutarch, D36)</text><text class="l17-ld" x="124" y="212">→ household + mess dues</text></g>
+<g class="linked l17-f-hel" id="l17m-2"><path class="l17-ln l17-hel-ln" d="M250,694 V334 H660 V230" marker-end="url(#l17m-ah)"/><text class="l17-lt l17-hel-t" x="272" y="314" text-anchor="start">2 · SERVICE</text><text class="l17-ld" x="272" y="374">attendants in war: ‘seven</text><text class="l17-ld" x="272" y="404">serving each man’ (Herodotus, E84)</text><text class="l17-ld" x="272" y="434">household servants (probably)</text></g>
+<g class="linked l17-f-per" id="l17m-3"><path class="l17-ln l17-per-ln l17-dash" d="M1604,694 V112 H1120" marker-end="url(#l17m-ap)"/><text class="l17-lt l17-per-t" x="1576" y="92" text-anchor="end">3 · GOODS, WEAPONS — probably</text><text class="l17-ld" x="1576" y="152" text-anchor="end">pottery, armour and weapons</text><text class="l17-ld" x="1576" y="182" text-anchor="end">‘produced locally’</text><text class="l17-ld" x="1576" y="212" text-anchor="end">(Cooley’s note on the perioikoi)</text></g>
+<g class="linked l17-f-per" id="l17m-4"><path class="l17-ln l17-per-ln" d="M1450,694 V334 H1040 V230" marker-end="url(#l17m-ap)" marker-start="url(#l17m-ap)"/><text class="l17-lt l17-per-t" x="1428" y="314" text-anchor="end">4 · DEFENCE, both ways</text><text class="l17-ld" x="1428" y="374" text-anchor="end">hoplites together at Plataea:</text><text class="l17-ld" x="1428" y="404" text-anchor="end">5,000 of 10,000 were Spartiates (E84),</text><text class="l17-ld" x="1428" y="434" text-anchor="end">the rest presumably perioikoi;</text><text class="l17-ld" x="1428" y="464" text-anchor="end">‘a first line of defence’</text></g>
+<g class="linked l17-f-spt" id="l17m-5"><path class="l17-ln l17-spt-ln" d="M790,230 V548 H470 V694" marker-end="url(#l17m-as)"/><text class="l17-lt l17-spt-t" x="492" y="528" text-anchor="start">5 · CONTROL</text><text class="l17-ld" x="492" y="588">krypteia (Plutarch, D44)</text><text class="l17-ld" x="492" y="618">→ Lesson 12</text></g>
+<g class="linked l17-f-unk" id="l17m-6"><path class="l17-ln l17-unk-ln l17-dash" d="M910,230 V548 H1230 V694" marker-end="url(#l17m-au)"/><text class="l17-lt l17-unk-t" x="1208" y="528" text-anchor="end">6 · PAYMENT?</text><text class="l17-ld" x="1208" y="588" text-anchor="end">how goods were exchanged</text><text class="l17-ld" x="1208" y="618" text-anchor="end">‘remains unknown’ (Cooley)</text></g>
+<g class="l17-key"><line class="l17-ln l17-key-ln" x1="640" y1="836" x2="740" y2="836"/><text class="l17-kt" x="756" y="845">a source says so</text><line class="l17-ln l17-key-ln l17-dash" x1="640" y1="890" x2="740" y2="890"/><text class="l17-kt" x="756" y="899">an inference, or unknown</text></g>
+</svg>
+    <figcaption>Drawn for this lesson, with the evidence for each arrow. Solid: a source says so. Dashed: an inference, or unknown. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l17m-1" hidden></i>
+  <i class="reveal" data-also="#l17m-2" hidden></i>
+  <i class="reveal" data-also="#l17m-3" hidden></i>
+  <i class="reveal" data-also="#l17m-4" hidden></i>
+  <i class="reveal" data-also="#l17m-5" hidden></i>
+  <i class="reveal" data-also="#l17m-6" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How the parts fitted together" data-title="What if one part fails?" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">5 · How the parts fitted together · Think–pair–share</p>
+  <h2>What happens to the whole system if one group fails?</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">c. 464 BC: the helots revolt</div><p class="body">After an earthquake, the helots, “Together with the neighbouring perioikoi of Thouria and Aithaia, they seceded to Mount Ithome” (Thucydides 1.101.2, Cooley E62). Sparta had to call on its allies, including Athens.</p></div>
+    <div class="card accent reveal"><div class="k">370/69 BC: Messenia lost</div><p class="body">The Messenian helots’ “successful bid for freedom in 370/69 BC reduced Sparta to a middling power of small significance” (Cooley).</p></div>
+    <div class="card accent reveal"><div class="k">370 BC: the system leans on them</div><p class="body">With a Theban army in Laconia, the Spartiates offered helots freedom to fight, and “More than six thousand helots, it is said, enrolled themselves” (E69). Some perioikoi urged the Thebans on; others defended Laconia (Lesson 7).</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>So what?</b> Sparta’s citizens depended for food, service, goods and soldiers on two groups without citizen rights. When the helots of Messenia were lost, Sparta’s power shrank.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How the parts fitted together" data-title="Notes 5 — How the parts fitted together" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>How the parts fitted together</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L17 · Perioikoi and helots in the economy</b></span><span>5 · The system</span></div>
+    <div class="row"><div class="cq">Helots → Spartiates</div>
+      <div class="nts reveal"><b>Food</b>: rent in kind, half (A6) or fixed (D36) <span class="sep">·</span> <b>service</b>: war (E84, E92), prob. households</div></div>
+    <div class="row"><div class="cq">Perioikoi ↔ Spartiates</div>
+      <div class="nts reveal"><b>Goods + weapons — prob.</b> <span class="sep">·</span> trade through the harbours (“we can assume”) <span class="sep">·</span> <b>defence</b>: hoplites together <span class="sep">·</span> payment: “remains unknown”</div></div>
+    <div class="row"><div class="cq">Spartiates → helots</div>
+      <div class="nts reveal"><b>Control</b> (krypteia, D44 → Lesson 12) <span class="sep">·</span> Spartiates free for politics + war</div></div>
+    <div class="row"><div class="cq">How did each role shape a group’s experience?</div>
+      <div class="nts reveal"><b>Helots</b>: tied to the land, but prob. ran their own farms; a fixed rent left “some profit” (D36); freedom rare, offered for service (E92, E69) <span class="sep">·</span> <b>Perioikoi</b>: free, own land, some wealthy (E57) — but no citizen rights, Sparta’s command in war</div></div>
+    <div class="row"><div class="cq">What if a part failed?</div>
+      <div class="nts reveal">c. 464 BC: helots + Thouria, Aithaia → Ithome (E62) <span class="sep">·</span> 370/69 BC: Messenia freed → “a middling power” (Cooley)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · How the parts fitted together" data-title="Summary" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What did the helots supply, and where did it go?</li>
+          <li>What work did the perioikoi probably do — and what is uncertain?</li>
+          <li>Why did the Spartiates depend on both groups?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">The helots did most of Sparta’s farming and handed over part of each harvest, half in Tyrtaeus and a fixed rent in Plutarch, which fed their masters’ households and paid the mess contributions on which citizenship depended; they also served in war, and probably in households. The perioikoi, free men with their own towns and land, probably handled the trade, fishing, mining and crafts that Spartiates were barred from, including, Cooley infers, the making of armour and weapons, though how they were paid is unknown. Together the two groups freed the Spartiates for politics and war, so Sparta’s power rested on people without citizen rights, as the revolt of c. 464 BC and the loss of Messenia in 370/69 BC showed.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · The helots’ produce: rent, mess dues, archaeology</label></li>
+        <li><label><input type="checkbox"> 2 · Helot service: households, war, supply</label></li>
+        <li><label><input type="checkbox"> 3 · The perioikoi: land, trade, resources, goods</label></li>
+        <li><label><input type="checkbox"> 4 · Who made the weapons — probably</label></li>
+        <li><label><input type="checkbox"> 5 · The system, and what happened when it failed</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering an ‘explain’ question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>An ‘explain’ question on today’s lesson</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 6 marks ≈ 11 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">No past paper fits</div><p class="body">No HSC question from 2019 to 2025 has asked about the economic roles of the perioikoi and helots. The closest are 2019 Q10(a), the roles of the helots (Lesson 8), and 2020 Q11(c), the whole economy (Lesson 18); the 2024 Q11(d) guidelines on social structure also mention the perioikoi’s resources.</p></div>
+  </div>
+  <p class="lead">So today’s question is HSC-style, written for this lesson: take it apart, write for 11 minutes, then check it against NESA’s criteria for a 6-mark part and an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC-style question" data-title="HSC-style question — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style, written for this lesson · Section II · 6 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> the <span class="code" data-code="keyterm" data-letter="K">economic roles</span> of the <span class="code" data-code="keyterm" data-letter="K">perioikoi and helots</span> in <span class="code" data-code="scope" data-letter="S">Sparta during this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Take it apart together, write it yourself, then compare with an annotated model.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · We do — deconstruct it with the NESA glossary</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">“Relate cause and effect … Provide why and/or how.” Each role → what it did for Sparta: fed the messes, freed the citizens, supplied the army.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Economic roles · perioikoi <i>and</i> helots</div><p class="body">The work each group did and what it supplied — for both groups. Not how they were treated or controlled: that is a different question.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In Sparta during this period</div><p class="body">From the conquered Messenians of Tyrtaeus’ poems to Leuctra in 371 BC: use evidence from across the period.</p></div>
+    <div class="card accent reveal"><div class="k">6 marks</div><p class="body">About 11 minutes · a judgement first · two roles for each group, each with a named source · keep Cooley’s “probably” · about 150–210 words.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC-style question" data-title="HSC-style question — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · You do · 11 minutes · press K for the timer</p>
+  <h2>Explain the economic roles of the perioikoi and helots in Sparta during this period. <span class="small">(6 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence about <i>both</i> groups</li>
+        <li>helots: food (rent in kind) and service, with sources</li>
+        <li>perioikoi: trade, resources, goods, soldiers — with “probably” where Cooley has it</li>
+        <li>the effect: why the Spartiates depended on both</li>
+        <li>about 150–210 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “The helots and perioikoi did most of the work that kept Sparta’s economy running, which …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — the criteria" data-kind="hsc">
+<div class="wrap l17-dense">
+  <p class="eyebrow">HSC-style question · how a 6-mark ‘explain’ question is marked</p>
+  <h2>What the markers reward</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact l17-marks">
+      <tr><th>Marks</th><th>NESA’s criteria for a 6-mark part (b), 2025</th></tr>
+      <tr><td class="m">6</td><td>Provides an informed explanation relevant to the question · Communicates effectively using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5</td><td>Provides an explanation relevant to the question · Communicates using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4</td><td>Provides some explanation relevant to the question · Communicates using some historical terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Provides some information relevant to the question · May use some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes a general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">On the economy (2020), in better responses students were able to</div>
+        <p class="fb"><span class="q">make reference to specific evidence from named written sources and clearly identify archaeological evidence to show features of the economy (c)</span><span class="q">provide a broad range of examples regarding the Spartan economy and show the relationship between these (c)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Section II in 2025: students should</div>
+        <p class="fb"><span class="q">support their points with specific written and/or archaeological sources to demonstrate an understanding of the sources of evidence for each society</span></p></div>
+    </div>
+  </div>
+  <p class="small">Sources: NESA, 2025 HSC Ancient History Marking Guidelines, Section II part (b) (the criteria for 2025 Q11(b), “Explain how the Spartans controlled the helots”); NESA marking feedback for 2020 Question 11 (part (c), the economy question taught in Lesson 18) and 2025 Section II (general feedback). Quoted exactly; applied here to a question written for this lesson.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — a model, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · Check your answer — a model written for this lesson</p>
+  <h2>Judgement, the helots, the perioikoi, the limits</h2>
+  <div class="annot wide l17-annot" data-veil="Write first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m17-1">The helots and perioikoi did most of the work that kept Sparta’s economy running, which freed the Spartiates, who were barred from making money, to be full-time citizens and soldiers.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m17-2">The helots farmed Spartiate estates and handed over part of each harvest: Tyrtaeus has the conquered Messenians bring their masters ‘Half of all the produce the ploughland bears’, while Plutarch, writing about AD 100, describes ‘a rent established in advance’.</span><span class="mk">2</span>
+      <span class="code" data-code="analysis" id="m17-3">This rent in kind fed each Spartiate’s household and paid his monthly mess contribution, so helot labour paid for citizenship itself.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m17-4">Helots also served in war: at Plataea in 479 BC, Herodotus says, light-armed helots attended the Spartiates, ‘seven serving each man’.</span><span class="mk">4</span>
+      <span class="code" data-code="keyterm" id="m17-5">The perioikoi, free men with their own towns and land, probably did the work Spartiates could not: Cooley suggests they traded overseas and fished from harbour towns such as Gytheion, and presumably exploited Laconia’s iron, lead and building stone.</span><span class="mk">5</span>
+      <span class="code" data-code="counter" id="m17-6">Cinadon could show an informer iron-works full of ‘many knives, many swords’, but Xenophon never says who worked there, so perioikic weapon-makers are an inference, not a fact.</span><span class="mk">6</span>
+      <span class="code" data-code="judgement" id="m17-7">Together, the two groups supplied the food, service, goods and soldiers of a citizen body that did not work for a living, though how the Spartiates paid the perioikoi ‘remains unknown’.</span><span class="mk">7</span>
+      <p class="meta">Model written for this lesson · 210 words, about 11 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m17-1"><span class="mk">1</span><b>Answer first</b><span class="tx nq">Both groups, and the effect (“which freed”) — the line the answer will follow.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m17-2"><span class="mk">2</span><b>Two sources, two dates</b><span class="tx">The earliest witness and a much later one, quoted and dated — without pretending they agree.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m17-3"><span class="mk">3</span><b>The explain move</b><span class="tx">Rent → household and mess dues → citizenship. Cause and effect.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m17-4"><span class="mk">4</span><b>A second helot role</b><span class="tx">Service, with a date, a number and a named writer.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m17-5"><span class="mk">5</span><b>The perioikoi, hedged</b><span class="tx">Cooley’s “probably” and “presumably” kept, and a named place (Gytheion).</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m17-6"><span class="mk">6</span><b>Source v. inference</b><span class="tx">What Xenophon says, and what he does not. This is the “informed” touch.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m17-7"><span class="mk">7</span><b>Close the loop</b><span class="tx">Back to the opening judgement — and honest about what we do not know.</span></div>
+      <div class="verdict reveal"><b>Written to the 6-mark criteria:</b> both groups explained, sources named, hedges kept.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> add archaeology — Messenian villages that ‘evidently housed the helots’ (Cavanagh).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC-style question · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · a list</span>
+      <p class="resp">The helots were farmers and the perioikoi were traders and craftsmen. Both groups fought in the army. The Spartiates did not have to work.</p>
+      <p class="why">Accurate, but nothing explains why the roles mattered, and no source is named: “some information”, not an explanation.</p></div>
+    <div class="rung reveal"><span class="mark">4 marks · one group only</span>
+      <p class="resp">The helots farmed the Spartiates’ land and paid a fixed rent, as Plutarch says, which paid each man’s mess contribution, so …</p>
+      <p class="why">Some real explanation of the helots — but the perioikoi, half the question, are missing.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · certainty the sources don’t give</span>
+      <p class="resp">The perioikoi made all of Sparta’s weapons, as Xenophon proves with Cinadon’s iron-works, and every helot paid exactly half his harvest.</p>
+      <p class="why">Two hedges lost. Xenophon never says who worked the iron-works; “half” is Tyrtaeus on the conquered Messenians, and Plutarch gives a fixed rent.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC-style question" data-title="HSC-style question — mark your own" data-kind="hsc">
+<div class="wrap l17-dense">
+  <p class="eyebrow">HSC-style question · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement about both groups</label></li>
+        <li><label><input type="checkbox"> explained the helots’ rent in kind and where it went (household, mess dues)</label></li>
+        <li><label><input type="checkbox"> gave a second helot role (service in war or households) with a source</label></li>
+        <li><label><input type="checkbox"> explained at least two perioikic roles (trade and harbours, resources, goods, soldiers)</label></li>
+        <li><label><input type="checkbox"> kept “probably” for the perioikoi’s work and the weapons</label></li>
+        <li><label><input type="checkbox"> named at least three writers or scholars, not “the sources”</label></li>
+        <li><label><input type="checkbox"> wrote about roles, not about treatment or control</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-word test</div>
+        <p class="body">Circle every “so”, “which meant” and “because”. An explanation needs at least three.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the economic role of the helots in this period.</b> (4 marks)</p>
+        <p class="body"><b>To what extent were the perioikoi partners rather than subjects of the Spartiates?</b> (8 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l17-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · written for this lesson</p>
+  <h2>Put these in order, earliest first — and say what each shows about an economic role</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Cinadon shows an informer iron-works full of knives, swords and sickles</span></li>
+    <li><span class="k">B</span><span>Plutarch describes a fixed rent that could not be raised</span></li>
+    <li><span class="k">C</span><span>Helots are promised freedom for carrying food to the Lacedaemonians on Sphacteria</span></li>
+    <li><span class="k">D</span><span>Tyrtaeus describes the conquered Messenians handing over half their produce</span></li>
+    <li><span class="k">E</span><span>Many of the “better sort of perioikoi” volunteer for a campaign</span></li>
+    <li><span class="k">F</span><span>35,000 light-armed helots attend 5,000 Spartiates at Plataea</span></li>
+    <li><span class="k">G</span><span>The Messenian helots win their freedom</span></li>
+    <li><span class="k">H</span><span>Helots and the perioikoi of Thouria and Aithaia revolt after an earthquake</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq l17-two">
+      <li class="sol reveal"><b>1 · D</b> (mid-7th century BC) — Tyrtaeus frs 6–7 (A6): produce owed to masters.</li>
+      <li class="sol reveal"><b>2 · F</b> (479 BC) — Herodotus 9.28 (E84): helots as attendants in war.</li>
+      <li class="sol reveal"><b>3 · H</b> (c. 464 BC) — Thucydides 1.101 (E62): the system breaks down.</li>
+      <li class="sol reveal"><b>4 · C</b> (425 BC) — Thucydides 4.26 (E92): helot labour paid for with freedom.</li>
+      <li class="sol reveal"><b>5 · A</b> (c. 399 BC) — Xenophon, <i>Hellenika</i> 3.3.7 (E53a): weapons and tools at Sparta, makers unnamed.</li>
+      <li class="sol reveal"><b>6 · E</b> (381 BC) — <i>Hellenika</i> 5.3.9 (E57): wealthy perioikoi as soldiers.</li>
+      <li class="sol reveal"><b>7 · G</b> (370/69 BC) — Cooley: it “reduced Sparta to a middling power”.</li>
+      <li class="sol reveal"><b>8 · B</b> (c. AD 100) — Plutarch, <i>Lakonian Customs</i> 41 (D36): a later picture of the helots’ rent.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l17-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify · written for this lesson</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l17-two" data-answers>
+    <li><span class="n">1</span><span>Tyrtaeus says the conquered Messenians handed over half of their produce.</span>
+      <span class="sol reveal">True <span class="why">— “Half of all the produce the ploughland bears” (A6).</span></span></li>
+    <li><span class="n">2</span><span>Plutarch says a master could raise the helots’ rent after a good harvest.</span>
+      <span class="sol no reveal">False <span class="why">— “Charging a higher rent was forbidden” (D36).</span></span></li>
+    <li><span class="n">3</span><span>Xenophon says who worked in the iron-works Cinadon showed the informer.</span>
+      <span class="sol no reveal">False <span class="why">— he lists the tools, not the workers (E53a); perioikoi probably did such work (Cooley).</span></span></li>
+    <li><span class="n">4</span><span>Xenophon says Spartiates could work as merchants.</span>
+      <span class="sol no reveal">False <span class="why">— Lycurgus “refused to allow free citizens to have anything to do with money making” (D53).</span></span></li>
+    <li><span class="n">5</span><span>Cooley says the perioikoi owned their own land.</span>
+      <span class="sol reveal">True <span class="why">— “Perioikoi also owned their own land” (‘Perioikoi: a note’).</span></span></li>
+    <li><span class="n">6</span><span>At Plataea every Lacedaemonian on the right wing was a Spartiate.</span>
+      <span class="sol no reveal">False <span class="why">— 5,000 of the 10,000 were Spartiates (E84); the rest were presumably perioikoi.</span></span></li>
+    <li><span class="n">7</span><span>Cooley says we know how the Spartiates paid the perioikoi for their goods.</span>
+      <span class="sol no reveal">False <span class="why">— “the mechanism of exchange between the two groups remains unknown”.</span></span></li>
+    <li><span class="n">8</span><span>Survey in Messenia found large villages that housed helots.</span>
+      <span class="sol reveal">True, as Cavanagh reads it <span class="why">— villages that “evidently housed the helots who worked the land for the Spartans”; Cooley is more cautious: the evidence “seems to suggest” large villages.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze · written for this lesson</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>fixed</span><span>Gytheion</span><span>half</span><span>iron</span><span>mess</span><span>money</span><span>murex</span><span>seven</span></div>
+  <ol class="cloze" data-answers>
+    <li>Tyrtaeus says the conquered Messenians handed over <span class="gap"><span class="sol reveal">half</span></span> of their produce.</li>
+    <li>Plutarch describes a <span class="gap"><span class="sol reveal">fixed</span></span> rent instead, set in advance.</li>
+    <li>A Spartiate paid his monthly contribution to his <span class="gap"><span class="sol reveal">mess</span></span> from the produce of his land.</li>
+    <li>At Plataea, Herodotus says <span class="gap"><span class="sol reveal">seven</span></span> helots served each Spartiate.</li>
+    <li>Laconia’s chief naval base, a perioikic harbour, was <span class="gap"><span class="sol reveal">Gytheion</span></span>.</li>
+    <li>Cinadon showed the informer <span class="gap"><span class="sol reveal">iron</span></span>-works full of knives, swords and sickles.</li>
+    <li>The prized purple dye came from the <span class="gap"><span class="sol reveal">murex</span></span>, a sea snail.</li>
+    <li>Xenophon says Lycurgus barred free citizens from <span class="gap"><span class="sol reveal">money</span></span> making.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l17-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph · written for this lesson</p>
+  <h2>How useful is Xenophon’s account of Cinadon’s iron-works for understanding the economic role of the perioikoi?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: useful for what, and not for what?</span>
+    <span class="l">Evidence</span><span>Quote the iron-works and the tools, with provenance; set Xenophon’s ban on money-making beside it.</span>
+    <span class="l">Analyse</span><span>Explain what the passage shows about crafts and trades at Sparta c. 399 BC.</span>
+    <span class="l">Evaluate</span><span>Whose words are these? What does the passage not say? What does Cooley infer, and how does he hedge?</span>
+    <span class="l">Resolve</span><span>Close with a refined judgement about the perioikoi — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Xenophon’s account is useful evidence that weapons and tools were made in Laconia, but only indirect evidence that the perioikoi made them. The informer says Cinadon ‘led him to iron-works and showed him many knives, many swords, many skewers, many axes and hatchets, many sickles’, and claimed that the tools men use to ‘work on the land, on timber, and in quarries’ could serve as weapons. This shows a working iron industry and a range of trades in Laconia around 399 BC, in a society where, Xenophon says elsewhere, Lycurgus ‘refused to allow free citizens to have anything to do with money making’, so the workers were presumably not Spartiates. Yet Xenophon never names them, and the words are a conspirator’s, reported by an informer to the ephors; Cooley can say only that the perioikoi ‘probably handled most of the economic activities that were prohibited to Lakedaimonians’. The passage therefore supports the view that non-citizens supplied Sparta’s weapons, but it leaves the perioikoi’s part as a strong inference rather than a fact.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent did the Spartan economy depend on the perioikoi and helots in this period? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — for example: heavily, because Spartiates were barred from money-making — though much of the perioikoi’s part rests on inference.</li>
+    <li><b>The helots:</b> rent in kind (Tyrtaeus A6; Plutarch D36) → household and mess dues (Plutarch D63) → citizenship; service in war (Herodotus E84; Thucydides E92); the Messenian survey (Cavanagh).</li>
+    <li><b>The perioikoi:</b> land, harbours, trade, resources, goods (Cooley’s note); the iron-works (E53a) and who probably worked them; fellow hoplites (E84).</li>
+    <li><b>Evaluate and resolve:</b> how much is inference (“probably”, “presumably”; the exchange “remains unknown”); what the revolt of c. 464 BC (E62) and the loss of Messenia in 370/69 BC show about dependence.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Review — the lesson" data-kind="practice notes">
+<div class="wrap prac l17-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · short review · written for this lesson</p>
+  <h2>Review: perioikoi and helots in the economy</h2>
+  <ol class="rq l17-two" data-answers>
+    <li>What did the helots’ rent in kind pay for?
+      <span class="sol reveal">The master’s household and his monthly contribution to his mess — and so his citizenship.</span></li>
+    <li>Name the four foods in Plutarch’s list of each man’s monthly mess contribution.
+      <span class="sol reveal">Barley-meal, wine, cheese and figs (plus a little money), Plutarch, <i>Lykourgos</i> 12.2 (D63).</span></li>
+    <li>Why might a helot prefer a fixed rent in a good year?
+      <span class="sol reveal">He kept whatever was left over; Plutarch says the rent was fixed “so that the helots might make some profit”.</span></li>
+    <li>Give two kinds of service helots gave in war, with evidence.
+      <span class="sol reveal">Any two: attendants at Plataea (E84); carrying food to Sphacteria (E92); collecting plunder (E61); soldiers in 370 BC (E69).</span></li>
+    <li>Which three hedges does Cooley use about the perioikoi’s economic work?
+      <span class="sol reveal">“probably” (most economic activities), “we can assume” (trade and fishing), “presumably” (iron, lead and stone).</span></li>
+    <li>Why is Xenophon’s account of the iron-works not proof that the perioikoi made Sparta’s weapons?
+      <span class="sol reveal">It never names the workers, and the words are Cinadon’s, reported second-hand by an informer.</span></li>
+    <li>Correct the textbook diagram that says both copper and tin were imported.
+      <span class="sol reveal">Tin was imported; copper was possibly local, from deposits near Boia that Cavanagh says “may well have been tapped in antiquity”.</span></li>
+    <li>What does Cooley say we do not know about the Spartiates and the perioikoi?
+      <span class="sol reveal">How goods passed between them: “the mechanism of exchange between the two groups remains unknown”.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · 6 minutes · before you leave</p>
+  <h2>Two answers</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead nq">“Without the helots, Spartiates could not …”</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One economic role of the perioikoi — with “probably” where it belongs.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> the economy IV — exchange: iron bars, the war fund and trade.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l17-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">Ancient sources and scholars</div>
+      <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Tyrtaeus frs 6–7 (A6, trans. K. Hughes); Herodotus 6.60, 9.28–29 and 9.80 (D24, E84, E61, trans. B. Wilson); Thucydides 1.101.2 and 4.26.5 (E62, E92, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 5.3, 7, 11.2 and 15.3 (D61, D53, D88, D9, trans. B. Wilson) and <i>Hellenika</i> 3.3.7, 5.3.9 and 6.5.29 (E53a, E57, E69); Aristotle, <i>Politics</i> 1269a–b (D27); Plutarch, <i>Life of Lykourgos</i> 8.3, 12.2 and 28 (D57, D63, D44, trans. B. Wilson) and <i>Lakonian Customs</i> 41 (D36); Pausanias 3.17.2 (K3); the Gytheion quarry inscription, IG 5.1.1155 (K6). Cooley’s introductions and notes: the helots, ‘Perioikoi: a note’ (pp. 105–106), the Spartiates, wealth and property, and the note on E77; W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, in Cooley.</p></div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images and diagrams</div>
+        <ul class="small"><li>Olive trees around Sparta today — a modern photograph — Bradley, Fig 3.5</li><li>Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base — Clarke & Garner, Fig 6.3</li><li>A bronze helmet in the British Museum, identified by the textbook as Spartan — Clarke & Garner, Fig 6.5</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the economy concept map; the resources of Laconia (rebuilt from Hurley et al., <i>Antiquity 2</i>, Source 3, with its labels corrected from Cooley).</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">Criteria: NSW Education Standards Authority, 2025 HSC Ancient History Marking Guidelines (Section II part (b)); 2024 marking guidelines (Question 11(d), “answers could include”); marking feedback for 2020 Question 11 and 2025 Section II. © NESA. NESA glossary of key words (“explain”). The 6-mark question, the models and the practice questions were written for this lesson.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

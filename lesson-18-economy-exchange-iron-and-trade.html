@@ -1,0 +1,2446 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L18 · The Economy IV: Exchange</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: iron spits and bars, the iron-money tradition, the war fund and trade, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 18 (the economy IV: exchange, iron and trade). Every class starts l18-. */
+
+/* timelines (svg_l18money.svg, svg_l18seq.svg): boxes coloured by the KIND of evidence */
+.l18-tl text{font-family:var(--ui); fill:var(--ink);}
+.l18-tl .l18t-bg{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.l18-tl .l18t-axis{stroke:var(--ink); stroke-width:5;}
+.l18-tl .l18t-break{fill:none; stroke:var(--ink); stroke-width:4;}
+.l18-tl .l18t-lead{stroke:var(--slate); stroke-width:2.5; stroke-dasharray:5 6;}
+.l18-tl .l18t-box{fill:var(--surface); stroke-width:3;}
+.l18-tl .l18t-w .l18t-box{stroke:var(--deep);}
+.l18-tl .l18t-a .l18t-box{stroke:var(--c-analysis);}
+.l18-tl .l18t-t .l18t-box{stroke:var(--slate); stroke-dasharray:12 8; fill:var(--surface-2);}
+.l18-tl .l18t-w .l18t-node{fill:var(--deep);}
+.l18-tl .l18t-a .l18t-node{fill:var(--c-analysis);}
+.l18-tl .l18t-t .l18t-node{fill:var(--slate);}
+.l18-tl .l18t-letter{fill:#fff; font-size:26px; font-weight:700; text-anchor:middle;}
+:root[data-theme="dark"] .l18-tl .l18t-letter{fill:var(--ground);}
+.l18-tl .l18t-date{font-size:29px; font-weight:700;}
+.l18-tl .l18t-date.sm{font-size:22px;}
+.l18-tl .l18t-w .l18t-date{fill:var(--deep);}
+.l18-tl .l18t-a .l18t-date{fill:var(--c-analysis);}
+.l18-tl .l18t-t .l18t-date{fill:var(--slate);}
+.l18-tl .l18t-ttl{font-size:23px;}
+.l18-tl .l18t-src{fill:var(--slate); font-size:19px; font-style:italic;}
+.l18-tl .l18t-src.sm{font-size:15.5px;}
+.l18-tl .l18t-key text{fill:var(--slate); font-size:20px;}
+.l18-tl .l18t-sw.w{fill:var(--deep);} .l18-tl .l18t-sw.a{fill:var(--c-analysis);}
+.l18-tl .l18t-sw.t{fill:var(--surface-2); stroke:var(--slate); stroke-width:2; stroke-dasharray:5 3;}
+.l18-tl .l18t-note{text-anchor:end; font-style:italic;}
+
+/* the war-fund inscription: one line of the stone per line */
+.l18-stone{font-family:var(--serif); font-size:calc(var(--fs-body)*.98); line-height:1.45;}
+.l18-stone p.quote{margin:0 0 .1em 1.4em; text-indent:-1.4em; font-size:inherit; line-height:1.45;}
+.l18-stone .l18-lost{display:block; margin:.1em 0; color:var(--slate); font-family:var(--ui);
+  font-size:.74em; font-style:italic;}
+
+/* marks column that never wraps ("10–12") */
+.l18-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+
+/* small comparison tables and the plan grid */
+.l18-cmp th:first-child{width:8em;}
+.l18-cmp td:first-child{font-weight:700; color:var(--deep); white-space:nowrap;}
+.l18-cmp td{vertical-align:top; line-height:1.36;}
+.l18-plan th{white-space:nowrap;}
+.l18-plan td{vertical-align:top; line-height:1.34;}
+.l18-plan td:first-child{font-weight:700; color:var(--deep);}
+.l18-plan .l18-w{color:var(--deep); font-weight:700;}
+.l18-plan .l18-a{color:var(--c-analysis); font-weight:700;}
+.l18-plan.l18-empty td{height:3.1em;}
+.l18-plan.l18-empty td:first-child{height:auto;}
+.l18-plan.l18-empty{table-layout:fixed;}
+.l18-plan.l18-empty th{white-space:normal;}
+.l18-plan.l18-empty th:first-child{width:17%;}
+.l18-plan.l18-empty td + td{border-left:1px solid var(--rule); background:var(--surface);}
+
+/* "answers could include": one bullet per NESA point */
+.l18-pt{display:block; margin:0 0 .4em;}
+
+/* evidence cards: a kind tag on each */
+.l18-ev{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(8px,1vw,16px);}
+@media (max-width:900px){ .l18-ev{grid-template-columns:1fr;} }
+.l18-ev .card{padding:clamp(8px,1.3vh,16px) clamp(12px,1.1vw,18px);}
+.l18-ev .card p{font-size:calc(var(--fs-body)*.86); line-height:1.38; margin:0;}
+.l18-tag{display:inline-block; align-self:flex-start; margin-top:.4em; padding:.02em .55em; border-radius:999px; font-size:var(--fs-chrome);
+  font-weight:700; border:1.5px solid currentColor;}
+.l18-tag.w{color:var(--deep);} .l18-tag.a{color:var(--c-analysis);} .l18-tag.t{color:var(--slate); border-style:dashed;}
+
+/* two-column practice lists on wide screens */
+.l18-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.2em; align-items:start;}
+@media (max-width:900px){ .l18-two{grid-template-columns:1fr;} }
+
+/* the iron bar: a tall, narrow object */
+.l18-bar .figure img{max-height:56vh; object-fit:contain; background:var(--surface);}
+
+/* dense slides on short projectors (1366 × 768) */
+@media (max-height:820px){
+  html:not(.read) .l18-dense .src .quote.sm{font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+  html:not(.read) .l18-dense .src .quote{font-size:calc(var(--fs-body)*.9); line-height:1.4;}
+  html:not(.read) .l18-dense .note .body, html:not(.read) .l18-dense .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l18-dense .qprompt{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l18-dense .body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l18-dense .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l18-dense .tbl.compact td, html:not(.read) .l18-dense .tbl.compact th{padding:.28em .5em;}
+  html:not(.read) .l18-dense .rq{font-size:calc(var(--fs-body)*.74); gap:.3em;}
+  html:not(.read) .l18-dense .tf li{font-size:calc(var(--fs-body)*.74); padding:.28em .7em;}
+  html:not(.read) .l18-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+  html:not(.read) .l18-dense .l18-ev .card p{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l18-dense .moves{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l18-dense .quote.sm.model{font-size:calc(var(--fs-body)*.74); line-height:1.36;}
+  html:not(.read) .l18-dense .cornell .nts, html:not(.read) .l18-dense .cornell .cq{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l18-dense .fb{font-size:calc(var(--fs-body)*.72); line-height:1.3;}
+  html:not(.read) .l18-dense .fb .q{margin:.18em 0;}
+  html:not(.read) .l18-dense .l18-stone{font-size:calc(var(--fs-body)*.82); line-height:1.32;}
+  html:not(.read) .l18-dense .figure figcaption{font-size:calc(var(--fs-chrome)*.92);}
+  html:not(.read) .l18-dense .stack{gap:8px;}
+  html:not(.read) .l18-dense .keylist li{font-size:calc(var(--fs-body)*.82);}
+  html:not(.read) .l18-dense .keylist .d{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .l18-dense .card .small, html:not(.read) .l18-dense .card ul.small{font-size:calc(var(--fs-chrome)*.86); line-height:1.3;}
+  html:not(.read) .l18-dense .lisc li{font-size:calc(var(--fs-body)*.86); margin:.2em 0;}
+}
+/* the projector at 1920 × 1080 but a very full slide */
+html:not(.read) .l18-tight .ans.long.dense{font-size:calc(var(--fs-body)*.84); line-height:1.46;}
+@media (max-height:820px){ html:not(.read) .l18-tight .ans.long.dense{font-size:calc(var(--fs-body)*.68); line-height:1.4;} }
+
+/* phones: wide diagrams scroll sideways at a readable size; tables keep their columns */
+@media (max-width:700px){
+  html.read .diagram svg.l18-tl{min-width:900px; max-height:none;}
+  html.read .l18-plan, html.read .l18-cmp{min-width:620px;}
+}
+
+/* Read mode: the answer-key timeline takes no space until "Show answers" is pressed */
+html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 18" data-title="The economy IV: exchange, iron and trade" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr 1.1fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 18</p>
+      <h1>The economy IV: exchange, iron and trade</h1>
+      <p class="lead">Spartan tradition says Lycurgus gave Sparta clumsy iron money and shut out trade. Was Sparta really a society without money or trade?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-6-3-gytheio-l18.jpg" alt="The modern town of Gytheio, built on the site of ancient Gytheion — the perioikic harbour town that served as Sparta’s chief naval base"><figcaption>The modern town of Gytheio, built on the site of ancient Gytheion — the perioikic harbour town that served as Sparta’s chief naval base — <span class="cr">Clarke & Garner, Fig 6.3</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 18" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From who did the work to how things were paid for</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Last lesson</div>
+      <p class="body">Helots farmed the kleroi and served on campaign; the perioikoi probably made goods, traded and fought; Spartiates were barred from making money. Cooley: the Spartiates “had to rely on a variety of goods and services provided by the perioikoi”.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">Was Sparta really a society without money or trade? We test Spartan tradition (iron money, no gold or silver, no trade) against an inscription, objects found far from Laconia, and writers who lived through the period.</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 17, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 18" data-title="Today’s goals" data-kind="intro">
+<div class="wrap l18-dense">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate the image of Sparta as a society without money or trade</li>
+        <li>plan a 12-mark response that integrates written and archaeological evidence</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>explain what Plutarch claims about iron money and why</li>
+        <li>explain what the war-fund inscription shows and why it is a different kind of evidence</li>
+        <li>give evidence for goods that left Laconia and goods that came in</li>
+        <li>plan a 12-mark answer with written and archaeological evidence in every paragraph</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body"><b>Iron money</b>: Sparta’s bulky iron currency — probably bars or spits, not stamped coins (Plutarch’s translator calls it ‘iron coinage’). <b>Coins</b>: stamped metal, such as the Persian gold <i>darics</i> and silver <i>staters</i> of Aegina in today’s inscription. An <b>inscription</b> is a text found by archaeology: say what it is when you use it.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 18" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L18 · Exchange, iron and trade</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Plut. = Plutarch, Xen. = Xenophon)</span></div></div>
+      <div class="row"><div class="cq">What was Spartan iron money?</div><div class="nts">bulky iron currency …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: iron · the iron-money tradition · the war fund · private austerity, public wealth · trade.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 18" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Money</th><th>Meaning</th></tr>
+      <tr><td>obelos (pl. obeloi)</td><td>a metal roasting spit; bundles of spits served as early money in Greece (unit textbook)</td></tr>
+      <tr><td>iron money</td><td>the bulky iron currency Spartan tradition credits to Lycurgus</td></tr>
+      <tr><td>daric</td><td>the gold coin of the Persian empire (about 8.5 g)</td></tr>
+      <tr><td>stater</td><td>a coin; in today’s inscription, the silver stater of Aegina</td></tr>
+      <tr><td>mna · talent</td><td>units of value: 100 drachmas = 1 mna; 60 mnas = 1 talent (standard Greek values, not in Cooley)</td></tr>
+      <tr><td>pelanor</td><td>the name Clarke &amp; Garner give a Spartan iron bar used as money (not in Cooley)</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Evidence and trade</th><th>Meaning</th></tr>
+      <tr><td>currency</td><td>whatever a society accepts as money</td></tr>
+      <tr><td>inscription</td><td>a text cut into stone or metal; reading them is <i>epigraphy</i></td></tr>
+      <tr><td>hoard</td><td>a group of coins or valuables buried together</td></tr>
+      <tr><td>export · import</td><td>goods sent out of a region · goods brought into it</td></tr>
+      <tr><td>austerity</td><td>plain, restrained living — or the public display of it</td></tr>
+      <tr><td>Gytheion</td><td>the perioikic town that was Sparta’s port and chief naval base</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translators write minai, mnai or mnas for the same unit, and Aiginetan, Lakedaimonians, Lykourgos. In your own writing use Aeginetan, Lacedaemonians, Lycurgus — and be consistent.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Iron" data-title="Iron: Laconia’s own metal" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">1 · Iron · I do — a local metal with many uses</p>
+  <h2>Iron: Laconia’s own metal</h2>
+  <div class="l18-ev">
+    <div class="card reveal"><div class="k">Where it came from</div><p>At Boia in south-eastern Laconia “traces of iron workings are common there” (W. G. Cavanagh, in Cooley). Cooley thinks such deposits were “presumably exploited by the perioikoi”.</p><span class="l18-tag a">archaeology</span></div>
+    <div class="card reveal"><div class="k">Tools and weapons</div><p>In c. 399 BC Cinadon took a man he hoped to recruit to iron-works with “many knives, many swords, many skewers, many axes and hatchets, many sickles” (Xenophon, <i>Hellenika</i> 3.3.7, Cooley E53a). Xenophon does not say who worked there (Lesson 17).</p><span class="l18-tag w">written</span></div>
+    <div class="card reveal"><div class="k">Spits as money</div><p>Before silver coins spread, Greeks used metal spits (<i>obeloi</i>) as units of value: the coin names <i>obol</i> and <i>drachma</i> (‘handful’, of six spits) come from this, and bundles of iron spits were dedicated at the Heraion near Argos.</p><span class="l18-tag t">unit textbook · not in Cooley</span></div>
+  </div>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="note reveal" data-code="evidence"><div class="k">Iron as money at Sparta</div><p class="body">Cooley: “Spartiates were not allowed to own gold or silver, and the iron money used in classical Sparta was only fit to facilitate fairly small everyday transactions.”</p></div>
+    <div class="note reveal" data-code="analysis"><div class="k">So what?</div><p class="body">Iron money worked only at home: Plutarch says it “was impossible to transport to the rest of Greece and had no credibility as a currency”. The unit textbook adds that Sparta kept iron long after its neighbours moved to silver and struck no coins of its own until the 3rd century BC (not in Cooley).</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Iron" data-title="An iron bar — but whose?" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">1 · Iron · We do — reading an object with care</p>
+  <h2>An iron bar — but whose, and when?</h2>
+  <div class="split l18-bar" style="--cols:.55fr 1.45fr">
+    <figure class="figure contain"><img src="images/clarke-6-9-iron-bar-l18.jpg" alt="A corroded iron bar that Clarke &amp; Garner identify as a Spartan ‘pelanor’ (iron money). The textbook gives no find-spot, date or museum, so the identification cannot be checked"><figcaption>A corroded iron bar that Clarke & Garner identify as a Spartan ‘pelanor’ (iron money). The textbook gives no find-spot, date or museum, so the identification cannot be checked — <span class="cr">Clarke & Garner, Fig 6.9</span></figcaption></figure>
+    <div class="stack tight">
+      <p class="qprompt reveal">What does the textbook’s caption claim?</p>
+      <p class="body reveal">That Spartans used iron bars like this one, which it calls <i>pelanors</i>, as money after Lycurgus withdrew coinage. It retells the Lycurgus story as fact.</p>
+      <p class="qprompt reveal">What does the textbook not tell us about the object?</p>
+      <p class="body reveal">Where it was found, when it was made, or which museum holds it.</p>
+      <p class="qprompt reveal">So what can the photograph prove?</p>
+      <p class="body reveal">Only what an iron bar looks like after centuries of corrosion. Without a find-spot or date it cannot show that this bar was Spartan, classical, or ever used as money.</p>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>Use it as an illustration of the tradition, not as evidence for it.</b> An object is only as useful as what we know about where and when it was found.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Iron" data-title="Notes 1 — Iron" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Iron: a local metal, and early money</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L18 · Exchange, iron and trade</b></span><span>1 · Iron</span></div>
+    <div class="row"><div class="cq">Where did Sparta’s iron come from, and who worked it?</div>
+      <div class="nts reveal"><b>Boia</b>, SE Laconia: iron workings “common” (Cavanagh) <span class="sep">·</span> prob. the <b>perioikoi</b> (“presumably exploited”, Cooley) <span class="sep">·</span> Cinadon’s iron-works, c. 399 BC (E53a): tools + weapons, workers not named</div></div>
+    <div class="row"><div class="cq">What did iron spits have to do with the words <i>obol</i> and <i>drachma</i>?</div>
+      <div class="nts reveal">Spits (<b>obeloi</b>) = early Greek units of value → <b>obol</b>; <b>drachma</b> = ‘handful’ of six spits (textbook, citing Plutarch, <i>Lysander</i> 17 — the passage is 17.3, which Cooley omits)</div></div>
+    <div class="row"><div class="cq">How was iron used as money at Sparta?</div>
+      <div class="nts reveal"><b>Iron money</b> in classical Sparta, for “fairly small everyday transactions” (Cooley) <span class="sep">·</span> Spartiates not allowed gold or silver <span class="sep">·</span> no Spartan coins till 3rd c. BC (textbook only)</div></div>
+    <div class="row"><div class="cq">Why must the iron bar be used with caution?</div>
+      <div class="nts reveal">No <b>find-spot, date or museum</b> given → can’t prove it is Spartan, classical or money <span class="sep">·</span> caption retells the Lycurgus story as fact</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The iron-money tradition" data-title="Xenophon: an earlier witness" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">2 · The iron-money tradition · I do — the earliest description</p>
+  <h2>Xenophon: no money-making, and a currency too bulky to hide</h2>
+  <div class="split" style="--cols:1.5fr 1fr">
+    <div class="src">
+      <div class="k">Source · Xenophon</div>
+      <p class="quote sm">[2] But in Sparta Lykourgos refused to allow free citizens to have anything to do with money making; only activities which contributed to the freedom of the state were to be regarded as permissible occupations for its citizens. … [5] He also enacted the following measures to prevent the dishonest acquisition of money. First of all he devised a system of currency which made it impossible to bring into the house even as small a sum as ten minai without the knowledge of house owner or his servants, because it would take up an enormous amount of space and require a wagon to transport it. [6] Random official searches for gold and silver take place, and if any is found the owner is fined.</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 7.2, 7.5–6 · an Athenian admirer of Sparta, c. 430–c. 350 BC; this work probably written in the late 390s or 380s BC · trans. B. Wilson · Cooley D53</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What did Lycurgus forbid free citizens to do?</p>
+      <p class="body reveal">To make money: only activities for “the freedom of the state” were allowed.</p>
+      <p class="qprompt reveal">What currency does Xenophon describe — and what metal?</p>
+      <p class="body reveal">One so bulky that ten minai needed a wagon. He never names the metal.</p>
+      <p class="qprompt reveal">What do the searches suggest?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">That some Spartans probably held gold and silver — otherwise why search for it? A ban suggests that the thing banned existed.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The iron-money tradition" data-title="Plutarch’s iron money" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">2 · The iron-money tradition · I do — Source 11.6, Extract A</p>
+  <h2>Plutarch: iron the only money, and no trade</h2>
+  <div class="split" style="--cols:1.55fr 1fr">
+    <div class="src">
+      <div class="k">Source · Plutarch on Lycurgus’ iron money</div>
+      <p class="quote sm">[9.1] … <span class="code" data-code="judgement" data-letter="J">He started by banning all forms of gold and silver coinage and making iron the only form of legal tender.</span> This form of coinage was both bulky and heavy, but he gave it minimal value, so that cash worth ten minai required a huge granary to hold it and a yoke of oxen to transport it. … [2] … <span class="code" data-code="counter" data-letter="C">He is even supposed to have used vinegar</span> so that the red-hot iron would not be tempered properly, thus removing its effectiveness or use for any other purpose and robbing it of its strength and malleability. [3] … <span class="code" data-code="analysis" data-letter="A">As a result it was impossible to buy foreign goods or to make even small purchases; no mercantile cargoes came to their ports</span> …</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 9.1–3 · a Greek biographer and moralist, written c. AD 100 · trans. B. Wilson · Cooley D58</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="judgement">What did Lycurgus do, says Plutarch?</p>
+      <p class="body reveal">Banned gold and silver coins and made iron the only legal money — bulky, heavy and nearly worthless.</p>
+      <p class="qprompt reveal" data-paint="counter">How sure is Plutarch of the vinegar?</p>
+      <p class="body reveal">Not sure: “He is even supposed to” — he reports a story, he does not vouch for it.</p>
+      <p class="qprompt reveal" data-paint="analysis">What effect does he claim?</p>
+      <p class="body reveal">No foreign goods and no merchant ships. His aim, he says, was “to eliminate totally all forms of inequality or discrimination”.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The iron-money tradition" data-title="Who is the better witness?" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">2 · The iron-money tradition · We do — compare the two writers</p>
+  <h2>Xenophon or Plutarch: who is the better witness, and for what?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l18-cmp">
+    <tr><th></th><th>Xenophon (Cooley D53)</th><th>Plutarch (Cooley D58)</th></tr>
+    <tr class="reveal"><td>Date</td><td>probably late 390s or 380s BC — inside our period</td><td>c. AD 100 — nearly five centuries later</td></tr>
+    <tr class="reveal"><td>Author</td><td>an Athenian admirer who may have lived in Sparta</td><td>a biographer from Boeotia writing moral examples</td></tr>
+    <tr class="reveal"><td>The currency</td><td>bulky: ten minai “require a wagon”; metal not named</td><td>iron the only legal money; “supposedly” quenched in vinegar</td></tr>
+    <tr class="reveal"><td>Gold and silver</td><td>searched for, and the owner fined</td><td>all gold and silver coinage banned</td></tr>
+    <tr class="reveal"><td>Trade</td><td>citizens barred from money-making</td><td>no foreign goods, “no mercantile cargoes”</td></tr>
+    <tr class="reveal"><td>Reliability</td><td>well informed, but “probably depicts a somewhat idealised Sparta” (Cooley)</td><td>late; Cooley: unless he names a classical source, treat it “as secondary material”</td></tr>
+  </table></div>
+  <div class="note reveal" data-code="judgement"><p class="body"><b>Judgement:</b> Xenophon is the better witness for the classical period, and he describes a ban on private gold and silver — not an economy without money or trade. Plutarch’s fuller story is the later tradition.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The iron-money tradition" data-title="Hinge: only in Plutarch?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>Which detail appears in Plutarch but not in Xenophon?</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>A currency too bulky to bring home unnoticed</span></li>
+    <li><span class="n">2</span><span>Official searches for gold and silver</span></li>
+    <li id="l18hq3"><span class="n">3</span><span>Iron quenched in vinegar so it was useless</span></li>
+    <li><span class="n">4</span><span>Citizens barred from making money</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l18hq3" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>3.</b> Only Plutarch has the vinegar — and he hedges it (“He is even supposed to”). Xenophon has the bulky currency, the searches and the ban on money-making; Plutarch’s passage (D58) does not mention searches.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The iron-money tradition" data-title="Notes 2 — The iron-money tradition" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The iron-money tradition</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L18 · Exchange, iron and trade</b></span><span>2 · The iron-money tradition</span></div>
+    <div class="row"><div class="cq">What does Xenophon say about money?</div>
+      <div class="nts reveal">Prob. late 390s/380s BC, admirer <span class="sep">·</span> citizens barred from “money making” <span class="sep">·</span> bulky currency: ten minai need a wagon (<b>metal not named</b>) <span class="sep">·</span> “Random official searches for gold and silver” → fines (<i>Lak. Pol.</i> 7, D53)</div></div>
+    <div class="row"><div class="cq">What does Plutarch add?</div>
+      <div class="nts reveal">C. AD 100 <span class="sep">·</span> iron “the only form of legal tender” <span class="sep">·</span> <b>supposedly</b> quenched in vinegar <span class="sep">·</span> no foreign goods, “no mercantile cargoes” (<i>Lyc.</i> 9, D58) <span class="sep">·</span> aim: end inequality</div></div>
+    <div class="row"><div class="cq">Who is the better witness?</div>
+      <div class="nts reveal"><b>Xenophon</b>: earlier, well informed, but prob. idealised <span class="sep">·</span> <b>Plutarch</b>: late moralist → “secondary material” unless he names a classical source (Cooley) <span class="sep">·</span> searches → gold + silver existed</div></div>
+    <div class="row"><div class="cq">What does Cooley conclude?</div>
+      <div class="nts reveal">Iron money <b>was</b> used in classical Sparta, but only for “fairly small everyday transactions”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The war fund" data-title="The war-fund inscription" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">3 · The war fund · I do — Source 11.6, Extract B: a different kind of evidence</p>
+  <h2>Gifts “for the war”: a list cut in stone at Sparta</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="src">
+      <div class="k">Source · the Spartan war-fund inscription (selected lines)</div>
+      <div class="l18-stone">
+        <p class="quote">Given by the […], who are friends of the Lakedaimonians, for the war, four hundred darics</p>
+        <p class="quote">Given by the Aiginetans to the Lakedaimonians for the war, fourteen mnas and [ten staters]</p>
+        <span class="l18-lost">(lines omitted)</span>
+        <p class="quote">Given by those exiled from Chios who are friends</p>
+        <p class="quote">of the Lakedaimonians, one thousand Aiginetan staters.</p>
+        <span class="l18-lost">(lines omitted)</span>
+        <p class="quote">[…] thousand and of raisins</p>
+        <span class="l18-lost">(lines omitted)</span>
+        <p class="quote">[Given] by the Ephesians to the Lakedaim-</p>
+        <p class="quote">[onians for the] war, one thousand darics.</p>
+      </div>
+      <p class="prov">Inscription on two sides of a stone block, a public inscription at Sparta · c. 427 BC or later (date disputed) · IG V 1, 1 (text of W. T. Loomis, 1992) · trans. in Cooley B12. [ ] = letters lost from the stone and restored by editors; […] = lost and not restored.</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">What kind of evidence is this?</p>
+      <p class="body reveal">A public inscription, set up in Sparta in the period itself: contemporary, official and not written to praise Lycurgus.</p>
+      <p class="qprompt reveal">What did the Lacedaemonians receive?</p>
+      <p class="body reveal">Persian gold darics, silver staters of Aegina, mnas of silver — and goods in kind, such as raisins.</p>
+      <div class="note reveal" data-code="evidence"><div class="k">A rare document</div><p class="body">Hodkinson, introducing the inscriptions: public inscriptions at Sparta, including “a unique war-fund donation list”, are “not attested until the late fifth century” — though, he adds, “we should not assume that it was a new practice”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The war fund" data-title="Reading the war fund" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">3 · The war fund · We do · 8 minutes — list the donors and the currencies</p>
+  <h2>Reading the war fund</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="tbl-scroll"><table class="tbl compact l18-cmp">
+      <tr><th>Donor</th><th>Gift</th><th>What it is</th></tr>
+      <tr class="reveal"><td>[name lost], “friends of the Lakedaimonians”</td><td>400 darics</td><td>Persian gold coins</td></tr>
+      <tr class="reveal"><td>the Aeginetans</td><td>14 mnas and [10 staters]</td><td>money by weight (mnas) and in coins (staters, restored)</td></tr>
+      <tr class="reveal"><td>exiles from Chios</td><td>1,000 Aeginetan staters</td><td>silver coins</td></tr>
+      <tr class="reveal"><td>the Melians; Molokros</td><td>20 mnas of silver; a talent</td><td>silver</td></tr>
+      <tr class="reveal"><td>[…]non and others (names damaged)</td><td>raisins; thousands of medimnoi</td><td>goods in kind (a medimnos is a dry measure)</td></tr>
+      <tr class="reveal"><td>the Ephesians</td><td>1,000 darics</td><td>Persian gold coins</td></tr>
+    </table><p class="small">Main gifts only, not every line.</p></div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="keyterm"><div class="k">Square brackets</div><p class="body">Letters lost from the stone and filled in by editors. “[ten staters]” is an editor’s restoration, not a reading.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Why is the date disputed?</div><p class="body">Cooley: “Nothing about the text of the inscription provides us with a certain date.” Scholars use letter shapes and ask when every donor could have helped Sparta: Loomis argues for 427 BC; Osborne and Rhodes suggest 427–412 BC.</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Judgement</div><p class="body">In wartime, the Spartan state received gold and silver for the war. Does that contradict Plutarch — or only his picture of private life?</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The war fund" data-title="Two kinds of evidence" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">3 · The war fund · I do — model a judgement</p>
+  <h2>Two kinds of evidence, two different questions</h2>
+  <div class="tbl-scroll"><table class="tbl compact l18-cmp">
+    <tr><th></th><th>Plutarch on iron money (D58)</th><th>The war-fund inscription (B12)</th></tr>
+    <tr class="reveal"><td>Kind</td><td>written: a moral biography</td><td>an inscription: a public record cut in stone</td></tr>
+    <tr class="reveal"><td>Date</td><td>c. AD 100, about five centuries after the period</td><td>c. 427 BC or later — inside the period</td></tr>
+    <tr class="reveal"><td>Made for</td><td>readers who wanted moral examples</td><td>anyone at Sparta who could read it — probably to honour the donors</td></tr>
+    <tr class="reveal"><td>Says</td><td>no gold or silver coinage; no foreign goods</td><td>the state received gold darics and silver staters</td></tr>
+    <tr class="reveal"><td>Answers</td><td>what later Greeks believed about Lycurgus’ laws</td><td>how the Spartan state paid for a war</td></tr>
+  </table></div>
+  <div class="src reveal" data-veil="Show a model judgement">
+    <div class="k">A model judgement · written for this lesson</div>
+    <p class="quote sm model">The inscription is the stronger evidence for classical Sparta, because it is contemporary and public, but it does not simply cancel Plutarch: it shows the state handling gold and silver in wartime, which is consistent with a ban on private citizens holding them.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The war fund" data-title="You do — annotate the war fund">
+<div class="wrap l18-dense">
+  <p class="eyebrow">3 · The war fund · You do · 6 minutes · press K for the timer</p>
+  <h2>Annotate the war-fund inscription: O, V, P, R, L</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="card accent"><div class="k">Prompts</div>
+      <ul class="body">
+        <li><b>O</b> — one extract is a contemporary Spartan document, the other a biography written about 500 years later: which is which?</li>
+        <li><b>V</b> — what does each extract claim about gold, silver and trade at Sparta?</li>
+        <li><b>P</b> — Plutarch praises Lycurgus for curbing greed. Why would the Spartan state publicly list gifts?</li>
+        <li><b>R</b> — Plutarch introduces the vinegar detail with “He is even supposed to”. What does that signal?</li>
+        <li><b>L</b> — does a wartime state fund prove that ordinary Spartiates used gold and silver?</li>
+      </ul>
+      <p class="small">Your own words, in the margin. Then draw a ✗ to Plutarch (contradicts?) and a ✓ to the Laconian goods found abroad (section 5).</p></div>
+    <div class="tbl-scroll reveal" data-veil="Show model margin notes"><table class="tbl compact">
+      <tr><th>Code</th><th>Model margin note</th></tr>
+      <tr><td><b>O</b></td><td>public inscription at Sparta, c. 427 BC or later; Plutarch c. AD 100</td></tr>
+      <tr><td><b>V</b></td><td>Plutarch: no gold/silver coinage, no foreign goods · stone: state received darics (gold), Aeginetan staters + mnas (silver), goods in kind</td></tr>
+      <tr><td><b>P</b></td><td>thank and honour donors; show allies backing Sparta</td></tr>
+      <tr><td><b>R</b></td><td>Plutarch’s ‘He is even supposed to’ = a story he reports, not vouches for · the stone is contemporary and official, but damaged, restored, date disputed</td></tr>
+      <tr><td><b>L</b></td><td>wartime gifts to the state ≠ private citizens using coins</td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The war fund" data-title="Notes 3 — The war fund" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>The war fund</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L18 · Exchange, iron and trade</b></span><span>3 · The war fund</span></div>
+    <div class="row"><div class="cq">What is the war-fund inscription?</div>
+      <div class="nts reveal">Public inscription at Sparta, IG V 1, 1 (Cooley <b>B12</b>) <span class="sep">·</span> <b>c. 427 BC or later</b> (Loomis 427; others 427–412) <span class="sep">·</span> gifts “for the war”</div></div>
+    <div class="row"><div class="cq">Who gave what?</div>
+      <div class="nts reveal">Ephesians 1,000 <b>darics</b> (Persian gold) <span class="sep">·</span> Chian exiles 1,000 Aeginetan <b>staters</b> (silver) <span class="sep">·</span> Aeginetans 14 <b>mnas</b> + [10 staters] <span class="sep">·</span> Melians 20 mnas of silver <span class="sep">·</span> Molokros a talent <span class="sep">·</span> goods in kind (raisins)</div></div>
+    <div class="row"><div class="cq">Give one way Plutarch’s iron money and the war fund disagree.</div>
+      <div class="nts reveal">Plutarch: no gold or silver coinage <span class="sep">·</span> stone: the state <b>received gold and silver coin</b> <span class="sep">·</span> contemporary public record v. biography c. AD 100</div></div>
+    <div class="row"><div class="cq">Why is the date disputed, and what are its limits?</div>
+      <div class="nts reveal">“Nothing about the text … provides us with a certain date” → letter shapes + donors <span class="sep">·</span> wartime gifts to the <b>state</b> ≠ private citizens using coins</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="Lysander’s gold" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">4 · Private austerity, public wealth? · We do — the spoils of victory</p>
+  <h2>Lysander’s gold: for the state, not for citizens</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <div class="src">
+      <div class="k">Source · Plutarch on the spoils of the Peloponnesian War</div>
+      <p class="quote sm">But the most sensible of the Spartiates, not least because of this, feared the power of money and that it was affecting the citizens; so they rebuked Lysander and begged the ephors remove all the silver and gold from the city as if an imported pollution. … [4] When the friends of Lysander opposed the proposal, and were eager that the money remained in the city, it was decided that money of this sort be put to public use; also if anyone was caught possessing this money for private use, they determined the punishment should be death, as if Lykourgus feared the coin, not the love of money which came with the coin.</p>
+      <p class="prov">Plutarch, <i>Life of Lysander</i> 17.1 and 17.4, written c. AD 100, drawing on the 4th-century historian Theopompus · events of c. 400 BC · trans. in Cooley E75</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal">Who could hold the gold and silver?</p>
+      <p class="body reveal">The state: it was “put to public use”. A private citizen caught with it faced death.</p>
+      <p class="qprompt reveal">Where had it come from?</p>
+      <p class="body reveal">The war. Persia had paid for Sparta’s fleet: Cyrus gave Lysander 10,000 darics in 408/7 BC (Plutarch, <i>Lysander</i> 4, Cooley E120).</p>
+      <div class="note reveal" data-code="analysis"><p class="body">The rule that Xenophon and the war fund imply, stated outright: <b>public wealth, private austerity</b>. Plutarch himself doubts it worked — public honour for money made citizens want it.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="Critics and a dialogue" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">4 · Private austerity, public wealth? · I do — three writers inside or near the period</p>
+  <h2>Did Spartans love money after all?</h2>
+  <div class="cols c3">
+    <div class="src">
+      <div class="k">Aristotle</div>
+      <p class="quote sm">For there is no common state fund for the large-scale wars they are forced to fight. … The result is the opposite of the benefits the lawgiver wanted. For he has created a city without money, but individuals with a love of money.</p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1271b10–19 · written 330s/320s BC, a critic explaining Sparta’s decline · trans. in Cooley D55</p>
+    </div>
+    <div class="src">
+      <div class="k">Xenophon, a later chapter</div>
+      <p class="quote sm">I know, too, that in former days they were frightened to be caught in possession of gold; whereas nowadays some of them are even happy to make a display of their wealth.</p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 14.3 · a chapter “generally considered later” than the rest; Cooley thinks it reflects his disillusionment after Leuctra · trans. B. Wilson · Cooley E70</p>
+    </div>
+    <div class="src">
+      <div class="k">Plato</div>
+      <p class="quote sm">… there is not in all Greece as much gold and silver as in private hands in Lakedaimon: this is because for many generations now it has been coming in there from all the Greeks, and frequently from foreigners too, but it does not go out anywhere.</p>
+      <p class="prov">Plato, <i>Alcibiades</i> 1 (authorship disputed), 122d–123b · Athenian philosopher, c. 429–347 BC; a dialogue set c. 433 BC · trans. in Cooley E72</p>
+    </div>
+  </div>
+  <div class="note reveal" data-code="counter"><p class="body"><b>Weigh them:</b> Aristotle and the later Xenophon are critics looking back on decline; Plato’s speaker uses Sparta’s riches to make a point to a young Athenian. None is neutral — but all three, writing within a century of each other, describe Spartans who had or wanted wealth.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="Money kept abroad?">
+<div class="wrap l18-dense">
+  <p class="eyebrow">4 · Private austerity, public wealth? · We do — a writer and an inscription <span class="optional">If time</span></p>
+  <h2>Money kept outside Sparta?</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Poseidonius, quoted by Athenaeus</div>
+        <p class="quote sm">The Lakedaimonians were prevented by their customs from bringing money into Sparta, as Poseidonios writes in his history, or from obtaining silver or gold, but did so nonetheless and deposited it with the neighbouring Arkadians.</p>
+        <p class="prov">Poseidonios of Apameia, FGrH 87 F48, a much later historian, quoted in Athenaios, <i>Scholars at Dinner</i> 6.23–25 (c. AD 200) · trans. in Cooley D59</p>
+      </div>
+      <span class="l18-tag w">written · late</span>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · a bronze plaque found at Tegea in Arcadia</div>
+        <p class="quote sm">To Xouthias, son of Philachaios, two hundred mnai. If he comes in person, let him take them. If he is dead, they are his sons’, once they have been young men (hebontes) for five years.</p>
+        <p class="prov">Bronze plaque, Tegea · mid-5th century BC · IG V 2, 159 · trans. in Cooley E73. A second text on the plaque records four hundred mnai of silver.</p>
+      </div>
+      <span class="l18-tag a">inscription · contemporary</span>
+    </div>
+  </div>
+  <div class="note reveal" data-code="counter"><p class="body"><b>Careful:</b> Cooley says the plaque “is often assumed to relate to a Spartiate, unable to deposit money at home”, but Hodkinson doubts it. Together the two sources <i>may</i> show private silver kept abroad — a possibility, not a proof.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="Coins at Sparta?" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">4 · Private austerity, public wealth? · I do — sort the evidence</p>
+  <h2>Did Spartans use coins at all?</h2>
+  <div class="l18-ev">
+    <div class="card reveal"><div class="k">Foreign coins, for the state</div><p>Darics and Aeginetan staters in the war-fund list (B12, c. 427 BC or later); Lysander’s gold and silver coin kept for public use (E75, c. 400 BC).</p><span class="l18-tag a">inscription</span> <span class="l18-tag w">written</span></div>
+    <div class="card reveal"><div class="k">Money in the messes</div><p>Even Plutarch has each member bring “a very small sum of money” for extras (<i>Lyc.</i> 12, D63); Dicaearchus, writing c. 320–300 BC, gives “for the meat, 10 Aiginetan obols” (E77). Cooley warns these may describe later practice.</p><span class="l18-tag w">written · later</span></div>
+    <div class="card reveal"><div class="k">A hoard in the city</div><p>NESA’s marking guidelines list the “Discovery of a hoard of coins within the city of Sparta, which may suggest the use of coins as currency”. Neither Cooley nor Clarke &amp; Garner describes it, so we cannot check its date or contents.</p><span class="l18-tag t">NESA · details not in Cooley</span></div>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="counter"><div class="k">Spartan coins?</div><p class="body">The unit textbook says Sparta struck no coins of its own until the 3rd century BC (not in Cooley). NESA gives no date or contents for the hoard: find both before you use it.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">So</div><p class="body">Foreign coins certainly reached the Spartan state, and, if the later writers are right, some money changed hands in the messes. Whether ordinary Spartiates used coins in our period is uncertain — keep NESA’s own hedge, “may suggest”.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="Two historians’ interpretations" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">4 · Private austerity, public wealth? · I do — the historians’ verdict</p>
+  <h2>Austerity on show, wealth behind it?</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">M. G. L. Cooley, editor of our sourcebook</div>
+      <p class="quote sm">These restrictions on the most common ways of conspicuous consumption meant that the Spartans appeared austere to other wealthy Greeks, but in spite of the modern connotations of the term ‘Spartan’ we should regard the Spartan lifestyle as comfortable prosperity masked by a display of austerity.</p>
+      <p class="prov">Cooley, <i>Sparta</i> (2023), introduction to wealth and property (D52–D59)</p>
+    </div>
+    <div class="src">
+      <div class="k">Stephen Hodkinson, as quoted by Cooley</div>
+      <p class="quote sm">that Sparta’s public institutions and austere lifestyle in operation during the classical period were—on the long view—a temporary imposition upon a more enduring privately-oriented, wealth-based society.</p>
+      <p class="prov">S. Hodkinson, quoted in Cooley’s introduction to Spartan property and wealth (E71–E76), citing ‘Hodkinson, NSW notes 2000, ch. 13’</p>
+    </div>
+  </div>
+  <div class="cols c2">
+    <div class="note reveal" data-code="evidence"><div class="k">What they rest on</div><p class="body">Cooley: “it is clear that great wealth existed in Sparta in all periods” — land, horses, chariot-racing victories, and the gold and silver in this lesson.</p></div>
+    <div class="note reveal" data-code="analysis"><div class="k">So what was the iron money for?</div><p class="body">On this reading it was a rule about <b>display</b>: wealth existed, but a Spartiate was not to be seen spending it.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="4 · Private austerity, public wealth?" data-title="Vote: austerity for show?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote</p>
+  <h2 class="nq">“Spartan austerity was mostly for show.”</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
+    <div class="card"><div class="k">Sideways</div><p class="lead">Partly</p></div>
+    <div class="card"><div class="k">Thumbs down</div><p class="lead">Disagree</p></div>
+  </div>
+  <p class="cue">Justify your vote with one named source: Xenophon, Plutarch, the war-fund inscription, Aristotle — or a historian.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="The money story (timeline)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">4 · Private austerity, public wealth? · I do — the evidence in time</p>
+  <h2>The money story: what we know, and from whom</h2>
+  <figure class="diagram"><svg class="l18-tl l18-money" viewBox="0 0 1760 590" role="img" aria-label="The money story, in date order. Archaic period: iron spits serve as money in Greece (unit textbook only, not in Cooley). Mid-5th century BC: a bronze plaque at Tegea records silver kept for Xouthias, perhaps a Spartiate (inscription, Cooley E73). c. 427 BC or later: the war-fund list records darics, staters and silver given for the war (inscription, Cooley B12). Events of c. 400 BC: Lysander’s gold and silver kept for public use only (Plutarch, c. AD 100, after Theopompus, Cooley E75). Probably late 390s or 380s BC: Xenophon describes a bulky currency and searches for gold and silver (Cooley D53). 330s or 320s BC: Aristotle says Sparta had no common state fund and that the lawgiver made citizens who love money (Cooley D55). 3rd century BC: Sparta strikes its first coins of its own (unit textbook only, not in Cooley). c. AD 100: Plutarch says iron was the only legal tender and there was no trade (Cooley D58). Spacing is not to scale.">
+<rect class="l18t-bg" x="2" y="2" width="1756" height="586" rx="14"/>
+<line class="l18t-axis" x1="60" y1="290" x2="274" y2="290"/>
+<path class="l18t-break" d="M266,306 l16,-32 M298,306 l16,-32"/>
+<line class="l18t-axis" x1="309.5" y1="290" x2="1444" y2="290"/>
+<path class="l18t-break" d="M1436,306 l16,-32 M1468,306 l16,-32"/>
+<line class="l18t-axis" x1="1480" y1="290" x2="1700" y2="290"/>
+<g class="l18t-key"><rect class="l18t-sw w" x="30" y="551" width="26" height="16" rx="3"/><text x="64" y="565">written source</text><rect class="l18t-sw a" x="250" y="551" width="26" height="16" rx="3"/><text x="284" y="565">inscription</text><rect class="l18t-sw t" x="440" y="551" width="26" height="16" rx="3"/><text x="474" y="565">unit textbook only — not in Cooley</text><text class="l18t-note" x="1730" y="565">Earliest on the left · spacing not to scale</text></g>
+<g class="linked l18t-t" id="l18m-1"><line class="l18t-lead" x1="194" y1="246" x2="194" y2="268"/><rect class="l18t-box" x="14" y="94" width="360" height="152" rx="12"/><circle class="l18t-node" cx="194" cy="290" r="14"/><text class="l18t-date" x="32" y="132">Archaic period</text><text class="l18t-ttl" x="32" y="166">Iron spits (obeloi) serve</text><text class="l18t-ttl" x="32" y="195">as money in Greece</text><text class="l18t-src" x="32" y="227">unit textbook only · not in Cooley</text></g>
+<g class="linked l18t-a" id="l18m-2"><line class="l18t-lead" x1="389" y1="312" x2="389" y2="334"/><rect class="l18t-box" x="209" y="334" width="360" height="152" rx="12"/><circle class="l18t-node" cx="389" cy="290" r="14"/><text class="l18t-date" x="227" y="372">mid-5th century BC</text><text class="l18t-ttl" x="227" y="406">Tegea plaque: silver kept</text><text class="l18t-ttl" x="227" y="435">for Xouthias — a Spartiate?</text><text class="l18t-src" x="227" y="467">inscription · Cooley E73</text></g>
+<g class="linked l18t-a" id="l18m-3"><line class="l18t-lead" x1="584" y1="246" x2="584" y2="268"/><rect class="l18t-box" x="404" y="94" width="360" height="152" rx="12"/><circle class="l18t-node" cx="584" cy="290" r="14"/><text class="l18t-date" x="422" y="132">c. 427 BC or later</text><text class="l18t-ttl" x="422" y="166">War-fund list: darics, staters</text><text class="l18t-ttl" x="422" y="195">and silver given ‘for the war’</text><text class="l18t-src" x="422" y="227">inscription · Cooley B12</text></g>
+<g class="linked l18t-w" id="l18m-4"><line class="l18t-lead" x1="779" y1="312" x2="779" y2="334"/><rect class="l18t-box" x="599" y="334" width="360" height="152" rx="12"/><circle class="l18t-node" cx="779" cy="290" r="14"/><text class="l18t-date" x="617" y="372">events of c. 400 BC</text><text class="l18t-ttl" x="617" y="406">Lysander’s gold and silver</text><text class="l18t-ttl" x="617" y="435">kept for public use only</text><text class="l18t-src sm" x="617" y="467">Plutarch (c. AD 100), after Theopompus · E75</text></g>
+<g class="linked l18t-w" id="l18m-5"><line class="l18t-lead" x1="974" y1="246" x2="974" y2="268"/><rect class="l18t-box" x="794" y="94" width="360" height="152" rx="12"/><circle class="l18t-node" cx="974" cy="290" r="14"/><text class="l18t-date sm" x="812" y="132">probably late 390s or 380s BC</text><text class="l18t-ttl" x="812" y="166">Xenophon: bulky currency;</text><text class="l18t-ttl" x="812" y="195">searches for gold and silver</text><text class="l18t-src" x="812" y="227">Constitution 7 · Cooley D53</text></g>
+<g class="linked l18t-w" id="l18m-6"><line class="l18t-lead" x1="1169" y1="312" x2="1169" y2="334"/><rect class="l18t-box" x="989" y="334" width="360" height="152" rx="12"/><circle class="l18t-node" cx="1169" cy="290" r="14"/><text class="l18t-date" x="1007" y="372">330s/320s BC</text><text class="l18t-ttl" x="1007" y="406">Aristotle: no state fund;</text><text class="l18t-ttl" x="1007" y="435">citizens who love money</text><text class="l18t-src" x="1007" y="467">Politics 1271b · Cooley D55</text></g>
+<g class="linked l18t-t" id="l18m-7"><line class="l18t-lead" x1="1364" y1="246" x2="1364" y2="268"/><rect class="l18t-box" x="1184" y="94" width="360" height="152" rx="12"/><circle class="l18t-node" cx="1364" cy="290" r="14"/><text class="l18t-date" x="1202" y="132">3rd century BC</text><text class="l18t-ttl" x="1202" y="166">Sparta strikes its first</text><text class="l18t-ttl" x="1202" y="195">coins of its own</text><text class="l18t-src" x="1202" y="227">unit textbook only · not in Cooley</text></g>
+<g class="linked l18t-w" id="l18m-8"><line class="l18t-lead" x1="1559" y1="312" x2="1559" y2="334"/><rect class="l18t-box" x="1379" y="334" width="360" height="152" rx="12"/><circle class="l18t-node" cx="1559" cy="290" r="14"/><text class="l18t-date" x="1397" y="372">c. AD 100</text><text class="l18t-ttl" x="1397" y="406">Plutarch: iron the only</text><text class="l18t-ttl" x="1397" y="435">legal tender; no trade</text><text class="l18t-src" x="1397" y="467">Lykourgos 9 · Cooley D58</text></g>
+</svg>
+    <figcaption>Drawn for this lesson. Colours show the kind of evidence; dashed boxes come only from the unit textbook and cannot be checked in Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l18m-1" hidden></i>
+  <i class="reveal" data-also="#l18m-2" hidden></i>
+  <i class="reveal" data-also="#l18m-3" hidden></i>
+  <i class="reveal" data-also="#l18m-4" hidden></i>
+  <i class="reveal" data-also="#l18m-5" hidden></i>
+  <i class="reveal" data-also="#l18m-6" hidden></i>
+  <i class="reveal" data-also="#l18m-7" hidden></i>
+  <i class="reveal" data-also="#l18m-8" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Private austerity, public wealth?" data-title="Notes 4 — Private austerity, public wealth?" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Private austerity, public wealth?</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L18 · Exchange, iron and trade</b></span><span>4 · Private austerity, public wealth?</span></div>
+    <div class="row"><div class="cq">What happened to Lysander’s gold and silver?</div>
+      <div class="nts reveal">C. 400 BC: kept for “public use”; private possession → <b>death</b> (Plut. <i>Lys.</i> 17, E75) <span class="sep">·</span> Persian money had paid the fleet: 10,000 darics from Cyrus (E120)</div></div>
+    <div class="row"><div class="cq">What did critics say?</div>
+      <div class="nts reveal">Aristotle (330s/320s): “a city without money, but individuals with a love of money” (D55) <span class="sep">·</span> Xenophon, later ch. 14: some now “make a display of their wealth” (E70) <span class="sep">·</span> Plato: more gold + silver in private Spartan hands than in all Greece (E72)</div></div>
+    <div class="row"><div class="cq">Did Spartans use coins?</div>
+      <div class="nts reveal">Foreign coins reached the <b>state</b> (B12, E75) <span class="sep">·</span> money for mess extras (D63; E77, later) <span class="sep">·</span> NESA: a <b>coin hoard</b> in Sparta “may suggest” coin use (not in Cooley) <span class="sep">·</span> no Spartan coins till 3rd c. (textbook)</div></div>
+    <div class="row"><div class="cq">Explain Cooley’s phrase “comfortable prosperity masked by a display of austerity”.</div>
+      <div class="nts reveal">Wealth existed (land, horses, chariots, gold + silver) <b>but</b> display was banned → plain life, messes, iron money <span class="sep">·</span> Hodkinson: austerity “a temporary imposition” on a “wealth-based society”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Trade" data-title="What went out" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">5 · Trade · I do — Laconian goods found abroad</p>
+  <h2>What went out: Laconian goods far from Laconia</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <figure class="figure short contain"><img src="images/bradley-3-32-bronze-banqueter-l18.jpg" alt="Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate"><figcaption>Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate — <span class="cr">Bradley, Fig 3.32</span></figcaption></figure>
+      <div class="note reveal" data-code="counter"><p class="body">Cooley on this figure: “It need not, of course, show any individual diner, let alone a Spartiate one, since it could equally well have been made for external consumption.” Made for export, perhaps.</p></div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Painted pottery, Italy</span><span class="d">A Laconian hydria “found at Vulci in Italy as prized grave-goods” (Cooley, Fig. 3); the Arkesilas cup, c. 565–560 BC, was also found at Vulci (unit textbook).</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Bronzes, north-west Greece and the Balkans</span><span class="d">The banqueter, “thought to have been found” at Dodona (E71); the bronze girl, “probably found at Prizren in Kosovo” (D64).</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">The Vix krater, Burgundy</span><span class="d">Found in a Celtic grave in France; made in Laconia or at Taras, a Spartan colony — scholars still debate which (unit textbook).</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">The map</span><span class="d">Lesson 16’s find-spot map shows these places. Its dashed lines join maker to find-spot; they are not trade routes.</span></li>
+    </ol>
+  </div>
+  <p class="small reveal"><b>Careful:</b> a find-spot shows where an object ended up, not who carried it or how — trade, a gift and plunder all move goods.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Trade" data-title="What came in" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">5 · Trade · We do — imports in a city said to have none</p>
+  <h2>What came in: ivory, metals and foreign money</h2>
+  <div class="split" style="--cols:.55fr 1.6fr">
+    <figure class="figure short contain"><img src="images/bradley-3-27-ivory-comb-l18.jpg" alt="An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot"><figcaption>An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot — <span class="cr">Bradley, Fig 3.27</span></figcaption></figure>
+    <div class="stack tight">
+      <div class="card reveal"><div class="k">Ivory</div><p class="body">Among finds from Sparta’s sanctuaries in the 8th–7th centuries BC: “bronze tripods, elaborate pottery, iron weapons, jewellery, carved ivories” (Cavanagh, in Cooley); his Figure 1 is a 7th-century ivory lion from the Sanctuary of Artemis Orthia. There were no elephants in Greece, so the raw ivory was imported. The C6 plaque’s Laconian lettering suggests some ivories were carved locally.</p></div>
+      <div class="card reveal"><div class="k">A ship, in ivory</div><p class="body">An “Ivory plaque showing departure of ship and crew”, from the lowest layer at Orthia, possibly as early as the late 7th century BC; its letters are Laconian (Cooley C6).</p></div>
+      <div class="card reveal"><div class="k">Metals and money</div><p class="body">Tin for bronze had to be imported (unit textbook); Persian gold darics and Aeginetan silver staters reached the Spartan state (B12).</p></div>
+      <p class="qprompt reveal">Plutarch says “no mercantile cargoes came to their ports”. What does this evidence do to his claim?</p>
+      <p class="body reveal">It contradicts it for the period of these finds: raw ivory and tin came in, and foreign coins reached the state (as gifts, not cargoes).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Trade" data-title="Who traded, and where?" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow">5 · Trade · I do — the people and the port</p>
+  <h2>Who traded — and through which port?</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">The port</div><p class="body">Cavanagh: “The port of Gytheion must have been important from early on and was the site of shipyards for the Spartan fleet.” It was a perioikic town.</p></div>
+    <div class="card accent reveal"><div class="k">The perioikoi</div><p class="body">Cooley: the harbours were perioikic, and “we can assume that perioikoi were involved in overseas trade and fishery”. An assumption, not a record.</p></div>
+    <div class="card accent reveal"><div class="k">The Spartiates</div><p class="body">“Spartiates were not allowed to engage in any form of trade” (Cooley). How they got goods from the perioikoi: “the mechanism of exchange between the two groups remains unknown”.</p></div>
+  </div>
+  <div class="src reveal">
+    <div class="k">Source · Polybius on Sparta’s overseas wars</div>
+    <p class="quote sm">But when they began to send out expeditions across the seas, or to campaign with infantry outside the Peloponnese, it became clear that neither currency made of iron nor the exchange of annual crops, as laid down by the laws of Lykourgos would make up for the shortfall in what they needed, [9] since the situation required a common currency and materials from abroad.</p>
+    <p class="prov">Polybius, <i>Histories</i> 6.49 · a Greek historian of the 2nd century BC, looking back · trans. in Cooley E74</p>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · Trade" data-title="Cold call: evidence for trade">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · cold call · 3 minutes</p>
+  <h2>One written and one archaeological piece of evidence for trade</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Written</div><p class="lead">Name the writer, the date, and what it shows.</p>
+      <p class="body reveal">e.g. Polybius (2nd c. BC): iron currency could not pay for wars abroad, which needed “a common currency and materials from abroad”.</p></div>
+    <div class="card accent"><div class="k">Archaeological</div><p class="lead">Name the object or inscription, where it was found, and what it shows.</p>
+      <p class="body reveal">e.g. a Laconian hydria found at Vulci in Italy (Cooley, Fig. 3); carved ivories, from imported ivory, found at Orthia.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Trade" data-title="Notes 5 — Trade" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Trade: what went out, what came in</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L18 · Exchange, iron and trade</b></span><span>5 · Trade</span></div>
+    <div class="row"><div class="cq">What went out?</div>
+      <div class="nts reveal">Laconian hydria + Arkesilas cup found at <b>Vulci</b>, Italy <span class="sep">·</span> bronze banqueter thought from <b>Dodona</b> (E71) <span class="sep">·</span> bronze girl prob. Prizren (D64) <span class="sep">·</span> <b>Vix</b> krater (Laconia or Taras) → L16 map</div></div>
+    <div class="row"><div class="cq">What came in?</div>
+      <div class="nts reveal"><b>Ivory</b> (no elephants in Greece): carved ivories found at Orthia, 7th c. (Cavanagh, C6) <span class="sep">·</span> <b>tin</b> for bronze (textbook) <span class="sep">·</span> darics + Aeginetan staters (B12)</div></div>
+    <div class="row"><div class="cq">Who traded, and where?</div>
+      <div class="nts reveal"><b>Gytheion</b>: shipyards, chief naval base <span class="sep">·</span> <b>perioikoi</b>: overseas trade + fishing (“we can assume”, Cooley) <span class="sep">·</span> Spartiates barred <span class="sep">·</span> exchange mechanism “remains unknown”</div></div>
+    <div class="row"><div class="cq">So was Plutarch right?</div>
+      <div class="nts reveal">No: goods went out <b>and</b> came in <span class="sep">·</span> find-spot ≠ who carried it <span class="sep">·</span> Polybius: iron money could not pay for overseas wars (E74)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Trade" data-title="Summary" data-kind="notes">
+<div class="wrap l18-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.75fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What was Spartan iron money, and who tells us about it?</li>
+          <li>What does contemporary evidence show about gold, silver and trade?</li>
+          <li>How should we explain the gap between the two?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary</div>
+        <p class="quote sm model">Spartiates were not allowed to own gold or silver and used a bulky iron currency for small everyday payments: Xenophon, writing probably in the late 390s or 380s BC, describes the currency and searches for gold and silver, and Plutarch, writing about AD 100, turns this into a Sparta with no gold, silver or trade. Contemporary evidence complicates this: the war-fund inscription and Lysander’s spoils show the state handling gold and silver, critics such as Aristotle saw Spartans who loved money, and Laconian goods went abroad while ivory and foreign coins came in. The iron money therefore seems to have limited how wealth was displayed rather than whether it existed, which Cooley calls ‘comfortable prosperity masked by a display of austerity’.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Iron: Boia, spits, the iron bar</label></li>
+        <li><label><input type="checkbox"> 2 · Xenophon v. Plutarch on iron money</label></li>
+        <li><label><input type="checkbox"> 3 · The war fund: who gave what, and when</label></li>
+        <li><label><input type="checkbox"> 4 · Lysander, the critics, coins, Cooley and Hodkinson</label></li>
+        <li><label><input type="checkbox"> 5 · Trade: out, in, who and where</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (c): the economy" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>The whole economy unit, examined in 2020</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 12 marks ≈ 22 minutes.</p></div>
+    <div class="card"><div class="k">No key word</div><p class="body">“What evidence … provide” is not a NESA glossary key word. The marking criteria tell you what to do.</p></div>
+    <div class="card accent"><div class="k">Lessons 15–18</div><p class="body">Land (15), technology (16), perioikoi and helots (17), exchange and trade (today): one answer draws on all four.</p></div>
+  </div>
+  <p class="lead">We take the question apart, read the criteria, the markers’ feedback and NESA’s list of points (checked against Cooley); you plan; then compare with a model plan and an annotated model answer.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 · Section II · Question 11 (c) · 12 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">What evidence</span> do <span class="code" data-code="evidence" data-letter="E">archaeological and written sources</span> provide about <span class="code" data-code="keyterm" data-letter="K">the Spartan economy</span> <span class="code" data-code="scope" data-letter="S">in this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="evidence" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">I do — take it apart; we do — the criteria and NESA’s list; you do — plan it.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — take it apart" data-kind="hsc">
+<div class="wrap l18-dense">
+  <p class="eyebrow">HSC 2020 Q11(c) · I do — deconstruct the question</p>
+  <h2>What the question — and the criteria — really ask</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">What evidence … provide</div><p class="body">The top-band criterion: “Provides a well-developed explanation of what evidence archaeological and written sources provide about the topic”. So: name each piece of evidence, say what it shows about the economy, and how far it can be trusted.</p></div>
+    <div class="note reveal" data-code="evidence"><div class="k">Archaeological and written sources</div><p class="body">Both, in every paragraph. In better responses, NESA reported, students could “make reference to specific evidence from named written sources and clearly identify archaeological evidence”. An inscription is a text found by archaeology: say what it is.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">The Spartan economy</div><p class="body">The syllabus’ four parts: land ownership, technology, the economic roles of perioikoi and helots, and exchange (iron bars, trade). Show how they connect: better responses could “show the relationship between these”.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">To 371 BC. Date every source, and flag late ones — Plutarch, c. AD 100 — as late.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">12 marks</div><p class="body">About 22 minutes · a thesis that says what the evidence shows · three paragraphs (land and labour · production and technology · exchange and trade) · about 450–600 words.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — the criteria and the feedback" data-kind="hsc">
+<div class="wrap l18-dense">
+  <p class="eyebrow">HSC 2020 Q11(c) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="stack tight">
+    <div class="tbl-scroll"><table class="tbl crit compact l18-marks">
+      <tr><th>Marks</th><th>Criteria (2020, part (c))</th></tr>
+      <tr><td class="m">10–12</td><td>Provides a well-developed explanation of what evidence archaeological and written sources provide about the topic · Integrates evidence from a wide variety of relevant sources to support the response · Communicates ideas and information logically and coherently using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">7–9</td><td>Provides a sound explanation of what evidence archaeological and written sources provide about the topic · Uses evidence from a variety of relevant sources to support the response · Communicates ideas and information logically using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–6</td><td>Provides some explanation of what evidence archaeological and written sources provide about the topic · Refers to one or more sources in the response · Communicates ideas and information using some appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">1–3</td><td>Makes general statement/s · May refer to source/s · May use historical terms and/or concepts</td></tr>
+    </table></div>
+    <p class="small reveal"><b>The step up:</b> 10–12 “Integrates evidence from a wide variety”; 7–9 “Uses evidence from a variety”. <b>A gap:</b> NESA published no sample answer for this part — only a list of points (next). Criteria and feedback quoted exactly from the NESA 2020 HSC Ancient History Marking Guidelines (Section II, part (c)) and the 2020 marking feedback for Question 11.</p>
+    </div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">use historical terms specific to Sparta appropriately and accurately</span><span class="q">make reference to specific evidence from named written sources and clearly identify archaeological evidence to show features of the economy (c)</span><span class="q">provide a broad range of examples regarding the Spartan economy and show the relationship between these (c).</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">avoiding confusion with the Core Topic – Cities of Vesuvius: Pompeii and Herculaneum</span><span class="q">integrating sources as evidence rather than relying solely on unsupported knowledge and understanding (b, c)</span><span class="q">sustaining the line of explanation and logical progression or organisation of ideas throughout the longer response (c).</span></p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — what the markers listed (1)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · We do — NESA’s “answers could include”, checked against Cooley (1 of 2)</p>
+  <h2>What the marking guidelines listed: land, crafts, labour</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l18-pt">• <span class="code" data-code="counter" id="n20-1">Kleros system – instituted by Lycurgus (according to Plutarch) – equal division of land between Spartiates.</span><span class="mk">1</span></span>
+      <span class="l18-pt">• <span class="code" data-code="evidence" id="n20-2">Distinct inheritance laws which allowed females to inherit also led to unequal distribution of kleroi over time (Aristotle?).</span><span class="mk">2</span></span>
+      <span class="l18-pt">• <span class="code" data-code="keyterm" id="n20-3">Range of crafts and industries, theoretically assigned to periokoi (Plutarch);</span><span class="mk">3</span> <span class="code" data-code="counter" id="n20-4">however, Herodotus identifies inherited professions amongst Spartiates.</span><span class="mk">4</span> <span class="code" data-code="analysis" id="n20-5">Archaeological sources (such as kraters and kylikes) may suggest Spartiate artists in the earlier period.</span><span class="mk">5</span></span>
+      <span class="l18-pt">• <span class="code" data-code="counter" id="n20-6">Agricultural activities and estates relied on the slave labour of helots to sustain the military state (Tyrtaeus refers to the burden of the agricultural helot, for example).</span><span class="mk">6</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2020 HSC Ancient History Marking Guidelines, Section II part (c) · points 1–4 of 6</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-1"><span class="mk">1</span><b>Cooley says: late tradition</b><span class="tx">Plutarch (c. AD 100) is the source; Cooley: “there is, however, no evidence that in reality the land holdings of different Spartiates were, or ever had been, on a similar scale.” Lesson 15.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#n20-2"><span class="mk">2</span><b>Supported</b><span class="tx">Aristotle: “almost two-fifths of the whole country is owned by women” (D54). The question mark is NESA’s; the source is Aristotle.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n20-3"><span class="mk">3</span><b>An earlier witness</b><span class="tx">Xenophon (probably late 390s or 380s BC) already says Lycurgus barred free citizens from money-making (D53); Cooley: the perioikoi “probably” did this work.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-4"><span class="mk">4</span><b>Herodotus says: heralds, not potters</b><span class="tx">Herodotus 6.60 (D24) names heralds, flute-players and meat-cooks among the “Lakedaimonians” — hereditary jobs, not crafts or industries. Cooley: the ‘meat-cooks’ were probably sacrificial officials.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#n20-5"><span class="mk">5</span><b>Keep NESA’s “may”</b><span class="tx">Laconian painters left “no potters’ or painters’ names” (Hodkinson), so we cannot tell Spartiate from perioikic makers.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-6"><span class="mk">6</span><b>Cooley says: conquered Messenians</b><span class="tx">Tyrtaeus describes the conquered Messenians handing over half their produce (A6); whether helots were slaves or serfs is debated (Lesson 8).</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — what the markers listed (2)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · We do — NESA’s “answers could include”, checked against Cooley (2 of 2)</p>
+  <h2>What the marking guidelines listed: money, coins, trade</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l18-pt">• <span class="code" data-code="evidence" id="n20-7">Use of iron bars in economic exchange (Plutarch) to avoid economic stratification.</span><span class="mk">7</span> <span class="code" data-code="counter" id="n20-8">Discovery of a hoard of coins within the city of Sparta, which may suggest the use of coins as currency.</span><span class="mk">8</span></span>
+      <span class="l18-pt">• <span class="code" data-code="keyterm" id="n20-9">Necessity of foreign trade for Spartan economic life</span><span class="mk">9</span> <span class="code" data-code="counter" id="n20-10">eg Vix krater of Spartan design, uncovered in France, reveals exporting of Spartan goods;</span><span class="mk">10</span> <span class="code" data-code="analysis" id="n20-11">bone and ivory products (such as combs and figurines) reveal importance of importing in Spartan economy (from Syria?).</span><span class="mk">11</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2020 HSC Ancient History Marking Guidelines, Section II part (c) · points 5–6 of 6</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="evidence" data-hl="#n20-7"><span class="mk">7</span><b>Supported — with an earlier witness</b><span class="tx">Plutarch’s aim matches: “to eliminate totally all forms of inequality” (D58). Add Xenophon, earlier (D53), and Cooley: iron money in classical Sparta was “only fit to facilitate fairly small everyday transactions”.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-8"><span class="mk">8</span><b>Not in Cooley — check before you use it</b><span class="tx">Neither Cooley nor Clarke &amp; Garner describes this hoard, so its date and coins cannot be checked here. Keep NESA’s “may suggest”.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n20-9"><span class="mk">9</span><b>A strong claim</b><span class="tx">“Necessity” goes further than Cooley, who says only that “we can assume” the perioikoi traded overseas. Polybius links the need for foreign money to overseas wars (E74).</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n20-10"><span class="mk">10</span><b>Unit textbook: workshop debated</b><span class="tx">The Vix krater was made in Laconia or at Taras, a Spartan colony (unit textbook); Cavanagh, in Cooley, cites it simply as Laconian bronze-working. A grave in France shows where it ended up — not whether it was sold, given or looted.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#n20-11"><span class="mk">11</span><b>Ivory yes; bone, perhaps not</b><span class="tx">Raw ivory had to be imported (no elephants in Greece). Cooley names no source region — the “(from Syria?)” is NESA’s query. Clarke &amp; Garner: bone later replaced ivory, so bone need not be imported.</span></div>
+      <div class="verdict reveal"><b>NESA’s list.</b> Acceptable content, not a model answer — and the coin hoard is the point you can check least in our sources.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — you plan" data-kind="hsc">
+<div class="wrap l18-dense">
+  <p class="eyebrow">HSC 2020 Q11(c) · You do · 23 minutes · press K for the timer</p>
+  <h2>What evidence do archaeological and written sources provide about the Spartan economy in this period? <span class="small">(12 marks)</span></h2>
+  <div class="tbl-scroll"><table class="tbl compact l18-plan l18-empty">
+    <tr><th></th><th>Claim</th><th>Written evidence</th><th>Archaeological evidence</th><th>Judgement</th></tr>
+    <tr><td>1 · Land and labour</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2 · Production and technology</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3 · Exchange and trade</td><td></td><td></td><td></td><td></td></tr>
+  </table></div>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Plan</div><p class="body">A thesis first · every row needs <b>both</b> kinds of evidence, named and dated · each row ends with a judgement: do the two kinds agree?</p></div>
+    <div class="card quiet"><div class="k">Stuck?</div><p class="body nq">Start: “Written and archaeological sources agree that … ; they disagree about …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="Plan: HSC 2020 Q11(c)" data-kind="hsc">
+<div class="wrap l18-dense">
+  <p class="eyebrow">Plan: HSC 2020 Q11(c) · a model plan, written for this lesson</p>
+  <h2>Both kinds of evidence in every row</h2>
+  <div class="tbl-scroll" data-veil="Plan first — then show the model plan"><table class="tbl compact l18-plan">
+    <tr><th></th><th>Claim</th><th>Written evidence</th><th>Archaeological evidence</th><th>Judgement</th></tr>
+    <tr class="reveal"><td>Thesis</td><td colspan="4">The sources agree that helot farming and (probably) perioikic production freed Spartiates for war; they disagree about money and trade, where inscriptions and objects undercut the later picture of a closed Sparta.</td></tr>
+    <tr class="reveal"><td>1 · Land and labour</td><td>helots worked the land so Spartiates could pay their mess dues</td><td><span class="l18-w">Tyrtaeus</span> fr. 6–7 (A6): half the produce · <span class="l18-w">Plutarch</span> <i>Lyc.</i> 8 (D57): 9,000 lots · <span class="l18-w">Aristotle</span> <i>Pol.</i> 1270a (D54): land in few hands; women two-fifths</td><td><span class="l18-a">survey</span>: Messenian villages that “evidently housed the helots”; sites near Sparta from modest to prosperous; Kopanaki storage jars (Cavanagh)</td><td>agree on helot labour; Plutarch’s equal lots probably a later ideal</td></tr>
+    <tr class="reveal"><td>2 · Production and technology</td><td>Spartiates barred from money-making; production probably perioikic</td><td><span class="l18-w">Xenophon</span> <i>Lak. Pol.</i> 7 (D53) · <span class="l18-w">Herodotus</span> 6.60 (D24): hereditary heralds, flute-players, cooks · <span class="l18-w">Xenophon</span> on Cinadon’s iron-works (E53a)</td><td><span class="l18-a">objects</span>: lead figurines cast in moulds (Orthia); 10 cm bronze warrior; Laconian black-figure, the Arkesilas cup (Lesson 16)</td><td>objects show what was made; only writers suggest who made it — makers unnamed</td></tr>
+    <tr class="reveal"><td>3 · Exchange and trade</td><td>iron money and no trade: true of private display, not of the state or of trade</td><td><span class="l18-w">Plutarch</span> <i>Lyc.</i> 9 (D58) v. <span class="l18-w">Xenophon</span>’s searches (D53) · Lysander (E75) · <span class="l18-w">Aristotle</span> (D55)</td><td><span class="l18-a">war fund</span> (B12); a coin hoard (NESA: check its date); hydria at Vulci; ivories at Orthia; Vix krater</td><td>the closer in date, the more gold, silver and trade appear</td></tr>
+    <tr class="reveal"><td>Conclusion</td><td colspan="4">An economy built to free a citizen elite for war; Cooley’s “comfortable prosperity masked by a display of austerity”.</td></tr>
+  </table></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — model, thesis and paragraph 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · annotated model · thesis and paragraph 1 of 3</p>
+  <h2>Say what the evidence shows — then where it agrees</h2>
+  <div class="annot wide" data-veil="Plan first — then show the model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m7-1">Written and archaeological sources agree that Sparta’s economy rested on land worked by helots and on goods probably made by the perioikoi, which freed Spartiates for war; they disagree most about money and trade, where inscriptions and objects found abroad undercut the later written picture of a Sparta closed to the outside world.</span><span class="mk">1</span>
+      <span class="code" data-code="keyterm" id="m7-2">On land and labour the two kinds of evidence largely agree.</span><span class="mk">2</span>
+      <span class="code" data-code="evidence" id="m7-3">Tyrtaeus, probably a Spartan poet of the mid-7th century BC, has the conquered Messenians bring their masters ‘Half of all the produce the ploughland bears’, and Plutarch, writing about AD 100, describes 9,000 equal Spartiate lots, each sufficient to produce ‘an annual crop of 70 measures of barley, 12 measures for his wife’.</span><span class="mk">3</span>
+      <span class="code" data-code="counter" id="m7-4">Aristotle, writing in the 330s or 320s BC, contradicts that equality: ‘the land has fallen into the hands of a small minority’, and ‘almost two-fifths of the whole country is owned by women’ through inheritance and dowries.</span><span class="mk">4</span>
+      <span class="code" data-code="evidence" id="m7-5">Intensive survey supports the dependence on helots: in Messenia it found ‘larger village communities; these evidently housed the helots who worked the land for the Spartans’, while near Sparta sites ranged ‘from the modest to larger and more prosperous ones’.</span><span class="mk">5</span>
+      <span class="code" data-code="analysis" id="m7-6">Survey cannot show who owned the land, but together the sources suggest that helot labour was real and that Plutarch’s equal lots are probably a later ideal.</span><span class="mk">6</span>
+      <p class="meta">Model written for this lesson (the unit’s model plan MR-7, corrected and written out) · thesis and paragraph 1 of 3</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m7-1"><span class="mk">1</span><b>A thesis about evidence</b><span class="tx">It says what the sources show and where they disagree — not just what the economy was.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m7-2"><span class="mk">2</span><b>Signpost</b><span class="tx">One part of the economy per paragraph, with its own mini-judgement.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-3"><span class="mk">3</span><b>Named, dated, quoted</b><span class="tx">Two writers seven centuries apart, each dated — the “named written sources” of better responses. Tyrtaeus A6; Plutarch D57.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m7-4"><span class="mk">4</span><b>Sources tested against each other</b><span class="tx">Aristotle (D54), centuries closer, contradicts Plutarch’s equality.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-5"><span class="mk">5</span><b>Archaeology in the same paragraph</b><span class="tx">The survey (Cavanagh, in Cooley), integrated — not saved for the end.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m7-6"><span class="mk">6</span><b>What it can’t show</b><span class="tx">A limit of the evidence, then a hedged judgement (“probably”).</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — model, paragraph 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · annotated model · paragraph 2 of 3</p>
+  <h2>Production: what objects show, and what only writers can tell</h2>
+  <div class="annot wide" data-veil="Show paragraph 2">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m7-7">On production, the written sources explain what the objects cannot.</span><span class="mk">7</span>
+      <span class="code" data-code="evidence" id="m7-8">Xenophon, writing probably in the late 390s or 380s BC, says Lycurgus ‘refused to allow free citizens to have anything to do with money making’, and Cooley concludes that the perioikoi ‘probably handled most of the economic activities that were prohibited to Lakedaimonians’.</span><span class="mk">8</span>
+      <span class="code" data-code="counter" id="m7-9">Yet Herodotus records Lacedaemonian heralds, flute-players and meat-cooks who took up their fathers’ professions, and Xenophon’s account of Cinadon’s plot, c. 399 BC, shows iron-works full of ‘many knives, many swords, many skewers’ without saying who worked in them.</span><span class="mk">9</span>
+      <span class="code" data-code="evidence" id="m7-10">The objects show skilled Laconian work: the many lead figurines from the Sanctuary of Artemis Orthia were cast in moulds, a 10 cm bronze warrior was found at Sparta, and Laconian black-figure cups such as the Arkesilas cup were painted with great skill.</span><span class="mk">10</span>
+      <span class="code" data-code="analysis" id="m7-11">But Laconian painters left no names, so the objects show what was made, while only the written sources suggest who was allowed to make it.</span><span class="mk">11</span>
+      <p class="meta">Model written for this lesson · paragraph 2 of 3</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m7-7"><span class="mk">7</span><b>The relationship</b><span class="tx">The topic sentence says how written and archaeological evidence relate on production — one way to keep “the line of explanation”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-8"><span class="mk">8</span><b>Writer, then historian</b><span class="tx">Xenophon (D53), dated with his hedge; Cooley’s “probably” kept.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m7-9"><span class="mk">9</span><b>Complicates the picture</b><span class="tx">Herodotus 6.60 (D24) and Cinadon (E53a) — the iron-works’ workers unnamed, as Xenophon leaves them.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-10"><span class="mk">10</span><b>Three objects, three technologies</b><span class="tx">Lead, bronze, clay (Lesson 16). The bronze warrior is Cooley’s Fig. 2.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m7-11"><span class="mk">11</span><b>The limit, turned into a point</b><span class="tx">Hodkinson: “no potters’ or painters’ names” on Laconian pottery.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — model, paragraph 3 and conclusion" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · annotated model · paragraph 3 and conclusion</p>
+  <h2>Where the evidence disagrees — and why</h2>
+  <div class="annot wide l18-tight" data-veil="Show paragraph 3 and the conclusion">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m7-12">The sources disagree most sharply over money and trade.</span><span class="mk">12</span>
+      <span class="code" data-code="evidence" id="m7-13">Plutarch claims that Lycurgus banned ‘all forms of gold and silver coinage’ so that ‘no mercantile cargoes came to their ports’, but Xenophon, nearly five centuries earlier, describes only a bulky currency and ‘Random official searches for gold and silver’, which imply that some Spartans held precious metal.</span><span class="mk">13</span>
+      <span class="code" data-code="evidence" id="m7-14">The war-fund inscription, of c. 427 BC or later, lists ‘one thousand Aiginetan staters’ from exiles from Chios and a thousand Persian darics from the Ephesians, given for the war, and Plutarch, drawing on the 4th-century historian Theopompus, reports that in c. 400 BC Lysander’s spoils were kept for public use, with death for private possession: the state, at least, handled gold and silver.</span><span class="mk">14</span>
+      <span class="code" data-code="counter" id="m7-15">If the hoard of coins discovered within the city of Sparta belongs to this period, it ‘may suggest the use of coins as currency’.</span><span class="mk">15</span>
+      <span class="code" data-code="evidence" id="m7-16">Goods also moved both ways, whether by trade, gift or plunder: a Laconian hydria was ‘found at Vulci in Italy as prized grave-goods’, the Vix krater, made in Laconia or at Taras, reached Burgundy, and the carved ivories found at Orthia were made from imported ivory.</span><span class="mk">16</span>
+      <span class="code" data-code="judgement" id="m7-17">Together the sources reveal an economy designed to free a citizen elite for war. Where they disagree, the inscriptions and objects are closer in date than Plutarch, and they support Cooley’s view of ‘comfortable prosperity masked by a display of austerity’: the iron money limited what citizens could show, not what Sparta held or traded.</span><span class="mk">17</span>
+      <p class="meta">Model written for this lesson · whole answer ≈ 600 words, about 22 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m7-12"><span class="mk">12</span><b>Signpost the disagreement</b><span class="tx">The thesis promised it; this paragraph delivers it.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-13"><span class="mk">13</span><b>Late v. early</b><span class="tx">Plutarch (D58) against Xenophon (D53), with the gap in time stated.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-14"><span class="mk">14</span><b>An inscription, dated</b><span class="tx">B12, “c. 427 BC or later”, then Lysander (E75): a contemporary record and a written source, integrated.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m7-15"><span class="mk">15</span><b>NESA’s point, hedged</b><span class="tx">The coin hoard is in NESA’s list but not in Cooley: <i>If … belongs to this period</i> keeps it honest.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m7-16"><span class="mk">16</span><b>Out and in</b><span class="tx">Exports (Cooley Fig. 3; the Vix krater, workshop debated) and an import (ivory), each with a find-spot.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m7-17"><span class="mk">17</span><b>Resolve</b><span class="tx">A refined judgement that weighs the kinds of evidence by date, then ends on a historian’s interpretation.</span></div>
+      <div class="verdict reveal"><b>Written to the 10–12 criteria:</b> a well-developed explanation that integrates written and archaeological evidence in every paragraph.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">1–3 marks (our estimate) · knowledge, not evidence</span>
+      <p class="resp">Sparta’s economy was based on farming. The helots worked the land and gave half their crops to the Spartans. The perioikoi made goods and traded, and the Spartans used iron bars instead of coins …</p>
+      <p class="why">Mostly accurate, but no source is named or weighed — the markers’ area to improve: “relying solely on unsupported knowledge and understanding”.</p></div>
+    <div class="rung reveal"><span class="mark">4–6 marks (our estimate) · one kind of evidence</span>
+      <p class="resp">Plutarch says Lycurgus divided the land into 9,000 lots and banned gold and silver. Xenophon says citizens could not make money. Aristotle says the land fell into the hands of a few …</p>
+      <p class="why">Named written sources, but no archaeological evidence at all, and little on what each shows. The top band “Integrates evidence from a wide variety of relevant sources”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · a late source as fact</span>
+      <p class="resp">Plutarch proves that the Spartans used only iron bars and never traded, because no merchant ships came to their ports.</p>
+      <p class="why">Plutarch wrote about AD 100 and hedges parts of the story; the war-fund inscription contradicts him, and Laconian goods found abroad show that goods left Laconia.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2020 Q11(c)" data-title="HSC 2020 Q11(c) — mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2020 Q11(c) · Self-mark and peer check</p>
+  <h2>Mark your own plan</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> a thesis that says what the evidence shows, and where it disagrees</label></li>
+        <li><label><input type="checkbox"> <span>written <b>and</b> archaeological evidence in every paragraph</span></label></li>
+        <li><label><input type="checkbox"> every source named and dated — no “the sources say”</label></li>
+        <li><label><input type="checkbox"> land, labour, production and exchange, and how they connect</label></li>
+        <li><label><input type="checkbox"> Plutarch flagged as late; hedges kept (probably, may)</label></li>
+        <li><label><input type="checkbox"> each paragraph ends with a judgement, not a fact</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">Peer check (2 minutes)</div>
+        <p class="body">Swap plans. Tick each of NESA’s six points your partner covers (slides 37–38), and add one they missed.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>Outline the evidence for Spartan trade in this period.</b> (4 marks)</p>
+        <p class="body"><b>To what extent was Sparta a society without money in this period?</b> (12 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 7 · sequencing · Chapter 11 Activity A</p>
+  <h2>Put these in order, earliest first</h2>
+  <p class="task">Write the letters in order and add a date or approximate period for each.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Plutarch writes his <i>Life of Lycurgus</i>.</span></li>
+    <li><span class="k">B</span><span>A Laconian workshop paints the Arkesilas cup.</span></li>
+    <li><span class="k">C</span><span>Tyrtaeus’ <i>Eunomia</i> records calls for the land to be redistributed.</span></li>
+    <li><span class="k">D</span><span>The Athenians inscribe a shield captured from the Spartans at Pylos.</span></li>
+    <li><span class="k">E</span><span>King Agis IV proposes dividing the land into 4,500 Spartiate lots.</span></li>
+    <li><span class="k">F</span><span>Aristotle writes that almost two-fifths of the land is owned by women.</span></li>
+    <li><span class="k">G</span><span>A workshop in Laconia or at Taras makes the Vix krater.</span></li>
+  </ul>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — the order, as a timeline" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 7 · sequencing · the answer key</p>
+  <h2>The economy evidence in order</h2>
+  <div data-answers>
+    <figure class="diagram sol reveal"><svg class="l18-tl l18-seq" viewBox="0 0 1600 600" role="img" aria-label="Answer key, in date order: C, Tyrtaeus’ Eunomia records calls to redistribute the land, mid-7th century BC; B, a Laconian workshop paints the Arkesilas cup, c. 565 to 560 BC; G, a workshop in Laconia or at Taras makes the Vix krater, late 6th century BC; D, the Athenians inscribe a shield captured at Pylos, c. 425 BC; F, Aristotle writes that almost two-fifths of the land is owned by women, 330s or 320s BC; E, King Agis IV proposes 4,500 Spartiate lots, c. 244 to 241 BC (unit textbook only, not in Cooley); A, Plutarch writes his Life of Lycurgus, c. AD 100. Spacing is not to scale.">
+<rect class="l18t-bg" x="2" y="2" width="1596" height="596" rx="14"/>
+<line class="l18t-axis" x1="60" y1="300" x2="1082" y2="300"/>
+<path class="l18t-break" d="M1074,316 l16,-32 M1106,316 l16,-32"/>
+<line class="l18t-axis" x1="1118.0" y1="300" x2="1282" y2="300"/>
+<path class="l18t-break" d="M1274,316 l16,-32 M1306,316 l16,-32"/>
+<line class="l18t-axis" x1="1318" y1="300" x2="1540" y2="300"/>
+<g class="l18t-key"><rect class="l18t-sw w" x="30" y="566" width="26" height="16" rx="3"/><text x="64" y="580">written source</text><rect class="l18t-sw a" x="250" y="566" width="26" height="16" rx="3"/><text x="284" y="580">object or inscription</text><rect class="l18t-sw t" x="530" y="566" width="26" height="16" rx="3"/><text x="564" y="580">unit textbook only</text><text class="l18t-note" x="1570" y="580">Earliest on the left · spacing not to scale</text></g>
+<g class="linked l18t-w" id="l18s-1"><line class="l18t-lead" x1="200" y1="256" x2="200" y2="278"/><rect class="l18t-box" x="14" y="104" width="372" height="152" rx="12"/><circle class="l18t-node" cx="200" cy="300" r="24"/><text class="l18t-letter" x="200" y="309">C</text><text class="l18t-date" x="32" y="142">mid-7th century BC</text><text class="l18t-ttl" x="32" y="176">Tyrtaeus’ Eunomia: calls</text><text class="l18t-ttl" x="32" y="205">to redistribute the land</text><text class="l18t-src" x="32" y="237">Aristotle, Politics 1306b · Cooley D26</text></g>
+<g class="linked l18t-a" id="l18s-2"><line class="l18t-lead" x1="400" y1="322" x2="400" y2="344"/><rect class="l18t-box" x="214" y="344" width="372" height="152" rx="12"/><circle class="l18t-node" cx="400" cy="300" r="24"/><text class="l18t-letter" x="400" y="309">B</text><text class="l18t-date" x="232" y="382">c. 565–560 BC</text><text class="l18t-ttl" x="232" y="416">A Laconian workshop paints</text><text class="l18t-ttl" x="232" y="445">the Arkesilas cup</text><text class="l18t-src" x="232" y="477">date: unit textbook (found at Vulci)</text></g>
+<g class="linked l18t-a" id="l18s-3"><line class="l18t-lead" x1="600" y1="256" x2="600" y2="278"/><rect class="l18t-box" x="414" y="104" width="372" height="152" rx="12"/><circle class="l18t-node" cx="600" cy="300" r="24"/><text class="l18t-letter" x="600" y="309">G</text><text class="l18t-date" x="432" y="142">late 6th century BC</text><text class="l18t-ttl" x="432" y="176">A workshop in Laconia or</text><text class="l18t-ttl" x="432" y="205">at Taras makes the Vix krater</text><text class="l18t-src" x="432" y="237">date: unit textbook (found at Vix)</text></g>
+<g class="linked l18t-a" id="l18s-4"><line class="l18t-lead" x1="800" y1="322" x2="800" y2="344"/><rect class="l18t-box" x="614" y="344" width="372" height="152" rx="12"/><circle class="l18t-node" cx="800" cy="300" r="24"/><text class="l18t-letter" x="800" y="309">D</text><text class="l18t-date" x="632" y="382">c. 425 BC</text><text class="l18t-ttl" x="632" y="416">The Athenians inscribe a</text><text class="l18t-ttl" x="632" y="445">shield captured at Pylos</text><text class="l18t-src" x="632" y="477">inscription · Cooley B13</text></g>
+<g class="linked l18t-w" id="l18s-5"><line class="l18t-lead" x1="1000" y1="256" x2="1000" y2="278"/><rect class="l18t-box" x="814" y="104" width="372" height="152" rx="12"/><circle class="l18t-node" cx="1000" cy="300" r="24"/><text class="l18t-letter" x="1000" y="309">F</text><text class="l18t-date" x="832" y="142">330s/320s BC</text><text class="l18t-ttl" x="832" y="176">Aristotle: almost two-fifths</text><text class="l18t-ttl" x="832" y="205">of the land owned by women</text><text class="l18t-src" x="832" y="237">Politics 1270a · Cooley D54</text></g>
+<g class="linked l18t-t" id="l18s-6"><line class="l18t-lead" x1="1200" y1="322" x2="1200" y2="344"/><rect class="l18t-box" x="1014" y="344" width="372" height="152" rx="12"/><circle class="l18t-node" cx="1200" cy="300" r="24"/><text class="l18t-letter" x="1200" y="309">E</text><text class="l18t-date" x="1032" y="382">c. 244–241 BC</text><text class="l18t-ttl" x="1032" y="416">King Agis IV proposes</text><text class="l18t-ttl" x="1032" y="445">4,500 Spartiate lots</text><text class="l18t-src" x="1032" y="477">unit textbook only · not in Cooley</text></g>
+<g class="linked l18t-w" id="l18s-7"><line class="l18t-lead" x1="1400" y1="256" x2="1400" y2="278"/><rect class="l18t-box" x="1214" y="104" width="372" height="152" rx="12"/><circle class="l18t-node" cx="1400" cy="300" r="24"/><text class="l18t-letter" x="1400" y="309">A</text><text class="l18t-date" x="1232" y="142">c. AD 100</text><text class="l18t-ttl" x="1232" y="176">Plutarch writes his</text><text class="l18t-ttl" x="1232" y="205">Life of Lycurgus</text><text class="l18t-src" x="1232" y="237">Cooley D57 · notes on authors</text></g>
+</svg>
+      <figcaption>Answer key, drawn for this lesson: dates from Cooley, or from the unit textbook where marked. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <i class="reveal" data-also="#l18s-1" hidden></i>
+    <i class="reveal" data-also="#l18s-2" hidden></i>
+    <i class="reveal" data-also="#l18s-3" hidden></i>
+    <i class="reveal" data-also="#l18s-4" hidden></i>
+    <i class="reveal" data-also="#l18s-5" hidden></i>
+    <i class="reveal" data-also="#l18s-6" hidden></i>
+    <i class="reveal" data-also="#l18s-7" hidden></i>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l18-dense">
+  <p class="eyebrow">Practice and review · 2 of 7 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l18-two" data-answers>
+    <li><span class="n">1</span><span>The war fund inscription shows that the Spartan state never handled gold or silver.</span>
+      <span class="sol no reveal">False <span class="why">— it lists gifts to the Lacedaemonians “for the war”, including “one thousand Aiginetan staters” and a thousand darics (Cooley B12).</span></span></li>
+    <li><span class="n">2</span><span>Xenophon’s account of Lycurgus’ currency names iron as its metal.</span>
+      <span class="sol no reveal">False <span class="why">— he describes a currency that would “require a wagon to transport it” but never names the metal (Cooley D53).</span></span></li>
+    <li><span class="n">3</span><span>Plutarch presents the vinegar story as certain.</span>
+      <span class="sol no reveal">False <span class="why">— “He is even supposed to have used vinegar” (Cooley D58): he reports it, he does not vouch for it.</span></span></li>
+    <li><span class="n">4</span><span>Cooley thinks iron money was used in classical Sparta.</span>
+      <span class="sol reveal">True <span class="why">— “the iron money used in classical Sparta was only fit to facilitate fairly small everyday transactions”.</span></span></li>
+    <li><span class="n">5</span><span>After Lysander’s victory, Spartiates were allowed to keep gold and silver for private use.</span>
+      <span class="sol no reveal">False <span class="why">— it was kept for public use, and “if anyone was caught possessing this money for private use, they determined the punishment should be death” (Cooley E75).</span></span></li>
+    <li><span class="n">6</span><span>The text of the war-fund inscription gives its date.</span>
+      <span class="sol no reveal">False <span class="why">— “Nothing about the text of the inscription provides us with a certain date” (Cooley): c. 427 BC or later.</span></span></li>
+    <li><span class="n">7</span><span>The raw ivory for the carvings found at Orthia had to come from outside Greece.</span>
+      <span class="sol reveal">True <span class="why">— there were no elephants in Greece. Cavanagh lists “carved ivories” among finds from Sparta’s sanctuaries in the 8th–7th centuries BC, and his Figure 1 is a 7th-century ivory lion from Orthia (in Cooley).</span></span></li>
+    <li><span class="n">8</span><span>Cooley says the bronze banqueter must show a Spartiate diner.</span>
+      <span class="sol no reveal">False <span class="why">— “It need not, of course, show any individual diner, let alone a Spartiate one” (Cooley E71).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 7 · cloze · written for this lesson</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Aeginetan</span><span>Boia</span><span>darics</span><span>Gytheion</span><span>iron</span><span>Lysander</span><span>vinegar</span><span>Vulci</span></div>
+  <ol class="cloze" data-answers>
+    <li>Plutarch says Lycurgus made <span class="gap"><span class="sol reveal">iron</span></span> the only form of legal tender.</li>
+    <li>Plutarch says Lycurgus is even supposed to have used <span class="gap"><span class="sol reveal">vinegar</span></span> so that the red-hot iron would not be tempered properly.</li>
+    <li>The war-fund inscription records a thousand <span class="gap"><span class="sol reveal">darics</span></span>, Persian gold coins, from the Ephesians.</li>
+    <li>Exiles from Chios gave a thousand <span class="gap"><span class="sol reveal">Aeginetan</span></span> staters.</li>
+    <li>The gold and silver brought home by <span class="gap"><span class="sol reveal">Lysander</span></span> was put to public use.</li>
+    <li>Sparta’s chief harbour and naval base was the perioikic town of <span class="gap"><span class="sol reveal">Gytheion</span></span>.</li>
+    <li>A Laconian hydria was found as grave-goods at <span class="gap"><span class="sol reveal">Vulci</span></span> in Italy.</li>
+    <li>Traces of iron workings are common at <span class="gap"><span class="sol reveal">Boia</span></span> in south-eastern Laconia.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l18-dense">
+  <p class="eyebrow">Practice and review · 4 of 7 · write an analytical paragraph · HSC-style, written for this lesson</p>
+  <h2>How far does the evidence support Plutarch’s picture of Sparta as a city without money or trade?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: true of what, and for whom?</span>
+    <span class="l">Evidence</span><span>Use Plutarch and Xenophon precisely, with their dates, and at least one inscription or object.</span>
+    <span class="l">Analyse</span><span>Explain what each shows about money and trade at Sparta.</span>
+    <span class="l">Evaluate</span><span>Weigh date, purpose and kind of evidence — and what the inscription cannot show.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">The evidence supports Plutarch’s picture only for the private display of wealth, not for the Spartan state or for trade. Plutarch, writing about AD 100, claims that Lycurgus banned ‘all forms of gold and silver coinage’ so that ‘no mercantile cargoes came to their ports’, and Xenophon, writing probably in the late 390s or 380s BC, confirms a bulky currency and ‘Random official searches for gold and silver’. Yet those searches imply that some Spartans held precious metal, and the war-fund inscription of c. 427 BC or later lists Persian darics and Aeginetan staters given to the Lacedaemonians for the war. Goods moved too: a Laconian hydria was ‘found at Vulci in Italy as prized grave-goods’, and the carved ivories found at Orthia were made from imported ivory. Plutarch was a moralist praising Lycurgus centuries later, and his own ‘He is even supposed to’ shows that he relied on tradition, whereas the inscription is a contemporary public record — though only of wartime gifts to the state. The evidence therefore suggests, as Cooley argues, ‘comfortable prosperity masked by a display of austerity’: the iron money limited what citizens could show, not what Sparta held or traded.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 7 · extended response · HSC-style, written for this lesson (Chapter 11, Activity E)</p>
+  <h2>To what extent does the archaeological evidence challenge the picture of an equal and austere Spartan economy found in the written sources? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis:</b> decide how far the objects and the survey overturn, qualify or support the written picture.</li>
+    <li><b>Land:</b> Plutarch’s equal lots (Cooley D57) against Aristotle (D54) and the survey’s mix of modest and prosperous sites (Cavanagh) — Lesson 15.</li>
+    <li><b>Technology and trade:</b> the Vix krater, the Arkesilas cup and mirrors against Plutarch’s claim that superfluous crafts died out (D58) — and his own remark that furniture was “superbly made there” — Lesson 16.</li>
+    <li><b>Exchange:</b> iron money (D58; Xenophon, D53) against the war-fund inscription (B12); judge Cooley’s and Hodkinson’s interpretations — this lesson.</li>
+  </ol>
+  <p class="small">A trap to avoid: the war-fund list is an inscription, not an object found abroad — say what kind of evidence each item is.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (1)" data-kind="practice notes">
+<div class="wrap prac l18-dense">
+  <p class="eyebrow">Practice and review · 6 of 7 · Chapter 11 review, questions 1–5</p>
+  <h2>Chapter review: the economy (1)</h2>
+  <ol class="rq" data-answers>
+    <li>What is a kleros, and who worked it?
+      <span class="sol reveal">A lot or allotment of land: the estate that supported a Spartiate and paid his mess contribution. Helots worked it and handed over part of the harvest — half, says Tyrtaeus (Cooley A6), or a rent fixed in advance, says Plutarch (D36).</span></li>
+    <li>According to Plutarch, how many lots were made for Spartiates and for perioikoi, and what did each Spartiate lot produce?
+      <span class="sol reveal">9,000 lots for the Spartiates and 30,000 for the perioikoi; each Spartiate lot produced 70 measures of barley a year for the man and 12 for his wife, with other fresh produce (<i>Lykourgos</i> 8, D57). Plutarch adds that some said Lycurgus made only 6,000 lots.</span></li>
+    <li>Name two groups other than male Spartiates who owned land, and one special kind of Spartiate holding, with evidence.
+      <span class="sol reveal">Women: “almost two-fifths of the whole country is owned by women” (Aristotle, D54). Perioikoi: “Perioikoi also owned their own land” (Cooley). The kings held royal estates: “specified tracts of high quality land in many of the territories of the perioikoi” (Xenophon, D9). Helots owned none.</span></li>
+    <li>Explain two reasons why historians doubt that equal lots existed in classical Sparta.
+      <span class="sol reveal">Aristotle, much closer in time, saw land “fallen into the hands of a small minority” and says nothing of an original equal division (D54); and land passed by inheritance and dowries — Cooley: “In the classical period, land was held as private property which was passed down the generations through inheritance and dowries”. Cooley finds no evidence that holdings “were, or ever had been, on a similar scale”.</span></li>
+    <li>What does intensive survey reveal about Laconia and Messenia?
+      <span class="sol reveal">In Messenia, “larger village communities; these evidently housed the helots who worked the land for the Spartans”; near Sparta, sites “ranging from the modest to larger and more prosperous ones”, and survey “has been used to argue” that smaller sites became fewer (Cavanagh, in Cooley). Survey cannot show who owned the land.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (2)" data-kind="practice notes">
+<div class="wrap prac l18-dense">
+  <p class="eyebrow">Practice and review · 7 of 7 · Chapter 11 review, questions 6–9</p>
+  <h2>Chapter review: the economy (2)</h2>
+  <ol class="rq" data-answers start="6">
+    <li>Describe two ways bronze objects were made, with an example of each.
+      <span class="sol reveal">Bronze is copper mixed with tin. It was <b>cast</b> in moulds, like the 10 cm bronze warrior found at Sparta (Cooley Fig. 2), or <b>hammered</b> from sheet, like helmets and the bronze facing over a shield’s wooden core — only the facing of the shield captured at Pylos survives (Cooley B13).</span></li>
+    <li>What does the Arkesilas cup reveal about Laconian skill and trade?
+      <span class="sol reveal">Skill: fine black-figure painting on a pale slip, with a detailed scene of King Arcesilas of Cyrene overseeing goods being weighed — silphium, says Cavanagh (in Cooley); others suggest wool. Trade: it was found at Vulci in Etruria, so Laconian pottery travelled — though we do not know who carried it there.</span></li>
+    <li>Compare Plutarch’s iron money with the war fund inscription as evidence for Spartan exchange.
+      <span class="sol reveal">Plutarch (c. AD 100, a moral biography) says gold and silver coinage was banned and no trade came in (D58); the inscription (c. 427 BC or later, a public record) shows the state receiving darics, staters and silver for the war (B12). The inscription is closer and contemporary, but covers only wartime gifts to the state; both may be partly right — private austerity, public wealth (Lysander, E75).</span></li>
+    <li>Evaluate Cooley’s view that the Spartan lifestyle was comfortable prosperity masked by a display of austerity.
+      <span class="sol reveal">Largely convincing for wealthy Spartiates: Xenophon’s searches imply hidden gold and silver, Aristotle saw “individuals with a love of money” (D55), Xenophon’s later chapter admits some now displayed their wealth (E70), and Hodkinson calls austerity “a temporary imposition” on a wealth-based society. But the restrictions were real — messes, plain dress, iron money — and poorer Spartiates who could not pay their mess dues lost citizenship.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">One written and one archaeological piece of evidence about Spartan money or trade — and what each shows.</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">Plutarch or the war-fund inscription: which is better evidence for classical Sparta, and why?</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> the Greek writers’ views of Sparta — who wrote, when, and why, and what each is reliable for. Your plans come back with the model plan.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l18-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources and inscriptions</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Xenophon, <i>Constitution of the Lakedaimonians</i> 7.2, 7.5–6 and 14.3 (D53, E70, trans. B. Wilson) and <i>Hellenika</i> 3.3.7 (E53a); Plutarch, <i>Life of Lykourgos</i> 8, 9 and 12 (D57, D58, D63, trans. B. Wilson) and <i>Life of Lysander</i> 4 (E120) and 17.1–2, 4–5, after Theopompos (E75); Aristotle, <i>Politics</i> 1270a and 1271b (D54, D55) and 1306b (D26); Plato, <i>Alcibiades</i> 1.122d–123b (E72); Polybius 6.49 (E74); Poseidonios in Athenaios 6.23–25 (D59); Dikaiarchos in Athenaios 4.19 (E77); Tyrtaios frs 6–7 (A6, trans. K. Hughes); Herodotus 6.60 (D24, trans. B. Wilson); Xenophon, <i>Constitution</i> 15.3 (D9); the Spartan war-fund inscription, IG V 1, 1 (B12); the Xouthias plaque, IG V 2, 159 (E73); the ivory ship plaque (C6); the Pylos shield (B13); the bronze banqueter (E71), the bronze girl (D64), a gold daric (E155b), the bronze warrior and the Vulci hydria (Cooley Figs 2–3). Cooley’s introductions to wealth and property (D52–D59) and to Spartan property and wealth (E71–E76), his note on the perioikoi and his notes on authors and on B12, E70 and E77; W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, both in Cooley; S. Hodkinson’s conclusion, as quoted there.</p>
+        <p class="small">Not in Cooley (from the unit textbook, Chapter 11): Plutarch, <i>Lysander</i> 17.3 on obols and drachmas; the iron spits at the Heraion near Argos; Sparta’s first coinage in the 3rd century BC; Agis IV’s lots (Plutarch, <i>Agis</i> 8); the dates of the Arkesilas cup and the Vix krater. Clarke &amp; Garner, ch. 8, on bone replacing ivory.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images and diagrams</div>
+        <ul class="small"><li>The modern town of Gytheio, built on the site of ancient Gytheion — the perioikic harbour town that served as Sparta’s chief naval base — Clarke & Garner, Fig 6.3</li><li>A corroded iron bar that Clarke & Garner identify as a Spartan ‘pelanor’ (iron money). The textbook gives no find-spot, date or museum, so the identification cannot be checked — Clarke & Garner, Fig 6.9</li><li>Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate — Bradley, Fig 3.32</li><li>An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot — Bradley, Fig 3.27</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the money-story timeline, the Activity A timeline, and the comparison and planning tables.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC question, marking criteria, “answers could include” and marking feedback: NSW Education Standards Authority, 2020 HSC Ancient History examination, marking guidelines and feedback. © NESA.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
