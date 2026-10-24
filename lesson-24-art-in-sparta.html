@@ -1,0 +1,2333 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L24 · Cultural Life I: Art</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: Archaic Spartan art — ivories, bronzes, painted vases — and the austerity question, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 24 (cultural and everyday life I: art). Every class starts l24-. */
+
+/* the art timeline (svg_l24tl.svg): one colour per medium */
+.l24-tl text{font-family:var(--ui); fill:var(--ink);}
+.l24-tl .l24t-bg{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.l24-tl .l24t-band{fill:var(--surface-2); stroke:var(--rule); stroke-width:1.5;}
+.l24-tl .l24t-bandtx{font-size:21px; font-weight:700; fill:var(--slate);}
+.l24-tl .l24t-period{font-size:19px; font-weight:700; fill:var(--slate);}
+.l24-tl .l24t-period.sm{font-size:15px; font-weight:400;}
+.l24-tl .l24t-axis{stroke:var(--ink); stroke-width:4;}
+.l24-tl .l24t-tick{stroke:var(--slate); stroke-width:2;}
+.l24-tl .l24t-ticklbl{font-size:20px; fill:var(--slate);}
+.l24-tl .l24t-lyc{font-size:18px; font-style:italic; fill:var(--deep);}
+.l24-tl .l24t-lane{fill:none; stroke:var(--paper-rule); stroke-width:2;}
+.l24-tl .l24t-name{font-size:24px; font-weight:700;}
+.l24-tl .l24t-note{font-size:18px; fill:var(--slate);}
+.l24-tl .l24t-lbl{font-size:19px;}
+.l24-tl .l24t-lbl, .l24-tl .l24t-src, .l24-tl .l24t-zonetx{paint-order:stroke; stroke:var(--surface); stroke-width:6px; stroke-linejoin:round;}
+.l24-tl .l24t-src{font-size:17px; font-style:italic; fill:var(--slate);}
+.l24-tl .l24t-dot{fill:var(--surface); stroke:var(--ink); stroke-width:3;}
+.l24-tl .l24t-bar.iv{fill:var(--c-keyterm);} .l24-tl .l24t-bar.bz{fill:var(--c-evidence);}
+.l24-tl .l24t-bar.pt{fill:var(--deep);} .l24-tl .l24t-bar.st{fill:var(--slate);}
+.l24-tl .l24t-bar.faint{opacity:.35;}
+.l24-tl .l24t-hatch{fill:url(#l24t-hatch); stroke-width:2.5;}
+.l24-tl .l24t-hatch.iv{stroke:var(--c-keyterm);} .l24-tl .l24t-hatch.pt{stroke:var(--deep);}
+.l24-tl .l24t-hbg{fill:var(--surface);}
+.l24-tl .l24t-hline{stroke:var(--slate); stroke-width:3; opacity:.55;}
+.l24-tl .l24t-thin{stroke-width:5; stroke-dasharray:10 8; stroke-linecap:round;}
+.l24-tl .l24t-thin.bz{stroke:var(--c-evidence);} .l24-tl .l24t-thin.pt{stroke:var(--deep);}
+.l24-tl .l24t-zonebg{fill:var(--w-counter); opacity:.75;}
+.l24-tl .l24t-zoneln{stroke:var(--c-counter); stroke-width:4; stroke-dasharray:9 7;}
+.l24-tl .l24t-zonetx{font-size:21px; font-weight:700; fill:var(--c-counter);}
+.l24-tl .l24t-zonetx.sm{font-size:19px; font-weight:400; font-style:italic;}
+.l24-tl .l24t-hbox{fill:var(--w-counter); stroke:var(--c-counter); stroke-width:2.5;}
+.l24-tl .l24t-hhead{font-size:23px; font-weight:700; fill:var(--c-counter);}
+.l24-tl .l24t-htx{font-size:20px;}
+html:not(.read) .l24-tlfig svg{max-height:calc(100vh - 228px);}
+@media (max-width:700px){
+  html.read .diagram svg.l24-tl{min-width:1100px; max-height:none;}
+}
+
+/* "four kinds of Laconian art": a table with thumbnails */
+.l24-kinds td{vertical-align:middle; line-height:1.34;}
+.l24-kinds td:first-child{font-weight:700; color:var(--deep); white-space:nowrap;}
+.l24-kinds img{display:block; height:9vh; width:auto; max-width:9em; object-fit:contain; border-radius:6px;
+  background:var(--surface);}
+html.read .l24-kinds img{height:auto; max-height:110px;}
+@media (max-width:700px){ html.read .l24-kinds{min-width:560px;} }
+
+/* figures: sizes for side panels */
+.l24-fig .figure img{max-height:46vh;}
+.l24-mid .figure img{max-height:34vh;}
+.l24-small .figure img{max-height:26vh;}
+.l24-pair{display:grid; grid-template-columns:1fr 1fr; gap:clamp(10px,1.2vw,20px); align-items:start;}
+.l24-pair .figure img{max-height:34vh;}
+.l24-trio{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(8px,1vw,16px); align-items:start;}
+.l24-trio .figure img{max-height:20vh;}
+.l24-trio .figure figcaption{font-size:calc(var(--fs-chrome)*.9); line-height:1.3;}
+@media (max-width:700px){ .l24-pair, .l24-trio{grid-template-columns:1fr;} }
+
+/* gallery walk: thumbnails and the table */
+.l24-thumbs{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(6px,.7vw,10px);}
+.l24-thumbs > div{position:relative;}
+.l24-thumbs img{display:block; width:100%; height:15vh; object-fit:contain; border-radius:8px; box-shadow:var(--shadow);
+  background:var(--surface);}
+.l24-thumbs .l24-n{position:absolute; left:5px; top:5px; width:1.55em; height:1.55em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:var(--fs-chrome); box-shadow:0 0 0 2px #fff;}
+html.read .l24-thumbs img{height:auto; max-height:24vh;}
+@media (max-width:700px){ .l24-thumbs{grid-template-columns:repeat(2,1fr);} }
+.l24-gal td{vertical-align:top; line-height:1.3;}
+.l24-gal td:first-child{font-weight:700; white-space:nowrap;}
+@media (max-width:700px){ html.read .l24-gal{min-width:640px;} }
+
+/* NESA's "answers could include" as separate points; marks column that never wraps */
+.l24-pt{display:block; margin:.25em 0;}
+.l24-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+/* the architecture half of the model (Lesson 25): shown, but quieter */
+.l24-later{color:var(--slate);}
+
+/* slide 21 on tall screens: a little tighter so the third row fits */
+@media (min-height:821px){ html:not(.read) .l24-s21 .body{font-size:calc(var(--fs-body)*.86); line-height:1.38;} }
+
+/* slide 13: a wider first card */
+.l24-c3w{grid-template-columns:1.4fr 1fr 1fr;}
+@media (max-width:900px){ .l24-c3w{grid-template-columns:1fr;} }
+
+/* two-column practice lists on wide screens */
+.l24-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 2.4em; align-items:start;}
+@media (max-width:900px){ .l24-two{grid-template-columns:1fr;} }
+
+/* dense slides on short projectors (1366 × 768) */
+@media (max-height:820px){
+  html:not(.read) .l24-dense .src .quote.sm{font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+  html:not(.read) .l24-dense .src .quote{font-size:calc(var(--fs-body)*.9); line-height:1.4;}
+  html:not(.read) .l24-dense .src .prov{font-size:calc(var(--fs-chrome)*.9);}
+  html:not(.read) .l24-dense .note .body, html:not(.read) .l24-dense .card .body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l24-dense .qprompt{font-size:calc(var(--fs-body)*.84);}
+  html:not(.read) .l24-dense .body{font-size:calc(var(--fs-body)*.8); line-height:1.32;}
+  html:not(.read) .l24-dense .tbl.compact{font-size:calc(var(--fs-body)*.7);}
+  html:not(.read) .l24-dense .tbl.compact td, html:not(.read) .l24-dense .tbl.compact th{padding:.26em .5em;}
+  html:not(.read) .l24-dense .rq{font-size:calc(var(--fs-body)*.74); gap:.28em;}
+  html:not(.read) .l24-dense .tf li{font-size:calc(var(--fs-body)*.72); padding:.28em .7em;}
+  html:not(.read) .l24-dense .seq li{font-size:calc(var(--fs-body)*.76); padding:.28em .7em;}
+  html:not(.read) .l24-dense .moves{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l24-dense .quote.sm.model{font-size:calc(var(--fs-body)*.76); line-height:1.38;}
+  html:not(.read) .l24-dense .cornell .nts, html:not(.read) .l24-dense .cornell .cq{font-size:calc(var(--fs-body)*.78);}
+  html:not(.read) .l24-dense .fb{font-size:calc(var(--fs-body)*.72); line-height:1.3;}
+  html:not(.read) .l24-dense .fb .q{margin:.2em 0;}
+  html:not(.read) .l24-dense .keylist li{font-size:calc(var(--fs-body)*.8); line-height:1.25;}
+  html:not(.read) .l24-dense .keylist .d{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l24-dense .figure figcaption{font-size:calc(var(--fs-chrome)*.88); line-height:1.28;}
+  html:not(.read) .l24-dense .l24-fig .figure img{max-height:38vh;}
+  html:not(.read) .l24-dense .l24-mid .figure img{max-height:27vh;}
+  html:not(.read) .l24-dense .l24-small .figure img{max-height:21vh;}
+  html:not(.read) .l24-dense .l24-pair .figure img{max-height:27vh;}
+  html:not(.read) .l24-dense .l24-trio .figure img{max-height:16vh;}
+  html:not(.read) .l24-dense .checks label{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l24-dense h2{font-size:calc(var(--fs-h2)*.86);}
+  html:not(.read) .l24-dense .l24-thumbs img{height:12vh;}
+  html:not(.read) .l24-dense .l24-kinds img{height:7vh;}
+}
+
+/* credits: the image list in two columns, so the slide fits one screen */
+.l24-credits ul.small{columns:2; column-gap:2em; margin:.2em 0 .4em; padding-left:1.1em;}
+.l24-credits ul.small li{break-inside:avoid; margin:0 0 .3em;}
+.l24-credits .small{font-size:calc(var(--fs-chrome)*.84); line-height:1.34;}
+html:not(.read) .l24-credits .card{padding:clamp(10px,1.4vh,18px) clamp(14px,1.4vw,24px);}
+html:not(.read) .l24-credits{gap:clamp(8px,1.2vh,14px);}
+@media (max-width:900px){ .l24-credits ul.small{columns:1;} }
+@media (max-height:820px){ html:not(.read) .l24-credits .small{font-size:calc(var(--fs-chrome)*.78); line-height:1.28;}
+  html:not(.read) .l24-credits ul.small li{margin:0 0 .12em;} }
+@media (max-height:820px){ html:not(.read) .l24-dense .checks{gap:.3em;} }
+/* keep the column gap when the dense rules reset "gap" */
+.l24-two{column-gap:2.4em !important;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 24" data-title="Cultural and everyday life I: art" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1fr .62fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 24</p>
+      <h1>Cultural and everyday life I: art</h1>
+      <p class="lead">Carved ivory, small bronzes, painted cups and stone reliefs: what do they reveal about Spartan taste, display and everyday life — and did Sparta really turn its back on art?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall contain"><img src="images/clarke-8-4-laconian-hydria-l24.jpg" alt="A Laconian black-figure hydria (water jar), painted in bands on a pale slip: animals, a row of birds, patterns and, at the shoulder, a staring face (probably a gorgon). The textbook gives no date or find-spot"><figcaption>A Laconian black-figure hydria (water jar), painted in bands on a pale slip: animals, a row of birds, patterns and, at the shoulder, a staring face (probably a gorgon). The textbook gives no date or find-spot — <span class="cr">Clarke & Garner, Fig 8.4</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 24" data-title="Connect: from religion and technology to art" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 4 minutes · from memory, no notes</p>
+  <h2>Same objects, new questions</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <ol class="keylist">
+      <li><span class="num">1</span><span class="t">At which sanctuary by the Eurotas were carved ivories and thousands of lead figurines found?</span><span class="d">Lessons 10 and 16</span></li>
+      <li><span class="num">2</span><span class="t">Were small, solid bronze figures cast or hammered?</span><span class="d">Lesson 16</span></li>
+      <li><span class="num">3</span><span class="t">Where was the Arkesilas cup found?</span><span class="d">Lesson 16</span></li>
+      <li><span class="num">4</span><span class="t">Laconian black-figure: black figures on what background?</span><span class="d">Lesson 16</span></li>
+      <li><span class="num">5</span><span class="t">Predict: who was most Spartan art made for?</span><span class="d">Today’s first idea</span></li>
+    </ol>
+    <div class="stack">
+      <div class="card quiet" data-veil="Show the answers">
+        <div class="k">Answers</div>
+        <ol class="body">
+          <li class="reveal">The Sanctuary of Artemis Orthia, in Limnai</li>
+          <li class="reveal">Cast, in a mould</li>
+          <li class="reveal">At Vulci, in Etruria (Italy)</li>
+          <li class="reveal">A pale cream slip, with details scratched in</li>
+          <li class="reveal">The gods: most of it was offered at sanctuaries (Lessons 21–22)</li>
+        </ol>
+      </div>
+      <div class="card tinted reveal"><div class="k">Today</div><p class="body">Lesson 16 asked how these objects were made. Today asks what they show about taste, display and everyday life — and whether they fit the austere Sparta of the mirage.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 24" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse what Laconian art reveals about Spartan society</li>
+        <li>explain change over time in Spartan art</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>describe one example each of sculpture, painted vases and ivory or bone carving</li>
+        <li>explain why Archaic art challenges the image of a grim, austere Sparta</li>
+        <li>explain when Laconian art declined, how sure we can be, and whether austerity explains it</li>
+        <li>write a multi-source paragraph on what art reveals</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two things to get right</div>
+    <p class="body"><b>Archaic</b> means, in Cooley’s sourcebook, 800–500 BC. The change scholars debate came in the <b>later Archaic period</b> (Cavanagh: 6th–early 5th centuries BC), not the Classical period: Cooley writes “Even if crafts and arts declined at Sparta after the mid-sixth century”, and Cavanagh reports that “some argue” for “an apparent decline in artistic creativity in the later Archaic period”.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 24" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L24 · Cultural and everyday life I: art</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ shows), abbreviations (Lac. = Laconian, c. = about)</span></div></div>
+      <div class="row"><div class="cq">What does ivory at Orthia show?</div><div class="nts">raw ivory imported → …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for “this object shows …”.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: ivory and bone · bronze and stone · painted vases · the austerity question · what art reveals.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 24" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Art</th><th>Meaning</th></tr>
+      <tr><td>votive</td><td>an offering given to a god or hero and left at a sanctuary</td></tr>
+      <tr><td>relief</td><td>a carving in which figures stand out from a flat background</td></tr>
+      <tr><td>hero relief</td><td>a stone relief honouring a hero: often a seated couple, a snake and small worshippers bringing gifts</td></tr>
+      <tr><td>kouros · kore</td><td>a free-standing stone statue of a young man · of a young woman; none are known from Laconia</td></tr>
+      <tr><td>black-figure</td><td>vase painting with black figures, details scratched in; Laconian painters worked on a pale (cream) slip</td></tr>
+      <tr><td>symposium</td><td>a drinking party of wealthy men, typical of elite life elsewhere in Greece; Laconian potters made vessels for them</td></tr>
+      <tr><td>akroterion</td><td>an ornament on the peak or corners of a temple roof</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Ideas</th><th>Meaning</th></tr>
+      <tr><td>Archaic period</td><td>800–500 BC in Cooley; Cavanagh divides it into Early (8th–7th c.) and Later (6th–early 5th c.)</td></tr>
+      <tr><td>Classical period</td><td>500–323 BC in Cooley</td></tr>
+      <tr><td>find-spot</td><td>where an object was found — not always where it was made</td></tr>
+      <tr><td>display</td><td>showing wealth, skill or piety in public: in offerings, buildings, horses or festivals</td></tr>
+      <tr><td>austerity</td><td>a plain, strict way of life without luxury — what “Spartan” means today</td></tr>
+      <tr><td>mirage</td><td>the idealised, distorted image of Sparta built up by ancient writers, which Cooley argues the Spartans helped to create (Lesson 1)</td></tr>
+    </table></div>
+  </div>
+  <p class="small">The rest of Chapter 13’s word list (elegy, lyric, partheneion, stade race, kalpe) comes in Lesson 26. Spelling: Cooley’s translations use Greek forms (Lakonia, Lykourgos, Arkesilas of Kyrene). In your own writing use Laconia, Lycurgus, Arcesilas of Cyrene; the cup keeps its usual name, the Arkesilas cup.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Four kinds of Laconian art (table)" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">1 · Art in Archaic Sparta · I do — the evidence by medium</p>
+  <h2>Four kinds of Laconian art</h2>
+  <div class="split" style="--cols:.8fr 1.5fr">
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">An archaeologist on early Sparta</div>
+        <p class="quote sm">The increasing prosperity of Sparta is witnessed mainly through finds from the sanctuaries: bronze tripods, elaborate pottery, iron weapons, jewellery, carved ivories.</p>
+        <p class="prov">W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, in M. G. L. Cooley (ed.), <i>Sparta</i> (2023), on the Early Archaic period (8th–7th centuries BC)</p>
+      </div>
+      <p class="qprompt reveal">Where were most of these things found — and who were they for?</p>
+      <p class="body reveal">In sanctuaries: most were gifts to the gods. Sanctuary finds are our main evidence of Spartan prosperity in this period.</p>
+    </div>
+    <div class="tbl-scroll"><table class="tbl compact l24-kinds">
+      <tr><th>Medium</th><th>Examples</th><th>Date</th><th></th></tr>
+      <tr class="reveal"><td>Ivory and bone</td><td>carved ivories from Orthia, such as a 7.5 cm ivory lion; later, bone instead of ivory</td><td>7th–6th c. BC; bone after the mid-6th c.</td><td><img src="images/bradley-3-27-ivory-comb-l18.jpg" alt="An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot"></td></tr>
+      <tr class="reveal"><td>Bronze</td><td>small figures, such as the bronze girl; vessels as grand as the Vix krater</td><td>6th c. BC</td><td><img src="images/bradley-3-15-bronze-girl-l13.jpg" alt="Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1)"></td></tr>
+      <tr class="reveal"><td>Painted vases</td><td>Laconian black-figure: the Arkesilas, Rider and Hunt Painters</td><td>6th c. BC</td><td><img src="images/clarke-8-5-kylix-lion-l24.jpg" alt="Inside a Laconian black-figure kylix (drinking cup): a stylised lion in a ring of patterns. The textbook gives no date or find-spot"></td></tr>
+      <tr class="reveal"><td>Stone</td><td>hero reliefs, such as the Chrysapha relief; no free-standing statues of young men or women</td><td>6th c. BC</td><td><img src="images/hurley-51-chrysapha-hero-relief.jpg" alt="A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta"></td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Ivory: a luxury from far away" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">1 · Art in Archaic Sparta · We do — ivory and bone</p>
+  <h2>Ivory: a luxury from far away</h2>
+  <div class="split" style="--cols:.72fr 1.5fr">
+    <div class="stack tight">
+      <div class="l24-mid"><figure class="figure contain"><img src="images/bradley-3-27-ivory-comb-l18.jpg" alt="An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot"><figcaption>An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot — <span class="cr">Bradley, Fig 3.27</span></figcaption></figure></div>
+      <div class="card sm"><div class="k">Two ivories from Orthia, in Cooley</div>
+        <p class="body">A lion of the 7th century BC, only 7.5 cm long (Fig. 1) · a plaque of a ship and crew, “clumsily carved”, with one of Laconia’s earliest inscriptions — “possibly as early as the late 7th century BC” (C6)</p></div>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt">There were no elephants in Greece. What does ivory at Orthia show?</p>
+      <p class="body reveal">The raw ivory was imported from the east, so Sparta was in contact — directly or through traders — with distant lands.</p>
+      <p class="qprompt reveal">Who carved it: Spartiates, perioikoi or foreign craftsmen?</p>
+      <p class="body reveal">We do not know. The ivories were <i>found</i> at Orthia. Chapter 13 thinks their local subjects point to craftsmen working in Sparta; NESA’s 2021 guidelines raise the “Possibility of skilled foreign workers”.</p>
+      <p class="qprompt reveal">What does a costly ivory offering say about taste and display?</p>
+      <p class="body reveal">Worshippers spent on small, finely carved, precious gifts — displayed to the gods at a sanctuary, not at home.</p>
+      <div class="note reveal" data-code="counter"><div class="k">Then bone</div><p class="body">After the mid-6th century BC carvers increasingly used bone instead of ivory, possibly because the ivory trade was interrupted (Clarke &amp; Garner). Bone could be local, so only the ivory proves imports.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Source 13.1 — an ivory (or bone) goddess" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">1 · Art in Archaic Sparta · We do — Source 13.1</p>
+  <h2>An ivory — or bone — goddess</h2>
+  <div class="split" style="--cols:.5fr 1.5fr">
+    <div class="l24-fig"><figure class="figure contain"><img src="images/clarke-8-6-orthia-plaque-l24.jpg" alt="A carved plaque of a goddess, identified as Orthia, in a patterned, belted dress, with two birds on each side — one perched above, a larger bird below. Clarke &amp; Garner call it ivory; Bradley says ivory or bone; Hurley et al. call it bone and date it c. 650 BC. No book gives a museum"><figcaption>A carved plaque of a goddess, identified as Orthia, in a patterned, belted dress, with two birds on each side — one perched above, a larger bird below. Clarke & Garner call it ivory; Bradley says ivory or bone; Hurley et al. call it bone and date it c. 650 BC. No book gives a museum — <span class="cr">Clarke & Garner, Fig 8.6</span></figcaption></figure></div>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">Source 13.1 · provenance</div>
+        <p class="body">Carved plaque of a goddess, identified as Orthia · the books disagree on the material: ivory (Clarke &amp; Garner), ivory or bone (Bradley), bone, c. 650 BC (Hurley et al., who show it with the finds from the Sanctuary of Artemis Orthia) · no book gives a museum · maker unknown</p>
+      </div>
+      <div class="tbl-scroll"><table class="tbl compact">
+        <tr><th></th><th>Question (Chapter 13)</th><th>Model answer</th></tr>
+        <tr><td><b>O</b></td><td>Ivory or bone: what difference does the material make?</td><td class="reveal">Ivory had to be imported; bone could be local. Either way it is skilled work offered at a Spartan sanctuary.</td></tr>
+        <tr><td><b>V</b></td><td>Describe her dress and the creatures beside her. How did Spartans imagine Orthia?</td><td class="reveal">Facing forward, in a richly patterned, belted dress, with two birds on each side — one perched above, a larger bird below: a grand, decorated goddess linked with animals.</td></tr>
+        <tr><td><b>P</b></td><td>Why might a worshipper offer something so costly?</td><td class="reveal">To honour or thank her — and to be seen doing so. Hodkinson thinks those who commissioned inscribed dedications were “mostly well-off persons with a fair degree of disposable wealth”.</td></tr>
+        <tr><td><b>R</b></td><td>No find-spot, and no agreed date or material. How does that limit us?</td><td class="reveal">We cannot tie it to a date, a place in the sanctuary or a giver: Hurley’s c. 650 BC is one book’s date.</td></tr>
+        <tr><td><b>L</b></td><td>Can it tell us who carved it, who gave it, or what ritual it served?</td><td class="reveal">No. It shows taste and skill, not a story.</td></tr>
+      </table></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Notes 1 — Ivory and bone" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Ivory and bone</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L24 · Cultural and everyday life I: art</b></span><span>1 · Ivory and bone</span></div>
+    <div class="row"><div class="cq">Why does ivory found at Sparta show trade with distant lands?</div>
+      <div class="nts reveal">No elephants in Greece → raw ivory <b>imported</b> from the east <span class="sep">·</span> found at <b>Orthia</b>; where carved + by whom: <b>unknown</b></div></div>
+    <div class="row"><div class="cq">Give an example of ivory or bone carving</div>
+      <div class="nts reveal">7th-c. <b>ivory lion</b>, 7.5 cm (Cooley Fig. 1) <span class="sep">·</span> ship plaque, “clumsily carved”, possibly as early as the late 7th c. (C6) <span class="sep">·</span> goddess plaque (Orthia?): ivory <b>or</b> bone — books disagree</div></div>
+    <div class="row"><div class="cq">What changed?</div>
+      <div class="nts reveal">After the <b>mid-6th c.</b> bone ↑ instead of ivory — “possibly” ivory trade interrupted (Clarke &amp; Garner)</div></div>
+    <div class="row"><div class="cq">What do the ivories reveal?</div>
+      <div class="nts reveal">Wealth spent on small, skilled, precious <b>gifts for the gods</b> <span class="sep">·</span> links abroad <span class="sep">·</span> a goddess pictured as grand and richly dressed</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Small bronzes: taste and daily life" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">1 · Art in Archaic Sparta · I do — recall Lesson 16, then ask what bronze shows</p>
+  <h2>Small bronzes: what they show about taste and daily life</h2>
+  <div class="l24-trio">
+    <div class="stack tight"><figure class="figure contain"><img src="images/clarke-8-2-metal-lion-l24.jpg" alt="A small cast-metal statuette of a lion, c. 550 BC, about 9 cm tall. Clarke &amp; Garner say its style suggests it was made in Laconia; they give no find-spot"><figcaption>A small cast-metal statuette of a lion, c. 550 BC, about 9 cm tall. Clarke & Garner say its style suggests it was made in Laconia; they give no find-spot — <span class="cr">Clarke & Garner, Fig 8.2</span></figcaption></figure>
+      <div class="card sm reveal"><div class="k">A lion</div><p class="body">The same animal as the 7th-century ivory lion and the lion inside a Laconian cup: a subject in ivory, metal and paint.</p></div></div>
+    <div class="stack tight"><figure class="figure contain"><img src="images/bradley-3-15-bronze-girl-l13.jpg" alt="Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1)"><figcaption>Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1) — <span class="cr">Bradley, Fig 3.15</span></figcaption></figure>
+      <div class="card sm reveal"><div class="k">A girl</div><p class="body">She “may be running or, since she glances back, dancing” (Cooley D64) — perhaps a fixture on a vessel. Lesson 13.</p></div></div>
+    <div class="stack tight"><figure class="figure contain"><img src="images/bradley-3-32-bronze-banqueter-l18.jpg" alt="Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate"><figcaption>Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate — <span class="cr">Bradley, Fig 3.32</span></figcaption></figure>
+      <div class="card sm reveal"><div class="k">A banqueter</div><p class="body">Reclining with a shallow dish: feasting. But it “need not, of course, show any individual diner, let alone a Spartiate one” (Cooley E71).</p></div></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">The banqueter comes from the tripod-support of a bronze bowl, and the girl was perhaps a fixture on a vessel or utensil (D64): costly, skilled work for people with money to spend. The Vix krater (Lesson 16) is the same craft on a huge scale: bronze-working “reached a high point” (Cavanagh). But many were found far away, so some may have been made for buyers abroad.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Stone: reliefs, not statues" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">1 · Art in Archaic Sparta · We do — stone</p>
+  <h2>Stone: reliefs, not statues</h2>
+  <div class="split" style="--cols:.8fr 1.4fr">
+    <div class="l24-fig"><figure class="figure contain"><img src="images/hurley-51-chrysapha-hero-relief.jpg" alt="A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta"><figcaption>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — <span class="cr">Hurley et al., Source 51</span></figcaption></figure></div>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">An archaeologist on Laconian sculpture</div>
+        <p class="quote sm">This period saw the stone hero reliefs, which have been found both in Sparta and in perioikic Lakonia; however, as in much of the Peloponnese (in contrast to Attica and other regions), free standing kouroi/<wbr>korai are not attested.</p>
+        <p class="prov">W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, in Cooley (ed.), <i>Sparta</i> (2023), on the later Archaic period (6th–early 5th centuries BC)</p>
+      </div>
+      <p class="qprompt reveal">What does the Chrysapha relief show?</p>
+      <p class="body reveal">A large seated couple, a snake behind them and tiny worshippers bringing gifts (c. 540 BC). Of a similar relief from Magoula, Cooley says: “A large snake opposite the young man suggests a heroized person” (C36).</p>
+      <p class="qprompt reveal">What kind of stone sculpture is missing — and is that a Spartan oddity?</p>
+      <p class="body reveal">Free-standing kouroi and korai. Not just Sparta: “as in much of the Peloponnese”. Laconia’s Archaic stone sculpture was mainly relief.</p>
+      <div class="note reveal" data-code="analysis"><div class="k">What it reveals</div><p class="body">Worship of the heroic dead, shared by Spartans and the perioikoi; the huge heroes and tiny worshippers show who mattered.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Art in Archaic Sparta" data-title="Notes 2 — Bronze and stone" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>Bronze and stone</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L24 · Cultural and everyday life I: art</b></span><span>2 · Bronze and stone</span></div>
+    <div class="row"><div class="cq">What do the small bronzes show?</div>
+      <div class="nts reveal">Lion, c. 550 BC (Clarke &amp; Garner) <span class="sep">·</span> girl, 520–500 BC: “may be running or … dancing” (D64) <span class="sep">·</span> banqueter, c. 530–500 BC: need not be a Spartiate (E71) → figures for vessels, <b>feasting</b>, elite taste</div></div>
+    <div class="row"><div class="cq">Bronze at its height?</div>
+      <div class="nts reveal">Vix krater, late 6th c.: “a high point” (Cavanagh) <span class="sep">·</span> workshop debated (L16)</div></div>
+    <div class="row"><div class="cq">What kind of stone sculpture did Laconia produce, and what kind is missing?</div>
+      <div class="nts reveal"><b>Hero reliefs</b>, in Sparta + perioikic Laconia, e.g. Chrysapha c. 540 BC <span class="sep">·</span> <b>no</b> free-standing kouroi/korai — “as in much of the Peloponnese”</div></div>
+    <div class="row"><div class="cq">What does a hero relief reveal?</div>
+      <div class="nts reveal">Seated couple + snake (→ a hero, cf. C36) + small worshippers with gifts → cult of the <b>heroic dead</b></div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Painted vases" data-title="Painted vases: luxury, heroes and the unexpected" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">2 · Painted vases · I do — what the painters chose to paint</p>
+  <h2>Painted vases: luxury, heroes — and the unexpected</h2>
+  <div class="split" style="--cols:.72fr 1.7fr">
+    <div class="stack tight l24-small">
+      <figure class="figure contain"><img src="images/clarke-8-5-kylix-lion-l24.jpg" alt="Inside a Laconian black-figure kylix (drinking cup): a stylised lion in a ring of patterns. The textbook gives no date or find-spot"><figcaption>Inside a Laconian black-figure kylix (drinking cup): a stylised lion in a ring of patterns. The textbook gives no date or find-spot — <span class="cr">Clarke & Garner, Fig 8.5</span></figcaption></figure>
+      <figure class="figure contain"><img src="images/clarke-8-4-laconian-hydria-l24.jpg" alt="A Laconian black-figure hydria (water jar), painted in bands on a pale slip: animals, a row of birds, patterns and, at the shoulder, a staring face (probably a gorgon). The textbook gives no date or find-spot"><figcaption>A Laconian black-figure hydria (water jar), painted in bands on a pale slip: animals, a row of birds, patterns and, at the shoulder, a staring face (probably a gorgon). The textbook gives no date or find-spot — <span class="cr">Clarke & Garner, Fig 8.4</span></figcaption></figure>
+    </div>
+    <div class="stack tight">
+      <div class="src">
+        <div class="k">An archaeologist on Laconian pottery</div>
+        <p class="quote sm">Lakonian pottery includes vessels for symposia, some painted with scenes of luxury, others with images of heroes, but also the unexpected, such as the cup with king Arkesilas of Kyrene in Libya weighing out silphium; great storage jars had elaborate scenes impressed from moulds.</p>
+        <p class="prov">W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, in Cooley (ed.), <i>Sparta</i> (2023), on the later Archaic period</p>
+      </div>
+      <div class="cols c3 l24-c3w">
+        <div class="card sm reveal"><div class="k">When</div><p class="body">Flourished c. 580–530 BC (textbook dates); Cooley’s examples are “Lakonian pottery of the mid-sixth century BC”; the Arkesilas cup is c. 565–560 BC.</p></div>
+        <div class="card sm reveal"><div class="k">Who</div><p class="body">Unknown. Pots carry “no potters’ or painters’ names” (Hodkinson); “the Rider Painter” is a modern label.</p></div>
+        <div class="card sm reveal"><div class="k">For whom</div><p class="body">Drinking parties — and buyers abroad: a hydria “found at Vulci in Italy as prized grave-goods” (Cooley Fig. 3).</p></div>
+      </div>
+      <div class="note reveal" data-code="judgement"><div class="k">What it reveals</div><p class="body">Archaic Laconian workshops made fine drinking cups painted with luxury and heroes, for buyers at home and abroad: taste and display, not a grim austerity.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Painted vases" data-title="Everyday life — or myth?" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">2 · Painted vases · We do — reading a painted scene</p>
+  <h2>Everyday life — or myth?</h2>
+  <div class="split" style="--cols:1fr 1.05fr">
+    <div class="l24-pair">
+      <figure class="figure contain"><img src="images/bradley-3-31-hunting-cup-l24.jpg" alt="Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may be a hunt from myth"><figcaption>Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may be a hunt from myth — <span class="cr">Bradley, Fig 3.31</span></figcaption></figure>
+      <figure class="figure contain"><img src="images/clarke-8-9-rider-cup-l24.jpg" alt="Inside a black-figure cup of c. 550–530 BC: a rider on horseback, with winged figures above and birds below. Clarke &amp; Garner call him a Spartan; the winged figures suggest more than an everyday ride"><figcaption>Inside a black-figure cup of c. 550–530 BC: a rider on horseback, with winged figures above and birds below. Clarke & Garner call him a Spartan; the winged figures suggest more than an everyday ride — <span class="cr">Clarke & Garner, Fig 8.9</span></figcaption></figure>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt">Bradley calls the hunters “Spartans”. What else could they be?</p>
+      <p class="body reveal">Heroes of myth: painters often showed legendary hunts, and Cavanagh lists “images of heroes” among Laconian subjects.</p>
+      <p class="qprompt reveal">What makes the rider more than an everyday ride?</p>
+      <p class="body reveal">The winged figures around him: the painter mixes the real — a horse and rider — with the divine or the imagined.</p>
+      <p class="qprompt reveal">Many Laconian cups were found far from Laconia. Who were they made for?</p>
+      <p class="body reveal">Perhaps buyers abroad as well as Spartans. Cooley says the bronze banqueter “could equally well have been made for external consumption”; the same caution fits the cups.</p>
+      <div class="note reveal" data-code="counter"><div class="k">So</div><p class="body">A painted scene shows what painters and buyers liked to look at — riding, hunting, feasting, heroes. It is not a photograph of a Spartiate’s day.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Painted vases" data-title="Hinge: what can the hunting cup show?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · hinge question · hold up 1–4 fingers</p>
+  <h2>On its own, the hunting cup shows that …</h2>
+  <ol class="opts">
+    <li><span class="n">1</span><span>Spartiates hunted boar in the 6th century BC</span></li>
+    <li id="l24hq2"><span class="n">2</span><span>a Laconian painter chose to paint a hunt, real or from myth</span></li>
+    <li><span class="n">3</span><span>hunting was compulsory for Spartan men</span></li>
+    <li><span class="n">4</span><span>the cup was used in a Spartan mess</span></li>
+  </ol>
+  <i class="reveal" data-mark="#l24hq2" hidden></i>
+  <div class="note reveal" data-code="keyterm"><p class="body"><b>2.</b> The others need a written source, and even then the cup is only consistent with them. Xenophon says “Lykourgos established hunting as the most honourable activity” for older men (Cooley D79) — a written source, taught in Lesson 26.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · Painted vases" data-title="Notes 3 — Painted vases" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Painted vases</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L24 · Cultural and everyday life I: art</b></span><span>3 · Painted vases</span></div>
+    <div class="row"><div class="cq">What did Laconian painters paint?</div>
+      <div class="nts reveal">“scenes of luxury”, “images of heroes”, “the unexpected” (the Arkesilas cup) — Cavanagh <span class="sep">·</span> vessels for <b>symposia</b> <span class="sep">·</span> hunting, riding, animals (lions), patterns</div></div>
+    <div class="row"><div class="cq">When, and who painted?</div>
+      <div class="nts reveal">Flourished c. <b>580–530 BC</b> (textbooks); Arkesilas cup c. 565–560 <span class="sep">·</span> “no potters’ or painters’ names” (Hodkinson) → modern labels: Arkesilas, Rider, Hunt Painters</div></div>
+    <div class="row"><div class="cq">Everyday life or myth?</div>
+      <div class="nts reveal">Hunting cup: “Spartans” (Bradley) <b>or</b> a legendary hunt? <span class="sep">·</span> rider among winged figures <span class="sep">·</span> found abroad (Vulci, “prized grave-goods”) → made for export too?</div></div>
+    <div class="row"><div class="cq">Name one example each of Spartan sculpture, painted pottery and ivory or bone carving</div>
+      <div class="nts reveal">Sculpture: Chrysapha relief / bronze girl <span class="sep">·</span> pottery: Arkesilas cup <span class="sep">·</span> ivory: 7th-c. lion (Fig. 1)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The austerity question" data-title="Plutarch: Lycurgus expelled the crafts" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">3 · The austerity question · I do — the written story</p>
+  <h2>Plutarch: Lycurgus drove out “useless” crafts</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="src">
+      <div class="k">Source · Plutarch</div>
+      <p class="quote sm">[3] His next move was to expel all forms of useless or superfluous arts and crafts. The majority would have probably fallen out of use anyhow because of the new common coinage, since there was no longer a market for such skills. … nor did any craftsmen working in gold and silver ornaments.</p>
+      <p class="prov">Plutarch, <i>Life of Lykourgos</i> 9.3 (part) · written c. AD 100 · “his” is Lycurgus’ · trans. B. Wilson · Cooley D58</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt">When does Plutarch place this?</p>
+      <p class="body reveal">Under Lycurgus — Herodotus makes him guardian of King Leobotas, whom Cooley tentatively dates c. 870–840 BC (Lesson 3). Plutarch wrote nearly a thousand years later.</p>
+      <p class="qprompt reveal">Does the archaeology fit?</p>
+      <p class="body reveal">No. Ivories, bronzes, painted cups and reliefs flourished in the 7th and 6th centuries BC, long after Lycurgus’ supposed date. The art came before the austerity.</p>
+      <div class="note reveal" data-code="judgement"><p class="body">So the real questions are: <b>when</b> did Laconian art change, <b>how sure</b> can we be, and was austerity the <b>cause</b>?</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The austerity question" data-title="Source 13.2 — an archaeologist on Laconian art" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">3 · The austerity question · We do — Source 13.2</p>
+  <h2>An archaeologist on Laconian art</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <div class="src">
+      <div class="k">Source 13.2 · W. G. Cavanagh</div>
+      <p class="quote sm">Already the Spartans avoid excessive monumentality at home, but <span class="code" data-code="evidence" data-letter="E">the skill and grace of these artefacts serve to undermine the notion of a grim austerity</span>.</p>
+      <p class="quote sm">… <span class="code" data-code="analysis" data-letter="A">some argue that it is possible to recognise the onset of Spartan austerity through an apparent decline in artistic creativity in the later Archaic period</span>, whilst <span class="code" data-code="counter" data-letter="C">others argue that in this respect the Spartans were no different from other contemporaries elsewhere in the Peloponnese and the decline in arts such as vase painting or the making of bronze vessels does not reflect a political or social reform</span>. <span class="code" data-code="judgement" data-letter="J">These and other debates continue.</span></p>
+      <p class="prov">W. G. Cavanagh (Professor Emeritus of Aegean Archaeology, Nottingham University), ‘Introduction to Lakonian Archaeology’, in M. G. L. Cooley (ed.), <i>Sparta</i> (2023): the first sentence from his section on the Early Archaic period (8th–7th centuries BC), the rest from his Conclusion · a modern summary of the excavated evidence</p>
+    </div>
+    <div class="stack tight">
+      <p class="qprompt reveal" data-paint="evidence">What does the first sentence claim?</p>
+      <p class="body reveal">Buildings were modest, but the early objects were skilled and graceful: not the work of a grim, austere city.</p>
+      <p class="qprompt reveal" data-paint="analysis">What do “some” argue?</p>
+      <p class="body reveal">That a decline in art in the later Archaic period marks the start of Spartan austerity.</p>
+      <p class="qprompt reveal" data-paint="counter">And “others”?</p>
+      <p class="body reveal">That Sparta was like its Peloponnesian neighbours, so the decline need not mean a reform.</p>
+      <p class="qprompt reveal" data-paint="judgement">Which side does Cavanagh take?</p>
+      <p class="body reveal">Neither: “These and other debates continue.”</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The austerity question" data-title="Source 13.2 — OVPRL" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow">3 · The austerity question · I do — modelling OVPRL on Source 13.2</p>
+  <h2>How far can we trust an archaeologist’s summary?</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th></th><th>Question (Chapter 13)</th><th>Model margin note</th></tr>
+      <tr class="reveal"><td><b>O</b></td><td>What evidence can a modern archaeologist use that no ancient writer could?</td><td>Excavated finds — ivories, bronzes, pottery, temple remains — and intensive survey</td></tr>
+      <tr class="reveal"><td><b>V</b></td><td>What two judgements does he make?</td><td>(1) early art’s “skill and grace” undermines “a grim austerity”; (2) whether a later “apparent decline” marks austerity is disputed: “some argue” / “others argue”</td></tr>
+      <tr class="reveal"><td><b>P</b></td><td>Why might he set out both sides?</td><td>A fair summary for readers of a sourcebook: the debate is unresolved</td></tr>
+      <tr class="reveal"><td><b>R</b></td><td>He warns that archaeological dates “can seldom be refined even as closely as to a generation or two”. How does that affect claims about when austerity began?</td><td>Any “start date” is approximate: the finds cannot be tied to one reform, one year or one person</td></tr>
+      <tr class="reveal"><td><b>L</b></td><td>He predicts his section “will certainly need to be rewritten in the future”. Why?</td><td>“every year there are fresh archaeological discoveries”</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="card accent"><div class="k">What makes these good</div>
+        <ul class="body">
+          <li>Short, in your own words</li>
+          <li>Cavanagh’s hedges kept: “some argue”, “others argue”, “These and other debates continue”</li>
+          <li>R and L use what he says about his own evidence</li>
+        </ul></div>
+      <div class="note reveal" data-code="counter"><div class="k">The limit that matters most</div><p class="body">Dates. If the change cannot be dated within a generation or two, we cannot link it firmly to any one reform or person — such as Lycurgus.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The austerity question" data-title="Laconian art in time (diagram)" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">3 · The austerity question · I do — the evidence in time</p>
+  <h2>Laconian art, c. 750–350 BC</h2>
+  <figure class="diagram l24-tlfig"><svg class="l24-tl" viewBox="0 0 1600 690" role="img" aria-label="To-scale timeline of Laconian art, 750 to 350 BC, in four lanes. Ivory and bone: carved ivories among the early finds, such as an ivory lion of the 7th century and a ship plaque possibly as early as the late 7th century; after the mid-6th century bone replaces ivory (Clarke and Garner). Bronze: tripods among the early finds; a metal lion about 550 BC; the Vix krater, late 6th century, a high point; the bronze girl, 520 to 500 BC; small bronzes go on, such as Euonyma’s mirror of the mid-5th century. Painted pottery: elaborate pottery early; black-figure flourishes about 580 to 530 BC (textbook dates), with the Arkesilas cup about 565 to 560 BC; figured pots rarer from about 530 BC; pottery is still made locally later, including classical red-figure. Stone: hero reliefs in the later Archaic period, such as the Chrysapha relief about 540 BC and a relief from Magoula of 510 to 500 BC; no free-standing kouroi or korai. From about 550 BC Cooley allows that crafts and arts may have declined (Even if); Cavanagh reports that some see an apparent decline in the later Archaic period. How sure: archaeological dates can seldom be refined even to a generation or two, and the debates continue. Why: some argue it was the onset of Spartan austerity; others argue Sparta was no different from the rest of the Peloponnese.">
+<defs><pattern id="l24t-hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect class="l24t-hbg" width="12" height="12"/><line class="l24t-hline" x1="0" y1="0" x2="0" y2="12"/></pattern></defs>
+<rect class="l24t-bg" x="2" y="2" width="1596" height="686" rx="14"/>
+<rect class="l24t-band" x="272.0" y="12" width="483.5" height="34" rx="8"/>
+<text class="l24t-bandtx" x="513.8" y="36.0" text-anchor="middle">Early Archaic · 8th–7th c.</text>
+<rect class="l24t-band" x="759.5" y="12" width="386.0" height="34" rx="8"/>
+<text class="l24t-bandtx" x="952.5" y="36.0" text-anchor="middle">Later Archaic · 6th–early 5th c.</text>
+<rect class="l24t-band" x="1149.5" y="12" width="418.5" height="34" rx="8"/>
+<text class="l24t-bandtx" x="1358.8" y="36.0" text-anchor="middle">Classical · 5th–4th c.</text>
+<text class="l24t-period" x="20.0" y="27.0">Periods</text>
+<text class="l24t-period sm" x="20.0" y="47.0">(Cavanagh, in Cooley)</text>
+<line class="l24t-axis" x1="270" y1="62" x2="1570" y2="62"/>
+<line class="l24t-tick" x1="270.0" y1="54" x2="270.0" y2="70"/>
+<text class="l24t-ticklbl" x="270.0" y="92.0" text-anchor="start">750 BC</text>
+<line class="l24t-tick" x1="432.5" y1="54" x2="432.5" y2="70"/>
+<text class="l24t-ticklbl" x="432.5" y="92.0" text-anchor="middle">700</text>
+<line class="l24t-tick" x1="595.0" y1="54" x2="595.0" y2="70"/>
+<text class="l24t-ticklbl" x="595.0" y="92.0" text-anchor="middle">650</text>
+<line class="l24t-tick" x1="757.5" y1="54" x2="757.5" y2="70"/>
+<text class="l24t-ticklbl" x="757.5" y="92.0" text-anchor="middle">600</text>
+<line class="l24t-tick" x1="920.0" y1="54" x2="920.0" y2="70"/>
+<text class="l24t-ticklbl" x="920.0" y="92.0" text-anchor="middle">550</text>
+<line class="l24t-tick" x1="1082.5" y1="54" x2="1082.5" y2="70"/>
+<text class="l24t-ticklbl" x="1082.5" y="92.0" text-anchor="middle">500</text>
+<line class="l24t-tick" x1="1245.0" y1="54" x2="1245.0" y2="70"/>
+<text class="l24t-ticklbl" x="1245.0" y="92.0" text-anchor="middle">450</text>
+<line class="l24t-tick" x1="1407.5" y1="54" x2="1407.5" y2="70"/>
+<text class="l24t-ticklbl" x="1407.5" y="92.0" text-anchor="middle">400</text>
+<line class="l24t-tick" x1="1570.0" y1="54" x2="1570.0" y2="70"/>
+<text class="l24t-ticklbl" x="1570.0" y="92.0" text-anchor="end">350 BC</text>
+<text class="l24t-lyc" x="20.0" y="92.0">← Lycurgus? c. 870–840 BC</text>
+<rect class="l24t-lane" x="12" y="104" width="1576" height="82" rx="10"/>
+<text class="l24t-name" x="24.0" y="140.0">Ivory and bone</text>
+<text class="l24t-note" x="24.0" y="166.0">raw ivory imported</text>
+<rect class="l24t-lane" x="12" y="196" width="1576" height="82" rx="10"/>
+<text class="l24t-name" x="24.0" y="232.0">Bronze</text>
+<text class="l24t-note" x="24.0" y="258.0">figures and vessels</text>
+<rect class="l24t-lane" x="12" y="288" width="1576" height="82" rx="10"/>
+<text class="l24t-name" x="24.0" y="324.0">Painted pottery</text>
+<text class="l24t-note" x="24.0" y="350.0">black-figure, pale slip</text>
+<rect class="l24t-lane" x="12" y="380" width="1576" height="82" rx="10"/>
+<text class="l24t-name" x="24.0" y="416.0">Stone</text>
+<text class="l24t-note" x="24.0" y="442.0">reliefs: no kouroi or korai</text>
+<g class="linked" id="l24t-zone"><rect class="l24t-zonebg" x="920.0" y="104" width="227.5" height="358"/><line class="l24t-zoneln" x1="920.0" y1="100" x2="920.0" y2="470"/><text class="l24t-zonetx" x="910.0" y="492.0" text-anchor="end">c. 550 BC on: a decline? (Cooley: ‘Even if’)</text><text class="l24t-zonetx sm" x="930.0" y="492.0" text-anchor="start">dates and causes debated →</text></g>
+<g class="linked" id="l24t-iv"><rect class="l24t-bar iv" x="351.2" y="134.0" width="568.8" height="24" rx="6"/><rect class="l24t-hatch iv" x="920.0" y="134.0" width="260.0" height="24" rx="6"/><circle class="l24t-dot" cx="595.0" cy="146" r="8"/><text class="l24t-lbl" x="595.0" y="128.0" text-anchor="middle">ivory lion, 7th c. (Fig. 1)</text><circle class="l24t-dot" cx="708.8" cy="146" r="8"/><text class="l24t-lbl" x="908.0" y="182.0" text-anchor="end">ship plaque, possibly as early as the late 7th c. (C6)</text><text class="l24t-lbl" x="930.0" y="128.0" text-anchor="start">after the mid-6th c.: bone replaces ivory</text><text class="l24t-src" x="930.0" y="182.0" text-anchor="start">Clarke &amp; Garner: ‘possibly’ as the ivory trade was interrupted</text></g>
+<g class="linked" id="l24t-bz"><rect class="l24t-bar bz" x="351.2" y="226.0" width="715.0" height="24" rx="6"/><line class="l24t-thin bz" x1="1066.2" y1="238" x2="1537.5" y2="238"/><text class="l24t-lbl" x="351.2" y="220.0" text-anchor="start">bronze tripods (early finds)</text><circle class="l24t-dot" cx="920.0" cy="238" r="8"/><text class="l24t-lbl" x="910.0" y="220.0" text-anchor="end">metal lion, c. 550 BC</text><circle class="l24t-dot" cx="1001.2" cy="238" r="8"/><text class="l24t-lbl" x="1009.2" y="220.0" text-anchor="start">Vix krater: ‘a high point’</text><circle class="l24t-dot" cx="1050.0" cy="238" r="8"/><text class="l24t-lbl" x="1058.0" y="274.0" text-anchor="end">bronze girl, 520–500 BC</text><text class="l24t-lbl" x="1562.0" y="220.0" text-anchor="end">small bronzes go on →</text><circle class="l24t-dot" cx="1245.0" cy="238" r="7"/><text class="l24t-lbl" x="1255.0" y="274.0" text-anchor="start">Euonyma’s mirror, mid-5th c.</text></g>
+<g class="linked" id="l24t-pt"><rect class="l24t-bar pt faint" x="351.2" y="318.0" width="471.2" height="24" rx="6"/><rect class="l24t-bar pt" x="822.5" y="318.0" width="162.5" height="24" rx="6"/><rect class="l24t-hatch pt" x="985.0" y="318.0" width="97.5" height="24" rx="6"/><line class="l24t-thin pt" x1="1082.5" y1="330" x2="1537.5" y2="330"/><text class="l24t-lbl" x="351.2" y="312.0" text-anchor="start">‘elaborate pottery’ (early finds)</text><circle class="l24t-dot" cx="881.0" cy="330" r="8"/><text class="l24t-lbl" x="873.0" y="366.0" text-anchor="end">Arkesilas cup, c. 565–560</text><text class="l24t-lbl" x="977.0" y="312.0" text-anchor="end">black-figure flourishes</text><text class="l24t-lbl" x="1092.5" y="312.0" text-anchor="start">pottery still ‘produced locally’ (Cooley)</text><text class="l24t-lbl" x="1180.0" y="366.0" text-anchor="start">later red-figure too (Hodkinson)</text><text class="l24t-src" x="993.0" y="366.0" text-anchor="start">figured pots rarer</text></g>
+<g class="linked" id="l24t-st"><rect class="l24t-bar st" x="822.5" y="410.0" width="308.8" height="24" rx="6"/><circle class="l24t-dot" cx="952.5" cy="422" r="8"/><text class="l24t-lbl" x="942.5" y="404.0" text-anchor="end">Chrysapha relief, c. 540 BC</text><circle class="l24t-dot" cx="1066.2" cy="422" r="8"/><text class="l24t-lbl" x="1076.2" y="404.0" text-anchor="start">relief from Magoula, 510–500 BC (C36)</text><text class="l24t-src" x="814.5" y="458.0" text-anchor="end">hero reliefs: in Sparta and perioikic Laconia (Cavanagh)</text></g>
+<g class="linked l24t-hedge" id="l24t-when"><rect class="l24t-hbox" x="12" y="508" width="514" height="168" rx="12"/><text class="l24t-hhead" x="30.0" y="542.0">When?</text><text class="l24t-htx" x="30.0" y="576.0">Cooley: ‘Even if crafts and arts declined</text><text class="l24t-htx" x="30.0" y="604.0">at Sparta after the mid-sixth century …’</text><text class="l24t-htx" x="30.0" y="632.0">Cavanagh: ‘some argue’ for ‘an apparent</text><text class="l24t-htx" x="30.0" y="660.0">decline … in the later Archaic period’</text></g>
+<g class="linked l24t-hedge" id="l24t-sure"><rect class="l24t-hbox" x="538" y="508" width="514" height="168" rx="12"/><text class="l24t-hhead" x="556.0" y="542.0">How sure?</text><text class="l24t-htx" x="556.0" y="576.0">Cavanagh: archaeological dates ‘can seldom</text><text class="l24t-htx" x="556.0" y="604.0">be refined even as closely as to a</text><text class="l24t-htx" x="556.0" y="632.0">generation or two’ — and ‘These and</text><text class="l24t-htx" x="556.0" y="660.0">other debates continue.’</text></g>
+<g class="linked l24t-hedge" id="l24t-why"><rect class="l24t-hbox" x="1064" y="508" width="514" height="168" rx="12"/><text class="l24t-hhead" x="1082.0" y="542.0">Austerity — or not?</text><text class="l24t-htx" x="1082.0" y="576.0">Cavanagh: ‘some argue’: the onset of Spartan</text><text class="l24t-htx" x="1082.0" y="604.0">austerity; ‘others argue’: the Spartans were</text><text class="l24t-htx" x="1082.0" y="632.0">‘no different from other contemporaries</text><text class="l24t-htx" x="1082.0" y="660.0">elsewhere in the Peloponnese’</text></g>
+</svg>
+    <figcaption>Drawn to scale for this lesson. Bars show when each kind of art is attested, as far as the books date it; dashed lines show work that went on. Black-figure c. 580–530 BC: textbook dates (Clarke &amp; Garner; Hurley et al.). <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#l24t-iv" hidden></i>
+  <i class="reveal" data-also="#l24t-bz" hidden></i>
+  <i class="reveal" data-also="#l24t-pt" hidden></i>
+  <i class="reveal" data-also="#l24t-st" hidden></i>
+  <i class="reveal" data-also="#l24t-zone" hidden></i>
+  <i class="reveal" data-also="#l24t-when" hidden></i>
+  <i class="reveal" data-also="#l24t-sure" hidden></i>
+  <i class="reveal" data-also="#l24t-why" hidden></i>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The austerity question" data-title="Austerity — or a wider trend?" data-kind="notes">
+<div class="wrap l24-dense l24-s21">
+  <p class="eyebrow">3 · The austerity question · We do — weigh the two explanations</p>
+  <h2>Austerity — or a wider trend?</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">1 · A Spartan change</div>
+      <ul class="body">
+        <li class="reveal">“some argue” (Cavanagh) that the decline marks “the onset of Spartan austerity”.</li>
+        <li class="reveal">Stephen Hodkinson accepts a change but not a permanent one: the austere lifestyle of the classical period was, on the long view, “a temporary imposition upon a more enduring privately-oriented, wealth-based society”, and “Already by the later fifth century Sparta was being transformed back into a plutocratic society, as she had previously been before the ‘sixth-century revolution’” — one ruled by the rich. A point about institutions and wealth, not art.</li>
+      </ul>
+    </div>
+    <div class="card quiet">
+      <div class="k">2 · A wider trend</div>
+      <ul class="body">
+        <li class="reveal">“others argue” (Cavanagh) that “the Spartans were no different from other contemporaries elsewhere in the Peloponnese” and that the decline “does not reflect a political or social reform”.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="cols c3">
+    <div class="note reveal" data-code="evidence"><div class="k">Either way, crafts went on</div><p class="body">Even if crafts and arts declined after the mid-sixth century, Cooley notes that pottery, armour and weapons were still “produced locally” — probably by the perioikoi.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">Cooley on the Spartan lifestyle</div><p class="body">“comfortable prosperity masked by a display of austerity” — and “great wealth existed in Sparta in all periods”.</p></div>
+    <div class="note reveal" data-code="analysis"><div class="k">Where did display go?</div><p class="body">To the gods and festivals: in Classical processions “special carriages (kannathra) were decorated with griffins and other beasts while the horses were richly caparisoned” (Cavanagh) — and to racehorses (Lesson 26).</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="3 · The austerity question" data-title="Vote: did austerity cause the decline?">
+<div class="wrap">
+  <p class="eyebrow">Check for understanding · gesture vote</p>
+  <h2 class="nq">“Laconian art declined because Sparta became austere.”</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
+    <div class="card"><div class="k">Sideways</div><p class="lead">Unproven</p></div>
+    <div class="card"><div class="k">Thumbs down</div><p class="lead">Disagree</p></div>
+  </div>
+  <p class="cue">Justify your vote with one piece of evidence and one hedge from Cooley or Cavanagh.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The austerity question" data-title="Notes 4 — The austerity question" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The austerity question</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L24 · Cultural and everyday life I: art</b></span><span>4 · The austerity question</span></div>
+    <div class="row"><div class="cq">When did Laconian art decline?</div>
+      <div class="nts reveal"><b>Later Archaic</b>: “after the mid-sixth century” (Cooley, “Even if”) <span class="sep">·</span> Cavanagh: “some argue” for “an apparent decline … in the later Archaic period” <span class="sep">·</span> not the 5th c. <span class="sep">·</span> → Plutarch’s credit to Lycurgus doesn’t fit the dates (D58)</div></div>
+    <div class="row"><div class="cq">How sure are we?</div>
+      <div class="nts reveal">Cooley hedges it (“Even if”) <span class="sep">·</span> “apparent” is how “some” read it <span class="sep">·</span> dates “can seldom be refined even as closely as to a generation or two” <span class="sep">·</span> crafts went on: pottery, armour, weapons (Cooley); mirror, mid-5th c. (C14)</div></div>
+    <div class="row"><div class="cq">Give the two explanations for the decline of display art in the later 6th century BC</div>
+      <div class="nts reveal">(1) <b>Spartan change</b>: “the onset of Spartan austerity” (“some argue”); Hodkinson: “a temporary imposition” <span class="sep">·</span> (2) <b>wider trend</b>: “no different from … the Peloponnese”; no “political or social reform” (“others argue”)</div></div>
+    <div class="row"><div class="cq">Is austerity the explanation?</div>
+      <div class="nts reveal"><b>Unproven</b>: “These and other debates continue” (Cavanagh) <span class="sep">·</span> Cooley: “comfortable prosperity masked by a display of austerity” → display moved to gods, festivals, horses</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · What art reveals" data-title="We do — gallery walk">
+<div class="wrap l24-dense">
+  <p class="eyebrow">4 · What art reveals · We do · 12 minutes · gallery walk · press K for the timer</p>
+  <h2>Gallery: medium, date, find-spot — and what it reveals</h2>
+  <div class="split" style="--cols:.85fr 1.6fr">
+    <div class="stack tight">
+      <div class="l24-thumbs">
+        <div><span class="l24-n">1</span><img src="images/clarke-8-6-orthia-plaque-l24.jpg" alt="A carved plaque of a goddess, identified as Orthia, in a patterned, belted dress, with two birds on each side — one perched above, a larger bird below. Clarke &amp; Garner call it ivory; Bradley says ivory or bone; Hurley et al. call it bone and date it c. 650 BC. No book gives a museum"></div>
+        <div><span class="l24-n">2</span><img src="images/bradley-3-27-ivory-comb-l18.jpg" alt="An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot"></div>
+        <div><span class="l24-n">3</span><img src="images/clarke-8-2-metal-lion-l24.jpg" alt="A small cast-metal statuette of a lion, c. 550 BC, about 9 cm tall. Clarke &amp; Garner say its style suggests it was made in Laconia; they give no find-spot"></div>
+        <div><span class="l24-n">4</span><img src="images/bradley-3-15-bronze-girl-l13.jpg" alt="Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1)"></div>
+        <div><span class="l24-n">5</span><img src="images/bradley-3-32-bronze-banqueter-l18.jpg" alt="Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate"></div>
+        <div><span class="l24-n">6</span><img src="images/hurley-51-chrysapha-hero-relief.jpg" alt="A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta"></div>
+        <div><span class="l24-n">7</span><img src="images/hurley-45a-arkesilas-cup.jpg" alt="Inside the Arkesilas cup: King Arcesilas of Cyrene, seated at left, watches goods being weighed and carried into store; Laconian black-figure kylix, c. 565–560 BC, found at Vulci in Italy (Paris, Cabinet des Médailles)"></div>
+        <div><span class="l24-n">8</span><img src="images/bradley-3-31-hunting-cup-l24.jpg" alt="Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may be a hunt from myth"></div>
+      </div>
+      <p class="small">Pairs: for each object note its medium, date and find-spot, and what it reveals about cultural or everyday life. Full captions are earlier in this lesson (the Arkesilas cup’s in Lesson 16) and on the credits slide.</p>
+    </div>
+    <div class="tbl-scroll"><table class="tbl compact l24-gal">
+      <tr><th>#</th><th>Medium · date</th><th>Find-spot</th><th>What it reveals</th></tr>
+      <tr class="reveal"><td>1 Goddess plaque</td><td>ivory or bone · c. 650 BC (Hurley)</td><td>not given; shown with Orthia’s finds</td><td>a grand, richly dressed goddess; costly gifts for the gods</td></tr>
+      <tr class="reveal"><td>2 Comb</td><td>ivory · not given</td><td>not given</td><td>an everyday object made precious, from imported ivory</td></tr>
+      <tr class="reveal"><td>3 Lion</td><td>cast metal · c. 550 BC</td><td>not given</td><td>a taste for small animal figures; lions in ivory, metal and paint</td></tr>
+      <tr class="reveal"><td>4 Girl</td><td>bronze · 520–500 BC</td><td>probably Prizren, Kosovo</td><td>active girls, running or dancing; Laconian bronzes travelled</td></tr>
+      <tr class="reveal"><td>5 Banqueter</td><td>bronze · c. 530–500 BC</td><td>thought to be Dodona</td><td>feasting on couches — but not necessarily a Spartiate</td></tr>
+      <tr class="reveal"><td>6 Chrysapha relief</td><td>marble · c. 540 BC</td><td>Chrysapha, near Sparta</td><td>worship of the heroic dead: gifts brought to a seated couple</td></tr>
+      <tr class="reveal"><td>7 Arkesilas cup</td><td>clay, black-figure · c. 565–560 BC</td><td>Vulci, Italy</td><td>a painter’s skill and wide horizons; Laconian cups valued abroad</td></tr>
+      <tr class="reveal"><td>8 Hunting cup</td><td>clay, black-figure · not given</td><td>not given</td><td>hunting as a subject painters and buyers liked — real or from myth</td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · What art reveals" data-title="Notes 5 — What art reveals" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>What art reveals about cultural and everyday life</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L24 · Cultural and everyday life I: art</b></span><span>5 · What art reveals</span></div>
+    <div class="row"><div class="cq">Religion</div>
+      <div class="nts reveal">Most art made for the <b>gods</b>: ivories, bronzes, lead figurines at Orthia <span class="sep">·</span> hero reliefs → cult of the heroic dead</div></div>
+    <div class="row"><div class="cq">Wealth and display</div>
+      <div class="nts reveal">Costly offerings, imported ivory <span class="sep">·</span> “skill and grace” v. “a grim austerity” (Cavanagh) <span class="sep">·</span> but no “excessive monumentality at home”</div></div>
+    <div class="row"><div class="cq">Everyday life</div>
+      <div class="nts reveal">Feasting (banqueter; cups for symposia), hunting, riding, active girls <span class="sep">·</span> BUT scenes may be myth, and objects made for export</div></div>
+    <div class="row"><div class="cq">Contacts</div>
+      <div class="nts reveal">Ivory from the east <span class="sep">·</span> Laconian goods found at Vulci, Prizren, Dodona <span class="sep">·</span> the Vix krater in Burgundy (workshop debated)</div></div>
+    <div class="row"><div class="cq">Change</div>
+      <div class="nts reveal">After the mid-6th c. perhaps a decline (Cooley: “Even if”); “some argue” austerity, “others argue” a Peloponnesian trend</div></div>
+  </div>
+  <div class="card accent reveal"><div class="k">The multi-source move</div>
+    <p class="body nq">Together, the Orthia ivories, the Laconian cups and the bronzes suggest that Archaic Sparta was wealthy, pious and in touch with distant lands, and that its people valued fine things — though most of that display was offered to the gods.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · What art reveals" data-title="Summary" data-kind="notes">
+<div class="wrap l24-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What did Archaic Laconian craftsmen make?</li>
+          <li>What does it reveal about Spartan culture and everyday life?</li>
+          <li>When and why did it change — and how sure are we?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">In the 7th and 6th centuries BC Laconian craftsmen carved imported ivory (later bone), made small bronzes, painted black-figure cups and carved stone hero reliefs, most of them as offerings at sanctuaries. Their skill, their scenes of feasting, hunting, heroes and luxury, and their find-spots far from Laconia reveal a prosperous, pious and outward-looking society that spent its wealth on the gods and on fine objects rather than on grand buildings. From about the mid-6th century BC display art seems to have declined, but archaeological dates are imprecise, and scholars still debate whether this marks a Spartan turn to austerity or a trend shared across the Peloponnese.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Ivory and bone: imported ivory, the goddess plaque</label></li>
+        <li><label><input type="checkbox"> 2 · Bronze and stone: small bronzes, hero reliefs, no kouroi</label></li>
+        <li><label><input type="checkbox"> 3 · Painted vases: luxury, heroes, myth or life?</label></li>
+        <li><label><input type="checkbox"> 4 · The austerity question: when, how sure, why</label></li>
+        <li><label><input type="checkbox"> 5 · What art reveals</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · Answering HSC questions" data-title="Answering HSC part (c)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">5 · Answering HSC questions</p>
+  <h2>Today’s lesson was examined in 2022 — with architecture</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks: “Allow about 45 minutes for this section” — about 1.8 minutes a mark. 7 marks ≈ 12–13 minutes.</p></div>
+    <div class="card"><div class="k">What do … reveal?</div><p class="body">Not a NESA glossary key word. The criteria reward “a well-developed and detailed explanation”: draw conclusions, don’t describe.</p></div>
+    <div class="card accent"><div class="k">Art today, architecture next</div><p class="body">Today: the art half, in full. Lesson 25 adds Orthia, the Menelaion and the Amyklaion.</p></div>
+  </div>
+  <p class="lead">We take the question apart, read the criteria, the markers’ feedback and NESA’s list (checked against Cooley); then you write the art half and compare it with an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 · Section II · Question 11 (c) · 7 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">What do</span> <span class="code" data-code="keyterm" data-letter="K">art and architecture</span> <span class="code" data-code="directive" data-letter="D">reveal about</span> <span class="code" data-code="keyterm" data-letter="K">cultural and everyday life</span> <span class="code" data-code="scope" data-letter="S">in Sparta in this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">I do — watch how the question is taken apart. Then you write the art half.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — take it apart" data-kind="hsc">
+<div class="wrap l24-dense">
+  <p class="eyebrow">HSC 2022 Q11(c) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">What do … reveal about — no glossary word</div><p class="body">The criteria reward “a well-developed and detailed explanation”, and the feedback says better responses could “draw revelations”. So: name the object, then say what it shows and why — closest to NESA’s “Analyse”: “Draw out and relate implications.”</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Art and architecture — both</div><p class="body">Art: sculpture, painted vases, bone and ivory carving (the syllabus list). Architecture: the Amyklaion, the Menelaion and the Sanctuary of Artemis Orthia (Lesson 25).</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Cultural and everyday life</div><p class="body">Religion and festivals, feasting, hunting and riding, girls’ activity, taste and display, contacts abroad. Not the army or politics.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In Sparta in this period</div><p class="body">To 371 BC. Most of the art is Archaic (7th–6th centuries BC), so say what changed later — and keep the hedges.</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">7 marks</div><p class="body">About 12–13 minutes · four or five objects or buildings, each followed by what it reveals · about 250–330 words · a judgement in the first sentence.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — the criteria and the feedback" data-kind="hsc">
+<div class="wrap l24-dense">
+  <p class="eyebrow">HSC 2022 Q11(c) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact l24-marks">
+      <tr><th>Marks</th><th>Criteria (2022, part (c))</th></tr>
+      <tr><td class="m">6–7</td><td>Presents a well-developed and detailed explanation relevant to the question · Communicates ideas and information coherently, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–5</td><td>Presents an explanation relevant to the question · Communicates ideas and information clearly, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">2–3</td><td>Presents some information relevant to the question · Communicates ideas using some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1</td><td>Makes general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack tight">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">use examples of specific art and architecture to draw revelations about cultural and everyday life (c)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">avoiding a narrative response on cultural and everyday life, instead focusing on what art and architecture reveal about it (c)</span></p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">The step up</div><p class="body">4–5: “an explanation”. 6–7: “a well-developed and detailed explanation”, communicated “coherently”. Detail means specific, named objects and buildings — not more words.</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2022 HSC Ancient History Marking Guidelines (Section II, part (c)) and the 2022 marking feedback for Question 11, quoted exactly.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — what the markers listed" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · We do — NESA’s “answers could include”, annotated</p>
+  <h2>What the marking guidelines listed — checked against Cooley</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l24-pt">– <span class="code" data-code="counter" id="n22-1">Statuette of girl doing exercise, revealing the Spartan desire for fit and healthy women</span><span class="mk">1</span></span>
+      <span class="l24-pt">– <span class="code" data-code="keyterm" id="n22-2">Architecture of Sparta reveals the austere nature of buildings</span><span class="mk">2</span> <span class="code" data-code="keyterm" id="n22-3">although some religious sanctuaries like the Amyclaeon are considered more exuberant</span><span class="mk">3</span></span>
+      <span class="l24-pt">– <span class="code" data-code="evidence" id="n22-4">Lakonian painted vases depict hunting scenes, warfare and drinking parties, as well as mythological beings.</span><span class="mk">4</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2022 HSC Ancient History Marking Guidelines, Section II part (c) · all three points</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="counter" data-hl="#n22-1"><span class="mk">1</span><b>Cooley says: keep the hedge</b><span class="tx">The best-known bronze girl “may be running or, since she glances back, dancing” (D64), and NESA does not say which statuette it means. She is consistent with Xenophon’s girls’ races (D68), not proof of them (Lesson 13).</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n22-2"><span class="mk">2</span><b>Lesson 25</b><span class="tx">Cavanagh: “Already the Spartans avoid excessive monumentality at home”; the temple of Orthia was about 16 × 7 m.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n22-3"><span class="mk">3</span><b>NESA’s word is “more exuberant”</b><span class="tx">Not “lavish”. Cavanagh: the famous throne of Apollo at Amyklai shows Spartans up to date in architecture, and they “seem to have had a taste for unusual monuments” such as Athena’s Bronze House (Lesson 25).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#n22-4"><span class="mk">4</span><b>Partly supported — add a caution</b><span class="tx">Cavanagh: “scenes of luxury”, “images of heroes”; hunting and warfare scenes come from the textbooks’ images, not Cooley. A painted hunt may be myth, and many cups were found abroad.</span></div>
+      <div class="verdict reveal"><b>NESA’s list.</b> Acceptable content, not a sample answer. It leaves out ivory and bone carving, and any change over time.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> add the Orthia ivories (imported) and the later Archaic decline, with Cooley’s and Cavanagh’s hedges.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — you write the art half" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · You do · 12 minutes · press K for the timer</p>
+  <h2>What do art and architecture reveal about cultural and everyday life in Sparta in this period? <span class="small">(7 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Today: the art half, as one paragraph</div>
+      <ul class="body">
+        <li>a judgement in your first sentence</li>
+        <li>at least three objects, each with its date and find-spot</li>
+        <li>after each, what it reveals: religion, wealth, contacts, everyday life</li>
+        <li>one hedge: running or dancing? real or myth? made for export?</li>
+        <li>end with change over time — and how sure we can be</li>
+        <li>about 200–230 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Laconian art reveals a Sparta that …”</p>
+      <p class="body nq">Then: “The … of c. … BC, found at …, reveals …”</p>
+      <p class="body nq">Group: “Together, the Orthia ivories, the Laconian cups and the bronzes suggest that …”</p>
+      <p class="small">After Lesson 25, add a paragraph on architecture: the whole answer ≈ 250–330 words in 12–13 minutes.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — model, the art paragraph" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · annotated model, written for this lesson · paragraph 1 of 2: art</p>
+  <h2>Answer first, then object → what it reveals</h2>
+  <div class="annot wide" data-veil="Write your own answer first — then show the annotated model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m22-1">Art and architecture reveal a Sparta more skilled, outward-looking and devoted to the gods than the austere stereotype suggests, although its display was channelled into sanctuaries rather than grand public buildings.</span><span class="mk">1</span>
+      <span class="code" data-code="evidence" id="m22-2">In the 7th century BC worshippers at the Sanctuary of Artemis Orthia offered carved ivories, such as a lion only 7.5 cm long, and since there were no elephants in Greece the raw ivory must have come from the east, which reveals both costly piety and links with distant lands.</span><span class="mk">2</span>
+      <span class="code" data-code="counter" id="m22-3">The bronze figure of a girl made in Laconia in 520–500 BC and probably found at Prizren in Kosovo, who may be running or dancing, suggests the value placed on active young women, consistent with Xenophon’s claim that Lycurgus made ‘physical fitness … as important for women as for men’.</span><span class="mk">3</span>
+      <span class="code" data-code="evidence" id="m22-4">Laconian black-figure vases show hunting, warfare, feasting and myth, and the Arkesilas cup of c. 565–560 BC, found at Vulci in Italy, reveals both the painter’s skill and how far Laconian cups travelled.</span><span class="mk">4</span>
+      <span class="code" data-code="analysis" id="m22-5">The thousands of cheap lead figurines offered at Orthia, which Cavanagh says ‘celebrate the participants in festivals’, suggest that worshippers of more modest means took part too.</span><span class="mk">5</span>
+      <span class="code" data-code="judgement" id="m22-6">Yet this display did not last unchanged: figured pottery and great bronze vessels became rarer in the later 6th century BC, and archaeologists still debate whether this ‘apparent decline’ marks the onset of Spartan austerity or a trend shared across the Peloponnese.</span><span class="mk">6</span>
+      <p class="meta">MR-11, corrected and extended for this lesson · paragraph 1 of 2 · ≈ 230 words</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-1"><span class="mk">1</span><b>Answer first</b><span class="tx">A judgement that answers the question — what art and architecture reveal — and sets art against architecture.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-2"><span class="mk">2</span><b>Object → what it reveals</b><span class="tx">Ivory, date, sanctuary, then two conclusions. Ivory and bone carving is in the syllabus dot point; NESA’s list leaves it out.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m22-3"><span class="mk">3</span><b>Keeps the hedge</b><span class="tx nq">“May be running or dancing” and “consistent with”: NESA’s statuette point, made safely.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-4"><span class="mk">4</span><b>Named, dated, found</b><span class="tx">A precise noun group, then what the find-spot reveals — without claiming more than it shows.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m22-5"><span class="mk">5</span><b>Another kind of evidence</b><span class="tx">Humble offerings beside costly ones, in Cavanagh’s words, and “suggest”, not “prove”.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-6"><span class="mk">6</span><b>Change over time</b><span class="tx">Dated to the later 6th century, not the 5th; the “apparent decline” is what some scholars argue (Cavanagh), and the debate is kept.</span></div>
+      <div class="verdict reveal"><b>Written to the 6–7 criteria for the art half:</b> a detailed explanation that draws revelations from named, dated objects.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — model, the architecture paragraph" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · annotated model · paragraph 2 of 2: architecture (Lesson 25)</p>
+  <h2>Then architecture — and close the loop</h2>
+  <div class="annot wide" data-veil="Show the second paragraph">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m22-7">Architecture, by contrast, was modest — ‘the temple of Orthia measured about 16 x 7 m’ (Cavanagh, in Cooley) — which supports Thucydides’ point that Sparta lacked extravagant public buildings.</span><span class="mk">7</span>
+      <span class="code" data-code="evidence" id="m22-8">Yet the late-6th-century throne of Apollo at Amyklai and the Menelaion, a shrine to Helen and Menelaus beside Mycenaean remains, show Spartans investing in sanctuaries that tied the city to its heroic past.</span><span class="mk">8</span>
+      <span class="code" data-code="judgement" id="m22-9">Overall, art and architecture reveal a society that spent its wealth above all on the gods and on display at festivals rather than on grand public buildings, and whose Archaic taste for fine objects sits uneasily with the later image of Spartan austerity.</span><span class="mk">9</span>
+      <p class="meta">Both paragraphs ≈ 340 words, about 12–13 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m22-7"><span class="mk">7</span><b>A precise claim</b><span class="tx">A 16 × 7 m temple is still a temple: Thucydides’ point was that Sparta lacked “extravagant public buildings”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-8"><span class="mk">8</span><b>Lesson 25</b><span class="tx">NESA’s “more exuberant” sanctuaries: the throne of Apollo and the Menelaion.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-9"><span class="mk">9</span><b>Close the loop</b><span class="tx">“Overall” returns to the opening judgement and adds change over time.</span></div>
+      <div class="verdict reveal"><b>Finish it in Lesson 25:</b> sentences 7–8 become a full paragraph on Orthia, the Menelaion and the Amyklaion.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2022 Q11(c) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">2–3 marks · describes</span>
+      <p class="resp">Spartan art included ivory carvings of lions and goddesses, bronze statues of girls and banqueters, and black-figure pottery such as the Arkesilas cup, which shows a king watching goods being weighed.</p>
+      <p class="why">Accurate, but it never says what any of it reveals: the “narrative response” the markers asked students to avoid.</p></div>
+    <div class="rung reveal"><span class="mark">4–5 marks · reveals, but overclaims</span>
+      <p class="resp">Spartan art proves Sparta was not austere at all: the Arkesilas cup proves Spartans held luxurious feasts, and the bronze girl proves girls ran races …</p>
+      <p class="why">An explanation, but “proves” ignores the cup’s find-spot (Italy) and the girl’s hedge; nothing on change; no architecture.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · errors that sink it</span>
+      <p class="resp">Spartan art declined in the 5th century BC because Lycurgus banned all art, as Plutarch says.</p>
+      <p class="why">Cooley and Cavanagh put the decline in the later Archaic period (after the mid-6th century), not the Classical 5th century; Plutarch says “useless or superfluous” crafts, not all art, and wrote c. AD 100 about a lawgiver supposedly of the 9th century BC; a debate stated as fact.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · HSC 2022 Q11(c)" data-title="HSC 2022 Q11(c) — mark your own" data-kind="hsc">
+<div class="wrap l24-dense">
+  <p class="eyebrow">HSC 2022 Q11(c) · Self-mark</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement about what art reveals</label></li>
+        <li><label><input type="checkbox"> used at least three named objects, each with a date or find-spot</label></li>
+        <li><label><input type="checkbox"> followed each object with what it reveals — not a description</label></li>
+        <li><label><input type="checkbox"> included ivory or bone carving, not just bronze and pottery</label></li>
+        <li><label><input type="checkbox"> kept a hedge: running or dancing; real or myth; made for export?</label></li>
+        <li><label><input type="checkbox"> dated the change to the later Archaic period, and said it is debated</label></li>
+        <li><label><input type="checkbox"> after Lesson 25: added the architecture half</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The “reveals” test</div>
+        <p class="body">Highlight every “reveals” or “suggests” clause in your answer. Any object without one has been described, not explained.</p></div>
+      <div class="card accent"><div class="k">More practice · HSC-style, written for this lesson</div>
+        <p class="body"><b>What does Laconian painted pottery reveal about Spartan society in the 6th century BC?</b> (5 marks)</p>
+        <p class="body"><b>Explain why historians disagree about the decline of Laconian art.</b> (6 marks)</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac l24-dense">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing · written for this lesson</p>
+  <h2>Put these in order, earliest first — and say what each shows</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Plutarch says Lycurgus expelled “useless or superfluous arts and crafts”</span></li>
+    <li><span class="k">B</span><span>A worshipper offers a small ivory lion at the Sanctuary of Artemis Orthia</span></li>
+    <li><span class="k">C</span><span>Damonon sets up a stone with a relief of a four-horse chariot to record his victories</span></li>
+    <li><span class="k">D</span><span>A Laconian workshop makes the bronze figure of a girl who may be running or dancing</span></li>
+    <li><span class="k">E</span><span>Cavanagh writes that the debates about Laconian art “continue”</span></li>
+    <li><span class="k">F</span><span>A Laconian painter decorates the Arkesilas cup</span></li>
+    <li><span class="k">G</span><span>Euonyma dedicates a bronze mirror to Athena</span></li>
+    <li><span class="k">H</span><span>The Chrysapha hero relief is carved</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq l24-two">
+      <li class="sol reveal"><b>1 · B</b> (7th century BC) — imported ivory, finely carved, given to the gods (Cooley Fig. 1).</li>
+      <li class="sol reveal"><b>2 · F</b> (c. 565–560 BC) — black-figure at its best; found at Vulci in Italy.</li>
+      <li class="sol reveal"><b>3 · H</b> (c. 540 BC) — a hero relief: worship of the heroic dead.</li>
+      <li class="sol reveal"><b>4 · D</b> (520–500 BC) — a small bronze, probably found at Prizren (D64).</li>
+      <li class="sol reveal"><b>5 · G</b> (mid-5th century BC) — bronze offerings went on after the decline (C14).</li>
+      <li class="sol reveal"><b>6 · C</b> (about 400 BC; Cooley: “400 BC?”) — display moved into horses: a stone “to show off his victories, and also his considerable prosperity” (C83). (Cooley cannot say whether it was before or after the Peloponnesian War, so C may be earlier.)</li>
+      <li class="sol reveal"><b>7 · A</b> (c. AD 100) — a late writer credits the change to Lycurgus (D58).</li>
+      <li class="sol reveal"><b>8 · E</b> (2017; 2nd edn 2023) — the modern verdict: unresolved.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l24-dense">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify · written for this lesson</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l24-two" data-answers>
+    <li><span class="n">1</span><span>The ivory carved for Spartan sanctuaries came from Greek elephants.</span>
+      <span class="sol no reveal">False <span class="why">— there were no elephants in Greece; the raw ivory was imported from the east.</span></span></li>
+    <li><span class="n">2</span><span>Cavanagh says free-standing kouroi and korai are not attested in Laconia.</span>
+      <span class="sol reveal">True <span class="why">— “as in much of the Peloponnese”; Laconia’s Archaic stone sculpture was mainly relief.</span></span></li>
+    <li><span class="n">3</span><span>All three textbooks agree that the goddess plaque from Orthia is ivory.</span>
+      <span class="sol no reveal">False <span class="why">— ivory (Clarke &amp; Garner), ivory or bone (Bradley), bone (Hurley et al.).</span></span></li>
+    <li><span class="n">4</span><span>Laconian painters signed their vases.</span>
+      <span class="sol no reveal">False <span class="why">— there are “no potters’ or painters’ names” (Hodkinson); names like the Rider Painter are modern labels.</span></span></li>
+    <li><span class="n">5</span><span>Cavanagh says some Laconian pottery was painted with scenes of luxury.</span>
+      <span class="sol reveal">True <span class="why">— “vessels for symposia, some painted with scenes of luxury, others with images of heroes”.</span></span></li>
+    <li><span class="n">6</span><span>Plutarch says Lycurgus expelled useless arts and crafts.</span>
+      <span class="sol reveal">True <span class="why">— “His next move was to expel all forms of useless or superfluous arts and crafts” (D58) — but he wrote c. AD 100, and the art flourished long after Lycurgus’ supposed date.</span></span></li>
+    <li><span class="n">7</span><span>Cavanagh is sure that a Spartan reform caused the decline of Laconian art.</span>
+      <span class="sol no reveal">False <span class="why">— “some argue” it was austerity, “others argue” it was not: “These and other debates continue.”</span></span></li>
+    <li><span class="n">8</span><span>Laconia stopped making pottery after the 6th century BC.</span>
+      <span class="sol no reveal">False <span class="why">— goods were still made locally, “for example pottery and of course armour and weapons” (Cooley); Hodkinson mentions classical Laconian red-figure pottery.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze · 1 from Chapter 13, 2–8 written for this lesson</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>bone</span><span>elephants</span><span>luxury</span><span>Peloponnese</span><span>relief</span><span>rewritten</span><span>superfluous</span><span>symposia</span></div>
+  <ol class="cloze" data-answers>
+    <li>Ivory had to be imported to Sparta because Greece had no <span class="gap"><span class="sol reveal">elephants</span></span>.</li>
+    <li>Laconia’s Archaic stone sculpture was mainly <span class="gap"><span class="sol reveal">relief</span></span>: free-standing kouroi and korai are not attested.</li>
+    <li>After the mid-6th century BC carvers increasingly used <span class="gap"><span class="sol reveal">bone</span></span> instead of ivory.</li>
+    <li>Cavanagh says Laconian pottery includes vessels for <span class="gap"><span class="sol reveal">symposia</span></span>.</li>
+    <li>Some Laconian vessels were painted with scenes of <span class="gap"><span class="sol reveal">luxury</span></span>.</li>
+    <li>Plutarch says Lycurgus expelled all useless or <span class="gap"><span class="sol reveal">superfluous</span></span> arts and crafts.</li>
+    <li>Others argue that the Spartans were no different from others elsewhere in the <span class="gap"><span class="sol reveal">Peloponnese</span></span>.</li>
+    <li>Cavanagh predicts that his section will certainly need to be <span class="gap"><span class="sol reveal">rewritten</span></span> in the future.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l24-dense">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph · written for this lesson</p>
+  <h2>How far does Laconian art support the view that Sparta turned austere in the later Archaic period?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: does the art show a change, and does it show austerity?</span>
+    <span class="l">Evidence</span><span>Name Archaic objects precisely (ivories, the Arkesilas cup, the Vix krater) and quote Cavanagh with his hedges.</span>
+    <span class="l">Analyse</span><span>Explain what changed after the mid-6th century BC and what “some” read into it.</span>
+    <span class="l">Evaluate</span><span>Weigh the limits: loose dates, the Peloponnesian comparison, crafts that went on.</span>
+    <span class="l">Resolve</span><span>Close with a refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Laconian art supports the view that something changed in the later Archaic period, but it does not prove that Sparta turned austere. Carved ivories, black-figure cups such as the Arkesilas cup of c. 565–560 BC and great bronze vessels such as the Vix krater show highly skilled craftsmen until the later 6th century BC, after which figured pottery and great bronze vessels became rarer, and, according to Clarke and Garner, bone increasingly replaced ivory. Some archaeologists, as Cavanagh reports, read this ‘apparent decline in artistic creativity’ as ‘the onset of Spartan austerity’. Yet archaeological dates ‘can seldom be refined even as closely as to a generation or two’, and others argue that the Spartans were ‘no different from other contemporaries elsewhere in the Peloponnese’. Crafts also went on: Cooley notes that pottery and ‘of course armour and weapons’ were still made locally, and Euonyma dedicated a bronze mirror to Athena in the mid-5th century BC. Laconian art therefore suggests that Spartan display narrowed after the mid-6th century BC, but whether austerity caused that change remains, in Cavanagh’s words, one of the debates that continue.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac l24-dense">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>Assess the usefulness of Laconian art as evidence for change in Spartan society from the 7th to the 5th century BC. <span class="small">(12 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence: very useful for Archaic skill, wealth, piety and contacts, and for a later narrowing of display; limited for dating the change and explaining it.</li>
+    <li><b>What it shows:</b> ivories (Cooley Fig. 1, C6), bronzes (D64, E71, the Vix krater), painted pottery (the Arkesilas cup; Cooley Figs 3–4), reliefs (Chrysapha; C36); Cavanagh’s “skill and grace”.</li>
+    <li><b>The limits:</b> dates that “can seldom be refined”; find-spots abroad (Vulci, Prizren, Dodona) and objects perhaps “made for external consumption” (E71); no makers’ names (Hodkinson); a disputed material (the goddess plaque); painted scenes that may be myth.</li>
+    <li><b>Weigh the explanations:</b> austerity (“some argue”; Hodkinson’s “temporary imposition”) against a Peloponnesian trend (“others argue”); Plutarch’s Lycurgus story (D58) as part of the mirage; Cooley’s “comfortable prosperity masked by a display of austerity”.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Practice and review" data-title="Review — the Quick Check for sections 1–2" data-kind="practice notes">
+<div class="wrap prac l24-dense">
+  <p class="eyebrow">Practice and review · 6 of 6 · the Quick Check for Chapter 13, sections 1–2 (1–4), and two more (5–6) · answers written for this lesson</p>
+  <h2>Review: art and the austerity question</h2>
+  <ol class="rq l24-two" data-answers>
+    <li>Why does ivory found at Sparta show that Sparta traded with distant lands?
+      <span class="sol reveal">Ivory comes from elephants, and there were none in Greece, so the raw ivory must have been imported from the east — contact with distant lands, directly or through traders. (Who carved it is unknown: the ivories were found at Orthia.)</span></li>
+    <li>Name one example each of Spartan sculpture, painted pottery and ivory or bone carving.
+      <span class="sol reveal">Sculpture: the Chrysapha hero relief (c. 540 BC) or the bronze girl (520–500 BC). Pottery: the Arkesilas cup (c. 565–560 BC). Ivory: the 7th-century ivory lion from Orthia (Cooley Fig. 1).</span></li>
+    <li>What kind of stone sculpture did Laconia produce, and what kind is missing?
+      <span class="sol reveal">Hero reliefs, found in Sparta and in perioikic Laconia; free-standing kouroi and korai are “not attested” — “as in much of the Peloponnese”.</span></li>
+    <li>Give the two explanations for the decline of display art in the later 6th century BC.
+      <span class="sol reveal">Some argue it marks “the onset of Spartan austerity”; others argue the Spartans were “no different from other contemporaries elsewhere in the Peloponnese”, so it “does not reflect a political or social reform” (Cavanagh).</span></li>
+    <li>How sure can historians be about when Laconian art declined?
+      <span class="sol reveal">Not very: Cooley hedges it (“Even if”); “an apparent decline … in the later Archaic period” is how “some” scholars read the evidence; and archaeological dates “can seldom be refined even as closely as to a generation or two”.</span></li>
+    <li>What can a painted hunt on a Laconian cup tell us about everyday life — and what can it not?
+      <span class="sol reveal">That hunting was a subject painters and buyers valued; not whether Spartiates hunted that way, since it may be a hunt from myth and the cup may have been made for buyers abroad.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Finish the sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead nq">One object, its date, and what it reveals about Spartan cultural or everyday life: …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One reason we cannot be sure that Laconian art declined because of austerity.</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Cultural and everyday life II — architecture: the Sanctuary of Artemis Orthia, the Menelaion and the Amyklaion. Was Thucydides right about Sparta’s buildings?</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l24-credits">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">Ancient sources, objects and inscriptions</div>
+      <p class="small">Quoted from the translations and notes in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Plutarch, <i>Life of Lykourgos</i> 9.3 (D58, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 1.4 and 4.7 (D68, D79, trans. B. Wilson). Objects and inscriptions described in Cooley: the ivory lion from Orthia (Fig. 1), the Laconian hydria from Vulci and the Rider Painter kylix (Figs 3–4), the ivory ship plaque (C6), Euonyma’s mirror (C14), the relief from Magoula (C36), the Damonon stele (C83), the bronze girl (D64), the bronze banqueter (E71). Thucydides 1.10.2 (G2) in the model’s architecture paragraph.</p></div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Historians and introductions</div>
+        <p class="small">W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, both in Cooley (ed.), <i>Sparta</i> (2023); Cooley’s own introductions (‘Perioikoi: a note’; wealth and property; Spartan property and wealth, quoting Hodkinson). Unit textbook, Chapter 13, sections 1–2 (Sources 13.1–13.2). Clarke &amp; Garner ch. 8 (the metal lion; bone after ivory).</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC question, marking criteria, “answers could include” and marking feedback: NSW Education Standards Authority, 2022 HSC Ancient History examination, marking guidelines and feedback; 2021 and 2020 marking guidelines (ivory and bone). © NESA. NESA glossary of key words for “analyse”.</p></div>
+    </div>
+  </div>
+  <div class="card quiet"><div class="k">Images and diagrams</div>
+    <ul class="small"><li>A Laconian black-figure hydria (water jar), painted in bands on a pale slip: animals, a row of birds, patterns and, at the shoulder, a staring face (probably a gorgon). The textbook gives no date or find-spot — Clarke & Garner, Fig 8.4</li><li>An ivory comb with a carved scene, broken at one side. Bradley’s caption gives no date or find-spot — Bradley, Fig 3.27</li><li>Bronze figure of a girl in a short dress, one leg stretched far forward; made in Laconia, 520–500 BC, probably found at Prizren in Kosovo (British Museum 1876,0510.1) — Bradley, Fig 3.15</li><li>Inside a Laconian black-figure kylix (drinking cup): a stylised lion in a ring of patterns. The textbook gives no date or find-spot — Clarke & Garner, Fig 8.5</li><li>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — Hurley et al., Source 51</li><li>A carved plaque of a goddess, identified as Orthia, in a patterned, belted dress, with two birds on each side — one perched above, a larger bird below. Clarke & Garner call it ivory; Bradley says ivory or bone; Hurley et al. call it bone and date it c. 650 BC. No book gives a museum — Clarke & Garner, Fig 8.6</li><li>A small cast-metal statuette of a lion, c. 550 BC, about 9 cm tall. Clarke & Garner say its style suggests it was made in Laconia; they give no find-spot — Clarke & Garner, Fig 8.2</li><li>Bronze figure of a reclining banqueter from the support of a bronze bowl; probably made in Laconia c. 530–500 BC and thought to have been found at Dodona in north-west Greece; British Museum 1954,1018.1 (Cooley E71). It need not show a Spartiate — Bradley, Fig 3.32</li><li>Inside a Laconian black-figure cup: two long-haired hunters with raised spears attack a large animal, probably a boar, with birds between their legs and fish below. Bradley calls them Spartans but gives no date or museum; it may be a hunt from myth — Bradley, Fig 3.31</li><li>Inside a black-figure cup of c. 550–530 BC: a rider on horseback, with winged figures above and birds below. Clarke & Garner call him a Spartan; the winged figures suggest more than an everyday ride — Clarke & Garner, Fig 8.9</li><li>Inside the Arkesilas cup: King Arcesilas of Cyrene, seated at left, watches goods being weighed and carried into store; Laconian black-figure kylix, c. 565–560 BC, found at Vulci in Italy (Paris, Cabinet des Médailles) — Hurley et al., Source 45a</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+    <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the timeline of Laconian art; the four kinds of art and the gallery tables.</p></div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,2447 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L22 · Religion II: Myths, Kings and Burial</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: myths and legends, the kings’ religious role, death and burial, and hero cult, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+@media (max-width:900px){.annot.wide{grid-template-columns:1fr;}}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read .unveil, html.read .showans{max-width:100%; white-space:normal; text-align:left;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+/* ---- Lesson 22 (religion II: myths, kings and burial). Every class starts l22-. */
+
+/* Activity A answer key (svg_l22seq.svg, drawn by make_l22_diagrams.py) */
+.l22-tl text{font-family:var(--ui); fill:var(--ink);}
+.l22-tl .l22t-bg{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.l22-tl .l22t-axis{stroke:var(--ink); stroke-width:5;}
+.l22-tl .l22t-break{fill:none; stroke:var(--ink); stroke-width:4;}
+.l22-tl .l22t-lead{stroke:var(--slate); stroke-width:2.5; stroke-dasharray:5 6;}
+.l22-tl .l22t-box{fill:var(--surface); stroke-width:3;}
+.l22-tl .l22t-w .l22t-box{stroke:var(--deep);}
+.l22-tl .l22t-d .l22t-box{stroke:var(--c-analysis); stroke-dasharray:12 8;}
+.l22-tl .l22t-w .l22t-node{fill:var(--deep);}
+.l22-tl .l22t-d .l22t-node{fill:var(--c-analysis);}
+.l22-tl .l22t-letter{fill:#fff; font-size:26px; font-weight:700; text-anchor:middle;}
+:root[data-theme="dark"] .l22-tl .l22t-letter{fill:var(--ground);}
+.l22-tl .l22t-date{font-size:29px; font-weight:700;}
+.l22-tl .l22t-w .l22t-date{fill:var(--deep);}
+.l22-tl .l22t-d .l22t-date{fill:var(--c-analysis);}
+.l22-tl .l22t-ttl{font-size:23px;}
+.l22-tl .l22t-src{fill:var(--slate); font-size:19px; font-style:italic;}
+.l22-tl .l22t-key text{fill:var(--slate); font-size:20px;}
+.l22-tl .l22t-sw.w{fill:var(--deep);}
+.l22-tl .l22t-sw.d{fill:var(--surface); stroke:var(--c-analysis); stroke-width:2; stroke-dasharray:5 3;}
+.l22-tl .l22t-note{text-anchor:end; font-style:italic;}
+
+/* the two rebuilt tables: myth -> function, and who was buried where */
+.l22-myth td, .l22-burial td{vertical-align:top; line-height:1.34;}
+.l22-myth td:first-child, .l22-burial td:first-child{font-weight:700; color:var(--deep);}
+.l22-myth td:last-child{font-weight:600;}
+.l22-myth .l22-fn{display:inline-block; margin-right:.3em; padding:0 .45em; border-radius:999px; border:1.5px solid var(--c-evidence);
+  color:var(--c-evidence); font-size:.82em; font-weight:700; white-space:nowrap;}
+.l22-burial td:last-child{color:var(--slate); font-size:.9em;}
+.l22-burial tr.l22-war td:first-child{border-left:6px solid var(--c-judgement);}
+.l22-burial tr.l22-king td:first-child{border-left:6px solid var(--deep);}
+.l22-burial tr.l22-cit td:first-child{border-left:6px solid var(--c-evidence);}
+.l22-burial tr.l22-wom td:first-child{border-left:6px solid var(--c-analysis);}
+
+/* "answers could include": one bullet per NESA point */
+.l22-pt{display:block; margin:0 0 .4em;}
+
+/* the plan grid for HSC 2023 Q11(c) */
+.l22-plan th{white-space:nowrap;}
+.l22-plan td{vertical-align:top; line-height:1.34;}
+.l22-plan td:first-child{font-weight:700; color:var(--deep);}
+.l22-plan.l22-empty{table-layout:fixed;}
+.l22-plan.l22-empty th{white-space:normal;}
+.l22-plan.l22-empty th:first-child{width:19%;}
+.l22-plan.l22-empty td{height:3.1em;}
+.l22-plan.l22-empty td + td{border-left:1px solid var(--rule); background:var(--surface);}
+
+/* marks column that never wraps ("10–12") */
+.l22-marks td.m{white-space:nowrap; width:auto; padding-left:.5em; padding-right:.5em;}
+
+/* a hinge question: four lettered options */
+.l22-hinge{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1em;}
+@media (max-width:900px){ .l22-hinge{grid-template-columns:1fr;} }
+.l22-hinge li{display:grid; grid-template-columns:1.9em 1fr; gap:.55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.l22-hinge li .k{font-family:var(--mono); font-weight:700; color:var(--deep);}
+
+/* two-column practice lists on wide screens */
+.l22-two{display:grid !important; grid-template-columns:1fr 1fr; gap:.4em 1.2em; align-items:start;}
+@media (max-width:900px){ .l22-two{grid-template-columns:1fr;} }
+
+/* question-and-answer pairs in a row under two sources */
+.l22-qa .stack{gap:.3em;}
+html:not(.read) .l22-qa .qprompt{font-size:calc(var(--fs-body)*.84); line-height:1.3;}
+html:not(.read) .l22-qa .body{font-size:calc(var(--fs-body)*.8); line-height:1.34;}
+@media (max-height:820px){
+  html:not(.read) .l22-qa .qprompt{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l22-qa .body{font-size:calc(var(--fs-body)*.72);}
+}
+
+/* tall drawing beside a table */
+.l22-tall .figure img{max-height:44vh; object-fit:contain; background:var(--surface);}
+
+/* dense slides on short projectors (1366 × 768): dense slides carry .l22-dense on their .wrap */
+@media (max-height:820px){
+  html:not(.read) .l22-dense .src .quote.sm{font-size:calc(var(--fs-body)*.8); line-height:1.36;}
+  html:not(.read) .l22-dense .src .quote{font-size:calc(var(--fs-body)*.88); line-height:1.4;}
+  html:not(.read) .l22-dense .src{padding:10px 16px;}
+  html:not(.read) .l22-dense .src .prov{margin-top:.35em;}
+  html:not(.read) .l22-dense .note{padding:.38em .8em;}
+  html:not(.read) .l22-dense .note .body, html:not(.read) .l22-dense .card .body{font-size:calc(var(--fs-body)*.78); line-height:1.32;}
+  html:not(.read) .l22-dense .card{padding-top:10px; padding-bottom:10px;}
+  html:not(.read) .l22-dense .qprompt{font-size:calc(var(--fs-body)*.82);}
+  html:not(.read) .l22-dense .body{font-size:calc(var(--fs-body)*.78); line-height:1.32;}
+  html:not(.read) .l22-dense .lead{font-size:calc(var(--fs-lead)*.84); line-height:1.38;}
+  html:not(.read) .l22-dense .tbl.compact{font-size:calc(var(--fs-body)*.7);}
+  html:not(.read) .l22-dense .tbl.compact td, html:not(.read) .l22-dense .tbl.compact th{padding:.26em .5em;}
+  html:not(.read) .l22-dense .rq{font-size:calc(var(--fs-body)*.72); gap:.28em;}
+  html:not(.read) .l22-dense .tf li{font-size:calc(var(--fs-body)*.72); padding:.26em .7em;}
+  html:not(.read) .l22-dense .seq li{font-size:calc(var(--fs-body)*.78); padding:.3em .7em;}
+  html:not(.read) .l22-dense .moves{font-size:calc(var(--fs-body)*.76);}
+  html:not(.read) .l22-dense .quote.sm.model{font-size:calc(var(--fs-body)*.72); line-height:1.34;}
+  html:not(.read) .l22-dense .cornell .nts, html:not(.read) .l22-dense .cornell .cq{font-size:calc(var(--fs-body)*.76); line-height:1.34;}
+  html:not(.read) .l22-dense .cornell .nts, html:not(.read) .l22-dense .cornell .cq{padding-top:.32em; padding-bottom:.32em;}
+  html:not(.read) .l22-dense .fb{font-size:calc(var(--fs-body)*.72); line-height:1.3;}
+  html:not(.read) .l22-dense .fb .q{margin:.18em 0;}
+  html:not(.read) .l22-dense .figure figcaption{font-size:calc(var(--fs-chrome)*.9);}
+  html:not(.read) .l22-dense .stack{gap:7px;}
+  html:not(.read) .l22-dense .keylist li{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l22-dense .keylist .d{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l22-dense .lisc li{font-size:calc(var(--fs-body)*.84); margin:.2em 0;}
+  html:not(.read) .l22-dense .l22-hinge li{font-size:calc(var(--fs-body)*.76); padding:.3em .6em;}
+  html:not(.read) .l22-dense .vocab .tbl.compact{font-size:calc(var(--fs-body)*.7);}
+  html:not(.read) .l22-dense .checks label{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l22-dense h2{font-size:calc(var(--fs-h2)*.86);}
+  html:not(.read) .l22-tall .figure img{max-height:34vh;}
+}
+/* the projector at 1920 × 1080 but a very full slide */
+html:not(.read) .l22-tight .ans.long.dense{font-size:calc(var(--fs-body)*.82); line-height:1.46;}
+@media (max-height:820px){ html:not(.read) .l22-tight .ans.long.dense{font-size:calc(var(--fs-body)*.66); line-height:1.38;} }
+
+/* phones: the wide timeline scrolls sideways at a readable size; tables keep their columns */
+@media (max-width:700px){
+  html.read .diagram svg.l22-tl{min-width:900px; max-height:none;}
+  html.read .l22-plan, html.read .l22-burial, html.read .l22-myth{min-width:640px;}
+}
+
+/* Read mode: the answer-key timeline takes no space until "Show answers" is pressed */
+html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 22" data-title="Religion II: myths, kings and burial" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1.1fr .9fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 22</p>
+      <h1>Religion II: myths, kings and burial</h1>
+      <p class="lead">What do Sparta’s myths, its kings’ rituals and its treatment of the dead reveal about Spartan society?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-5-8-menelaus-helen-amphora.jpg" alt="An Attic (Athenian) black-figure amphora showing Menelaus recovering Helen after the fall of Troy — Athenian, not Spartan, work; the couple were honoured at the Menelaion near Sparta"><figcaption>An Attic (Athenian) black-figure amphora showing Menelaus recovering Helen after the fall of Troy — Athenian, not Spartan, work; the couple were honoured at the Menelaion near Sparta — <span class="cr">Clarke & Garner, Fig 5.8</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 22" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From festivals to myths, kings and the dead</h2>
+  <div class="cols c3">
+    <div class="card quiet">
+      <div class="k">Lesson 21</div>
+      <p class="body">The gods of Sparta — Apollo, Artemis Orthia, Poseidon — and Apollo’s three festivals, the Karneia, the Hyakinthia and the Gymnopaedia, which honoured the god and drew the community together.</p>
+    </div>
+    <div class="card quiet">
+      <div class="k">Lessons 3 and 4</div>
+      <p class="body">Lycurgus was given a temple and worshipped after his death, as hero or god; the twin Dioscuri went to war with the kings; the kings held two priesthoods of Zeus, and a royal funeral was followed by ten days without public business.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today — new</div>
+      <p class="body">The bones of Orestes · omens before battle · how ordinary citizens and soldiers were buried · hero cult. Then one HSC question that draws on all of it.</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 21, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 22" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>evaluate what myths and burial evidence reveal about Spartan society</li>
+        <li>explain significance rather than simply describe</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>explain two functions of Spartan myths, with evidence</li>
+        <li>explain one way religion strengthened a king and one way it limited him</li>
+        <li>compare a royal funeral with an ordinary Spartan death, using Herodotus 6.58 and Plutarch, <i>Lykourgos</i> 27.2</li>
+        <li>plan an answer on what evidence reveals about religion in Sparta</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two things to get right</div>
+    <p class="body">Only Spartans <b>killed in war</b> were buried where they fell; ordinary citizens were buried <b>inside the city</b>. And Plutarch’s manuscripts name a <b>priestess</b>, not a woman who died in childbirth, among those whose names could be inscribed.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 22" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L22 · Myths, kings and burial</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Hdt = Herodotus, K. = king)</span></div></div>
+      <div class="row"><div class="cq">Why did Sparta want Orestes’ bones?</div><div class="nts">Delphi’s order, war with Tegea …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: myths that did a job · the kings as priests · the citizen and the soldier · the king’s funeral · hero cult.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 22" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Myths and kings</th><th>Meaning</th></tr>
+      <tr><td>myth</td><td>a traditional story about gods and heroes; at Sparta, often used to explain and justify</td></tr>
+      <tr><td>legitimacy</td><td>the accepted right to rule, or to hold land</td></tr>
+      <tr><td>Heraclids</td><td>descendants of the hero Heracles, as both royal houses claimed to be</td></tr>
+      <tr><td>Dioscuri</td><td>the twins Castor and Polydeuces, also called the Tyndaridae (Lesson 4)</td></tr>
+      <tr><td>omen</td><td>a sign of the gods’ will, read, for example, from a sacrificed animal</td></tr>
+      <tr><td>agathoergoi</td><td>five men who left the hippeis each year and were sent on state missions (Herodotus)</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Death and burial</th><th>Meaning</th></tr>
+      <tr><td>hero cult</td><td>worship of a remarkable dead person at one place, usually the grave; the shrine is a <i>heroon</i></td></tr>
+      <tr><td>demigod</td><td>a being between human and god; Xenophon says dead kings were honoured as demigods</td></tr>
+      <tr><td>memorial</td><td>a stone that records a name; at Sparta, small and plain</td></tr>
+      <tr><td>epitaph</td><td>words inscribed on a tomb or memorial</td></tr>
+      <tr><td>patronymic</td><td>a father’s name, added to a person’s own</td></tr>
+      <tr><td>emendation</td><td>a modern correction to the wording of an ancient text</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lykourgos, Herakles, Dioskouroi, Tyndaridai, Lakedaimonians, Plataia, Thermopylai). In your own writing use Lycurgus, Heracles, Dioscuri, Tyndaridae, Lacedaemonians, Plataea, Thermopylae.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Myths that did a job" data-title="Sons of Heracles" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">1 · Myths that did a job · I do — the question to ask of every myth</p>
+  <h2 class="nq">Not “what happened?” but “what did the story do?”</h2>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Tyrtaeus, Eunomia</div>
+        <p class="quote sm"><span class="code" data-code="keyterm" data-letter="K">For Zeus himself, the son of Kronos and husband of fair-crowned Hera,<br>Has given this city to the sons of Herakles;</span><br>Together with them we forsook windy Erineos<br>And arrived in the wide island of Pelops.</p>
+        <p class="prov">Tyrtaios, fragment 2 · mid-7th century BC, probably a Spartan poet · quoted by Strabo · trans. K. Hughes · Cooley A3</p>
+      </div>
+      <div class="card quiet"><div class="k">From Lesson 3</div><p class="body">The 2024 HSC asked students to explain “the importance of myths and legends for Spartan society”. NESA’s sample used three: Lycurgus, the Dioscuri and the Trojan War heroes at the Menelaion. Today adds the sons of Heracles and Orestes.</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="keyterm">Who are “the sons of Herakles”? What does the story give them?</p>
+      <p class="body reveal">The ancestors of both royal houses. Zeus himself gave them the city: a god-given title to Sparta and its land.</p>
+      <div class="note reveal" data-code="analysis"><div class="k">An archaeologist explains</div><p class="body">Cavanagh: “the Spartans bridged the gap by reference to myth, notably that the Spartan kings as the descendants of Herakles had a right to the land” — but “How much, if any, historical truth lay behind the myths we cannot say.”</p></div>
+      <p class="qprompt reveal">Tyrtaeus also tells soldiers, “But be confident, for you are descended from invincible Herakles” (fr. 11, Cooley A8). What job does the myth do there?</p>
+      <p class="body reveal">It turns ancestry into courage: the same myth that justified the kings steadied men in the battle line.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Myths that did a job" data-title="Myth → function (table)" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">1 · Myths that did a job · We do · 8 minutes · Worksheet L22</p>
+  <h2>Myth → function</h2>
+  <div class="bank" aria-label="Functions"><span>legitimacy</span><span>courage</span><span>kingship</span><span>unity</span><span>identity</span><span>foreign policy</span></div>
+  <div class="tbl-scroll"><table class="tbl compact l22-myth">
+    <tr><th>Myth</th><th>Evidence</th><th>The job it did</th></tr>
+    <tr><td>The sons of Heracles</td><td>Tyrtaeus: Zeus gave the city “to the sons of Herakles” (A3); “you are descended from invincible Herakles” (A8)</td><td class="reveal"><span class="l22-fn">legitimacy</span><span class="l22-fn">courage</span> the kings’ right to the land; confidence in battle</td></tr>
+    <tr><td>Lycurgus and Delphi <span class="small">(Lesson 3)</span></td><td>The Pythia: “I know not whether to worship you as hero or god”; a temple after his death (Herodotus 1.65–66, F3)</td><td class="reveal"><span class="l22-fn">legitimacy</span> laws with Apollo’s approval, and so hard to change</td></tr>
+    <tr><td>The Dioscuri <span class="small">(Lesson 4)</span></td><td>One of the Tyndaridae, probably as an image, went to war with the king who led the army (Herodotus 5.75, D6); Plestiadas’ relief, “dreading their wrath” (C28)</td><td class="reveal"><span class="l22-fn">kingship</span><span class="l22-fn">unity</span> twin heroes beside twin kings; feared as well as honoured</td></tr>
+    <tr><td>Helen and Menelaus</td><td>Offerings at the Menelaion: a bronze object inscribed “To Helen”, c. 570 BC (C30); a stele dedicated to Menelaus, early 5th century BC (C31)</td><td class="reveal"><span class="l22-fn">identity</span> a link to the age of heroes, probably at the place they were thought to have lived</td></tr>
+    <tr><td>Orestes</td><td>Delphi told the Spartans to bring his bones home from Tegea (Herodotus 1.67–68, H10) — next slide</td><td class="reveal"><span class="l22-fn">foreign policy</span> probably a claim on the heroes of the Peloponnese before the Dorians</td></tr>
+  </table></div>
+  <p class="small"><span class="swipe">Swipe the table sideways to see it all. </span>Square brackets in a translation mark words restored by modern editors. Another Menelaion offering reads “Deinis dedicated these to [Helen, wife of] Menelaos” (C29, mid-7th century BC): Helen’s name there is a restoration, so C30’s plain “To Helen” is the firmer evidence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Myths that did a job" data-title="The bones of Orestes" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">1 · Myths that did a job · We do — myth as foreign policy</p>
+  <h2>Herodotus: the bones of Orestes</h2>
+  <div class="split" style="--cols:1.6fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">[67.2] Having suffered constant defeat in this war at the hands of the Tegeans, <span class="code" data-code="evidence" data-letter="E">they sent envoys to Delphi to ask which god they should seek to propitiate in order to defeat the Tegeans.</span> [67.3] <span class="code" data-code="keyterm" data-letter="K">The Pythia declared to them that they must bring home the bones of Orestes, the son of Agamemnon.</span> …<br>[68.1] Lichas was one of these and by a mixture of luck and intelligence he found the body in Tegea. …<br>[68.6] … having taken up residence he opened the grave, gathered up the bones, and carried them off back to Sparta. <span class="code" data-code="judgement" data-letter="J">And ever afterwards, whenever the two states came to hostilities, the Lakedaimonians proved by far the stronger.</span></p>
+      <p class="prov">Herodotus, <i>Histories</i> 1.67.2–68.6 (parts) · written c. 450s–420s BC, about events of c. 550 BC · from Halicarnassus, not a Spartan · trans. B. Wilson · Cooley H10. Lichas was one of the <i>agathoergoi</i>.</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">Who decided what Sparta should do?</p>
+      <p class="body reveal">Delphi. The Spartans asked which god to win over, and the Pythia told them — twice, since they needed a second oracle to find the grave.</p>
+      <p class="qprompt reveal" data-paint="keyterm">Why Orestes?</p>
+      <div class="note reveal" data-code="analysis"><p class="body">He was “the son of Agamemnon”, a ruler from before the Dorians came. Cooley: it seems “the Spartans were trying to bridge the gap between themselves as Dorians and non-Doric peoples such as the Arkadians and Achaians”.</p></div>
+      <p class="qprompt reveal" data-paint="judgement">How does Herodotus explain the victory?</p>
+      <p class="body reveal">As the result of obeying the oracle: once the hero came home, Sparta won.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Myths that did a job" data-title="Weighing the story" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">1 · Myths that did a job · I do — weighing the story with O, V, P, R, L</p>
+  <h2>What can a story like this tell a historian?</h2>
+  <div class="split" style="--cols:1.35fr 1fr">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Code</th><th>Model margin note</th></tr>
+      <tr class="reveal"><td><b>O</b></td><td>Hdt, c. 450s–420s BC, not a Spartan; about a century after c. 550 BC → oral tradition</td></tr>
+      <tr class="reveal"><td><b>V</b></td><td>shows Delphi steering Spartan policy; a hero’s bones as a source of power</td></tr>
+      <tr class="reveal"><td><b>P</b></td><td>explains how Sparta came to beat Tegea, and why Sparta was strong (Croesus’ search for allies)</td></tr>
+      <tr class="reveal"><td><b>R</b></td><td>the smith found a coffin “more than ten feet (three metres) long” and “a corpse as big as the coffin” → legend, not fact</td></tr>
+      <tr class="reveal"><td><b>L</b></td><td>leaves out how the war ended: Cooley says Sparta “finally decided to conclude a treaty”</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="counter"><div class="k">Did it work?</div><p class="body">Cooley: “We do not know whether this measure did indeed have any direct success”: the tomb survived into Roman times, “but we have no evidence that this particular mythical connection was of much use later on”.</p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">So what does it reveal?</div><p class="body">Not what happened in a forge at Tegea, but what Spartans and Herodotus believed: Delphi’s word counted, and a hero’s relics carried “a strong symbolic value” (Cooley).</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Myths lived in places</div><p class="body">Many Spartan myths were tied to a place, a ritual or a song: Orestes’ tomb, the Menelaion, Castor’s tomb at Sparta.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Myths that did a job" data-title="The dokana: twin kings, twin beams">
+<div class="wrap l22-dense">
+  <p class="eyebrow">1 · Myths that did a job · the Dioscuri and the kings <span class="optional">If time</span></p>
+  <h2>Twin heroes, twin kings — deepening Lesson 4</h2>
+  <div class="split l22-tall" style="--cols:.6fr 1.4fr">
+    <figure class="figure contain"><img src="images/clarke-7-10-dokana-drawing.jpg" alt="A modern drawing of an ancient representation of the dokana, the Spartan symbol of the Dioscuri, from Sparta, 5th century BC"><figcaption>A modern drawing of an ancient representation of the dokana, the Spartan symbol of the Dioscuri, from Sparta, 5th century BC — <span class="cr">Clarke & Garner, Fig 7.10</span></figcaption></figure>
+    <div class="stack">
+      <div class="card quiet"><div class="k">From Lesson 4</div><p class="body">After a quarrel between the kings, c. 506 BC, a law let only one king lead an army, and “one of the Tyndaridai would also be left behind” (Herodotus 5.75, Cooley D6).</p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">A Spartan symbol</div><p class="body">Plutarch says the Spartans’ ancient image of the Dioscuri, the <i>dokana</i>, was two upright beams joined by two crosspieces — a sign of brotherly unity (<i>On Brotherly Love</i> 1, paraphrased; not in Cooley).</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">The heroes march out</div><p class="body">Simonides of Keos, a poet working around the time of the Persian Wars, imagines the Spartans leaving for Plataea in 479 BC “With the horse-taming sons of [ ... ] Zeus, / The [Tyndarid]ai heroes, and mighty Menelaos” (Cooley A21). Letters in brackets are restorations; [ ... ] marks words lost.</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Careful</div><p class="body">No source says the dual kingship was modelled on the twins. Argue that the evidence <i>suggests</i> religion reinforced it.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Myths that did a job" data-title="Notes 1 — Myths that did a job" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Myths that did a job</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L22 · Myths, kings and burial</b></span><span>1 · Myths that did a job</span></div>
+    <div class="row"><div class="cq">How did the myth of Heracles’ descendants justify Spartan rule?</div>
+      <div class="nts reveal">Kings = <b>Heraclids</b>: Zeus “Has given this city to the sons of Herakles” (Tyrt. fr. 2, A3) → <b>right to the land</b> (Cavanagh) <span class="sep">·</span> also courage in battle (fr. 11, A8) <span class="sep">·</span> historical truth? “we cannot say”</div></div>
+    <div class="row"><div class="cq">Give two links between the Dioscuri and the kings.</div>
+      <div class="nts reveal">After c. 506 BC one king + one Tyndarid (prob. an image) went to war (Hdt 5.75, D6) <span class="sep">·</span> Castor’s father Tyndareus = a <b>king of Sparta</b> (C28 note) <span class="sep">·</span> <i>dokana</i>: two beams = brotherly unity (Plut., paraphrased)</div></div>
+    <div class="row"><div class="cq">Why did the Spartans want the bones of Orestes?</div>
+      <div class="nts reveal"><b>Delphi’s</b> order, to beat <b>Tegea</b>, c. 550 BC (Hdt 1.67–68, H10) <span class="sep">·</span> son of Agamemnon → probably to link Dorians with pre-Dorian peoples (Cooley: ‘it seems’) <span class="sep">·</span> myth as <b>foreign policy</b></div></div>
+    <div class="row"><div class="cq">Helen and Menelaus?</div>
+      <div class="nts reveal">Menelaion: “To Helen”, c. 570 BC (C30); stele to Menelaus (C31) → <b>identity</b>, the age of heroes <span class="sep">·</span> C29’s Helen = restored</div></div>
+    <div class="row"><div class="cq">How far can we trust Herodotus’ story?</div>
+      <div class="nts reveal">c. a century later, oral <span class="sep">·</span> giant coffin = legend <span class="sep">·</span> omits the <b>treaty</b> → evidence for <b>belief and purpose</b>, not events</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The kings as priests" data-title="Priests of the city" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">2 · The kings as priests · I do — recall Lesson 4, then go deeper</p>
+  <h2>Priests of the city</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="card quiet">
+      <div class="k">From Lesson 4</div>
+      <ul class="body">
+        <li>two priesthoods, of Zeus of Lacedaemon and Zeus, Lord of Heaven (Herodotus 6.56, D5)</li>
+        <li>an animal to sacrifice at Apollo’s temple on the <b>1st and 7th</b> of every month, paid for by the state (6.57, D8)</li>
+        <li>the first libations at public sacrifices (D8)</li>
+        <li>two Pythians each, envoys to Delphi; “the official guardians of all oracles” (D8)</li>
+        <li>sacrifices from home to the frontier on campaign (Xenophon, D7)</li>
+      </ul>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Xenophon</div>
+        <p class="quote sm">[2] He laid it down that the king, <span class="code" data-code="keyterm" data-letter="K">by virtue of his divine origin, shall offer all public sacrifice on behalf of the state</span>; that he shall lead the army on all expeditions sent out by the state;</p>
+        <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 15.2 · probably late 390s or 380s BC · an Athenian admirer who fought for King Agesilaus · trans. B. Wilson · Cooley D9</p>
+      </div>
+      <p class="qprompt reveal" data-paint="keyterm">What links today’s first myth to the kings’ priesthood?</p>
+      <p class="body reveal">“Divine origin”: the kings descended from Heracles, son of Zeus. The myth is the reason a king sacrifices for the whole state.</p>
+      <div class="note reveal" data-code="analysis"><p class="body">Cooley: the king’s religious role included “carrying out all important sacrifices, especially those at the crossing of the Lakonian border and sacrifices before battles”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The kings as priests" data-title="Sacrifice and omens in war" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">2 · The kings as priests · We do — two extracts</p>
+  <h2>Sacrifice and omens in war</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Extract A · Xenophon on the king crossing the frontier</div>
+      <p class="quote sm">[3] <span class="code" data-code="evidence" data-letter="E">Only when the omens from the sacrifices to both these gods are seen to be good does he cross the country’s frontier.</span> The fire from these two sacrifices leads the way and is never quenched … <span class="code" data-code="analysis" data-letter="A">the king starts the rituals before dawn while it is still dark, hoping to win first call on the god’s goodwill ahead of the enemy.</span></p>
+      <p class="prov">Xenophon, <i>Constitution of the Lakedaimonians</i> 13.3 · probably late 390s or 380s BC · trans. B. Wilson · Cooley D7. The two gods are Zeus and Athena.</p>
+    </div>
+    <div class="src">
+      <div class="k">Extract B · Herodotus on the Battle of Plataea, 479 BC</div>
+      <p class="quote sm">[61.2] … They made a sacrifice on the point of engaging with Mardonius and his army, [61.3] <span class="code" data-code="counter" data-letter="C">but the sacrifices were not propitious for them, and at the same time many of them fell and many more were wounded</span> … Pausanias looked to the temple of Hera at Plataia and called upon the goddess, asking that they should not be cheated of their hopes. [62.1] Even while he was still calling on her, the Tegeans rose up at the front and went at the Persians, and <span class="code" data-code="judgement" data-letter="J">immediately after Pausanias’ prayer, the Lakedaimonians who were conducting the sacrifices found the omens favourable.</span></p>
+      <p class="prov">Herodotus, <i>Histories</i> 9.61.2–62.1 · written c. 450s–420s BC · trans. B. Wilson · Cooley E86</p>
+    </div>
+  </div>
+  <div class="cols c4 l22-qa">
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">What must happen before the king crosses?</p>
+      <p class="body reveal">Good omens from sacrifices to Zeus and Athena. No good omens, no invasion.</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="analysis">Why before dawn?</p>
+      <p class="body reveal">To reach the god before the enemy does: ritual as part of strategy.</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="counter">What held the Spartans back at Plataea?</p>
+      <p class="body reveal">Bad omens — while men were falling. They waited for the gods under fire.</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="judgement">What changed?</p>
+      <p class="body reveal">Pausanias prayed to Hera; the Tegeans charged first; then the omens turned good and the Lacedaemonians attacked.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The kings as priests" data-title="Strengthened — or bound?" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">2 · The kings as priests · We do — think, pair, share</p>
+  <h2>Did religion strengthen the king — or bind him?</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">It strengthened him</div>
+      <ul class="body">
+        <li class="reveal">He offered all public sacrifice on behalf of the state (Xenophon, D9).</li>
+        <li class="reveal">Cooley, following Parker: omens “were probably likely to support the king’s intentions” — though “we should not be too cynical about the possible manipulation of such rituals”.</li>
+        <li class="reveal">In 396 BC “Agesilaos wanted to go to sacrifice at Aulis, where Agamemnon had sacrificed when he sailed to Troy” (Xenophon, <i>Hellenika</i> 3.4.3, E153) — a king casting himself as a new Agamemnon.</li>
+      </ul>
+    </div>
+    <div class="card quiet">
+      <div class="k">It bound him — and the state</div>
+      <ul class="body">
+        <li class="reveal">At Plataea the army waited for good omens while men fell (E86).</li>
+        <li class="reveal">At the Hyakinthia King Agesilaus sang “exactly where the choirmaster placed him” (Xenophon, C71; Lesson 21).</li>
+        <li class="reveal">In 490 BC the Spartans told the Athenians they could not march “until the full moon” (Herodotus 6.106, H16). Scholars disagree whether this was a real reason or an excuse.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">Hinge · show 1, 2, 3 or 4 fingers</div><p class="body">Which source shows religion <b>limiting</b> what a Spartan commander could do? 1 Xenophon on the king’s public sacrifice · 2 Xenophon on Aulis · 3 Herodotus on Plataea · 4 Herodotus on the two priesthoods. <b>Answer: 3.</b></p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The kings as priests" data-title="Notes 2 — The kings as priests" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The kings as priests</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L22 · Myths, kings and burial</b></span><span>2 · The kings as priests</span></div>
+    <div class="row"><div class="cq">According to Xenophon, why did the king offer all public sacrifices?</div>
+      <div class="nts reveal">“by virtue of his divine origin” (Xen. <i>LP</i> 15.2, D9) → <b>Heraclid</b> myth <span class="sep">·</span> + 2 priesthoods of Zeus; Apollo on the 1st + 7th; Pythians (L4)</div></div>
+    <div class="row"><div class="cq">Describe the rituals a king performed before crossing the frontier.</div>
+      <div class="nts reveal">Sacrifice to <b>Zeus the Leader</b> at home → fire carried to the frontier → <b>Zeus + Athena</b> → cross only on <b>good omens</b> <span class="sep">·</span> rituals before dawn (Xen. <i>LP</i> 13.2–3, D7)</div></div>
+    <div class="row"><div class="cq">What happened at Plataea?</div>
+      <div class="nts reveal">479 BC: bad omens under arrow fire → Pausanias prays to <b>Hera</b> → Tegeans charge → omens good → attack (Hdt 9.61–62, E86)</div></div>
+    <div class="row"><div class="cq">Give one way religion strengthened a king and one way it limited him.</div>
+      <div class="nts reveal"><b>Strengthened</b>: offered all public sacrifice; omens “probably likely to support the king’s intentions” (Cooley, after Parker); Agesilaus at Aulis = new Agamemnon (E153) <span class="sep">·</span> <b>Limited</b>: waited for omens; sang where placed (C71)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The citizen and the soldier" data-title="An ordinary Spartan’s death" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">3 · The citizen and the soldier · I do — what burial reveals</p>
+  <h2>An ordinary Spartan’s death</h2>
+  <div class="split" style="--cols:1fr 1.15fr">
+    <div class="stack">
+      <div class="card accent"><div class="k">Buried inside the city</div><p class="body">Plutarch says Lycurgus let the Spartans bury their dead inside the city, with memorials near the sanctuaries, so that the young would not fear death; the body was wrapped in a red cloak and olive leaves (<i>Lykourgos</i> 27.1–2, paraphrased; not in Cooley).</p></div>
+      <div class="note reveal" data-code="evidence"><div class="k">Archaeology agrees</div><p class="body">Cavanagh: in classical Sparta “there were tombs within the city, some evidently the locus for cult”.</p></div>
+      <div class="src">
+        <div class="k">Source · Heraclides</div>
+        <p class="quote sm"><span class="code" data-code="judgement" data-letter="J">Their tombs are cheap and the same for all.</span></p>
+        <p class="prov">Herakleides Pontikos, <i>Constitution of the Spartans</i> 2.8 · trans. in Cooley B34</p>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch</div>
+        <p class="quote sm"><span class="code" data-code="keyterm" data-letter="K">Those burying the body were not allowed to inscribe the name, unless the man had fallen in battle or the woman was a priestess.</span> <span class="code" data-code="evidence" data-letter="E">Mourning was limited to a brief period of eleven days.</span></p>
+        <p class="prov">Plutarch, <i>Life of Lykourgos</i> 27.2 · written c. AD 100 · trans. B. Wilson · Cooley B35b</p>
+      </div>
+      <p class="qprompt reveal" data-paint="keyterm">Whose names could be inscribed?</p>
+      <p class="body reveal">A man who fell in battle; a woman who was a priestess (next slide).</p>
+      <p class="qprompt reveal" data-paint="evidence">Ten days or eleven?</p>
+      <p class="body reveal">Eleven, for ordinary Spartans. Ten days is Herodotus on a <i>king</i>: the pause in public business after a royal funeral (6.58). One textbook mixes them up.</p>
+      <p class="qprompt reveal" data-paint="judgement">What do cheap, equal tombs suggest?</p>
+      <p class="body reveal">The ideal of the <i>homoioi</i>, the “equals”: in death, as in the messes, no display of wealth.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The citizen and the soldier" data-title="Priestess — or childbirth?" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">3 · The citizen and the soldier · I do — a famous change to the text (Lesson 14, deepened)</p>
+  <h2>Whose name on the stone?</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Plutarch, an earlier version of the rule</div>
+        <p class="quote sm">He (Lykourgos) did away with inscription on memorials (mnēmeia), except for those who had died in war, and also with mourning and lamentations.</p>
+        <p class="prov">Plutarch, <i>Instituta Laconica</i> 18 (<i>Moralia</i> 238d) · trans. in Cooley B35a</p>
+      </div>
+      <div class="note reveal" data-code="analysis"><div class="k">Cooley’s view</div><p class="body">This is the “correct version”: in the <i>Life of Lykourgos</i> Plutarch changed “a ban on memorials to a less accurate reference to tombstones”.</p></div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">The manuscripts say priestess</span><span class="d">“unless the man had fallen in battle or the woman was a priestess” (<i>Lykourgos</i> 27.2, B35b).</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Some modern texts changed it</span><span class="d">Some modern texts (Cooley’s example is Talbert’s Penguin translation) ‘have been changed to read as if he mentioned women dead in childbirth’: an emendation (Cooley, note on B35).</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Two stones say ‘in bed’</span><span class="d">Cooley: “presumably meaning in childbirth”, and he translates them “in childbirth”: one with the name lost (B54), possibly classical; Agippia’s (B55), probably Hellenistic.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">But childbirth was not the reason</span><span class="d">A list of seven women from Tainaron marks only three “in bed”, “showing that death in childbirth was not the reason for the names being inscribed” (Dillon, following Hodkinson, in Cooley).</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Religious office could earn a name</span><span class="d">Memorials name a “priest” (B38) and a “sacred official” (B44).</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The citizen and the soldier" data-title="The war dead: buried where they fell" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">3 · The citizen and the soldier · We do — the war dead</p>
+  <h2>The war dead: buried where they fell</h2>
+  <div class="note" data-code="judgement"><p class="body"><b>Only the war dead.</b> Spartans killed in battle were buried on or near the battlefield. Spartans who died at home were buried inside the city (previous slides). At Thermopylae, Herodotus says, “They buried the dead where they had fallen” (7.228.1, Cooley F20).</p></div>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Extract A · Herodotus on the dead of Plataea, 479 BC</div>
+      <p class="quote sm">[1] When the Greeks had assigned the plunder at Plataia, they each buried their dead separately. <span class="code" data-code="evidence" data-letter="E">The Lakedaimonians made three tombs: in one they buried the priests</span> … [2] So the priests were in one of the tombs, the other Spartiates were in another, and the helots in the third.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 9.85.1–2 · written c. 450s–420s BC · trans. B. Wilson · Cooley E51. Some manuscripts read <i>eirens</i> (young men); Cooley: “‘Priests’ is probably the right reading”.</p>
+    </div>
+    <div class="src">
+      <div class="k">Extract B · Xenophon on the dead of 403 BC</div>
+      <p class="quote sm">In this fighting two polemarchs, Chairon and Thibrachos, were killed; also Lakrates, a victor at Olympia; and <span class="code" data-code="keyterm" data-letter="K">other Lakedaimonians who now lie buried in the Kerameikos outside the gates of Athens.</span></p>
+      <p class="prov">Xenophon, <i>Hellenika</i> 2.4.33 · on the fighting near Piraeus · Xenophon (c. 430–c. 350 BC) lived through these years · trans. in Cooley B25c</p>
+    </div>
+  </div>
+  <div class="cols c2">
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">How were the dead grouped at Plataea, and what does that reveal?</p>
+      <p class="body reveal">By status: priests, other Spartiates, helots. Even in a war grave, rank showed.</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="keyterm">Where did the dead of 403 BC lie?</p>
+      <p class="body reveal">In Athens’ main cemetery, the Kerameikos — far from Sparta, not carried home.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The citizen and the soldier" data-title="The tomb, and the stone at home" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">3 · The citizen and the soldier · I do — archaeology meets Xenophon</p>
+  <h2>The tomb abroad, and the stone at home</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">The Kerameikos tomb, 403 BC</div>
+      <ul class="body">
+        <li class="reveal">A stone tomb 12.4 m wide held 24 male skeletons, “all wrapped in decayed cloth, perhaps the phoinikis (red Spartan warrior’s cloak)”; several “still had weapons lodged in their fronts”.</li>
+        <li class="reveal">The inscription names the two polemarchs (IG II² 11678, B25b), as Xenophon does.</li>
+        <li class="reveal">One skeleton was set apart by an extra stone; “it has thus been suggested that this was Lakrates, the Olympic victor” — rank marked even in a shared grave (Cooley B25a).</li>
+      </ul>
+    </div>
+    <div class="card quiet">
+      <div class="k">Remembered at home</div>
+      <ul class="body">
+        <li class="reveal">A small, plain stone now in the Sparta Museum, 39 cm tall, gives only a name and “in war”: Ainesias’ memorial, early 4th century BC (B36; Lesson 11).</li>
+        <li class="reveal">Eualkes “in war at Mantineia” (B43): the dead of 418 BC were buried at Tegea, but his memorial stood at home in Geronthrae.</li>
+        <li class="reveal">Cooley: “24 ‘in war’ stones are known in total”, and “the stele are memorials, not strictly tombstones”.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="analysis"><div class="k">Why a name mattered</div><p class="body">Tyrtaeus promised the man who falls in the front line that “Never does his good fame perish nor his name, / But though he is beneath the earth, he is immortal” (fr. 12, Cooley A9). The epitaph at Thermopylae: “Tell the Lakedaemonians, passer-by, / We followed orders, and here now we lie.” (Herodotus 7.228.2, F20)</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · The citizen and the soldier" data-title="Notes 3 — The citizen and the soldier" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>The citizen and the soldier</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L22 · Myths, kings and burial</b></span><span>3 · The citizen and the soldier</span></div>
+    <div class="row"><div class="cq">Where and how were ordinary Spartans buried?</div>
+      <div class="nts reveal"><b>Inside the city</b>, memorials near sanctuaries; red cloak + olive leaves (Plut. <i>Lyc.</i> 27.1–2, not in Cooley) <span class="sep">·</span> tombs within the city (Cavanagh) <span class="sep">·</span> “cheap and the same for all” (Heraclides, B34)</div></div>
+    <div class="row"><div class="cq">Whose names could be inscribed, according to Plutarch, and why is ‘priestess’ debated?</div>
+      <div class="nts reveal">Man fallen in battle; woman a <b>priestess</b> (<i>Lyc.</i> 27.2, B35b) <span class="sep">·</span> some modern texts (Talbert) → “childbirth” = <b>emendation</b> <span class="sep">·</span> 2 stones say ‘in bed’, presumably childbirth (B54–55), but the Tainaron list → not the reason (Cooley)</div></div>
+    <div class="row"><div class="cq">How long was mourning?</div>
+      <div class="nts reveal"><b>11 days</b> (B35b) <span class="sep">·</span> ≠ the <b>10 days</b> of public mourning after a king’s funeral (Hdt 6.58)</div></div>
+    <div class="row"><div class="cq">Where were the war dead buried?</div>
+      <div class="nts reveal"><b>Where they fell</b>: Thermopylae (F20); Plataea — 3 tombs: priests (prob.), Spartiates, helots (E51); Mantineia dead carried to Tegea (E104; B43 note) <span class="sep">·</span> at home only a memorial: name + “in war” (24 known)</div></div>
+    <div class="row"><div class="cq">What does the Kerameikos tomb reveal about the Spartan war dead?</div>
+      <div class="nts reveal">403 BC: 24 skeletons, perhaps red cloaks; 2 polemarchs named; Lacrates perhaps set apart (B25a–c) → <b>rank marked</b> even in a shared grave; matches Xenophon</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The king’s funeral" data-title="A king’s death: recall and deepen" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">4 · The king’s funeral · I do — recall Lesson 4, then add new evidence</p>
+  <h2>A king’s death</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus (Lesson 4)</div>
+      <p class="quote sm">[2] … it is a compulsory obligation imposed not just on the Spartiates themselves, but also people from all Lakedaimon, and a number of perioikoi, to attend the funeral. [3] As a result, many thousands of them, together with helots and also Lakedaimonians themselves, congregate in one place. … If the king has fallen in battle, they make an image of him and carry it to burial on a lavishly decorated bier. After the funeral, all public business and the election of officials are suspended for ten days, all of which are devoted to national mourning.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 6.58.2–3 · written c. 450s–420s BC · trans. B. Wilson · Cooley D10</p>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Agis II, c. 400 BC</span><span class="d">Brought home sick from Heraea, he died and “received a burial more splendid than belongs to man” (Xenophon, <i>Hellenika</i> 3.3.1, Cooley E45).</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Agesipolis I, 380 BC</span><span class="d">He died of illness on campaign and “received a royal burial at Sparta” (Cooley, note on B28).</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">The royal tombs</span><span class="d">Cavanagh: “The royal cemeteries of Sparta’s kings have not, alas, yet been located”. They were places of cult: “the most noteworthy but not the only examples of cult dedicated to contemporaries”.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Why?</span><span class="d">Xenophon: kings were honoured “not as mere mortals but as demigods” (<i>Constitution</i> 15.9, D9).</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The king’s funeral" data-title="Who was buried where (table)" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">4 · The king’s funeral · I do — the comparison, row by row</p>
+  <h2>Who was buried where — and how remembered</h2>
+  <div class="tbl-scroll"><table class="tbl compact l22-burial">
+    <tr><th>Who</th><th>Where buried</th><th>Mourning</th><th>Name and memory</th><th>Evidence</th></tr>
+    <tr class="reveal l22-king"><td>A king</td><td>Royal burial grounds at Sparta (not yet found); a king who died on campaign could be brought home; one killed in battle was buried as an image</td><td>Compulsory for Spartiates, people from all Lacedaemon and a number of perioikoi; helots came too; ten days without public business or elections</td><td>Honoured “not as mere mortals but as demigods”; Agis II: a burial “more splendid than belongs to man”</td><td>Herodotus 6.58 (D10); Xenophon (D9, E45); Cooley’s note on B28; Cavanagh</td></tr>
+    <tr class="reveal l22-cit"><td>A Spartiate citizen</td><td>Inside the city, with memorials near the sanctuaries; a red cloak and olive leaves</td><td>Eleven days</td><td>No inscribed name; tombs “cheap and the same for all”</td><td>Plutarch, <i>Lykourgos</i> 27.1–2 (paraphrased; not in Cooley) and 27.2 (B35b); Heraclides (B34)</td></tr>
+    <tr class="reveal l22-war"><td>A Spartan killed in war</td><td>Where he fell, or nearby: Thermopylae, Plataea (grouped by status), the Kerameikos, Tegea</td><td>After Leuctra, families of the dead appeared “with bright and cheerful faces”</td><td>Name and “in war” on a plain stone at home (24 known); Tyrtaeus: “he is immortal”</td><td>Herodotus 7.228, 9.85 (F20, E51); Xenophon (B25c, E112); B36, B43; Tyrtaeus (A9)</td></tr>
+    <tr class="reveal l22-wom"><td>A woman</td><td>Plutarch gives no separate rule for women’s burial</td><td>Eleven days</td><td>Named only if “the woman was a priestess” (the manuscripts); some modern texts read women who died in childbirth (an emendation)</td><td>Plutarch (B35b); Cooley’s note on B35; B54–B55</td></tr>
+  </table></div>
+  <p class="small"><span class="swipe">Swipe the table sideways to see it all. </span>Drawn for this lesson from Chapter 12’s table, corrected from Cooley: helots came to royal funerals but are not said to have been compelled; the royal cemeteries “have not, alas, yet been located”; and a row for women is added.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The king’s funeral" data-title="Why so plain — and so lavish?" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">4 · The king’s funeral · We do — what the contrast reveals</p>
+  <h2>Why so plain for citizens — and so lavish for kings?</h2>
+  <div class="cols c3">
+    <div class="card quiet reveal"><div class="k">Equal in death</div><p class="body">Cheap, uniform tombs fit the ideal of the <i>homoioi</i>, the “equals” (Heraclides, B34).</p></div>
+    <div class="card quiet reveal"><div class="k">Death for the state</div><p class="body">Death in war, and a few religious offices, earned a name — Plutarch’s earlier version says only war (B35a).</p></div>
+    <div class="card quiet reveal"><div class="k">Kings apart</div><p class="body">A royal funeral drew in Spartiates, perioikoi and helots around a king honoured as a demigod (D10, D9).</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">Hinge · show 1, 2, 3 or 4 fingers</div>
+    <ol class="l22-hinge">
+      <li><span class="k">1</span><span>Spartans were usually buried where they fell.</span></li>
+      <li><span class="k">2</span><span>Ordinary Spartans were buried inside the city; only the war dead were buried where they fell.</span></li>
+      <li><span class="k">3</span><span>Plutarch’s manuscripts say only women who died in childbirth could be named on a stone.</span></li>
+      <li><span class="k">4</span><span>Every Spartan was mourned for ten days.</span></li>
+    </ol></div>
+  <p class="body reveal"><b>Answer: 2.</b> Statement 1 forgets the citizens, 3 uses the changed text, and 4 confuses a king’s ten days with the citizens’ eleven.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · The king’s funeral" data-title="Notes 4 — The king’s funeral" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>The king’s funeral and the comparison</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L22 · Myths, kings and burial</b></span><span>4 · The king’s funeral</span></div>
+    <div class="row"><div class="cq">List three differences between a king’s funeral and an ordinary citizen’s.</div>
+      <div class="nts reveal">King: mourning <b>compulsory</b> for Spartiates + some perioikoi, helots came too; citizen: no compulsion recorded <span class="sep">·</span> king: <b>10 days</b> without public business; citizen: <b>11 days</b> of mourning <span class="sep">·</span> king: a <b>demigod</b>; citizen: no inscribed name <span class="sep">·</span> king: royal burial ground or an image; citizen: a cheap tomb in the city</div></div>
+    <div class="row"><div class="cq">What new evidence do Agis II and Agesipolis add?</div>
+      <div class="nts reveal">Agis II (c. 400 BC): “more splendid than belongs to man” (E45) <span class="sep">·</span> Agesipolis (380 BC) died on campaign → royal burial at Sparta (Cooley)</div></div>
+    <div class="row"><div class="cq">Where are the royal tombs?</div>
+      <div class="nts reveal">Not yet found <span class="sep">·</span> places of <b>cult</b> for contemporaries (Cavanagh)</div></div>
+    <div class="row"><div class="cq">Why so plain for citizens and so lavish for kings?</div>
+      <div class="nts reveal">Equal tombs → <b>homoioi</b> <span class="sep">·</span> names → death <b>for the state</b> <span class="sep">·</span> royal funeral → the whole <b>hierarchy</b> around kings of divine descent</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hero cult" data-title="Hero cult: the honoured dead" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">5 · Hero cult · I do — what a hero was</p>
+  <h2>Hero cult: the honoured dead</h2>
+  <div class="split" style="--cols:1fr 1.2fr">
+    <div class="stack">
+      <div class="note" data-code="keyterm"><div class="k">A definition</div><p class="body">Walter Burkert, quoted by Cooley: a hero was a “deceased person who exerts from his grave a power for good or evil and who demands appropriate honour”.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Cooley adds</div><p class="body">“hero-worship relates to a specific location, usually a burial-place”: a grave set apart, a <i>heroon</i>, with “sacrifices and votive gifts”. The practice “may stem from the rediscovery in the eighth century of old graves”.</p></div>
+    </div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Spartan heroes</th><th>Evidence</th></tr>
+      <tr class="reveal"><td><b>Mythical</b>: Menelaus and Helen; Orestes; Castor</td><td>offerings at the Menelaion (C29–C31); Orestes’ bones brought home (H10); Castor’s tomb at Sparta (C28 note)</td></tr>
+      <tr class="reveal"><td><b>The lawgiver</b>: Lycurgus (Lesson 3)</td><td>“a temple there, and annual sacrifices to him as if he was a god” (Plutarch, F7)</td></tr>
+      <tr class="reveal"><td><b>Historical</b>: Chilon the ephor; Leonidas; Kyniska (Lesson 14)</td><td>Chilon’s relief, presumably as a hero (C34); his <i>heroon</i> seen by Pausanias (C35); Leonidas’ memorial (F27, next slide); Kyniska’s <i>heroon</i> (C56)</td></tr>
+      <tr class="reveal"><td><b>Abroad</b>: Brasidas, killed at Amphipolis in 422 BC</td><td>buried there; the Amphipolitans “have performed sacrifices for him as a hero” (Thucydides 5.11, E38)</td></tr>
+    </table></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hero cult" data-title="Pausanias on the memorial of Leonidas" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow">5 · Hero cult · We do — Leonidas</p>
+  <h2>Pausanias on the memorial of Leonidas</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Pausanias</div>
+        <p class="quote sm">Opposite the theatre is a memorial to Pausanias, the general at Plataia, and one to Leonidas. <span class="code" data-code="evidence" data-letter="E">Every year speeches are made there and there is a contest in which only Spartiates may compete.</span> <span class="code" data-code="counter" data-letter="C">The bones of Leonidas were taken from Thermopylai by [Kleomenes, son of] Pausanias forty years later.</span> There is a stele with the names and patronymics of those who stayed to fight the Persians at Thermopylai.</p>
+        <p class="prov">Pausanias, <i>Description of Greece</i> 3.14.1 · 2nd century AD, a traveller from Asia Minor who saw Roman Sparta · trans. in Cooley F27. Square brackets mark a modern editor’s addition.</p>
+      </div>
+      <p class="qprompt reveal" data-paint="evidence">Which features show Leonidas honoured as a hero?</p>
+      <p class="body reveal">His bones brought home from Thermopylae; a memorial opposite the theatre; yearly speeches; a contest for Spartiates only; the names of those who stayed to fight.</p>
+      <p class="body reveal"><b>How old is the cult?</b> Pausanias saw Roman Sparta: Cooley warns that little of his book on Sparta “can be firmly linked to the classical period”.</p>
+    </div>
+    <div class="stack">
+      <figure class="figure short"><img src="images/clarke-1-5-tomb-of-leonidas-l22.jpg" alt="The ruined building known as the ‘Tomb of Leonidas’, in a small park in modern Sparta — once a place of worship; the name is traditional, and nothing on the site proves that Leonidas was buried here"><figcaption>The ruined building known as the ‘Tomb of Leonidas’, in a small park in modern Sparta — once a place of worship; the name is traditional, and nothing on the site proves that Leonidas was buried here — <span class="cr">Clarke & Garner, Fig 1.5</span></figcaption></figure>
+      <p class="qprompt reveal" data-paint="counter">Why the brackets?</p>
+      <div class="note reveal" data-code="counter"><p class="body">The regent Pausanias died before 460 BC, so he cannot have brought the bones home forty years after 480 BC. Cooley, following W. R. Connor, prefers the “neater solution” that “a son of the regent brought back the bones of his great-uncle”. The timing “must have been political”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hero cult" data-title="The most honoured end">
+<div class="wrap l22-dense">
+  <p class="eyebrow">5 · Hero cult · pulling it together <span class="optional">If time</span></p>
+  <h2>The most honoured end a Spartiate could have</h2>
+  <div class="cols c2">
+    <div class="src">
+      <div class="k">Source · Tyrtaeus, on the man who falls in the front line</div>
+      <p class="quote sm">His tomb and his children and their children,<br>And all his line thereafter are renowned among men;<br>Never does his good fame perish nor his name,<br>But though he is beneath the earth, he is immortal,</p>
+      <p class="prov">Tyrtaios, fragment 12 · mid-7th century BC, probably a Spartan poet · trans. K. Hughes · Cooley A9</p>
+    </div>
+    <div class="src">
+      <div class="k">Source · an epigram on the Spartan dead at Plataea</div>
+      <p class="quote sm">Immortal fame these men established for their dear land,<br>Around themselves they cast the dark cloud of death:<br>They died, yet are not dead, since in the world above their virtue<br>Exalts them and brings them back from the house of Hades.</p>
+      <p class="prov">Probably by Simonides of Keos · Palatine Anthology 7.251 · trans. in Cooley A22</p>
+    </div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">Poetry, burial and hero cult said the same thing: the man who died for the city lived on in his name. Religion made that death the most honoured end a Spartiate could have.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hero cult" data-title="Notes 5 — Hero cult" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Hero cult: the honoured dead</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L22 · Myths, kings and burial</b></span><span>5 · Hero cult</span></div>
+    <div class="row"><div class="cq">What is hero cult?</div>
+      <div class="nts reveal">Worship of a dead person with power “from his grave” (Burkert) <span class="sep">·</span> at one place, “usually a burial-place” (Cooley) <span class="sep">·</span> a <i>heroon</i>, sacrifices, gifts</div></div>
+    <div class="row"><div class="cq">Give one mythical and one historical Spartan hero.</div>
+      <div class="nts reveal">Mythical: Menelaus + Helen, <b>Orestes</b>, Castor <span class="sep">·</span> founder: <b>Lycurgus</b> <span class="sep">·</span> historical: Chilon, <b>Leonidas</b>, Kyniska; Brasidas (at Amphipolis)</div></div>
+    <div class="row"><div class="cq">What does Pausanias describe at Leonidas’ memorial?</div>
+      <div class="nts reveal">Bones brought from Thermopylae <span class="sep">·</span> yearly <b>speeches</b> + a <b>contest</b> for Spartiates only <span class="sep">·</span> a stele of names and patronymics (Paus. 3.14.1, F27)</div></div>
+    <div class="row"><div class="cq">Why the square brackets? How reliable is it?</div>
+      <div class="nts reveal">[Kleomenes, son of] = editor’s addition: regent Pausanias died before 460 BC <span class="sep">·</span> timing “must have been political” <span class="sep">·</span> Pausanias = 2nd c. AD, <b>Roman</b> Sparta</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Hero cult" data-title="Summary" data-kind="notes">
+<div class="wrap l22-dense">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.5fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>What jobs did Spartan myths do?</li>
+          <li>How did the kings’ religious role strengthen — and limit — them?</li>
+          <li>What does the burial of kings, citizens and soldiers reveal?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">Spartan myths did jobs for the state: the story of Heracles’ descendants gave the kings a god-given right to the land, the Dioscuri were linked to the dual kingship, and the bones of Orestes supported Sparta’s ambitions against Tegea. Because of their divine descent the kings offered the state’s sacrifices and read the omens before crossing the frontier and before battle, which strengthened their authority but also made them wait on the gods. In death Spartans were ranked by service to the state: ordinary citizens had cheap, nameless tombs inside the city and eleven days of mourning, the war dead were buried where they fell and named “in war” at home, and kings were mourned compulsorily and honoured as demigods.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Myths that did a job: Heraclids, Dioscuri, Helen, Orestes</label></li>
+        <li><label><input type="checkbox"> 2 · The kings as priests: divine origin, omens, Plataea</label></li>
+        <li><label><input type="checkbox"> 3 · The citizen and the soldier: eleven days, priestess, the war dead</label></li>
+        <li><label><input type="checkbox"> 4 · The king’s funeral and the comparison</label></li>
+        <li><label><input type="checkbox"> 5 · Hero cult: Burkert, Leonidas, Brasidas</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (c): religion" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>The whole religion topic, examined in 2023</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 12 marks ≈ 22 minutes.</p></div>
+    <div class="card"><div class="k">No key word</div><p class="body">“What does evidence reveal” is not a NESA glossary key word. The marking criteria tell you what to do.</p></div>
+    <div class="card accent"><div class="k">Lessons 21 and 22</div><p class="body">Gods and festivals (21); myths, kings and burial (today): one answer draws on both, and on Lessons 3 and 4.</p></div>
+  </div>
+  <p class="lead">We take the question apart and read the criteria, the markers’ feedback and NESA’s list of points (checked against Cooley); you plan and write a paragraph; then compare with a model plan and an annotated model answer.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 · Section II · Question 11 (c) · 12 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">What does evidence reveal</span> about <span class="code" data-code="keyterm" data-letter="K">religion</span> <span class="code" data-code="scope" data-letter="S">in Sparta in this period</span>?</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">I do — take it apart; we do — the criteria and NESA’s list; you do — plan it and write one paragraph.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — take it apart" data-kind="hsc">
+<div class="wrap l22-dense">
+  <p class="eyebrow">HSC 2023 Q11(c) · I do — deconstruct the question</p>
+  <h2>What the question — and the criteria — really ask</h2>
+  <div class="cols c3">
+    <div class="note reveal" data-code="directive"><div class="k">What does evidence reveal</div><p class="body">The top-band criterion: “Demonstrates a well-developed understanding of what evidence reveals about religion in this period”. So: name each piece of evidence, say what it reveals, and say how far it can be trusted.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Religion</div><p class="body">The syllabus’ five parts: gods and goddesses (Artemis Orthia, Poseidon, Apollo) · myths and legends (Lycurgus, the Dioscuri) · festivals · the religious role of the kings · funerary customs. More than one, connected.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In Sparta in this period</div><p class="body">To 371 BC. Date every source and flag late ones: Plutarch (c. AD 100), Pausanias (2nd century AD), Demetrius of Skepsis (born c. 214 BC).</p></div>
+  </div>
+  <div class="card accent reveal"><div class="k">12 marks</div><p class="body">About 22 minutes · a thesis that says what the evidence reveals · three paragraphs (gods and festivals · myths and kings · death and burial) · written <b>and</b> archaeological evidence in each · about 500–700 words (our estimate).</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — the criteria and the feedback" data-kind="hsc">
+<div class="wrap l22-dense">
+  <p class="eyebrow">HSC 2023 Q11(c) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="stack">
+    <div class="tbl-scroll"><table class="tbl crit compact l22-marks">
+      <tr><th>Marks</th><th>Criteria (2023, part (c))</th></tr>
+      <tr><td class="m">10–12</td><td>Demonstrates a well-developed understanding of what evidence reveals about religion in this period · Demonstrates detailed knowledge and understanding relevant to the question · Integrates evidence from a range of relevant sources to support the response · Communicates ideas and information logically and coherently using a range of appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">7–9</td><td>Demonstrates a clear understanding of what evidence reveals about religion in this period · Demonstrates knowledge and understanding relevant to the question · Uses evidence from a range of relevant sources to support the response · Communicates ideas and information logically using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">4–6</td><td>Demonstrates some understanding of what evidence reveals about religion in this period · Demonstrates some knowledge relevant to the question · Refers to one or more sources in the response · Communicates ideas using some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1–3</td><td>Makes general statement(s) in relation to the question · May refer to source(s) · May use historical terms and/or concepts</td></tr>
+    </table></div>
+    </div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">clearly connect a range of evidence in the form of written and archaeological sources, relevant to religion in Sparta (c)</span><span class="q">explain the connection between evidence and what it reveals about religion in Sparta in a logical and coherent manner (c)</span><span class="q">use historical terms and concepts, such as festivals and gods, to reveal information about religion in Sparta (c).</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">avoiding general statements</span><span class="q">explaining the links to what the evidence reveals</span><span class="q">moving beyond a description of the events at festivals and the gods worshiped in Sparta (c).</span></p></div>
+    </div>
+  </div>
+  <p class="small"><b>For all of Section II in 2023:</b> “It is important that students develop a knowledge of the sources of evidence for each society and support their points with specific written and/or archaeological sources.” Source: NESA, 2023 HSC Ancient History Marking Guidelines (Section II, part (c)) and the 2023 marking feedback for Question 11 and Section II, quoted exactly.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — what the markers listed (1)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(c) · We do — NESA’s “answers could include”, checked against Cooley (1 of 2)</p>
+  <h2>What the marking guidelines listed: typical, kings, emphases</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l22-pt">• <span class="code" data-code="evidence" id="n23-1">Religion in Spartan society was generally typical for ancient Greek city states of the period, with some peculiar emphases.</span><span class="mk">1</span></span>
+      <span class="l22-pt">• <span class="code" data-code="analysis" id="n23-2">The Spartan kings’ roles in religion reinforced the hierarchical nature of Spartan society,</span><span class="mk">2</span> <span class="code" data-code="counter" id="n23-3">for example the king was considered the only priest.</span><span class="mk">3</span></span>
+      <span class="l22-pt">• <span class="code" data-code="keyterm" id="n23-4">Hunting, warfare, feminine beauty, and oracles were emphasised in religion in Spartan society.</span><span class="mk">4</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2023 HSC Ancient History Marking Guidelines, Section II part (c) · points 1–3 of 7. NESA published no sample answer for this part.</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="evidence" data-hl="#n23-1"><span class="mk">1</span><b>Supported</b><span class="tx">Cooley, on Sparta’s reputation for piety and oracles: “In part this reflects the Greek world of the time”. One emphasis, from Parker: “almost uniquely willing to ascribe national misfortunes to collective religious guilt”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#n23-2"><span class="mk">2</span><b>Supported</b><span class="tx">Two priesthoods of Zeus (D5); public sacrifice “by virtue of his divine origin” (D9); royal funerals (D10) for kings honoured ‘as demigods’ (D9). Today, sections 2 and 4.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n23-3"><span class="mk">3</span><b>Cooley says: other priests existed</b><span class="tx">Herodotus’ separate tomb for “the priests” at Plataea (E51, “probably the right reading”); a memorial to a “priest” (B38); Plutarch’s priestesses (B35b). Say the king offered the <i>state’s</i> sacrifices.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n23-4"><span class="mk">4</span><b>Name the evidence</b><span class="tx">Hunting and war: a goat to Artemis Agrotera (the Huntress) “just before the battle charge” (Cooley). Beauty: Helen at the Menelaion (C30). Oracles: Delphi and the bones of Orestes (H10).</span></div>
+      <div class="verdict reveal"><b>So far:</b> supported, except “the only priest”, which overstates.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — what the markers listed (2)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(c) · We do — NESA’s “answers could include”, checked against Cooley (2 of 2)</p>
+  <h2>What the marking guidelines listed: funerals, festivals, myths, offerings</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="l22-pt">• <span class="code" data-code="analysis" id="n23-5">Funerary customs and rituals reinforced the roles of the king, the childbearing role of women, and the notable role of warfare in Spartan society.</span><span class="mk">5</span> <span class="code" data-code="counter" id="n23-6">For example, Plutarch records that only women who died in childbirth received an inscribed gravestone.</span><span class="mk">6</span></span>
+      <span class="l22-pt">• <span class="code" data-code="keyterm" id="n23-7">Spartan religious festivals reinforced societal ideals and practices, and also aligned with elements of the agricultural cycle to secure prosperity.</span><span class="mk">7</span></span>
+      <span class="l22-pt">• <span class="code" data-code="evidence" id="n23-8">Myths and legends in Spartan society, such as the Dioscuri and Lykurgus, helped to legitimise the Spartan social structure and way of life.</span><span class="mk">8</span></span>
+      <span class="l22-pt">• <span class="code" data-code="judgement" id="n23-9">Many Spartan religious practices, such as votive offerings, sacrifices, oracles, and the dedication of sanctuaries, statues and monuments, were designed to secure supernatural protection. This can be seen at the Menelaion and Artemis Orthia.</span><span class="mk">9</span></span>
+      <p class="meta">Answers could include, Option G: NESA 2023 HSC Ancient History Marking Guidelines, Section II part (c) · points 4–7 of 7</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="analysis" data-hl="#n23-5"><span class="mk">5</span><b>Kings and war, yes</b><span class="tx">Royal funerals (D10) and names for the war dead (B35a; B35b adds priestesses) support it. “The childbearing role of women” rests on the next sentence.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n23-6"><span class="mk">6</span><b>Cooley says: priestess</b><span class="tx">Plutarch’s manuscripts say “the woman was a priestess”; texts such as Talbert’s “have been changed to read as if he mentioned women dead in childbirth” (Cooley, note on B35). Two stones say ‘in bed’, presumably meaning in childbirth (B54–B55). Write “priestess” and name the debate.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n23-7"><span class="mk">7</span><b>Ideals, yes; farming, thin</b><span class="tx">Ideals: Lesson 21. Cooley never links the festivals to the farming year; the nearest is the Karneia’s ‘grape-runners’, praying “for the good of the city” (C66), from a late, undatable source.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#n23-8"><span class="mk">8</span><b>Supported</b><span class="tx">Lycurgus (Lesson 3, F3) and the Dioscuri (D6); add the Heraclids (A3).</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#n23-9"><span class="mk">9</span><b>Protection — and thanks</b><span class="tx">Cooley: dedications were “generally made as thank-offerings at a sacred site, sometimes in fulfilment of a particular vow”. Plestiadas gave his “dreading their wrath” (C28).</span></div>
+      <div class="verdict reveal"><b>NESA’s list.</b> Acceptable content, not a model answer — and point 6 rests on a changed text.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — you plan and write" data-kind="hsc">
+<div class="wrap l22-dense">
+  <p class="eyebrow">HSC 2023 Q11(c) · You do · 17 minutes · press K for the timer</p>
+  <h2>What does evidence reveal about religion in Sparta in this period? <span class="small">(12 marks)</span></h2>
+  <div class="tbl-scroll"><table class="tbl compact l22-plan l22-empty">
+    <tr><th></th><th>What it reveals</th><th>Written evidence</th><th>Archaeological evidence</th><th>How far to trust it</th></tr>
+    <tr><td>1 · Gods and festivals</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>2 · Myths and kings</td><td></td><td></td><td></td><td></td></tr>
+    <tr><td>3 · Death and burial</td><td></td><td></td><td></td><td></td></tr>
+  </table></div>
+  <p class="small read-only"><span class="swipe">Swipe the table sideways to see it all.</span></p>
+  <div class="cols c3">
+    <div class="card accent"><div class="k">1 · Plan · 5 minutes</div><p class="body">A thesis first. Every row: what it reveals, a named and dated source of each kind, and a judgement.</p></div>
+    <div class="card accent"><div class="k">2 · Write · 10 minutes</div><p class="body">Your thesis and one full paragraph — death and burial, or myths and kings.</p></div>
+    <div class="card quiet"><div class="k">Stuck?</div><p class="body nq">Start: “Evidence reveals that Spartan religion was … but that it was bound closely to …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="Plan: HSC 2023 Q11(c)" data-kind="hsc">
+<div class="wrap l22-dense">
+  <p class="eyebrow">Plan: HSC 2023 Q11(c) · a model plan, written for this lesson</p>
+  <h2>What it reveals — and how far to trust it — in every row</h2>
+  <div class="tbl-scroll" data-veil="Plan first — then show the model plan"><table class="tbl compact l22-plan">
+    <tr><th></th><th>What it reveals</th><th>Written evidence</th><th>Archaeological evidence</th><th>How far to trust it</th></tr>
+    <tr class="reveal"><td>Thesis</td><td colspan="4">Spartan religion honoured the usual Greek gods and heroes but was bound unusually closely to the state: it gave the kings divine authority, shaped how Sparta went to war, and ranked the dead by service to the city.</td></tr>
+    <tr class="reveal"><td>1 · Gods and festivals</td><td>worship shared by individuals and the whole community; festivals came before war</td><td>Polycrates on the Hyakinthia (C69) · Herodotus on the Karneia, 480 BC (F11) · Xenophon on Agesilaus (C71) · Demetrius (C68)</td><td>dedications: Dorkonidas to Apollo (C1); Euonyma’s mirror to Athena (C14)</td><td>Polycrates and Demetrius reach us through Athenaeus; Demetrius is late</td></tr>
+    <tr class="reveal"><td>2 · Myths and kings</td><td>myths legitimised the kings; kings were the state’s priests; omens governed war</td><td>Tyrtaeus fr. 2 (A3) · Xenophon 15.2, 13.3 (D9, D7) · Herodotus on Plataea (E86) and Orestes (H10)</td><td>the Menelaion offerings (C30–C31)</td><td>Orestes is legend; Cooley: omens “probably likely to support the king’s intentions”</td></tr>
+    <tr class="reveal"><td>3 · Death and burial</td><td>equality in ordinary death; honour for death in war; kings apart; hero cult</td><td>Plutarch (B35b) · Heraclides (B34) · Herodotus 6.58 (D10) · Xenophon 15.9 (D9) · Pausanias (F27)</td><td>the Kerameikos tomb (B25a); “in war” stones such as Ainesias’ (B36)</td><td>stones confirm Plutarch’s rule; Pausanias saw Roman Sparta</td></tr>
+    <tr class="reveal"><td>Conclusion</td><td colspan="4">Conventional gods, distinctive uses; the Laconians’ own inscriptions are the surest guide, because most writers are outsiders or late.</td></tr>
+  </table></div>
+  <p class="small read-only"><span class="swipe">Swipe the table sideways to see it all.</span></p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — model, thesis and paragraph 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(c) · annotated model · thesis and paragraph 1 of 3</p>
+  <h2>Say what the evidence reveals — then weigh it</h2>
+  <div class="annot wide" data-veil="Plan first — then show the model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="m22-1">Evidence reveals that Spartan religion honoured the usual Greek gods and heroes, but that it was bound unusually closely to the state: it gave the kings divine authority, shaped how Sparta went to war, and ranked the dead by their service to the city.</span><span class="mk">1</span>
+      <span class="code" data-code="keyterm" id="m22-2">Dedications and festivals reveal a religion shared across the community.</span><span class="mk">2</span>
+      <span class="code" data-code="evidence" id="m22-3">Inscribed offerings such as ‘Dorkonidas/Dorkoilidas dedicated (this) to Apelo’, from the Amyklaion in the late 7th or early 6th century BC, and a mirror dedicated to Athena by Euonyma, a Spartan woman, in the mid-5th century, were, Cooley explains, ‘generally made as thank-offerings at a sacred site’.</span><span class="mk">3</span>
+      <span class="code" data-code="analysis" id="m22-4">They reveal individual men and women, not only the state, seeking the gods’ favour.</span><span class="mk">4</span>
+      <span class="code" data-code="evidence" id="m22-5">Festivals reveal communal worship: Polycrates, probably a Laconian local historian quoted in Athenaeus (c. AD 200), says that at the Hyakinthia ‘the citizens put on a banquet for all their friends and their own slaves’, and festivals could come before war, since the main army planned to follow Leonidas in 480 BC once the Spartans had ‘finished celebrating the Karneia’ (Herodotus).</span><span class="mk">5</span>
+      <span class="code" data-code="counter" id="m22-6">Some of this evidence is late, however: Demetrius of Skepsis, born c. 214 BC, called the Karneia ‘a representation of military training’, whereas the Oxford Classical Dictionary, quoted by Cooley, calls it ‘above all a choral and musical festival’.</span><span class="mk">6</span>
+      <p class="meta">Model written for this lesson · thesis and paragraph 1 of 3</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-1"><span class="mk">1</span><b>A thesis about evidence</b><span class="tx">It says what the evidence reveals — three things — not just “religion was important”. No roadmap sentence.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m22-2"><span class="mk">2</span><b>Signpost</b><span class="tx">One part of religion per paragraph: gods and festivals first (Lesson 21).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-3"><span class="mk">3</span><b>Archaeology, named and dated</b><span class="tx">Two inscribed offerings (Cooley C1, C14): the markers wanted “written and archaeological sources”.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m22-4"><span class="mk">4</span><b>The link</b><span class="tx">Evidence → what it reveals: “explaining the links to what the evidence reveals”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-5"><span class="mk">5</span><b>Written sources, with provenance</b><span class="tx">Polycrates (C69) and Herodotus 7.206 (F11), each placed in time — not a description of the festival.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m22-6"><span class="mk">6</span><b>Weigh it</b><span class="tx">A late source tested against a modern judgement (C68 and Cooley’s introduction).</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — model, paragraph 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(c) · annotated model · paragraph 2 of 3</p>
+  <h2>Myths and kings: what the evidence reveals about power</h2>
+  <div class="annot wide l22-tight" data-veil="Show paragraph 2">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m22-7">Myths and the kings’ rituals reveal how religion upheld Sparta’s hierarchy.</span><span class="mk">7</span>
+      <span class="code" data-code="evidence" id="m22-8">Tyrtaeus, probably a Spartan poet of the mid-7th century BC, sang that Zeus ‘Has given this city to the sons of Herakles’, and Cavanagh explains that the Spartans used such myths to claim that their kings, as descendants of Heracles, ‘had a right to the land’. A bronze offering inscribed ‘To Helen’ at the Menelaion, of about 570 BC, shows the heroes of Troy honoured near Sparta.</span><span class="mk">8</span>
+      <span class="code" data-code="evidence" id="m22-9">Xenophon, writing probably in the late 390s or 380s BC, ties that ancestry to ritual: the king, ‘by virtue of his divine origin, shall offer all public sacrifice on behalf of the state’, and he crossed the frontier ‘Only when the omens from the sacrifices to both these gods are seen to be good’.</span><span class="mk">9</span>
+      <span class="code" data-code="analysis" id="m22-10">Cooley, following Parker, suggests we ‘might still assume’ that such omens were ‘probably likely to support the king’s intentions’, so religion could strengthen royal authority.</span><span class="mk">10</span>
+      <span class="code" data-code="counter" id="m22-11">Yet religion also bound the army: at Plataea in 479 BC, Herodotus says, the Spartans endured Persian arrows until the omens turned favourable, and the kings were not Sparta’s only priests, since priests probably had a tomb of their own after that battle.</span><span class="mk">11</span>
+      <span class="code" data-code="evidence" id="m22-12">Myth could even direct foreign policy: told by Delphi to ‘bring home the bones of Orestes’, the Spartans recovered them from Tegea around 550 BC, perhaps, Cooley suggests, to link Dorian Sparta with the mythical rulers of the Peloponnese before the Dorians.</span><span class="mk">12</span>
+      <p class="meta">Model written for this lesson · paragraph 2 of 3</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m22-7"><span class="mk">7</span><b>A claim, not a topic</b><span class="tx">The topic sentence says what the evidence reveals — NESA’s “hierarchical nature” point, in the student’s words.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-8"><span class="mk">8</span><b>A Spartan voice, a modern one — and archaeology</b><span class="tx">Tyrtaeus (A3), with his hedge; an archaeologist’s interpretation (Cavanagh, in Cooley); an inscribed offering (C30).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-9"><span class="mk">9</span><b>Myth → ritual</b><span class="tx">Xenophon (D9, D7), dated: the link between ancestry and priesthood is the explanation.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m22-10"><span class="mk">10</span><b>What it reveals</b><span class="tx">A historian’s hedged judgement, kept hedged.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m22-11"><span class="mk">11</span><b>The other side</b><span class="tx">Plataea (E86, E51) limits the claim — and quietly corrects NESA’s “only priest”.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-12"><span class="mk">12</span><b>A third use of religion</b><span class="tx">Orestes (H10), with Cooley’s “it seems” kept as “perhaps”.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — model, paragraph 3 and conclusion" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(c) · annotated model · paragraph 3 and conclusion</p>
+  <h2>Death and burial — then a judgement on the evidence itself</h2>
+  <div class="annot wide l22-tight" data-veil="Show paragraph 3 and the conclusion">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="m22-13">Funerary customs reveal a society that ranked its dead by service to the state.</span><span class="mk">13</span>
+      <span class="code" data-code="evidence" id="m22-14">Ordinary Spartiates were buried inside the city in tombs that Heraclides calls ‘cheap and the same for all’, and Plutarch says no name could be inscribed ‘unless the man had fallen in battle or the woman was a priestess’.</span><span class="mk">14</span>
+      <span class="code" data-code="evidence" id="m22-15">The war dead were buried where they fell: the Lacedaemonian tomb of 403 BC excavated in the Athenian Kerameikos held 24 skeletons, and at home plain stones such as the memorial of Ainesias recorded only a name and ‘in war’; just 24 are known.</span><span class="mk">15</span>
+      <span class="code" data-code="analysis" id="m22-16">Kings stood apart: Herodotus says Spartiates and ‘a number of perioikoi’ had to attend a royal funeral, helots came too, and public business stopped for ten days, while Xenophon says kings were honoured ‘not as mere mortals but as demigods’.</span><span class="mk">16</span>
+      <span class="code" data-code="counter" id="m22-17">Hero cult extended such honour: Pausanias describes yearly speeches at the memorial of Leonidas and ‘a contest in which only Spartiates may compete’, although he saw Roman Sparta in the 2nd century AD.</span><span class="mk">17</span>
+      <span class="code" data-code="judgement" id="m22-18">The evidence therefore reveals a religion that was conventional in its gods but distinctive in its uses, legitimising the kings, governing war and honouring death for the city above all. Because much of it comes from outsiders or from later writers such as Plutarch and Pausanias, the inscriptions the Laconians made themselves are the surest guide to their own beliefs and values, though most were paid for by the well-off.</span><span class="mk">18</span>
+      <p class="meta">Model written for this lesson · whole answer ≈ 700 words, about 22 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#m22-13"><span class="mk">13</span><b>Signpost and claim</b><span class="tx">The third part of the thesis, delivered.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-14"><span class="mk">14</span><b>Exact, and right</b><span class="tx">Inside the city (Plutarch, <i>Lykourgos</i> 27.1–2; Cavanagh); ‘cheap and the same for all’ (B34); ‘priestess’ (B35b).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#m22-15"><span class="mk">15</span><b>Archaeology confirms</b><span class="tx">The tomb (B25a) and the stones (B36; Cooley’s note on B35) show the war dead buried where they fell; Plutarch and Cavanagh show other Spartans buried in the city.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#m22-16"><span class="mk">16</span><b>Precise about who</b><span class="tx">Compelled: Spartiates, Lacedaemonians, some perioikoi; helots present (D10). Xenophon (D9) explains why.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#m22-17"><span class="mk">17</span><b>Late evidence, flagged</b><span class="tx">Pausanias (F27) used, then weighed.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m22-18"><span class="mk">18</span><b>Resolve</b><span class="tx">A refined judgement on religion <i>and</i> on the evidence: what “reveal” asks for.</span></div>
+      <div class="verdict reveal"><b>Written to the 10–12 criteria:</b> a well-developed understanding of what evidence reveals, integrating written and archaeological evidence in every paragraph.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — why answers drop marks" data-kind="hsc">
+<div class="wrap l22-dense">
+  <p class="eyebrow">HSC 2023 Q11(c) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">about 4–6 marks (our estimate) · describes religion</span>
+      <p class="resp">The Spartans worshipped Apollo, Artemis Orthia and Poseidon. At the Karneia men ate in tents, and at the Hyakinthia boys sang and girls rode in carriages. When a king died, public business stopped for ten days …</p>
+      <p class="why">Accurate, but it describes and never says what the evidence reveals — the markers’ area to improve: “moving beyond a description of the events at festivals and the gods worshiped in Sparta”.</p></div>
+    <div class="rung reveal"><span class="mark">about 7–9 marks (our estimate) · evidence, not weighed</span>
+      <p class="resp">Herodotus shows that the kings held two priesthoods of Zeus, Xenophon says they offered all public sacrifice, and Plutarch says names were inscribed only for those who fell in battle or for priestesses …</p>
+      <p class="why">Named writers and some explanation, but no archaeological evidence and no judgement of how far each source can be trusted. The top band “Integrates evidence from a range of relevant sources”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · errors that sink it</span>
+      <p class="resp">Spartans were usually buried where they fell, and Plutarch says only women who died in childbirth had their names inscribed, so Spartan religion valued only war and childbirth.</p>
+      <p class="why">Ordinary Spartans were buried inside the city — only the war dead where they fell; Plutarch’s manuscripts say priestess; and “only” overstates.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(c)" data-title="HSC 2023 Q11(c) — mark your own" data-kind="hsc">
+<div class="wrap l22-dense">
+  <p class="eyebrow">HSC 2023 Q11(c) · Self-mark</p>
+  <h2>Mark your own plan and paragraph</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> a thesis that says what the evidence reveals — not a list of topics</label></li>
+        <li><label><input type="checkbox"> more than one part of religion: gods and festivals, myths and kings, death and burial</label></li>
+        <li><label><input type="checkbox"> <span>written <b>and</b> archaeological evidence, each named and dated</span></label></li>
+        <li><label><input type="checkbox"> every piece of evidence linked to what it reveals</label></li>
+        <li><label><input type="checkbox"> late sources flagged (Plutarch, Pausanias, Demetrius); hedges kept</label></li>
+        <li><label><input type="checkbox"> burial right: citizens in the city, the war dead where they fell; “priestess”</label></li>
+      </ul>
+      <p class="small">Fewer than five ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Could someone read only your thesis and your last sentence and know what the evidence reveals about Spartan religion?</p></div>
+      <div class="card accent"><div class="k">More practice</div>
+        <p class="body"><b>Explain the importance of myths and legends for Spartan society during this period.</b> (6 marks) — 2024 HSC, Question 11 (c); modelled in Lesson 3</p>
+        <p class="body"><b>Outline the funerary customs of the Spartans.</b> (4 marks) — HSC-style, written for this lesson</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 8 · sequencing · Chapter 12 Activity A</p>
+  <h2>Put these in order, earliest first</h2>
+  <p class="task">Write the letters in chronological order and add a date for each.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>The writer Pausanias describes the contest at Leonidas’ memorial.</span></li>
+    <li><span class="k">B</span><span>The Spartans bring the bones of Orestes home from Tegea.</span></li>
+    <li><span class="k">C</span><span>The Karneia is first held as a contest for lyre-players.</span></li>
+    <li><span class="k">D</span><span>The regent Pausanias prays to Hera at Plataea.</span></li>
+    <li><span class="k">E</span><span>Lacedaemonian soldiers are buried in the Kerameikos at Athens.</span></li>
+    <li><span class="k">F</span><span>News of Leuctra reaches Sparta during the Gymnopaedia.</span></li>
+  </ul>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — the order, as a timeline" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 2 of 8 · sequencing · the answer key</p>
+  <h2>Religion and burial evidence in order</h2>
+  <div data-answers>
+    <figure class="diagram sol reveal"><svg class="l22-tl l22-seq" viewBox="0 0 1600 600" role="img" aria-label="Answer key, in date order: C, the Karneia is first held as a contest for lyre-players, 676 to 673 BC (Cooley C61); B, the bones of Orestes are brought home from Tegea, about 550 BC (Cooley H10); D, the regent Pausanias prays to Hera at Plataea, 479 BC (Cooley E86); E, Lacedaemonians are buried in the Kerameikos at Athens, 403 BC (Cooley B25); F, news of Leuctra reaches Sparta during the Gymnopaedia, 371 BC (Cooley C77); A, the writer Pausanias describes the contest at the memorial of Leonidas, 2nd century AD (Cooley F27). Spacing is not to scale.">
+<rect class="l22t-bg" x="2" y="2" width="1596" height="596" rx="14"/>
+<line class="l22t-axis" x1="60" y1="300" x2="1270" y2="300"/>
+<path class="l22t-break" d="M1262,316 l16,-32 M1294,316 l16,-32"/>
+<line class="l22t-axis" x1="1306" y1="300" x2="1540" y2="300"/>
+<g class="l22t-key"><rect class="l22t-sw w" x="30" y="566" width="26" height="16" rx="3"/><text x="64" y="580">an event, dated from the sources</text><rect class="l22t-sw d" x="430" y="566" width="26" height="16" rx="3"/><text x="464" y="580">a later writer describing Sparta</text><text class="l22t-note" x="1570" y="580">Earliest on the left · spacing not to scale</text></g>
+<g class="linked l22t-w" id="l22s-1"><line class="l22t-lead" x1="190" y1="256" x2="190" y2="278"/><rect class="l22t-box" x="14" y="104" width="360" height="152" rx="12"/><circle class="l22t-node" cx="190" cy="300" r="24"/><text class="l22t-letter" x="190" y="309">C</text><text class="l22t-date" x="32" y="142">676–673 BC</text><text class="l22t-ttl" x="32" y="176">The Karneia is first held,</text><text class="l22t-ttl" x="32" y="205">a contest for lyre-players</text><text class="l22t-src" x="32" y="237">Eusebius, Chronicle · Cooley C61</text></g>
+<g class="linked l22t-w" id="l22s-2"><line class="l22t-lead" x1="434" y1="322" x2="434" y2="344"/><rect class="l22t-box" x="254" y="344" width="360" height="152" rx="12"/><circle class="l22t-node" cx="434" cy="300" r="24"/><text class="l22t-letter" x="434" y="309">B</text><text class="l22t-date" x="272" y="382">c. 550 BC</text><text class="l22t-ttl" x="272" y="416">The bones of Orestes are</text><text class="l22t-ttl" x="272" y="445">brought home from Tegea</text><text class="l22t-src" x="272" y="477">Herodotus 1.67–68 · Cooley H10</text></g>
+<g class="linked l22t-w" id="l22s-3"><line class="l22t-lead" x1="678" y1="256" x2="678" y2="278"/><rect class="l22t-box" x="498" y="104" width="360" height="152" rx="12"/><circle class="l22t-node" cx="678" cy="300" r="24"/><text class="l22t-letter" x="678" y="309">D</text><text class="l22t-date" x="516" y="142">479 BC</text><text class="l22t-ttl" x="516" y="176">The regent Pausanias prays</text><text class="l22t-ttl" x="516" y="205">to Hera at Plataea</text><text class="l22t-src" x="516" y="237">Herodotus 9.61–62 · Cooley E86</text></g>
+<g class="linked l22t-w" id="l22s-4"><line class="l22t-lead" x1="922" y1="322" x2="922" y2="344"/><rect class="l22t-box" x="742" y="344" width="360" height="152" rx="12"/><circle class="l22t-node" cx="922" cy="300" r="24"/><text class="l22t-letter" x="922" y="309">E</text><text class="l22t-date" x="760" y="382">403 BC</text><text class="l22t-ttl" x="760" y="416">Lacedaemonians are buried</text><text class="l22t-ttl" x="760" y="445">in the Kerameikos at Athens</text><text class="l22t-src" x="760" y="477">Xenophon, Hellenika 2.4.33 · B25</text></g>
+<g class="linked l22t-w" id="l22s-5"><line class="l22t-lead" x1="1166" y1="256" x2="1166" y2="278"/><rect class="l22t-box" x="986" y="104" width="360" height="152" rx="12"/><circle class="l22t-node" cx="1166" cy="300" r="24"/><text class="l22t-letter" x="1166" y="309">F</text><text class="l22t-date" x="1004" y="142">371 BC</text><text class="l22t-ttl" x="1004" y="176">News of Leuctra reaches</text><text class="l22t-ttl" x="1004" y="205">Sparta at the Gymnopaedia</text><text class="l22t-src" x="1004" y="237">Xenophon, Hellenika 6.4.16 · C77</text></g>
+<g class="linked l22t-d" id="l22s-6"><line class="l22t-lead" x1="1410" y1="322" x2="1410" y2="344"/><rect class="l22t-box" x="1226" y="344" width="360" height="152" rx="12"/><circle class="l22t-node" cx="1410" cy="300" r="24"/><text class="l22t-letter" x="1410" y="309">A</text><text class="l22t-date" x="1244" y="382">2nd century AD</text><text class="l22t-ttl" x="1244" y="416">Pausanias describes the</text><text class="l22t-ttl" x="1244" y="445">contest at Leonidas’ memorial</text><text class="l22t-src" x="1244" y="477">Pausanias 3.14.1 · Cooley F27</text></g>
+</svg>
+      <figcaption>Answer key, drawn for this lesson: every date from Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <i class="reveal" data-also="#l22s-1" hidden></i>
+    <i class="reveal" data-also="#l22s-2" hidden></i>
+    <i class="reveal" data-also="#l22s-3" hidden></i>
+    <i class="reveal" data-also="#l22s-4" hidden></i>
+    <i class="reveal" data-also="#l22s-5" hidden></i>
+    <i class="reveal" data-also="#l22s-6" hidden></i>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l22-dense">
+  <p class="eyebrow">Practice and review · 3 of 8 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf l22-two" data-answers>
+    <li><span class="n">1</span><span>Plutarch says ordinary Spartans mourned for ten days.</span>
+      <span class="sol no reveal">False <span class="why">— “Mourning was limited to a brief period of eleven days” (<i>Lykourgos</i> 27.2, Cooley B35b). Ten days is Herodotus on the pause in public business after a king’s funeral (6.58, D10).</span></span></li>
+    <li><span class="n">2</span><span>The Spartans killed in 403 BC were carried home for burial.</span>
+      <span class="sol no reveal">False <span class="why">— they “now lie buried in the Kerameikos outside the gates of Athens” (Xenophon, Cooley B25c); the tomb has been excavated (B25a).</span></span></li>
+    <li><span class="n">3</span><span>Ordinary Spartans who died at home were buried outside the city.</span>
+      <span class="sol no reveal">False <span class="why">— Plutarch says Lycurgus let them bury the dead inside the city (<i>Lykourgos</i> 27.1–2, paraphrased; not in Cooley); Cavanagh: “there were tombs within the city”.</span></span></li>
+    <li><span class="n">4</span><span>Herodotus says the bones of Orestes were found in Sparta.</span>
+      <span class="sol no reveal">False <span class="why">— Lichas found them in a forge at Tegea and carried them back to Sparta (Herodotus 1.68, Cooley H10).</span></span></li>
+    <li><span class="n">5</span><span>Xenophon says the king offered all public sacrifice because of his divine origin.</span>
+      <span class="sol reveal">True <span class="why">— “by virtue of his divine origin, shall offer all public sacrifice on behalf of the state” (<i>Constitution</i> 15.2, Cooley D9).</span></span></li>
+    <li><span class="n">6</span><span>At Plataea the Lacedaemonians charged before their omens turned favourable.</span>
+      <span class="sol no reveal">False <span class="why">— the Tegeans moved first; the Lacedaemonians attacked only after “the Lakedaimonians who were conducting the sacrifices found the omens favourable” (Herodotus 9.62.1, Cooley E86).</span></span></li>
+    <li><span class="n">7</span><span>In Pausanias 3.14.1 the words ‘Kleomenes, son of’ were added by a modern editor.</span>
+      <span class="sol reveal">True <span class="why">— they are in square brackets, because the regent Pausanias died before 460 BC (Cooley F27 note).</span></span></li>
+    <li><span class="n">8</span><span>Herodotus says helots were compelled to attend a king’s funeral.</span>
+      <span class="sol no reveal">False <span class="why">— compulsion is stated for Spartiates, people from all Lacedaemon and “a number of perioikoi”; helots came too (6.58, Cooley D10).</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 4 of 8 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>agathoergoi</span><span>demigods</span><span>Dioscuri</span><span>eleven</span><span>emendation</span><span>hero</span><span>Kerameikos</span><span>Orestes</span></div>
+  <ol class="cloze" data-answers>
+    <li>The Spartans brought home the bones of <span class="gap"><span class="sol reveal">Orestes</span></span> from Tegea.</li>
+    <li>The twin heroes who went to war with the kings, probably as images, were the <span class="gap"><span class="sol reveal">Dioscuri</span></span>.</li>
+    <li>Plutarch says mourning was limited to <span class="gap"><span class="sol reveal">eleven</span></span> days.</li>
+    <li>The Lacedaemonians killed in 403 BC were buried in the <span class="gap"><span class="sol reveal">Kerameikos</span></span> at Athens.</li>
+    <li>Xenophon says dead kings were honoured not as mere mortals but as <span class="gap"><span class="sol reveal">demigods</span></span>.</li>
+    <li>A modern correction to the wording of an ancient text is an <span class="gap"><span class="sol reveal">emendation</span></span>.</li>
+    <li>Lichas, who found the bones, was one of the <span class="gap"><span class="sol reveal">agathoergoi</span></span>, sent on state missions.</li>
+    <li>Worship of a remarkable dead person, usually at the grave, is called <span class="gap"><span class="sol reveal">hero</span></span> cult.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l22-dense">
+  <p class="eyebrow">Practice and review · 5 of 8 · write an analytical paragraph · Chapter 12 Activity D</p>
+  <h2>What do Spartan funerary customs reveal about Spartan society?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: what values do the customs reveal — and for whom?</span>
+    <span class="l">Evidence</span><span>Use two or more sources precisely, with provenance: Plutarch, <i>Lykourgos</i> 27.2; Herodotus 6.58; Ainesias’ memorial or the Kerameikos tomb.</span>
+    <span class="l">Analyse</span><span>Explain why kings, citizens and the war dead were treated differently.</span>
+    <span class="l">Evaluate</span><span>Weigh the sources: Plutarch’s date and his two versions, Herodotus as an outsider — and what the stones confirm.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Spartan funerary customs reveal a society that valued equality among citizens, honoured death in war above all, and set its kings apart. For ordinary Spartiates, Heraclides says ‘Their tombs are cheap and the same for all’, and Plutarch, writing about AD 100, says no name could be inscribed ‘unless the man had fallen in battle or the woman was a priestess’, with mourning ‘limited to a brief period of eleven days’. The war dead, by contrast, were buried where they fell, like the Lacedaemonians of 403 BC in the Athenian Kerameikos, and were remembered at home on plain stones naming them ‘in war’. Kings, however, received a funeral that Spartiates and ‘a number of perioikoi’ were compelled to attend, followed by ten days without public business, because, Xenophon says, they were honoured ‘not as mere mortals but as demigods’. Plutarch wrote centuries later and gives his rule in two versions, and Herodotus was an outsider who compared the royal funeral with the customs of Asian peoples; but the 24 surviving ‘in war’ stones support Plutarch’s rule. These customs therefore reveal the ideal of the equals in ordinary death, and a hierarchy that honoured service to the state and the divine descent of the kings.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 6 of 8 · extended response · HSC-style, written for this lesson (Chapter 12, Activity E)</p>
+  <h2 class="nq">‘At Sparta, religion served the needs of the state.’ To what extent does the evidence support this view? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis:</b> how far did religion serve the state — and where did it limit it?</li>
+    <li><b>Festivals and myths:</b> unity, display and legitimacy — Polycrates on the Hyakinthia (Cooley C69), Demetrius on the Karneia (C68, late), Tyrtaeus on the sons of Heracles (A3), the bones of Orestes (H10).</li>
+    <li><b>Kings and burial:</b> omens and sacrifice (D7, D9, E86), royal funerals (D10), equal tombs and names for the war dead (B34, B35), hero cult (F27).</li>
+    <li><b>Counter-evidence:</b> personal dedications (C1, C14, C28); armies delayed by festivals (F11; Marathon, H16) — did religion serve the state, or bind it?</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (1)" data-kind="practice notes">
+<div class="wrap prac l22-dense">
+  <p class="eyebrow">Practice and review · 7 of 8 · Chapter 12 review, questions 1–4 (Lesson 21)</p>
+  <h2>Chapter review: religion, death and burial (1)</h2>
+  <ol class="rq" data-answers>
+    <li>Name the three gods in the syllabus and one place where each was worshipped.
+      <span class="sol reveal">Artemis Orthia: her sanctuary just outside the town of Sparta, by the Eurotas. Poseidon: Tainaron, where helots took refuge (Cooley). Apollo: the Amyklaion at Amyklai, with its dedications (C1) — and his oracle at Delphi.</span></li>
+    <li>Describe what happened at each of Apollo’s three festivals.
+      <span class="sol reveal">Karneia: nine days in late summer; it began as a contest for lyre-players (C61), and Demetrius says men ate in nine “tents” under spoken commands (C68). Hyakinthia: three days at Amyklai — dinners without garlands or hymns in grief for Hyakinthos, then on the middle day boys’ music, choruses of young men, girls in carriages, sacrifices and a banquet for friends and slaves (C69). Gymnopaedia: midsummer in the agora — choruses of boys and of men (C75) and endurance in the heat (C74).</span></li>
+    <li>Why must Demetrius’ description of the Karneia be used with caution?
+      <span class="sol reveal">He was born c. 214 BC, long after classical Sparta; his words survive only in Athenaeus (c. AD 200); “a representation of military training” is his interpretation; and he says nothing of the music, though the Karneia was “above all a choral and musical festival” (Cooley, quoting the <i>Oxford Classical Dictionary</i>).</span></li>
+    <li>Who paid for the Karneia, and what does that suggest about Spartan values?
+      <span class="sol reveal">Hesychius, a much later dictionary-writer, says unmarried men chosen by lot paid its expenses, five for each festival (C65). It may have been a burden on bachelors — Plutarch says unmarried men “were banned from being spectators at the Gymnopaidiai” (D71) — or an honour; we cannot tell. Either way, marriage and service to the community mattered.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review (2)" data-kind="practice notes">
+<div class="wrap prac l22-dense">
+  <p class="eyebrow">Practice and review · 8 of 8 · Chapter 12 review, questions 5–8</p>
+  <h2>Chapter review: religion, death and burial (2)</h2>
+  <ol class="rq" data-answers start="5">
+    <li>Explain two functions of Spartan myths, with an example of each.
+      <span class="sol reveal">Legitimacy: Zeus gave the city “to the sons of Herakles” (Tyrtaeus, A3), so the Heraclid kings had a right to the land (Cavanagh). Foreign policy: Delphi’s order to bring home the bones of Orestes (H10) helped Sparta against Tegea and, Cooley suggests, linked Dorian Sparta with the peoples before the Dorians.</span></li>
+    <li>Describe two ways the kings acted as priests on campaign.
+      <span class="sol reveal">Before crossing the frontier the king sacrificed to Zeus the Leader at home and to Zeus and Athena at the border, crossing only on good omens, and began his rituals before dawn (Xenophon 13.2–3, D7). Before battle sacrifices were made in sight of the enemy, and at Plataea the army waited until the omens were favourable (D7; Herodotus, E86).</span></li>
+    <li>Compare a king’s funeral with the burial of an ordinary Spartiate.
+      <span class="sol reveal">King: compulsory mourning for Spartiates, people from all Lacedaemon and some perioikoi, with helots present; ten days without public business; honoured as a demigod (D10, D9). Citizen: a cheap tomb inside the city like everyone else’s, no inscribed name (unless killed in war), eleven days of mourning (B34, B35b). Both reveal a hierarchy with the kings above equal citizens.</span></li>
+    <li>Evaluate the claim that Spartan religion was mainly a tool of the state.
+      <span class="sol reveal">Partly convincing: myths legitimised the kings, the king sacrificed for the state, omens were, Cooley suggests, “probably likely to support the king’s intentions”, and burial honoured death for the city. But religion also bound the state — armies waited for omens and festivals — and personal dedications by men and women (C1, C14, C28) show private piety, not only state policy.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">A royal funeral and an ordinary Spartan death differed because …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One Spartan myth, and the job it did for Sparta: …</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> Lesson 24, cultural and everyday life — Spartan art. The Throne of Apollo at Amyklai, the choruses and Alcman’s songs show that Spartan religion was also Spartan culture.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap l22-dense">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources and inscriptions</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Herodotus 1.65–66, 1.67–68, 5.75.2, 6.56–58, 6.106, 7.206, 7.228, 9.61–62 and 9.85 (F3, H10, D6, D5, D8, D10, H16, F11, F20, E86, E51, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 13 and 15 (D7, D9, trans. B. Wilson), <i>Hellenika</i> 2.4.33, 3.3.1, 3.4.3 and 6.4.16 (B25c, E45, E153, C77, E112) and <i>Agesilaos</i> 2.17 (C71); Plutarch, <i>Lykourgos</i> 15.1, 27.2 and 31 (D71, B35b, F7, trans. B. Wilson) and <i>Instituta Laconica</i> 18 (B35a); Thucydides 5.11.1 and 5.74.2 (E38, E104); Pausanias 3.11.9, 3.14.1, 3.15.1 and 3.16.4 (C73, F27, C56, C35); Plato, <i>Laws</i> 633b–c (C74); Herakleides Pontikos 2.8 (B34); Polykrates and Demetrios in Athenaios 4.17 and 4.19 (C69, C68); Sosibios in Athenaios 14.37 and 15.22 (C62, C75); Eusebius (C61); Hesychios (C65); Bekker, <i>Anecdota Graeca</i> (C66); Tyrtaios frs 2, 11 and 12 (A3, A8, A9, trans. K. Hughes); Simonides, Plataea (A21) and the Plataea epigram (A22); inscriptions C1, C14, C28, C29–C31, C34, B25a–b, B36, B38, B43, B44, B54, B55. Cooley’s introductions and notes (including his notes on B28 and C60), W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and, as cited in Cooley’s notes, W. Burkert, <i>Greek Religion</i> (1985), R. Parker in A. Powell (ed.), <i>Classical Sparta</i> (1989) and in M. Whitby (ed.), <i>Sparta</i> (2002), M. Dillon in <i>Hermes</i> 135 (2007), W. R. Connor in <i>TAPA</i> 109, the historians quoted in the note on H16, and the <i>Oxford Classical Dictionary</i>.</p>
+        <p class="small">Not in Cooley (from the unit textbook, Chapter 12): Plutarch, <i>Lykourgos</i> 27.1–2 and <i>On Brotherly Love</i> 1, paraphrased.</p></div>
+    </div>
+    <div class="stack">
+      <div class="card quiet"><div class="k">Images and diagrams</div>
+        <ul class="small"><li>An Attic (Athenian) black-figure amphora showing Menelaus recovering Helen after the fall of Troy — Athenian, not Spartan, work; the couple were honoured at the Menelaion near Sparta — Clarke & Garner, Fig 5.8</li><li>A modern drawing of an ancient representation of the dokana, the Spartan symbol of the Dioscuri, from Sparta, 5th century BC — Clarke & Garner, Fig 7.10</li><li>The ruined building known as the ‘Tomb of Leonidas’, in a small park in modern Sparta — once a place of worship; the name is traditional, and nothing on the site proves that Leonidas was buried here — Clarke & Garner, Fig 1.5</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy).</p>
+        <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the myth table, the burial table, the planning table and the Activity A timeline.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC questions, marking criteria, “answers could include” and marking feedback: NSW Education Standards Authority, 2023 HSC Ancient History examination, marking guidelines and feedback; 2024 HSC Ancient History examination and marking guidelines. © NESA. NESA’s glossary of key words was checked for “reveal” (it is not a key word).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>
