@@ -1,0 +1,2352 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sparta L4 · The Two Kings</title>
+<meta name="description" content="Year 12 Ancient History, Spartan society: the dual kingship, the kings’ roles and privileges and the limits on their power, with guided notes, annotated HSC answers and practice.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+/* ============================================================ TOKENS ==== */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --c-directive:#2740B8; --w-directive:#E1E6F9;
+  --c-keyterm:#7A4F00;   --w-keyterm:#F9EED2;
+  --c-scope:#A8156F;     --w-scope:#FADCEC;
+  --c-evidence:#1B6236;  --w-evidence:#DCEFE3;
+  --c-judgement:#B02F19; --w-judgement:#FBE0D9;
+  --c-counter:#54299B;   --w-counter:#E7DEF7;
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,
+         BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",
+       Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Content type scale. Minimums are set in rem against a 16px root, so the
+     smallest student-facing text is 24px however short the projector is. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-h1:clamp(2.5rem,5.8vh,5rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+    --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+    --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+    --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+    --c-directive:#93AAFF; --w-directive:#1C2557;
+    --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+    --c-scope:#F589C7;     --w-scope:#42102D;
+    --c-evidence:#6FD996;  --w-evidence:#103120;
+    --c-judgement:#FF9376; --w-judgement:#41180E;
+    --c-counter:#BFA5FF;   --w-counter:#291643;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0B1113; --surface:#151F22; --surface-2:#1D292D;
+  --ink:#EDF3F4; --slate:#9BADB4; --rule:#2C3A3E;
+  --deep:#8FDDE1; --bright:#4FCBD1; --tint:#123033;
+  --shadow:0 1px 2px rgba(0,0,0,.5),0 10px 34px rgba(0,0,0,.45);
+  --c-directive:#93AAFF; --w-directive:#1C2557;
+  --c-keyterm:#EDBB57;   --w-keyterm:#3D2C08;
+  --c-scope:#F589C7;     --w-scope:#42102D;
+  --c-evidence:#6FD996;  --w-evidence:#103120;
+  --c-judgement:#FF9376; --w-judgement:#41180E;
+  --c-counter:#BFA5FF;   --w-counter:#291643;
+}
+
+/* ============================================================= BASE ===== */
+*,*::before,*::after{box-sizing:border-box;}
+html{font-size:16px;-webkit-text-size-adjust:100%;}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--ui); font-size:var(--fs-body); line-height:1.45;
+  overflow:hidden;
+}
+h1,h2,h3{margin:0; text-wrap:balance; font-family:var(--disp);
+  font-weight:700; line-height:1.06; letter-spacing:-.015em;}
+p{margin:0;}
+button{font:inherit; color:inherit; background:none; border:0; cursor:pointer;}
+:focus-visible{outline:3px solid var(--bright); outline-offset:3px;
+  border-radius:4px;}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.001ms!important;
+    transition-duration:.001ms!important;}
+}
+
+/* ============================================================ CHROME ==== */
+#rail{
+  position:fixed; inset:0 0 auto 0; height:clamp(46px,6.2vh,66px);
+  display:flex; align-items:center; gap:clamp(10px,1.4vw,22px);
+  padding:0 clamp(14px,2vw,32px); z-index:60;
+  background:var(--surface); border-bottom:1px solid var(--rule);
+}
+#rail .sec{
+  font-family:var(--ui); font-size:var(--fs-chrome); font-weight:700;
+  color:var(--deep); letter-spacing:.055em; text-transform:uppercase;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+#rail .spacer{flex:1 1 auto;}
+.btn{
+  display:inline-flex; align-items:center; gap:.45em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  padding:.42em .85em; border:1px solid var(--rule); border-radius:999px;
+  background:var(--surface); white-space:nowrap; transition:.15s;
+}
+.btn:hover{color:var(--ink); border-color:var(--bright);}
+.btn[aria-pressed="true"]{
+  background:var(--tint); color:var(--deep); border-color:var(--bright);}
+.btn kbd{
+  font-family:var(--mono); font-size:.82em; opacity:.7;
+  border:1px solid var(--rule); border-radius:3px; padding:0 .3em;}
+#count{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate); font-variant-numeric:tabular-nums; white-space:nowrap;}
+#bar{position:fixed; top:0; left:0; height:3px; background:var(--bright);
+  z-index:70; transition:width .3s ease;}
+
+/* ============================================================ SLIDES ==== */
+#deck{position:fixed; inset:clamp(46px,6.2vh,66px) 0 0 0;}
+.slide{
+  position:absolute; inset:0; display:none;
+  padding:clamp(20px,3.4vh,54px) clamp(24px,4.5vw,80px)
+          clamp(58px,7.5vh,84px);
+  overflow-y:auto; overflow-x:hidden;
+}
+.slide.active{display:flex; flex-direction:column; justify-content:center;}
+.slide.active > *{animation:rise .34s cubic-bezier(.2,.7,.3,1) both;}
+@keyframes rise{from{opacity:0; transform:translateY(14px);} to{opacity:1;}}
+.wrap{width:100%; max-width:min(1500px,94vw); margin-inline:auto;
+  display:flex; flex-direction:column; gap:clamp(12px,2.1vh,28px);}
+.eyebrow{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.09em; text-transform:uppercase; color:var(--bright);}
+h1{font-size:var(--fs-h1);} h2{font-size:var(--fs-h2);}
+.lead{font-size:var(--fs-lead); color:var(--slate); max-width:34em;}
+.body{font-size:var(--fs-body); max-width:38em;}
+.mega{font-size:var(--fs-mega); font-family:var(--disp); font-weight:700;
+  line-height:1.02; letter-spacing:-.02em;}
+.centred{align-items:center; text-align:center;}
+.centred .lead,.centred .body{max-width:30em;}
+
+/* ============================================== the function code ======= */
+.code{
+  position:relative; border-radius:3px; padding:.02em .1em;
+  transition:background-color .32s ease, color .32s ease,
+             text-decoration-color .32s ease;
+  text-decoration:underline transparent;
+  text-underline-offset:.22em; text-decoration-thickness:.09em;
+}
+.code.on{font-weight:700;}
+.code.on::after{
+  content:attr(data-letter); font-family:var(--mono); font-weight:700;
+  font-size:.5em; vertical-align:super; margin-left:.12em;
+  letter-spacing:.02em;
+}
+.code.on[data-code="directive"]{background:var(--w-directive);
+  color:var(--c-directive); text-decoration-color:var(--c-directive);
+  text-decoration-style:solid;}
+.code.on[data-code="keyterm"]{background:var(--w-keyterm);
+  color:var(--c-keyterm); text-decoration-color:var(--c-keyterm);
+  text-decoration-style:dotted;}
+.code.on[data-code="scope"]{background:var(--w-scope);
+  color:var(--c-scope); text-decoration-color:var(--c-scope);
+  text-decoration-style:dashed;}
+.code.on[data-code="evidence"]{background:var(--w-evidence);
+  color:var(--c-evidence); text-decoration-color:var(--c-evidence);
+  text-decoration-style:double;}
+.code.on[data-code="judgement"]{background:var(--w-judgement);
+  color:var(--c-judgement); text-decoration-color:var(--c-judgement);
+  text-decoration-style:wavy;}
+.code.on[data-code="counter"]{background:var(--w-counter);
+  color:var(--c-counter); text-decoration-color:var(--c-counter);
+  text-decoration-style:solid; text-decoration-thickness:.2em;}
+
+/* legend */
+#legend{
+  position:fixed; left:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:55; display:flex; flex-wrap:wrap; gap:.5em;
+  max-width:min(1100px,92vw);
+}
+#legend[hidden]{display:none;}
+.chip{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; padding:.34em .8em .34em .5em;
+  border-radius:999px; border:1px solid var(--rule);
+  background:var(--surface); color:var(--slate); transition:.16s;
+}
+.chip .dot{
+  width:1.5em; height:1.5em; border-radius:50%; flex:none;
+  display:grid; place-items:center; font-family:var(--mono);
+  font-size:.78em; font-weight:700; color:#fff;
+}
+.chip[data-code="directive"] .dot{background:var(--c-directive);}
+.chip[data-code="keyterm"] .dot{background:var(--c-keyterm);}
+.chip[data-code="scope"] .dot{background:var(--c-scope);}
+.chip[data-code="evidence"] .dot{background:var(--c-evidence);}
+.chip[data-code="judgement"] .dot{background:var(--c-judgement);}
+.chip[data-code="counter"] .dot{background:var(--c-counter);}
+.chip[aria-pressed="true"]{color:var(--ink); border-color:currentColor;
+  box-shadow:inset 0 0 0 1px currentColor;}
+.chip:hover{color:var(--ink);}
+
+/* ============================================================ REVEAL ==== */
+.reveal{
+  opacity:0; transform:translateY(12px); pointer-events:none;
+  transition:opacity .34s ease, transform .34s cubic-bezier(.2,.7,.3,1);
+}
+.reveal.shown{opacity:1; transform:none; pointer-events:auto;}
+.cue{
+  display:inline-flex; align-items:center; gap:.5em;
+  font-size:var(--fs-chrome); font-weight:600; color:var(--slate);
+  font-style:italic;
+}
+.cue::before{content:"▸"; color:var(--bright); font-style:normal;}
+
+/* ============================================================= CARDS ==== */
+.card{
+  background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  padding:clamp(16px,2.5vh,32px) clamp(18px,2.2vw,38px); box-shadow:var(--shadow);
+}
+.card.accent{border-left:6px solid var(--bright);}
+.card.quiet{background:var(--surface-2); box-shadow:none;}
+.card .k{
+  font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700;
+  letter-spacing:.085em; text-transform:uppercase; color:var(--bright);
+  margin-bottom:.5em;
+}
+.tinted{background:var(--tint); border-color:transparent;}
+.tinted .k{color:var(--deep);}
+.cols{display:grid; gap:clamp(12px,1.6vw,26px);}
+.c2{grid-template-columns:repeat(2,1fr);}
+.c3{grid-template-columns:repeat(3,1fr);}
+.c4{grid-template-columns:repeat(4,1fr);}
+@media (max-width:900px){.c2,.c3,.c4{grid-template-columns:1fr;}}
+
+.quote{
+  font-family:var(--serif); font-style:italic; font-size:var(--fs-big);
+  line-height:1.4; letter-spacing:-.005em;
+}
+.attrib{font-family:var(--ui); font-style:normal; font-size:var(--fs-chrome);
+  font-weight:700; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--slate); margin-top:.7em;}
+.qtext{font-size:var(--fs-big); line-height:1.5; font-weight:600;
+  letter-spacing:-.01em;}
+.para{font-size:var(--fs-body); line-height:1.62;}
+.para.resp{line-height:1.5;}
+
+/* colour-keyed callout */
+.note{border-left:6px solid var(--bright); background:var(--surface-2);
+  border-radius:0 8px 8px 0; padding:clamp(12px,1.8vh,22px) clamp(16px,1.8vw,28px);}
+.note[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.note[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.note[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.note[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.note[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.note[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.note .k{margin-bottom:.35em;}
+.note[data-code="directive"] .k{color:var(--c-directive);}
+.note[data-code="keyterm"] .k{color:var(--c-keyterm);}
+.note[data-code="scope"] .k{color:var(--c-scope);}
+.note[data-code="evidence"] .k{color:var(--c-evidence);}
+.note[data-code="judgement"] .k{color:var(--c-judgement);}
+.note[data-code="counter"] .k{color:var(--c-counter);}
+
+/* tables */
+.tbl{width:100%; border-collapse:collapse; font-size:var(--fs-body);}
+.tbl-scroll{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+.tbl th{
+  text-align:left; font-family:var(--ui); font-size:var(--fs-eyebrow);
+  font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--surface); background:var(--deep);
+  padding:.6em .8em; white-space:nowrap;
+}
+:root[data-theme="dark"] .tbl th,
+:root:not([data-theme="light"]) .tbl th{color:var(--ground);}
+.tbl td{padding:.62em .8em; border-bottom:1px solid var(--rule);
+  vertical-align:top;}
+.tbl tr:last-child td{border-bottom:0;}
+.tbl .lab{font-weight:700; white-space:nowrap;}
+.num{font-family:var(--mono); font-variant-numeric:tabular-nums;}
+
+/* option list */
+.opts{display:flex; flex-direction:column; gap:.6em; list-style:none;
+  padding:0; margin:0;}
+.opts li{
+  display:flex; gap:.75em; align-items:flex-start; padding:.55em .9em;
+  border:1px solid var(--rule); border-radius:8px; background:var(--surface);
+}
+.opts li .n{font-family:var(--mono); font-weight:700; color:var(--slate);
+  flex:none;}
+.opts li.right{border-color:var(--c-evidence); background:var(--w-evidence);
+  color:var(--c-evidence); font-weight:700;}
+.opts li.right .n{color:var(--c-evidence);}
+
+.sectors{display:grid; grid-template-columns:repeat(3,1fr);
+  gap:clamp(8px,1.1vw,16px);}
+@media (max-width:900px){.sectors{grid-template-columns:1fr 1fr;}}
+.sector{
+  border:1px solid var(--rule); border-radius:9px; background:var(--surface);
+  padding:clamp(10px,1.5vh,20px) clamp(12px,1.3vw,22px);
+  display:flex; flex-direction:column; gap:.3em;
+}
+.sector .t{font-weight:700; font-size:var(--fs-body);}
+.sector .d{font-size:var(--fs-chrome); color:var(--slate); line-height:1.4;}
+.sector.hot{border-color:var(--c-evidence); background:var(--w-evidence);}
+
+/* ============================================================= TIMER ==== */
+#timer{
+  position:fixed; right:clamp(14px,2vw,32px); bottom:clamp(12px,2vh,26px);
+  z-index:58; background:var(--surface); border:1px solid var(--rule);
+  border-radius:12px; box-shadow:var(--shadow);
+  padding:clamp(10px,1.4vh,18px) clamp(14px,1.5vw,24px);
+  display:flex; flex-direction:column; gap:.5em; align-items:center;
+}
+#timer[hidden]{display:none;}
+#clock{
+  font-family:var(--mono); font-weight:700; font-variant-numeric:tabular-nums;
+  font-size:clamp(2.4rem,6vh,4.6rem); line-height:1; letter-spacing:-.03em;
+  color:var(--deep);
+}
+#timer.low #clock{color:var(--c-judgement);}
+#timer.done #clock{color:var(--c-judgement); animation:flash 1s steps(2) infinite;}
+@keyframes flash{50%{opacity:.25;}}
+#timer .row{display:flex; gap:.4em; flex-wrap:wrap; justify-content:center;}
+#timer .btn{padding:.3em .7em;}
+
+/* ========================================================== OVERVIEW ==== */
+#overview{
+  position:fixed; inset:0; z-index:80; background:var(--ground);
+  padding:clamp(20px,4vh,54px) clamp(20px,4vw,60px); overflow-y:auto;
+}
+#overview[hidden]{display:none;}
+#ovgrid{
+  display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+  gap:clamp(10px,1.3vw,20px); margin-top:1.2em;
+}
+.ovcard{
+  text-align:left; border:1px solid var(--rule); border-radius:9px;
+  background:var(--surface); padding:.9em 1em; display:flex;
+  flex-direction:column; gap:.3em; transition:.15s;
+}
+.ovcard:hover{border-color:var(--bright); transform:translateY(-2px);}
+.ovcard.here{border-color:var(--bright); background:var(--tint);}
+.ovcard .n{font-family:var(--mono); font-size:var(--fs-chrome);
+  color:var(--slate);}
+.ovcard .t{font-weight:700; font-size:var(--fs-chrome); line-height:1.3;}
+.ovcard .s{font-size:calc(var(--fs-chrome)*.88); color:var(--slate);
+  text-transform:uppercase; letter-spacing:.06em;}
+#help{display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr));
+  gap:.5em 1.4em; margin-top:1.4em; font-size:var(--fs-chrome);
+  color:var(--slate);}
+#help div{display:flex; gap:.6em; align-items:baseline;}
+#help kbd{font-family:var(--mono); font-weight:700; color:var(--ink);
+  border:1px solid var(--rule); border-radius:4px; padding:.05em .45em;
+  background:var(--surface); flex:none;}
+
+/* PEEL structural markers — a separate axis from the colour code, so they
+   are deliberately neutral rather than a seventh hue. */
+.peel{
+  display:inline-grid; place-items:center; width:1.55em; height:1.55em;
+  border-radius:5px; background:var(--deep); color:var(--surface);
+  font-family:var(--mono); font-weight:700; font-size:.72em;
+  vertical-align:.12em; margin-right:.15em; flex:none;
+}
+:root[data-theme="dark"] .peel,
+:root:not([data-theme="light"]) .peel{color:var(--ground);}
+.tbl .lab .peel{margin-right:.3em;}
+
+/* ============================================== Sparta site additions === */
+/* Crimson replaces the suite teal for chrome only (rail, bar, eyebrows, card
+   labels, table heads). --bright stays graphic-only: bars, rules, focus. */
+:root{ --deep:#7E1F2A; --bright:#C4303F; --tint:#FBE9EA; --statement:#7E1F2A;
+  --c-analysis:#00628F; --w-analysis:#D6ECF7;
+  --map-sea:#D7E6EE; --map-land:#ECEBE6; --map-coast:#9AA6AE; --map-lac:#F2D3B3;
+  --map-mes:#CFE3C4; --map-mtn:#8C7B67; --map-crest:#6B5A47; --map-river:#2F7FB0;
+  --map-sea-ink:#4F7488; --map-mtn-ink:#5B4B3A; --map-river-ink:#1F5F88; --map-halo:#F4F3EF;
+  --paper-rule:#E4E7EA; }
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+    --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+    --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+    --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+    --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+    --paper-rule:#2C3A3E; }
+}
+:root[data-theme="dark"]{ --deep:#F2A7AF; --bright:#E0566A; --tint:#3A1A1E;
+  --statement:#5A1620; --c-analysis:#7CC9F0; --w-analysis:#0E2C3B;
+  --map-sea:#0F1D24; --map-land:#232A2E; --map-coast:#45525A; --map-lac:#4A3524;
+  --map-mes:#263A25; --map-mtn:#B9A68E; --map-crest:#D6C4AC; --map-river:#6DB6E6;
+  --map-sea-ink:#8FB4C7; --map-mtn-ink:#E3D3BE; --map-river-ink:#9DD0F2; --map-halo:#232A2E;
+  --paper-rule:#2C3A3E; }
+
+.eyebrow{color:var(--deep);}
+.card .k{color:var(--deep);}
+.code.on[data-code="analysis"]{background:var(--w-analysis); color:var(--c-analysis);
+  text-decoration-color:var(--c-analysis); text-decoration-style:solid;}
+.chip[data-code="analysis"] .dot{background:var(--c-analysis);}
+.note[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.note[data-code="analysis"] .k{color:var(--c-analysis);}
+
+/* top-aligned content slides; .mid centres title and statement slides */
+.slide.active{justify-content:flex-start;}
+.slide.active.mid{justify-content:center;}
+.slide.statement{background:var(--statement); color:#FBF4F0;}
+.slide.statement .eyebrow{color:#F6D3D6;}
+.slide.statement .lead,.slide.statement .small{color:#F6D3D6;}
+.slide.statement .qtext{font-size:var(--fs-h1); line-height:1.2; font-family:var(--disp);
+  font-weight:700; max-width:22em;}
+.slide.statement .code.on{color:inherit;}
+.slide.statement .code.on[data-code]{color:var(--ink);}
+
+.notes{display:none;}
+#notesPanel{position:fixed; right:clamp(14px,2vw,32px);
+  top:calc(clamp(46px,6.2vh,66px) + 14px); width:min(560px,42vw); max-height:72vh;
+  overflow:auto; z-index:75; background:var(--surface); border:1px solid var(--rule);
+  border-left:6px solid var(--deep); border-radius:10px; box-shadow:var(--shadow);
+  padding:14px 20px 16px; font-size:1.02rem; line-height:1.5; color:var(--ink);}
+#notesPanel[hidden]{display:none;}
+#notesPanel .k{font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  font-size:.82rem; color:var(--deep); margin-bottom:.4em;}
+#notesPanel p{margin:0 0 .55em;} #notesPanel ul{margin:.2em 0 .6em; padding-left:1.2em;}
+
+.small{font-size:var(--fs-chrome); color:var(--slate);}
+.optional{display:inline-block; margin-left:.7em; padding:.05em .6em; border:1px solid currentColor;
+  border-radius:999px; font-size:.82em; letter-spacing:.06em;}
+.split{display:grid; grid-template-columns:var(--cols,1.15fr 1fr); gap:clamp(14px,2.2vw,40px);
+  align-items:start;}
+.stack{display:flex; flex-direction:column; gap:clamp(10px,1.6vh,20px);}
+@media (max-width:900px){.split{grid-template-columns:1fr;}}
+.lisc ul{margin:.35em 0 0; padding-left:1.15em;} .lisc li{margin:.3em 0;}
+.card ul{margin:.2em 0 0; padding-left:1.15em;} .card li{margin:.25em 0;}
+.card.sm .body{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+.note .k{font-weight:700;}
+
+.figure{margin:0;} .figure img{display:block; width:100%; height:auto; max-height:52vh;
+  object-fit:cover; border-radius:10px; box-shadow:var(--shadow);}
+.figure.contain img{object-fit:contain; background:var(--surface);}
+.figure.tall img{max-height:64vh;}
+.figure.short img{height:26vh; max-height:none;}
+.figure figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.5em; line-height:1.35;}
+.figure figcaption .cr{white-space:nowrap;}
+
+/* sources */
+.src{background:var(--surface); border:1px solid var(--rule); border-left:6px solid var(--deep);
+  border-radius:10px; padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.src .k{font-family:var(--ui); font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.085em;
+  text-transform:uppercase; color:var(--deep); margin-bottom:.45em;}
+.src .quote{font-size:var(--fs-lead);}
+.src .quote.sm{font-size:var(--fs-body); line-height:1.5;}
+.src .prov{font-size:var(--fs-chrome); color:var(--slate); margin-top:.7em; line-height:1.4;}
+.qprompt{font-weight:700; font-size:var(--fs-body);}
+.qprompt::before{content:"Q "; font-family:var(--mono); color:var(--deep);}
+
+/* the Peloponnese map */
+.mapbox{margin:0;}
+.mapbox svg{display:block; height:calc(100vh - 290px); min-height:320px; width:auto; max-width:100%;
+  border-radius:10px; box-shadow:var(--shadow);}
+.mapbox figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.map .sea{fill:var(--map-sea);} .map .land{fill:var(--map-land); stroke:var(--map-coast); stroke-width:1.2;}
+.map .laconia{fill:var(--map-lac); opacity:.9;} .map .messenia{fill:var(--map-mes); opacity:.9;}
+.map .mtn-band{fill:none; stroke:var(--map-mtn); stroke-width:30; stroke-linecap:round;
+  stroke-linejoin:round; opacity:.32;}
+.map .mtn-crest{fill:none; stroke:var(--map-crest); stroke-width:3.5; stroke-linecap:round; opacity:.9;}
+.map .river{fill:none; stroke:var(--map-river); stroke-width:6; stroke-linecap:round;}
+.map text{font-family:var(--ui); paint-order:stroke; stroke:var(--map-halo); stroke-width:7px;
+  stroke-linejoin:round;}
+.map .sea-lbl{fill:var(--map-sea-ink); stroke:var(--map-sea); font-size:24px; font-style:italic;
+  letter-spacing:.12em; text-anchor:middle;}
+.map .region-lbl{fill:var(--slate); font-size:26px; letter-spacing:.14em; font-weight:600;}
+.map .region-lbl.strong{fill:var(--ink); font-size:36px; font-weight:700;}
+.map .small-lbl{fill:var(--slate); font-size:24px;}
+.map .town-lbl{fill:var(--ink); font-size:34px; font-weight:700;}
+.map .mtn-lbl{fill:var(--map-mtn-ink); font-size:32px; font-weight:700;}
+.map .river-lbl{fill:var(--map-river-ink); font-size:30px; font-weight:700; font-style:italic;}
+.map .sparta{fill:var(--deep); stroke:var(--map-halo); stroke-width:4;}
+.map .town{fill:var(--ink); stroke:var(--map-halo); stroke-width:3;}
+.map .badge circle{fill:#7E1F2A;} .map .badge text{fill:#fff; stroke:none; font-weight:700;
+  font-size:26px; text-anchor:middle;}
+.map .scale line{stroke:var(--ink); stroke-width:4;} .map .scale text{font-size:22px; fill:var(--ink);}
+.map .north{fill:var(--ink); font-size:26px; font-weight:700;}
+.linked{opacity:0; transition:opacity .4s ease;}
+.linked.shown{opacity:1;}
+
+/* numbered key list that drives map layers / plan pins */
+.keylist{list-style:none; margin:0; padding:0; display:flex; flex-direction:column;
+  gap:clamp(6px,1.1vh,14px);}
+.keylist li{display:grid; grid-template-columns:2.2em 1fr; column-gap:.7em; align-items:start;
+  font-size:var(--fs-body); line-height:1.32;}
+.keylist .num{grid-row:span 2; width:1.75em; height:1.75em; border-radius:50%; background:#7E1F2A;
+  color:#fff; display:grid; place-items:center; font-weight:700; font-size:.92em; margin-top:.05em;}
+.keylist .t{font-weight:700;}
+.keylist .d{color:var(--slate); font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+
+/* the Clarke & Garner plan with pins */
+.plan{position:relative; margin:0; max-width:calc((100vh - 290px) * 1.405);}
+.plan .pf{position:relative; border-radius:10px; overflow:hidden; box-shadow:var(--shadow);}
+.plan img{display:block; width:100%; height:auto;}
+.plan .pin{position:absolute; left:var(--x); top:var(--y); width:2em; height:2em; border-radius:50%;
+  background:#7E1F2A; color:#fff; display:grid; place-items:center; font-weight:700;
+  font-size:var(--fs-chrome); box-shadow:0 0 0 3px #fff, 0 4px 12px rgba(0,0,0,.3);
+  transform:translate(-50%,-50%) scale(.5); transition:opacity .3s ease, transform .3s ease;}
+.plan .pin.shown{transform:translate(-50%,-50%) scale(1);}
+.plan figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+
+/* Cornell notes page */
+.ckpt{display:inline-flex; align-items:center; gap:.5em;}
+.ckpt svg{width:1.15em; height:1.15em; flex:none;}
+.cornell{background:var(--surface); border:1px solid var(--rule); border-radius:10px;
+  box-shadow:var(--shadow); overflow:hidden;}
+.cornell .ch{display:flex; justify-content:space-between; gap:1em; flex-wrap:wrap;
+  padding:.45em 1em; border-bottom:2px solid var(--deep); font-size:var(--fs-chrome);
+  color:var(--slate); font-weight:600;}
+.cornell .ch b{color:var(--ink);}
+.cornell .row{display:grid; grid-template-columns:minmax(8.5em,26%) 1fr;
+  border-bottom:1px solid var(--paper-rule);}
+.cornell .row:last-child{border-bottom:0;}
+.cornell .cq{padding:.5em 1em; border-right:3px solid var(--bright); font-weight:700;
+  color:var(--deep); font-size:calc(var(--fs-body)*.9); line-height:1.3;}
+.cornell .nts{padding:.5em 1.1em; font-size:calc(var(--fs-body)*.9); line-height:1.42;}
+.cornell .nts .sep{color:var(--slate); padding:0 .25em;}
+.cornell .sum{border-top:2px solid var(--deep); padding:.6em 1em; font-size:calc(var(--fs-body)*.9);}
+.cornell .sum .k{font-weight:700; color:var(--deep); margin-right:.5em;}
+@media (max-width:700px){.cornell .row{grid-template-columns:1fr;}
+  .cornell .cq{border-right:0; border-bottom:1px dashed var(--paper-rule); padding-bottom:.25em;}}
+
+/* annotated answers */
+.annot{display:grid; grid-template-columns:1.3fr 1fr; gap:clamp(14px,2vw,32px); align-items:start;}
+@media (max-width:900px){.annot{grid-template-columns:1fr;}}
+.ans{font-family:var(--serif); font-size:var(--fs-lead); line-height:1.7; background:var(--surface);
+  border:1px solid var(--rule); border-left:6px solid var(--deep); border-radius:10px;
+  padding:clamp(14px,2.2vh,28px) clamp(16px,2vw,32px); box-shadow:var(--shadow);}
+.ans.long{font-size:var(--fs-body); line-height:1.62;}
+.ans .meta{font-family:var(--ui); font-size:var(--fs-chrome); color:var(--slate); margin-top:.8em;
+  line-height:1.4;}
+.mk{display:inline-grid; place-items:center; min-width:1.45em; height:1.45em; padding:0 .2em;
+  border-radius:999px; background:#7E1F2A; color:#fff; font-family:var(--ui); font-style:normal;
+  font-size:.52em; font-weight:700; vertical-align:.55em; margin:0 .2em 0 .1em; line-height:1;}
+.margin{display:flex; flex-direction:column; gap:clamp(6px,1vh,12px);}
+.margin .head{font-size:var(--fs-eyebrow); font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--deep);}
+.anote{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; padding:.5em .8em;
+  border-radius:0 8px 8px 0; border-left:5px solid var(--slate); background:var(--surface-2);
+  font-size:calc(var(--fs-body)*.82); line-height:1.38;}
+.anote .mk{vertical-align:0; font-size:.86em; margin:.12em 0 0; grid-row:span 2;}
+.anote b{display:block;}
+.anote[data-code="directive"]{border-color:var(--c-directive); background:var(--w-directive);}
+.anote[data-code="keyterm"]{border-color:var(--c-keyterm); background:var(--w-keyterm);}
+.anote[data-code="scope"]{border-color:var(--c-scope); background:var(--w-scope);}
+.anote[data-code="evidence"]{border-color:var(--c-evidence); background:var(--w-evidence);}
+.anote[data-code="judgement"]{border-color:var(--c-judgement); background:var(--w-judgement);}
+.anote[data-code="counter"]{border-color:var(--c-counter); background:var(--w-counter);}
+.anote[data-code="analysis"]{border-color:var(--c-analysis); background:var(--w-analysis);}
+.anote[data-code="directive"] b{color:var(--c-directive);} .anote[data-code="keyterm"] b{color:var(--c-keyterm);}
+.anote[data-code="scope"] b{color:var(--c-scope);} .anote[data-code="evidence"] b{color:var(--c-evidence);}
+.anote[data-code="judgement"] b{color:var(--c-judgement);} .anote[data-code="counter"] b{color:var(--c-counter);}
+.anote[data-code="analysis"] b{color:var(--c-analysis);}
+.verdict{border:2px solid var(--c-evidence); background:var(--w-evidence); border-radius:8px;
+  padding:.5em .85em; font-weight:600; font-size:calc(var(--fs-body)*.86); line-height:1.4;}
+.verdict b{color:var(--c-evidence);}
+.anote .tx{display:block;}
+/* shorter projectors: only the current margin note shows its text; the
+   others fold to their headline, so the margin never runs off the screen */
+@media (max-height:900px){
+  html:not(.read) .anote:not(.current) .tx{display:none;}
+  html:not(.read) .anote{padding:.38em .7em;}
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.9); line-height:1.55;}
+}
+.sharper{font-size:calc(var(--fs-body)*.78); color:var(--slate); border-left:3px dashed var(--rule);
+  padding:.1em 0 .1em .8em; line-height:1.4;}
+
+/* criteria, ladders, checklists, frames */
+.crit td.m{font-family:var(--disp); font-weight:700; font-size:var(--fs-big); width:3.2em;
+  text-align:center; color:var(--deep);}
+.tbl.compact{font-size:calc(var(--fs-body)*.82);} .tbl.compact td{padding:.42em .7em;}
+.fb{font-size:calc(var(--fs-body)*.88); line-height:1.42;}
+.fb .q{display:block; margin:.35em 0; padding-left:.8em; border-left:3px solid var(--rule);
+  font-style:italic;}
+.ladder{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.4vw,22px);}
+@media (max-width:900px){.ladder{grid-template-columns:1fr;}}
+.rung{background:var(--surface); border:1px solid var(--rule); border-top:6px solid var(--slate);
+  border-radius:10px; padding:clamp(12px,1.8vh,22px) clamp(14px,1.4vw,24px); display:flex;
+  flex-direction:column; gap:.55em; box-shadow:var(--shadow);}
+.rung .mark{font-family:var(--ui); font-weight:700; font-size:var(--fs-eyebrow); letter-spacing:.07em;
+  text-transform:uppercase; color:var(--slate);}
+.rung .resp{font-family:var(--serif); font-style:italic; font-size:calc(var(--fs-body)*.95); line-height:1.5;}
+.rung .why{font-size:calc(var(--fs-body)*.82); line-height:1.4; color:var(--slate);
+  border-top:1px solid var(--rule); padding-top:.5em;}
+.rung.trap{border-top-color:var(--c-judgement);} .rung.trap .mark{color:var(--c-judgement);}
+.rung.ok{border-top-color:var(--c-evidence);}
+.checks{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.5em;}
+.checks label{display:grid; grid-template-columns:1.5em 1fr; gap:.55em; align-items:start;
+  cursor:pointer; font-size:calc(var(--fs-body)*.92); line-height:1.38;}
+.checks input{appearance:none; -webkit-appearance:none; width:1.15em; height:1.15em; margin:.15em 0 0;
+  border:2px solid var(--slate); border-radius:4px; background:var(--surface); display:grid;
+  place-items:center; cursor:pointer;}
+.checks input:checked{background:#7E1F2A; border-color:#7E1F2A;}
+.checks input:checked::after{content:""; width:.32em; height:.62em; border:solid #fff;
+  border-width:0 .16em .16em 0; transform:translate(0,-.06em) rotate(45deg);}
+.blank{display:inline-block; min-width:5.5em; border-bottom:2px solid var(--slate); margin:0 .15em;
+  height:1em;}
+.frame{font-size:var(--fs-body); line-height:1.9;}
+.bbs{display:grid; grid-template-columns:7em 1fr; gap:.45em .9em; align-items:baseline;
+  font-size:var(--fs-body);}
+.bbs .c{font-weight:700; color:var(--deep);}
+.bbs .m{font-family:var(--serif); font-style:italic;}
+.res{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(10px,1.3vw,20px);}
+@media (max-width:900px){.res{grid-template-columns:1fr;}}
+.res .card{padding:clamp(10px,1.6vh,20px) clamp(14px,1.3vw,22px);}
+.res .card p{font-size:calc(var(--fs-body)*.82); line-height:1.4;}
+.res .who{margin-top:.45em; font-size:var(--fs-chrome); font-weight:700; color:var(--slate);}
+.pattern{display:flex; flex-wrap:wrap; align-items:center; gap:.6em;}
+.pattern .p{background:var(--surface); border:1px solid var(--rule); border-top:5px solid var(--slate);
+  border-radius:8px; padding:.45em .9em; font-weight:700; font-size:var(--fs-body);}
+.pattern .p.e{border-top-color:var(--c-evidence);} .pattern .p.a{border-top-color:var(--c-analysis);}
+.pattern .p.c{border-top-color:var(--c-counter);}
+.pattern .arr{font-size:var(--fs-big); color:var(--deep); font-weight:700;}
+.vocab{display:grid; grid-template-columns:1fr 1fr; gap:clamp(12px,1.6vw,26px);}
+@media (max-width:900px){.vocab{grid-template-columns:1fr;}}
+.vocab .tbl td:first-child{font-weight:700; white-space:nowrap;}
+
+/* ---- Lesson 3: longer annotated answers. .wide gives the answer more room; .dense
+   tightens a long answer; .fold keeps only the current margin note open, so seven or
+   more notes still fit on one projector screen */
+.annot.wide{grid-template-columns:1.7fr 1fr;}
+.ans.long.dense{font-size:calc(var(--fs-body)*.88); line-height:1.52;}
+html:not(.read) .margin.fold .anote:not(.current) .tx{display:none;}
+html:not(.read) .margin.fold .anote{padding:.36em .7em;}
+/* short projectors (e.g. 1366 × 768): body type barely shrinks, so long answers must */
+@media (max-height:820px){
+  html:not(.read) .ans.long{font-size:calc(var(--fs-body)*.78); line-height:1.45;}
+  html:not(.read) .ans.long.dense{font-size:calc(var(--fs-body)*.72);}
+}
+/* phones: wide diagrams scroll sideways at a readable size instead of shrinking */
+.swipe{display:none;}
+@media (max-width:700px){
+  html.read .diagram{overflow-x:auto; -webkit-overflow-scrolling:touch;}
+  html.read .diagram .tl{min-width:900px; max-height:none;}
+  html.read .diagram .fd{min-width:640px; max-height:none;}
+  html.read .diagram .gv{min-width:600px; max-height:none;}
+  html.read .swipe{display:inline;}
+}
+
+/* ---- Lesson 3: diagrams (timeline, how the Rhetra worked) */
+.diagram{margin:0; width:100%;}
+.diagram svg{display:block; width:100%; height:auto; max-height:calc(100vh - 300px);}
+.diagram figcaption{font-size:var(--fs-chrome); color:var(--slate); margin-top:.45em;}
+.tl text, .fd text{font-family:var(--ui); fill:var(--ink);}
+.tl .axis{stroke:var(--ink); stroke-width:4;}
+.tl .tick{stroke:var(--slate); stroke-width:2;}
+.tl .tick-lbl{fill:var(--slate); font-size:21px; text-anchor:middle;}
+.tl .wc rect, .tl .evc{fill:var(--surface); stroke:var(--rule); stroke-width:2;}
+.tl .wc.yes rect{stroke:var(--c-evidence); stroke-width:3;}
+.tl .wc.no rect{stroke:var(--c-judgement); stroke-width:3;}
+.tl .nm{font-size:28px; font-weight:700;} .tl .lycn{fill:var(--deep);}
+.tl .dt{font-size:21px; fill:var(--slate);}
+.tl .vd{font-size:22px; font-weight:700;}
+.tl .dl{font-size:20px;}
+.tl .yes .vd{fill:var(--c-evidence);} .tl .no .vd{fill:var(--c-judgement);}
+.tl .lead{stroke:var(--slate); stroke-width:2; stroke-dasharray:5 6;}
+.tl .yes .dot{fill:var(--c-evidence);} .tl .no .dot{fill:var(--c-judgement);}
+.tl .lyc{fill:var(--deep);} .tl .mes{fill:var(--slate); opacity:.55;} .tl .rh{fill:var(--ink);}
+.tl .gap line{stroke:var(--deep); stroke-width:3;}
+.tl .gap text{fill:var(--deep); font-size:24px; font-weight:700; text-anchor:middle;}
+.fd text{text-anchor:middle;} .fd text.left{text-anchor:start;}
+.fd .ger{fill:var(--tint); stroke:var(--deep); stroke-width:3;}
+.fd .bx{fill:var(--surface); stroke:var(--deep); stroke-width:2;}
+.fd .ass{fill:var(--w-evidence); stroke:var(--c-evidence); stroke-width:3;}
+.fd .ttl{font-size:27px; font-weight:700; fill:var(--deep);}
+.fd .big{font-size:32px; font-weight:700;}
+.fd .sm{font-size:24px; fill:var(--slate);} .fd .it{font-style:italic;}
+.fd .step{font-size:27px; font-weight:700; text-anchor:start;} .fd .step.ok{fill:var(--c-evidence); text-anchor:middle;}
+.fd .step.bad{fill:var(--c-judgement);}
+.fd .arr{stroke:var(--ink); stroke-width:4;} .fd .ah{fill:var(--ink);}
+.fd .rider{fill:none; stroke:var(--c-judgement); stroke-width:4; stroke-dasharray:12 9;} .fd .ah-r{fill:var(--c-judgement);}
+/* government diagram (redraw of Clarke & Garner Fig 2.4) */
+.gv text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.gv text.left{text-anchor:start;} .gv text.right{text-anchor:end;}
+.gv .node rect{fill:var(--surface); stroke:var(--deep); stroke-width:3; transition:fill .3s, stroke .3s;}
+.gv .kings rect{fill:var(--statement); stroke:var(--statement);} .gv .kings text{fill:#FBF4F0;}
+.gv .ger rect{fill:var(--tint);}
+.gv .ttl{font-size:44px; font-weight:700;} .gv .it{font-style:italic;}
+.gv .sub{font-size:29px;}
+.gv .rel{font-size:34px; font-weight:700;}
+.gv .how{font-size:25px; fill:var(--slate);}
+.gv .ln{stroke:var(--ink); stroke-width:4;} .gv .ah{fill:var(--ink);}
+.gv .node.on rect{fill:var(--w-judgement); stroke:var(--c-judgement); stroke-width:9;}
+@media (max-height:900px){
+  html:not(.read) .stack.tight{gap:8px;}
+  html:not(.read) .stack.tight .qprompt{font-size:calc(var(--fs-body)*.88);}
+  html:not(.read) .stack.tight .note{padding:.45em .9em;}
+  html:not(.read) .stack.tight .note .body{font-size:calc(var(--fs-body)*.8); line-height:1.38;}
+}
+
+/* ---- Lesson 3: matched phrases across two sources (data-hl="[data-step=mN]") */
+.match{border-radius:3px; transition:background .3s ease, box-shadow .3s ease;
+  -webkit-box-decoration-break:clone; box-decoration-break:clone;}
+.match.on[data-step="m1"], html.read .match[data-step="m1"]{background:var(--w-scope); box-shadow:inset 0 -3px 0 var(--c-scope);}
+.match.on[data-step="m2"], html.read .match[data-step="m2"]{background:var(--w-keyterm); box-shadow:inset 0 -3px 0 var(--c-keyterm);}
+.match.on[data-step="m3"], html.read .match[data-step="m3"]{background:var(--w-evidence); box-shadow:inset 0 -3px 0 var(--c-evidence);}
+.match.on[data-step="m4"], html.read .match[data-step="m4"]{background:var(--w-judgement); box-shadow:inset 0 -3px 0 var(--c-judgement);}
+.match.on[data-step="m5"], html.read .match[data-step="m5"]{background:var(--w-directive); box-shadow:inset 0 -3px 0 var(--c-directive);}
+.pairs{list-style:none; display:flex; flex-wrap:wrap; gap:.5em .7em; margin:0; padding:0;}
+.pairs li{display:inline-flex; align-items:center; gap:.45em; padding:.3em .85em; border-radius:999px;
+  border:1px solid var(--rule); background:var(--surface); font-weight:700; font-size:calc(var(--fs-body)*.82);}
+.pairs .sw{width:.85em; height:.85em; border-radius:3px; flex:none;}
+.pairs [data-c="m1"] .sw{background:var(--c-scope);} .pairs [data-c="m2"] .sw{background:var(--c-keyterm);}
+.pairs [data-c="m3"] .sw{background:var(--c-evidence);} .pairs [data-c="m4"] .sw{background:var(--c-judgement);}
+.pairs [data-c="m5"] .sw{background:var(--c-directive);}
+.yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
+.tbl td.reveal{transition:opacity .35s ease;}
+
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
+/* ============================================================ READ MODE === */
+.unveil{display:none;}
+html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
+  --fs-h1:clamp(1.9rem,6vw,2.9rem); --fs-mega:clamp(2rem,7vw,3.1rem); --fs-chrome:.86rem;
+  --fs-eyebrow:.8rem;}
+html.read body{overflow:auto;}
+html.read #rail{position:sticky; top:0;}
+html.read #deck{position:static;}
+html.read .slide{display:block; position:relative; inset:auto; overflow:visible;
+  padding:clamp(28px,5vw,52px) 16px; border-bottom:1px solid var(--rule); scroll-margin-top:64px;}
+html.read .slide > .wrap{max-width:1040px;}
+html.read .slide.active > *{animation:none;}
+html.read .reveal, html.read .linked{opacity:1; transform:none; pointer-events:auto; transition:none;}
+html.read .plan .pin{transform:translate(-50%,-50%) scale(1);}
+html.read .plan{max-width:none;}
+html.read .mapbox svg{height:auto; width:100%; min-height:0;}
+html.read .figure img{max-height:60vh;}
+html.read .slide.filtered{display:none;}
+html.read [data-veil]:not(.unveiled){display:none;}
+html.read .unveil{display:inline-flex; margin:.2em 0;}
+html.read #legend, html.read #timer, html.read #bar, html.read #notesPanel,
+html.read .present-only{display:none !important;}
+html:not(.read) .read-only{display:none !important;}
+#filter{display:inline-flex; gap:.35em;}
+.btn .short{display:none;}
+@media (max-width:760px){
+  #rail{gap:8px; padding:0 10px; overflow-x:auto;}
+  #rail .sec, #rail kbd, #count{display:none;}
+  .btn .long{display:none;} .btn .short{display:inline;}
+  .btn{padding:.38em .7em;}
+}
+@media (max-width:480px){ #tTheme{display:none;} }
+
+@media print{
+  html{--fs-body:11pt; --fs-lead:12pt; --fs-big:12.5pt; --fs-h2:18pt; --fs-h1:24pt; --fs-mega:24pt;
+    --fs-chrome:9pt; --fs-eyebrow:8.5pt;}
+  body{overflow:visible; background:#fff;}
+  #rail, #bar, #legend, #timer, #overview, #notesPanel, .unveil{display:none !important;}
+  #deck{position:static;}
+  .slide{display:block !important; position:static; overflow:visible; padding:8mm 0;
+    border-bottom:1px solid #ccc; break-inside:avoid-page;}
+  .slide.statement{background:#fff; color:#14171C; border:2px solid #7E1F2A; padding:6mm;}
+  .slide.statement .eyebrow, .slide.statement .lead, .slide.statement .small{color:#7E1F2A;}
+  .reveal, .linked{opacity:1 !important; transform:none !important;}
+  [data-veil]{display:block !important;}
+  .mapbox svg{height:auto; width:100%; max-height:150mm;}
+  .figure img{max-height:80mm;}
+  .card, .src, .cornell .row, .anote, .rung{break-inside:avoid; box-shadow:none;}
+}
+
+/* ---- Lesson 4 (the two kings): campaign flow, privilege sort ---- */
+/* campaign flow (svg_l04campaign.svg, drawn by make_l04_diagrams.py) */
+.l04-cp text{font-family:var(--ui); fill:var(--ink); text-anchor:middle;}
+.l04-cp .bx{fill:var(--surface); stroke:var(--deep); stroke-width:3;}
+.l04-cp .bx.last{fill:var(--tint);}
+.l04-cp .ttl{font-size:29px; font-weight:700; fill:var(--deep);}
+.l04-cp .tx{font-size:26px;}
+.l04-cp .arr{stroke:var(--ink); stroke-width:4;} .l04-cp .ah{fill:var(--ink);}
+.l04-cp .eph{fill:var(--w-counter); stroke:var(--c-counter); stroke-width:2.5; stroke-dasharray:10 7;}
+.l04-cp .ephtx{font-size:28px; font-weight:700; fill:var(--c-counter);}
+.l04-cp .br{fill:none; stroke:var(--slate); stroke-width:2.5;}
+.l04-cp .src{font-size:24px; fill:var(--slate);}
+html:not(.read) .diagram svg.l04-cp{max-height:calc(100vh - 400px);}
+
+/* the privilege cards to sort (a .seq list, four across) */
+.seq.l04-pile{grid-template-columns:repeat(4,1fr);}
+.seq.l04-pile li{font-size:calc(var(--fs-body)*.8); line-height:1.3;}
+@media (max-width:900px){.seq.l04-pile{grid-template-columns:1fr 1fr;}}
+@media (max-width:520px){.seq.l04-pile{grid-template-columns:1fr;}}
+
+/* the sorted privileges: one row per category, one chip per card, with its source */
+.l04-sorted td:first-child{font-weight:700; white-space:nowrap; width:7.5em; border-left:6px solid var(--slate);}
+.l04-sorted tr.mil td:first-child{border-left-color:var(--c-judgement);}
+.l04-sorted tr.rel td:first-child{border-left-color:var(--c-directive);}
+.l04-sorted tr.jud td:first-child{border-left-color:var(--c-scope);}
+.l04-sorted tr.pol td:first-child{border-left-color:var(--c-keyterm);}
+.l04-sorted tr.hon td:first-child{border-left-color:var(--c-evidence);}
+.l04-sorted tr.eco td:first-child{border-left-color:var(--c-analysis);}
+.l04-sorted .chips{display:flex; flex-wrap:wrap; gap:.3em .45em;}
+.l04-chip{display:inline-flex; align-items:baseline; gap:.4em; border:1px solid var(--rule); border-radius:6px;
+  padding:.1em .5em; background:var(--surface); line-height:1.3;}
+.l04-chip b{font-family:var(--mono); color:var(--deep);}
+.l04-chip .s{font-family:var(--mono); font-size:.8em; color:var(--slate); white-space:nowrap;}
+
+/* shorter projectors: keep the dense L4 slides on one screen */
+@media (max-height:820px){
+  html:not(.read) .l04-tight .src .quote.sm{font-size:calc(var(--fs-body)*.86); line-height:1.42;}
+  html:not(.read) .l04-tight .stack{gap:8px;}
+  html:not(.read) .l04-tight .note{padding:.4em .85em;}
+  html:not(.read) .l04-tight .note .body, html:not(.read) .l04-tight .stack > .body,
+  html:not(.read) .l04-tight .card .body{font-size:calc(var(--fs-body)*.84); line-height:1.38;}
+  html:not(.read) .l04-tight .qprompt{font-size:calc(var(--fs-body)*.9);}
+  html:not(.read) .l04-sorted{font-size:calc(var(--fs-body)*.74);}
+  html:not(.read) .seq.l04-pile li{font-size:calc(var(--fs-body)*.74); padding:.32em .6em;}
+}
+
+/* phones: the wide flow scrolls sideways at a readable size */
+@media (max-width:700px){ html.read .diagram{overflow-x:auto;} html.read .diagram svg.l04-cp{min-width:900px; max-height:none;} }
+
+/* Lesson 3's government diagram, reused: keep the kings' label readable when that box is lit */
+.l04-gov .gv .node.kings.on text{fill:var(--c-judgement);}
+
+/* chapter review: two columns on a projector so nine answers fit one screen */
+@media (min-width:901px){
+  html:not(.read) .rq.l04-rq2{display:block; columns:2; column-gap:3em; padding-left:0; list-style-position:inside;}
+  html:not(.read) .rq.l04-rq2 > li{break-inside:avoid; margin:0 0 .55em;}
+}
+/* question-and-answer pairs in a row under a long source */
+.l04-qa .stack{gap:.35em;}
+
+/* more short-projector rules (1366 × 768): dense L4 slides carry .l04-tight on their .wrap */
+@media (max-height:820px){
+  html:not(.read) .l04-tight .lead{font-size:calc(var(--fs-lead)*.86); line-height:1.4;}
+  html:not(.read) .l04-tight .src .body{font-size:calc(var(--fs-body)*.84); line-height:1.38;}
+  html:not(.read) .l04-tight .src{padding:12px 18px;}
+  html:not(.read) .l04-tight .card{padding-top:12px; padding-bottom:12px;}
+  html:not(.read) .l04-tight .src.l04-long .quote.sm{font-size:calc(var(--fs-body)*.78); line-height:1.36;}
+  html:not(.read) .l04-tight .l04-qa .qprompt{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l04-tight .l04-qa .body{font-size:calc(var(--fs-body)*.78); line-height:1.32;}
+  html:not(.read) .l04-tight .prac .src .quote.sm, html:not(.read) .prac.l04-tight .src .quote.sm{font-size:calc(var(--fs-body)*.8); line-height:1.4;}
+  html:not(.read) .l04-tight .moves{font-size:calc(var(--fs-body)*.8);}
+  html:not(.read) .l04-tight .tf li{font-size:calc(var(--fs-body)*.76); padding:.28em .7em;}
+  html:not(.read) .l04-tight .rq{font-size:calc(var(--fs-body)*.74); gap:.35em;}
+  html:not(.read) .l04-tight .vocab .tbl.compact{font-size:calc(var(--fs-body)*.72);}
+  html:not(.read) .l04-tight .vocab .tbl.compact td{padding:.28em .6em;}
+  html:not(.read) .diagram svg.l04-cp{max-height:calc(100vh - 470px);}
+}
+</style>
+</head>
+<body>
+<div id="bar"></div>
+
+<header id="rail">
+  <span class="sec" id="secname"></span>
+  <span class="spacer"></span>
+  <a class="btn" href="./" style="text-decoration:none"><span class="long">All lessons</span><span class="short">Home</span></a>
+  <span id="filter" class="read-only" role="group" aria-label="Show">
+    <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
+    <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
+    <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
+  </span>
+  <span id="count" aria-live="polite"></span>
+  <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
+  <button class="btn present-only" id="tTimer" aria-pressed="false">Timer <kbd>K</kbd></button>
+  <button class="btn" id="tRead" aria-pressed="false"><span class="lbl">Read</span> <kbd>R</kbd></button>
+  <button class="btn" id="tTheme">Theme <kbd>T</kbd></button>
+  <button class="btn" id="tOver"><span class="long">All slides</span><span class="short">Contents</span> <kbd>O</kbd></button>
+</header>
+
+<main id="deck">
+<section class="slide mid" data-sec="Lesson 4" data-title="The two kings" data-kind="intro">
+<div class="wrap">
+  <div class="split" style="--cols:1.2fr .8fr; align-items:center">
+    <div class="stack">
+      <p class="eyebrow">Spartan society to the Battle of Leuctra 371 BC · Lesson 4</p>
+      <h1>The two kings</h1>
+      <p class="lead">What did Sparta’s two kings do, what were they given — and what stopped them becoming tyrants?</p>
+      <p class="small">Year 12 Ancient History · Section II, Option G · Present with → or space · Read on a phone with <b>R</b></p>
+    </div>
+    <figure class="figure tall"><img src="images/clarke-7-11-dioscuri-relief-l04.jpg" alt="A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost"><figcaption>A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost — <span class="cr">Clarke & Garner, Fig 7.11</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 4" data-title="Connect" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Connect · 3 minutes · cold call</p>
+  <h2>From the Rhetra to the kings</h2>
+  <div class="cols c2">
+    <div class="card quiet">
+      <div class="k">Last lesson</div>
+      <p class="body">The Great Rhetra set up a gerousia of thirty — 28 elders with the two kings, its “founder-leaders” — and a citizen assembly. The rider, which Plutarch credits to two kings, Polydorus and Theopompus, one from each royal house, let the elders and kings dissolve an assembly that adopted a ‘crooked’ proposal.</p>
+    </div>
+    <div class="card tinted reveal">
+      <div class="k">Today</div>
+      <p class="body">The founder-leaders themselves. Tyrtaeus called them “the kings, honoured of the gods”. What did Sparta’s two kings actually do, what were they given — and what limited them?</p>
+    </div>
+  </div>
+  <p class="cue">One key idea from Lesson 3, in one sentence.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 4" data-title="Today’s goals" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Learning intentions and success criteria · 2 minutes</p>
+  <h2>Today’s goals</h2>
+  <div class="cols c2 lisc">
+    <div class="card quiet">
+      <div class="k">We are learning to</div>
+      <ul class="body">
+        <li>analyse the powers and privileges of the Spartan kings and the limits on them</li>
+        <li>explain how religion supported the dual kingship</li>
+        <li>write an 8-mark explanation under time</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">I can</div>
+      <ul class="body">
+        <li>sort the kings’ privileges into military, religious, judicial, political, honorific and economic</li>
+        <li>explain how the Dioscuri and royal funerals connect religion and kingship</li>
+        <li>explain at least three limits on the kings’ power, naming a source for each</li>
+        <li>write an 8-mark explanation in 14 minutes that names its sources</li>
+      </ul>
+    </div>
+  </div>
+  <div class="note reveal" data-code="keyterm">
+    <div class="k">Two words to get right</div>
+    <p class="body">A <b>dyarchy</b> is rule by two at once — two kings from two royal houses, not a king and a deputy (NESA spells it <i>diarchy</i>; both are correct). A <b>prerogative</b> is a special right that comes with an office — here, the kingship.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 4" data-title="How to make your notes" data-kind="intro notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Note-making · today’s routine</p>
+  <h2>How to structure your notes</h2>
+  <div class="split" style="--cols:1fr 1.1fr">
+    <div class="cornell" aria-label="Layout of a Cornell notes page">
+      <div class="ch"><span><b>L4 · The two kings</b></span><span>date</span></div>
+      <div class="row"><div class="cq">Cue column<br><span class="small">questions and key terms</span></div>
+        <div class="nts">Notes column<br><span class="small">short phrases, arrows (→ led to), abbreviations (Hdt = Herodotus, K. = king)</span></div></div>
+      <div class="row"><div class="cq">What is a dyarchy?</div><div class="nts">two kings at once: Agiad + Eurypontid …</div></div>
+      <div class="row"><div class="cq">&nbsp;</div><div class="nts">&nbsp;</div></div>
+      <div class="sum"><span class="k">Summary</span>three sentences, written at the end</div>
+    </div>
+    <ol class="keylist">
+      <li class="reveal"><span class="num">1</span><span class="t">Listen and look first</span><span class="d">Don’t copy while the slide is being explained.</span></li>
+      <li class="reveal"><span class="num">2</span><span class="t">Write your own notes at each ✎ checkpoint</span><span class="d">Phrases, not sentences. Arrows for cause and effect.</span></li>
+      <li class="reveal"><span class="num">3</span><span class="t">Compare with the model notes</span><span class="d">They appear one row at a time. Add what you missed in a second colour.</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">Copy each cue question into the left column</span><span class="d">Later, cover your notes and answer the cue questions from memory.</span></li>
+      <li class="reveal"><span class="num">5</span><span class="t">Finish with a three-sentence summary</span><span class="d">Five checkpoints: two royal houses · the king at war · priest, judge and councillor · twin gods and royal funerals · limits on royal power.</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="Lesson 4" data-title="Key vocabulary" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">Key vocabulary</p>
+  <h2>Words you will use today</h2>
+  <div class="vocab">
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>The kingship</th><th>Meaning</th></tr>
+      <tr><td>dyarchy</td><td>rule by two people at once: Sparta’s dual kingship (NESA spells it diarchy)</td></tr>
+      <tr><td>Agiads</td><td>one royal house, named after an early king, Agis</td></tr>
+      <tr><td>Eurypontids</td><td>the other royal house, named after an early king, Eurypon</td></tr>
+      <tr><td>Heraclids</td><td>descendants of the hero Heracles; both royal houses claimed this ancestry</td></tr>
+      <tr><td>prerogative</td><td>a special right that belongs to an office, here the kingship</td></tr>
+      <tr><td>ephors</td><td>five officials elected each year, with strong powers over the kings (Lesson 6)</td></tr>
+    </table></div>
+    <div class="tbl-scroll"><table class="tbl compact">
+      <tr><th>Religion and law</th><th>Meaning</th></tr>
+      <tr><td>libation</td><td>an offering of liquid, usually wine, poured out for the gods</td></tr>
+      <tr><td>Pythians (Pythioi)</td><td>envoys chosen by the kings to consult Apollo’s oracle at Delphi</td></tr>
+      <tr><td>proxenos</td><td>a citizen who represented another Greek state’s interests in his own city</td></tr>
+      <tr><td>heiress</td><td>a daughter who inherits her father’s property because he has no sons</td></tr>
+      <tr><td>Dioscuri</td><td>Castor and Polydeuces (Pollux), twin sons of Leda — Polydeuces fathered by Zeus, Castor by Tyndareus; also called the Tyndaridae</td></tr>
+      <tr><td>demigod</td><td>a being between human and god; Xenophon says dead kings were honoured as demigods</td></tr>
+    </table></div>
+  </div>
+  <p class="small">Spelling: Cooley’s translations use Greek forms (Lakonia, Herakles, Dioskouroi, Kastor, Polydeukes, Kleomenes, Demaratos). In your own writing use Laconia, Heracles, Dioscuri, Castor, Polydeuces, Cleomenes, Demaratus.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Two royal houses" data-title="Two kings, two royal houses" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">1 · Two royal houses · I do — the big picture</p>
+  <h2>Two kings at once</h2>
+  <div class="split" style="--cols:1.45fr .75fr">
+    <div class="stack">
+      <p class="lead">Most Greek cities had given up kings long before the classical period. Sparta kept <b>two at once</b>: one from the <b>Agiad</b> house and one from the <b>Eurypontid</b> house.</p>
+      <div class="card reveal"><div class="k">A puzzle even to historians</div><p class="body">Cooley calls the dual kingship “an unparalleled institution which we cannot definitely explain”.</p></div>
+      <div class="card reveal"><div class="k">Sons of Heracles</div><p class="body">Both houses traced their line back to the hero Heracles. Tyrtaeus sang that Zeus “Has given this city to the sons of Herakles” (fr. 2, trans. K. Hughes, Cooley A3).</p></div>
+      <div class="card reveal"><div class="k">Hereditary — and often disputed</div><p class="body">Kings ruled for life and inherited the throne; succession disputes were common. Heirs skipped the agoge: “The law exempts boys being raised as future kings from this compulsory practice” (Plutarch, <i>Agesilaos</i> 1, trans. in Cooley D75).</p></div>
+    </div>
+    <figure class="figure contain"><img src="images/bradley-3-11-leonidas-statue.jpg" alt="A modern statue of King Leonidas in Sparta — it shows how he is remembered, not what he looked like"><figcaption>A modern statue of King Leonidas in Sparta — it shows how he is remembered, not what he looked like — <span class="cr">Bradley, Fig 3.11</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Two royal houses" data-title="A twin myth — and why Cooley doubts it" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">1 · Two royal houses · We do — the Spartans’ explanation</p>
+  <h2>A twin myth — and why Cooley doubts it</h2>
+  <div class="split" style="--cols:1.25fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">[2] Shortly afterwards, Aristodamos’ wife, Argeia, gave birth to twins. … [5] The Pythia told them to treat both boys as kings, but to give greater preference to the older one. … [7] … Taking the baby which was always given preferential treatment by his mother as the older one, they brought him up at public expense. They named him Eurysthenes and the other one Prokles. [8] When they grew up, they say that, though brothers, they were always at loggerheads with each other their whole lives, and this was the case with their descendants.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 6.52 (part) · written c. 450s–420s BC · from Halicarnassus, not a Spartan · trans. B. Wilson · Cooley D2</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal">What does the myth explain?</p>
+      <p class="body reveal">Why Sparta had two kings, both approved by Delphi — and why the two houses so often quarrelled.</p>
+      <p class="qprompt reveal">Why does Cooley doubt it?</p>
+      <div class="note reveal" data-code="counter"><p class="body">“the separate lines of kings had separate burial places, suggesting they were different families” — and some early Eurypontid names look invented, to give that house as long a line as the Agiads.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Cooley’s suggestion</div><p class="body">“perhaps the best guess is that it reflects an early amalgamation of two communities” — perhaps two of Sparta’s original villages (Lesson 2).</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="1 · Two royal houses" data-title="Notes 1 — Two royal houses" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
+  <h2>Two kings, two royal houses</h2>
+  <p class="cue">Write your own notes first. Then compare, row by row, and add what you missed in a second colour.</p>
+  <div class="cornell">
+    <div class="ch"><span><b>L4 · The two kings</b></span><span>1 · Two royal houses</span></div>
+    <div class="row"><div class="cq">What is a dyarchy? Name the two houses.</div>
+      <div class="nts reveal">Rule by <b>two kings at once</b> <span class="sep">·</span> one <b>Agiad</b> + one <b>Eurypontid</b> <span class="sep">·</span> both claimed descent from <b>Heracles</b> (Tyrtaeus fr. 2, Cooley A3)</div></div>
+    <div class="row"><div class="cq">What myth explained the two houses?</div>
+      <div class="nts reveal">Twins Eurysthenes + Procles; Delphi: treat <b>both</b> as kings → “always at loggerheads” (Hdt 6.52, Cooley D2)</div></div>
+    <div class="row"><div class="cq">Why does Cooley doubt it?</div>
+      <div class="nts reveal"><b>Separate burial places</b> → different families <span class="sep">·</span> early Eurypontid names look invented <span class="sep">·</span> “perhaps the best guess”: two communities merged</div></div>
+    <div class="row"><div class="cq">How did a king get the throne?</div>
+      <div class="nts reveal"><b>Hereditary</b>, for life <span class="sep">·</span> succession disputes common <span class="sep">·</span> heirs exempt from the agoge (Plut. <i>Ages.</i> 1, D75)</div></div>
+    <div class="row"><div class="cq">Why unusual?</div>
+      <div class="nts reveal">Most Greek cities had dropped kings <span class="sep">·</span> Cooley: “an unparalleled institution”</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The king at war" data-title="Herodotus on the kings’ privileges" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">2 · The king at war · I do — the key source</p>
+  <h2>Herodotus: the kings’ religious and military privileges</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Herodotus</div>
+        <p class="quote sm">The Spartiates have granted their kings certain special prerogatives. <span class="code" data-code="keyterm" data-letter="K">First of all they hold two priesthoods, those of Zeus of Lakedaimon and Zeus, Lord of Heaven.</span> <span class="code" data-code="counter" data-letter="C">Then, they have the right to declare war on any country they please; in this, no Spartiate can oppose them without incurring the penalty of religious pollution (and consequent exile).</span> <span class="code" data-code="evidence" data-letter="E">On active service, the kings lead the advance and are the last to retreat and are allocated a personal bodyguard of a hundred picked soldiers. On their expeditions they are entitled to the use of as many cattle as they please,</span> and <span class="code" data-code="analysis" data-letter="A">the skins and backs of all sacrificed animals are apportioned to them.</span></p>
+        <p class="prov">Herodotus, <i>Histories</i> 6.56 · written c. 450s–420s BC, within living memory of kings such as Leonidas · trans. B. Wilson · Cooley D5</p>
+      </div>
+      <div class="note reveal" data-code="judgement"><p class="body">Cooley: “The most conspicuous function of the Spartan kings was their role as military commanders, with almost unlimited power in the field”.</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">List every military privilege.</p>
+      <p class="body reveal">Lead the advance and last to retreat · a bodyguard of a hundred · as many cattle as they please on campaign.</p>
+      <p class="qprompt reveal" data-paint="keyterm">Which privilege is religious, not military?</p>
+      <p class="body reveal">The two priesthoods of Zeus — listed first.</p>
+      <p class="qprompt reveal" data-paint="analysis">What did the skins and backs give them?</p>
+      <p class="body reveal">Meat and hides: Cooley calls hides “also a form of material income”.</p>
+      <p class="qprompt reveal" data-paint="counter">Which claim needs testing?</p>
+      <p class="body reveal">The right to declare war — next slide.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The king at war" data-title="Two warnings" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">2 · The king at war · I do — two warnings</p>
+  <h2>Two claims to handle with care</h2>
+  <div class="split" style="--cols:1fr 1.25fr">
+    <div class="card accent">
+      <div class="k">Warning 1 · the bodyguard</div>
+      <p class="body">Herodotus gives the kings “a personal bodyguard of a hundred picked soldiers”. Don’t confuse them with the <b>300 hippeis</b>, whom other sources call the king’s guard: Leonidas marched with his “bodyguard of three hundred men which the law assigned to him” (Herodotus 7.205, Cooley F11), and Thucydides puts King Agis “with his bodyguard of 300 so-called knights” (Cooley E103).</p>
+      <p class="body reveal"><b>How the hundred and the three hundred were related is unclear.</b></p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">Warning 2 · declaring war</div>
+        <p class="body">Cooley: “There is no evidence from the historical period to support Herodotus’ assertion that the kings on their own could declare war.”</p></div>
+      <ol class="keylist">
+        <li class="reveal"><span class="num">1</span><span class="t">432 BC: a king argues against war</span><span class="d">King Archidamus urges caution about war with Athens (Thucydides 1.79–85, Cooley E29).</span></li>
+        <li class="reveal"><span class="num">2</span><span class="t">An ephor answers him</span><span class="d">Sthenelaidas: “So now, cast your votes for war, fellow Lakedaimonians, and be worthy of Sparta.” (E30)</span></li>
+        <li class="reveal"><span class="num">3</span><span class="t">The assembly decides</span><span class="d">It votes that the Athenians had broken the treaty — in effect a vote for war; Sparta then puts “the decision for war” to its whole alliance (Thucydides 1.87, E31).</span></li>
+      </ol>
+      <div class="note reveal" data-code="judgement"><p class="body">Cooley on the king’s speech: “it is a view, not a command nor state policy – and, of course, it is rejected by popular vote.”</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The king at war" data-title="How a king began a campaign (diagram)" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">2 · The king at war · I do — once the army marched, the king was in charge</p>
+  <h2>How a king began a campaign</h2>
+  <figure class="diagram"><svg class="l04-cp" viewBox="0 0 1600 560" role="img" aria-label="Flow diagram of how a Spartan king began a campaign: 1, at home the king and his staff sacrifice to Zeus the Leader; 2, the fire-bearer carries fire from that altar to the frontier; 3, at the frontier the king sacrifices to Zeus and Athena; 4, only when the omens are good does he cross the frontier; 5, facing the enemy a she-goat is sacrificed and the pipers play the hymn to Castor. Two ephors attend the sacrifices but take no part unless the king asks.">
+<defs><marker id="cp-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="linked" id="cp-1"><rect class="bx" x="24" y="128" width="272" height="250" rx="16"/><text class="ttl" x="160" y="182">1 · At home</text><text class="tx" x="160" y="236">the king and his staff</text><text class="tx" x="160" y="274">sacrifice to</text><text class="tx" x="160" y="312">Zeus the Leader</text></g>
+<g class="linked" id="cp-2"><line class="arr" x1="300" y1="253.0" x2="338" y2="253.0" marker-end="url(#cp-a)"/><rect class="bx" x="344" y="128" width="272" height="250" rx="16"/><text class="ttl" x="480" y="182">2 · The fire</text><text class="tx" x="480" y="236">the fire-bearer carries</text><text class="tx" x="480" y="274">fire from that altar</text><text class="tx" x="480" y="312">to the frontier</text></g>
+<g class="linked" id="cp-3"><line class="arr" x1="620" y1="253.0" x2="658" y2="253.0" marker-end="url(#cp-a)"/><rect class="bx" x="664" y="128" width="272" height="250" rx="16"/><text class="ttl" x="800" y="182">3 · The frontier</text><text class="tx" x="800" y="236">a second sacrifice,</text><text class="tx" x="800" y="274">to Zeus and Athena</text></g>
+<g class="linked" id="cp-4"><line class="arr" x1="940" y1="253.0" x2="978" y2="253.0" marker-end="url(#cp-a)"/><rect class="bx" x="984" y="128" width="272" height="250" rx="16"/><text class="ttl" x="1120" y="182">4 · Good omens?</text><text class="tx" x="1120" y="236">only then does</text><text class="tx" x="1120" y="274">the king cross</text><text class="tx" x="1120" y="312">the frontier</text></g>
+<g class="linked" id="cp-5"><line class="arr" x1="1260" y1="253.0" x2="1298" y2="253.0" marker-end="url(#cp-a)"/><rect class="bx last" x="1304" y="128" width="272" height="250" rx="16"/><text class="ttl last" x="1440" y="182">5 · Before battle</text><text class="tx" x="1440" y="236">the king sacrifices</text><text class="tx" x="1440" y="274">a she-goat; the</text><text class="tx" x="1440" y="312">pipers play the</text><text class="tx" x="1440" y="350">hymn to Castor</text></g>
+<g class="linked" id="cp-eph"><rect class="eph" x="24" y="18" width="1552" height="82" rx="14"/><text class="ephtx" x="800" y="70">Two ephors attend the sacrifices — but take no part unless the king asks</text></g>
+<g class="linked" id="cp-src"><path class="br" d="M30,400 v18 H1250 v-18"/><text class="src" x="640" y="462">Xenophon, Constitution of the Lakedaimonians 13.2–3 (Cooley D7)</text><path class="br" d="M1310,400 v18 H1570 v-18"/><text class="src" x="1440" y="462">Xenophon 13.8 ·</text><text class="src" x="1440" y="496">Plutarch, Lyc. 22.2 (D93)</text></g>
+</svg>
+    <figcaption>Drawn for this lesson from Xenophon (c. 430–c. 350 BC, an Athenian who fought for King Agesilaus), <i>Constitution of the Lakedaimonians</i> 13, late 390s or 380s BC, and Plutarch, <i>Lykourgos</i> 22.2 · trans. B. Wilson · Cooley D7, D93. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+  <i class="reveal" data-also="#cp-1" hidden></i>
+  <i class="reveal" data-also="#cp-2" hidden></i>
+  <i class="reveal" data-also="#cp-3" hidden></i>
+  <i class="reveal" data-also="#cp-4" hidden></i>
+  <i class="reveal" data-also="#cp-5" hidden></i>
+  <i class="reveal" data-also="#cp-eph" hidden></i>
+  <i class="reveal" data-also="#cp-src" hidden></i>
+  <div class="cols c2">
+    <div class="note reveal" data-code="counter"><div class="k">Even here the state kept watch</div><p class="body">“Two ephors also attend, but they take no part in the proceedings unless requested to do so by the king.” (13.5)</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">Priest and general</div><p class="body">Xenophon: “the king has no other commitments left to him on active service beyond his priestly obligations to the gods and as general of his army.” (13.11)</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="2 · The king at war" data-title="Notes 2 — The king at war" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
+  <h2>The king at war</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L4 · The two kings</b></span><span>2 · The king at war</span></div>
+    <div class="row"><div class="cq">List three military privileges (Hdt 6.56).</div>
+      <div class="nts reveal">Lead the advance, <b>last to retreat</b> <span class="sep">·</span> bodyguard of <b>100</b> picked soldiers <span class="sep">·</span> as many cattle as they please <span class="sep">·</span> skins + backs of sacrificed animals (Cooley D5)</div></div>
+    <div class="row"><div class="cq">The bodyguard?</div>
+      <div class="nts reveal">Hdt’s 100 ≠ simply the <b>300 hippeis</b>, whom other sources call the king’s guard <span class="sep">·</span> how they were related: <b>unclear</b></div></div>
+    <div class="row"><div class="cq">Why is the claim that kings could declare war doubtful?</div>
+      <div class="nts reveal">Cooley: no evidence “from the historical period” <span class="sep">·</span> <b>432 BC</b>: Archidamus against war → ephor Sthenelaidas puts the vote → assembly: treaty broken (Thuc. 1.79–87, E29–E31)</div></div>
+    <div class="row"><div class="cq">How did a campaign begin? (Xen. <i>LP</i> 13)</div>
+      <div class="nts reveal">Sacrifice at home to <b>Zeus the Leader</b> → fire to the frontier → <b>Zeus + Athena</b> → cross only on good omens → she-goat + hymn to Castor (Plut. <i>Lyc.</i> 22, D93)</div></div>
+    <div class="row"><div class="cq">Which officials attended? Their role?</div>
+      <div class="nts reveal"><b>Two ephors</b> → take no part unless the king asks, but watch everyone (Xen. <i>LP</i> 13.5, D7) <span class="sep">·</span> king = priest + general</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Priest, judge and councillor" data-title="Priest of the city" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">3 · Priest, judge and councillor · I do — Herodotus continues</p>
+  <h2>Priest of the city: the peacetime privileges</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">[57.1] So much for their military prerogatives. Their peacetime privileges are as follows. At all public sacrifices, the kings are the first to take their seat at the subsequent feast; they are the first to be served and they are each given portions of every dish double the size of those served to other guests. <span class="code" data-code="keyterm" data-letter="K">Theirs is the right to pour the first libations,</span> and the skins of all sacrificed animals belong to them. [2] <span class="code" data-code="keyterm" data-letter="K">On the first and the seventh day of every month the public purse supplies to each of them an unblemished animal to sacrifice at Apollo’s temple,</span> plus twelve gallons of barley meal and a Lakonian quart of wine. They preside at all athletic competitions in special seats of honour. They have the right to nominate any citizens they wish as proxenoi, <span class="code" data-code="keyterm" data-letter="K">including two ‘Pythians’ each, ambassadors whose duty it is to go on embassies to Delphi</span> and to dine with the kings at public expense.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 6.57.1–2 · written c. 450s–420s BC · trans. B. Wilson · Cooley D8</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="keyterm">Which privileges are religious?</p>
+      <p class="body reveal">The first libations · an animal to sacrifice at Apollo’s temple on the <b>1st and 7th</b> of every month · two Pythians each, sent to Delphi.</p>
+      <div class="note reveal" data-code="keyterm"><div class="k">Pythians, not pithoi</div><p class="body">The Pythians (<i>Pythioi</i>) were envoys to Delphi. One textbook prints <i>pithoi</i> — storage jars.</p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">Why it mattered</div><p class="body">With their Pythians, the kings were “the official guardians of all oracles” (6.57.4). Cooley suggests that “such omens were probably likely to support the king’s intentions”: a king could shape decisions in the gods’ name.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Priest, judge and councillor" data-title="Judge and councillor" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">3 · Priest, judge and councillor · We do — law and the gerousia</p>
+  <h2>Judge and councillor</h2>
+  <div class="split" style="--cols:1.45fr 1fr">
+    <div class="src">
+      <div class="k">Source · Herodotus, continued</div>
+      <p class="quote sm">[4] They are the official guardians of all oracles, though the ‘Pythians’ also share the knowledge of their contents. There are also some legal matters over which the kings exercise sole jurisdiction. <span class="code" data-code="evidence" data-letter="E">In the case of a girl inheriting her father’s property, if her father has not betrothed her to anyone, then the kings decide who is entitled to marry her. They also control the management of the public roads. [5] If anyone wishes to adopt a child, he must do it in front of the kings.</span> <span class="code" data-code="scope" data-letter="S">They are entitled to sit in council with the twenty-eight members of the gerousia;</span> <span class="code" data-code="counter" data-letter="C">in their absence their closest relatives among the members exercise the kings’ prerogatives, and cast two votes for the kings and a third for themselves.</span></p>
+      <p class="prov">Herodotus, <i>Histories</i> 6.57.4–5 · trans. B. Wilson · Cooley D8</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">Name the three legal matters.</p>
+      <p class="body reveal">Unbetrothed heiresses · the public roads · adoptions — family and property matters in a citizen body based on inherited land.</p>
+      <p class="qprompt reveal" data-paint="scope">What was their political role?</p>
+      <p class="body reveal">Seats in the gerousia: two voices in a council of thirty.</p>
+      <p class="qprompt reveal" data-paint="counter">Two votes each?</p>
+      <div class="note reveal" data-code="counter"><p class="body">Thucydides says people wrongly think “the kings of the Lakedaimonians have not one vote each but two” (1.20.3, trans. B. Wilson, Cooley H1). Cooley: “it is not actually clear who is right”.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Priest, judge and councillor" data-title="Sort the privileges" data-kind="notes">
+<div class="wrap prac">
+  <p class="eyebrow">3 · Priest, judge and councillor · I do, then We do — sort first</p>
+  <h2>Sort the kings’ privileges</h2>
+  <p class="task">Rule six headings in your notes — military · religious · judicial · political · honorific · economic — and write each letter under one. Some fit two places: choose the best and be ready to justify it.</p>
+  <ul class="seq l04-pile">
+    <li><span class="k">A</span><span>two priesthoods of Zeus</span></li>
+    <li><span class="k">B</span><span>decide whom an unbetrothed heiress marries</span></li>
+    <li><span class="k">C</span><span>lead the army: first in the advance, last to retreat</span></li>
+    <li><span class="k">D</span><span>first seat and double portions at feasts after public sacrifices</span></li>
+    <li><span class="k">E</span><span>high-quality land in many perioikic territories</span></li>
+    <li><span class="k">F</span><span>an animal to sacrifice at Apollo’s temple on the 1st and 7th of every month</span></li>
+    <li><span class="k">G</span><span>sit in council with the 28 members of the gerousia</span></li>
+    <li><span class="k">H</span><span>a personal bodyguard of a hundred picked soldiers</span></li>
+    <li><span class="k">I</span><span>control the management of the public roads</span></li>
+    <li><span class="k">J</span><span>everyone stands when the king appears — except the ephors</span></li>
+    <li><span class="k">K</span><span>pour the first libations</span></li>
+    <li><span class="k">L</span><span>the skins of all sacrificed animals</span></li>
+    <li><span class="k">M</span><span>nominate proxenoi, who looked after other states’ interests</span></li>
+    <li><span class="k">N</span><span>choose two Pythians each, envoys to Delphi</span></li>
+    <li><span class="k">O</span><span>as many cattle as they please on campaign</span></li>
+    <li><span class="k">P</span><span>preside at athletic competitions in seats of honour</span></li>
+    <li><span class="k">Q</span><span>adoptions must take place in front of the kings</span></li>
+    <li><span class="k">R</span><span>official guardians of all oracles</span></li>
+    <li><span class="k">S</span><span>offer all public sacrifice on behalf of the state</span></li>
+    <li><span class="k">T</span><span>honoured at death as demigods</span></li>
+  </ul>
+  <p class="small">From Herodotus 6.56–57 and Xenophon, <i>Constitution of the Lakedaimonians</i> 15. The next slide checks the sort, with the source for each card.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Priest, judge and councillor" data-title="The privileges, sorted" data-kind="notes">
+<div class="wrap prac l04-tight">
+  <p class="eyebrow">3 · Priest, judge and councillor · check the sort — one category per keypress</p>
+  <h2>The privileges, sorted — with the source for each</h2>
+  <div class="tbl-scroll" data-veil="Sort first — then show the table"><table class="tbl compact l04-sorted">
+    <tr><th>Category</th><th>Privileges · source</th></tr>
+    <tr class="mil reveal"><td>Military</td><td><span class="chips">
+      <span class="l04-chip"><b>C</b>lead the army: first in the advance, last to retreat <span class="s">D5 · D9</span></span>
+      <span class="l04-chip"><b>H</b>a bodyguard of a hundred picked soldiers <span class="s">D5</span></span>
+      <span class="l04-chip"><b>O</b>as many cattle as they please on campaign <span class="s">D5</span></span></span></td></tr>
+    <tr class="rel reveal"><td>Religious</td><td><span class="chips">
+      <span class="l04-chip"><b>A</b>two priesthoods of Zeus <span class="s">D5</span></span>
+      <span class="l04-chip"><b>S</b>all public sacrifice for the state <span class="s">D9</span></span>
+      <span class="l04-chip"><b>F</b>Apollo’s temple, 1st and 7th of every month <span class="s">D8</span></span>
+      <span class="l04-chip"><b>K</b>the first libations <span class="s">D8</span></span>
+      <span class="l04-chip"><b>N</b>two Pythians each <span class="s">D8</span></span>
+      <span class="l04-chip"><b>R</b>guardians of all oracles <span class="s">D8</span></span></span></td></tr>
+    <tr class="jud reveal"><td>Judicial</td><td><span class="chips">
+      <span class="l04-chip"><b>B</b>unbetrothed heiresses <span class="s">D8</span></span>
+      <span class="l04-chip"><b>I</b>the public roads <span class="s">D8</span></span>
+      <span class="l04-chip"><b>Q</b>adoptions <span class="s">D8</span></span></span></td></tr>
+    <tr class="pol reveal"><td>Political</td><td><span class="chips">
+      <span class="l04-chip"><b>G</b>seats in the gerousia with the 28 elders <span class="s">D8</span></span>
+      <span class="l04-chip"><b>M</b>nominate proxenoi <span class="s">D8</span></span></span></td></tr>
+    <tr class="hon reveal"><td>Honorific</td><td><span class="chips">
+      <span class="l04-chip"><b>D</b>first seat, double portions <span class="s">D8</span></span>
+      <span class="l04-chip"><b>P</b>seats of honour at the games <span class="s">D8</span></span>
+      <span class="l04-chip"><b>J</b>all rise — except the ephors <span class="s">D9</span></span>
+      <span class="l04-chip"><b>T</b>funerals as demigods <span class="s">D9</span></span></span></td></tr>
+    <tr class="eco reveal"><td>Economic</td><td><span class="chips">
+      <span class="l04-chip"><b>E</b>land in perioikic territory <span class="s">D9</span></span>
+      <span class="l04-chip"><b>L</b>skins of sacrificed animals <span class="s">D5 · D8</span></span></span></td></tr>
+  </table></div>
+  <div class="note reveal" data-code="analysis"><div class="k">Why “economic”?</div><p class="body">Cooley: the kings “enjoyed the revenue of extensive estates”, and hides were “also a form of material income”.</p></div>
+  <p class="small">D5 = Herodotus 6.56 · D8 = Herodotus 6.57 · D9 = Xenophon, <i>Constitution of the Lakedaimonians</i> 15 (trans. B. Wilson, in Cooley). Xenophon’s chapter also describes a monthly oath between kings and ephors: Lesson 6.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="3 · Priest, judge and councillor" data-title="Notes 3 — Priest, judge and councillor" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
+  <h2>Priest, judge and councillor</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L4 · The two kings</b></span><span>3 · Priest, judge, councillor</span></div>
+    <div class="row"><div class="cq">Name the two priesthoods held by the kings.</div>
+      <div class="nts reveal"><b>Zeus of Lakedaimon</b> + <b>Zeus, Lord of Heaven</b> (Hdt 6.56, D5) <span class="sep">·</span> all public sacrifice for the state (Xen. <i>LP</i> 15, D9)</div></div>
+    <div class="row"><div class="cq">On which days did the kings sacrifice at Apollo’s temple?</div>
+      <div class="nts reveal">The <b>1st and 7th</b> of every month, animal paid for by the state (Hdt 6.57, D8)</div></div>
+    <div class="row"><div class="cq">Who were the Pythians? The textbook mistake?</div>
+      <div class="nts reveal">2 envoys per king → Delphi; dined with the kings <span class="sep">·</span> kings + Pythians = guardians of all oracles <span class="sep">·</span> not <i>pithoi</i> (storage jars)</div></div>
+    <div class="row"><div class="cq">Name the three legal matters the kings decided.</div>
+      <div class="nts reveal">Unbetrothed <b>heiresses</b> <span class="sep">·</span> public <b>roads</b> <span class="sep">·</span> <b>adoptions</b> (D8)</div></div>
+    <div class="row"><div class="cq">Political role? Votes?</div>
+      <div class="nts reveal">Sat with the 28 in the <b>gerousia</b> = 2 of 30 <span class="sep">·</span> Hdt: two votes? Thuc. 1.20.3 (H1): a mistake <span class="sep">·</span> Cooley: not clear who is right</div></div>
+    <div class="row"><div class="cq">What did the kings and ephors swear every month?</div>
+      <div class="nts reveal">King: to reign by the laws <span class="sep">·</span> ephors: to keep his prerogatives — only while he keeps his oath (Xen. <i>LP</i> 15.7, D9) → Lesson 6</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Twin gods and royal funerals" data-title="Twin kings, twin gods" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">4 · Twin gods and royal funerals · I do — the Dioscuri</p>
+  <h2>Twin kings, twin gods</h2>
+  <div class="split" style="--cols:1.2fr 1fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · Herodotus, on a law made after 506 BC</div>
+        <p class="quote sm">[2] As a result of this disagreement [sc. between Demaratos and Kleomenes I], <span class="code" data-code="evidence" data-letter="E">a law was made at Sparta that both kings were not allowed to follow an army when it went abroad: previously they had both done so.</span> <span class="code" data-code="analysis" data-letter="A">One of them would be released from the army, and one of the Tyndaridai would also be left behind:</span> previously <span class="code" data-code="counter" data-letter="C">(images of)</span> both of these special helpers would follow the army.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 5.75.2 · written c. 450s–420s BC, about 75 years after the law · trans. B. Wilson · Cooley D6</p>
+      </div>
+      <div class="card accent"><div class="k">Who were the Dioscuri?</div><p class="body">Twin sons of Leda, also called the Tyndaridae. Cooley: “Kastor’s mortal father was Tyndareos, King of Sparta (with Pollux or Polydeukes being the son of Zeus)”; Castor’s tomb was shown at Sparta. Alcman’s choral song praised “Kastor – skilled horsemen, tamers of / Swift horses – and glorious Polydeukes” (fr. 2, late 7th century BC, trans. K. Hughes, Cooley A15).</p></div>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="evidence">Why the law?</p>
+      <p class="body reveal">At Eleusis in 506 BC Demaratus pulled out of Cleomenes’ invasion of Attica, and the allies went home, “seeing the kings of the Lakedaimonians at loggerheads” (5.75.3, Cooley E14).</p>
+      <p class="qprompt reveal" data-paint="analysis">What does it link?</p>
+      <p class="body reveal">One king and one twin stayed home; one king and one twin went to war.</p>
+      <div class="note reveal" data-code="counter"><div class="k">Careful</div><p class="body">“(images of)” is the translator’s addition, and Herodotus never says the dual kingship was modelled on the twins. Argue that the evidence <i>suggests</i> religion reinforced it.</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Twin gods and royal funerals" data-title="We do — the Plestiadas relief" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">4 · Twin gods and royal funerals · We do · 9 minutes · pairs</p>
+  <h2>A worshipper’s own words: the Plestiadas relief</h2>
+  <div class="split" style="--cols:1.5fr .6fr">
+    <div class="stack">
+      <div class="src">
+        <div class="k">Source · an inscribed relief from Sellasia, north of Sparta, c. 525 BC</div>
+        <p class="quote">Plestiadas d[edicated] me to the Dioskouroi, a statue of the twin sons of Tyndareos, dreading their wrath.</p>
+        <p class="prov">Relief stele dedicated to the Tyndaridai (Dioskouroi) · IG V 1, 919 · trans. in Cooley C28</p>
+      </div>
+      <div class="card quiet"><div class="k">What the stone looks like (Cooley’s note)</div>
+        <p class="body">The twins were carved facing each other, but the whole top half is lost. The inscription is turned sideways between the twins’ legs. Line drawing: Tod and Wace, <i>Catalogue of the Sparta Museum</i> (1906), no. 447.</p></div>
+      <p class="qprompt">Pairs: what does this suggest about how religion supported the dual kingship?</p>
+      <div class="cols c3">
+        <div class="note reveal" data-code="evidence"><div class="k">It shows</div><p class="body">Ordinary Laconians honoured the twins — and feared them: “dreading their wrath”.</p></div>
+        <div class="note reveal" data-code="counter"><div class="k">It does not show</div><p class="body">Anything about kings. It is one man’s private offering.</p></div>
+        <div class="note reveal" data-code="judgement"><div class="k">So</div><p class="body">Twins honoured across Laconia went to war with the kings (Herodotus 5.75): the kings shared their prestige.</p></div>
+      </div>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-7-11-dioscuri-relief-l04.jpg" alt="A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost"><figcaption>A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost — <span class="cr">Clarke & Garner, Fig 7.11</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Twin gods and royal funerals" data-title="Herodotus on royal funerals" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">4 · Twin gods and royal funerals · I do — the death of a king</p>
+  <h2>Herodotus: the funerals of kings</h2>
+    <div class="src l04-long">
+      <div class="k">Source · Herodotus</div>
+      <p class="quote sm">[58.1] … Their deaths are marked by the following ceremonies. Riders carry the news across the whole of Lakonia, while the womenfolk go round the city beating metal basins. When this happens, it is the duty of two free citizens per household, one man and one woman, to dress themselves in unwashed garments, as a sign of mourning. <span class="code" data-code="analysis" data-letter="A">The punishment for failure to do so is a heavy fine.</span> [2] … When a king of the Lakedaimonians dies, <span class="code" data-code="evidence" data-letter="E">it is a compulsory obligation imposed not just on the Spartiates themselves, but also people from all Lakedaimon, and a number of perioikoi, to attend the funeral.</span> [3] As a result, many thousands of them, <span class="code" data-code="counter" data-letter="C">together with helots</span> and also Lakedaimonians themselves, congregate in one place. They all join the women folk, wildly beating their foreheads in a paroxysm of grief, crying out in lamentation that the king who has just died was the best king they had ever had. If the king has fallen in battle, they make an image of him and carry it to burial on a lavishly decorated bier. <span class="code" data-code="keyterm" data-letter="K">After the funeral, all public business and the election of officials are suspended for ten days,</span> all of which are devoted to national mourning.</p>
+      <p class="prov">Herodotus, <i>Histories</i> 6.58 · written c. 450s–420s BC · trans. B. Wilson · Cooley D10. The cut (…) compares the custom with those of “the barbarian nations of Asia”.</p>
+    </div>
+  <div class="cols c4 l04-qa">
+    <div class="stack"><p class="qprompt reveal" data-paint="evidence">Who was compelled to attend?</p>
+      <p class="body reveal">Spartiates, “people from all Lakedaimon” and “a number of perioikoi”.</p></div>
+    <div class="stack"><p class="qprompt reveal" data-paint="counter">And the helots?</p>
+      <p class="body reveal">They came too — but Herodotus does not say they were compelled.</p></div>
+    <div class="stack"><p class="qprompt reveal" data-paint="analysis">Why a heavy fine?</p>
+      <p class="body reveal">Mourning was a duty owed to the state, not a private choice.</p></div>
+    <div class="stack"><p class="qprompt reveal" data-paint="keyterm">How long?</p>
+      <p class="body reveal"><b>Ten days</b> with no public business and no elections.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Twin gods and royal funerals" data-title="Why a king’s funeral was different">
+<div class="wrap l04-tight">
+  <p class="eyebrow">4 · Twin gods and royal funerals · We do — a king and a citizen <span class="optional">If time</span></p>
+  <h2>Why a king’s funeral was different</h2>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">An ordinary Spartan</div>
+      <p class="body">Plutarch: “Mourning was limited to a brief period of eleven days.” (<i>Lykourgos</i> 27.2, trans. B. Wilson, Cooley B35b)</p></div>
+    <div class="card accent"><div class="k">A king</div>
+      <ul class="body">
+        <li><b>Ten days</b> of national mourning, with no public business or elections (Herodotus 6.58)</li>
+        <li>“The agora was sprinkled with chaff and all sales ceased for three days.” (Herakleides Lembos, excerpting the Aristotelian <i>Constitution of the Lakedaimonians</i>, Cooley D11)</li>
+        <li>A new king cancelled any Spartiate’s debts to the royal or the state treasury (Herodotus 6.59, Cooley D10)</li>
+      </ul></div>
+  </div>
+  <div class="cols c2">
+  <div class="note reveal" data-code="analysis"><div class="k">Every group drawn in</div><p class="body">Cooley links the funerals to Tyrtaeus’ conquered Messenians, “Lamenting for their masters, both they themselves and their wives” (fr. 6–7, trans. K. Hughes, Cooley A6). A royal funeral displayed the whole hierarchy united around the king.</p></div>
+  <div class="note reveal" data-code="judgement"><div class="k">The purpose</div><p class="body">Xenophon: kings were honoured “not as mere mortals but as demigods” (<i>Constitution of the Lakedaimonians</i> 15.9, Cooley D9). Cooley: “The exalted position of the king was particularly emphasised at a royal funeral”.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Twin gods and royal funerals" data-title="You do — annotate the sources">
+<div class="wrap">
+  <p class="eyebrow">4 · Twin gods and royal funerals · You do · 8 minutes · press K for the timer</p>
+  <h2>Annotate the sources: O, V, P, R, L</h2>
+  <div class="cols c2">
+    <div class="card accent">
+      <div class="k">Herodotus on royal funerals (6.58, Cooley D10)</div>
+      <ul class="body">
+        <li><b>O</b> — the cut compares the funerals with those of Asian peoples. What does that suggest about his viewpoint?</li>
+        <li><b>V</b> — which groups had to mourn? Mark them in your notes: <b>Sp</b>, <b>Pe</b>, <b>He</b>, <b>W</b>.</li>
+        <li><b>P</b> — why would the state make mourning compulsory, with a fine?</li>
+        <li><b>R</b> — can we tell whether the grief was real or performed?</li>
+        <li><b>L</b> — he describes the rules. What would we need to know how often they were followed?</li>
+      </ul>
+    </div>
+    <div class="card accent">
+      <div class="k">The Plestiadas relief (Cooley C28)</div>
+      <ul class="body">
+        <li><b>O</b> — who made this dedication, when, and where was it found?</li>
+        <li><b>V</b> — why are a worshipper’s own words more direct than an outsider’s description?</li>
+        <li><b>P</b> — why might Plestiadas have made it? Look at the final phrase.</li>
+        <li><b>R</b> — we know the stone through a 1906 museum drawing. What might that change?</li>
+        <li><b>L</b> — what does it not tell us about the kings?</li>
+      </ul>
+    </div>
+  </div>
+  <p class="small">Short notes in your own words, in the margin of your copy. Sp = Spartiates · Pe = perioikoi · He = helots · W = women.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="4 · Twin gods and royal funerals" data-title="Notes 4 — Twin gods and royal funerals" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 4 of 5</p>
+  <h2>Twin gods and royal funerals</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L4 · The two kings</b></span><span>4 · Religion and the kings</span></div>
+    <div class="row"><div class="cq">Who were the Dioscuri?</div>
+      <div class="nts reveal">Castor + Polydeuces, twin sons of Leda <span class="sep">·</span> Castor’s father <b>Tyndareus, king of Sparta</b>; Polydeuces son of Zeus <span class="sep">·</span> Castor’s tomb at Sparta (Cooley C28 note)</div></div>
+    <div class="row"><div class="cq">Twin gods, twin kings?</div>
+      <div class="nts reveal">After 506 BC: one king + one of the Tyndaridai (prob. an image) stayed home (Hdt 5.75, D6) <span class="sep">·</span> Hdt never says the dyarchy copied them → evidence <b>suggests</b> religion reinforced it</div></div>
+    <div class="row"><div class="cq">The Plestiadas relief?</div>
+      <div class="nts reveal">Sellasia, c. 525 BC <span class="sep">·</span> “dreading their wrath” → twins feared as well as honoured <span class="sep">·</span> private offering: nothing about kings (C28)</div></div>
+    <div class="row"><div class="cq">How was a king’s death announced? Who had to mourn?</div>
+      <div class="nts reveal">Riders across Laconia; women beat basins <span class="sep">·</span> 1 man + 1 woman per household, unwashed clothes, or a <b>fine</b> <span class="sep">·</span> compelled: Spartiates, all Lakedaimon, some perioikoi; <b>helots came too</b> (Hdt 6.58, D10)</div></div>
+    <div class="row"><div class="cq">A king who fell in battle?</div>
+      <div class="nts reveal">An <b>image</b> of him carried to burial on a decorated bier</div></div>
+    <div class="row"><div class="cq">Ten days or eleven? Why the honours?</div>
+      <div class="nts reveal"><b>10</b> days for a king (Hdt) <span class="sep">·</span> <b>11</b> days’ mourning for citizens (Plut. <i>Lyc.</i> 27, B35b) <span class="sep">·</span> Xen.: honoured as <b>demigods</b> (<i>LP</i> 15.9, D9)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Limits on royal power" data-title="Aristotle on the kings" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">5 · Limits on royal power · We do — a philosopher’s verdict</p>
+  <h2>Aristotle: kings the lawgiver did not trust</h2>
+  <div class="split" style="--cols:1.3fr 1fr">
+    <div class="src">
+      <div class="k">Source · Aristotle</div>
+      <p class="quote sm">As for the kingship, whether it is better or not better for states, should be a separate discussion; but <span class="code" data-code="counter" data-letter="C">certainly it would be better that each should be chosen for his own lifestyle rather than as they are chosen now.</span> It is clear that the lawgiver does not himself think that he can make them great and good – at any rate <span class="code" data-code="judgement" data-letter="J">he mistrusts them as not being sufficiently good men,</span> and therefore they used to send enemies together on embassies and <span class="code" data-code="analysis" data-letter="A">thought that the safety of the state was dependent on the kings being at loggerheads.</span></p>
+      <p class="prov">Aristotle, <i>Politics</i> 2.9, 1271a18–26 · a philosopher (384–322 BC) judging constitutions, writing in the 330s–320s BC, when Sparta was a second-rate power · trans. in Cooley D1</p>
+    </div>
+    <div class="stack">
+      <p class="qprompt reveal" data-paint="counter">What is wrong with choosing kings by birth?</p>
+      <p class="body reveal">They are born, not chosen for how they live — so there is no guarantee of good men.</p>
+      <p class="qprompt reveal" data-paint="judgement">What did the lawgiver think of the kings?</p>
+      <p class="body reveal">He “mistrusts them” — so he built in checks.</p>
+      <p class="qprompt reveal" data-paint="analysis">Why would quarrelling kings keep Sparta safe?</p>
+      <p class="body reveal">Two rivals could not join forces to become tyrants. Herodotus’ twin kings were “always at loggerheads” too (6.52, Cooley D2).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Limits on royal power" data-title="What stopped a king becoming a tyrant?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Limits on royal power · I do — four checks on the kings</p>
+  <h2>What stopped a king becoming a tyrant?</h2>
+  <div class="split" style="--cols:1.4fr 1fr">
+    <figure class="diagram l04-gov"><svg class="gv" viewBox="0 0 1200 700" role="img" aria-label="Diagram of Spartan government in the Classical period. The two kings were members of the gerousia, a council of 28 elders over sixty plus the two kings. The five ephors supervised the kings, and summoned and presided over the ekklesia. The ekklesia, the assembly of citizens, elected the elders for life and the ephors each year.">
+<defs><marker id="gv-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<g class="node kings" id="gv-kings"><rect x="30" y="20" width="400" height="210" rx="22"/><text class="ttl" x="230" y="110">Two kings</text><text class="sub" x="230" y="160">from the Agiad and</text><text class="sub" x="230" y="198">Eurypontid families</text></g>
+<g class="node ger" id="gv-ger"><rect x="770" y="20" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="84">Gerousia</text><text class="sub" x="970" y="128">a council of 30:</text><text class="sub" x="970" y="165">28 elders (men over 60)</text><text class="sub" x="970" y="202">+ the two kings</text></g>
+<g class="node eph" id="gv-eph"><rect x="30" y="470" width="400" height="210" rx="22"/><text class="ttl" x="230" y="570">Five <tspan class="it">ephors</tspan></text><text class="sub" x="230" y="616">(officials)</text></g>
+<g class="node ekk" id="gv-ekk"><rect x="770" y="470" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="542">Ekklesia</text><text class="sub" x="970" y="586">assembly of all citizens</text><text class="sub" x="970" y="623">(probably men over 30)</text></g>
+<line class="ln" x1="440" y1="125" x2="760" y2="125" marker-end="url(#gv-a)"/><text class="rel" x="600" y="104">Members</text><text class="how" x="600" y="166">the kings sat in it</text>
+<line class="ln" x1="230" y1="464" x2="230" y2="236" marker-end="url(#gv-a)"/><text class="rel left" x="252" y="330">Supervised</text><text class="how left" x="252" y="366">two ephors went on</text><text class="how left" x="252" y="396">campaign with a king</text>
+<line class="ln" x1="970" y1="464" x2="970" y2="236" marker-end="url(#gv-a)"/><text class="rel right" x="948" y="330">Elected</text><text class="how right" x="948" y="366">the elders, for life,</text><text class="how right" x="948" y="396">by shouting</text>
+<text class="rel" x="600" y="494">Presided over</text><text class="how" x="600" y="524">and summoned it</text><line class="ln" x1="440" y1="548" x2="760" y2="548" marker-end="url(#gv-a)"/><line class="ln" x1="760" y1="608" x2="440" y2="608" marker-end="url(#gv-a)"/><text class="rel" x="600" y="652">Elected annually</text>
+</svg>
+      <figcaption>Sparta’s government in the Classical period — based on Clarke &amp; Garner, Fig 2.4, with details from the sources in Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
+    <ol class="keylist">
+      <li class="reveal" data-hl="#gv-eph"><span class="num">1</span><span class="t">The ephors</span><span class="d">Did not rise for a king; two went on campaign with him (Xenophon 13, 15); a monthly oath made his prerogatives conditional (Lesson 6).</span></li>
+      <li class="reveal" data-hl="#gv-ger"><span class="num">2</span><span class="t">The gerousia</span><span class="d">Two voices in a council of thirty (Herodotus 6.57).</span></li>
+      <li class="reveal" data-hl="#gv-ekk"><span class="num">3</span><span class="t">The assembly</span><span class="d">In 432 BC it, not the king, decided that Athens had broken the treaty (Thucydides 1.87).</span></li>
+      <li class="reveal" data-hl="#gv-kings"><span class="num">4</span><span class="t">Each other</span><span class="d">Rival houses; after 506 BC only one king led an army; Cleomenes worked to remove Demaratus from the kingship in 491 BC (Herodotus 6.61–66, Cooley E20).</span></li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Limits on royal power" data-title="Kings on trial" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">5 · Limits on royal power · We do — kings in the dock</p>
+  <h2>Kings could be tried — and removed</h2>
+  <div class="split" style="--cols:1.35fr .65fr">
+    <div class="stack">
+      <div class="note" data-code="judgement"><p class="body">Cooley: “Kings could be put on trial, before a special court”, and if convicted “would be fined or even deposed and sent into exile”.</p></div>
+      <div class="src">
+        <div class="k">Source · Herodotus, on King Cleomenes I, c. 493 BC</div>
+        <p class="quote sm">On his return, Kleomenes’ enemies haled him before the ephors, alleging that he had taken bribes not to capture Argos, even though he could easily have done so.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 6.82.1 · trans. B. Wilson · Cooley E19</p>
+      </div>
+      <div class="src reveal">
+        <div class="k">Source · Herodotus, on King Leotychidas, c. 490 BC</div>
+        <p class="quote sm">The Lakedaimonians convened a legal enquiry and decided that the Aiginetans had indeed been outrageously treated by Leotychidas. They voted to surrender him to the Aiginetans in return for the hostages still detained in Athens.</p>
+        <p class="prov">Herodotus, <i>Histories</i> 6.85.1 · trans. B. Wilson · Cooley E23</p>
+      </div>
+      <p class="qprompt reveal">What do the two cases show about a king’s position?</p>
+      <p class="body reveal">A king could be accused before the ephors and even handed over to a foreign state: the office did not put him above the law.</p>
+    </div>
+    <figure class="figure contain"><img src="images/clarke-2-7-five-ephors.jpg" alt="A later impression of the five ephors, who checked the kings’ power — a modern illustration, not ancient evidence"><figcaption>A later impression of the five ephors, who checked the kings’ power — a modern illustration, not ancient evidence — <span class="cr">Clarke & Garner, Fig 2.7</span></figcaption></figure>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Limits on royal power" data-title="Limited office, powerful men?" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow">5 · Limits on royal power · weighing it up <span class="optional">If time</span></p>
+  <h2>A limited office — but some powerful men</h2>
+  <div class="cols c2">
+    <div class="card quiet"><div class="k">The office was limited</div>
+      <ul class="body">
+        <li>ephors, gerousia, assembly and courts</li>
+        <li>two rival houses — Aristotle’s kings “at loggerheads”</li>
+        <li>conditional prerogatives: the monthly oath</li>
+      </ul></div>
+    <div class="card accent"><div class="k">Yet some kings dominated</div>
+      <p class="body">Influence “depended less on actual constitutional power than on an individual’s personal authority” (Cooley). Cleomenes I (c. 520–c. 490 BC) and Agesilaus II (c. 399–360 BC) “each dominated a whole period of Spartan foreign policy”. Cartledge, as Cooley reports, notes that all kings had charisma and were literally untouchable.</p></div>
+  </div>
+  <div class="note reveal" data-code="judgement"><div class="k">Gesture vote</div><p class="body nq">The Spartan kings were more honoured than powerful. Thumbs up, sideways or down on “3, 2, 1” — then justify with a named source.</p></div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Limits on royal power" data-title="Notes 5 — Limits on royal power" data-kind="notes">
+<div class="wrap">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 5 of 5</p>
+  <h2>Limits on royal power</h2>
+  <div class="cornell">
+    <div class="ch"><span><b>L4 · The two kings</b></span><span>5 · Limits</span></div>
+    <div class="row"><div class="cq">What does Aristotle think is wrong with how kings were chosen?</div>
+      <div class="nts reveal">By birth, not “for his own lifestyle” <span class="sep">·</span> lawgiver “mistrusts them” → rivalry kept the state safe (<i>Pol.</i> 1271a, D1)</div></div>
+    <div class="row"><div class="cq">Give two ways the ephors limited the kings.</div>
+      <div class="nts reveal">Did not rise for kings <span class="sep">·</span> 2 ephors on campaign <span class="sep">·</span> monthly oath → kingship <b>conditional</b> (Xen. <i>LP</i> 13, 15)</div></div>
+    <div class="row"><div class="cq">What happened to Cleomenes in c. 493 BC?</div>
+      <div class="nts reveal">Accused before the <b>ephors</b> of taking bribes over Argos (Hdt 6.82.1, E19) <span class="sep">·</span> c. 490 BC Leotychidas handed to the Aeginetans (E23)</div></div>
+    <div class="row"><div class="cq">Gerousia, assembly, each other?</div>
+      <div class="nts reveal">2 votes of 30 <span class="sep">·</span> assembly decided on war, 432 BC <span class="sep">·</span> rival houses: Cleomenes v. Demaratus, 491 BC (E20)</div></div>
+    <div class="row"><div class="cq">Why could some kings still dominate?</div>
+      <div class="nts reveal"><b>Personal authority</b> + war record: Cleomenes I, Agesilaus II <span class="sep">·</span> all kings had charisma, literally untouchable (Cartledge, as Cooley reports)</div></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="5 · Limits on royal power" data-title="Summary" data-kind="notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Finish your notes</p>
+  <h2>Summary: three sentences</h2>
+  <div class="split" style="--cols:1.7fr 1fr">
+    <div class="stack">
+      <div class="card accent">
+        <div class="k">Write one sentence for each</div>
+        <ol class="body">
+          <li>Who were Sparta’s kings, and what were their main roles?</li>
+          <li>How did religion support the dual kingship?</li>
+          <li>What limited the kings’ power?</li>
+        </ol>
+      </div>
+      <div class="src reveal" data-veil="Show a model summary">
+        <div class="k">A model summary · written for this lesson</div>
+        <p class="quote sm model">Sparta had two hereditary kings at once, one Agiad and one Eurypontid, whose roles were military, religious, judicial and political, and whose privileges, from double portions to estates in perioikic territory, set them apart from other citizens. Religion bound the dual kingship to the gods: the kings held two priesthoods of Zeus, controlled contact with Delphi through their Pythians, went to war with one of the twin Dioscuri, and were honoured as demigods at funerals that drew in Spartiates, perioikoi and helots. Yet the ephors, the gerousia, the assembly, the courts and the rivalry between the two houses limited them, so a king’s real power depended on his personal authority.</p>
+      </div>
+    </div>
+    <div class="card quiet">
+      <div class="k">Your notes should now cover</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> 1 · Two royal houses: dyarchy, the twin myth, succession</label></li>
+        <li><label><input type="checkbox"> 2 · The king at war: privileges, two warnings, the campaign</label></li>
+        <li><label><input type="checkbox"> 3 · Priest, judge, councillor: the sort, two votes, the oath</label></li>
+        <li><label><input type="checkbox"> 4 · The Dioscuri and royal funerals</label></li>
+        <li><label><input type="checkbox"> 5 · Limits: Aristotle, ephors, gerousia, assembly, trials</label></li>
+      </ul>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · Answering HSC questions" data-title="Answering HSC part (b)" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">6 · Answering HSC questions</p>
+  <h2>The 2023 HSC asked about the kings directly</h2>
+  <div class="cols c3">
+    <div class="card"><div class="k">Section II</div><p class="body">25 marks, about 45 minutes — about 1.8 minutes a mark. 8 marks ≈ 14 minutes.</p></div>
+    <div class="card"><div class="k">Explain</div><p class="body">NESA: “Relate cause and effect. Make the relationships between things evident. Provide why and/or how.”</p></div>
+    <div class="card accent"><div class="k">Role</div><p class="body">Not a list of privileges, but what the kings <i>did</i> for Sparta — several roles — and how far they were limited.</p></div>
+  </div>
+  <p class="lead">Take the question apart, write it in 14 minutes, then compare with NESA’s points and an annotated model.</p>
+</div>
+</section>
+
+<section class="slide statement mid" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — the question" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 · Section II · Question 11 (b) · 8 marks</p>
+  <p class="qtext"><span class="code" data-code="directive" data-letter="D">Explain</span> the <span class="code" data-code="keyterm" data-letter="K">role</span> of <span class="code" data-code="keyterm" data-letter="K">Spartan kings</span> <span class="code" data-code="scope" data-letter="S">in this period</span>.</p>
+  <i class="reveal" data-paint="directive" hidden></i>
+  <i class="reveal" data-paint="keyterm" hidden></i>
+  <i class="reveal" data-paint="scope" hidden></i>
+  <p class="lead">Watch how the question is taken apart — then write it yourself.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — take it apart" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · I do — deconstruct the question</p>
+  <h2>What the question is really asking</h2>
+  <div class="cols c2">
+    <div class="note reveal" data-code="directive"><div class="k">Explain</div><p class="body">Cause and effect: each role → what it did for Sparta and for the king’s standing. A list of privileges is not an explanation.</p></div>
+    <div class="note reveal" data-code="keyterm"><div class="k">Role · Spartan kings</div><p class="body">“Role” is singular, but the kings had several: military, religious, judicial, political. Both kings — the dual kingship — with named kings as examples.</p></div>
+    <div class="note reveal" data-code="scope"><div class="k">In this period</div><p class="body">From the Archaic period to 371 BC: Cleomenes I, Leonidas, Archidamus in 432 BC, Agesilaus II.</p></div>
+    <div class="card accent reveal"><div class="k">8 marks</div><p class="body">About 14 minutes · a judgement first · three or four roles, each with a named source · the limits · about 250–340 words.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — what the markers rewarded" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · the marking guidelines and the markers’ feedback</p>
+  <h2>What the markers rewarded</h2>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="tbl-scroll"><table class="tbl crit compact">
+      <tr><th>Marks</th><th>Criteria</th></tr>
+      <tr><td class="m">7–8</td><td>Presents a well-developed and detailed explanation relevant to the question · Communicates ideas and information coherently, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">5–6</td><td>Presents an explanation relevant to the question · Communicates ideas and information clearly, using appropriate historical terms and concepts</td></tr>
+      <tr><td class="m">3–4</td><td>Presents some information relevant to the question · Communicates ideas using some historical terms and/or concepts</td></tr>
+      <tr><td class="m">1–2</td><td>Makes general statement(s) relevant to the question</td></tr>
+    </table></div>
+    <div class="stack">
+      <div class="note reveal" data-code="evidence"><div class="k">In better responses, students were able to</div>
+        <p class="fb"><span class="q">develop an explanation on the varied role of the kings (b)</span></p></div>
+      <div class="note reveal" data-code="judgement"><div class="k">Areas for students to improve include</div>
+        <p class="fb"><span class="q">explaining more than one aspect of Spartan kingship (b)</span></p></div>
+      <div class="note reveal" data-code="analysis"><div class="k">So</div><p class="body">The roles and the limits are not in the criteria themselves: they are in NESA’s list of what an answer could include (next slide).</p></div>
+    </div>
+  </div>
+  <p class="small">Source: NESA, 2023 HSC Ancient History Marking Guidelines (Section II, part (b)) and the 2023 marking feedback for Question 11.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — NESA’s points, annotated" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · I do — NESA’s “answer could include”, annotated</p>
+  <h2>NESA’s points for this question</h2>
+  <div class="annot wide">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="n23-1">Spartan kingship was a diarchy and both kings’ main roles were political, religious, judicial, and military.</span><span class="mk">1</span><br>
+      <span class="code" data-code="counter" id="n23-2">Spartan kings’ political role was limited. They were members of the gerousia, and were subject to the authority of the ephors.</span><span class="mk">2</span><br>
+      <span class="code" data-code="evidence" id="n23-3">The kings were the chief priests of the state and ensured the sacrifices were practised and consulted with the pythia at Delphi.</span><span class="mk">3</span><br>
+      <span class="code" data-code="analysis" id="n23-4">Their judicial role saw the kings oversee cases such as those involving public roads, marriages of orphaned heiresses and the adoption of children.</span><span class="mk">4</span><br>
+      <span class="code" data-code="judgement" id="n23-5">Kings were the commanders of the army but later lost the authority to declare war. By the end of the 6th century one king had to remain in Sparta when the other led a campaign.</span><span class="mk">5</span>
+      <p class="meta">“Answer could include”, Option G, from the NESA 2023 HSC Ancient History Marking Guidelines. NESA published no sample answer for this part.</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Teacher’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#n23-1"><span class="mk">1</span><b>Your plan in one line</b><span class="tx">Four roles: four moves in your answer. NESA spells it diarchy; dyarchy is also correct.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#n23-2"><span class="mk">2</span><b>The limits belong in the answer</b><span class="tx">Two voices of thirty in the gerousia (Herodotus 6.57); ephors who did not rise for a king (Xenophon 15).</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#n23-3"><span class="mk">3</span><b>Name the evidence</b><span class="tx">Two priesthoods of Zeus (Herodotus 6.56); all public sacrifice (Xenophon 15); Delphi through the kings’ Pythians (6.57).</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#n23-4"><span class="mk">4</span><b>Be more exact than the list</b><span class="tx">Herodotus: the kings chose a husband for an heiress “if her father has not betrothed her to anyone”.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#n23-5"><span class="mk">5</span><b>One claim to test</b><span class="tx">The 506 BC law (Herodotus 5.75) is solid. “Later lost the authority to declare war” follows Herodotus; Cooley disagrees — next slide.</span></div>
+      <div class="verdict reveal"><b>A list, not a model.</b> “Answer could include” is acceptable content; no student needs all of it.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="Could the kings declare war?" data-kind="hsc notes">
+<div class="wrap l04-tight">
+  <p class="eyebrow">HSC 2023 Q11(b) · when NESA and Cooley disagree · what each source actually says</p>
+  <h2>Could the kings declare war?</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="note" data-code="judgement"><div class="k">NESA, 2023 marking guidelines</div><p class="body">“Kings were the commanders of the army but later lost the authority to declare war.”</p></div>
+      <div class="src">
+        <div class="k">Herodotus 6.56 · c. 450s–420s BC · Cooley D5</div>
+        <p class="quote sm">Then, they have the right to declare war on any country they please; in this, no Spartiate can oppose them without incurring the penalty of religious pollution (and consequent exile).</p>
+      </div>
+    </div>
+    <div class="stack">
+      <div class="src reveal">
+        <div class="k">Thucydides 1.87 · on 432 BC · Cooley E31</div>
+        <p class="body">After King Archidamus spoke against war, the presiding ephor told “those of you who think that the treaties have been broken and that the Athenians are at fault” to stand on one side. A large majority did; Sparta then put “the decision for war” to its whole alliance.</p>
+      </div>
+      <div class="note reveal" data-code="counter"><div class="k">Cooley says</div><p class="body">“There is no evidence from the historical period to support Herodotus’ assertion that the kings on their own could declare war.” The assembly’s “main responsibility were decisions on foreign policy, particularly about war and peace”.</p></div>
+    </div>
+  </div>
+  <div class="note reveal" data-code="analysis"><div class="k">In your answer</div><p class="body">Name the debate: Herodotus says the kings could declare war; in the one case described in detail, 432 BC, the assembly decided. NESA’s “later lost” assumes a power that Cooley finds no evidence for.</p></div>
+</div>
+</section>
+
+<section class="slide mid" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — you write" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · You do · 14 minutes · press K for the timer</p>
+  <h2>Explain the role of Spartan kings in this period. <span class="small">(8 marks)</span></h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">Aim for</div>
+      <ul class="body">
+        <li>a judgement in your first sentence</li>
+        <li>more than one role: military, religious, judicial, political</li>
+        <li>a named source for each role — Herodotus, Xenophon, Aristotle</li>
+        <li>the limits: gerousia and ephors (and the assembly)</li>
+        <li>about 250–340 words</li>
+      </ul></div>
+    <div class="card quiet"><div class="k">Stuck?</div>
+      <p class="body nq">Start: “Sparta’s two kings were its commanders in war and its link with the gods, yet …”</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — model, part 1" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · annotated model (MR-1) · part 1 of 2</p>
+  <h2>Answer first, then one role at a time</h2>
+  <div class="annot wide" data-veil="Write yours first — then show the model">
+    <div class="ans long dense">
+      <span class="code" data-code="judgement" id="k8-1">Sparta’s two kings, one from the Agiad and one from the Eurypontid house, were the state’s commanders in war and its chief link with the gods, yet the constitution ensured that they ruled within the law rather than above it.</span><span class="mk">1</span>
+      Their most visible role was military. <span class="code" data-code="evidence" id="k8-2">Herodotus records that “on active service, the kings lead the advance and are the last to retreat and are allocated a personal bodyguard of a hundred picked soldiers” (6.56).</span><span class="mk">2</span>
+      After the quarrel between Cleomenes and Demaratus, a law forbade both kings from going out with the same army (5.75), <span class="code" data-code="analysis" id="k8-3">which shows that royal command was prized but also regulated.</span><span class="mk">3</span>
+      The kings were equally important as religious leaders. <span class="code" data-code="evidence" id="k8-4">They held “two priesthoods, those of Zeus of Lakedaimon and Zeus, Lord of Heaven” (6.56), sacrificed at Apollo’s temple on the first and seventh day of every month, and each named two ‘Pythians’ to go on embassies to Delphi (6.57).</span><span class="mk">4</span>
+      Herodotus calls them “the official guardians of all oracles”, <span class="code" data-code="analysis" id="k8-5">a role that gave them authority as the state’s mediators with the gods.</span><span class="mk">5</span>
+      <span class="code" data-code="counter" id="k8-6">The law Herodotus reports, that one king and one of the Tyndaridai, probably an image, stayed at home (5.75), suggests the twin gods were linked to the dual kingship; the Sellasia relief shows how widely the twins were honoured.</span><span class="mk">6</span>
+      <span class="code" data-code="keyterm" id="k8-7">Royal funerals, which Spartiates, people from all Lakedaimon and “a number of perioikoi” were compelled to attend (6.58), reinforced the kings’ sacred standing.</span><span class="mk">7</span>
+      <p class="meta">Modelled response MR-1 · written for this lesson · part 1 of 2</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="judgement" data-hl="#k8-1"><span class="mk">1</span><b>Answer first</b><span class="tx">Two roles and a limit in one sentence. “Yet” sets up the limits that come later. No roadmap list.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#k8-2"><span class="mk">2</span><b>One role per paragraph</b><span class="tx">The paragraph opens with its role, then a short, exact quotation with its reference.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#k8-3"><span class="mk">3</span><b>Explain, don’t list</b><span class="tx">“Which shows” turns a fact (the 506 BC law) into an explanation.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#k8-4"><span class="mk">4</span><b>Precise detail</b><span class="tx">Two priesthoods, the 1st and 7th of the month, two Pythians each: “detailed” in the 7–8 criterion.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#k8-5"><span class="mk">5</span><b>What the role did</b><span class="tx">Guardians of the oracles → authority as mediators with the gods.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#k8-6"><span class="mk">6</span><b>A careful link</b><span class="tx">“Suggests”, not “proves”: Herodotus links the twins to the kings; the relief shows popular worship, not kingship.</span></div>
+      <div class="anote reveal" data-code="keyterm" data-hl="#k8-7"><span class="mk">7</span><b>Exactly who was compelled</b><span class="tx">Spartiates, Lakedaimonians and some perioikoi — not “everyone”.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — model, part 2" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · annotated model (MR-1) · part 2 of 2</p>
+  <h2>Then the narrow roles — and the limits</h2>
+  <div class="annot wide" data-veil="Show the second part">
+    <div class="ans long dense">
+      <span class="code" data-code="keyterm" id="k8-8">By contrast, their judicial and political roles were narrow.</span><span class="mk">8</span>
+      <span class="code" data-code="evidence" id="k8-9">They decided who should marry an unbetrothed heiress, controlled the public roads and witnessed adoptions (6.57), but in the gerousia they were only two members of thirty.</span><span class="mk">9</span>
+      <span class="code" data-code="counter" id="k8-10">The ephors, who exchanged oaths with them “once a month” (Xenophon, <i>Constitution of the Lakedaimonians</i> 15.7), could hold them to account, and Aristotle even claimed that the lawgiver “mistrusts them as not being sufficiently good men” (<i>Politics</i> 2.9).</span><span class="mk">10</span>
+      <span class="code" data-code="judgement" id="k8-11">The kings’ role, therefore, was to lead Sparta in battle and before the gods, while the gerousia and the ephors kept their political power in check.</span><span class="mk">11</span>
+      <p class="meta">Modelled response MR-1 · written for this lesson · about 340 words, about 14 minutes</p>
+    </div>
+    <div class="margin fold">
+      <p class="head">Marker’s margin</p>
+      <div class="anote reveal" data-code="keyterm" data-hl="#k8-8"><span class="mk">8</span><b>Signpost and weigh</b><span class="tx">“By contrast” compares the roles instead of listing them.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#k8-9"><span class="mk">9</span><b>Three named duties</b><span class="tx">Heiresses, roads, adoptions — then straight into the political limit.</span></div>
+      <div class="anote reveal" data-code="counter" data-hl="#k8-10"><span class="mk">10</span><b>The limits</b><span class="tx">The limits come from the marking guidelines’ sample points; the 2023 feedback asked students to explain more than one aspect of kingship. Two more writers, each named.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#k8-11"><span class="mk">11</span><b>Close the loop</b><span class="tx">“Therefore” returns to the opening judgement in one line.</span></div>
+      <div class="verdict reveal"><b>Written to the 7–8 criteria:</b> a well-developed, detailed explanation of several roles, each with named evidence.</div>
+      <p class="sharper reveal"><b>Even sharper:</b> name the war debate (Herodotus 6.56 against the assembly’s vote in 432 BC), and add that a strong king such as Cleomenes I or Agesilaus II could dominate through personal authority (Cooley).</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — why answers drop marks" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · three answers that fall short</p>
+  <h2>Why answers drop marks</h2>
+  <div class="ladder">
+    <div class="rung reveal"><span class="mark">3–4 marks · a list of privileges</span>
+      <p class="resp">The kings had two priesthoods of Zeus, a bodyguard of a hundred men, double portions at feasts and seats of honour at the games. They also decided about heiresses and adoptions.</p>
+      <p class="why">Accurate, but “some information”: nothing explains what the roles did, and there are no limits and no named sources.</p></div>
+    <div class="rung reveal"><span class="mark">5–6 marks · one aspect</span>
+      <p class="resp">The kings’ main role was military: they led the army on every campaign, sacrificed at the frontier, were first in the advance and last to retreat …</p>
+      <p class="why">A real explanation — of one role. The 2023 feedback asked for “more than one aspect of Spartan kingship”.</p></div>
+    <div class="rung trap reveal"><span class="mark">Trap · errors that sink it</span>
+      <p class="resp">The kings were all-powerful: they declared war whenever they wished, had a bodyguard of 300 and stood above the ephors.</p>
+      <p class="why">A doubtful claim stated as fact, the 100 confused with the 300, and the ephors did not even rise for the kings.</p></div>
+  </div>
+  <p class="small">Written for this lesson to show the marking criteria — not real student answers.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · HSC 2023 Q11(b)" data-title="HSC 2023 Q11(b) — mark your own" data-kind="hsc">
+<div class="wrap">
+  <p class="eyebrow">HSC 2023 Q11(b) · Self-mark · 4 minutes</p>
+  <h2>Mark your own answer</h2>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="card quiet">
+      <div class="k">Tick what you did</div>
+      <ul class="checks">
+        <li><label><input type="checkbox"> opened with a judgement about the kings’ role</label></li>
+        <li><label><input type="checkbox"> explained more than one role: military, religious, judicial, political</label></li>
+        <li><label><input type="checkbox"> named a writer for each role — not “the Greek writers”</label></li>
+        <li><label><input type="checkbox"> explained what each role did, instead of listing privileges</label></li>
+        <li><label><input type="checkbox"> included the limits: gerousia and ephors</label></li>
+        <li><label><input type="checkbox"> exact details: two priesthoods of Zeus, the 1st and 7th, a bodyguard of 100</label></li>
+      </ul>
+      <p class="small">Fewer than four ticks? Add the missing move in a second colour.</p>
+    </div>
+    <div class="stack">
+      <div class="card accent"><div class="k">The one-line test</div>
+        <p class="body">Could someone read only your first and last sentences and know your answer about the kings’ role? That is a coherent explanation.</p></div>
+      <div class="card accent"><div class="k">More practice</div>
+        <p class="body"><b>What does evidence reveal about religion in Sparta in this period?</b> (12 marks) — 2023 HSC, Question 11 (c)</p>
+        <p class="body"><b>Outline the religious role of the Spartan kings.</b> (4 marks) — HSC-style, written for this lesson</p></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — order the campaign" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing</p>
+  <h2>Put the stages of a king’s campaign in order</h2>
+  <p class="task">Use Xenophon (<i>Constitution of the Lakedaimonians</i> 13) and Plutarch (<i>Lykourgos</i> 22). Write the letters in order.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>The king crosses the frontier once the omens are good.</span></li>
+    <li><span class="k">B</span><span>The fire-bearer carries fire from the altar at home to the frontier.</span></li>
+    <li><span class="k">C</span><span>The king sacrifices a she-goat in sight of the enemy, and the pipers play the hymn to Castor.</span></li>
+    <li><span class="k">D</span><span>The king and his staff sacrifice at home to Zeus the Leader.</span></li>
+    <li><span class="k">E</span><span>At the frontier the king sacrifices to Zeus and Athena.</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq">
+      <li class="sol reveal"><b>D</b> — the home sacrifice to Zeus the Leader (Xenophon 13.2, Cooley D7)</li>
+      <li class="sol reveal"><b>B</b> — “the fire-bearer takes a blazing ember from the altar and leads the way to the frontier” (13.2)</li>
+      <li class="sol reveal"><b>E</b> — “There the king makes a second sacrifice, to Zeus and Athena.” (13.2)</li>
+      <li class="sol reveal"><b>A</b> — “Only when the omens from the sacrifices to both these gods are seen to be good does he cross the country’s frontier.” (13.3)</li>
+      <li class="sol reveal"><b>C</b> — the she-goat in full sight of the enemy (13.8); the hymn to Castor (Plutarch, <i>Lykourgos</i> 22.2, Cooley D93)</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac l04-tight">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf" data-answers>
+    <li><span class="n">1</span><span>Sparta’s two kings came from the same royal family.</span>
+      <span class="sol no reveal">False <span class="why">— one from the Agiad and one from the Eurypontid house; Cooley notes they had separate burial places.</span></span></li>
+    <li><span class="n">2</span><span>Herodotus says the kings had a bodyguard of 300.</span>
+      <span class="sol no reveal">False <span class="why">— Herodotus 6.56: “a personal bodyguard of a hundred picked soldiers” (Cooley D5). Other sources call the 300 hippeis the king’s guard; how the two were related is unclear.</span></span></li>
+    <li><span class="n">3</span><span>The kings sacrificed at Apollo’s temple on the 1st and 7th of every month.</span>
+      <span class="sol reveal">True <span class="why">— “On the first and the seventh day of every month” (Herodotus 6.57, Cooley D8).</span></span></li>
+    <li><span class="n">4</span><span>The Pythians were storage jars kept at Delphi.</span>
+      <span class="sol no reveal">False <span class="why">— they were envoys each king chose to go to Delphi; <i>pithoi</i> are storage jars (Herodotus 6.57).</span></span></li>
+    <li><span class="n">5</span><span>The kings decided whom an unbetrothed heiress should marry.</span>
+      <span class="sol reveal">True <span class="why">— “if her father has not betrothed her to anyone, then the kings decide who is entitled to marry her” (D8).</span></span></li>
+    <li><span class="n">6</span><span>Everyone, including the ephors, stood when a king entered.</span>
+      <span class="sol no reveal">False <span class="why">— “Everyone rises from their seats when the king appears, except for the ephors from their official chairs.” (Xenophon, Cooley D9)</span></span></li>
+    <li><span class="n">7</span><span>Herodotus and Thucydides agree on how many votes the kings had.</span>
+      <span class="sol no reveal">False <span class="why">— Herodotus implies two votes; Thucydides calls that a mistake (1.20.3, Cooley H1); Cooley: “it is not actually clear who is right”.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Agiad</span><span>demigods</span><span>Dioscuri</span><span>dyarchy</span><span>ephors</span><span>loggerheads</span><span>Pythians</span><span>Zeus</span></div>
+  <ol class="cloze" data-answers>
+    <li>Rule by two kings at once is called a <span class="gap"><span class="sol reveal">dyarchy</span></span>.</li>
+    <li>The royal house of Leonidas was the <span class="gap"><span class="sol reveal">Agiad</span></span> house.</li>
+    <li>The envoys each king chose to consult Delphi were called the <span class="gap"><span class="sol reveal">Pythians</span></span>.</li>
+    <li>The kings held two priesthoods of the god <span class="gap"><span class="sol reveal">Zeus</span></span>.</li>
+    <li>Every month the kings exchanged oaths with the <span class="gap"><span class="sol reveal">ephors</span></span>.</li>
+    <li>Castor and Polydeuces were known as the <span class="gap"><span class="sol reveal">Dioscuri</span></span>.</li>
+    <li>Xenophon says dead kings were honoured as <span class="gap"><span class="sol reveal">demigods</span></span>.</li>
+    <li>Aristotle says the Spartans thought the safety of the state depended on the kings being at <span class="gap"><span class="sol reveal">loggerheads</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac l04-tight">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph</p>
+  <h2>How did religion strengthen the position of the Spartan kings?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: how far did religion raise the kings — and where did it stop?</span>
+    <span class="l">Evidence</span><span>Use at least two sources precisely, with provenance: Herodotus 6.56–58 and 5.75, Xenophon 15.</span>
+    <span class="l">Analyse</span><span>Explain how each example made the kings seem closer to the gods.</span>
+    <span class="l">Evaluate</span><span>Weigh the sources (an outsider, an admirer) and name one limit religion did not remove.</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Religion strengthened the kings’ position more than any other privilege, because it made them the city’s link with the gods, though it never freed them from the laws. Herodotus records that the kings held “two priesthoods, those of Zeus of Lakedaimon and Zeus, Lord of Heaven”, sacrificed at Apollo’s temple on the first and seventh day of every month and chose the Pythians who consulted Delphi, while Xenophon says the king offered “all public sacrifice on behalf of the state”. Control of sacrifices and oracles let a king act in the gods’ name: Cooley suggests that omens “were probably likely to support the king’s intentions”. One of the twin Tyndaridai went to war with each king, and compulsory mourning made a king’s death a matter for all Lakedaimon. Yet Herodotus was a non-Spartan describing customs he found unusual, and Xenophon was an admirer of Sparta; and in practice each king still swore every month to reign by the laws. Religion therefore raised the kings above other citizens in standing, but it did not place them above the ephors or the law.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>Assess the extent of the power of the Spartan kings in this period. <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from Herodotus, Xenophon, Aristotle and other relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — powerful commanders, honoured figureheads at home, or both, depending on the man?</li>
+    <li><b>Powers and privileges:</b> military, religious, judicial and political roles (Herodotus 6.56–57; Xenophon 13 and 15).</li>
+    <li><b>Limits:</b> the ephors and the monthly oath, trials (Cleomenes c. 493 BC, Leotychidas c. 490 BC), the gerousia and assembly, rivalry between the houses (Aristotle).</li>
+    <li><b>Evaluate:</b> is Herodotus’ claim that the kings could declare war reliable? Use Cooley’s note and the 432 BC debate (Thucydides 1.79–87).</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review" data-kind="practice notes">
+<div class="wrap prac l04-tight">
+  <p class="eyebrow">Practice and review · 6 of 6 · chapter review</p>
+  <h2>Chapter review: the two kings</h2>
+  <ol class="rq l04-rq2" data-answers>
+    <li>Name Sparta’s two royal houses and the hero both claimed as ancestor.
+      <span class="sol reveal">The Agiads and the Eurypontids; both claimed descent from Heracles.</span></li>
+    <li>List one military, one religious and one judicial privilege of the kings, with the source for each.
+      <span class="sol reveal">Military: lead the advance and last to retreat (Herodotus 6.56, D5). Religious: two priesthoods of Zeus (D5), or the sacrifices on the 1st and 7th (6.57, D8). Judicial: choosing a husband for an unbetrothed heiress (6.57, D8).</span></li>
+    <li>Who were the Pythians, and why did they matter to the kings?
+      <span class="sol reveal">Two envoys each king chose to consult Delphi, who dined with the kings at public expense. With them the kings were guardians of the oracles, which gave them special control over the gods’ advice to Sparta.</span></li>
+    <li>Why did only one king lead an army after 506 BC?
+      <span class="sol reveal">Demaratus withdrew from Cleomenes’ invasion of Attica, and the allies went home; a law then stopped both kings going with one army, and one of the Tyndaridai was also left behind (Herodotus 5.75, D6).</span></li>
+    <li>What does the Plestiadas relief reveal about attitudes to the Dioscuri?
+      <span class="sol reveal">Ordinary Laconians honoured the twins and feared them: Plestiadas dedicated it “dreading their wrath” (C28). It says nothing about the kings.</span></li>
+    <li>Explain why a king’s funeral involved perioikoi and helots as well as Spartiates.
+      <span class="sol reveal">Attendance was compulsory for Spartiates, people from all Lakedaimon and a number of perioikoi, and helots came too (6.58, D10). The funeral displayed the whole hierarchy united around the king, honoured as a demigod.</span></li>
+    <li>How did the monthly oath make the kingship conditional?
+      <span class="sol reveal">The king swore to reign by the laws; the ephors swore to keep his prerogatives only “so long as the king keeps his oath” (Xenophon 15.7, D9).</span></li>
+    <li>Compare Herodotus and Thucydides on the kings’ votes in the gerousia. What does the disagreement show about the sources?
+      <span class="sol reveal">Herodotus implies two votes; Thucydides calls that a common mistake (1.20.3, H1); Cooley says it is not clear who is right. Even careful writers could not easily check details of Spartan government.</span></li>
+    <li>Evaluate the claim that the Spartan kings were more honoured than powerful.
+      <span class="sol reveal">Largely true at home: double portions, seats of honour and demigod funerals, but two votes of thirty, ephors, trials and the assembly’s say on war. In the field they had almost unlimited power, and kings such as Cleomenes I and Agesilaus II dominated through personal authority.</span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Exit ticket · before you leave</p>
+  <h2>Two sentences</h2>
+  <div class="cols c2">
+    <div class="card accent"><div class="k">1</div><p class="lead">The biggest limit on the kings’ power was … because …</p></div>
+    <div class="card accent"><div class="k">2</div><p class="lead">One way religion raised the kings above other citizens was …</p></div>
+  </div>
+  <p class="body"><b>Next lesson:</b> the gerousia and the ekklesia — the council the kings sat in, and the assembly that voted on war in 432 BC.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="Close" data-title="Sources and credits" data-kind="intro">
+<div class="wrap">
+  <p class="eyebrow">Sources and credits</p>
+  <h2>Where everything comes from</h2>
+  <div class="cols c2">
+    <div class="stack">
+      <div class="card quiet"><div class="k">Ancient sources</div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Herodotus 5.74–75, 6.52, 6.56–59, 6.61–66, 6.82.1, 6.85.1 and 7.205.2 (E14, D6, D2, D5, D8, D10, E20, E19, E23, F11, trans. B. Wilson); Thucydides 1.20.3, 1.79–87 and 5.72 (H1, E29–E31, E103, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 13 and 15 (D7, D9, trans. B. Wilson); Plutarch, <i>Lykourgos</i> 22.2 and 27.2 (D93, B35b, trans. B. Wilson) and <i>Agesilaos</i> 1 (D75); Aristotle, <i>Politics</i> 1271a18–26 (D1); Herakleides Lembos 372.11 (D11); Tyrtaeus frs 2 and 6–7 and Alcman fr. 2 (A3, A6, A15, trans. K. Hughes); relief stele of Plestiadas, IG V 1, 919 (C28). Cooley’s introductions and notes, including P. Cartledge, <i>Spartan Reflections</i> (2013) and R. Parker in M. Whitby (ed.), <i>Sparta</i> (2002), as cited there.</p>
+        <p class="small">The Plestiadas relief is described from Cooley’s note; the line drawing is in M. N. Tod and A. J. B. Wace, <i>A Catalogue of the Sparta Museum</i> (Oxford, 1906), no. 447.</p></div>
+      <div class="card quiet"><div class="k">HSC material</div>
+        <p class="small">HSC question, marking criteria, the “answer could include” points and marking feedback: NSW Education Standards Authority, 2023 HSC Ancient History examination, marking guidelines and feedback. © NESA. NESA glossary of key words for “explain”.</p></div>
+    </div>
+    <div class="card quiet"><div class="k">Images</div>
+      <ul class="small"><li>A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost — Clarke & Garner, Fig 7.11</li><li>A modern statue of King Leonidas in Sparta — it shows how he is remembered, not what he looked like — Bradley, Fig 3.11</li><li>A later impression of the five ephors, who checked the kings’ power — a modern illustration, not ancient evidence — Clarke & Garner, Fig 2.7</li></ul><p class="small">Books: Clarke & Garner, Spartan society textbook (school copy); P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014).</p>
+      <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The campaign diagram and the privilege sort were drawn for this lesson; the government diagram is Lesson 3’s.</p></div>
+  </div>
+</div>
+</section>
+
+</main>
+
+<div id="legend" role="group" aria-label="Function code"></div>
+
+<div id="timer" hidden>
+  <div id="clock">5:00</div>
+  <div class="row">
+    <button class="btn" data-min="3">3</button>
+    <button class="btn" data-min="5">5</button>
+    <button class="btn" data-min="10">10</button>
+    <button class="btn" data-min="15">15</button>
+  </div>
+  <div class="row">
+    <button class="btn" id="tGo">Start</button>
+    <button class="btn" id="tReset">Reset</button>
+  </div>
+</div>
+
+<div id="overview" hidden>
+  <h2>All slides</h2>
+  <div id="ovgrid"></div>
+  <div id="help">
+    <div><kbd>→ ␣</kbd><span>Next step or slide</span></div>
+    <div><kbd>←</kbd><span>Back</span></div>
+    <div><kbd>1–7</kbd><span>Toggle a colour</span></div>
+    <div><kbd>R</kbd><span>Read mode (phones, revision)</span></div>
+    <div><kbd>A</kbd><span>All colours on this slide</span></div>
+    <div><kbd>L</kbd><span>Legend</span></div>
+    <div><kbd>K</kbd><span>Timer</span></div>
+    <div><kbd>T</kbd><span>Light / dark</span></div>
+    <div><kbd>O Esc</kbd><span>This overview</span></div>
+    <div><kbd>Home End</kbd><span>First / last slide</span></div>
+  </div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var CODES = [
+  {k:"directive", label:"Directive",       letter:"D", hint:"the thinking demanded"},
+  {k:"keyterm",   label:"Key term",        letter:"K", hint:"words needing definition"},
+  {k:"scope",     label:"Scope",           letter:"S", hint:"which evidence to use"},
+  {k:"evidence",  label:"Evidence",        letter:"E", hint:"named writers, texts, events"},
+  {k:"analysis",  label:"Analysis",        letter:"A", hint:"what the evidence shows or does"},
+  {k:"judgement", label:"Judgement",       letter:"J", hint:"the position taken"},
+  {k:"counter",   label:"Counter-argument",letter:"C", hint:"what pulls the other way"}
+];
+
+var deck    = document.getElementById("deck"),
+    slides  = Array.prototype.slice.call(deck.querySelectorAll(".slide")),
+    bar     = document.getElementById("bar"),
+    secname = document.getElementById("secname"),
+    counter = document.getElementById("count"),
+    legend  = document.getElementById("legend"),
+    overview= document.getElementById("overview"),
+    ovgrid  = document.getElementById("ovgrid");
+
+var cur = 0, steps = slides.map(function(){ return 0; });
+
+/* --------------------------------------------------------------- legend */
+CODES.forEach(function(c){
+  var b = document.createElement("button");
+  b.className = "chip";
+  b.type = "button";
+  b.dataset.code = c.k;
+  b.setAttribute("aria-pressed","false");
+  b.title = c.hint;
+  b.innerHTML = '<span class="dot" aria-hidden="true">' + c.letter +
+                '</span><span>' + c.label + '</span>';
+  b.addEventListener("click", function(){ toggleCode(c.k); });
+  legend.appendChild(b);
+});
+
+function codeSpans(key){
+  return Array.prototype.slice.call(
+    slides[cur].querySelectorAll('.code[data-code="' + key + '"]'));
+}
+function codeIsOn(key){
+  var els = codeSpans(key);
+  return els.length > 0 && els.every(function(e){
+    return e.classList.contains("on"); });
+}
+function setCode(key, on){
+  codeSpans(key).forEach(function(e){ e.classList.toggle("on", on); });
+  syncChips();
+}
+function toggleCode(key){ setCode(key, !codeIsOn(key)); }
+function syncChips(){
+  CODES.forEach(function(c){
+    var chip = legend.querySelector('.chip[data-code="' + c.k + '"]'),
+        n = codeSpans(c.k).length;
+    chip.setAttribute("aria-pressed", codeIsOn(c.k) ? "true" : "false");
+    chip.style.opacity = n ? "1" : ".38";
+  });
+}
+
+/* ---------------------------------------------------------------- steps */
+function stepEls(i){
+  return Array.prototype.slice.call(slides[i].querySelectorAll(".reveal"));
+}
+function applySteps(i){
+  stepEls(i).forEach(function(el, n){
+    var on = n < steps[i];
+    el.classList.toggle("shown", on);
+    el.classList.toggle("current", n === steps[i] - 1);
+    if (el.dataset.paint) setCode(el.dataset.paint, on);
+    if (el.dataset.also) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.also))
+      .forEach(function(t){ t.classList.toggle("shown", on); });
+    if (el.dataset.hl) Array.prototype.slice.call(slides[i].querySelectorAll(el.dataset.hl))
+      .forEach(function(t){ t.classList.toggle("on", on); });
+    if (el.dataset.mark){
+      var t = slides[i].querySelector(el.dataset.mark);
+      if (t) t.classList.toggle("right", on);
+    }
+  });
+  syncChips();
+}
+
+/* ----------------------------------------------------------- navigation */
+function render(){
+  slides.forEach(function(s, i){ s.classList.toggle("active", i === cur); });
+  secname.textContent = slides[cur].dataset.sec || "";
+  counter.textContent = (cur + 1) + " / " + slides.length;
+  bar.style.width = ((cur + 1) / slides.length * 100) + "%";
+  applySteps(cur);
+  if (!overview.hidden) markOverview();
+  var anyCodes = slides[cur].querySelector(".code") !== null;
+  legend.style.visibility = anyCodes ? "visible" : "hidden";
+  var nb = document.getElementById("notesBody"), n = slides[cur].querySelector(".notes");
+  if (nb) nb.innerHTML = n ? n.innerHTML : "<p>No notes for this slide.</p>";
+}
+function toggleNotes(){
+  var np = document.getElementById("notesPanel");
+  if (!np) return;
+  np.hidden = !np.hidden;
+  document.getElementById("tNotes").setAttribute("aria-pressed", np.hidden ? "false" : "true");
+}
+function goTo(i, atEnd){
+  i = Math.max(0, Math.min(slides.length - 1, i));
+  if (i !== cur){
+    cur = i;
+    steps[i] = atEnd ? stepEls(i).length : 0;
+  }
+  render();
+}
+function next(){
+  if (steps[cur] < stepEls(cur).length){ steps[cur]++; applySteps(cur); }
+  else if (cur < slides.length - 1) goTo(cur + 1, false);
+}
+function prev(){
+  if (steps[cur] > 0){ steps[cur]--; applySteps(cur); }
+  else if (cur > 0) goTo(cur - 1, true);
+}
+
+/* -------------------------------------------------------------- overview */
+slides.forEach(function(s, i){
+  var b = document.createElement("button");
+  b.className = "ovcard"; b.type = "button";
+  b.innerHTML = '<span class="n">' + (i + 1) + '</span>' +
+                '<span class="t">' + (s.dataset.title || "") + '</span>' +
+                '<span class="s">' + (s.dataset.sec || "") + '</span>';
+  b.addEventListener("click", function(){
+    overview.hidden = true;
+    document.getElementById("tOver").setAttribute("aria-pressed","false");
+    if (reading){ slides[i].classList.remove("filtered"); slides[i].scrollIntoView({block:"start"}); return; }
+    goTo(i, false);
+  });
+  ovgrid.appendChild(b);
+});
+function markOverview(){
+  Array.prototype.slice.call(ovgrid.children).forEach(function(c, i){
+    c.classList.toggle("here", i === cur); });
+}
+function toggleOverview(){
+  overview.hidden = !overview.hidden;
+  document.getElementById("tOver")
+    .setAttribute("aria-pressed", overview.hidden ? "false" : "true");
+  if (!overview.hidden) markOverview();
+}
+
+/* ----------------------------------------------------------------- theme */
+var root = document.documentElement;
+try{
+  var saved = localStorage.getItem("sparta-theme");
+  if (saved) root.setAttribute("data-theme", saved);
+}catch(e){}
+function toggleTheme(){
+  var now = root.getAttribute("data-theme");
+  if (!now){
+    now = window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark" : "light";
+  }
+  var nextTheme = now === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", nextTheme);
+  try{ localStorage.setItem("sparta-theme", nextTheme); }catch(e){}
+}
+
+/* ----------------------------------------------------------------- timer */
+var timer   = document.getElementById("timer"),
+    clock   = document.getElementById("clock"),
+    goBtn   = document.getElementById("tGo"),
+    total   = 5 * 60, left = total, tick = null;
+
+function paint(){
+  var m = Math.floor(Math.abs(left) / 60), s = Math.abs(left) % 60;
+  clock.textContent = (left < 0 ? "-" : "") + m + ":" + (s < 10 ? "0" : "") + s;
+  timer.classList.toggle("low", left <= 60 && left > 0);
+  timer.classList.toggle("done", left <= 0);
+}
+function start(){
+  if (tick) return;
+  tick = setInterval(function(){ left--; paint(); }, 1000);
+  goBtn.textContent = "Pause";
+}
+function pause(){ clearInterval(tick); tick = null; goBtn.textContent = "Start"; }
+goBtn.addEventListener("click", function(){ tick ? pause() : start(); });
+document.getElementById("tReset").addEventListener("click", function(){
+  pause(); left = total; paint();
+});
+Array.prototype.slice.call(timer.querySelectorAll("[data-min]"))
+  .forEach(function(b){
+    b.addEventListener("click", function(){
+      pause(); total = parseInt(b.dataset.min, 10) * 60; left = total; paint();
+    });
+  });
+function toggleTimer(){
+  timer.hidden = !timer.hidden;
+  document.getElementById("tTimer")
+    .setAttribute("aria-pressed", timer.hidden ? "false" : "true");
+}
+paint();
+
+/* ------------------------------------------------------------- controls */
+document.getElementById("tTheme").addEventListener("click", toggleTheme);
+document.getElementById("tOver").addEventListener("click", toggleOverview);
+document.getElementById("tTimer").addEventListener("click", toggleTimer);
+document.getElementById("tLegend").addEventListener("click", function(){
+  legend.hidden = !legend.hidden;
+  this.setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+});
+
+document.addEventListener("keydown", function(e){
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  var k = e.key;
+  if (reading){
+    if (k === "r" || k === "R"){ setRead(false); }
+    else if (k === "t" || k === "T"){ toggleTheme(); }
+    else if (k === "o" || k === "O" || k === "Escape"){ toggleOverview(); e.preventDefault(); }
+    return;
+  }
+  if (k === "Escape"){ toggleOverview(); e.preventDefault(); return; }
+  if (!overview.hidden && k !== "o" && k !== "O") return;
+  switch (k){
+    case "ArrowRight": case " ": case "PageDown": case "Enter":
+      next(); e.preventDefault(); break;
+    case "ArrowLeft": case "PageUp": case "Backspace":
+      prev(); e.preventDefault(); break;
+    case "ArrowDown": goTo(cur + 1, false); e.preventDefault(); break;
+    case "ArrowUp":   goTo(cur - 1, true);  e.preventDefault(); break;
+    case "Home": goTo(0, false); e.preventDefault(); break;
+    case "End":  goTo(slides.length - 1, true); e.preventDefault(); break;
+    case "t": case "T": toggleTheme(); break;
+    case "o": case "O": toggleOverview(); e.preventDefault(); break;
+    case "k": case "K": toggleTimer(); break;
+    case "n": case "N": toggleNotes(); break;
+    case "r": case "R": setRead(true); break;
+    case "l": case "L":
+      legend.hidden = !legend.hidden;
+      document.getElementById("tLegend")
+        .setAttribute("aria-pressed", legend.hidden ? "false" : "true");
+      break;
+    case "a": case "A":
+      var allOn = CODES.every(function(c){
+        return codeSpans(c.k).length === 0 || codeIsOn(c.k); });
+      CODES.forEach(function(c){ setCode(c.k, !allOn); });
+      break;
+    default:
+      if (k >= "1" && k <= "7"){ toggleCode(CODES[+k - 1].k); }
+  }
+});
+
+/* click to advance, but never when the teacher is using a control */
+deck.addEventListener("click", function(e){
+  if (reading) return;
+  if (e.target.closest("button, a, .chip, .notes, label, input")) return;
+  next();
+});
+
+/* ------------------------------------------------------------ read mode */
+var reading = false,
+    readBtn = document.getElementById("tRead"),
+    filterBtns = Array.prototype.slice.call(document.querySelectorAll("#filter [data-f]"));
+
+Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn unveil";
+  b.textContent = el.dataset.veil || "Show the model answer";
+  b.addEventListener("click", function(){
+    var open = el.classList.toggle("unveiled");
+    b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+function applyFilter(f){
+  slides.forEach(function(s){
+    var kinds = (s.dataset.kind || "").split(" ");
+    s.classList.toggle("filtered", f !== "all" && kinds.indexOf(f) < 0);
+  });
+  filterBtns.forEach(function(b){
+    b.setAttribute("aria-pressed", b.dataset.f === f ? "true" : "false"); });
+  window.scrollTo(0, 0);
+}
+filterBtns.forEach(function(b){
+  b.addEventListener("click", function(){ applyFilter(b.dataset.f); }); });
+
+function setRead(on, quiet){
+  reading = on;
+  root.classList.toggle("read", on);
+  readBtn.setAttribute("aria-pressed", on ? "true" : "false");
+  readBtn.querySelector(".lbl").textContent = on ? "Present" : "Read";
+  slides.forEach(function(s){
+    Array.prototype.slice.call(s.querySelectorAll(".code"))
+      .forEach(function(c){ c.classList.toggle("on", on); });
+  });
+  if (on){
+    if (!quiet) slides[cur].scrollIntoView({block:"start"});
+  } else {
+    applyFilter("all");
+    steps[cur] = 0;
+    render();
+  }
+  try{ localStorage.setItem("sparta-mode", on ? "read" : "present"); }catch(e){}
+}
+readBtn.addEventListener("click", function(){ setRead(!reading); });
+
+if ("IntersectionObserver" in window){
+  var watcher = new IntersectionObserver(function(entries){
+    if (!reading) return;
+    entries.forEach(function(en){
+      if (!en.isIntersecting) return;
+      var i = slides.indexOf(en.target);
+      cur = i;
+      secname.textContent = en.target.dataset.sec || "";
+      counter.textContent = (i + 1) + " / " + slides.length;
+      bar.style.width = ((i + 1) / slides.length * 100) + "%";
+    });
+  }, {rootMargin:"-40% 0px -55% 0px"});
+  slides.forEach(function(s){ watcher.observe(s); });
+}
+
+var hm = location.hash.match(/^#(\d+)$/);
+if (hm){ cur = Math.max(0, Math.min(slides.length - 1, +hm[1] - 1)); steps[cur] = stepEls(cur).length; }
+render();
+var savedMode = null;
+try{ savedMode = localStorage.getItem("sparta-mode"); }catch(e){}
+if (/[?&]read\b/.test(location.search) ||
+    (savedMode ? savedMode === "read" : window.matchMedia("(max-width: 900px)").matches)){
+  setRead(true, !hm);
+}
+})();
+</script>
+</body>
+</html>

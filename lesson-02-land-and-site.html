@@ -709,6 +709,41 @@ html:not(.read) .margin.fold .anote{padding:.36em .7em;}
 .yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
 .tbl td.reveal{transition:opacity .35s ease;}
 
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
 /* ============================================================ READ MODE === */
 .unveil{display:none;}
 html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
@@ -771,6 +806,7 @@ html:not(.read) .read-only{display:none !important;}
     <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
     <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
     <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
   </span>
   <span id="count" aria-live="polite"></span>
   <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
@@ -1002,7 +1038,7 @@ html:not(.read) .read-only{display:none !important;}
   <h2>Feature → what it allowed → what it caused</h2>
   <div class="src">
     <div class="k">Model sentence</div>
-    <p class="quote"><span class="code" data-code="evidence" data-letter="E">The Taygetus range separates Laconia from Messenia,</span> <span class="code" data-code="analysis" data-letter="A">so conquering Messenia doubled Sparta’s farmland</span> <span class="code" data-code="counter" data-letter="C">but created a second helot population across the mountains.</span></p>
+    <p class="quote model"><span class="code" data-code="evidence" data-letter="E">The Taygetus range separates Laconia from Messenia,</span> <span class="code" data-code="analysis" data-letter="A">so conquering Messenia doubled Sparta’s farmland</span> <span class="code" data-code="counter" data-letter="C">but created a second helot population across the mountains.</span></p>
   </div>
   <i class="reveal" data-paint="evidence" hidden></i>
   <i class="reveal" data-paint="analysis" hidden></i>
@@ -1012,7 +1048,7 @@ html:not(.read) .read-only{display:none !important;}
     <span class="p a">what it allowed</span><span class="arr">→</span>
     <span class="p c">what it caused</span>
   </div>
-  <p class="cue reveal">Your turn, aloud to a partner: “The Eurotas valley ran south to the sea, so …”</p>
+  <p class="cue reveal nq">Your turn, aloud to a partner: “The Eurotas valley ran south to the sea, so …”</p>
 </div>
 </section>
 
@@ -1130,7 +1166,7 @@ html:not(.read) .read-only{display:none !important;}
       </div>
       <div class="card quiet reveal">
         <div class="k">Say it aloud</div>
-        <p class="body">“Laconia had iron and building stone, <b>but</b> citizens were not meant to work as craftsmen, <b>so</b> …”</p>
+        <p class="body nq">“Laconia had iron and building stone, <b>but</b> citizens were not meant to work as craftsmen, <b>so</b> …”</p>
         <p class="body m reveal">… mining, metalwork and quarrying fell to the perioikoi, who Cooley says “presumably exploited” the region’s resources.</p>
       </div>
     </div>
@@ -1175,7 +1211,7 @@ html:not(.read) .read-only{display:none !important;}
         <li class="reveal" data-also="[data-pin=v2]"><span class="num">2</span><span class="t">Mesoa</span><span class="d">The Suda calls the poet Alcman “a Lakonian from Messoa”.</span></li>
         <li class="reveal" data-also="[data-pin=v3]"><span class="num">3</span><span class="t">Limnai</span><span class="d">“Marshes” — low ground beside the Eurotas (Strabo).</span></li>
         <li class="reveal" data-also="[data-pin=v4]"><span class="num">4</span><span class="t">Kynosoura</span><span class="d">The fourth village, to the south.</span></li>
-        <li class="reveal" data-also="[data-pin=v5]"><span class="num">5</span><span class="t">Amyklai</span><span class="d">About 6 km south, along the road to Gytheion.</span></li>
+        <li class="reveal" data-also="[data-pin=v5]"><span class="num">5</span><span class="t">Amyklai</span><span class="d">About 5–6 km south, along the road to Gytheion.</span></li>
       </ol>
       <div class="note reveal" data-code="evidence"><p class="body">Graves around Sparta from about 900 BC are an early sign of these scattered villages.</p></div>
     </div>
@@ -1278,7 +1314,7 @@ html:not(.read) .read-only{display:none !important;}
     </div>
     <div class="stack">
       <figure class="figure short"><img src="images/clarke-7-7-amyklaion.jpg" alt="The site of the sanctuary of Apollo at Amyklai"><figcaption>The site of the sanctuary of Apollo at Amyklai — <span class="cr">Clarke & Garner, Fig 7.7</span></figcaption></figure>
-      <div class="card sm reveal"><div class="k">The Amyklaion</div><p class="body">Apollo and Hyakinthos, about 6 km south: home of the Hyakinthia. “The people of Amyklai always return for the Hyakinthia for the hymn to Apollo” (Xenophon, Cooley C70). The 421 BC treaty with Athens stood “next to the statue of Apollo at Amyklai” (Thucydides 5.23).</p></div>
+      <div class="card sm reveal"><div class="k">The Amyklaion</div><p class="body">Apollo and Hyakinthos, about 5–6 km south: home of the Hyakinthia. “The people of Amyklai always return for the Hyakinthia for the hymn to Apollo” (Xenophon, Cooley C70). The 421 BC treaty with Athens stood “next to the statue of Apollo at Amyklai” (Thucydides 5.23).</p></div>
     </div>
   </div>
 </div>
@@ -1291,7 +1327,7 @@ html:not(.read) .read-only{display:none !important;}
   <div class="cornell">
     <div class="ch"><span><b>L2 · The land and the site of Sparta</b></span><span>4 · The site</span></div>
     <div class="row"><div class="cq">How was it laid out?</div>
-      <div class="nts reveal">4 villages: <b>Pitana, Mesoa, Limnai, Kynosoura</b> + <b>Amyklai</b> (c. 6 km S) <span class="sep">·</span> on low hills W of the Eurotas <span class="sep">·</span> graves from c. 900 BC</div></div>
+      <div class="nts reveal">4 villages: <b>Pitana, Mesoa, Limnai, Kynosoura</b> + <b>Amyklai</b> (c. 5–6 km S) <span class="sep">·</span> on low hills W of the Eurotas <span class="sep">·</span> graves from c. 900 BC</div></div>
     <div class="row"><div class="cq">Walls?</div>
       <div class="nts reveal">None until the Hellenistic period (Cooley) <span class="sep">·</span> 370/69 BC: Spartiates “stationed here and there to guard it” (Xenophon, <i>Hell.</i> 6.5.27–28, Cooley K5)</div></div>
     <div class="row"><div class="cq">The centre?</div>
@@ -1397,7 +1433,7 @@ html:not(.read) .read-only{display:none !important;}
       </div>
       <div class="src reveal" data-veil="Show a model summary">
         <div class="k">A model summary</div>
-        <p class="quote sm">Sparta’s fertile Eurotas valley and conquered Messenia, walled by Taygetus and Parnon, gave it rich farmland worked by helots and natural defences, but also a large helot population to control across the mountains. The town itself was an open cluster of villages around a low acropolis and agora, with major sanctuaries at Orthia, the Menelaion and the Amyklaion. Its modest ruins would mislead a visitor about its power, as Thucydides predicted, but they also show where Spartans chose to spend their wealth — on gods and festivals rather than walls and showy buildings.</p>
+        <p class="quote sm model">Sparta’s fertile Eurotas valley and conquered Messenia, walled by Taygetus and Parnon, gave it rich farmland worked by helots and natural defences, but also a large helot population to control across the mountains. The town itself was an open cluster of villages around a low acropolis and agora, with major sanctuaries at Orthia, the Menelaion and the Amyklaion. Its modest ruins would mislead a visitor about its power, as Thucydides predicted, but they also show where Spartans chose to spend their wealth — on gods and festivals rather than walls and showy buildings.</p>
       </div>
     </div>
     <div class="card quiet">
@@ -1537,7 +1573,7 @@ html:not(.read) .read-only{display:none !important;}
   </div>
   <div class="src reveal" data-veil="Show the completed model">
     <div class="k">Completed — another full-mark version</div>
-    <p class="quote sm">Sparta lay in Laconia, in the south-eastern Peloponnese, on the fertile plain of the Eurotas River. The valley was enclosed by the Taygetus range to the west and the Parnon range to the east, which made it difficult to invade. Across Taygetus lay the even richer plain of Messenia, and to the south the valley opened onto the Laconian Gulf, where Gytheion served as Sparta’s port.</p>
+    <p class="quote sm model">Sparta lay in Laconia, in the south-eastern Peloponnese, on the fertile plain of the Eurotas River. The valley was enclosed by the Taygetus range to the west and the Parnon range to the east, which made it difficult to invade. Across Taygetus lay the even richer plain of Messenia, and to the south the valley opened onto the Laconian Gulf, where Gytheion served as Sparta’s port.</p>
   </div>
 </div>
 </section>
@@ -1588,7 +1624,7 @@ html:not(.read) .read-only{display:none !important;}
         <li>about 40–80 words</li>
       </ul></div>
     <div class="card quiet"><div class="k">Stuck?</div>
-      <p class="body">Start with the layout: “The site of Sparta was not a single walled city but …”</p></div>
+      <p class="body nq">Start with the layout: “The site of Sparta was not a single walled city but …”</p></div>
   </div>
 </div>
 </section>
@@ -1639,7 +1675,7 @@ html:not(.read) .read-only{display:none !important;}
     </div>
     <div class="src reveal" data-veil="Show a fuller version">
       <div class="k">A fuller version · written for this lesson</div>
-      <p class="quote sm">Sparta was not a single walled city but four villages — Pitana, Mesoa, Limnai and Kynosoura — on low hills west of the Eurotas, with Amyklai about 6 km south. At the centre were a low, unfortified acropolis with the bronze-clad Temple of Athena Chalkioikos, and the agora with its Persian Stoa. Major sanctuaries lay at the edges: Artemis Orthia by the river in Limnai, and the Menelaion and Amyklaion outside the town.</p>
+      <p class="quote sm model">Sparta was not a single walled city but four villages — Pitana, Mesoa, Limnai and Kynosoura — on low hills west of the Eurotas, with Amyklai about 5–6 km south. At the centre were a low, unfortified acropolis with the bronze-clad Temple of Athena Chalkioikos, and the agora with its Persian Stoa. Major sanctuaries lay at the edges: Artemis Orthia by the river in Limnai, and the Menelaion and Amyklaion outside the town.</p>
       <p class="prov">Three moves: the layout → the civic centre → the sanctuaries. 70 words.</p>
     </div>
   </div>
@@ -1719,7 +1755,7 @@ html:not(.read) .read-only{display:none !important;}
     </div>
     <div class="margin">
       <p class="head">Marker’s margin</p>
-      <div class="anote reveal" data-code="judgement" data-hl="#m6-5"><span class="mk">5</span><b>Signpost</b><span class="tx">“The same double effect” ties the new paragraph back to the opening judgement.</span></div>
+      <div class="anote reveal" data-code="judgement" data-hl="#m6-5"><span class="mk">5</span><b>Signpost</b><span class="tx nq">“The same double effect” ties the new paragraph back to the opening judgement.</span></div>
       <div class="anote reveal" data-code="analysis" data-hl="#m6-6"><span class="mk">6</span><b>Feature → consequence</b><span class="tx">Mountains → defence → no walls → reliance on the army.</span></div>
       <div class="anote reveal" data-code="counter" data-hl="#m6-7"><span class="mk">7</span><b>The other side</b><span class="tx">“Yet” turns the same feature into a problem, with a dated example. Weighing both sides makes an explanation “informed”.</span></div>
       <div class="anote reveal" data-code="keyterm" data-hl="#m6-8"><span class="mk">8</span><b>Precise terms</b><span class="tx">Spartiates, helots, perioikoi, hoplites: the “appropriate terms and concepts” of the top band.</span></div>
@@ -1757,6 +1793,129 @@ html:not(.read) .read-only{display:none !important;}
       </ul>
     </div>
   </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — put it in order" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing</p>
+  <h2>Put these in order, earliest first</h2>
+  <p class="task">Write the letters in order and a date beside each.</p>
+  <ul class="seq">
+    <li><span class="k">A</span><span>The Theban army reaches Sparta and finds no walls</span></li>
+    <li><span class="k">B</span><span>A shrine to Menelaus and Helen is set up at Therapne</span></li>
+    <li><span class="k">C</span><span>Pausanias describes the Persian Stoa</span></li>
+    <li><span class="k">D</span><span>Graves around Sparta show the first scattered villages</span></li>
+    <li><span class="k">E</span><span>Sparta conquers Messenia under King Theopompus</span></li>
+    <li><span class="k">F</span><span>The great earthquake shakes Mt Taygetus</span></li>
+    <li><span class="k">G</span><span>Thucydides predicts how Sparta’s ruins will look</span></li>
+    <li><span class="k">H</span><span>Tyrtaeus composes his poem on the capture of Messene</span></li>
+  </ul>
+  <div data-answers>
+    <p class="sol reveal">D (c. 900 BC) → E (c. 735–715 BC) → B (c. 700 BC) → H (mid-7th century BC) → F (c. 464 BC) → G (late 5th century BC) → A (370/69 BC) → C (c. AD 160s–170s)</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify</p>
+  <h2>True or false? Justify with evidence</h2>
+  <ol class="tf" data-answers>
+    <li><span class="n">1</span><span>Sparta was surrounded by a city wall in the 5th century BC.</span>
+      <span class="sol no reveal">False <span class="why">— Cooley: “The town of Sparta remained open until the Hellenistic period.” In 370/69 BC the Spartiates had to be “stationed here and there to guard it” (Xenophon).</span></span></li>
+    <li><span class="n">2</span><span>Mt Taygetus separated Laconia from Messenia.</span>
+      <span class="sol reveal">True <span class="why">— the range forms the western wall of the Eurotas valley, with Messenia beyond it.</span></span></li>
+    <li><span class="n">3</span><span>Gytheion was a perioikic town and Sparta’s chief naval base.</span>
+      <span class="sol reveal">True <span class="why">— Gytheion “served as chief naval base” (Cooley).</span></span></li>
+    <li><span class="n">4</span><span>Spartiates did most of the mining and quarrying in Laconia.</span>
+      <span class="sol no reveal">False <span class="why">— citizens were not craftsmen; the perioikoi “presumably exploited” the region’s resources (Cooley).</span></span></li>
+    <li><span class="n">5</span><span>The Spartan acropolis was a high, fortified hill like those of Thebes and Argos.</span>
+      <span class="sol no reveal">False <span class="why">— Pausanias: “The Lakedaimonians do not have an akropolis rising up to a prominent height”.</span></span></li>
+    <li><span class="n">6</span><span>The Menelaion stands at Therapne, south-east of Sparta, across the Eurotas.</span>
+      <span class="sol reveal">True <span class="why">— a shrine to Menelaus and Helen on high ground east of the river.</span></span></li>
+    <li><span class="n">7</span><span>Archaeologists have located the royal tombs of Sparta’s kings.</span>
+      <span class="sol no reveal">False <span class="why">— “The royal cemeteries of Sparta’s kings have not, alas, yet been located” (Cooley).</span></span></li>
+    <li><span class="n">8</span><span>Cavanagh thinks Thucydides overstated how village-like Sparta was.</span>
+      <span class="sol reveal">True <span class="why">— “The picture of Sparta as no more than a collection of villages is an overstatement by Thucydides”.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Eurotas</span><span>House</span><span>Limnai</span><span>murex</span><span>Parnon</span><span>Peloponnese</span><span>plant</span><span>spoils</span></div>
+  <ol class="cloze" data-answers>
+    <li>Sparta lay in the region of Laconia in the south-eastern <span class="gap"><span class="sol reveal">Peloponnese</span></span>.</li>
+    <li>The river that flows past Sparta is the <span class="gap"><span class="sol reveal">Eurotas</span></span>.</li>
+    <li>The mountain range on the eastern side of the valley is <span class="gap"><span class="sol reveal">Parnon</span></span>.</li>
+    <li>Tyrtaeus calls Messene good to plough and good to <span class="gap"><span class="sol reveal">plant</span></span>.</li>
+    <li>The marshy village beside the Eurotas was called <span class="gap"><span class="sol reveal">Limnai</span></span>.</li>
+    <li>A sea snail called the <span class="gap"><span class="sol reveal">murex</span></span> produced a prized purple dye.</li>
+    <li>Pausanias says the Persian Stoa was made of <span class="gap"><span class="sol reveal">spoils</span></span> from the Persian Wars.</li>
+    <li>The temple on the acropolis belonged to Athena of the Bronze <span class="gap"><span class="sol reveal">House</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph</p>
+  <h2>How far was Thucydides right about the site of Sparta?</h2>
+  <p class="task">Use Thucydides 1.10.2 and at least one other source.</p>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: how far was he right, and in what respect?</span>
+    <span class="l">Evidence</span><span>Use Thucydides 1.10.2 precisely, with its provenance, and at least one other source — the remains, or Cavanagh.</span>
+    <span class="l">Analyse</span><span>Explain what each piece of evidence shows about Sparta’s site and its power.</span>
+    <span class="l">Evaluate</span><span>Weigh it: why are the remains so thin, and what does that do to his prediction?</span>
+    <span class="l">Resolve</span><span>Close with your refined judgement — not a repeat of your first sentence.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Thucydides was largely right that Sparta’s remains would understate its power, but he overstated how village-like the city was. He predicted that a later visitor would find only “a collection of villages” with no “extravagant public buildings”, and the remains bear him out: Sparta had no walls until the Hellenistic period, and the temple of Artemis Orthia measured only about 16 × 7 m. Yet Cavanagh argues that the picture of Sparta “as no more than a collection of villages is an overstatement”, since the town had open spaces for public buildings, squares, hippodromes and palaistrai. The thin remains also reflect later damage: Roman building, the modern town and the lime burners who quarried the site. Thucydides was right about how Sparta would look, but its ruins mislead partly for reasons he could not foresee.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>Explain how the geographical setting and resources of Laconia and Messenia shaped Spartan society. <span class="small">(10 marks)</span></h2>
+  <p class="task">Support your response with evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li>Describe the setting: the Eurotas valley, Taygetus and Parnon, and Messenia.</li>
+    <li>Choose three resources and link each to a part of Spartan society: the helots, the perioikoi, the army, the common messes.</li>
+    <li>Use Tyrtaeus (Cooley A5), Herodotus (Cooley H9) and Aristotle (Cooley D28), and say what each writer’s date and purpose adds to their value.</li>
+    <li>Conclude: was geography a strength, a weakness, or both, for Sparta?</li>
+  </ol>
+  <p class="small">The 6-mark stretch model in section 6 shows the core of this answer.</p>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review" data-kind="practice notes">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 6 of 6 · chapter review</p>
+  <h2>Chapter review: the land and the site</h2>
+  <ol class="rq" data-answers>
+    <li>Where was Laconia, and how did it differ from Messenia?
+      <span class="sol reveal">Laconia was the south-eastern Peloponnese, centred on the Eurotas valley between Taygetus and Parnon. Messenia lay west of Taygetus: a broader plain with some of the best farmland in Greece, conquered c. 735–715 BC and worked by helots.</span></li>
+    <li>Describe the Eurotas valley and the mountains that enclose it.
+      <span class="sol reveal">A fertile, well-watered plain running south to the Laconian Gulf, walled by Taygetus (over 2,400 m) to the west and Parnon to the east, with hills to the north; only a few routes led in.</span></li>
+    <li>List four resources of Spartan territory and who exploited each.
+      <span class="sol reveal">Farmland (helots); iron and other metals (perioikoi); building stone and marble (perioikoi); the sea, trade and murex dye (the coastal perioikoi).</span></li>
+    <li>What does Tyrtaeus reveal about the conquest of Messenia, and why is he a valuable witness?
+      <span class="sol reveal">Messene was “good to plough and good to plant”, won in the twentieth year of war under King Theopompus in his grandfathers’ generation. He is our earliest witness and a Spartan — but a war poet with a purpose, and his lines survive only in later quotations.</span></li>
+    <li>Name the villages of Sparta and a source that mentions two of them.
+      <span class="sol reveal">Pitana, Mesoa, Limnai and Kynosoura, with Amyklai to the south. Herodotus met a man “in Pitana (that was his village)”; Strabo describes Limnai (‘Marshes’).</span></li>
+    <li>Outline the main features of the acropolis and the agora.
+      <span class="sol reveal">The acropolis was a low, unfortified hill with the Temple of Athena Chalkioikos (“of the Bronze House”). The agora was the centre of public life, with the Persian Stoa, built from Persian War spoils, and the Choros; its exact location is disputed.</span></li>
+    <li>Explain the importance of the Menelaion and the Amyklaion.
+      <span class="sol reveal">Both linked Sparta to the age of heroes. The Menelaion honoured Menelaus and Helen on a Mycenaean site; the Amyklaion was the sanctuary of Apollo and Hyakinthos, home of the Hyakinthia, where Sparta and Athens set up their treaty of 421 BC.</span></li>
+    <li>Evaluate Thucydides’ prediction about the ruins of Sparta.
+      <span class="sol reveal">Partly right: the remains are modest and there were no walls. But Cavanagh calls “a collection of villages” an overstatement, and much was lost to Roman building, the modern town and lime burners. The rich sanctuaries show where Spartan wealth went.</span></li>
+  </ol>
 </div>
 </section>
 
@@ -2092,6 +2251,16 @@ Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(fun
   b.addEventListener("click", function(){
     var open = el.classList.toggle("unveiled");
     b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
   });
   el.parentNode.insertBefore(b, el);
 });

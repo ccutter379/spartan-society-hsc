@@ -709,6 +709,41 @@ html:not(.read) .margin.fold .anote{padding:.36em .7em;}
 .yesno{font-weight:700;} .yesno.y{color:var(--c-evidence);} .yesno.n{color:var(--c-judgement);}
 .tbl td.reveal{transition:opacity .35s ease;}
 
+/* ---- Practice and review (every lesson). Answers (.sol) are reveal steps when
+   presenting; in Read mode a [data-answers] block hides them behind "Show answers". */
+.prac{display:flex; flex-direction:column; gap:clamp(8px,1.3vh,16px);}
+.prac .task{font-size:var(--fs-body); font-weight:600; max-width:46em;}
+.seq{list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:.45em 1.1em;}
+@media (max-width:900px){.seq{grid-template-columns:1fr;}}
+.seq li{display:grid; grid-template-columns:1.9em 1fr; gap:.15em .55em; align-items:baseline; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .75em; font-size:calc(var(--fs-body)*.86); line-height:1.36;}
+.seq li .k{font-family:var(--mono); font-weight:700; color:var(--deep); grid-row:span 2;}
+.seq.key li{border-left:5px solid var(--c-evidence);}
+.tf{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:.4em;}
+.tf li{display:grid; grid-template-columns:1.9em 1fr; column-gap:.55em; background:var(--surface);
+  border:1px solid var(--rule); border-radius:8px; padding:.42em .8em; font-size:calc(var(--fs-body)*.84); line-height:1.36;}
+.tf li .n{font-family:var(--mono); font-weight:700; color:var(--slate); grid-row:span 2;}
+.sol{display:block; color:var(--c-evidence); font-weight:600;}
+.sol.no{color:var(--c-judgement);}
+.sol .why{font-weight:400; color:var(--ink);}
+.cloze{margin:0; padding-left:1.4em; display:flex; flex-direction:column; gap:.35em; font-size:calc(var(--fs-body)*.9);}
+.gap{display:inline-block; min-width:6.5em; border-bottom:2px solid var(--slate); text-align:center; line-height:1.2;}
+.gap .sol{display:inline; padding:0 .2em;}
+.bank{display:flex; flex-wrap:wrap; gap:.4em;}
+.bank span{border:1px solid var(--rule); border-radius:999px; padding:.15em .75em; background:var(--surface);
+  font-size:calc(var(--fs-body)*.84);}
+.moves{display:grid; grid-template-columns:auto 1fr; gap:.4em .8em; align-items:baseline; font-size:calc(var(--fs-body)*.9);}
+.moves .l{font-family:var(--ui); font-size:.78em; letter-spacing:.06em; text-transform:uppercase; font-weight:700; color:var(--surface); background:var(--deep); border-radius:5px;
+  padding:.05em .45em; text-align:center;}
+:root[data-theme="dark"] .moves .l{color:var(--ground);}
+.rq{margin:0; padding-left:1.5em; display:flex; flex-direction:column; gap:.5em; font-size:calc(var(--fs-body)*.86); line-height:1.38;}
+.rq .sol{font-weight:400; color:var(--ink); border-left:3px solid var(--c-evidence); padding:.15em 0 .15em .7em; margin-top:.25em;}
+.showans{display:none;}
+html.read .showans{display:inline-flex; margin:.2em 0;}
+html.read [data-answers]:not(.answers-on) .sol{visibility:hidden;}
+html.read [data-answers]:not(.answers-on) .rq .sol, html.read [data-answers]:not(.answers-on) .tf .sol,
+html.read .rq[data-answers]:not(.answers-on) .sol, html.read .tf[data-answers]:not(.answers-on) .sol{display:none;}
+
 /* ============================================================ READ MODE === */
 .unveil{display:none;}
 html.read{--fs-body:1.06rem; --fs-lead:1.2rem; --fs-big:1.28rem; --fs-h2:clamp(1.5rem,4.2vw,2.15rem);
@@ -771,6 +806,7 @@ html:not(.read) .read-only{display:none !important;}
     <button class="btn" type="button" data-f="all" aria-pressed="true">All</button>
     <button class="btn" type="button" data-f="notes" aria-pressed="false">Notes</button>
     <button class="btn" type="button" data-f="hsc" aria-pressed="false"><span class="long">HSC answers</span><span class="short">HSC</span></button>
+    <button class="btn" type="button" data-f="practice" aria-pressed="false">Practice</button>
   </span>
   <span id="count" aria-live="polite"></span>
   <button class="btn present-only" id="tLegend" aria-pressed="true">Legend <kbd>L</kbd></button>
@@ -918,7 +954,7 @@ html:not(.read) .read-only{display:none !important;}
       <p class="body reveal">Spartans and later Greeks believed he was the lawgiver who designed Sparta’s whole way of life, with Apollo’s approval. Plutarch says he obtained the Rhetra as an oracle — yet the Rhetra itself never names him.</p>
     </div>
     <div class="card accent">
-      <div class="k">What is “the issue of Lycurgus”?</div>
+      <div class="k nq">What is “the issue of Lycurgus”?</div>
       <p class="body reveal">The Rhetra is probably a genuine early document. Whether Lycurgus created it — or even existed — is much less certain.</p>
     </div>
   </div>
@@ -1113,21 +1149,21 @@ html:not(.read) .read-only{display:none !important;}
   <p class="eyebrow">3 · The Great Rhetra · Check for understanding <span class="optional">If time</span></p>
   <h2>Which office is missing from the Rhetra?</h2>
   <div class="split" style="--cols:1.5fr 1fr">
-    <figure class="diagram"><svg class="gv" viewBox="0 0 1200 700" role="img" aria-label="Diagram of Spartan government in the Classical period. The two kings and the gerousia consulted each other; the kings sat in the gerousia, a council of 28 elders over sixty plus the two kings. The five ephors supervised the kings and chaired the ekklesia. The ekklesia, the assembly of citizens, elected the elders for life and the ephors each year.">
+    <figure class="diagram"><svg class="gv" viewBox="0 0 1200 700" role="img" aria-label="Diagram of Spartan government in the Classical period. The two kings were members of the gerousia, a council of 28 elders over sixty plus the two kings. The five ephors supervised the kings, and summoned and presided over the ekklesia. The ekklesia, the assembly of citizens, elected the elders for life and the ephors each year.">
 <defs><marker id="gv-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path class="ah" d="M0,0 L10,5 L0,10 z"/></marker></defs>
 <g class="node kings" id="gv-kings"><rect x="30" y="20" width="400" height="210" rx="22"/><text class="ttl" x="230" y="110">Two kings</text><text class="sub" x="230" y="160">from the Agiad and</text><text class="sub" x="230" y="198">Eurypontid families</text></g>
 <g class="node ger" id="gv-ger"><rect x="770" y="20" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="84">Gerousia</text><text class="sub" x="970" y="128">a council of 30:</text><text class="sub" x="970" y="165">28 elders (men over 60)</text><text class="sub" x="970" y="202">+ the two kings</text></g>
 <g class="node eph" id="gv-eph"><rect x="30" y="470" width="400" height="210" rx="22"/><text class="ttl" x="230" y="570">Five <tspan class="it">ephors</tspan></text><text class="sub" x="230" y="616">(officials)</text></g>
 <g class="node ekk" id="gv-ekk"><rect x="770" y="470" width="400" height="210" rx="22"/><text class="ttl it" x="970" y="542">Ekklesia</text><text class="sub" x="970" y="586">assembly of all citizens</text><text class="sub" x="970" y="623">(probably men over 30)</text></g>
-<line class="ln" x1="440" y1="125" x2="760" y2="125" marker-start="url(#gv-a)" marker-end="url(#gv-a)"/><text class="rel" x="600" y="104">Consulted</text><text class="how" x="600" y="166">kings sat in it</text>
+<line class="ln" x1="440" y1="125" x2="760" y2="125" marker-end="url(#gv-a)"/><text class="rel" x="600" y="104">Members</text><text class="how" x="600" y="166">the kings sat in it</text>
 <line class="ln" x1="230" y1="464" x2="230" y2="236" marker-end="url(#gv-a)"/><text class="rel left" x="252" y="330">Supervised</text><text class="how left" x="252" y="366">two ephors went on</text><text class="how left" x="252" y="396">campaign with a king</text>
 <line class="ln" x1="970" y1="464" x2="970" y2="236" marker-end="url(#gv-a)"/><text class="rel right" x="948" y="330">Elected</text><text class="how right" x="948" y="366">the elders, for life,</text><text class="how right" x="948" y="396">by shouting</text>
-<text class="rel" x="600" y="494">Supervised</text><text class="how" x="600" y="524">an ephor chaired it</text><line class="ln" x1="440" y1="548" x2="760" y2="548" marker-end="url(#gv-a)"/><line class="ln" x1="760" y1="608" x2="440" y2="608" marker-end="url(#gv-a)"/><text class="rel" x="600" y="652">Elected annually</text>
+<text class="rel" x="600" y="494">Presided over</text><text class="how" x="600" y="524">and summoned it</text><line class="ln" x1="440" y1="548" x2="760" y2="548" marker-end="url(#gv-a)"/><line class="ln" x1="760" y1="608" x2="440" y2="608" marker-end="url(#gv-a)"/><text class="rel" x="600" y="652">Elected annually</text>
 </svg>
       <figcaption>Sparta’s government in the Classical period — based on Clarke &amp; Garner, Fig 2.4, with details from the sources in Cooley. <span class="swipe">Swipe sideways to see it all.</span></figcaption></figure>
     <div class="stack tight">
       <p class="qprompt">This diagram shows Sparta’s government in the Classical period. Which part does the Rhetra never mention?</p>
-      <div class="note reveal" data-code="judgement" data-hl="#gv-eph"><p class="body"><b>The five ephors</b> — the powerful annual officials of classical Sparta (Lesson 5).</p></div>
+      <div class="note reveal" data-code="judgement" data-hl="#gv-eph"><p class="body"><b>The five ephors</b> — the powerful annual officials of classical Sparta (Lesson 6).</p></div>
       <div class="note reveal" data-code="counter"><p class="body">Herodotus credits Lycurgus with the ephorate, yet Plutarch dates the first ephors “Roughly some 130 years after Lykourgos”, in the reign of King Theopompus (<i>Lykourgos</i> 7, Cooley D17).</p></div>
       <div class="note reveal" data-code="analysis"><p class="body">The sources cannot all be right. Lycurgus seems to have been credited with institutions that appeared at different times.</p></div>
     </div>
@@ -1331,7 +1367,7 @@ html:not(.read) .read-only{display:none !important;}
 <section class="slide mid" data-sec="4 · The issue of Lycurgus" data-title="Vote: was Lycurgus real?">
 <div class="wrap">
   <p class="eyebrow">Check for understanding · gesture vote</p>
-  <h2>“Lycurgus was a real person.”</h2>
+  <h2 class="nq">“Lycurgus was a real person.”</h2>
   <div class="cols c3">
     <div class="card"><div class="k">Thumbs up</div><p class="lead">Agree</p></div>
     <div class="card"><div class="k">Sideways</div><p class="lead">Unsure</p></div>
@@ -1364,7 +1400,7 @@ html:not(.read) .read-only{display:none !important;}
       </div>
       <div class="src reveal" data-veil="Show a model judgement">
         <div class="k">A model judgement</div>
-        <p class="quote sm">Lycurgus may not have existed, because Tyrtaeus, our only witness from archaic Sparta, credits Apollo and the kings and never names him, but most later writers believed in him and Sparta worshipped him, so it is safest to treat him as a legendary founder whose story explains Sparta’s laws rather than as a proven historical person.</p>
+        <p class="quote sm model">Lycurgus may not have existed, because Tyrtaeus, our only witness from archaic Sparta, credits Apollo and the kings and never names him, but most later writers believed in him and Sparta worshipped him, so it is safest to treat him as a legendary founder whose story explains Sparta’s laws rather than as a proven historical person.</p>
       </div>
     </div>
   </div>
@@ -1450,7 +1486,7 @@ html:not(.read) .read-only{display:none !important;}
       <p class="qprompt">Why are these images evidence for the Spartan mirage rather than for Lycurgus?</p>
       <div class="note reveal" data-code="analysis"><p class="body">They are modern: a 20th-century lawcourt and a 19th-century painter still used Lycurgus as the model lawgiver. In Cooley’s words, “Lykourgos came to be a symbol for all things Spartan, both in Sparta and abroad.”</p></div>
       <div class="note reveal" data-code="counter"><p class="body">Not just “spin”: Cooley warns that “Such a process of myth-making should not be dismissed as cynical ‘spin’”. The legend was “a dynamic set of stories that developed and grew in the telling”.</p></div>
-      <div class="note reveal" data-code="evidence"><p class="body">Pausanias even credits Lycurgus with the Roman-era whipping at the altar of Artemis Orthia — which Cooley calls “an entirely specious justification” (Lesson 9).</p></div>
+      <div class="note reveal" data-code="evidence"><p class="body">Pausanias even credits Lycurgus with the Roman-era whipping at the altar of Artemis Orthia — which Cooley calls “an entirely specious justification” (Lesson 10).</p></div>
     </div>
   </div>
 </div>
@@ -1490,7 +1526,7 @@ html:not(.read) .read-only{display:none !important;}
       </div>
       <div class="src reveal" data-veil="Show a model summary">
         <div class="k">A model summary</div>
-        <p class="quote sm">The Great Rhetra was an early, oracle-style statement of Sparta’s constitution, preserved by Plutarch, which made the two kings and the elders of the gerousia responsible for proposals and gave a citizen assembly the final say, limited by the rider. Spartans believed Lycurgus had created this and their whole way of life with Apollo’s approval, but the earliest evidence never names him and ancient dates for him clash, so many historians treat him as a legend. Either way, the Rhetra decided who held power, and the legend gave Sparta’s laws a sacred, unchanging authority that discouraged reform.</p>
+        <p class="quote sm model">The Great Rhetra was an early, oracle-style statement of Sparta’s constitution, preserved by Plutarch, which made the two kings and the elders of the gerousia responsible for proposals and gave a citizen assembly the final say, limited by the rider. Spartans believed Lycurgus had created this and their whole way of life with Apollo’s approval, but the earliest evidence never names him and ancient dates for him clash, so many historians treat him as a legend. Either way, the Rhetra decided who held power, and the legend gave Sparta’s laws a sacred, unchanging authority that discouraged reform.</p>
       </div>
     </div>
     <div class="card quiet">
@@ -1585,8 +1621,8 @@ html:not(.read) .read-only{display:none !important;}
     <div class="margin fold">
       <p class="head">Marker’s margin</p>
       <div class="anote reveal" data-code="judgement" data-hl="#c24-1"><span class="mk">1</span><b>Answer first</b><span class="tx">Two effects in one sentence — identity and justifying the government. Everything after proves them.</span></div>
-      <div class="anote reveal" data-code="analysis" data-hl="#c24-2"><span class="mk">2</span><b>Myth → what it did</b><span class="tx">Not “Lycurgus was a lawgiver” but the job the myth did: an origin story for the Rhetra.</span></div>
-      <div class="anote reveal" data-code="evidence" data-hl="#c24-3"><span class="mk">3</span><b>A named writer</b><span class="tx">Plutarch, not “the Greek writers” — the marking feedback asks for specific writers.</span></div>
+      <div class="anote reveal" data-code="analysis" data-hl="#c24-2"><span class="mk">2</span><b>Myth → what it did</b><span class="tx nq">Not “Lycurgus was a lawgiver” but the job the myth did: an origin story for the Rhetra.</span></div>
+      <div class="anote reveal" data-code="evidence" data-hl="#c24-3"><span class="mk">3</span><b>A named writer</b><span class="tx">Plutarch, not “the Greek writers”. In 2024 NESA asked for “specific Greek writers” in part (b) and warned against “referring to writers in a generic way” in part (d).</span></div>
       <div class="anote reveal" data-code="counter" data-hl="#c24-4"><span class="mk">4</span><b>One word carries the debate</b><span class="tx">“Allegedly” shows the writer knows Lycurgus may be legendary, without derailing the answer.</span></div>
       <div class="anote reveal" data-code="analysis" data-hl="#c24-5"><span class="mk">5</span><b>The explain move</b><span class="tx">“Thus” links cause to effect: the laws → the foundation of Spartan society.</span></div>
       <div class="anote reveal" data-code="evidence" data-hl="#c24-6"><span class="mk">6</span><b>A second legend</b><span class="tx">More than one myth, as the markers asked: twin heroes ↔ two kings, backed by archaeology.</span></div>
@@ -1603,7 +1639,7 @@ html:not(.read) .read-only{display:none !important;}
   <p class="eyebrow">HSC 2024 Q11(c) · the evidence behind sentences 6 and 7</p>
   <h2>The Dioscuri and the two kings</h2>
   <div class="split" style="--cols:.7fr 1.5fr">
-    <figure class="figure contain"><img src="images/clarke-7-11-dioscuri-relief.jpg" alt="A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC"><figcaption>A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC — <span class="cr">Clarke & Garner, Fig 7.11</span></figcaption></figure>
+    <figure class="figure contain"><img src="images/clarke-7-11-dioscuri-relief.jpg" alt="A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost"><figcaption>A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost — <span class="cr">Clarke & Garner, Fig 7.11</span></figcaption></figure>
     <div class="stack">
       <div class="src">
         <div class="k">Source · Herodotus, on the kings at war</div>
@@ -1719,7 +1755,7 @@ html:not(.read) .read-only{display:none !important;}
         <li>about 250–330 words</li>
       </ul></div>
     <div class="card quiet"><div class="k">Stuck?</div>
-      <p class="body">Start: “Lycurgus and the Great Rhetra were important because together they gave Sparta …”</p></div>
+      <p class="body nq">Start: “Lycurgus and the Great Rhetra were important because together they gave Sparta …”</p></div>
   </div>
 </div>
 </section>
@@ -1823,6 +1859,135 @@ html:not(.read) .read-only{display:none !important;}
 </div>
 </section>
 
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — the writers in order" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 1 of 6 · sequencing</p>
+  <h2>Put the evidence in order, and say what each says about Lycurgus</h2>
+  <ul class="seq">
+    <li><span class="k">A</span><span>Plutarch, <i>Life of Lykourgos</i> (c. AD 100)</span></li>
+    <li><span class="k">B</span><span>Thucydides, <i>History</i> 1.18 (written after 404 BC)</span></li>
+    <li><span class="k">C</span><span>Tyrtaeus, fragment 4 (mid-7th century BC)</span></li>
+    <li><span class="k">D</span><span>Delacroix, <i>Lycurgus Consulting the Pythia</i> (1835–45)</span></li>
+    <li><span class="k">E</span><span>Herodotus, <i>Histories</i> 1.65–66 (c. 430s–420s BC)</span></li>
+    <li><span class="k">F</span><span>Xenophon, <i>Constitution of the Lakedaimonians</i> (late 390s or 380s BC)</span></li>
+  </ul>
+  <div data-answers>
+    <ol class="rq">
+      <li class="sol reveal"><b>C Tyrtaeus</b> — credits Phoebus Apollo and the kings; never names Lycurgus.</li>
+      <li class="sol reveal"><b>E Herodotus</b> — the first full account: Lycurgus brought the laws from Delphi, or (the Spartans said) from Crete, and set up the ephorate and gerousia.</li>
+      <li class="sol reveal"><b>B Thucydides</b> — the same constitution for “four hundred years and more”; never names Lycurgus.</li>
+      <li class="sol reveal"><b>F Xenophon</b> — names him and dates him “in the days of the Heraklids”; the laws were backed by Delphi.</li>
+      <li class="sol reveal"><b>A Plutarch</b> — a full life, but admits “There is a general lack of agreement about the life of Lykourgos”.</li>
+      <li class="sol reveal"><b>D Delacroix</b> — a modern painting: evidence for how later ages imagined Lycurgus, not for Lycurgus himself.</li>
+    </ol>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — true, false, justify" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 2 of 6 · true, false, justify</p>
+  <h2>True or false? Justify with a source</h2>
+  <ol class="tf" data-answers>
+    <li><span class="n">1</span><span>Herodotus says the Spartans themselves believed Lycurgus brought his laws from Crete.</span>
+      <span class="sol reveal">True <span class="why">— “the Lakedaimonians themselves say that Lykourgos brought these ideas back from Crete” (Herodotus 1.65).</span></span></li>
+    <li><span class="n">2</span><span>The Great Rhetra created the office of ephor.</span>
+      <span class="sol no reveal">False <span class="why">— the Rhetra never mentions ephors; Plutarch dates the first ephors “Roughly some 130 years after Lykourgos” (Cooley D17).</span></span></li>
+    <li><span class="n">3</span><span>The Rhetra’s gerousia had thirty members, including the two kings.</span>
+      <span class="sol reveal">True <span class="why">— “Set up a gerousia of thirty, with the founder-leaders (archagetai)”: 28 elders and the 2 kings.</span></span></li>
+    <li><span class="n">4</span><span>Tyrtaeus credits Lycurgus with bringing the oracle home from Delphi.</span>
+      <span class="sol no reveal">False <span class="why">— “Having listened to Phoibos, they brought home from Delphi / God’s oracles”: he credits Apollo and the kings and never names Lycurgus.</span></span></li>
+    <li><span class="n">5</span><span>According to Plutarch, the people in the assembly could propose their own laws.</span>
+      <span class="sol no reveal">False <span class="why">— the kings and elders proposed; the people could accept or reject, but not amend.</span></span></li>
+    <li><span class="n">6</span><span>The rider let the elders and kings dissolve the assembly.</span>
+      <span class="sol reveal">True <span class="why">— “if the people shall adopt a crooked proposal, the elders and founder-leaders shall have the power of dissolution”.</span></span></li>
+    <li><span class="n">7</span><span>The ancient writers agreed on when Lycurgus lived.</span>
+      <span class="sol no reveal">False <span class="why">— Herodotus, Xenophon, Aristotle, Eratosthenes and Timaeus give different dates; Timaeus even suggests two men called Lycurgus.</span></span></li>
+    <li><span class="n">8</span><span>The six clauses of the Great Rhetra name Lycurgus as their author.</span>
+      <span class="sol no reveal">False <span class="why">— the clauses never name him; it is Plutarch who says Lycurgus obtained them from Delphi.</span></span></li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — cloze" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 3 of 6 · cloze</p>
+  <h2>Fill the gaps</h2>
+  <div class="bank" aria-label="Word bank"><span>Apollo</span><span>archagetai</span><span>eunomia</span><span>gerousia</span><span>Herodotus</span><span>rhetra</span><span>rider</span><span>temple</span></div>
+  <ol class="cloze" data-answers>
+    <li>The earliest surviving historical account of Lycurgus was written by <span class="gap"><span class="sol reveal">Herodotus</span></span>.</li>
+    <li>A spoken law or pronouncement at Sparta was called a <span class="gap"><span class="sol reveal">rhetra</span></span>.</li>
+    <li>Plutarch says the old name for the kings was the founder-leaders, or <span class="gap"><span class="sol reveal">archagetai</span></span>.</li>
+    <li>The Rhetra set up a council of elders called the <span class="gap"><span class="sol reveal">gerousia</span></span>.</li>
+    <li>The clause added by Polydorus and Theopompus is called the <span class="gap"><span class="sol reveal">rider</span></span>.</li>
+    <li>Tyrtaeus says the constitution was revealed by Phoebus, another name for <span class="gap"><span class="sol reveal">Apollo</span></span>.</li>
+    <li>The good order the Spartans believed their laws produced was called <span class="gap"><span class="sol reveal">eunomia</span></span>.</li>
+    <li>After his death, the Spartans honoured Lycurgus with a <span class="gap"><span class="sol reveal">temple</span></span>.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — an analytical paragraph" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 4 of 6 · write an analytical paragraph</p>
+  <h2>How useful is Tyrtaeus fragment 4 for understanding the issue of Lycurgus?</h2>
+  <div class="moves">
+    <span class="l">Judge</span><span>Open with a qualified judgement: how useful is the fragment, and for what?</span>
+    <span class="l">Evidence</span><span>Quote specific lines and set them beside Plutarch’s Rhetra.</span>
+    <span class="l">Analyse</span><span>Explain what the match tells us about early Spartan government.</span>
+    <span class="l">Evaluate</span><span>Weigh the poem’s date, author, purpose and survival in later quotations — and its silence about Lycurgus.</span>
+    <span class="l">Resolve</span><span>Close with what the fragment adds to the debate about whether Lycurgus existed.</span>
+  </div>
+  <div class="src reveal" data-veil="Show a model paragraph">
+    <div class="k">A model paragraph · written for this lesson</div>
+    <p class="quote sm model">Tyrtaeus fragment 4 is very useful for the issue of Lycurgus, less for what it says than for what it leaves out. Written by a Spartan in the mid-7th century BC, it is our oldest witness, and its structure matches the Rhetra that Plutarch preserves: “The leaders in counsel are the kings”, the “eldest-born” sit beside them, and the people respond “with straight ordinances”, just as the Rhetra gives the people “decision and power”. Yet the poem credits Phoibos Apollo and the kings, and never names Lycurgus. A poem about how Sparta’s constitution came from Delphi is exactly where a famous lawgiver should appear. The fragment therefore supports the Rhetra as a genuine early arrangement, while weakening the claim that Lycurgus was its author.</p>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Practice — extended response plan" data-kind="practice">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 5 of 6 · extended response · HSC-style, written for this lesson</p>
+  <h2>To what extent can the Spartan constitution be credited to Lycurgus? <span class="small">(15 marks)</span></h2>
+  <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
+  <ol class="rq">
+    <li><b>Thesis</b> in your first sentence — for example, the Rhetra is genuine but its link to Lycurgus is legendary.</li>
+    <li><b>The case for Lycurgus:</b> Herodotus’ account, the hero cult and temple, Plutarch’s Rhetra.</li>
+    <li><b>The case against:</b> Tyrtaeus and Thucydides never name him; the dates clash; the ephorate came later; the rider was added by two kings.</li>
+    <li><b>Why the legend mattered:</b> Cooley’s view of Lycurgus as “a symbol for all things Spartan”.</li>
+  </ol>
+</div>
+</section>
+
+<section class="slide" data-sec="7 · Practice and review" data-title="Chapter review" data-kind="practice notes">
+<div class="wrap prac">
+  <p class="eyebrow">Practice and review · 6 of 6 · chapter review</p>
+  <h2>Chapter review: Lycurgus and the Great Rhetra</h2>
+  <ol class="rq" data-answers>
+    <li>What was the Great Rhetra, and what does the tradition say Lycurgus did?
+      <span class="sol reveal">A short pronouncement, framed as an oracle from Delphi, that set out how Sparta was governed: cults, tribes and obes, a gerousia of thirty, regular assemblies, and the people’s final say. Tradition says Lycurgus obtained it from Delphi and created Sparta’s laws.</span></li>
+    <li>Name the three parts of government found in both the Rhetra and Tyrtaeus fragment 4.
+      <span class="sol reveal">The kings, the elders (gerousia) and the people (the assembly).</span></li>
+    <li>What two versions does Herodotus give of where Lycurgus’ laws came from?
+      <span class="sol reveal">From the Pythia at Delphi, or — as the Spartans themselves said — from Crete.</span></li>
+    <li>What did the rider change, and who gained power from it?
+      <span class="sol reveal">If the people adopted a “crooked” proposal, the elders and the kings could set it aside: power shifted to the gerousia and the kings.</span></li>
+    <li>Why do scholars think the Rhetra is a genuine early document, though Plutarch wrote around AD 100?
+      <span class="sol reveal">Its wording is “obscure and archaic” (Cooley) and hard to invent; Tyrtaeus’ mid-7th-century poem matches its structure; Plutarch probably took it from Aristotle.</span></li>
+    <li>Why does the silence of Tyrtaeus and Thucydides about Lycurgus matter?
+      <span class="sol reveal">They are the oldest and the most careful witnesses, and neither names him. That suggests the full legend grew up later.</span></li>
+    <li>Using two ancient writers, show how the sources contradict each other about Lycurgus.
+      <span class="sol reveal">Herodotus makes him guardian of King Leobotas (about the 9th century BC on Cooley’s tentative dating); Aristotle links him to Iphitos and the Olympic truce; Timaeus suggests two men called Lycurgus.</span></li>
+    <li>How did presenting the constitution as an oracle from Delphi strengthen the Spartan system?
+      <span class="sol reveal">Laws from Apollo were sacred and hard to challenge, so the system seemed ancient, divine and unchangeable.</span></li>
+    <li>Explain why the Rhetra and the Lycurgus legend were each important for Spartan society.
+      <span class="sol reveal">The Rhetra set up government by kings, gerousia and assembly, and the rider let the elders and kings overrule the assembly. The legend gave Sparta a founding hero and made its way of life seem constant: Herodotus links it to good order, and Thucydides to four centuries of the same constitution.</span></li>
+    <li>Evaluate Cooley’s conclusion that it is best to treat Lycurgus as a mythical figure.
+      <span class="sol reveal">Strongly supported: Tyrtaeus and Thucydides are silent, the dates clash, and the ephorate came later. Herodotus’ account and the hero cult show the Spartans believed in him, but, as Cooley says, “we have no means of disentangling the legends”.</span></li>
+  </ol>
+</div>
+</section>
+
 <section class="slide mid" data-sec="Close" data-title="Exit ticket" data-kind="intro">
 <div class="wrap">
   <p class="eyebrow">Exit ticket · before you leave</p>
@@ -1847,7 +2012,7 @@ html:not(.read) .read-only{display:none !important;}
         <p class="small">HSC questions, marking criteria, sample answer, “answers could include” and marking feedback: NSW Education Standards Authority, 2021 and 2024 HSC Ancient History examinations, marking guidelines and feedback. © NESA. NESA glossary of key words for “explain”.</p></div>
     </div>
     <div class="card quiet"><div class="k">Images</div>
-      <ul class="small"><li>The remains of the Temple of Apollo at Delphi — Bradley, Fig 3.25</li><li>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — Hurley et al., Source 51</li><li>Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court — Clarke & Garner, Fig 7.9</li><li>Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting — Clarke & Garner, Fig 2.3</li><li>A votive relief of the Dioscuri, the twin sons of Zeus, 6th century BC — Clarke & Garner, Fig 7.11</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019); Clarke & Garner, Spartan society textbook (school copy).</p>
+      <ul class="small"><li>The remains of the Temple of Apollo at Delphi — Bradley, Fig 3.25</li><li>A marble relief with heroes and worshippers, c. 540 BC, from Chrysapha near Sparta — Hurley et al., Source 51</li><li>Lycurgus the lawgiver (left) in a modern relief at the US Supreme Court — Clarke & Garner, Fig 7.9</li><li>Eugène Delacroix, ‘Lycurgus Consulting the Pythia’, 1835–45 — a modern painting — Clarke & Garner, Fig 2.3</li><li>A votive relief of the Dioscuri, the twin heroes Castor and Polydeuces, 6th century BC — not the Plestiadas relief, whose top half is lost — Clarke & Garner, Fig 7.11</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019); Clarke & Garner, Spartan society textbook (school copy).</p>
       <p class="small">Textbook images are reproduced for teaching, with the source given under each one. The timeline and the Rhetra diagram were drawn for this lesson.</p></div>
   </div>
 </div>
@@ -2154,6 +2319,16 @@ Array.prototype.slice.call(document.querySelectorAll("[data-veil]")).forEach(fun
   b.addEventListener("click", function(){
     var open = el.classList.toggle("unveiled");
     b.textContent = open ? "Hide it again" : (el.dataset.veil || "Show the model answer");
+  });
+  el.parentNode.insertBefore(b, el);
+});
+
+Array.prototype.slice.call(document.querySelectorAll("[data-answers]")).forEach(function(el){
+  var b = document.createElement("button");
+  b.type = "button"; b.className = "btn showans";
+  b.textContent = "Show answers";
+  b.addEventListener("click", function(){
+    b.textContent = el.classList.toggle("answers-on") ? "Hide answers" : "Show answers";
   });
   el.parentNode.insertBefore(b, el);
 });

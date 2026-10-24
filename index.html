@@ -22,9 +22,11 @@ h1{font-family:var(--disp);font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;mar
 .lead{color:var(--slate);font-size:1.2rem;margin:0 0 1.6em;max-width:40em}
 .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
 @media (max-width:700px){.grid{grid-template-columns:1fr}}
-a.card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--rule);
-  border-left:6px solid var(--bright);border-radius:10px;padding:16px 18px;transition:.15s}
-a.card:hover,a.card:focus-visible{border-color:var(--bright);transform:translateY(-2px)}
+.card{background:var(--surface);border:1px solid var(--rule);border-left:6px solid var(--bright);border-radius:10px;
+  padding:16px 18px;display:flex;flex-direction:column;gap:2px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.links a{font-weight:700;text-decoration:none;color:var(--deep);border:1px solid var(--rule);border-radius:999px;padding:.3em .9em}
+.links a:hover,.links a:focus-visible{border-color:var(--bright);background:var(--tint)}
 .card .n{font-family:var(--mono);font-size:.85rem;color:var(--slate)}
 .card .t{font-family:var(--disp);font-weight:700;font-size:1.35rem;margin:.1em 0 .25em;color:var(--deep)}
 .card .d{color:var(--slate);font-size:.98rem}
@@ -39,16 +41,11 @@ footer{margin-top:34px;font-size:.85rem;color:var(--slate);border-top:1px solid 
 <main>
   <p class="eyebrow">Year 12 Ancient History · Section II, Option G</p>
   <h1>Spartan society to the Battle of Leuctra 371&nbsp;BC</h1>
-  <p class="lead">Each lesson works two ways: present it on the projector, or read it on your own device as a set of notes with annotated HSC answers.</p>
+  <p class="lead">Each lesson works two ways: present it on the projector, or read it on your own device as a set of notes, annotated HSC answers and practice questions.</p>
   <div class="grid">
-    <a class="card" href="lesson-02-land-and-site.html"><div class="n">Lesson 2</div><div class="t">The land and the site of Sparta</div>
-      <div class="d">Geographical setting · natural features and resources · the site · what the ruins can and cannot tell us · HSC 2021 and 2024 Q11(a)</div></a>
-    <a class="card" href="lesson-02-land-and-site.html?read"><div class="n">Lesson 2 · read mode</div><div class="t">Notes and HSC answers</div>
-      <div class="d">The same lesson as one scrolling page — best on a phone or for revision. Filter to just the notes or just the HSC answers.</div></a>
-    <a class="card" href="lesson-03-lycurgus-and-the-great-rhetra.html"><div class="n">Lesson 3</div><div class="t">Lycurgus and the Great Rhetra</div>
-      <div class="d">What the Great Rhetra set up · Herodotus’ story · the rider · did Lycurgus exist? · why the legend mattered · HSC 2024 and 2021 Q11(c)</div></a>
-    <a class="card" href="lesson-03-lycurgus-and-the-great-rhetra.html?read"><div class="n">Lesson 3 · read mode</div><div class="t">Notes and HSC answers</div>
-      <div class="d">The same lesson as one scrolling page, with the guided notes and two annotated HSC answers.</div></a>
+    <article class="card"><div class="n">Lesson 2</div><div class="t">The land and the site of Sparta</div><div class="d">Geographical setting · natural features and resources · the site · what the ruins can and cannot tell us · HSC 2021 and 2024 Q11(a)</div><div class="links"><a href="lesson-02-land-and-site.html">Present</a><a href="lesson-02-land-and-site.html?read">Read the notes</a></div></article>
+    <article class="card"><div class="n">Lesson 3</div><div class="t">Lycurgus and the Great Rhetra</div><div class="d">What the Great Rhetra set up · Herodotus’ story · the rider · did Lycurgus exist? · why the legend mattered · HSC 2024 and 2021 Q11(c)</div><div class="links"><a href="lesson-03-lycurgus-and-the-great-rhetra.html">Present</a><a href="lesson-03-lycurgus-and-the-great-rhetra.html?read">Read the notes</a></div></article>
+    <article class="card"><div class="n">Lesson 4</div><div class="t">The two kings</div><div class="d">Two royal houses · military, religious, judicial and political roles · privileges and honours · the limits on their power · HSC 2023 Q11(b)</div><div class="links"><a href="lesson-04-the-two-kings.html">Present</a><a href="lesson-04-the-two-kings.html?read">Read the notes</a></div></article>
   </div>
   <h2>Presenting a lesson</h2>
   <div class="keys">
