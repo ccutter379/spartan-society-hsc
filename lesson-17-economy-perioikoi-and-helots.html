@@ -911,6 +911,14 @@ html:not(.read) .diagram.l17-full svg{max-height:calc(100vh - 285px);}
 /* Read mode (phones): the resources grid at a readable size */
 html.read .l17-res ul, html.read .l17-res .l17-fix .body{font-size:calc(var(--fs-body)*.9); line-height:1.4;}
 html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:normal;}
+
+/* ---- added 2026-11-01 (Hodkinson 2026): the two surveys table */
+.tbl.compact.l17-surv{font-size:calc(var(--fs-body)*.84);}
+.l17-surv th:first-child{width:8.5em;}
+.l17-surv td:first-child{font-weight:700; color:var(--deep);}
+.l17-surv td{vertical-align:top; line-height:1.34;}
+.l17-surv tr.l17-key td{background:var(--w-judgement);}
+@media (max-width:700px){ html.read .l17-surv{min-width:600px;} }
 </style>
 </head>
 <body>
@@ -1134,7 +1142,7 @@ html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:norm
     <div class="stack tight"><p class="qprompt reveal">In a good year, who gains?</p>
       <p class="body reveal">Under a fixed rent the helot keeps the extra — Plutarch’s own reason: “so that the helots might make some profit”.</p></div>
     <div class="stack tight"><p class="qprompt reveal">Which was the classical system?</p>
-      <p class="body reveal">We cannot be sure. Tyrtaeus describes the conquered Messenians in the 7th century BC; Plutarch writes centuries later. They may describe different times or places (Lesson 8).</p></div>
+      <p class="body reveal">We cannot be sure: the writers are centuries apart (Lesson 8). Hodkinson (2026) thinks half, “probably on a fifty-fifty sharecropping basis”.</p></div>
   </div>
   <div class="note reveal" data-code="counter"><p class="body"><b>Careful:</b> the first two answers are our reasoning about how each arrangement works, not something an ancient writer says. Label reasoning like this as your own inference.</p></div>
 </div>
@@ -1159,6 +1167,26 @@ html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:norm
 </div>
 </section>
 
+<section class="slide" data-sec="1 · The helots: food" data-title="Two surveys, two helot lives" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">1 · The helots: food · We do — reading survey data <span class="optional">If time</span></p>
+  <h2>Two surveys, two kinds of helot life</h2>
+  <div class="tbl-scroll"><table class="tbl compact l17-surv">
+    <tr><th></th><th>Laconia Survey · near Sparta</th><th>Pylos survey (PRAP) · western Messenia</th></tr>
+    <tr class="reveal"><td>Area walked</td><td>70 km² “immediately east and north-east of Sparta”</td><td>40 km², “up to 75 km distant from Sparta”</td></tr>
+    <tr class="reveal"><td>Sites</td><td>87 late Archaic and 46 Classical sites, scattered</td><td>5 definite Archaic and 4 definite Classical sites, clustered</td></tr>
+    <tr class="reveal"><td>Size</td><td>Mostly tiny pottery scatters, 0.01–0.14 ha: read as single-household farmsteads</td><td>Much larger: the biggest (Romanou) has a Classical scatter of 14–27 ha</td></tr>
+    <tr class="reveal"><td>Other clues</td><td>Few storage jars; sites appear quickly in the later 6th century BC and fall away quickly after c. 450 BC</td><td>Romanou is partly unexplored, under a modern village</td></tr>
+    <tr class="reveal l17-key"><td>Hodkinson’s reading</td><td>Close supervision: “the purposeful dispersal of Helots close to Sparta”; few storage jars are “compatible with Spartiate masters regularly removing produce to their homes in Sparta”</td><td>Helots “lived together in substantial communities, potentially developing communal mechanisms for managing their labour for largely absentee masters”</td></tr>
+  </table></div>
+  <div class="split" style="--cols:1.15fr 1fr">
+    <div class="stack tight"><p class="qprompt reveal">What could the Messenian pattern help explain?</p>
+      <p class="body reveal">How the rebels of the 460s held out on Mount Ithome for years (Lesson 12): perhaps they were used to organising themselves. It also suggests helot leaders — a later Greek dictionary explains one word as “leaders of the Helots”.</p></div>
+    <div class="note reveal" data-code="counter"><div class="k">Careful</div><p class="body">Survey finds pottery on the surface, not owners or rents. That the sites near Sparta were helot farms is an interpretation: they were “probably inhabited by Helots farming Spartiate estates”, Hodkinson says.</p></div>
+  </div>
+</div>
+</section>
+
 <section class="slide" data-sec="1 · The helots: food" data-title="Notes 1 — The helots’ produce" data-kind="notes">
 <div class="wrap">
   <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 1 of 5</p>
@@ -1169,11 +1197,11 @@ html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:norm
     <div class="row"><div class="cq">What is a kleros, and who worked it?</div>
       <div class="nts reveal">The estate that supported a Spartiate <span class="sep">·</span> worked by <b>helots</b>, mostly for absentee masters <span class="sep">·</span> helots prob. organised their own work (Cooley)</div></div>
     <div class="row"><div class="cq">What did helots hand over?</div>
-      <div class="nts reveal"><b>Rent in kind</b> <span class="sep">·</span> Tyrtaeus (mid-7th c. BC): “Half” (A6) <span class="sep">·</span> Plutarch (c. AD 100): a fixed rent, never raised, so helots “might make some profit” (D36)</div></div>
+      <div class="nts reveal"><b>Rent in kind</b> <span class="sep">·</span> Tyrtaeus (mid-7th c. BC): “Half” (A6) <span class="sep">·</span> Plutarch (c. AD 100): a fixed rent, never raised, so helots “might make some profit” (D36) <span class="sep">·</span> Hodkinson (2026): prob. half</div></div>
     <div class="row"><div class="cq">Where did it go?</div>
       <div class="nts reveal">Master’s <b>household</b> + monthly <b>mess contribution</b>: barley-meal, wine, cheese, figs (Plut. <i>Lyc.</i> 12.2, D63) → no dues = no citizenship</div></div>
     <div class="row"><div class="cq">What does archaeology add?</div>
-      <div class="nts reveal">Messenia: villages that “evidently housed the helots” (Cavanagh) <span class="sep">·</span> Kopanaki: storage jars, loom weights <span class="sep">·</span> settlement varied</div></div>
+      <div class="nts reveal">Messenia: villages that “evidently housed the helots” (Cavanagh) <span class="sep">·</span> Kopanaki: storage jars, loom weights <span class="sep">·</span> settlement varied <span class="sep">·</span> near Sparta: tiny farmsteads, close watch; W. Messenia: sites up to 27 ha, absent masters (Hodkinson)</div></div>
   </div>
 </div>
 </section>
@@ -1230,6 +1258,21 @@ html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:norm
 </div>
 </section>
 
+<section class="slide" data-sec="2 · The helots: service" data-title="Not every helot lived alike" data-kind="notes">
+<div class="wrap l17-dense">
+  <p class="eyebrow">2 · The helots: service · I do — a modern historian on helot property <span class="optional">If time</span></p>
+  <h2>Not every helot lived alike</h2>
+  <div class="cols c3">
+    <div class="card accent reveal"><div class="k">Rich and ordinary estates</div><p class="body">Ordinary estates grew the mess foods (barley, wine, cheese, figs) and kept sheep and goats. Helots of wealthier citizens “also grew high-status wheat” and, in the later 5th and early 4th centuries, bred horses “for Sparta’s newly-created cavalry and for chariot racing” (Lesson 14).</p></div>
+    <div class="card accent reveal"><div class="k">Women’s estates</div><p class="body">Many helots worked for women. Aristotle: “almost two-fifths of the whole country is owned by women” (D54).</p></div>
+    <div class="card accent reveal"><div class="k">The sea</div><p class="body">“Helots from coastal regions exploited marine resources.” The helots who supplied Sphacteria “possessed their own boats” (Hodkinson, from Thucydides 4.26).</p></div>
+    <div class="card accent reveal"><div class="k">Money</div><p class="body">After Plataea some helots sold plunder (E61). In 223 BC — long after our period — “6000 Lakonian Helots paid five minas (500 drachmas) to purchase their freedom.”</p></div>
+    <div class="card accent reveal"><div class="k">A surplus to sell</div><p class="body">If helots kept about half the harvest, and probably sheep and goats, some produce, wool or dairy “could potentially be set aside for sale”, Hodkinson argues.</p></div>
+    <div class="note reveal" data-code="judgement"><div class="k">So what?</div><p class="body">Hodkinson: “Helots clearly had access to mobile and monetary wealth.” In an answer, say <i>which</i> helots: near Sparta or in Messenia, on a rich or an ordinary estate.</p></div>
+  </div>
+</div>
+</section>
+
 <section class="slide" data-sec="2 · The helots: service" data-title="Notes 2 — Helot service" data-kind="notes">
 <div class="wrap">
   <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 2 of 5</p>
@@ -1239,7 +1282,7 @@ html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:norm
     <div class="row"><div class="cq">What work did helots do besides farming?</div>
       <div class="nts reveal">Household servants (prob.) <span class="sep">·</span> <b>attendants</b>: 35,000 at Plataea, “seven serving each man” (Hdt 9.28, E84) <span class="sep">·</span> food carriers to Sphacteria, 425 BC, for freedom (Thuc. 4.26, E92) <span class="sep">·</span> soldiers, 370 BC (E69)</div></div>
     <div class="row"><div class="cq">Did helots ever trade?</div>
-      <div class="nts reveal">After Plataea some plunder was sold to the Aeginetans (Hdt 9.80, E61) <span class="sep">·</span> helots may have had private possessions — “possible” (Cooley)</div></div>
+      <div class="nts reveal">After Plataea some plunder was sold to the Aeginetans (Hdt 9.80, E61) <span class="sep">·</span> helots may have had private possessions — “possible” (Cooley) <span class="sep">·</span> Hodkinson: boats; prob. sheep + goats; perhaps a surplus to sell; lives varied with the estate</div></div>
     <div class="row"><div class="cq">What did helot labour buy?</div>
       <div class="nts reveal">Spartiate <b>leisure</b>: “no need to work for a living” (Cooley) <span class="sep">·</span> Aristotle: “leisure from drudgery” (D27)</div></div>
     <div class="row"><div class="cq">At what cost?</div>
@@ -1831,7 +1874,7 @@ html.read .l17-res .l17-who{font-size:calc(var(--fs-body)*.78); white-space:norm
   <h2>Where everything comes from</h2>
   <div class="cols c2">
     <div class="card quiet"><div class="k">Ancient sources and scholars</div>
-      <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Tyrtaeus frs 6–7 (A6, trans. K. Hughes); Herodotus 6.60, 9.28–29 and 9.80 (D24, E84, E61, trans. B. Wilson); Thucydides 1.101.2 and 4.26.5 (E62, E92, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 5.3, 7, 11.2 and 15.3 (D61, D53, D88, D9, trans. B. Wilson) and <i>Hellenika</i> 3.3.7, 5.3.9 and 6.5.29 (E53a, E57, E69); Aristotle, <i>Politics</i> 1269a–b (D27); Plutarch, <i>Life of Lykourgos</i> 8.3, 12.2 and 28 (D57, D63, D44, trans. B. Wilson) and <i>Lakonian Customs</i> 41 (D36); Pausanias 3.17.2 (K3); the Gytheion quarry inscription, IG 5.1.1155 (K6). Cooley’s introductions and notes: the helots, ‘Perioikoi: a note’ (pp. 105–106), the Spartiates, wealth and property, and the note on E77; W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, in Cooley.</p></div>
+      <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Tyrtaeus frs 6–7 (A6, trans. K. Hughes); Herodotus 6.60, 9.28–29 and 9.80 (D24, E84, E61, trans. B. Wilson); Thucydides 1.101.2 and 4.26.5–6 (E62, E92, trans. B. Wilson); Xenophon, <i>Constitution of the Lakedaimonians</i> 5.3, 7, 11.2 and 15.3 (D61, D53, D88, D9, trans. B. Wilson) and <i>Hellenika</i> 3.3.7, 5.3.9 and 6.5.29 (E53a, E57, E69); Aristotle, <i>Politics</i> 1269a–b and 1270a (D27, D54); Plutarch, <i>Life of Lykourgos</i> 8.3, 12.2 and 28 (D57, D63, D44, trans. B. Wilson) and <i>Lakonian Customs</i> 41 (D36); Pausanias 3.17.2 (K3); the Gytheion quarry inscription, IG 5.1.1155 (K6). Cooley’s introductions and notes: the helots, ‘Perioikoi: a note’ (pp. 105–106), the Spartiates, wealth and property, and the note on E77; W. G. Cavanagh, ‘Introduction to Lakonian Archaeology’, and S. Hodkinson, ‘Introduction to the Epigraphy of Lakonia and Messenia’, in Cooley. Modern article: S. Hodkinson, ‘Helot Slavery in Classical Sparta’, <i>Teaching History</i> (History Teachers’ Association of NSW) 60.3 (2026), 13–19 (the rent, the Laconia and Pylos surveys, helot property).</p></div>
     <div class="stack">
       <div class="card quiet"><div class="k">Images and diagrams</div>
         <ul class="small"><li>Olive trees around Sparta today — a modern photograph — Bradley, Fig 3.5</li><li>Modern Gytheio, on the site of ancient Gytheion: a perioikic town and Sparta’s chief naval base — Clarke & Garner, Fig 6.3</li><li>A bronze helmet in the British Museum, identified by the textbook as Spartan — Clarke & Garner, Fig 6.5</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy).</p>

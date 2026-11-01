@@ -910,6 +910,18 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
 
 /* phones and tablets: the annotated answers stack (the shared .annot.wide rule keeps two columns) */
 @media (max-width:900px){ .l12-dense .annot.wide{grid-template-columns:1fr;} }
+
+/* ---- added 2026-11-01 (Hodkinson 2026): the record of helot revolts */
+.tbl.compact.l12-revolts{font-size:calc(var(--fs-body)*.8);}
+.l12-revolts th:first-child{width:6.2em;}
+.l12-revolts th:last-child{width:34%;}
+.l12-revolts td:first-child{font-weight:700; color:var(--deep); white-space:nowrap;}
+.l12-revolts td{vertical-align:top; line-height:1.32;}
+.l12-revolts tr.l12-key td{background:var(--w-judgement);}
+@media (max-width:700px){ html.read .l12-revolts{min-width:600px;} }
+/* the 1900 painting (portrait detail): size by height, not width */
+.l12-paint .figure img{width:auto; max-width:100%; max-height:calc(100vh - 300px); object-fit:contain; margin:0 auto;}
+html.read .l12-paint .figure img{max-height:70vh;}
 </style>
 </head>
 <body>
@@ -1286,6 +1298,7 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
       <li class="reveal"><span class="num">1</span><span class="t">Unlawful killing brought pollution</span><span class="d">Greeks believed it was a stain of guilt that angered the gods.</span></li>
       <li class="reveal"><span class="num">2</span><span class="t">So the ephors declared war each year</span><span class="d">“whenever they first took office”, as Plutarch reports from Aristotle (Cooley D44). Killing a helot became an act of war, not murder.</span></li>
       <li class="reveal"><span class="num">3</span><span class="t">It shows the ephors’ power</span><span class="d">Cooley: the ephors “controlled the krypteia” (Lesson 6).</span></li>
+      <li class="reveal"><span class="num">4</span><span class="t">But when did it begin?</span><span class="d">Plutarch’s source, Aristotle’s school, wrote after 370/69 BC. Some historians see the declaration as “a late development following Sparta’s loss of Messenia” (Hodkinson 2026) — after the period we study.</span></li>
     </ol>
     <div class="stack tight">
       <p class="qprompt">Hinge: why did the ephors declare war on the helots each year? One finger = A, two = B.</p>
@@ -1294,7 +1307,7 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
         <li id="l12hqb"><span class="n">B</span><span>So that killing a helot would not bring religious pollution</span></li>
       </ol>
       <i class="reveal" data-mark="#l12hqb" hidden></i>
-      <div class="note reveal" data-code="judgement"><p class="body"><b>B.</b> Aristotle, as reported by Plutarch (D44), gives that purpose. A legal and religious device, renewed every year — routine, not a response to one crisis.</p></div>
+      <div class="note reveal" data-code="judgement"><p class="body"><b>B.</b> Aristotle, as reported by Plutarch (D44), gives that purpose. A legal and religious device, renewed every year — routine, not a response to one crisis, at least in Aristotle’s day (step 4).</p></div>
     </div>
   </div>
 </div>
@@ -1327,6 +1340,29 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
 </div>
 </section>
 
+<section class="slide" data-sec="4 · The krypteia" data-title="Did the krypteia hunt helots? Four views" data-kind="notes">
+<div class="wrap l12-dense">
+  <p class="eyebrow">4 · The krypteia and the ephors’ declaration of war · We do — four views, summarised by Hodkinson (2026) <span class="optional">If time</span></p>
+  <h2>Did the krypteia hunt helots? Four views</h2>
+  <div class="cols c2">
+    <div class="card accent reveal"><div class="k">1 · Its main job</div><p class="body">Killing helots was “the Krypteia’s central function”, either from its supposed origins in the Archaic period or after the helot revolt of the 460s.</p></div>
+    <div class="card accent reveal"><div class="k">2 · Mostly symbolic</div><p class="body">Helot-hunting was “a primarily symbolic activity”.</p></div>
+    <div class="card accent reveal"><div class="k">3 · Later than our period</div><p class="body">Helot-hunting — “and sometimes the very creation of the Krypteia” — belongs after 370 BC, once Messenia was lost.</p></div>
+    <div class="card accent reveal"><div class="k">4 · It never happened</div><p class="body">It is “absent from the earliest evidence for the Krypteia, Plato’s Laws”; outside writers invented it amid criticism of helotage after Messenia was freed; and Plutarch’s account comes “from the unreliable epitome” (summary) of Herakleides Lembos, not from the Aristotelian <i>Spartan Constitution</i> itself.</p></div>
+  </div>
+  <div class="split" style="--cols:1fr 1fr">
+    <div class="stack tight">
+      <p class="qprompt reveal">Cooley doubts Plato because his account “does nothing to explain the name”. How does view 4 use Plato?</p>
+      <p class="body reveal">As the best evidence, because it is the earliest. The same source can look weak or strong, depending on the question you ask of it.</p>
+    </div>
+    <div class="src reveal" data-veil="Show a model judgement">
+      <div class="k">A model judgement · written for this lesson</div>
+      <p class="quote sm model">Plato, the earliest witness, describes the krypteia only as an endurance test, and the killing of helots survives only in later excerpts and in Plutarch, so although Plato shows that the krypteia existed by the mid-4th century BC, whether it hunted helots before 370 BC is disputed.</p>
+    </div>
+  </div>
+</div>
+</section>
+
 <section class="slide" data-sec="4 · The krypteia" data-title="Notes 3 — The krypteia" data-kind="notes">
 <div class="wrap">
   <p class="eyebrow ckpt"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L18.5 9.5a2.1 2.1 0 0 0-4-4L4 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M13.5 6.5l4 4" stroke="currentColor" stroke-width="2"/></svg> Notes checkpoint 3 of 5</p>
@@ -1336,11 +1372,13 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
     <div class="row"><div class="cq">Describe the krypteia as Plutarch reports it.</div>
       <div class="nts reveal">“Most intelligent” young men <span class="sep">·</span> daggers + basic rations <span class="sep">·</span> hide by day, kill helots on roads by night; murder the strongest (Plut. <i>Lyk.</i> 28, citing Aristotle, D44) <span class="sep">·</span> c. AD 100</div></div>
     <div class="row"><div class="cq">Why did the ephors declare war on the helots each year?</div>
-      <div class="nts reveal">Arist. in Plut. (D44): killing a helot = act of war → no <b>religious pollution</b> <span class="sep">·</span> routine, every year <span class="sep">·</span> ephors “controlled the krypteia” (Cooley)</div></div>
+      <div class="nts reveal">Arist. in Plut. (D44): killing a helot = act of war → no <b>religious pollution</b> <span class="sep">·</span> routine, every year — in Aristotle’s day; some date it <b>after 370/69 BC</b> (Hodkinson) <span class="sep">·</span> ephors “controlled the krypteia” (Cooley)</div></div>
     <div class="row"><div class="cq">How does Plato’s account differ, and why does Cooley doubt it?</div>
       <div class="nts reveal">Plato: <b>endurance</b> test, no killing (D42) <span class="sep">·</span> doesn’t explain the name (‘secret’) <span class="sep">·</span> evidence “rather slim” (Cooley)</div></div>
     <div class="row"><div class="cq">How did it control the helots?</div>
       <div class="nts reveal"><b>Terror + unpredictability</b>: helots “could never feel entirely safe” (Cooley, prob.) <span class="sep">·</span> potential leaders removed</div></div>
+    <div class="row"><div class="cq">Did the krypteia really hunt helots?</div>
+      <div class="nts reveal"><b>Disputed</b> — 4 views (Hodkinson 2026): main job <span class="sep">·</span> symbolic <span class="sep">·</span> only after 370 BC <span class="sep">·</span> never: not in Plato (earliest, D42); Plut.’s source = Herakleides’ summary</div></div>
   </div>
 </div>
 </section>
@@ -1362,7 +1400,7 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
       <p class="body reveal">Deception: a false offer of freedom used as a test to find the boldest. Then terror: they vanished.</p>
       <p class="qprompt reveal" data-paint="judgement">He admits “no one knows”. More or less believable?</p>
       <p class="body reveal">His honesty helps — but he cannot say how they died.</p>
-      <div class="note reveal" data-code="counter"><div class="k">Cooley: two cautions</div><p class="body">The massacre is undated, “a different occasion from enlisting 700 as hoplites”, and “It is also hard to imagine how one could kill so many helots without a trace.”</p></div>
+      <div class="note reveal" data-code="counter"><div class="k">Two cautions — and a doubt</div><p class="body">Cooley: the massacre is undated, and “It is also hard to imagine how one could kill so many helots without a trace.” Hodkinson (2026): whether it happened at all “has also been questioned”.</p></div>
     </div>
   </div>
 </div>
@@ -1457,6 +1495,24 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
   <div class="split" style="--cols:1fr 1fr">
     <div class="note reveal" data-code="judgement"><div class="k">How it controlled the helots</div><p class="body">It marked them as permanently inferior, showed young Spartiates what they must never become, and discouraged the pride from which revolts might grow.</p></div>
     <div class="note reveal" data-code="counter"><div class="k">But the evidence is late and coloured</div><p class="body">Myron wrote a Messenian history centuries afterwards; Plutarch, c. AD 100, calls it “savage brutality” and was building a moral case.</p></div>
+  </div>
+</div>
+</section>
+
+<section class="slide" data-sec="6 · Humiliation and reward" data-title="Plutarch’s story in modern art" data-kind="notes">
+<div class="wrap l12-dense">
+  <p class="eyebrow">6 · Humiliation and reward · We do — how a late story shaped the modern picture <span class="optional">If time</span></p>
+  <h2>A drunken helot, painted in 1900</h2>
+  <div class="split" style="--cols:.8fr 1.2fr">
+    <div class="l12-paint"><figure class="figure"><img src="images/sabatte-1900-drunken-helot-detail.jpg" alt="Fernand Sabatté, ‘A Spartan shows his sons a drunken helot’, 1900 (detail), the winning painting for the Prix de Rome — a modern painting of Plutarch’s story, not ancient evidence"><figcaption>Fernand Sabatté, ‘A Spartan shows his sons a drunken helot’, 1900 (detail), the winning painting for the Prix de Rome — a modern painting of Plutarch’s story, not ancient evidence — <span class="cr">Wikimedia Commons, public domain</span></figcaption></figure></div>
+    <div class="stack tight">
+      <p class="body">In 1900 painters competing for the Prix de Rome in Paris were all set the same subject: <i>A Spartan shows his sons a drunken helot</i> — Plutarch’s story from <i>Lycurgus</i> 28. Hodkinson: Plutarch’s “moralising account of the enforced drunkenness of the Helots exercised a strong appeal in early modern literature and art”.</p>
+      <p class="qprompt reveal">Why might this story appeal to an art school in 1900?</p>
+      <p class="body reveal">It is a ready-made moral lesson about self-control, from a famous ancient author — the same reason Plutarch told it.</p>
+      <p class="qprompt reveal">So were beatings and drunken shows everyday helot life?</p>
+      <p class="body reveal">Hodkinson thinks Myron’s fixed beatings, and death for any helot who “overstepped how they thought a slave should appear” (D41), “may have been symbolically powerful rituals performed only occasionally on selected representatives, but violence against Helots in general was an everyday fact of life”.</p>
+      <div class="note reveal" data-code="evidence"><div class="k">A classical witness</div><p class="body">The ‘Old Oligarch’, an anonymous Athenian writer probably of the later 5th century BC, complained that in Athens you could not beat someone else’s slave, “whereas ‘in Sparta my slave would fear you’” (quoted by Hodkinson).</p></div>
+    </div>
   </div>
 </div>
 </section>
@@ -1596,12 +1652,32 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
 </div>
 </section>
 
+<section class="slide" data-sec="7 · When control failed" data-title="How often did the helots revolt?" data-kind="notes">
+<div class="wrap l12-dense">
+  <p class="eyebrow">7 · When control failed · We do — testing the record <span class="optional">If time</span></p>
+  <h2>How often did the helots revolt?</h2>
+  <div class="tbl-scroll"><table class="tbl compact l12-revolts">
+    <tr><th>When</th><th>The evidence</th><th>A helot revolt?</th></tr>
+    <tr class="reveal"><td>c. 490 BC</td><td>Plato: the Spartans were late for Marathon, “hindered by the war that was then taking place against the Messenians and maybe by something else – we cannot say” (<i>Laws</i> 698DE, Cooley E60). Herodotus gives a religious reason: they could not march “until the full moon” (6.106, Cooley H16).</td><td>Disputed. Cooley: Plato is “clear, but written 100 years later”, and other scraps of evidence support a revolt or war. Hodkinson: Plato “hardly inspires confidence”.</td></tr>
+    <tr class="reveal l12-key"><td>c. 464 BC</td><td>The earthquake and the secession to Mount Ithome (Thucydides 1.101–103, Cooley E62).</td><td><b>Yes</b> — “The only definite Helot revolt” (Hodkinson).</td></tr>
+    <tr class="reveal"><td>425–421 BC</td><td>Athenians and Messenians hold Pylos. The alliance of 421 BC binds Athens to help Sparta “In the event of an uprising of the slave-body” (Thucydides 5.23, Cooley B18).</td><td>Fear, not revolt: some helots deserted to Pylos, “but nothing more” (Hodkinson).</td></tr>
+    <tr class="reveal"><td>c. 399 BC</td><td>Cinadon names helots among those who would “gladly eat” the Spartiates (Xenophon, <i>Hell.</i> 3.3.6, Cooley E53a; Lesson 7).</td><td>No: “there is no indication of their active involvement” (Hodkinson).</td></tr>
+    <tr class="reveal"><td>370/69 BC</td><td>A Theban army invades; “More than six thousand helots, it is said, enrolled themselves” to defend Sparta (Xenophon, <i>Hell.</i> 6.5.29, Cooley E69).</td><td>No: Messenia was freed “through enemy invasion, not Helot uprising” (Hodkinson).</td></tr>
+  </table></div>
+  <div class="split" style="--cols:1.1fr 1fr">
+    <div class="note reveal" data-code="judgement"><div class="k">Hodkinson’s verdict (2026)</div><p class="body">“The evidence, then, does not support claims of a constant danger of Helot revolt.” But resistance was not absent: most “everyday acts of resistance” are “lost to our limited evidence”.</p></div>
+    <div class="stack tight"><p class="qprompt reveal">Does one certain revolt prove the Spartans had nothing to fear?</p>
+      <p class="body reveal">No. That revolt lasted years and needed allies to contain; and few revolts could mean that the controls worked. Weigh both readings.</p></div>
+  </div>
+</div>
+</section>
+
 <section class="slide" data-sec="7 · When control failed" data-title="Constant fear or particular crises?" data-kind="notes">
 <div class="wrap l12-dense">
   <p class="eyebrow">7 · When control failed · We do — the inquiry question</p>
   <h2>Constant fear, or particular crises?</h2>
   <div class="cols c3">
-    <div class="card accent reveal"><div class="k">Routine</div><p class="body">The ephors declared war <i>every</i> year (Aristotle, as reported by Plutarch); the messes met for regular evening meals; part of the army always stayed at home; the krypteia went out “from time to time”.</p></div>
+    <div class="card accent reveal"><div class="k">Routine</div><p class="body">The ephors declared war <i>every</i> year (Aristotle, as reported by Plutarch — perhaps only after 370/69 BC); the messes met for regular evening meals; part of the army always stayed at home; the krypteia went out “from time to time”.</p></div>
     <div class="card accent reveal"><div class="k">Crises</div><p class="body">Spartan fear of the helots shows most clearly in crises: the earthquake (c. 464 BC), after Pylos (425 BC), the Theban invasion (370/69 BC). The harshest stories (the 2,000, Tainaron) cannot be tied to one: they are undated.</p></div>
     <div class="card accent reveal"><div class="k">Reliance</div><p class="body">Sparta also trusted helots as attendants and hoplites, and freed many as neodamodeis.</p></div>
   </div>
@@ -1644,6 +1720,8 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
       <div class="nts reveal">Pythia: “to release the suppliant of Zeus of Ithome” → terms of safe conduct out of the Peloponnese</div></div>
     <div class="row"><div class="cq">What do the Messenian inscriptions add that Thucydides cannot?</div>
       <div class="nts reveal">The rebels’ <b>own voice</b> + name, “Messenians” (B9, B14a) <span class="sep">·</span> public, provocative, at Olympia <span class="sep">·</span> but very short</div></div>
+    <div class="row"><div class="cq">How often did the helots revolt?</div>
+      <div class="nts reveal">Only <b>one certain</b> revolt, c. 464 BC (Hodkinson) <span class="sep">·</span> c. 490? Plato (E60) v. Herodotus’ full moon (H16) <span class="sep">·</span> 425: desertions to Pylos; 421 treaty clause (B18) <span class="sep">·</span> Cinadon: no sign helots joined <span class="sep">·</span> 370/69: freed by <b>invasion</b> <span class="sep">·</span> everyday resistance mostly unrecorded</div></div>
   </div>
 </div>
 </section>
@@ -1664,7 +1742,7 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
       </div>
       <div class="src reveal" data-veil="Show a model summary">
         <div class="k">A model summary · written for this lesson</div>
-        <p class="quote sm model">The Spartans controlled the helots by force and deterrence, by the solidarity of the messes, by the krypteia and, according to Aristotle as reported by Plutarch, the ephors’ yearly declaration of war, by deception, by humiliation and by the offer of freedom, which drew the boldest helots into Spartan service. Much of this evidence is late or second-hand: the krypteia’s killing comes from Plutarch, citing Aristotle, while Plato describes only an endurance test, and Thucydides’ story of the 2,000 helots is undated and Plutarch retold it differently. Control failed most clearly after the earthquake of c. 464 BC, when the helots held Mount Ithome for years, so fear seems to have been sharpest in particular crises, though Sparta also relied on helots as soldiers.</p>
+        <p class="quote sm model">The Spartans controlled the helots by force and deterrence, by the solidarity of the messes, by the krypteia and, according to Aristotle as reported by Plutarch, the ephors’ yearly declaration of war (which some historians date after 370/69 BC), by deception, by humiliation and by the offer of freedom, which drew the boldest helots into Spartan service. Much of this evidence is late or second-hand: the krypteia’s killing comes from Plutarch, citing Aristotle, while Plato describes only an endurance test, and Thucydides’ story of the 2,000 helots is undated and Plutarch retold it differently. Control failed most clearly after the earthquake of c. 464 BC, in the only certain helot revolt, when the helots held Mount Ithome for years, so fear seems to have been sharpest in particular crises, though Sparta also relied on helots as soldiers.</p>
       </div>
     </div>
     <div class="card quiet">
@@ -1976,8 +2054,8 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
   <p class="task">Use evidence from relevant sources. Plan it in four moves:</p>
   <ol class="rq">
     <li><b>Thesis</b> in your first sentence: does routine or crisis better explain Spartan methods?</li>
-    <li><b>Routine:</b> armed citizens (Critias, Cooley D40; Xenophon, D89), the syssitia (D61, D63), the ephors’ yearly declaration and the krypteia (Plutarch citing Aristotle, D44) — weighed against Plato (D42) and Cooley’s “rather slim evidence”.</li>
-    <li><b>Crises:</b> the earthquake and revolt of c. 464 BC (Thucydides 1.101–103 and 1.128, E62, E62b; Plutarch’s view, D44); Pylos in 425 BC and the 700 helot hoplites (E68) — but the massacre of the 2,000 is undated, so it cannot be tied to Pylos; the Theban invasion of 370/69 BC (Xenophon, E69).</li>
+    <li><b>Routine:</b> armed citizens (Critias, Cooley D40; Xenophon, D89), the syssitia (D61, D63), the ephors’ yearly declaration and the krypteia (Plutarch citing Aristotle, D44) — weighed against Plato (D42), Cooley’s “rather slim evidence” and the view of some historians that both date from after 370/69 BC (reported by Hodkinson 2026).</li>
+    <li><b>Crises:</b> the earthquake and revolt of c. 464 BC, the only certain revolt (Thucydides 1.101–103 and 1.128, E62, E62b; Plutarch’s view, D44; Hodkinson 2026); Pylos in 425 BC and the 700 helot hoplites (E68) — but the massacre of the 2,000 is undated, so it cannot be tied to Pylos; the Theban invasion of 370/69 BC (Xenophon, E69).</li>
     <li><b>Reliance and reward:</b> helot hoplites and the neodamodeis (E52, E131); how far late sources such as Plutarch and Myron (D41) can be trusted; Cooley’s warning against “a picture of constant fear and repression”.</li>
   </ol>
   <p class="small">Lesson 8 (fear or scenery?) adds Aristotle (D27) and Herodotus 9.28 (E84) for moves 2–4.</p>
@@ -2013,7 +2091,7 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
     <li>What does the revolt of c. 464 BC reveal about the limits of Spartan control?
       <span class="sol reveal">It took an earthquake to start it, but then the helots, with two perioikic towns, held Mount Ithome for years (“the tenth year”, says Thucydides, though modern scholars doubt the figure); Sparta needed allies, then sent the Athenians home in fear; and it ended in a negotiated exile, in line with an oracle from Delphi. Control rested on Spartan strength, and failed when that strength was shaken.</span></li>
     <li>Evaluate the view that fear of the helots shaped every part of Spartan society.
-      <span class="sol reveal">Overstated. Some control was routine — the yearly declaration (Aristotle, in Plutarch), the messes, armed citizens — and Thucydides’ “security” sentence may mean only that Spartans put safety first where helots were concerned (Cooley: “perhaps to be preferred”). The harshest stories cluster around crises and come from late sources, and Sparta also relied on helots as soldiers. Cooley: “There were clearly times when Spartan worries about the helots were justified”, but we should not “draw a picture of constant fear and repression”.</span></li>
+      <span class="sol reveal">Overstated. Some control was routine — the yearly declaration (Aristotle, in Plutarch, though possibly only after 370/69 BC), the messes, armed citizens — and Thucydides’ “security” sentence may mean only that Spartans put safety first where helots were concerned (Cooley: “perhaps to be preferred”). The harshest stories cluster around crises and come from late sources, only one revolt (c. 464 BC) is certain (Hodkinson 2026), and Sparta also relied on helots as soldiers. Cooley: “There were clearly times when Spartan worries about the helots were justified”, but we should not “draw a picture of constant fear and repression”.</span></li>
   </ol>
 </div>
 </section>
@@ -2037,11 +2115,13 @@ html.read [data-answers]:not(.answers-on) .diagram.sol{display:none;}
   <div class="cols c2">
     <div class="stack">
       <div class="card quiet"><div class="k">Ancient sources</div>
-        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Kritias fr. 37 in Libanius, <i>On Slavery</i> 2.87 (D40); Xenophon, <i>Constitution of the Lakedaimonians</i> 5 and 12 (D61, D89, trans. B. Wilson) and <i>Hellenika</i> 3.4.2 and 6.5.28–29 (E131, E69); Plutarch, <i>Life of Lykourgos</i> 10, 12 and 28 (D63, D44, trans. B. Wilson), <i>Lakonian Customs</i> 41 (D36) and <i>Life of Kimon</i> 16.4 (E64); Plato, <i>Laws</i> 633b–c (D42); ‘School of Aristotle’, <i>Spartan Constitution</i>, in Herakleides Lembos (D43, trans. P. Cartledge); Thucydides 1.101–103, 1.128.1, 4.26, 4.80, 5.23.3 and 5.34 (E62, E62b, E92, E68, D39, B18, E52, trans. B. Wilson); Herodotus 7.234 and 9.80 (F23, E61, trans. B. Wilson); Myron of Priene in Athenaios 14.74 (D41); Aristotle, <i>Politics</i> 1271a (D62); Aristophanes, <i>Acharnians</i> 510–511 (H36, trans. K. Hughes); Pausanias 5.26.1 (B14d); inscriptions from Olympia, IvO 247 (B9) and IG V 1, 1568 (B14a). Cooley’s introductions to social structure, the perioikoi (quoting P. Cartledge, <i>Sparta and Lakonia</i>), the ephorate, wealth, common meals, the helots and his conclusion on them, Poseidon, the earthquake and helot revolt, and Pylos and Sphakteria; his notes on ancient authors and on D29, D39, D40–D44, E62b, E68, B9 and B14; his glossary; S. Hodkinson’s introduction to the inscriptions in Cooley; S. Hornblower, <i>A Commentary on Thucydides</i>, vol. II, as cited in Cooley.</p></div>
+        <p class="small">Quoted from the translations in M. G. L. Cooley (ed.), <i>Sparta</i>, LACTOR Sourcebooks in Ancient History 21, 2nd edn (Cambridge University Press, 2023): Kritias fr. 37 in Libanius, <i>On Slavery</i> 2.87 (D40); Xenophon, <i>Constitution of the Lakedaimonians</i> 5 and 12 (D61, D89, trans. B. Wilson) and <i>Hellenika</i> 3.4.2 and 6.5.28–29 (E131, E69); Plutarch, <i>Life of Lykourgos</i> 10, 12 and 28 (D63, D44, trans. B. Wilson), <i>Lakonian Customs</i> 41 (D36) and <i>Life of Kimon</i> 16.4 (E64); Plato, <i>Laws</i> 633b–c and 698DE (D42, E60); ‘School of Aristotle’, <i>Spartan Constitution</i>, in Herakleides Lembos (D43, trans. P. Cartledge); Thucydides 1.101–103, 1.128.1, 4.26, 4.80, 5.23.3 and 5.34 (E62, E62b, E92, E68, D39, B18, E52, trans. B. Wilson); Herodotus 6.106, 7.234 and 9.80 (H16, F23, E61, trans. B. Wilson); Xenophon, <i>Hellenika</i> 3.3.6 (E53a); Myron of Priene in Athenaios 14.74 (D41); Aristotle, <i>Politics</i> 1271a (D62); Aristophanes, <i>Acharnians</i> 510–511 (H36, trans. K. Hughes); Pausanias 5.26.1 (B14d); inscriptions from Olympia, IvO 247 (B9) and IG V 1, 1568 (B14a). Cooley’s introductions to social structure, the perioikoi (quoting P. Cartledge, <i>Sparta and Lakonia</i>), the ephorate, wealth, common meals, the helots and his conclusion on them, Poseidon, the earthquake and helot revolt, and Pylos and Sphakteria; his notes on ancient authors and on D29, D39, D40–D44, E62b, E68, B9 and B14; his glossary; S. Hodkinson’s introduction to the inscriptions in Cooley; S. Hornblower, <i>A Commentary on Thucydides</i>, vol. II, as cited in Cooley; his note on E60.</p></div>
+      <div class="card quiet"><div class="k">Modern historian</div>
+        <p class="small">S. Hodkinson, ‘Helot Slavery in Classical Sparta’, <i>Teaching History</i> (History Teachers’ Association of NSW) 60.3 (2026), 13–19: the four views of the krypteia, the dating of the ephors’ declaration, the record of helot revolts, the Old Oligarch (Pseudo-Xenophon, <i>Constitution of the Athenians</i> 1.11, in Hodkinson’s translation) and the Prix de Rome painting.</p></div>
     </div>
     <div class="stack">
       <div class="card quiet"><div class="k">Images and diagrams</div>
-      <ul class="small"><li>A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground — Bradley, Fig 3.3</li><li>A modern engraving of Spartiates dining together while a man dressed in an animal skin brings food — an imagined scene, not ancient evidence — Clarke & Garner, Fig 3.4</li><li>Sparta today, with the Taygetus range behind it — Hurley et al., Source 59</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
+      <ul class="small"><li>A view across the Eurotas valley to the Taygetus range, with ancient ruins in the foreground — Bradley, Fig 3.3</li><li>A modern engraving of Spartiates dining together while a man dressed in an animal skin brings food — an imagined scene, not ancient evidence — Clarke & Garner, Fig 3.4</li><li>Fernand Sabatté, ‘A Spartan shows his sons a drunken helot’, 1900 (detail), the winning painting for the Prix de Rome — a modern painting of Plutarch’s story, not ancient evidence — Wikimedia Commons, public domain</li><li>Sparta today, with the Taygetus range behind it — Hurley et al., Source 59</li></ul><p class="small">Books: P. Bradley, The Ancient World Transformed (Cambridge University Press, 2014); Clarke & Garner, Spartan society textbook (school copy); Wikimedia Commons (public-domain painting); Hurley et al., Antiquity 2, 4th edn (Oxford University Press, 2019).</p>
       <p class="small">Textbook images are reproduced for teaching, with the source given under each one. Drawn for this lesson: the map of the places of helot control (replacing Bradley, Fig 3.1 and Clarke &amp; Garner, Fig 1.2; coastline from Natural Earth, public domain); the six-methods organiser; the two-versions table; the Activity A timeline.</p></div>
       <div class="card quiet"><div class="k">HSC material</div>
         <p class="small">HSC question, marking criteria, sample answer and marking feedback: NSW Education Standards Authority, 2025 HSC Ancient History examination and marking guidelines, and the 2025 marking feedback. © NESA. NESA glossary of key words for “explain”.</p></div>
