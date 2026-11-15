@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<title>Annotating Your Source Booklet</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap">
+<style>
+/* Layout: full-screen projector slides, one at a time with stepped reveals; on narrow screens (or R) they stack into a scrolling read mode.
+   Worked-example slides: think strip on top, booklet source (left, scrolls to the highlight) beside a ruled annotation margin (right).
+   Palette and type follow the Spartan Society HSC teaching site; one colour per annotation code. */
+:root{
+  --ground:#F2F4F6; --surface:#FFFFFF; --surface-2:#E9EDEF;
+  --ink:#14171C; --slate:#4E5A66; --rule:#D5D9DE;
+  --ruled:#C9D5E2; --margin-red:#E5ABA0; --pen:#1D3A8A;
+  --deep:#0F4F52; --bright:#127E83; --tint:#E2F1F1;
+  --c-O:#2740B8; --w-O:#E1E6F9;
+  --c-V:#1B6236; --w-V:#DCEFE3;
+  --c-P:#A8156F; --w-P:#FADCEC;
+  --c-R:#54299B; --w-R:#E7DEF7;
+  --c-L:#B02F19; --w-L:#FBE0D9;
+  --c-T:#7A4F00; --w-T:#F9EED2;
+  --c-G:#0F4F52; --w-G:#D9EDED;
+  --c-K:#4E5A66; --w-K:#E9EDEF;
+  --shadow:0 1px 2px rgba(20,23,28,.06),0 8px 30px rgba(20,23,28,.07);
+
+  --disp:Grandview,"Segoe UI Variable Display","Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --ui:Aptos,"Segoe UI",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  --serif:"Aptos Serif",Georgia,"Iowan Old Style","Times New Roman",serif;
+  --hand:"Kalam","Segoe Print","Bradley Hand","Chalkboard SE",cursive;
+  --mono:ui-monospace,"SF Mono","Cascadia Mono",Consolas,"Courier New",monospace;
+
+  /* Projector type scale (same as the teaching site): student-facing text never below 24px. */
+  --fs-body:clamp(1.5rem,2.35vh,2.15rem);
+  --fs-lead:clamp(1.6rem,2.9vh,2.5rem);
+  --fs-big:clamp(1.85rem,3.6vh,3rem);
+  --fs-h2:clamp(2.1rem,4.4vh,3.7rem);
+  --fs-mega:clamp(3rem,7.6vh,6.4rem);
+  --fs-src:clamp(1.3rem,2.3vh,1.95rem);
+  --fs-chrome:clamp(0.95rem,1.65vh,1.3rem);
+  --fs-eyebrow:clamp(1rem,1.75vh,1.35rem);
+  --line:clamp(2.2rem,4.6vh,3.4rem);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1317; --surface:#172027; --surface-2:#1F2A31;
+    --ink:#E8ECEF; --slate:#A4B0BB; --rule:#2D3943;
+    --ruled:#2A3946; --margin-red:#7C3E35; --pen:#A9C6FF;
+    --deep:#86D6D9; --bright:#5CC8CD; --tint:#16393B;
+    --c-O:#A3B4FF; --w-O:#1F2853;
+    --c-V:#82D49F; --w-V:#173826;
+    --c-P:#F393CC; --w-P:#3F1630;
+    --c-R:#C3A8F6; --w-R:#2C1F4A;
+    --c-L:#FF9E89; --w-L:#4A1F17;
+    --c-T:#EAC46B; --w-T:#3B2E0F;
+    --c-G:#86D6D9; --w-G:#16393B;
+    --c-K:#A4B0BB; --w-K:#1F2A31;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1317; --surface:#172027; --surface-2:#1F2A31;
+  --ink:#E8ECEF; --slate:#A4B0BB; --rule:#2D3943;
+  --ruled:#2A3946; --margin-red:#7C3E35; --pen:#A9C6FF;
+  --deep:#86D6D9; --bright:#5CC8CD; --tint:#16393B;
+  --c-O:#A3B4FF; --w-O:#1F2853;
+  --c-V:#82D49F; --w-V:#173826;
+  --c-P:#F393CC; --w-P:#3F1630;
+  --c-R:#C3A8F6; --w-R:#2C1F4A;
+  --c-L:#FF9E89; --w-L:#4A1F17;
+  --c-T:#EAC46B; --w-T:#3B2E0F;
+  --c-G:#86D6D9; --w-G:#16393B;
+  --c-K:#A4B0BB; --w-K:#1F2A31;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 30px rgba(0,0,0,.35);
+  color-scheme:dark;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{height:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--ui);font-size:var(--fs-body);line-height:1.45;-webkit-font-smoothing:antialiased}
+body.read{height:auto;
+  --fs-body:1.0625rem; --fs-lead:1.2rem; --fs-big:1.3rem; --fs-h2:1.75rem; --fs-mega:2.4rem; --fs-src:1.05rem;
+  --fs-chrome:.875rem; --fs-eyebrow:.8rem; --line:2.15rem}
+@media (min-width:900px){
+  body.read{--fs-body:1.2rem; --fs-lead:1.35rem; --fs-big:1.5rem; --fs-h2:2.2rem; --fs-mega:3.2rem; --fs-src:1.15rem; --line:2.5rem}
+}
+
+/* ---------- deck frame ---------- */
+.deck{height:100%;display:flex;flex-direction:column}
+body.read .deck{height:auto;min-height:100%}
+.stage{flex:1;min-height:0;position:relative}
+.slide{padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));padding-block:clamp(14px,3vh,40px)}
+body.proj .slide{display:none;position:absolute;inset:0;overflow:auto}
+body.proj .slide.active{display:flex;flex-direction:column}
+body.read .slide{display:flex;flex-direction:column;padding-block:40px 48px;border-bottom:1px solid var(--rule)}
+.inner{width:100%;max-width:1600px;margin-inline:auto;display:flex;flex-direction:column;gap:clamp(10px,2vh,26px);flex:1;min-height:0}
+body.proj .inner{padding-inline:clamp(0px,2.2vw,44px)}
+body.read .inner{flex:none}
+
+.eyebrow{font-family:var(--disp);font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--bright);margin:0}
+h1,h2{font-family:var(--disp);margin:0;text-wrap:balance;line-height:1.08;letter-spacing:-.01em}
+h1{font-size:var(--fs-mega);font-weight:800}
+h2{font-size:var(--fs-h2);font-weight:750}
+.head{display:flex;flex-direction:column;gap:.3em}
+.lead{font-size:var(--fs-lead);color:var(--slate);margin:0;max-width:42ch}
+.sub{font-size:var(--fs-body);color:var(--slate);margin:0}
+p{margin:0}
+.label{font-family:var(--disp);font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin:0}
+
+/* ---------- code chips ---------- */
+[data-code="O"]{--cc:var(--c-O);--cw:var(--w-O)}
+[data-code="V"]{--cc:var(--c-V);--cw:var(--w-V)}
+[data-code="P"]{--cc:var(--c-P);--cw:var(--w-P)}
+[data-code="R"]{--cc:var(--c-R);--cw:var(--w-R)}
+[data-code="L"]{--cc:var(--c-L);--cw:var(--w-L)}
+[data-code="T"]{--cc:var(--c-T);--cw:var(--w-T)}
+[data-code="G"]{--cc:var(--c-G);--cw:var(--w-G)}
+[data-code="K"]{--cc:var(--c-K);--cw:var(--w-K)}
+.chip{display:inline-grid;place-items:center;min-width:1.7em;height:1.7em;padding-inline:.3em;border-radius:.35em;
+  border:2px solid var(--cc,var(--deep));background:var(--cw,var(--tint));color:var(--cc,var(--deep));
+  font-family:var(--disp);font-weight:800;font-style:normal;line-height:1;flex:none}
+.hand{font-family:var(--hand);color:var(--pen)}
+kbd{font-family:var(--mono);font-size:.85em;padding:.05em .4em;border:1px solid var(--rule);border-bottom-width:2px;border-radius:4px;background:var(--surface);color:var(--ink)}
+
+/* ---------- title ---------- */
+.s-title .inner{justify-content:center;gap:clamp(14px,2.8vh,34px)}
+.hero-codes{display:flex;flex-wrap:wrap;gap:.35em;font-size:var(--fs-h2)}
+.plan{list-style:none;display:flex;flex-wrap:wrap;gap:.4em 1.6em;padding:0;margin:0;color:var(--slate)}
+.plan li{display:flex;gap:.45em;align-items:baseline}
+.plan b{font-family:var(--disp);color:var(--deep)}
+.keys{font-size:var(--fs-chrome);color:var(--slate);line-height:2}
+
+/* ---------- rules ---------- */
+.rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,32px)}
+.rule-col{display:flex;flex-direction:column;gap:.5em;min-width:0}
+.rule-col h3{font-family:var(--disp);font-size:var(--fs-big);margin:0;display:flex;align-items:center;gap:.4em}
+.ticks{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:.35em}
+.ticks li{display:grid;grid-template-columns:1.2em minmax(0,1fr);gap:.45em}
+.ticks li::before{font-weight:800;color:var(--cc)}
+.may{--cc:var(--c-V)} .may li::before{content:"✓"}
+.maynot{--cc:var(--c-L)} .maynot li::before{content:"✗"}
+.may h3{color:var(--c-V)} .maynot h3{color:var(--c-L)}
+.alert{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.8em;align-items:start;background:var(--w-L);border:2px solid var(--c-L);border-radius:10px;padding:clamp(10px,1.8vh,20px) clamp(14px,1.6vw,26px)}
+.alert .chip{--cc:var(--c-L);--cw:var(--surface)}
+.alert b{color:var(--c-L)}
+
+/* ---------- code tables ---------- */
+.codes{display:flex;flex-direction:column}
+.code-row{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(14px,1.6vw,28px);align-items:start;padding-block:clamp(10px,1.8vh,22px);border-top:1px solid var(--rule)}
+.code-row:last-child{border-bottom:1px solid var(--rule)}
+.code-row .chip{font-size:var(--fs-big)}
+.code-row .body{display:flex;flex-direction:column;gap:.45em;min-width:0}
+.name{font-family:var(--disp);font-weight:750;color:var(--cc,var(--deep))}
+.pills{display:flex;flex-wrap:wrap;gap:.4em .55em;list-style:none;padding:0;margin:0}
+.pills li{background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:.1em .7em}
+.pills .hand{font-weight:700;margin-right:.3em}
+
+/* ---------- worked examples ---------- */
+.worked h2{font-size:var(--fs-big)}
+.think{background:var(--tint);border-radius:10px;padding:clamp(10px,1.6vh,20px) clamp(14px,1.6vw,26px);
+  display:grid;grid-template-columns:auto minmax(0,1fr);gap:.2em .8em;align-items:start;
+  min-height:calc(var(--fs-body) * 1.45 * 3 + 2 * clamp(10px,1.6vh,20px))}
+.think .tk-body{grid-column:2;display:flex;flex-direction:column;gap:.25em;min-width:0}
+.think .tk-chip[hidden] + .tk-body{grid-column:1 / -1}
+.tk-head,.tk-label{font-weight:700;color:var(--deep)}
+.tk-head{font-family:var(--disp)}
+.tk-second.pause{font-style:italic;color:var(--deep)}
+body.read .think{display:none}
+
+.we{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);grid-template-rows:minmax(0,1fr);gap:clamp(14px,2.2vw,40px);flex:1;min-height:0}
+.src{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow);
+  padding:clamp(14px,2.2vh,28px) clamp(16px,1.8vw,32px);display:flex;flex-direction:column;gap:.7em;overflow:auto;min-height:0;min-width:0}
+.src-cite{font-size:var(--fs-chrome);color:var(--slate);line-height:1.6;display:flex;flex-direction:column;gap:.2em}
+.src-text{font-family:var(--serif);font-size:var(--fs-src);line-height:1.6;display:flex;flex-direction:column;gap:.6em;margin:0}
+.src-text ul{margin:0;padding-left:1.3em}
+.ref{font-family:var(--ui);font-size:.68em;font-weight:650;color:var(--slate)}
+.extract{font-family:var(--disp);font-size:var(--fs-eyebrow);font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin:.5em 0 0}
+.verse{display:flex;flex-direction:column;padding-left:1.3em}
+.vl{display:flex;justify-content:space-between;gap:1em}
+.ln{font-family:var(--ui);font-size:.68em;color:var(--slate);flex:none}
+.hl{border-radius:.15em;transition:background-color .25s ease,box-shadow .25s ease;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.hl.done{box-shadow:inset 0 -.12em 0 var(--cc)}
+.hl.now{background:var(--cw);box-shadow:inset 0 -.14em 0 var(--cc)}
+
+.margin{display:flex;flex-direction:column;gap:.4em;min-width:0;min-height:0}
+.ruled{--gutter:2.7em;flex:1;min-height:0;overflow:auto;list-style:none;margin:0;padding:0 1em 0 0;
+  font-size:calc(var(--line) * .56);
+  background-color:var(--surface);border:1px solid var(--rule);border-radius:10px;
+  background-image:
+    linear-gradient(to right,transparent calc(var(--gutter) - 2px),var(--margin-red) calc(var(--gutter) - 2px),var(--margin-red) var(--gutter),transparent var(--gutter)),
+    repeating-linear-gradient(to bottom,transparent 0 calc(var(--line) - 1px),var(--ruled) calc(var(--line) - 1px) var(--line));
+  background-attachment:local}
+.note{display:grid;grid-template-columns:var(--gutter) minmax(0,1fr);line-height:var(--line);font-family:var(--hand);color:var(--pen)}
+.note .chip{font-size:.78em;height:1.55em;min-width:1.55em;justify-self:center;align-self:start;margin-top:calc((var(--line) - 1.55em) / 2)}
+.note .txt{padding-left:.55em}
+.note .why{display:none}
+.is-hidden{visibility:hidden}
+.note:not(.is-hidden) .txt{animation:write .75s ease-out both}
+@keyframes write{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+body.read .we{grid-template-rows:auto}
+body.read .src,body.read .ruled{overflow:visible}
+body.read .ruled{padding-block:.4em;
+  background-image:linear-gradient(to right,transparent calc(var(--gutter) - 2px),var(--margin-red) calc(var(--gutter) - 2px),var(--margin-red) var(--gutter),transparent var(--gutter))}
+body.read .note .why{display:block;grid-column:2;font-family:var(--ui);color:var(--slate);font-size:.6em;line-height:1.5;padding:0 0 1em .9em}
+
+/* ---------- checks ---------- */
+.legend{display:flex;flex-wrap:wrap;align-items:center;gap:.4em 1.1em}
+.legend .opt{display:inline-flex;align-items:center;gap:.35em;font-weight:700}
+.legend .chip{font-size:.85em}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,20rem),1fr));gap:clamp(12px,2vw,28px);align-items:stretch}
+.card{background:var(--surface);border:1px solid var(--rule);border-radius:10px;box-shadow:var(--shadow);
+  padding:clamp(14px,2.4vh,30px) clamp(16px,1.8vw,30px);display:flex;flex-direction:column;gap:.8em;min-width:0}
+.card .num{font-family:var(--disp);font-weight:800;color:var(--slate)}
+.card .hand{font-size:var(--fs-big);line-height:1.35}
+.answer{display:flex;gap:.6em;align-items:flex-start;border-top:2px solid var(--cc,var(--deep));padding-top:.7em;margin-top:auto}
+.answer .chip{font-size:.9em}
+.answer.wide{background:var(--tint);border-top:0;border-radius:10px;padding:clamp(12px,2vh,22px) clamp(16px,1.8vw,28px);margin-top:0}
+
+/* ---------- final checklist ---------- */
+.turn{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:clamp(16px,3vw,56px);align-items:start}
+.check{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.55em}
+.check li{display:grid;grid-template-columns:1.2em minmax(0,1fr);gap:.5em}
+.check li::before{content:"☐";color:var(--deep)}
+.motto{font-size:var(--fs-big)}
+.callout{background:var(--tint);border-radius:10px;padding:clamp(12px,2vh,22px) clamp(16px,1.8vw,28px);display:flex;flex-direction:column;gap:.5em}
+.callout b{color:var(--deep)}
+
+/* ---------- control bar ---------- */
+.bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px clamp(8px,1vw,14px);
+  padding-block:8px calc(8px + env(safe-area-inset-bottom, 0px));
+  padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));
+  background:var(--surface);border-top:1px solid var(--rule);font-size:var(--fs-chrome)}
+body.read .bar{position:sticky;bottom:0;z-index:5}
+.bar .count{font-variant-numeric:tabular-nums;font-weight:700;color:var(--deep);min-width:5ch}
+.bar .hint{color:var(--slate);margin-right:auto}
+body.read .bar .hint{display:none}
+body.read .proj-only{display:none}
+body.read .bar .spacer{margin-right:auto}
+button{font:inherit;font-weight:650;color:var(--deep);background:var(--surface);border:1.5px solid var(--rule);border-radius:8px;padding:.45em .9em;cursor:pointer}
+button:hover{border-color:var(--bright)}
+button.primary{background:var(--deep);color:var(--surface);border-color:var(--deep)}
+button:disabled{opacity:.4;cursor:default}
+button:focus-visible{outline:3px solid var(--bright);outline-offset:2px}
+
+@media (max-width:900px){
+  .we,.turn,.rules{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:700px){ .bar .hint{display:none} }
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+</style>
+
+<div class="deck">
+<main class="stage" id="stage">
+
+  <!-- 1 · Title -->
+  <section class="slide s-title" aria-roledescription="slide" aria-label="Annotating your Source Booklet">
+    <div class="inner">
+      <p class="eyebrow">Year 12 Ancient History · Spartan Society · Task 1</p>
+      <div class="hero-codes" aria-hidden="true">
+        <span class="chip" data-code="O">O</span><span class="chip" data-code="V">V</span><span class="chip" data-code="P">P</span><span class="chip" data-code="R">R</span><span class="chip" data-code="L">L</span>
+      </div>
+      <h1>Annotating your Source Booklet</h1>
+      <p class="lead">Short, specific notes in your own words, modelled on Sources A, B and C.</p>
+      <ol class="plan">
+        <li><b>1</b> The rules</li>
+        <li><b>2</b> The codes</li>
+        <li><b>3</b> Source A: I do</li>
+        <li><b>4</b> Source B: We do</li>
+        <li><b>5</b> Source C: You do</li>
+      </ol>
+      <p class="keys proj-only"><kbd>→</kbd> or <kbd>Space</kbd> next &nbsp;·&nbsp; <kbd>←</kbd> back &nbsp;·&nbsp; <kbd>R</kbd> read mode &nbsp;·&nbsp; <kbd>F</kbd> full screen</p>
+    </div>
+  </section>
+
+  <!-- 2 · Rules -->
+  <section class="slide" aria-roledescription="slide" aria-label="The rules">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">The rules</p>
+        <h2>Your booklet is the only thing you may bring into Task 1</h2>
+        <p class="sub">Your annotations are also your process evidence. Your teacher sights them in class before the task and checks them against your answers afterwards.</p>
+      </div>
+      <div class="rules">
+        <div class="rule-col may">
+          <h3>✓ You may</h3>
+          <ul class="ticks">
+            <li>Write by hand, in pen or pencil, in your own words.</li>
+            <li>Annotate in class, during the lessons when we study each source.</li>
+            <li>Underline, highlight, circle and use arrows.</li>
+            <li>Use short notes, codes and symbols.</li>
+            <li>Use AI only to revise before the task, for example to quiz yourself on terms and writers.</li>
+          </ul>
+        </div>
+        <div class="rule-col maynot">
+          <h3>✗ You may not</h3>
+          <ul class="ticks">
+            <li>Use printed, typed, pasted or photocopied notes.</li>
+            <li>Add sticky notes, loose sheets or extra pages.</li>
+            <li>Copy AI-generated or AI-rewritten notes into the booklet.</li>
+            <li>Copy another student’s annotations or a model answer.</li>
+            <li>Write whole answers to guessed questions. Annotate the sources.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="alert"><span class="chip">!</span><p><b>AI classification for Task 1: RED.</b> Bringing AI-generated or AI-rewritten notes into the task, or using AI on any part of the assessable work, is a breach of the policy and is treated as malpractice.</p></div>
+    </div>
+  </section>
+
+  <!-- 3 · OVPRL -->
+  <section class="slide" aria-roledescription="slide" aria-label="The OVPRL codes">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">The codes</p>
+        <h2>Work through O, V, P, R, L, in that order</h2>
+      </div>
+      <div class="codes">
+        <div class="code-row" data-code="O"><span class="chip">O</span>
+          <p class="body"><span><b class="name">Origin.</b> Who made it, when and where? Written or archaeological? Primary or secondary? How close to the events?</span></p></div>
+        <div class="code-row" data-code="V"><span class="chip">V</span>
+          <p class="body"><span><b class="name">Value.</b> What does it show about Spartan society? Which dot point, which group? What can it tell us that other sources can’t?</span></p></div>
+        <div class="code-row" data-code="P"><span class="chip">P</span>
+          <p class="body"><span><b class="name">Purpose.</b> Why was it made? Who was it for? How might that shape what it says?</span></p></div>
+        <div class="code-row" data-code="R"><span class="chip">R</span>
+          <p class="body"><span><b class="name">Reliability.</b> Can we trust it for this? What strengthens or weakens it? Does another source agree or disagree?</span></p></div>
+        <div class="code-row" data-code="L"><span class="chip">L</span>
+          <p class="body"><span><b class="name">Limitations.</b> What can’t it tell us? Whose voices are missing? Is it fragmentary, late or translated?</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 · Groups, terms, links -->
+  <section class="slide" aria-roledescription="slide" aria-label="Groups, terms and links">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Then add</p>
+        <h2>Groups, terms and links</h2>
+      </div>
+      <div class="codes">
+        <div class="code-row" data-code="G"><span class="chip">G</span>
+          <div class="body">
+            <p><b class="name">Group.</b> Mark the groups it shows, and whose perspective it gives.</p>
+            <ul class="pills">
+              <li><span class="hand">Sp</span>Spartiates</li>
+              <li><span class="hand">Pe</span>perioikoi</li>
+              <li><span class="hand">He</span>helots</li>
+              <li><span class="hand">Inf</span>‘inferiors’</li>
+              <li><span class="hand">W</span>women</li>
+            </ul>
+          </div></div>
+        <div class="code-row" data-code="T"><span class="chip">★</span>
+          <div class="body">
+            <p><b class="name">Term.</b> Star the Spartan terms you will use.</p>
+            <ul class="pills">
+              <li>agoge</li><li>helots</li><li>perioikoi</li><li>syssitia</li><li>gerousia</li><li>krypteia</li><li>ephors</li><li>ekklesia</li>
+            </ul>
+          </div></div>
+        <div class="code-row" data-code="K"><span class="chip">→</span>
+          <div class="body">
+            <p><b class="name">Link.</b> <span class="hand">→ F</span> means “compare with Source F”. Add <span class="hand">✓</span> if they agree and <span class="hand">✗</span> if they contradict.</p>
+          </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5 · Source A · I do -->
+  <section class="slide worked" data-mode="i" aria-roledescription="slide" aria-label="Source A: Herodotus on Lykourgos and Delphi">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source A · I do</p>
+        <h2>Herodotus on Lykourgos and Delphi</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source A · Herodotus</figcaption>
+          <p class="src-cite"><span><span class="hl" data-code="O">Herodotus</span>, <i>Histories</i> 1.65.2–66.1 · written <span class="hl" data-code="O">c. 430s–420s BC</span> · trans. B. Wilson · Cooley F3</span></p>
+          <blockquote class="src-text">
+            <p><span class="ref">[65.2]</span> <span class="hl" data-code="P">In still earlier times they had probably been the worst governed of almost all the Greek states</span>, both in domestic policy and in their relations with other cities, since they refused to have anything to do with foreigners. <span class="hl" data-code="P">But they now enjoyed excellent government and I shall explain how this came about.</span> <span class="hl" data-code="L">A very distinguished Spartiate called Lykourgos went to Delphi to consult the oracle.</span> As he entered the shrine, the Pythia immediately greeted him with the following words:</p>
+            <div class="verse">
+              <span class="vl"><span><span class="ref">[65.3]</span> <span class="hl" data-code="R">You have come, Lykourgos, to this my prosperous temple,</span></span></span>
+              <span class="vl"><span class="hl" data-code="R">Dear as you are to Zeus and all the gods that dwell in Olympos.</span></span>
+              <span class="vl"><span class="hl" data-code="R">I know not whether to worship you as hero or god.</span></span>
+              <span class="vl"><span class="hl" data-code="R">Yet more and yet more I believe that you will be a god, Lykourgos.</span></span>
+            </div>
+            <p><span class="ref">[65.4]</span> <span class="hl" data-code="R">Some sources state, in addition, that the Pythia outlined for him the current system of government <span class="hl" data-code="G">for the Spartiates</span>; but the Lakedaimonians themselves say that Lykourgos brought these ideas back from Crete</span> when he became the guardian of his nephew Leobotas, <span class="hl" data-code="G">who was king of the Spartiates</span>. <span class="ref">[65.5]</span> In fact, as soon as he became his guardian and regent, <span class="hl" data-code="V">he changed the whole constitution and firmly enforced the new laws. He then reorganised the army, establishing the system of sworn comrades, operating in thirty-man units, and <span class="hl" data-code="T">eating together in their own messes</span>. Lykourgos was also responsible for the institution of <span class="hl" data-code="T">the ephorate and the gerousia</span>.</span> <span class="ref">[66.1]</span> These changes were responsible for the excellent system of government, and <span class="hl" data-code="V">when Lykourgos died they put up a temple to him and greatly honoured his memory</span>.</p>
+          </blockquote>
+        </figure>
+        <div class="margin">
+          <p class="label">Annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">Hdt, c. 430s–420s BC — earliest mention of Lyk., but 200+ yrs after the reforms</span><span class="why">Herodotus is the earliest writer we have who names Lykourgos. But he wrote two centuries or more after the reforms are usually dated, so he is reporting tradition.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">Spartans credit ONE man with it all: laws, army, messes, ephors, gerousia (Sp)</span><span class="why">By Herodotus’ day the Spartans already gave one founder credit for almost every institution, and honoured him with a temple. That is evidence for the Lykourgos tradition, not necessarily for Lykourgos himself.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">explains how Sparta went from worst-governed → ‘excellent government’</span><span class="why">Herodotus is explaining why King Croesus of Lydia wanted Sparta, now strong and well ordered, as an ally. He reports what he was told.</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✓ gives 2 versions (Delphi / Crete) + names the Spartans’ own · ✗ oracle verse may be shaped later</span><span class="why">Herodotus openly gives two versions and says which one the Spartans themselves told. That is a strength. But verse oracles like this one circulated by word of mouth and could be shaped after the event.</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">oral tradition — no eyewitness, no date for Lyk.</span><span class="why">Herodotus relied on what people told him. No one alive had seen Lykourgos, and the source gives no date for him.</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">Sp + a king (Leobotas) only · no He, Pe or W</span><span class="why">Only Spartiates and one king appear. There is nothing from helots, perioikoi or women.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">syssitia (messes), ephors, gerousia</span><span class="why">These are the institutions the source links to Lykourgos. Starring them makes the source quick to find for a question on government.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ B ✗ Tyrtaios: Apollo + kings, no Lyk. · → N Nafissi: the legend grew</span><span class="why">Tyrtaios (Source B), a Spartan poet of the 7th century BC, credits Apollo’s oracle and the kings and never names Lykourgos. Nafissi (Source N) argues early Spartans saw Lykourgos as an organiser of political life, not yet Herodotus’ reformer who changed everything.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6 · Check: stronger V note -->
+  <section class="slide" data-steps="1" aria-roledescription="slide" aria-label="Check: which V note is stronger?">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Check · gesture vote</p>
+        <h2>Which V note for Source A is stronger?</h2>
+      </div>
+      <p class="sub">On “Show me”, hold up 1 or 2 fingers.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="num">1</span>
+          <p class="hand"><span class="chip" data-code="V">V</span> Herodotus — useful, tells us about Lykourgos</p>
+        </div>
+        <div class="card">
+          <span class="num">2</span>
+          <p class="hand"><span class="chip" data-code="V">V</span> Spartans credit ONE man with it all: laws, army, messes, ephors, gerousia</p>
+        </div>
+      </div>
+      <div class="answer wide" data-show="1"><p><b>Note 2.</b> It says exactly what the source shows, so you can use it as evidence. Note 1 could be written about any source on Lykourgos.</p></div>
+    </div>
+  </section>
+
+  <!-- 7 · Source B · We do -->
+  <section class="slide worked" data-mode="we" aria-roledescription="slide" aria-label="Source B: The Great Rhetra, in Plutarch and Tyrtaios">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source B · We do</p>
+        <h2>The Great Rhetra, in Plutarch and Tyrtaios</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source B · Plutarch and Tyrtaios</figcaption>
+          <p class="src-cite">
+            <span>Extract A: <span class="hl" data-code="O">Plutarch</span>, <i>Life of Lykourgos</i> 6.1–5 · written <span class="hl" data-code="O">c. AD 100</span> · trans. B. Wilson · Cooley D48</span>
+            <span>Extract B: <span class="hl" data-code="O">Tyrtaios</span>, fragment 4 (quoted by Plutarch, <i>Lykourgos</i> 6, and Diodoros 7.12.5–6) · <span class="hl" data-code="O">mid-7th century BC</span> · trans. K. Hughes · Cooley A4</span>
+          </p>
+          <div class="src-text">
+            <p class="extract">Extract A: Plutarch</p>
+            <p><span class="ref">[6.1]</span> <span class="hl" data-code="P">Lykourgos was so enthusiastic about his new ruling council</span> that he even got an oracle about it from Delphi. It is known as a <span class="hl" data-code="T">rhetra</span>, and it goes as follows:</p>
+            <ul>
+              <li>Set up a temple to Zeus Sullanios and Athena Sullania;</li>
+              <li><span class="hl" data-code="R">Tribe the tribes and obe the obes;</span></li>
+              <li><span class="hl" data-code="V">Set up a <span class="hl" data-code="T">gerousia</span> of thirty, with the <span class="hl" data-code="T">founder-leaders (archagetai)</span>;</span></li>
+              <li>From time to time, <span class="hl" data-code="T">have an Apella</span> between &lt;the streams of&gt; Babyka and Knakion;</li>
+              <li>Thus to propose and rescind;</li>
+              <li><span class="hl" data-code="V">For the people, decision and power.</span></li>
+            </ul>
+            <p><span class="ref">[2]</span> In this document, the reference to “tribing the tribes and obing the obes” covers the method of assigning the general population to small groups, which he designated phylai and obai. “Founder-leaders” is the archaic name for the kings; to “have an Apella” is to call an assembly of the people, because the source and origin of the constitution is attributed to Pythian Apellon (Apollo). … <span class="ref">[3]</span> … Once the people had been assembled en masse, no one was allowed to table a proposal; they had the power only to accept or reject the motion laid before them by the members of the gerousia and kings. <span class="ref">[4]</span> But in time the people managed to distort and mangle his intentions by passing amendments or deletions. So Polydoros and Theopompos, the kings, added the following rider to the rhetra.</p>
+            <ul>
+              <li><span class="hl" data-code="V">But if the people shall adopt a crooked proposal, the elders and founder-leaders shall have the power of dissolution.</span></li>
+            </ul>
+            <p>This means that they should not ratify the proposal but should withdraw it totally and dissolve the assembly, on the grounds that it was attempting to pervert and distort what was in the state’s best interests. <span class="ref">[5]</span> They even managed to persuade the city that this was the god’s addition to the rhetra, and there is a reminder of this in the poems of Tyrtaios.</p>
+            <p class="extract">Extract B: Tyrtaios</p>
+            <div class="verse">
+              <span class="vl"><span class="hl" data-code="L">Having listened to Phoibos, they brought home from Delphi</span></span>
+              <span class="vl"><span>God’s oracles with their verses of certainty;</span></span>
+              <span class="vl"><span class="hl" data-code="G">The leaders in counsel are the kings, honoured of the gods,</span></span>
+              <span class="vl"><span>For they look after the lovely city of Sparta,</span></span>
+              <span class="vl"><span class="hl" data-code="G">Together with the eldest-born; and after them the men of the People,</span><span class="ln">5</span></span>
+              <span class="vl"><span>Responding in their turn with straight ordinances</span></span>
+              <span class="vl"><span>Are to say the right things and do everything justly</span></span>
+              <span class="vl"><span>And not give the city any crooked counsel,</span></span>
+              <span class="vl"><span>And so victory and power go with the mass of the People.</span></span>
+              <span class="vl"><span class="hl" data-code="P">This was the revelation of Phoibos to the city on these matters.</span><span class="ln">10</span></span>
+            </div>
+          </div>
+        </figure>
+        <div class="margin">
+          <p class="label">Annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">A: Plut., c. AD 100 (~700 yrs later, prob. via Aristotle) · B: Tyrtaios, mid-7th C BC — a Spartan at the time!</span><span class="why">Two very different origins. Plutarch wrote about 700 years after the Rhetra and probably took its text from Aristotle’s lost work on the Spartan constitution. Tyrtaios is the only Spartan voice from the time.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">founding rules: gerousia of 30 (28 + 2 kings), assembly, people decide → rider lets elders + kings dissolve it</span><span class="why">It keeps the wording of Sparta’s founding document: kings, elders and people. The rider then let the elders and kings throw out a ‘crooked’ decision of the people.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">Plut.: Lyk. = ideal lawgiver · Tyrt.: Apollo (Phoibos) gives the order divine authority</span><span class="why">Plutarch’s <i>Life</i> presents Lykourgos as the ideal lawgiver. Tyrtaios’ poem gave the system Apollo’s authority at a time of war and unrest.</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✓ odd, archaic wording → genuine early text · ✗ came via Aristotle + Plut.; text damaged</span><span class="why">The old, obscure wording suggests a genuine early document. But it reached us through Aristotle and Plutarch, and the text is damaged in places.</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">Plut. credits Lyk.; Tyrt. credits Delphi + kings, never Lyk. → they disagree! · no ephors</span><span class="why">The two extracts disagree on who made the constitution. Tyrtaios survives only where later writers quote him. The Rhetra also never mentions the ephors.</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">kings, elders, the People (Sp) · no Pe, He or W</span><span class="why">Only the kings, the elders and the citizen body (the damos) appear. Perioikoi, helots and women have no place in the constitution.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">gerousia, ekklesia (= Apella), archagetai = kings, rhetra</span><span class="why">Plutarch explains the old words himself: the ‘founder-leaders’ are the kings, and to ‘have an Apella’ is to call an assembly of the people.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ A ✗ Hdt credits Lyk. · → C ✓ 28 + 2 kings = 30 · → D gerousia later took bribes</span><span class="why">Herodotus (Source A) credits Lykourgos. Herodotus (Source C) says the kings sit with the 28 members of the gerousia, which matches a gerousia of 30. Aristotle (Source D) says elders later took bribes.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · Check: which code -->
+  <section class="slide" data-steps="3" aria-roledescription="slide" aria-label="Check: which code does each note belong to?">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Check · gesture vote</p>
+        <h2>Which code does each note belong to?</h2>
+      </div>
+      <p class="legend">On “Show me”, hold up:
+        <span class="opt">1 <span class="chip" data-code="O">O</span></span>
+        <span class="opt">2 <span class="chip" data-code="V">V</span></span>
+        <span class="opt">3 <span class="chip" data-code="P">P</span></span>
+        <span class="opt">4 <span class="chip" data-code="R">R</span></span>
+        <span class="opt">5 <span class="chip" data-code="L">L</span></span>
+      </p>
+      <div class="cards">
+        <div class="card">
+          <span class="num">a</span>
+          <p class="hand">Rhetra gives the People the final say</p>
+          <div class="answer" data-code="V" data-show="1"><span class="chip">V</span><p><b>2 · Value.</b> It says what the source shows about Spartan government.</p></div>
+        </div>
+        <div class="card">
+          <span class="num">b</span>
+          <p class="hand">Plutarch wants Lykourgos to look like the perfect lawgiver</p>
+          <div class="answer" data-code="P" data-show="2"><span class="chip">P</span><p><b>3 · Purpose.</b> It says why the writer shaped the account the way he did.</p></div>
+        </div>
+        <div class="card">
+          <span class="num">c</span>
+          <p class="hand">Tyrtaios: Spartan poet, mid-7th C BC</p>
+          <div class="answer" data-code="O" data-show="3"><span class="chip">O</span><p><b>1 · Origin.</b> It says who made the source and when.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9 · Source C · You do -->
+  <section class="slide worked" data-mode="you" aria-roledescription="slide" aria-label="Source C: Herodotus on the kings’ privileges and funerals">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source C · You do</p>
+        <h2>Herodotus on the kings’ privileges and funerals</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source C · Herodotus</figcaption>
+          <p class="src-cite"><span><span class="hl" data-code="O">Herodotus</span>, <i>Histories</i> 6.56–58 · written <span class="hl" data-code="O">c. 430s–420s BC</span> · trans. B. Wilson · Cooley D5, D8, D10</span></p>
+          <blockquote class="src-text">
+            <p><span class="ref">[56]</span> <span class="hl" data-code="P">The Spartiates have granted their kings certain special prerogatives.</span> First of all <span class="hl" data-code="V">they hold two priesthoods</span>, those of Zeus of Lakedaimon and Zeus, Lord of Heaven. Then, they have <span class="hl" data-code="R">the right to declare war on any country they please</span>; in this, no Spartiate can oppose them without incurring the penalty of religious pollution (and consequent exile). On active service, <span class="hl" data-code="V">the kings lead the advance and are the last to retreat and are allocated a personal bodyguard of a hundred picked soldiers</span>. On their expeditions they are entitled to the use of as many cattle as they please, and the skins and backs of all sacrificed animals are apportioned to them.</p>
+            <p><span class="ref">[57.1]</span> So much for their military prerogatives. Their peacetime privileges are as follows. At all public sacrifices, the kings are the first to take their seat at the subsequent feast; they are the first to be served and they are each given portions of every dish double the size of those served to other guests. Theirs is the right to pour the first libations, and the skins of all sacrificed animals belong to them. <span class="ref">[2]</span> On the first and the seventh day of every month the public purse supplies to each of them an unblemished animal to sacrifice at Apollo’s temple, plus twelve gallons of barley meal and a Lakonian quart of wine. They preside at all athletic competitions in special seats of honour. They have the right to nominate any citizens they wish as proxenoi, including <span class="hl" data-code="T">two ‘Pythians’ each</span>, ambassadors whose duty it is to go on embassies to Delphi and to dine with the kings at public expense. …</p>
+            <p><span class="ref">[4]</span> They are the official guardians of all oracles, though the ‘Pythians’ also share the knowledge of their contents. There are also some legal matters over which the kings exercise sole jurisdiction. In the case of a girl inheriting her father’s property, if her father has not betrothed her to anyone, then <span class="hl" data-code="V">the kings decide who is entitled to marry her</span>. They also control the management of the public roads. <span class="ref">[5]</span> If anyone wishes to adopt a child, he must do it in front of the kings. <span class="hl" data-code="V">They are entitled to sit in council with <span class="hl" data-code="T">the twenty-eight members of the gerousia</span></span>; in their absence their closest relatives among the members exercise the kings’ prerogatives, and <span class="hl" data-code="R">cast two votes for the kings and a third for themselves</span>.</p>
+            <p><span class="ref">[58.1]</span> <span class="hl" data-code="L">These are the normal prerogatives granted by the Spartiates in common to their kings during their lifetimes.</span> Their deaths are marked by the following ceremonies. Riders carry the news across the whole of Lakonia, while <span class="hl" data-code="G">the womenfolk go round the city beating metal basins</span>. When this happens, it is the duty of two free citizens per household, one man and one woman, to dress themselves in unwashed garments, as a sign of mourning. The punishment for failure to do so is a heavy fine. <span class="ref">[2]</span> … When a king of the Lakedaimonians dies, it is a compulsory obligation imposed not just on the Spartiates themselves, but also people from all Lakedaimon, and <span class="hl" data-code="G">a number of perioikoi</span>, to attend the funeral. <span class="ref">[3]</span> As a result, many thousands of them, <span class="hl" data-code="G">together with helots</span> and also Lakedaimonians themselves, congregate in one place. They all join the women folk, wildly beating their foreheads in a paroxysm of grief, crying out in lamentation that the king who has just died was the best king they had ever had. If the king has fallen in battle, they make an image of him and carry it to burial on a lavishly decorated bier. After the funeral, all public business and the election of officials are suspended for ten days, all of which are devoted to national mourning.</p>
+          </blockquote>
+        </figure>
+        <div class="margin">
+          <p class="label">Model annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">Hdt, c. 430s–420s BC · non-Spartan using informants · living memory of Leonidas</span><span class="why">Herodotus was not Spartan and relied on informants, but he wrote within living memory of kings such as Leonidas and Leotychidas.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">fullest list of kings’ privileges: religious, military, legal, political + royal funerals</span><span class="why">No other source lists so many royal privileges: two priesthoods of Zeus, leading the army with a bodyguard of 100, deciding who marries an unbetrothed heiress, and a seat with the gerousia.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">written for Greek readers — Spartan customs he found unusual</span><span class="why">Herodotus wrote for other Greeks and picked out customs he found unusual. In the part left out of this extract, he compares the funerals with ‘barbarian’ Asian ones.</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✓ detailed, fits Xenophon · ✗ no proof kings declared war alone; Thuc. denies ‘two votes’</span><span class="why">Much of it fits Xenophon’s account. But Cooley notes there is no evidence kings could declare war on their own, and Thucydides (1.20) denies the ‘two votes’ claim.</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">rules on paper, not practice · outsider · silent on ephors checking kings</span><span class="why">It lists the rules, not how they worked in practice, and says nothing about the ephors’ checks on the kings (Source D).</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">kings, Sp, Pe, He, W (basins, lament) → funeral binds every group to the kings</span><span class="why">Spartiates and perioikoi had to attend; helots were there and mourned too, though Herodotus doesn’t say they were forced. Hodkinson (2026) reads this as a sign helots were ‘partially integrated’ into Spartiate society.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">gerousia, perioikoi, helots · Pythians (NOT ‘pithoi’)</span><span class="why">The envoys to Delphi are the ‘Pythians’. One textbook misprints this as ‘pithoi’, which are storage jars.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ K twin gods ↔ two kings · → D ✗ kings mistrusted · → F ✓ Messenians mourn masters</span><span class="why">The Dioskouroi relief (Source K) links twin gods with the two kings. Aristotle (Source D) says the lawgiver mistrusted the kings. Tyrtaios (Source F) says the conquered Messenians had to mourn their masters.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · Before each sighting -->
+  <section class="slide" aria-roledescription="slide" aria-label="Before each sighting">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Check your booklet</p>
+        <h2>Before each sighting</h2>
+      </div>
+      <div class="turn">
+        <div class="card">
+          <ul class="check">
+            <li>Every source we have studied has at least an O, V, P, R and L note.</li>
+            <li>At least one link (<span class="hand">→</span>) for each source.</li>
+            <li>Groups marked where they appear.</li>
+            <li>Nothing printed, pasted, stuck in or copied.</li>
+            <li>Your name is on the cover.</li>
+          </ul>
+        </div>
+        <div class="callout">
+          <p><b>The notes on screen are models.</b> Your booklet must hold your own notes, in your own words. Don’t copy the screen.</p>
+          <p><b>Tip.</b> Leave the second half of each margin for later lessons. You will often add a link (<span class="hand">→</span>) or a <span class="hand">✓</span>/<span class="hand">✗</span> once we study another source.</p>
+          <p class="hand motto">Brief, specific, in your own words.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<nav class="bar" aria-label="Slide controls">
+  <button id="prev" class="proj-only" type="button">← Back</button>
+  <button id="next" class="primary proj-only" type="button">Next →</button>
+  <span class="count proj-only" id="count">1 / 10</span>
+  <span class="hint"><kbd>→</kbd> next · <kbd>←</kbd> back · <kbd>R</kbd> read mode · <kbd>F</kbd> full screen</span>
+  <span class="spacer"></span>
+  <button id="mode" type="button">Read mode</button>
+  <button id="fs" type="button">Full screen</button>
+</nav>
+</div>
+
+<script>
+(() => {
+  const body = document.body;
+  const $ = id => document.getElementById(id);
+  const slides = [...document.querySelectorAll('.slide')];
+  const prevB = $('prev'), nextB = $('next'), count = $('count'), modeB = $('mode'), fsB = $('fs');
+
+  const NAME = { O: 'Origin', V: 'Value', P: 'Purpose', R: 'Reliability', L: 'Limitations', G: 'Group', T: 'Term', K: 'Link' };
+  const ASK = {
+    O: 'Who made it, and when? How close is it to the events?',
+    V: 'What does it show about Spartan society? Which dot point?',
+    P: 'Why was it made, and who for?',
+    R: 'Can we trust it? What strengthens or weakens it?',
+    L: 'What can’t it tell us? Whose voices are missing?',
+    G: 'Which groups appear? Whose perspective is it?',
+    T: 'Which Spartan terms will you use?',
+    K: 'Which other sources agree (✓) or disagree (✗)?'
+  };
+  const INTRO = {
+    i:   ['Before you write', 'Read the source once without writing. What is it about?', 'Then:', 'Watch first. Then write your own version in your booklet, in your own words.'],
+    we:  ['We do', 'Read Source B once. We will build the annotations together, one code at a time.', 'Then:', 'I will cold call for each code. Write your own version once we agree.'],
+    you: ['On your own', 'Annotate Source C in your booklet: O, V, P, R, L first, then groups, terms and links.', 'Then:', 'We check yours against a model, one code at a time. Add anything you missed, in your own words.']
+  };
+
+  // Each worked slide: I do / We do = two clicks per code (ask, then write); You do = one click per code (check).
+  const worked = slides.filter(s => s.classList.contains('worked')).map(el => {
+    const mode = el.dataset.mode;
+    const notes = [...el.querySelectorAll('.note')];
+    const two = mode !== 'you';
+    notes.forEach((n, i) => { n.dataset.show = two ? 2 + 2 * i : 1 + i; });
+    el.dataset.steps = notes.length * (two ? 2 : 1);
+    return {
+      el, mode, notes, two,
+      src: el.querySelector('.src'), ruled: el.querySelector('.ruled'),
+      tk: { chip: el.querySelector('.tk-chip'), head: el.querySelector('.tk-head'), ask: el.querySelector('.tk-ask'),
+            second: el.querySelector('.tk-second'), label: el.querySelector('.tk-label'), why: el.querySelector('.tk-why') }
+    };
+  });
+
+  let si = 0, st = 0;
+  const isRead = () => body.classList.contains('read');
+  const maxStep = i => +(slides[i].dataset.steps || 0);
+  const stepFor = i => isRead() ? Infinity : (i === si ? st : (i < si ? maxStep(i) : 0));
+
+  function range(w, i) { return w.two ? [1 + 2 * i, 2 + 2 * i] : [1 + i, 1 + i]; }
+
+  function renderWorked(w, step) {
+    w.notes.forEach((n, i) => {
+      const [a, b] = range(w, i);
+      w.el.querySelectorAll('.hl[data-code="' + n.dataset.code + '"]').forEach(h => {
+        h.classList.toggle('now', step >= a && step <= b);
+        h.classList.toggle('done', step > b);
+      });
+    });
+    if (step === Infinity) return;
+    const t = w.tk;
+    let chip = '', code = 'K', head, ask, label = '', why = '', pause = false;
+    if (step === 0) {
+      [head, ask, label, why] = INTRO[w.mode];
+    } else {
+      const i = w.two ? Math.floor((step - 1) / 2) : step - 1;
+      const n = w.notes[i];
+      code = n.dataset.code;
+      chip = n.querySelector('.chip').textContent;
+      head = NAME[code] + '.';
+      ask = ASK[code];
+      const writing = !w.two || step === range(w, i)[1];
+      if (writing) {
+        label = w.mode === 'i' ? 'Why I wrote this:' : w.mode === 'we' ? 'Why it works:' : 'Check yours:';
+        why = n.querySelector('.why').textContent;
+      } else {
+        pause = true;
+        why = w.mode === 'i' ? 'Pause. What would you write?' : 'Cold call: what should we write?';
+      }
+    }
+    t.chip.hidden = !chip; t.chip.textContent = chip; t.chip.dataset.code = code;
+    t.head.textContent = head; t.ask.textContent = ask;
+    t.label.textContent = label; t.why.textContent = why;
+    t.second.classList.toggle('pause', pause);
+  }
+
+  function scrollWithin(box, el, frac) {
+    const b = box.getBoundingClientRect(), r = el.getBoundingClientRect();
+    if (r.top >= b.top + 4 && r.bottom <= b.bottom - 4) return;
+    const top = box.scrollTop + (r.top - b.top) - box.clientHeight * frac;
+    box.scrollTop = Math.max(0, top);
+  }
+  function followActive() {
+    if (isRead()) return;
+    const w = worked.find(x => x.el === slides[si]);
+    if (!w) return;
+    const hl = w.src.querySelector('.hl.now');
+    if (hl) scrollWithin(w.src, hl, 0.2); else if (st === 0) w.src.scrollTop = 0;
+    const shown = w.notes.filter(n => !n.classList.contains('is-hidden'));
+    const last = shown[shown.length - 1];
+    if (last) scrollWithin(w.ruled, last, 0.35); else w.ruled.scrollTop = 0;
+  }
+
+  function render() {
+    slides.forEach((el, i) => {
+      el.classList.toggle('active', i === si);
+      const s = stepFor(i);
+      el.querySelectorAll('[data-show]').forEach(n => n.classList.toggle('is-hidden', s < +n.dataset.show));
+    });
+    worked.forEach(w => renderWorked(w, stepFor(slides.indexOf(w.el))));
+    count.textContent = (si + 1) + ' / ' + slides.length;
+    prevB.disabled = si === 0 && st === 0;
+    nextB.disabled = si === slides.length - 1 && st === maxStep(si);
+    requestAnimationFrame(followActive);
+  }
+
+  function next() {
+    if (st < maxStep(si)) st++;
+    else if (si < slides.length - 1) { si++; st = 0; }
+    render();
+  }
+  function prev() {
+    if (st > 0) st--;
+    else if (si > 0) { si--; st = maxStep(si); }
+    render();
+  }
+  function setMode(read) {
+    body.classList.toggle('read', read);
+    body.classList.toggle('proj', !read);
+    modeB.textContent = read ? 'Projector mode' : 'Read mode';
+    render();
+    if (read) slides[si].scrollIntoView({ block: 'start' }); else window.scrollTo(0, 0);
+  }
+  function fullscreen() {
+    const d = document;
+    try {
+      if (d.fullscreenElement) d.exitFullscreen().catch(() => {});
+      else d.documentElement.requestFullscreen().catch(() => {});
+    } catch (e) {}
+  }
+
+  prevB.addEventListener('click', prev);
+  nextB.addEventListener('click', next);
+  modeB.addEventListener('click', () => setMode(!isRead()));
+  if (!document.fullscreenEnabled) fsB.hidden = true;
+  fsB.addEventListener('click', fullscreen);
+  $('stage').addEventListener('click', e => {
+    if (isRead() || e.target.closest('button, a') || String(window.getSelection())) return;
+    next();
+  });
+  document.addEventListener('keydown', e => {
+    if (e.altKey || e.ctrlKey || e.metaKey) return;
+    const k = e.key;
+    if ((k === ' ' || k === 'Enter') && e.target.closest && e.target.closest('button')) return;
+    if (['ArrowRight', 'ArrowDown', 'PageDown', ' ', 'Enter'].includes(k)) { if (isRead()) return; e.preventDefault(); next(); }
+    else if (['ArrowLeft', 'ArrowUp', 'PageUp', 'Backspace'].includes(k)) { if (isRead()) return; e.preventDefault(); prev(); }
+    else if (k === 'Home') { if (!isRead()) { si = 0; st = 0; render(); } }
+    else if (k === 'End') { if (!isRead()) { si = slides.length - 1; st = 0; render(); } }
+    else if (k === 'r' || k === 'R') setMode(!isRead());
+    else if (k === 'f' || k === 'F') fullscreen();
+  });
+
+  // Optional start point in the link: #s5 opens slide 5, #s5-9 opens slide 5 at step 9.
+  const m = location.hash.match(/^#s(\d+)(?:-(\d+))?$/);
+  if (m) { si = Math.min(slides.length - 1, Math.max(0, +m[1] - 1)); st = Math.min(maxStep(si), +(m[2] || 0)); }
+  setMode(window.innerWidth < 900);
+})();
+</script>
+
+</body>
+</html>
