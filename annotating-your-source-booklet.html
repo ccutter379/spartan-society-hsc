@@ -137,6 +137,9 @@ kbd{font-family:var(--mono);font-size:.85em;padding:.05em .4em;border:1px solid 
 .plan li{display:flex;gap:.45em;align-items:baseline}
 .plan b{font-family:var(--disp);color:var(--deep)}
 .keys{font-size:var(--fs-chrome);color:var(--slate);line-height:2}
+.jump{display:flex;flex-direction:column;gap:.45em}
+.jump-grid{display:flex;flex-wrap:wrap;gap:.4em}
+.jump-grid button{font-family:var(--disp);font-weight:800;font-size:var(--fs-body);min-width:2.3em;padding:.3em .55em}
 
 /* ---------- rules ---------- */
 .rules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,2vw,32px)}
@@ -270,17 +273,13 @@ button:focus-visible{outline:3px solid var(--bright);outline-offset:2px}
         <span class="chip" data-code="O">O</span><span class="chip" data-code="V">V</span><span class="chip" data-code="P">P</span><span class="chip" data-code="R">R</span><span class="chip" data-code="L">L</span>
       </div>
       <h1>Annotating your Source Booklet</h1>
-      <p class="lead">Short, specific notes in your own words, modelled on Sources A to F.</p>
+      <p class="lead">Short, specific notes in your own words, modelled on Sources A to J.</p>
       <ol class="plan">
         <li><b>1</b> The rules</li>
         <li><b>2</b> The codes</li>
-        <li><b>3</b> Source A: I do</li>
-        <li><b>4</b> Source B: I do</li>
-        <li><b>5</b> Source C: I do</li>
-        <li><b>6</b> Source D: I do</li>
-        <li><b>7</b> Source E: I do</li>
-        <li><b>8</b> Source F: I do</li>
+        <li><b>3</b> Model annotations, one source at a time</li>
       </ol>
+      <div class="jump"><p class="label">Jump to a source</p><div class="jump-grid" id="jump"></div></div>
       <p class="keys proj-only"><kbd>→</kbd> or <kbd>Space</kbd> next &nbsp;·&nbsp; <kbd>←</kbd> back &nbsp;·&nbsp; <kbd>R</kbd> read mode &nbsp;·&nbsp; <kbd>F</kbd> full screen</p>
     </div>
   </section>
@@ -683,7 +682,150 @@ button:focus-visible{outline:3px solid var(--bright);outline-offset:2px}
     </div>
   </section>
 
-  <!-- 13 · Before each sighting -->
+  <!-- Source G · I do -->
+  <section class="slide worked" data-mode="i" aria-roledescription="slide" aria-label="Source G: Xenophon on the education of boys">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source G · I do</p>
+        <h2>Xenophon on the education of boys</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source G · Xenophon</figcaption>
+          <p class="src-cite"><span><span class="hl" data-code="O">Xenophon</span>, <i>Constitution of the Lakedaimonians</i> 2.1–9 · written <span class="hl" data-code="O">first half of the 4th century BC</span> · trans. B. Wilson · Cooley D74 (2.9 also C84)</span></p>
+          <blockquote class="src-text">
+            <p><span class="ref">[2.1]</span> … <span class="hl" data-code="P">In other parts of Greece, parents who claim to educate their sons as well as possible</span> put them under the care and control of a paidagogos at the very first opportunity, as soon as they are capable of understanding what is said to them. They immediately send them off to school to learn to read and write, study the arts, and improve their physical development in the exercise ground. But as well as that they soften their feet by putting them into sandals, and undermine their physical fitness by varieties of clothing and usually letting them eat as much as they want.</p>
+            <p><span class="ref">[2]</span> <span class="hl" data-code="P">Lykourgos did the opposite.</span> Instead of letting each individual father appoint a slave as paidagogos, he gave overall charge of <span class="hl" data-code="L">boys’ education</span> to <span class="hl" data-code="G">the so-called <span class="hl" data-code="T">paidonomos</span> (boy-herd), who was appointed from one of the members of the highest political class</span>. He gave this official full authority to compel their attendance, to supervise them, and to punish them severely if they misbehaved. He gave him <span class="hl" data-code="G">a team of young men (<span class="hl" data-code="T">hebontes</span>) armed with whips</span> with which to inflict punishment where necessary. <span class="hl" data-code="V">As a result high levels of respect for authority and general discipline are characteristic of their society.</span> <span class="ref">[3]</span> And of course, instead of softening their feet with sandals, he insisted on hardening them by <span class="hl" data-code="V">compelling them to go barefoot</span>. … <span class="ref">[4]</span> And instead of undermining their physical fitness by all sorts of clothing, he thought it best to get them used to <span class="hl" data-code="V">wearing one tunic all the year round</span>, since this would get them better prepared to face cold and heat alike. <span class="ref">[5]</span> As for their diet, he laid it down that <span class="hl" data-code="G">the <span class="hl" data-code="T">eiren</span></span> should allow them to have <span class="hl" data-code="V">only enough food to ensure that they never felt full</span>, so that they would all have experience of what it felt like to be hungry. …</p>
+            <p><span class="ref">[6]</span> … But he wanted to avoid them becoming too desperate through starvation, without making it too easy for them to get what they wanted. <span class="hl" data-code="V">So he did allow them to alleviate their hunger pangs by some stealing.</span> <span class="ref">[7]</span> It must be obvious to anyone that it was not because he was unable to supply provisions for them that he encouraged them to supplement their rations by deceit. … <span class="hl" data-code="R">All this makes it self-evident that by means of this sort of education he wanted to make boys (paides) more skilful at finding supplies and better soldiers overall.</span> <span class="ref">[8]</span> It is a perfectly sensible question to ask why, if he thought theft such a valuable training, he ordered a severe beating for anyone caught in the act. The reason seems obvious to me: in all spheres of life teachers punish their pupils for failing to carry out effectively what they have been taught. <span class="hl" data-code="R">So the Lakedaimonians punish those who are caught for being ineffective thieves.</span> <span class="ref">[9]</span> He made it a special competition to steal cheeses from the altar of <span class="hl" data-code="T">Artemis Orthia</span>, while giving others to task of whipping the would-be thieves, thus seeking to demonstrate that a little pain means a long term gain in fame and delight. In this there was a supplementary lesson also: that where speed is of the essence, idleness brings the least reward and the greatest supply of troubles.</p>
+          </blockquote>
+        </figure>
+        <div class="margin">
+          <p class="label">Annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">Xenophon, 1st half of 4th C BC · Athenian admirer of Sparta, lived under its protection · contemporary</span><span class="why">Xenophon was an Athenian who admired Sparta and lived under its protection. Plutarch says King Agesilaos urged him to bring his sons up at Sparta.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">earliest detailed account of boys’ training: barefoot, 1 tunic, hunger, stealing, whips → obedience + endurance</span><span class="why">It is the earliest detailed account of the boys’ upbringing, and it shows the values the system aimed at: obedience, endurance and resourcefulness.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">praises Lyk.: he ‘did the opposite’ of the rest of Greece</span><span class="why">The whole work praises Lykourgos by contrasting Sparta with the rest of Greece. Every section is built as ‘Lykourgos did the opposite’.</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✓ well placed, contemporary · ✗ idealises; explains away stealing as training; gives no ages</span><span class="why">He was well placed to know, but he idealises the system and explains away awkward features, such as stealing, as deliberate training. He uses age-group names but gives no ages.</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">an ideal: nothing on girls, failures or drop-outs · age tables are modern guesses</span><span class="why">He describes an ideal and says nothing about girls, failures or boys who dropped out. The ages in modern tables are reconstructions.</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">boys (paides), young men (hebontes, eiren), the paidonomos · no girls</span><span class="why">Boys, young men and the official in charge appear. Girls are absent from this account.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">agoge, paidonomos, hebontes, eiren, Artemis Orthia</span><span class="why">These are the Spartan names for the people who ran the training. Using them precisely shows detailed knowledge.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ L ✓ Orthia offerings · → N David: Xen.’s Lyk. looks like Socrates · → P Kennell: late ‘invented traditions’</span><span class="why">The lead offerings (Source L) come from the same sanctuary as the cheese contest. David (Source N) argues Xenophon shaped Lykourgos to look like Socrates. Kennell (Source P) warns that much later evidence for the training may describe ‘invented traditions’.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Source H · I do -->
+  <section class="slide worked" data-mode="i" aria-roledescription="slide" aria-label="Source H: Two accounts of how the army was organised">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source H · I do</p>
+        <h2>Two accounts of how the army was organised</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source H · Xenophon and Thucydides</figcaption>
+          <p class="src-cite">
+            <span>Extract A: <span class="hl" data-code="O">Xenophon</span>, <i>Constitution of the Lakedaimonians</i> 11.2–6 · <span class="hl" data-code="O">first half of the 4th century BC</span> · trans. B. Wilson · Cooley D88</span>
+            <span>Extract B: <span class="hl" data-code="O">Thucydides</span>, <i>History of the Peloponnesian War</i> 5.68 <span class="hl" data-code="L">(the battle of Mantineia, 418 BC)</span> · written <span class="hl" data-code="O">late 5th century BC</span> · trans. B. Wilson · Cooley E101</span>
+          </p>
+          <div class="src-text">
+            <p class="extract">Extract A: Xenophon</p>
+            <p><span class="ref">[2]</span> First of all <span class="hl" data-code="V">the ephors issue a proclamation setting out the age groups required to serve as cavalry, hoplites, and then <span class="hl" data-code="G">craftsmen</span></span>. As a result when they go to war the Lakedaimonians always have a full complement of all the things men need at home in times of peace. … <span class="ref">[3]</span> Included in his list of compulsory equipment for the battlefield itself, he specified <span class="hl" data-code="V">a red cloak and a bronze shield for every man</span>, on the grounds that the cloak was the least effeminate and most warlike kind of uniform and the shield was quick and easy to polish and very slow to rust. Once they had come of age, he allowed men to wear their hair long, believing that it made them look taller, finer champions of freedom, and more terrifying.</p>
+            <p><span class="ref">[4]</span> Thus equipped, he divided them into <span class="hl" data-code="R">six regiments (<span class="hl" data-code="T">morai</span>)</span> of cavalry and infantry. Each infantry regiment of hoplites had a <span class="hl" data-code="T">polemarch</span>, four unit-leaders (lochagoi), <span class="hl" data-code="L">leaders of 50 men (pentekonteres)</span>, and sixteen group-commanders (enomotarchai). All these companies at the word of command form up into sections, [two], three, or six abreast. <span class="ref">[5]</span> <span class="hl" data-code="P">Most people think that the Lakonian fighting formations are very complicated; in this they are totally mistaken.</span> In fact the opposite is true. In the Lakonian order of battle, <span class="hl" data-code="V">the officers occupy the front rank</span>, and each file is a self-sufficient fighting unit. <span class="ref">[6]</span> All this is so easy to understand that anyone who can distinguish one man from another cannot make mistakes …</p>
+            <p class="extract">Extract B: Thucydides</p>
+            <p><span class="ref">[68.1]</span> These were the dispositions of each side and certainly the army of the Lakedaimonians looked the larger. <span class="ref">[68.2]</span> <span class="hl" data-code="P">But it would be impossible for me to give the exact numbers of the forces on either side</span>, whether of the individual units or the whole armies. <span class="hl" data-code="V">The secret nature of their political arrangements makes it impossible to discover the numbers of Lakedaimonians</span>, and as for the others, the natural human tendency to exaggerate one’s own resources makes all estimates unreliable. Nevertheless, it is possible to make an estimate of the Lakedaimonian contingent on this occasion by the following method: <span class="ref">[68.3]</span> <span class="hl" data-code="G">Excluding the Skiritai, who numbered about 600 in all</span>, <span class="hl" data-code="R">seven units (<span class="hl" data-code="T">lochoi</span>) fought in this battle</span>. In each unit there were four companies (pentekostyes), and in each company four groups (<span class="hl" data-code="T">enomotiai</span>). The front rank of each group had four men, but the depth behind them varied according to the judgement of the different unit leaders (lochagoi); but on average they stood usually about eight deep. The front line, excluding the Skiritai, was therefore 448 men.</p>
+          </div>
+        </figure>
+        <div class="margin">
+          <p class="label">Annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">A: Xenophon, 4th C BC, experienced commander · B: Thucydides, Athenian general, alive at Mantineia (418 BC)</span><span class="why">Xenophon was an experienced commander who lived under Spartan protection. Thucydides was an Athenian general and historian, writing about a battle of his own time while in exile.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">A: ephors call up age groups; red cloak, bronze shield; officers in front · B: Spartan secrecy hid their numbers</span><span class="why">Xenophon gives the call-up, the equipment and the officers. Thucydides gives a unit-by-unit estimate and says outright that Spartan secrecy hid their numbers.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">A: praises Lyk.’s system as simple + superior · B: best estimate, admits its limits</span><span class="why">Xenophon wants to show the Lycurgan system is simple and superior. Thucydides wants to give his readers the best estimate he can, while flagging its limits.</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✗ the 2 schemes don’t match: 6 morai v. 7 lochoi · ✓ Thuc. admits uncertainty = good method</span><span class="why">The two schemes do not match. Cooley doubts Xenophon fully understood the tactics, and notes Thucydides’ totals are usually thought to leave out the mora. Thucydides admitting uncertainty is itself a sign of good method.</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">different dates (418 BC v. 4th C) · maybe counting different things · no totals we can trust</span><span class="why">The extracts come from different dates and may count different things, so neither gives totals we can trust. Our translation also leaves out a number: the Greek has eight ‘leaders of 50 men’.</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">Sp hoplites, officers · Skiritai (Pe light-armed) · craftsmen called up too</span><span class="why">The Skiritai were a perioikic light-armed unit, and craftsmen were called up with the army.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">morai, lochoi, enomotiai, polemarch, hoplites</span><span class="why">Don’t blend the two schemes into one table. The disagreement is the point, and one textbook makes this mistake.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ M ✓ a bronze shield · → E iron-works = weapons · → J 700 helot hoplites with Brasidas</span><span class="why">The Pylos shield (Source M) matches Xenophon’s ‘bronze shield for every man’. Kinadon’s iron-works (Source E) link crafts to weapons. Thucydides (Source J) shows 700 helots serving as hoplites.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Source I · I do -->
+  <section class="slide worked" data-mode="i" aria-roledescription="slide" aria-label="Source I: Plutarch on the krypteia">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source I · I do</p>
+        <h2>Plutarch on the krypteia</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source I · Plutarch</figcaption>
+          <p class="src-cite"><span><span class="hl" data-code="O">Plutarch</span>, <i>Life of Lykourgos</i> 28.1–4, 6 · written <span class="hl" data-code="O">c. AD 100</span> · trans. B. Wilson · Cooley D44</span></p>
+          <blockquote class="src-text">
+            <p><span class="ref">[28.1]</span> In all these arrangements, there was no trace of the injustice and arrogance with which some have charged Lykourgos in his legislation. They suggest that it was pretty good at producing brave soldiers, but inadequate in developing any idea of justice and right conduct. The so-called <span class="hl" data-code="T">krypteia</span>, <span class="hl" data-code="L">if this was indeed one of Lykourgos’ institutions</span>, <span class="hl" data-code="O">as Aristotle records</span>, may be the reason for Plato’s having reaching the same conclusion about Lykourgos and his constitution. <span class="ref">[2]</span> The krypteia functioned as follows: from time to time <span class="hl" data-code="G">the magistrates would select from the young men the ones who seemed the most intelligent</span>, and send them out into the countryside at random equipped with daggers and basic rations, but nothing else. By day they would scatter into remote and obscure locations, concealing themselves and simply lying low. <span class="hl" data-code="V">But at night they would come down to the roadways and cut the throats of any helot that they caught.</span></p>
+            <p><span class="ref">[3]</span> They would often also work their way through the fields and murder those with the strongest and most powerful physique. <span class="hl" data-code="O">Thucydides has a similar story in his History of the Peloponnesian War.</span> He tells how <span class="hl" data-code="R">helots whom the Lakedaimonians had identified as being conspicuously brave</span> were crowned with garlands, as if they were going to be granted their freedom, and then taken in procession round the temples of the gods – and a little while later they all disappeared, more than two thousand of them altogether. Nor could anyone tell, either then or afterwards, how they had been wiped out. <span class="ref">[4]</span> Significantly, Aristotle reports that <span class="hl" data-code="V">the <span class="hl" data-code="T">ephors</span>, whenever they first took office, would make a formal declaration of war on the helots, so that their murder would never involve religious pollution</span>. There were other features of the Lakedaimonians’ savage brutality towards them. <span class="hl" data-code="V">They would compel them to drink large quantities of undiluted wine and then bring them into the <span class="hl" data-code="T">messes</span>, as an example to the young men of the effects of drunkenness.</span> They would compel them to sing songs and dance dances that were vulgar and demeaning, while banning them from those of a more respectable kind. …</p>
+            <p><span class="ref">[6]</span> <span class="hl" data-code="P">My own view is that such savage ill treatment by the Lakedaimonians was in fact a later development</span>, consequent upon the great earthquake, when the helots united with the people of Messenia in revolt against them, causing massive devastation to their territory and the greatest threat to their city there had ever been. <span class="hl" data-code="P">I certainly could never attribute to Lykourgos a measure as abominable as the krypteia</span>, something so utterly alien to his general record of gentleness of character and concern for justice. I would cite the evidence of Delphi in support of this view.</p>
+          </blockquote>
+        </figure>
+        <div class="margin">
+          <p class="label">Annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">Plut., c. AD 100 · pieced together: Aristotle (lost work) + retells Thucydides</span><span class="why">Plutarch was compiling earlier writers: Aristotle’s lost work for the krypteia and the ephors’ declaration of war, and Thucydides for the 2,000 helots.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">fullest account of krypteia: picked young men, daggers, kill helots at night · ephors declare war · helots humiliated in messes</span><span class="why">It is the fullest description we have of the krypteia, the annual declaration of war that avoided religious pollution, and the public humiliation of helots in the messes.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">moral biog. → defends Lyk.: the brutality came ‘later’, after the earthquake</span><span class="why">Plutarch admires Lykourgos, so he defends him. He doubts the krypteia was Lykourgos’ idea and dates the brutality after the great earthquake (c. 464 BC).</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✗ 2nd/3rd-hand, mixes centuries · ✗ changes Thuc.’s story: who picked the helots</span><span class="why">Plutarch mixes sources from different centuries. When he retells Thucydides he changes the story: in Thucydides the helots put themselves forward (Source J).</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">very late · no helot voice · purpose debated (Plato: an endurance test)</span><span class="why">It is very late and has no helot voice. Plato describes the krypteia as an endurance exercise instead. Hodkinson (2026) sets out four views, from helot-hunting as its central purpose to it never happening at all.</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">He · selected young Sp · magistrates, ephors · young men watching drunk helots</span><span class="why">The helots appear only as victims and examples. The young Spartiates are chosen, trained and taught by watching.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">krypteia, ephors, syssitia (messes), helots</span><span class="why">Some historians date the ephors’ declaration of war after Sparta lost Messenia in 370/69 BC, outside our period. Say so if you use it.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ J ✗ Thuc.’s original: who picked them · → D ✓ ephors’ power · → P Kennell: Roman-era evidence</span><span class="why">Compare Thucydides’ own version (Source J). Aristotle (Source D) describes the ephors’ great power. Kennell (Source P) warns that Roman-era evidence like Plutarch’s may describe later ‘invented traditions’.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Source J · I do -->
+  <section class="slide worked" data-mode="i" aria-roledescription="slide" aria-label="Source J: Thucydides on the disappearance of 2,000 helots">
+    <div class="inner">
+      <div class="head">
+        <p class="eyebrow">Source J · I do</p>
+        <h2>Thucydides on the disappearance of 2,000 helots</h2>
+      </div>
+      <div class="think" aria-live="polite"><span class="chip tk-chip" hidden></span><div class="tk-body"><p><span class="tk-head"></span> <span class="tk-ask"></span></p><p class="tk-second"><span class="tk-label"></span> <span class="tk-why"></span></p></div></div>
+      <div class="we">
+        <figure class="src">
+          <figcaption class="label">Source J · Thucydides</figcaption>
+          <p class="src-cite"><span><span class="hl" data-code="O">Thucydides</span>, <i>History of the Peloponnesian War</i> 4.80.2–4 · written <span class="hl" data-code="O">late 5th century BC</span> (context 424 BC) · trans. B. Wilson · Cooley E68</span></p>
+          <blockquote class="src-text">
+            <p><span class="ref">[2]</span> They also welcomed an opportunity to send some of their helot population out of the country, <span class="hl" data-code="P">in case the current situation and the capture of <span class="hl" data-code="T">Pylos</span> might encourage them to plot revolution</span>. <span class="ref">[3]</span> They were also motivated by the helots’ youthful vigour and their large population, since as far as the Lakedaimonians were concerned, considerations of security <span class="hl" data-code="L">*were always paramount in matters regarding the helots* [or] *against the helots were always paramount.*</span> They issued a proclamation commanding them to <span class="hl" data-code="G">choose from their own number those who claimed to have the most outstanding military records</span>. It sounded as if they were going to give them their freedom; in fact it was a test which they thought would enable them to identify those whose strong personalities would encourage them to be the first to claim their freedom. These, they thought, would also be the first to turn against them. <span class="ref">[4]</span> <span class="hl" data-code="V">They selected about 2,000 of them, put garlands on their heads, and marched them around the shrines as if it was part of their freedom ceremonial.</span> <span class="hl" data-code="R">After that they were never seen again and no one knows how each of them was done away with.</span> On this occasion too they were willing enough to send out <span class="hl" data-code="V">about 700 of them as <span class="hl" data-code="T">hoplites</span> with Brasidas</span>, though the rest of his army were mercenaries recruited from the Peloponnese.</p>
+          </blockquote>
+        </figure>
+        <div class="margin">
+          <p class="label">Annotations</p>
+          <ul class="ruled">
+            <li class="note" data-code="O"><span class="chip">O</span><span class="txt">Thuc., late 5th C BC · Athenian, contemporary · exiled 424 BC → heard Peloponnesian informants</span><span class="why">Thucydides lived through the Peloponnesian War. His exile from 424 BC let him hear informants from the Peloponnese.</span></li>
+            <li class="note" data-code="V"><span class="chip">V</span><span class="txt">Spartan fear, deception + mass killing — yet 700 helots used as hoplites</span><span class="why">It shows fear of the helots, deception and mass killing, and in the same passage Sparta relying on helots as hoplites.</span></li>
+            <li class="note" data-code="P"><span class="chip">P</span><span class="txt">explains Spartan policy after Athens took Pylos (425 BC)</span><span class="why">Thucydides is explaining what Sparta did after the Athenians captured Pylos, and he generalises about Spartan attitudes to the helots.</span></li>
+            <li class="note" data-code="R"><span class="chip">R</span><span class="txt">✓ careful, contemporary · ✗ can’t say how they died; massacre undated; historicity questioned</span><span class="why">Cooley notes it is hard to imagine killing so many without trace, and that the massacre is a different occasion from the 700. Hodkinson (2026) notes its historicity ‘has also been questioned’.</span></li>
+            <li class="note" data-code="L"><span class="chip">L</span><span class="txt">key line translates 2 ways: ‘regarding’ v. ‘against’ the helots → how constant was the fear? · no helot voice</span><span class="why">The two bracketed translations are Cooley’s. Translation is interpretation: ‘against the helots’ makes the fear sound constant.</span></li>
+            <li class="note" data-code="G"><span class="chip">G</span><span class="txt">He (the bravest singled out) · Spartan authorities · Brasidas’ helot hoplites</span><span class="why">The helots who put themselves forward as the bravest are the ones who disappear. Other helots serve Sparta as soldiers.</span></li>
+            <li class="note" data-code="T"><span class="chip">★</span><span class="txt">helots, hoplites, Pylos, Brasidas</span><span class="why">Pylos and Brasidas fix the date and context: the crisis of 425–424 BC.</span></li>
+            <li class="note" data-code="K"><span class="chip">→</span><span class="txt">→ I ✗ Plut. changes who picked them · → O ✓ de Ste. Croix: helot threat · → P Powell: Spartans boasted · → M Pylos</span><span class="why">Plutarch (Source I) has the Spartans pick the helots. De Ste. Croix (Source O) sees the helot threat as the cardinal fact about Sparta, though Hodkinson finds only one definite revolt, in the 460s. Powell (Source P) suggests Thucydides heard this because Spartans boasted of their deception. The Pylos shield (Source M) comes from the same crisis.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Before each sighting -->
   <section class="slide" aria-roledescription="slide" aria-label="Before each sighting">
     <div class="inner">
       <div class="head">
@@ -714,7 +856,8 @@ button:focus-visible{outline:3px solid var(--bright);outline-offset:2px}
 <nav class="bar" aria-label="Slide controls">
   <button id="prev" class="proj-only" type="button">← Back</button>
   <button id="next" class="primary proj-only" type="button">Next →</button>
-  <span class="count proj-only" id="count">1 / 13</span>
+  <span class="count proj-only" id="count">1 / 17</span>
+  <button id="home" class="proj-only" type="button">Contents</button>
   <span class="hint"><kbd>→</kbd> next · <kbd>←</kbd> back · <kbd>R</kbd> read mode · <kbd>F</kbd> full screen</span>
   <span class="spacer"></span>
   <button id="mode" type="button">Read mode</button>
@@ -859,6 +1002,19 @@ button:focus-visible{outline:3px solid var(--bright);outline-offset:2px}
   }
 
   prevB.addEventListener('click', prev);
+  $('home').addEventListener('click', () => { si = 0; st = 0; render(); });
+  // Title-slide buttons that jump straight to each source's model.
+  worked.forEach(w => {
+    const m = w.el.querySelector('.eyebrow').textContent.match(/Source ([A-Z])/);
+    if (!m) return;
+    const b = document.createElement('button');
+    b.type = 'button'; b.textContent = m[1]; b.title = w.el.querySelector('h2').textContent;
+    b.addEventListener('click', () => {
+      si = slides.indexOf(w.el); st = 0; render();
+      if (isRead()) w.el.scrollIntoView({ block: 'start' });
+    });
+    $('jump').appendChild(b);
+  });
   nextB.addEventListener('click', next);
   modeB.addEventListener('click', () => setMode(!isRead()));
   if (!document.fullscreenEnabled) fsB.hidden = true;
